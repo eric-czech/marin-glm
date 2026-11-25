@@ -1,0 +1,870 @@
+[
+  {
+    "repo": "kundajelab/DART-Eval",
+    "path": "README.md",
+    "ref": "af2a86d666c35304257c2fa7e15180e1fbcabb01",
+    "url": "https://github.com/kundajelab/DART-Eval/blob/af2a86d666c35304257c2fa7e15180e1fbcabb01/README.md",
+    "local": "research/sources/kundajelab--DART-Eval/README.md"
+  },
+  {
+    "repo": "kundajelab/DART-Eval",
+    "path": "src/dnalm_bench/task_1_paired_control/dataset_generators/encode_ccre.py",
+    "ref": "af2a86d666c35304257c2fa7e15180e1fbcabb01",
+    "url": "https://github.com/kundajelab/DART-Eval/blob/af2a86d666c35304257c2fa7e15180e1fbcabb01/src/dnalm_bench/task_1_paired_control/dataset_generators/encode_ccre.py",
+    "local": "research/sources/kundajelab--DART-Eval/src/dnalm_bench/task_1_paired_control/dataset_generators/encode_ccre.py"
+  },
+  {
+    "repo": "kundajelab/DART-Eval",
+    "path": "src/dnalm_bench/task_1_paired_control/supervised/encode_ccre/train_classifiers/nucleotide_transformer.py",
+    "ref": "af2a86d666c35304257c2fa7e15180e1fbcabb01",
+    "url": "https://github.com/kundajelab/DART-Eval/blob/af2a86d666c35304257c2fa7e15180e1fbcabb01/src/dnalm_bench/task_1_paired_control/supervised/encode_ccre/train_classifiers/nucleotide_transformer.py",
+    "local": "research/sources/kundajelab--DART-Eval/src/dnalm_bench/task_1_paired_control/supervised/encode_ccre/train_classifiers/nucleotide_transformer.py"
+  },
+  {
+    "repo": "kundajelab/DART-Eval",
+    "path": "src/dnalm_bench/task_2_5_single/experiments/task_5_variant_effect_prediction/variant_tasks.py",
+    "ref": "af2a86d666c35304257c2fa7e15180e1fbcabb01",
+    "url": "https://github.com/kundajelab/DART-Eval/blob/af2a86d666c35304257c2fa7e15180e1fbcabb01/src/dnalm_bench/task_2_5_single/experiments/task_5_variant_effect_prediction/variant_tasks.py",
+    "local": "research/sources/kundajelab--DART-Eval/src/dnalm_bench/task_2_5_single/experiments/task_5_variant_effect_prediction/variant_tasks.py"
+  },
+  {
+    "repo": "songlab-cal/TraitGym",
+    "path": "README.md",
+    "ref": "4d80fe889415ffc02d45c7cb5446a326288819bd",
+    "url": "https://github.com/songlab-cal/TraitGym/blob/4d80fe889415ffc02d45c7cb5446a326288819bd/README.md",
+    "local": "research/sources/songlab-cal--TraitGym/README.md"
+  },
+  {
+    "repo": "songlab-cal/TraitGym",
+    "path": "config/config.yaml",
+    "ref": "4d80fe889415ffc02d45c7cb5446a326288819bd",
+    "url": "https://github.com/songlab-cal/TraitGym/blob/4d80fe889415ffc02d45c7cb5446a326288819bd/config/config.yaml",
+    "local": "research/sources/songlab-cal--TraitGym/config/config.yaml"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/tasks/classification_tasks.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/tasks/classification_tasks.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/tasks/classification_tasks.py"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/tasks/bigene_mining_tasks.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/tasks/bigene_mining_tasks.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/tasks/bigene_mining_tasks.py"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/tasks/clustering_tasks.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/tasks/clustering_tasks.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/tasks/clustering_tasks.py"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/tasks/eds_tasks.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/tasks/eds_tasks.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/tasks/eds_tasks.py"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/tasks/pair_classification_tasks.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/tasks/pair_classification_tasks.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/tasks/pair_classification_tasks.py"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/tasks/retrieval_tasks.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/tasks/retrieval_tasks.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/tasks/retrieval_tasks.py"
+  },
+  {
+    "repo": "TattaBio/DGEB",
+    "path": "dgeb/evaluators.py",
+    "ref": "1b187e607e278a34ba7338b8b43747c57add4134",
+    "url": "https://github.com/TattaBio/DGEB/blob/1b187e607e278a34ba7338b8b43747c57add4134/dgeb/evaluators.py",
+    "local": "research/sources/TattaBio--DGEB/dgeb/evaluators.py"
+  },
+  {
+    "repo": "macwiatrak/BacBench",
+    "path": "bacbench/tasks/essential_genes/README.md",
+    "ref": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+    "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/bacbench/tasks/essential_genes/README.md",
+    "local": "research/sources/macwiatrak--BacBench/bacbench/tasks/essential_genes/README.md"
+  },
+  {
+    "repo": "macwiatrak/BacBench",
+    "path": "bacbench/tasks/operon/README.md",
+    "ref": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+    "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/bacbench/tasks/operon/README.md",
+    "local": "research/sources/macwiatrak--BacBench/bacbench/tasks/operon/README.md"
+  },
+  {
+    "repo": "macwiatrak/BacBench",
+    "path": "bacbench/tasks/ppi/README.md",
+    "ref": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+    "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/bacbench/tasks/ppi/README.md",
+    "local": "research/sources/macwiatrak--BacBench/bacbench/tasks/ppi/README.md"
+  },
+  {
+    "repo": "macwiatrak/BacBench",
+    "path": "bacbench/tasks/antibiotic_resistance/README.md",
+    "ref": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+    "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/bacbench/tasks/antibiotic_resistance/README.md",
+    "local": "research/sources/macwiatrak--BacBench/bacbench/tasks/antibiotic_resistance/README.md"
+  },
+  {
+    "repo": "macwiatrak/BacBench",
+    "path": "bacbench/tasks/phenotypic_traits/README.md",
+    "ref": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+    "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/bacbench/tasks/phenotypic_traits/README.md",
+    "local": "research/sources/macwiatrak--BacBench/bacbench/tasks/phenotypic_traits/README.md"
+  },
+  {
+    "repo": "macwiatrak/BacBench",
+    "path": "bacbench/tasks/essential_genes/run_train_cls.py",
+    "ref": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+    "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/bacbench/tasks/essential_genes/run_train_cls.py",
+    "local": "research/sources/macwiatrak--BacBench/bacbench/tasks/essential_genes/run_train_cls.py"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "docs/task_bacbench_essentiality.md",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/docs/task_bacbench_essentiality.md",
+    "local": "research/sources/Soilytix--gLMBench/docs/task_bacbench_essentiality.md"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "docs/task_dgeb_ec_classification.md",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/docs/task_dgeb_ec_classification.md",
+    "local": "research/sources/Soilytix--gLMBench/docs/task_dgeb_ec_classification.md"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "docs/task_rnagym_dms.md",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/docs/task_rnagym_dms.md",
+    "local": "research/sources/Soilytix--gLMBench/docs/task_rnagym_dms.md"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "docs/CAVEATS.md",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/docs/CAVEATS.md",
+    "local": "research/sources/Soilytix--gLMBench/docs/CAVEATS.md"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "src/glmbench/tasks/data/bacbench_essentiality/manifest.yaml",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/src/glmbench/tasks/data/bacbench_essentiality/manifest.yaml",
+    "local": "research/sources/Soilytix--gLMBench/src/glmbench/tasks/data/bacbench_essentiality/manifest.yaml"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "src/glmbench/tasks/data/dgeb_ec_dna/manifest.yaml",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/src/glmbench/tasks/data/dgeb_ec_dna/manifest.yaml",
+    "local": "research/sources/Soilytix--gLMBench/src/glmbench/tasks/data/dgeb_ec_dna/manifest.yaml"
+  },
+  {
+    "repo": "Soilytix/gLMBench",
+    "path": "src/glmbench/tasks/data/rnagym/prok_coding_manifest.yaml",
+    "ref": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+    "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/src/glmbench/tasks/data/rnagym/prok_coding_manifest.yaml",
+    "local": "research/sources/Soilytix--gLMBench/src/glmbench/tasks/data/rnagym/prok_coding_manifest.yaml"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "tools/dataset_card.md",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/tools/dataset_card.md",
+    "local": "research/sources/Nugkta--BGC-Bench/tools/dataset_card.md"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "src/bgcbench/data.py",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/src/bgcbench/data.py",
+    "local": "research/sources/Nugkta--BGC-Bench/src/bgcbench/data.py"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "src/bgcbench/tasks/coarse.py",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/src/bgcbench/tasks/coarse.py",
+    "local": "research/sources/Nugkta--BGC-Bench/src/bgcbench/tasks/coarse.py"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "src/bgcbench/tasks/fine.py",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/src/bgcbench/tasks/fine.py",
+    "local": "research/sources/Nugkta--BGC-Bench/src/bgcbench/tasks/fine.py"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "src/bgcbench/tasks/chem.py",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/src/bgcbench/tasks/chem.py",
+    "local": "research/sources/Nugkta--BGC-Bench/src/bgcbench/tasks/chem.py"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "src/bgcbench/tasks/retrieval.py",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/src/bgcbench/tasks/retrieval.py",
+    "local": "research/sources/Nugkta--BGC-Bench/src/bgcbench/tasks/retrieval.py"
+  },
+  {
+    "repo": "Nugkta/BGC-Bench",
+    "path": "src/bgcbench/tasks/substrate.py",
+    "ref": "17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f",
+    "url": "https://github.com/Nugkta/BGC-Bench/blob/17a7f8e7dd35c0ceb99943189d17c1bc3cdaaf9f/src/bgcbench/tasks/substrate.py",
+    "local": "research/sources/Nugkta--BGC-Bench/src/bgcbench/tasks/substrate.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "README.md",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/README.md",
+    "local": "research/sources/machinelearninglifescience--BEND2/README.md"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/dataset_catalog.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/dataset_catalog.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/dataset_catalog.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/data_splitter/split_catalog.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/data_splitter/split_catalog.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/data_splitter/split_catalog.py"
+  },
+  {
+    "repo": "GenerTeam/GENERator",
+    "path": "README.md",
+    "ref": "5132e2c35da5d5e9a7dcec7484901be4de864bf6",
+    "url": "https://github.com/GenerTeam/GENERator/blob/5132e2c35da5d5e9a7dcec7484901be4de864bf6/README.md",
+    "local": "research/sources/GenerTeam--GENERator/README.md"
+  },
+  {
+    "repo": "GenerTeam/GENERator",
+    "path": "src/tasks/downstream/sequence_understanding.py",
+    "ref": "5132e2c35da5d5e9a7dcec7484901be4de864bf6",
+    "url": "https://github.com/GenerTeam/GENERator/blob/5132e2c35da5d5e9a7dcec7484901be4de864bf6/src/tasks/downstream/sequence_understanding.py",
+    "local": "research/sources/GenerTeam--GENERator/src/tasks/downstream/sequence_understanding.py"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "README.md",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/README.md",
+    "local": "research/sources/biomap-research--DeepD/README.md"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/fine_tune/README.md",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/fine_tune/README.md",
+    "local": "research/sources/biomap-research--DeepD/notebook/fine_tune/README.md"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/README.md",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/README.md",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/README.md"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "docs/models/gpn-star.md",
+    "ref": "dc5fd287599f2955a79d010bca0e0f7f8178c67e",
+    "url": "https://github.com/songlab-cal/gpn/blob/dc5fd287599f2955a79d010bca0e0f7f8178c67e/docs/models/gpn-star.md",
+    "local": "research/sources/songlab-cal--gpn/docs/models/gpn-star.md"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "release/analysis-archive.md",
+    "ref": "dc5fd287599f2955a79d010bca0e0f7f8178c67e",
+    "url": "https://github.com/songlab-cal/gpn/blob/dc5fd287599f2955a79d010bca0e0f7f8178c67e/release/analysis-archive.md",
+    "local": "research/sources/songlab-cal--gpn/release/analysis-archive.md"
+  },
+  {
+    "repo": "darlednik/GENEB",
+    "path": "benchmark/benchmark_spec.json",
+    "ref": "9642d481e40c0af23995dcd162b779613f789f97",
+    "url": "https://github.com/darlednik/GENEB/blob/9642d481e40c0af23995dcd162b779613f789f97/benchmark/benchmark_spec.json",
+    "local": "research/sources/darlednik--GENEB/benchmark/benchmark_spec.json"
+  },
+  {
+    "repo": "darlednik/GENEB",
+    "path": "README.md",
+    "ref": "9642d481e40c0af23995dcd162b779613f789f97",
+    "url": "https://github.com/darlednik/GENEB/blob/9642d481e40c0af23995dcd162b779613f789f97/README.md",
+    "local": "research/sources/darlednik--GENEB/README.md"
+  },
+  {
+    "repo": "darlednik/GENEB",
+    "path": "harness/run_GENEB.py",
+    "ref": "9642d481e40c0af23995dcd162b779613f789f97",
+    "url": "https://github.com/darlednik/GENEB/blob/9642d481e40c0af23995dcd162b779613f789f97/harness/run_GENEB.py",
+    "local": "research/sources/darlednik--GENEB/harness/run_GENEB.py"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/cadd_snv.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/cadd_snv.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/cadd_snv.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/clinvar_snv.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/clinvar_snv.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/clinvar_snv.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/ccre_propensity.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/ccre_propensity.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/ccre_propensity.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/cons100.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/cons100.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/cons100.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/cons30.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/cons30.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/cons30.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/dnase_propensity.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/dnase_propensity.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/dnase_propensity.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/gpra_c.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/gpra_c.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/gpra_c.rst"
+  },
+  {
+    "repo": "ni-lab/guanine",
+    "path": "docs/tasks/gpra_d.rst",
+    "ref": "c0a2e6b3dc88f8e2197083efb021d55f8a37befa",
+    "url": "https://github.com/ni-lab/guanine/blob/c0a2e6b3dc88f8e2197083efb021d55f8a37befa/docs/tasks/gpra_d.rst",
+    "local": "research/sources/ni-lab--guanine/docs/tasks/gpra_d.rst"
+  },
+  {
+    "repo": "MarksLab-DasLab/RNAGym",
+    "path": "fitness/reference_sheet_final.csv",
+    "ref": "2828cf99316d75daaa8d832a2573cbb25bbd35fe",
+    "url": "https://github.com/MarksLab-DasLab/RNAGym/blob/2828cf99316d75daaa8d832a2573cbb25bbd35fe/fitness/reference_sheet_final.csv",
+    "local": "research/sources/MarksLab-DasLab--RNAGym/fitness/reference_sheet_final.csv"
+  },
+  {
+    "repo": "MarksLab-DasLab/RNAGym",
+    "path": "fitness/performance_fitness.py",
+    "ref": "2828cf99316d75daaa8d832a2573cbb25bbd35fe",
+    "url": "https://github.com/MarksLab-DasLab/RNAGym/blob/2828cf99316d75daaa8d832a2573cbb25bbd35fe/fitness/performance_fitness.py",
+    "local": "research/sources/MarksLab-DasLab--RNAGym/fitness/performance_fitness.py"
+  },
+  {
+    "repo": "MarksLab-DasLab/RNAGym",
+    "path": "README.md",
+    "ref": "2828cf99316d75daaa8d832a2573cbb25bbd35fe",
+    "url": "https://github.com/MarksLab-DasLab/RNAGym/blob/2828cf99316d75daaa8d832a2573cbb25bbd35fe/README.md",
+    "local": "research/sources/MarksLab-DasLab--RNAGym/README.md"
+  },
+  {
+    "repo": "mrzzmrzz/NABench",
+    "path": "metadata.csv",
+    "ref": "99c8681ec1eab706e10ff90a5c329dcf184cc1d1",
+    "url": "https://github.com/mrzzmrzz/NABench/blob/99c8681ec1eab706e10ff90a5c329dcf184cc1d1/metadata.csv",
+    "local": "research/sources/mrzzmrzz--NABench/metadata.csv"
+  },
+  {
+    "repo": "mrzzmrzz/NABench",
+    "path": "README.md",
+    "ref": "99c8681ec1eab706e10ff90a5c329dcf184cc1d1",
+    "url": "https://github.com/mrzzmrzz/NABench/blob/99c8681ec1eab706e10ff90a5c329dcf184cc1d1/README.md",
+    "local": "research/sources/mrzzmrzz--NABench/README.md"
+  },
+  {
+    "repo": "GenAIBio/BGCs-Bench",
+    "path": "src/probing/bgc_classification.py",
+    "ref": "2337f657f815aa2f41117b70e79d62b192c7f6fe",
+    "url": "https://github.com/GenAIBio/BGCs-Bench/blob/2337f657f815aa2f41117b70e79d62b192c7f6fe/src/probing/bgc_classification.py",
+    "local": "research/sources/GenAIBio--BGCs-Bench/src/probing/bgc_classification.py"
+  },
+  {
+    "repo": "GenAIBio/BGCs-Bench",
+    "path": "src/probing/taxon_classification.py",
+    "ref": "2337f657f815aa2f41117b70e79d62b192c7f6fe",
+    "url": "https://github.com/GenAIBio/BGCs-Bench/blob/2337f657f815aa2f41117b70e79d62b192c7f6fe/src/probing/taxon_classification.py",
+    "local": "research/sources/GenAIBio--BGCs-Bench/src/probing/taxon_classification.py"
+  },
+  {
+    "repo": "GenAIBio/BGCs-Bench",
+    "path": "src/probing/cds_annotation.py",
+    "ref": "2337f657f815aa2f41117b70e79d62b192c7f6fe",
+    "url": "https://github.com/GenAIBio/BGCs-Bench/blob/2337f657f815aa2f41117b70e79d62b192c7f6fe/src/probing/cds_annotation.py",
+    "local": "research/sources/GenAIBio--BGCs-Bench/src/probing/cds_annotation.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "docs/tasks.md",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/docs/tasks.md",
+    "local": "research/sources/machinelearninglifescience--BEND2/docs/tasks.md"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "docs/data.md",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/docs/data.md",
+    "local": "research/sources/machinelearninglifescience--BEND2/docs/data.md"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/catalog.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/catalog.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/catalog.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/opensplice.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/opensplice.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/opensplice.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/atlas_profile.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/atlas_profile.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/atlas_profile.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/background.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/background.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/background.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/context.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/context.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/context.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/repair_percentile.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/repair_percentile.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/repair_percentile.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/cell_selective.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/cell_selective.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/cell_selective.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/_tasks/tissue_identification.py",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/_tasks/tissue_identification.py",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/_tasks/tissue_identification.py"
+  },
+  {
+    "repo": "machinelearninglifescience/BEND2",
+    "path": "src/bend2/assets.json",
+    "ref": "3ab8ae98109a1f37e1ea5091cff1006eead7ebbf",
+    "url": "https://github.com/machinelearninglifescience/BEND2/blob/3ab8ae98109a1f37e1ea5091cff1006eead7ebbf/src/bend2/assets.json",
+    "local": "research/sources/machinelearninglifescience--BEND2/src/bend2/assets.json"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/demo_coding_vs_intergenomic_seqs/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/demo_coding_vs_intergenomic_seqs/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/demo_coding_vs_intergenomic_seqs/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/demo_human_or_worm/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/demo_human_or_worm/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/demo_human_or_worm/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/drosophila_enhancers_stark/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/drosophila_enhancers_stark/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/drosophila_enhancers_stark/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/dummy_mouse_enhancers_ensembl/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/dummy_mouse_enhancers_ensembl/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/dummy_mouse_enhancers_ensembl/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/human_enhancers_cohn/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/human_enhancers_cohn/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/human_enhancers_cohn/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/human_enhancers_ensembl/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/human_enhancers_ensembl/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/human_enhancers_ensembl/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/human_ensembl_regulatory/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/human_ensembl_regulatory/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/human_ensembl_regulatory/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/human_nontata_promoters/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/human_nontata_promoters/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/human_nontata_promoters/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "datasets/human_ocr_ensembl/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/datasets/human_ocr_ensembl/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/datasets/human_ocr_ensembl/metadata.yaml"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/demo_coding_vs_intergenomic_seqs/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/demo_coding_vs_intergenomic_seqs/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/demo_coding_vs_intergenomic_seqs/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/demo_human_or_worm/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/demo_human_or_worm/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/demo_human_or_worm/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/drosophila_enhancers_stark/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/drosophila_enhancers_stark/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/drosophila_enhancers_stark/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/dummy_mouse_enhancers_ensembl/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/dummy_mouse_enhancers_ensembl/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/dummy_mouse_enhancers_ensembl/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/human_enhancers_cohn/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_enhancers_cohn/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/human_enhancers_cohn/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/human_enhancers_ensembl/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_enhancers_ensembl/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/human_enhancers_ensembl/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/human_ensembl_regulatory/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_ensembl_regulatory/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/human_ensembl_regulatory/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/human_nontata_promoters/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_nontata_promoters/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/human_nontata_promoters/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "docs/human_ocr_ensembl/README.md",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_ocr_ensembl/README.md",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/docs/human_ocr_ensembl/README.md"
+  },
+  {
+    "repo": "ML-Bioinfo-CEITEC/genomic_benchmarks",
+    "path": "tests/test_data/datasets/human_nontata_promoters/metadata.yaml",
+    "ref": "605d8539830e16c85abe7826990958303ffc5e1c",
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/tests/test_data/datasets/human_nontata_promoters/metadata.yaml",
+    "local": "research/sources/ML-Bioinfo-CEITEC--genomic_benchmarks/tests/test_data/datasets/human_nontata_promoters/metadata.yaml"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/data_splitter/chromosome_split.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/data_splitter/chromosome_split.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/data_splitter/chromosome_split.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/data_splitter/homology_split.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/data_splitter/homology_split.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/data_splitter/homology_split.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/data_splitter/kmer_split.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/data_splitter/kmer_split.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/data_splitter/kmer_split.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/data_splitter/sklearn_split.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/data_splitter/sklearn_split.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/data_splitter/sklearn_split.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/eclip_binding.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/eclip_binding.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/eclip_binding.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/go_bio_proc.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/go_bio_proc.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/go_bio_proc.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/go_cell_comp.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/go_cell_comp.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/go_cell_comp.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/go_mol_func.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/go_mol_func.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/go_mol_func.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/mirna_target.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/mirna_target.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/mirna_target.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/mrl_hl_lbkwk.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/mrl_hl_lbkwk.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/mrl_hl_lbkwk.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/mrl_sample.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/mrl_sample.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/mrl_sample.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/mrl_sugimoto.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/mrl_sugimoto.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/mrl_sugimoto.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/prot_loc.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/prot_loc.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/prot_loc.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/rna_hl_human.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/rna_hl_human.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/rna_hl_human.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/rna_hl_mouse.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/rna_hl_mouse.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/rna_hl_mouse.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/rna_lifecycle_ietswaart.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/rna_lifecycle_ietswaart.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/rna_lifecycle_ietswaart.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/rna_loc_fazal.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/rna_loc_fazal.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/rna_loc_fazal.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/translation_efficiency_human.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/translation_efficiency_human.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/translation_efficiency_human.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/translation_efficiency_mouse.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/translation_efficiency_mouse.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/translation_efficiency_mouse.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/utr_variants_bohn.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/utr_variants_bohn.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/utr_variants_bohn.py"
+  },
+  {
+    "repo": "morrislab/mRNABench",
+    "path": "mrna_bench/datasets/vep_traitgym.py",
+    "ref": "778d691ab91c51c03addeb9219229f2ec81d195c",
+    "url": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/datasets/vep_traitgym.py",
+    "local": "research/sources/morrislab--mRNABench/mrna_bench/datasets/vep_traitgym.py"
+  },
+  {
+    "repo": "songlab-cal/TraitGym",
+    "path": "workflow/rules/model.smk",
+    "ref": "4d80fe889415ffc02d45c7cb5446a326288819bd",
+    "url": "https://github.com/songlab-cal/TraitGym/blob/4d80fe889415ffc02d45c7cb5446a326288819bd/workflow/rules/model.smk",
+    "local": "research/sources/songlab-cal--TraitGym/workflow/rules/model.smk"
+  },
+  {
+    "repo": "songlab-cal/TraitGym",
+    "path": "workflow/rules/data/mendelian_traits.smk",
+    "ref": "4d80fe889415ffc02d45c7cb5446a326288819bd",
+    "url": "https://github.com/songlab-cal/TraitGym/blob/4d80fe889415ffc02d45c7cb5446a326288819bd/workflow/rules/data/mendelian_traits.smk",
+    "local": "research/sources/songlab-cal--TraitGym/workflow/rules/data/mendelian_traits.smk"
+  },
+  {
+    "repo": "songlab-cal/TraitGym",
+    "path": "workflow/rules/data/complex_traits.smk",
+    "ref": "4d80fe889415ffc02d45c7cb5446a326288819bd",
+    "url": "https://github.com/songlab-cal/TraitGym/blob/4d80fe889415ffc02d45c7cb5446a326288819bd/workflow/rules/data/complex_traits.smk",
+    "local": "research/sources/songlab-cal--TraitGym/workflow/rules/data/complex_traits.smk"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "analysis/gpn-star/train_and_eval/workflow/Snakefile_hg38",
+    "ref": "30dee6cf45849dfdcfc043ca8baf44fd6ba51d74",
+    "url": "https://github.com/songlab-cal/gpn/blob/30dee6cf45849dfdcfc043ca8baf44fd6ba51d74/analysis/gpn-star/train_and_eval/workflow/Snakefile_hg38",
+    "local": "research/sources/songlab-cal--gpn/analysis/gpn-star/train_and_eval/workflow/Snakefile_hg38"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "analysis/gpn-star/train_and_eval/workflow/Snakefile_mm39",
+    "ref": "30dee6cf45849dfdcfc043ca8baf44fd6ba51d74",
+    "url": "https://github.com/songlab-cal/gpn/blob/30dee6cf45849dfdcfc043ca8baf44fd6ba51d74/analysis/gpn-star/train_and_eval/workflow/Snakefile_mm39",
+    "local": "research/sources/songlab-cal--gpn/analysis/gpn-star/train_and_eval/workflow/Snakefile_mm39"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "analysis/gpn-star/train_and_eval/workflow/Snakefile_tair10",
+    "ref": "30dee6cf45849dfdcfc043ca8baf44fd6ba51d74",
+    "url": "https://github.com/songlab-cal/gpn/blob/30dee6cf45849dfdcfc043ca8baf44fd6ba51d74/analysis/gpn-star/train_and_eval/workflow/Snakefile_tair10",
+    "local": "research/sources/songlab-cal--gpn/analysis/gpn-star/train_and_eval/workflow/Snakefile_tair10"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "analysis/gpn-star/s-ldsc/workflow/rules/ldsc.smk",
+    "ref": "30dee6cf45849dfdcfc043ca8baf44fd6ba51d74",
+    "url": "https://github.com/songlab-cal/gpn/blob/30dee6cf45849dfdcfc043ca8baf44fd6ba51d74/analysis/gpn-star/s-ldsc/workflow/rules/ldsc.smk",
+    "local": "research/sources/songlab-cal--gpn/analysis/gpn-star/s-ldsc/workflow/rules/ldsc.smk"
+  },
+  {
+    "repo": "songlab-cal/gpn",
+    "path": "analysis/gpn-star/train_and_eval/workflow/rules/vep.smk",
+    "ref": "30dee6cf45849dfdcfc043ca8baf44fd6ba51d74",
+    "url": "https://github.com/songlab-cal/gpn/blob/30dee6cf45849dfdcfc043ca8baf44fd6ba51d74/analysis/gpn-star/train_and_eval/workflow/rules/vep.smk",
+    "local": "research/sources/songlab-cal--gpn/analysis/gpn-star/train_and_eval/workflow/rules/vep.smk"
+  },
+  {
+    "repo": "BGI-HangzhouAI/Genos-m",
+    "path": "README_en.md",
+    "ref": "f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03",
+    "url": "https://github.com/BGI-HangzhouAI/Genos-m/blob/f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03/README_en.md",
+    "local": "research/sources/new-models/genosm/README_en.md"
+  },
+  {
+    "repo": "BGI-HangzhouAI/Genos-m",
+    "path": "Technical_Notes/Benchmarks_en.md",
+    "ref": "f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03",
+    "url": "https://github.com/BGI-HangzhouAI/Genos-m/blob/f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03/Technical_Notes/Benchmarks_en.md",
+    "local": "research/sources/new-models/genosm/Technical_Notes/Benchmarks_en.md"
+  },
+  {
+    "repo": "BGI-HangzhouAI/Genos-m",
+    "path": "Scripts/Genos-m-4.7B-pretrain.sh",
+    "ref": "f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03",
+    "url": "https://github.com/BGI-HangzhouAI/Genos-m/blob/f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03/Scripts/Genos-m-4.7B-pretrain.sh",
+    "local": "research/sources/new-models/genosm/Scripts/Genos-m-4.7B-pretrain.sh"
+  }
+]

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A source-audited catalogue of genomic language models, papers, evaluation tasks and protocols.">
+<title>marin-glm — Genomic language model catalogue</title>
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header>
+  <div class="title"><a href="#view=evaluations">marin-glm</a><span>Genomic language models</span></div>
+  <div class="header-meta"><a href="https://github.com/eric-czech/marin-glm">Repository</a><a href="data/catalogue.sqlite" download>SQLite</a><a href="data/catalogue.json" download>JSON</a></div>
+</header>
+<nav aria-label="Catalogue sections" id="navigation">
+  <a href="#view=evaluations" data-view="evaluations">Evaluations</a>
+  <a href="#view=models" data-view="models">Models</a>
+  <a href="#view=papers" data-view="papers">Papers</a>
+  <a href="#view=data" data-view="data">Data</a>
+  <a href="#view=audit" data-view="audit">Audit notes</a>
+</nav>
+<main id="content">
+  <noscript>This page’s filters require JavaScript. The complete catalogue is available as <a href="data/catalogue.json">JSON</a> or <a href="data/catalogue.sqlite">SQLite</a>.</noscript>
+  <section class="intro">
+    <h1 id="page-title">Evaluation catalogue</h1>
+    <p id="page-description">Tasks are organized by application, organism, model capability and functional region. A task is a dataset × prediction target; assay conditions and protocols are linked variants.</p>
+    <p class="muted" id="coverage"></p>
+  </section>
+  <section id="eval-view" aria-label="Evaluation explorer">
+    <form id="filters" aria-label="Filter evaluation tasks">
+      <label class="search">Search<input id="search" name="q" type="search" placeholder="Dataset, target, method or source…" autocomplete="off"></label>
+      <label>Application<select id="application" name="application"><option value="">All applications</option></select></label>
+      <label>Organism / clade<select id="population" name="population"><option value="">All organisms</option></select></label>
+      <label>Model capability<select id="capability" name="capability"><option value="">All capabilities</option></select></label>
+      <label>Functional region<select id="region" name="region"><option value="">All regions</option></select></label>
+      <label>Collection<select id="suite" name="suite"><option value="">All collections</option></select></label>
+      <label>Evo 2 provenance<select id="evo" name="evo"><option value="">All tasks</option><option value="original">Documented in original paper</option><option value="external">Documented in external evaluation</option><option value="both">Documented in both</option></select></label>
+      <label>Audit status<select id="status" name="status"><option value="">All statuses</option><option value="artifact-audited">Selected artifacts audited</option><option value="paper-audited">Paper / protocol audit</option><option value="registered">Registered; task audit pending</option><option value="panel-pending">Composite panel; expansion pending</option></select></label>
+      <div class="filter-actions"><button type="reset" class="secondary">Reset filters</button><button type="button" id="export">Export matching tasks (CSV)</button></div>
+    </form>
+    <p class="filter-note" id="classification-note">Organism filters include descendant taxa. Assignments distinguish sequence origin from assay host where established. Application mappings are editorial, not validation claims. Missing annotations do not imply biological absence.</p>
+    <div class="toolbar"><div class="switch" aria-label="Display"><button id="task-mode" type="button" aria-pressed="true">Tasks</button><button id="suite-mode" type="button" aria-pressed="false">Collections</button></div><p role="status" aria-live="polite" id="result-count"></p></div>
+    <div id="results"></div>
+    <button type="button" id="more" hidden>Show more</button>
+  </section>
+  <section id="other-view" hidden></section>
+</main>
+<footer>Source audit in progress · <span id="updated"></span>. Counts and protocols refer to the cited version. This catalogue does not rank models or assign ID/OD categories.</footer>
+<script id="catalogue" type="application/json">__CATALOGUE_JSON__</script>
+<script>/*__SCRIPT__*/</script>
+</body>
+</html>

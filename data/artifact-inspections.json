@@ -1,0 +1,2693 @@
+[
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "provenance/mibig_metadata.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/provenance/mibig_metadata.csv",
+    "sha256": "52fc34d12e4fff1333cb4c2996345d96a3b702af8f8dfa4a3c120984aee81dd9",
+    "bytes": 623960,
+    "rows": 2437,
+    "columns": [
+      "bgc_id",
+      "biosynthetic_classes",
+      "primary_class",
+      "compounds",
+      "smiles",
+      "has_smiles",
+      "organism_name",
+      "ncbi_tax_id"
+    ]
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t1_gcf_holdout_c07.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t1_gcf_holdout_c07.csv",
+    "sha256": "55951eeffdc77e8406f4d0e987019fd3832ffa12a7a01a2ee802ae9fa67edc13",
+    "bytes": 58743,
+    "rows": 2433,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class"
+    ],
+    "values": {
+      "split": {
+        "train": 2057,
+        "test": 376
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t1_random.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t1_random.csv",
+    "sha256": "c0c6f23acd74419365fbc0f6ec588b75ad6993e06aa515ea3664e8f87ad88bb3",
+    "bytes": 58732,
+    "rows": 2437,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class"
+    ],
+    "values": {
+      "split": {
+        "train": 1949,
+        "test": 488
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t1_scaffold_holdout.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t1_scaffold_holdout.csv",
+    "sha256": "f0afc32d71522bca9feeeb6b87e0be05da931078996358bcdd344901197008f7",
+    "bytes": 45396,
+    "rows": 1883,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class"
+    ],
+    "values": {
+      "split": {
+        "train": 1445,
+        "test": 438
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t1ml_gcf_holdout_c07.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t1ml_gcf_holdout_c07.csv",
+    "sha256": "a25aa4c41fe5be471b93aabc2e563ef54492183ec4bbdc7697f613f9328f0e31",
+    "bytes": 70239,
+    "rows": 2433,
+    "columns": [
+      "bgc_id",
+      "split",
+      "NRP",
+      "Other",
+      "Polyketide",
+      "RiPP",
+      "Saccharide",
+      "Terpene"
+    ],
+    "values": {
+      "split": {
+        "train": 2057,
+        "test": 376
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t1ml_random.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t1ml_random.csv",
+    "sha256": "a10c21bd07e0b1ff33d71d33d6088730dba2d06827c18f22db14cd89477435c0",
+    "bytes": 70243,
+    "rows": 2437,
+    "columns": [
+      "bgc_id",
+      "split",
+      "NRP",
+      "Other",
+      "Polyketide",
+      "RiPP",
+      "Saccharide",
+      "Terpene"
+    ],
+    "values": {
+      "split": {
+        "train": 1949,
+        "test": 488
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t1ml_scaffold_holdout.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t1ml_scaffold_holdout.csv",
+    "sha256": "0f7289934c6617b96311e7d6afd122ce1ad39a667b5083a6b88c2b2530fe3634",
+    "bytes": 56060,
+    "rows": 1944,
+    "columns": [
+      "bgc_id",
+      "split",
+      "NRP",
+      "Other",
+      "Polyketide",
+      "RiPP",
+      "Saccharide",
+      "Terpene"
+    ],
+    "values": {
+      "split": {
+        "train": 1570,
+        "test": 374
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t2ml_gcf_c07_holdout.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t2ml_gcf_c07_holdout.csv",
+    "sha256": "6f9c111d11a849ceec83458e83f7a0bf8f85d48c056a337806bce87e163574da",
+    "bytes": 57746,
+    "rows": 1221,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class",
+      "labels"
+    ],
+    "values": {
+      "split": {
+        "train": 1009,
+        "test": 212
+      },
+      "labels": {
+        "Spirotetronate macrolides": 11,
+        "Simple coumarins": 14,
+        "Open-chain polyketides": 64,
+        "Isocoumarins": 19,
+        "Polyene macrolides": 35,
+        "Tylosins": 9,
+        "Ansa macrolides": 23,
+        "Macrolide lactones": 22,
+        "Macrolide lactams": 17,
+        "Naphthoquinones": 16,
+        "Erythromycins": 9,
+        "Polyether ionophores": 16,
+        "Enediynes": 7,
+        "Zearalenones": 10,
+        "Anthraquinones and anthrones": 25,
+        "Simple phenolic acids": 11,
+        "Cyclic peptides; Enediynes; Pyridine alkaloids": 1,
+        "Piperidine alkaloids": 10,
+        "Open-chain polyketides; Polyether ionophores": 4,
+        "Erythromycins; Tylosins": 3,
+        "2-pyrone derivatives": 15,
+        "Pyridine alkaloids": 19,
+        "Erythromycins; Spirotetronate macrolides": 1,
+        "Simple indole alkaloids": 15,
+        "Anthracyclines": 14,
+        "Anthraquinones and anthrones; Naphthoquinones": 1,
+        "Angucyclines; Anthraquinones and anthrones": 6,
+        "Angucyclines; Anthracyclines; Anthraquinones and anthrones": 1,
+        "Angucyclines": 41,
+        "Angucyclines; Naphthoquinones": 2,
+        "Anthracyclines; Anthraquinones and anthrones": 3,
+        "Amino cyclitols": 16,
+        "Aminoacids": 26,
+        "Pyrimidine nucleos(t)ides": 13,
+        "Cyclic peptides; Vancomycins and Teicoplanins": 3,
+        "Linear peptides; Lipopeptides": 12,
+        "Linear peptides": 45,
+        "Depsipeptides; Linear peptides": 3,
+        "Cyclic peptides": 118,
+        "Cyclic peptides; Depsipeptides; Lipopeptides": 61,
+        "Cyclic peptides; Depsipeptides; Linear peptides; Lipopeptides": 4,
+        "Cyclic peptides; Depsipeptides": 87,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids": 2,
+        "Vancomycins and Teicoplanins": 15,
+        "Linear peptides; Tripeptides": 6,
+        "Simple amide alkaloids": 18,
+        "Cyclic peptides; Depsipeptides; Pyrazine and Piperazine alkaloids": 2,
+        "Dipeptides": 24,
+        "Tripeptides": 21,
+        "Depsipeptides": 3,
+        "Cyclic peptides; Lipopeptides": 5,
+        "Depsipeptides; Linear peptides; Tripeptides": 2,
+        "Dipeptides; Tripeptides": 3,
+        "Aminoglycosides": 2,
+        "Carbazole alkaloids": 19,
+        "Polyamines": 22,
+        "RiPPs-Lasso peptides": 8,
+        "RiPPs-Lanthipeptides": 23,
+        "Cyclic peptides; RiPPs-Lanthipeptides": 4,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lasso peptides": 2,
+        "Cyclic peptides; RiPPs-Thiopeptides": 9,
+        "RiPPs-Thiopeptides": 13,
+        "Quinoline alkaloids": 10,
+        "Tetraketide meroterpenoids": 15,
+        "Amino cyclitols; Aminoglycosides": 12,
+        "Polysaccharides": 16,
+        "Carboline alkaloids": 5,
+        "Unsaturated fatty acids": 11,
+        "Purine nucleos(t)ides": 16,
+        "Phenazine alkaloids": 10,
+        "Cyclic peptides; N-acyl amines": 1,
+        "N-acyl amines": 10,
+        "Cyclic peptides; Lipopeptides; N-acyl amines; Simple amide alkaloids": 1,
+        "Lipopeptides; Open-chain polyketides": 2,
+        "Depsipeptides; Linear peptides; Lipopeptides": 5,
+        "Lipopeptides": 8,
+        "Anthraquinones and anthrones; Enediynes": 3,
+        "Macrolide lactams; Polyene macrolides": 2,
+        "Phenazine alkaloids; Quinoline alkaloids": 1,
+        "Carbazole alkaloids; Carboline alkaloids": 4,
+        "Cyclic peptides; Depsipeptides; Linear peptides": 4,
+        "Carboline alkaloids; Quinoline alkaloids": 1,
+        "Linear peptides; Simple amide alkaloids": 1,
+        "Piperidine alkaloids; Pyridine alkaloids": 1,
+        "Depsipeptides; Lipopeptides": 1,
+        "Pyrazine and Piperazine alkaloids": 8,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids; Simple indole alkaloids": 1,
+        "Macrolide lactones; Polyene macrolides": 3,
+        "Cyclic peptides; RiPPs-Lasso peptides": 5,
+        "Ansa macrolides; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides": 2,
+        "Macrolide lactones; Open-chain polyketides": 2,
+        "Carboline alkaloids; Simple indole alkaloids": 1,
+        "Cyclic peptides; Open-chain polyketides": 1,
+        "Open-chain polyketides; Tylosins": 1,
+        "Carbazole alkaloids; Quinoline alkaloids": 1,
+        "Purine nucleos(t)ides; Pyrimidine nucleos(t)ides": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides; RiPPs-Lasso peptides": 1,
+        "N-acyl amines; Open-chain polyketides": 1,
+        "Open-chain polyketides; Unsaturated fatty acids": 2,
+        "Aminoacids; N-acyl amines; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides; Tripeptides": 1,
+        "2-pyrone derivatives; Open-chain polyketides": 1,
+        "Aminoacids; Simple amide alkaloids": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides": 1,
+        "Dipeptides; Pyrazine and Piperazine alkaloids": 1,
+        "Polyamines; Pyridine alkaloids": 1,
+        "Cyclic peptides; RiPPs-Thiopeptides; Simple amide alkaloids": 1,
+        "Depsipeptides; Dipeptides; Tripeptides": 1,
+        "Cyclic peptides; Linear peptides; Lipopeptides": 1,
+        "Linear peptides; Lipopeptides; N-acyl amines": 1,
+        "Aminoacids; Tripeptides": 2,
+        "Naphthoquinones; Open-chain polyketides": 1,
+        "Simple phenolic acids; Tetraketide meroterpenoids": 1
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t2ml_scaffold_holdout.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t2ml_scaffold_holdout.csv",
+    "sha256": "f64b1fae3038238841c32215320c1eb66015a30c6941b9cab7a795b774cf5df2",
+    "bytes": 57691,
+    "rows": 1221,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class",
+      "labels"
+    ],
+    "values": {
+      "split": {
+        "train": 954,
+        "test": 267
+      },
+      "labels": {
+        "Spirotetronate macrolides": 11,
+        "Simple coumarins": 14,
+        "Open-chain polyketides": 64,
+        "Isocoumarins": 19,
+        "Polyene macrolides": 35,
+        "Tylosins": 9,
+        "Ansa macrolides": 23,
+        "Macrolide lactones": 22,
+        "Macrolide lactams": 17,
+        "Naphthoquinones": 16,
+        "Erythromycins": 9,
+        "Polyether ionophores": 16,
+        "Enediynes": 7,
+        "Zearalenones": 10,
+        "Anthraquinones and anthrones": 25,
+        "Simple phenolic acids": 11,
+        "Cyclic peptides; Enediynes; Pyridine alkaloids": 1,
+        "Piperidine alkaloids": 10,
+        "Open-chain polyketides; Polyether ionophores": 4,
+        "Erythromycins; Tylosins": 3,
+        "2-pyrone derivatives": 15,
+        "Pyridine alkaloids": 19,
+        "Erythromycins; Spirotetronate macrolides": 1,
+        "Simple indole alkaloids": 15,
+        "Anthracyclines": 14,
+        "Anthraquinones and anthrones; Naphthoquinones": 1,
+        "Angucyclines; Anthraquinones and anthrones": 6,
+        "Angucyclines; Anthracyclines; Anthraquinones and anthrones": 1,
+        "Angucyclines": 41,
+        "Angucyclines; Naphthoquinones": 2,
+        "Anthracyclines; Anthraquinones and anthrones": 3,
+        "Amino cyclitols": 16,
+        "Aminoacids": 26,
+        "Pyrimidine nucleos(t)ides": 13,
+        "Cyclic peptides; Vancomycins and Teicoplanins": 3,
+        "Linear peptides; Lipopeptides": 12,
+        "Linear peptides": 45,
+        "Depsipeptides; Linear peptides": 3,
+        "Cyclic peptides": 118,
+        "Cyclic peptides; Depsipeptides; Lipopeptides": 61,
+        "Cyclic peptides; Depsipeptides; Linear peptides; Lipopeptides": 4,
+        "Cyclic peptides; Depsipeptides": 87,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids": 2,
+        "Vancomycins and Teicoplanins": 15,
+        "Linear peptides; Tripeptides": 6,
+        "Simple amide alkaloids": 18,
+        "Cyclic peptides; Depsipeptides; Pyrazine and Piperazine alkaloids": 2,
+        "Dipeptides": 24,
+        "Tripeptides": 21,
+        "Depsipeptides": 3,
+        "Cyclic peptides; Lipopeptides": 5,
+        "Depsipeptides; Linear peptides; Tripeptides": 2,
+        "Dipeptides; Tripeptides": 3,
+        "Aminoglycosides": 2,
+        "Carbazole alkaloids": 19,
+        "Polyamines": 22,
+        "RiPPs-Lasso peptides": 8,
+        "RiPPs-Lanthipeptides": 23,
+        "Cyclic peptides; RiPPs-Lanthipeptides": 4,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lasso peptides": 2,
+        "Cyclic peptides; RiPPs-Thiopeptides": 9,
+        "RiPPs-Thiopeptides": 13,
+        "Quinoline alkaloids": 10,
+        "Tetraketide meroterpenoids": 15,
+        "Amino cyclitols; Aminoglycosides": 12,
+        "Polysaccharides": 16,
+        "Carboline alkaloids": 5,
+        "Unsaturated fatty acids": 11,
+        "Purine nucleos(t)ides": 16,
+        "Phenazine alkaloids": 10,
+        "Cyclic peptides; N-acyl amines": 1,
+        "N-acyl amines": 10,
+        "Cyclic peptides; Lipopeptides; N-acyl amines; Simple amide alkaloids": 1,
+        "Lipopeptides; Open-chain polyketides": 2,
+        "Depsipeptides; Linear peptides; Lipopeptides": 5,
+        "Lipopeptides": 8,
+        "Anthraquinones and anthrones; Enediynes": 3,
+        "Macrolide lactams; Polyene macrolides": 2,
+        "Phenazine alkaloids; Quinoline alkaloids": 1,
+        "Carbazole alkaloids; Carboline alkaloids": 4,
+        "Cyclic peptides; Depsipeptides; Linear peptides": 4,
+        "Carboline alkaloids; Quinoline alkaloids": 1,
+        "Linear peptides; Simple amide alkaloids": 1,
+        "Piperidine alkaloids; Pyridine alkaloids": 1,
+        "Depsipeptides; Lipopeptides": 1,
+        "Pyrazine and Piperazine alkaloids": 8,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids; Simple indole alkaloids": 1,
+        "Macrolide lactones; Polyene macrolides": 3,
+        "Cyclic peptides; RiPPs-Lasso peptides": 5,
+        "Ansa macrolides; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides": 2,
+        "Macrolide lactones; Open-chain polyketides": 2,
+        "Carboline alkaloids; Simple indole alkaloids": 1,
+        "Cyclic peptides; Open-chain polyketides": 1,
+        "Open-chain polyketides; Tylosins": 1,
+        "Carbazole alkaloids; Quinoline alkaloids": 1,
+        "Purine nucleos(t)ides; Pyrimidine nucleos(t)ides": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides; RiPPs-Lasso peptides": 1,
+        "N-acyl amines; Open-chain polyketides": 1,
+        "Open-chain polyketides; Unsaturated fatty acids": 2,
+        "Aminoacids; N-acyl amines; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides; Tripeptides": 1,
+        "2-pyrone derivatives; Open-chain polyketides": 1,
+        "Aminoacids; Simple amide alkaloids": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides": 1,
+        "Dipeptides; Pyrazine and Piperazine alkaloids": 1,
+        "Polyamines; Pyridine alkaloids": 1,
+        "Cyclic peptides; RiPPs-Thiopeptides; Simple amide alkaloids": 1,
+        "Depsipeptides; Dipeptides; Tripeptides": 1,
+        "Cyclic peptides; Linear peptides; Lipopeptides": 1,
+        "Linear peptides; Lipopeptides; N-acyl amines": 1,
+        "Aminoacids; Tripeptides": 2,
+        "Naphthoquinones; Open-chain polyketides": 1,
+        "Simple phenolic acids; Tetraketide meroterpenoids": 1
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t2ml_stratified_5fold.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t2ml_stratified_5fold.csv",
+    "sha256": "b53f3e470b396c0832c3d141542408cdd1cd54d9108e2f55d986dbd0df4c65d1",
+    "bytes": 53073,
+    "rows": 1221,
+    "columns": [
+      "bgc_id",
+      "fold",
+      "primary_class",
+      "labels"
+    ],
+    "values": {
+      "fold": {
+        "1": 248,
+        "2": 245,
+        "0": 244,
+        "3": 243,
+        "4": 241
+      },
+      "labels": {
+        "Spirotetronate macrolides": 11,
+        "Simple coumarins": 14,
+        "Open-chain polyketides": 64,
+        "Isocoumarins": 19,
+        "Polyene macrolides": 35,
+        "Tylosins": 9,
+        "Ansa macrolides": 23,
+        "Macrolide lactones": 22,
+        "Macrolide lactams": 17,
+        "Naphthoquinones": 16,
+        "Erythromycins": 9,
+        "Polyether ionophores": 16,
+        "Enediynes": 7,
+        "Zearalenones": 10,
+        "Anthraquinones and anthrones": 25,
+        "Simple phenolic acids": 11,
+        "Cyclic peptides; Enediynes; Pyridine alkaloids": 1,
+        "Piperidine alkaloids": 10,
+        "Open-chain polyketides; Polyether ionophores": 4,
+        "Erythromycins; Tylosins": 3,
+        "2-pyrone derivatives": 15,
+        "Pyridine alkaloids": 19,
+        "Erythromycins; Spirotetronate macrolides": 1,
+        "Simple indole alkaloids": 15,
+        "Anthracyclines": 14,
+        "Anthraquinones and anthrones; Naphthoquinones": 1,
+        "Angucyclines; Anthraquinones and anthrones": 6,
+        "Angucyclines; Anthracyclines; Anthraquinones and anthrones": 1,
+        "Angucyclines": 41,
+        "Angucyclines; Naphthoquinones": 2,
+        "Anthracyclines; Anthraquinones and anthrones": 3,
+        "Amino cyclitols": 16,
+        "Aminoacids": 26,
+        "Pyrimidine nucleos(t)ides": 13,
+        "Cyclic peptides; Vancomycins and Teicoplanins": 3,
+        "Linear peptides; Lipopeptides": 12,
+        "Linear peptides": 45,
+        "Depsipeptides; Linear peptides": 3,
+        "Cyclic peptides": 118,
+        "Cyclic peptides; Depsipeptides; Lipopeptides": 61,
+        "Cyclic peptides; Depsipeptides; Linear peptides; Lipopeptides": 4,
+        "Cyclic peptides; Depsipeptides": 87,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids": 2,
+        "Vancomycins and Teicoplanins": 15,
+        "Linear peptides; Tripeptides": 6,
+        "Simple amide alkaloids": 18,
+        "Cyclic peptides; Depsipeptides; Pyrazine and Piperazine alkaloids": 2,
+        "Dipeptides": 24,
+        "Tripeptides": 21,
+        "Depsipeptides": 3,
+        "Cyclic peptides; Lipopeptides": 5,
+        "Depsipeptides; Linear peptides; Tripeptides": 2,
+        "Dipeptides; Tripeptides": 3,
+        "Aminoglycosides": 2,
+        "Carbazole alkaloids": 19,
+        "Polyamines": 22,
+        "RiPPs-Lasso peptides": 8,
+        "RiPPs-Lanthipeptides": 23,
+        "Cyclic peptides; RiPPs-Lanthipeptides": 4,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lasso peptides": 2,
+        "Cyclic peptides; RiPPs-Thiopeptides": 9,
+        "RiPPs-Thiopeptides": 13,
+        "Quinoline alkaloids": 10,
+        "Tetraketide meroterpenoids": 15,
+        "Amino cyclitols; Aminoglycosides": 12,
+        "Polysaccharides": 16,
+        "Carboline alkaloids": 5,
+        "Unsaturated fatty acids": 11,
+        "Purine nucleos(t)ides": 16,
+        "Phenazine alkaloids": 10,
+        "Cyclic peptides; N-acyl amines": 1,
+        "N-acyl amines": 10,
+        "Cyclic peptides; Lipopeptides; N-acyl amines; Simple amide alkaloids": 1,
+        "Lipopeptides; Open-chain polyketides": 2,
+        "Depsipeptides; Linear peptides; Lipopeptides": 5,
+        "Lipopeptides": 8,
+        "Anthraquinones and anthrones; Enediynes": 3,
+        "Macrolide lactams; Polyene macrolides": 2,
+        "Phenazine alkaloids; Quinoline alkaloids": 1,
+        "Carbazole alkaloids; Carboline alkaloids": 4,
+        "Cyclic peptides; Depsipeptides; Linear peptides": 4,
+        "Carboline alkaloids; Quinoline alkaloids": 1,
+        "Linear peptides; Simple amide alkaloids": 1,
+        "Piperidine alkaloids; Pyridine alkaloids": 1,
+        "Depsipeptides; Lipopeptides": 1,
+        "Pyrazine and Piperazine alkaloids": 8,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids; Simple indole alkaloids": 1,
+        "Macrolide lactones; Polyene macrolides": 3,
+        "Cyclic peptides; RiPPs-Lasso peptides": 5,
+        "Ansa macrolides; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides": 2,
+        "Macrolide lactones; Open-chain polyketides": 2,
+        "Carboline alkaloids; Simple indole alkaloids": 1,
+        "Cyclic peptides; Open-chain polyketides": 1,
+        "Open-chain polyketides; Tylosins": 1,
+        "Carbazole alkaloids; Quinoline alkaloids": 1,
+        "Purine nucleos(t)ides; Pyrimidine nucleos(t)ides": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides; RiPPs-Lasso peptides": 1,
+        "N-acyl amines; Open-chain polyketides": 1,
+        "Open-chain polyketides; Unsaturated fatty acids": 2,
+        "Aminoacids; N-acyl amines; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides; Tripeptides": 1,
+        "2-pyrone derivatives; Open-chain polyketides": 1,
+        "Aminoacids; Simple amide alkaloids": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides": 1,
+        "Dipeptides; Pyrazine and Piperazine alkaloids": 1,
+        "Polyamines; Pyridine alkaloids": 1,
+        "Cyclic peptides; RiPPs-Thiopeptides; Simple amide alkaloids": 1,
+        "Depsipeptides; Dipeptides; Tripeptides": 1,
+        "Cyclic peptides; Linear peptides; Lipopeptides": 1,
+        "Linear peptides; Lipopeptides; N-acyl amines": 1,
+        "Aminoacids; Tripeptides": 2,
+        "Naphthoquinones; Open-chain polyketides": 1,
+        "Simple phenolic acids; Tetraketide meroterpenoids": 1
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t3_class_holdout.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t3_class_holdout.csv",
+    "sha256": "b20afebed49ce442871d997269e9e7ded341c86933cba7ee8b327e21a38010a0",
+    "bytes": 35872,
+    "rows": 1944,
+    "columns": [
+      "bgc_id",
+      "primary_class"
+    ]
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t3_gcf_holdout_c07.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t3_gcf_holdout_c07.csv",
+    "sha256": "a28fd1dfef4a4ccac5959b86c5614a0d7df77f0db5978f31e6465989a949ab81",
+    "bytes": 47166,
+    "rows": 1941,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class"
+    ],
+    "values": {
+      "split": {
+        "train": 1638,
+        "test": 303
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t3_random.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t3_random.csv",
+    "sha256": "1eb7f246c90514b9ceb4176ef0a3c715f01bcdc0fa0c359c05c3c017d30ce256",
+    "bytes": 47153,
+    "rows": 1944,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class"
+    ],
+    "values": {
+      "split": {
+        "train": 1555,
+        "test": 389
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t3_scaffold_holdout.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t3_scaffold_holdout.csv",
+    "sha256": "92a6c7319929c1984ec9409c0b8543f912bc5dfa241d50cb965488048786ab17",
+    "bytes": 47168,
+    "rows": 1944,
+    "columns": [
+      "bgc_id",
+      "split",
+      "primary_class"
+    ],
+    "values": {
+      "split": {
+        "train": 1570,
+        "test": 374
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t5_bgc_grouped_5fold.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t5_bgc_grouped_5fold.csv",
+    "sha256": "8bc996e2267285e96777e4dc37fb300b81a0b02b4b2050d6c9ee977807577066",
+    "bytes": 227328,
+    "rows": 2315,
+    "columns": [
+      "domain_id",
+      "bgc_id",
+      "gcf_id",
+      "substrate",
+      "substrate_group",
+      "level_b",
+      "evidence_tier",
+      "fold"
+    ],
+    "values": {
+      "fold": {
+        "1": 463,
+        "3": 463,
+        "4": 463,
+        "0": 463,
+        "2": 463
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "splits/t5_gcf_holdout_c07.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/splits/t5_gcf_holdout_c07.csv",
+    "sha256": "8518e7cf02da1de914f645e8a1e8c2c1155b386f5f886810822f7f088107a7a3",
+    "bytes": 236250,
+    "rows": 2315,
+    "columns": [
+      "domain_id",
+      "bgc_id",
+      "gcf_id",
+      "substrate",
+      "substrate_group",
+      "level_b",
+      "evidence_tier",
+      "split"
+    ],
+    "values": {
+      "split": {
+        "train": 1976,
+        "test": 339
+      }
+    }
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "tasks/adomain_instances.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/tasks/adomain_instances.csv",
+    "sha256": "919c487f0a4a0ecf00e1a5b22e3351bc2b5868b06b1dd1d7bebfb4eb8652607b",
+    "bytes": 1226408,
+    "rows": 2504,
+    "columns": [
+      "domain_id",
+      "bgc_id",
+      "gene_id",
+      "cds_aa_hash",
+      "domain_ordinal",
+      "token_index",
+      "token_index_raw",
+      "env_start",
+      "env_stop",
+      "aa_seq",
+      "stachelhaus_code",
+      "substrate",
+      "substrate_group",
+      "n_substrates",
+      "evidence_tier",
+      "gcf_id"
+    ]
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "tasks/chem_descriptors.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/tasks/chem_descriptors.csv",
+    "sha256": "5bc0f480a24d3b3d339d3e1af1da555e6b4b851272e0f03385af4119c0072f08",
+    "bytes": 274627,
+    "rows": 1944,
+    "columns": [
+      "bgc_id",
+      "MolWt",
+      "MolLogP",
+      "NumHDonors",
+      "NumHAcceptors",
+      "TPSA",
+      "NumRotatableBonds",
+      "qed",
+      "BertzCT",
+      "NumAliphaticRings",
+      "NumAromaticRings",
+      "FractionCSP3",
+      "NumStereocenters",
+      "HalogenAtomCount"
+    ]
+  },
+  {
+    "repo": "Nugkta/bgc-bench",
+    "revision": "f64c7f6eb6d3910cc7b4434cdc114dc7501305b1",
+    "path": "tasks/t2ml_labels.csv",
+    "url": "https://huggingface.co/datasets/Nugkta/bgc-bench/resolve/f64c7f6eb6d3910cc7b4434cdc114dc7501305b1/tasks/t2ml_labels.csv",
+    "sha256": "3103a39c579b400082ad40dff3e946b0cdaaeadd700344336c04914983b0a62f",
+    "bytes": 110222,
+    "rows": 1710,
+    "columns": [
+      "bgc_id",
+      "n_products",
+      "n_products_smiles",
+      "n_products_classified",
+      "classes_all",
+      "labels",
+      "enrolled"
+    ],
+    "values": {
+      "labels": {
+        "Spirotetronate macrolides": 11,
+        "Simple coumarins": 14,
+        "Open-chain polyketides": 64,
+        "Isocoumarins": 19,
+        "Polyene macrolides": 35,
+        "": 489,
+        "Tylosins": 9,
+        "Ansa macrolides": 23,
+        "Macrolide lactones": 22,
+        "Macrolide lactams": 17,
+        "Naphthoquinones": 16,
+        "Erythromycins": 9,
+        "Polyether ionophores": 16,
+        "Enediynes": 7,
+        "Zearalenones": 10,
+        "Anthraquinones and anthrones": 25,
+        "Simple phenolic acids": 11,
+        "Cyclic peptides; Enediynes; Pyridine alkaloids": 1,
+        "Piperidine alkaloids": 10,
+        "Open-chain polyketides; Polyether ionophores": 4,
+        "Erythromycins; Tylosins": 3,
+        "2-pyrone derivatives": 15,
+        "Pyridine alkaloids": 19,
+        "Erythromycins; Spirotetronate macrolides": 1,
+        "Simple indole alkaloids": 15,
+        "Anthracyclines": 14,
+        "Anthraquinones and anthrones; Naphthoquinones": 1,
+        "Angucyclines; Anthraquinones and anthrones": 6,
+        "Angucyclines; Anthracyclines; Anthraquinones and anthrones": 1,
+        "Angucyclines": 41,
+        "Angucyclines; Naphthoquinones": 2,
+        "Anthracyclines; Anthraquinones and anthrones": 3,
+        "Amino cyclitols": 16,
+        "Aminoacids": 26,
+        "Pyrimidine nucleos(t)ides": 13,
+        "Cyclic peptides; Vancomycins and Teicoplanins": 3,
+        "Linear peptides; Lipopeptides": 12,
+        "Linear peptides": 45,
+        "Depsipeptides; Linear peptides": 3,
+        "Cyclic peptides": 118,
+        "Cyclic peptides; Depsipeptides; Lipopeptides": 61,
+        "Cyclic peptides; Depsipeptides; Linear peptides; Lipopeptides": 4,
+        "Cyclic peptides; Depsipeptides": 87,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids": 2,
+        "Vancomycins and Teicoplanins": 15,
+        "Linear peptides; Tripeptides": 6,
+        "Simple amide alkaloids": 18,
+        "Cyclic peptides; Depsipeptides; Pyrazine and Piperazine alkaloids": 2,
+        "Dipeptides": 24,
+        "Tripeptides": 21,
+        "Depsipeptides": 3,
+        "Cyclic peptides; Lipopeptides": 5,
+        "Depsipeptides; Linear peptides; Tripeptides": 2,
+        "Dipeptides; Tripeptides": 3,
+        "Aminoglycosides": 2,
+        "Carbazole alkaloids": 19,
+        "Polyamines": 22,
+        "RiPPs-Lasso peptides": 8,
+        "RiPPs-Lanthipeptides": 23,
+        "Cyclic peptides; RiPPs-Lanthipeptides": 4,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lasso peptides": 2,
+        "Cyclic peptides; RiPPs-Thiopeptides": 9,
+        "RiPPs-Thiopeptides": 13,
+        "Quinoline alkaloids": 10,
+        "Tetraketide meroterpenoids": 15,
+        "Amino cyclitols; Aminoglycosides": 12,
+        "Polysaccharides": 16,
+        "Carboline alkaloids": 5,
+        "Unsaturated fatty acids": 11,
+        "Purine nucleos(t)ides": 16,
+        "Phenazine alkaloids": 10,
+        "Cyclic peptides; N-acyl amines": 1,
+        "N-acyl amines": 10,
+        "Cyclic peptides; Lipopeptides; N-acyl amines; Simple amide alkaloids": 1,
+        "Lipopeptides; Open-chain polyketides": 2,
+        "Depsipeptides; Linear peptides; Lipopeptides": 5,
+        "Lipopeptides": 8,
+        "Anthraquinones and anthrones; Enediynes": 3,
+        "Macrolide lactams; Polyene macrolides": 2,
+        "Phenazine alkaloids; Quinoline alkaloids": 1,
+        "Carbazole alkaloids; Carboline alkaloids": 4,
+        "Cyclic peptides; Depsipeptides; Linear peptides": 4,
+        "Carboline alkaloids; Quinoline alkaloids": 1,
+        "Linear peptides; Simple amide alkaloids": 1,
+        "Piperidine alkaloids; Pyridine alkaloids": 1,
+        "Depsipeptides; Lipopeptides": 1,
+        "Pyrazine and Piperazine alkaloids": 8,
+        "Pyrazine and Piperazine alkaloids; Pyridine alkaloids; Simple indole alkaloids": 1,
+        "Macrolide lactones; Polyene macrolides": 3,
+        "Cyclic peptides; RiPPs-Lasso peptides": 5,
+        "Ansa macrolides; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides": 2,
+        "Macrolide lactones; Open-chain polyketides": 2,
+        "Carboline alkaloids; Simple indole alkaloids": 1,
+        "Cyclic peptides; Open-chain polyketides": 1,
+        "Open-chain polyketides; Tylosins": 1,
+        "Carbazole alkaloids; Quinoline alkaloids": 1,
+        "Purine nucleos(t)ides; Pyrimidine nucleos(t)ides": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides; RiPPs-Lasso peptides": 1,
+        "N-acyl amines; Open-chain polyketides": 1,
+        "Open-chain polyketides; Unsaturated fatty acids": 2,
+        "Aminoacids; N-acyl amines; Simple amide alkaloids": 1,
+        "Cyclic peptides; Linear peptides; Tripeptides": 1,
+        "2-pyrone derivatives; Open-chain polyketides": 1,
+        "Aminoacids; Simple amide alkaloids": 1,
+        "Cyclic peptides; Depsipeptides; RiPPs-Lanthipeptides": 1,
+        "Dipeptides; Pyrazine and Piperazine alkaloids": 1,
+        "Polyamines; Pyridine alkaloids": 1,
+        "Cyclic peptides; RiPPs-Thiopeptides; Simple amide alkaloids": 1,
+        "Depsipeptides; Dipeptides; Tripeptides": 1,
+        "Cyclic peptides; Linear peptides; Lipopeptides": 1,
+        "Linear peptides; Lipopeptides; N-acyl amines": 1,
+        "Aminoacids; Tripeptides": 2,
+        "Naphthoquinones; Open-chain polyketides": 1,
+        "Simple phenolic acids; Tetraketide meroterpenoids": 1
+      }
+    }
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H2AFZ/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H2AFZ/test.parquet",
+    "sha256": "f40490e8530959a5fdbb6e431dc3ab9002ebd96098a057c1236eb1b309a8baee",
+    "bytes": 1445054,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 1506,
+        "1": 1494
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H2AFZ/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H2AFZ/train.parquet",
+    "sha256": "1cd62c3ecfbf04e13ca9db01ed04a5452843084845caa98a78e248f0719b0a01",
+    "bytes": 14576339,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 15003,
+        "1": 14997
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K27ac/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K27ac/test.parquet",
+    "sha256": "6c364e85446f4a53971a7b1e2da787b94b885e661e7b0720c59d86f7c5cfc623",
+    "bytes": 778901,
+    "rows": 1616,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 808,
+        "0": 808
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K27ac/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K27ac/train.parquet",
+    "sha256": "8d5e53a8b0b80a619e69151fdf18031e79cdeb0a2cc7a93e313b0546b663ce0e",
+    "bytes": 14569007,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 14995,
+        "1": 15005
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K27me3/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K27me3/test.parquet",
+    "sha256": "1cf930d81d27725534092f01e5771900e9794014be4e3fca7e2bad1b38e24a1d",
+    "bytes": 1445037,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1493,
+        "0": 1507
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K27me3/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K27me3/train.parquet",
+    "sha256": "3c758abc84bca648c70112fe3496db06ecef513a6f0bcb1a3b1e6c25bced0a9a",
+    "bytes": 14577666,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 14901,
+        "0": 15099
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K36me3/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K36me3/test.parquet",
+    "sha256": "8d0c2cf3a14669bd11d29319ff1d9aa8936da5555d497dd050c21cd8ebb29c94",
+    "bytes": 1444686,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 1494,
+        "1": 1506
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K36me3/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K36me3/train.parquet",
+    "sha256": "1bbb087b1b48a41dbc84f0e35867bb803fc7661eca4e160c8278e3ff9ffae2a6",
+    "bytes": 14545818,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 15074,
+        "1": 14926
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K4me1/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K4me1/test.parquet",
+    "sha256": "44217939f3e43d6ec34bbbd2113e48e3688d2c0675d5b67c3540785692468fbd",
+    "bytes": 1446194,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 1495,
+        "1": 1505
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K4me1/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K4me1/train.parquet",
+    "sha256": "97c3e6951974bbd4b8e012f1290fdb0ef22755b3d98cead2da9320a85b505a57",
+    "bytes": 14567053,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 14980,
+        "0": 15020
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K4me2/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K4me2/test.parquet",
+    "sha256": "57268b700f5c5633b00de66031774404b9f490529dae97747c684ed423194b2f",
+    "bytes": 1029435,
+    "rows": 2138,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1069,
+        "0": 1069
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K4me2/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K4me2/train.parquet",
+    "sha256": "1b76d1a700ae3f61c37970a85059cf39cd9d862c53a6708ca7db885504844f54",
+    "bytes": 14574496,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 15036,
+        "0": 14964
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K4me3/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K4me3/test.parquet",
+    "sha256": "4f9d1a7846d577b0639c2d0cbae5f1fc999b1c32cb5d76260539a473cb0e8175",
+    "bytes": 377572,
+    "rows": 776,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 388,
+        "0": 388
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K4me3/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K4me3/train.parquet",
+    "sha256": "9c74d7116c5738781cc1eb6d068a402f9fd4f50f22e90f3c779a903b1a59cc8a",
+    "bytes": 8441070,
+    "rows": 17468,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 8734,
+        "0": 8734
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K9ac/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K9ac/test.parquet",
+    "sha256": "3f0062689676624099d345bfb5ada08bc6a19f55740510dbe69339f62197c822",
+    "bytes": 487406,
+    "rows": 1004,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 502,
+        "0": 502
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K9ac/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K9ac/train.parquet",
+    "sha256": "847c2f9c1ec5bc500ee8d2b543cdb3d398a62cda96527c0d3f4561233e0fa1a6",
+    "bytes": 11251029,
+    "rows": 23274,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 11637,
+        "0": 11637
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K9me3/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K9me3/test.parquet",
+    "sha256": "1bddf91ba43f0115abce6386816822d648f8ee8cea2dbfcb0c62550155f2876a",
+    "bytes": 411254,
+    "rows": 850,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 425,
+        "0": 425
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H3K9me3/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H3K9me3/train.parquet",
+    "sha256": "03e807af342a512e790854ae51f9fbf7b6e718f8e91b5b5d44d80b26621bd339",
+    "bytes": 13202288,
+    "rows": 27438,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 13719,
+        "0": 13719
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H4K20me1/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H4K20me1/test.parquet",
+    "sha256": "2059e8d3aef211cf130da099d87ae07d374d5b5d3fbfe3b83bf7bf80e4511051",
+    "bytes": 1091627,
+    "rows": 2270,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1135,
+        "0": 1135
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "H4K20me1/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/H4K20me1/train.parquet",
+    "sha256": "5d909d52afa95c0b6109aef099db1901595c8fc0c102efe187d432bfb49232a3",
+    "bytes": 14580160,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 15026,
+        "0": 14974
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 1000,
+      "max": 1000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "enhancers/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/enhancers/test.parquet",
+    "sha256": "fa97226c8e06da73e4e865098ae704d7bb766c9a32442d239a715c01b9557fef",
+    "bytes": 609886,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1453,
+        "0": 1547
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 400,
+      "max": 400
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "enhancers/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/enhancers/train.parquet",
+    "sha256": "ee43317726a5f3340809ec09a90acea7737748c7fcbd50e8ccb8916835355577",
+    "bytes": 6212750,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 15006,
+        "0": 14994
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 400,
+      "max": 400
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "enhancers_types/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/enhancers_types/test.parquet",
+    "sha256": "f5f1fbf93313fce584032e6abcc06df54f1c4d63b1a160b9474510616eb303b4",
+    "bytes": 610453,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1332,
+        "0": 1547,
+        "2": 121
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 400,
+      "max": 400
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "enhancers_types/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/enhancers_types/train.parquet",
+    "sha256": "e03c4fb322178ad66f0a351ecd9b210fc813b0e7c99fb096fa2c6c90748d2c6b",
+    "bytes": 6217503,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 13922,
+        "0": 14994,
+        "2": 1084
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 400,
+      "max": 400
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "promoter_all/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/promoter_all/test.parquet",
+    "sha256": "f13c2264a759cb7c11010b5854fa818c114c7855f8e1e52dfb2988ef8428c8c1",
+    "bytes": 252239,
+    "rows": 1584,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 792,
+        "0": 792
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 300,
+      "max": 300
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "promoter_all/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/promoter_all/train.parquet",
+    "sha256": "9ff9dce44d53dc66eff810cdff2187f98e9b9c9c2e52a05fe17d4eb9240b8b14",
+    "bytes": 4826136,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "0": 14950,
+        "1": 15050
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 300,
+      "max": 300
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "promoter_no_tata/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/promoter_no_tata/test.parquet",
+    "sha256": "2abef022f9d142255056b27286da875b02eae883203a785815e74282e713832c",
+    "bytes": 219260,
+    "rows": 1372,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 686,
+        "0": 686
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 300,
+      "max": 300
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "promoter_no_tata/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/promoter_no_tata/train.parquet",
+    "sha256": "db4d640c95f679ddc6a0be0dd153f56e9dc67497b37a1f5fd4e50442a2d5ed45",
+    "bytes": 4825367,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 14980,
+        "0": 15020
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 300,
+      "max": 300
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "promoter_tata/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/promoter_tata/test.parquet",
+    "sha256": "065c08e8fb4b7d55563ca90d2acaab6b91c1224e9a6f86b7fab767a653125dfa",
+    "bytes": 37519,
+    "rows": 212,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 106,
+        "0": 106
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 300,
+      "max": 300
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "promoter_tata/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/promoter_tata/train.parquet",
+    "sha256": "e314c9e2fb43bdd703a15936d51a4bbf9f8b5b8037521788ed2973dde9f731a8",
+    "bytes": 811190,
+    "rows": 5062,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 2531,
+        "0": 2531
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 300,
+      "max": 300
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "splice_sites_acceptors/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/splice_sites_acceptors/test.parquet",
+    "sha256": "fd49a389c983a3a266338f56ac85be53792eb51e6fdb96c0cb4211489971f64e",
+    "bytes": 893653,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1475,
+        "0": 1525
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 600,
+      "max": 600
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "splice_sites_acceptors/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/splice_sites_acceptors/train.parquet",
+    "sha256": "6cd196d979f96098a61a0bbb318831c6fdf43bdf7814dab2a0d8aaaa5ed4aa36",
+    "bytes": 9012555,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 15031,
+        "0": 14969
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 600,
+      "max": 600
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "splice_sites_all/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/splice_sites_all/test.parquet",
+    "sha256": "70a93ca0b669c4ea272b30ca6dc9bfa4738c3c14fee25badaf26ad933906f9c6",
+    "bytes": 902647,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 952,
+        "2": 1019,
+        "0": 1029
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 600,
+      "max": 600
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "splice_sites_all/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/splice_sites_all/train.parquet",
+    "sha256": "f4575ecc50aef3cf22ec330dc5c294232879e01c33120cb865ba2f4898b11a67",
+    "bytes": 9056666,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 10047,
+        "0": 9846,
+        "2": 10107
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 600,
+      "max": 600
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "splice_sites_donors/test.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/splice_sites_donors/test.parquet",
+    "sha256": "27dc3dea6da3901f149e885693e06a0a02130544b22ee1f0650f542cbde24e54",
+    "bytes": 893671,
+    "rows": 3000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 1480,
+        "0": 1520
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 600,
+      "max": 600
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised",
+    "revision": "851f9946252e90c665cdb3cc3eedb78f1f26197c",
+    "path": "splice_sites_donors/train.parquet",
+    "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks_revised/resolve/851f9946252e90c665cdb3cc3eedb78f1f26197c/splice_sites_donors/train.parquet",
+    "sha256": "68871ba32db06c1bdb5fb91941429c5dca0645c4276269eb70a7c6d9c31a5e48",
+    "bytes": 9015107,
+    "rows": 30000,
+    "columns": [
+      "sequence",
+      "name",
+      "label",
+      "task"
+    ],
+    "values": {
+      "label": {
+        "1": 15084,
+        "0": 14916
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 600,
+      "max": 600
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/gener-tasks",
+    "revision": "67e85c4a61a170aed742c7484dfc07eafc9bd09f",
+    "path": "gene_classification/test.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/gener-tasks/resolve/67e85c4a61a170aed742c7484dfc07eafc9bd09f/gene_classification/test.parquet",
+    "sha256": "1ca99514fe5c832cf548f0c6fb03c935dbbf82c94ecdfac6c7d064e7032f38cf",
+    "bytes": 3577824,
+    "rows": 20244,
+    "columns": [
+      "sequence",
+      "strand",
+      "species_type",
+      "gene_type",
+      "label"
+    ],
+    "values": {
+      "label": {
+        "1": 3000,
+        "0": 3000,
+        "6": 2630,
+        "5": 2789,
+        "2": 3000,
+        "4": 2825,
+        "3": 3000
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 67,
+      "max": 4935
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/gener-tasks",
+    "revision": "67e85c4a61a170aed742c7484dfc07eafc9bd09f",
+    "path": "gene_classification/train.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/gener-tasks/resolve/67e85c4a61a170aed742c7484dfc07eafc9bd09f/gene_classification/train.parquet",
+    "sha256": "9a0c3075134701e4cfbe8fb772b99d55027284a24d2b195643a6227fbffa0a96",
+    "bytes": 14411938,
+    "rows": 80984,
+    "columns": [
+      "sequence",
+      "strand",
+      "species_type",
+      "gene_type",
+      "label"
+    ],
+    "values": {
+      "label": {
+        "1": 12000,
+        "0": 12000,
+        "6": 10521,
+        "5": 11159,
+        "2": 12000,
+        "4": 11304,
+        "3": 12000
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 67,
+      "max": 4935
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/gener-tasks",
+    "revision": "67e85c4a61a170aed742c7484dfc07eafc9bd09f",
+    "path": "taxonomic_classification/test.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/gener-tasks/resolve/67e85c4a61a170aed742c7484dfc07eafc9bd09f/taxonomic_classification/test.parquet",
+    "sha256": "cabb03fc15c2635deecfae20bf09fc8ce2985d18cd2d5f1cd85b50a686272e40",
+    "bytes": 242714298,
+    "rows": 5610,
+    "columns": [
+      "sequence",
+      "species_type",
+      "label"
+    ],
+    "values": {
+      "label": {
+        "4": 1000,
+        "2": 1000,
+        "3": 1000,
+        "5": 610,
+        "0": 1000,
+        "1": 1000
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 96000,
+      "max": 96000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/gener-tasks",
+    "revision": "67e85c4a61a170aed742c7484dfc07eafc9bd09f",
+    "path": "taxonomic_classification/train.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/gener-tasks/resolve/67e85c4a61a170aed742c7484dfc07eafc9bd09f/taxonomic_classification/train.parquet",
+    "sha256": "5a1fb34e84deed4451828cee2ad4b20d295821a2448dd2bd1c235a1a1731935b",
+    "bytes": 2185119443,
+    "rows": 50496,
+    "columns": [
+      "sequence",
+      "species_type",
+      "label"
+    ],
+    "values": {
+      "label": {
+        "4": 9000,
+        "2": 9000,
+        "3": 9000,
+        "5": 5496,
+        "0": 9000,
+        "1": 9000
+      }
+    },
+    "sequence_column": "sequence",
+    "length": {
+      "min": 96000,
+      "max": 96000
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/DeepSTARR-enhancer-activity",
+    "revision": "8cddef6def36ff4644a8dfe4a5137c2c7c29725e",
+    "path": "test.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/DeepSTARR-enhancer-activity/resolve/8cddef6def36ff4644a8dfe4a5137c2c7c29725e/test.parquet",
+    "sha256": "e1c7d7d8bc2c571e0c35be5b5515a1acbe3f47260066b34322130a8d9a092e65",
+    "bytes": 5284549,
+    "rows": 41186,
+    "columns": [
+      "id",
+      "sequence",
+      "Dev_log2_enrichment",
+      "Hk_log2_enrichment",
+      "Dev_log2_enrichment_scaled",
+      "Hk_log2_enrichment_scaled",
+      "Dev_log2_enrichment_quantile_normalized",
+      "Hk_log2_enrichment_quantile_normalized",
+      "label"
+    ],
+    "sequence_column": "sequence",
+    "length": {
+      "min": 249,
+      "max": 249
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/DeepSTARR-enhancer-activity",
+    "revision": "8cddef6def36ff4644a8dfe4a5137c2c7c29725e",
+    "path": "train.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/DeepSTARR-enhancer-activity/resolve/8cddef6def36ff4644a8dfe4a5137c2c7c29725e/train.parquet",
+    "sha256": "bd8977f2a4b83b7a656fc5bb389813bb999419a6ebe037fbec80e9f0fb6943a9",
+    "bytes": 49855241,
+    "rows": 402296,
+    "columns": [
+      "id",
+      "sequence",
+      "Dev_log2_enrichment",
+      "Hk_log2_enrichment",
+      "Dev_log2_enrichment_scaled",
+      "Hk_log2_enrichment_scaled",
+      "Dev_log2_enrichment_quantile_normalized",
+      "Hk_log2_enrichment_quantile_normalized",
+      "label"
+    ],
+    "sequence_column": "sequence",
+    "length": {
+      "min": 249,
+      "max": 249
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "GenerTeam/DeepSTARR-enhancer-activity",
+    "revision": "8cddef6def36ff4644a8dfe4a5137c2c7c29725e",
+    "path": "valid.parquet",
+    "url": "https://huggingface.co/datasets/GenerTeam/DeepSTARR-enhancer-activity/resolve/8cddef6def36ff4644a8dfe4a5137c2c7c29725e/valid.parquet",
+    "sha256": "ae1cc8c138b1ee65ee6c1046e986e7530a62b51661b173d5b34dd89351429e4c",
+    "bytes": 5231129,
+    "rows": 40570,
+    "columns": [
+      "id",
+      "sequence",
+      "Dev_log2_enrichment",
+      "Hk_log2_enrichment",
+      "Dev_log2_enrichment_scaled",
+      "Hk_log2_enrichment_scaled",
+      "Dev_log2_enrichment_quantile_normalized",
+      "Hk_log2_enrichment_quantile_normalized",
+      "label"
+    ],
+    "sequence_column": "sequence",
+    "length": {
+      "min": 249,
+      "max": 249
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "revision": "b1b888e2482a06a51b6bf03fa5091f40b9b57e96",
+    "path": "fine_tune/H3/H3_test.csv",
+    "url": "https://huggingface.co/datasets/biomap-research/DeepD/resolve/b1b888e2482a06a51b6bf03fa5091f40b9b57e96/fine_tune/H3/H3_test.csv",
+    "sha256": "dc50a05ff0a86b96cc518e173cca363e7bdc730350a3aa37cc68805fdc3f0389",
+    "bytes": 836854,
+    "rows": 1497,
+    "columns": [
+      "unique_id",
+      "label",
+      "species",
+      "nt_seq"
+    ],
+    "values": {
+      "label": {
+        "1": 755,
+        "0": 742
+      },
+      "species": {
+        "GCF_000001405.40.fasta": 1497
+      }
+    }
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "revision": "b1b888e2482a06a51b6bf03fa5091f40b9b57e96",
+    "path": "fine_tune/H3/H3_train.csv",
+    "url": "https://huggingface.co/datasets/biomap-research/DeepD/resolve/b1b888e2482a06a51b6bf03fa5091f40b9b57e96/fine_tune/H3/H3_train.csv",
+    "sha256": "10d1d1df99049f53297951a29d6783668fec42526d56a7e89428c9cdeb972dc9",
+    "bytes": 6691420,
+    "rows": 11971,
+    "columns": [
+      "unique_id",
+      "label",
+      "species",
+      "nt_seq"
+    ],
+    "values": {
+      "label": {
+        "1": 6150,
+        "0": 5821
+      },
+      "species": {
+        "GCF_000001405.40.fasta": 11971
+      }
+    }
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "revision": "b1b888e2482a06a51b6bf03fa5091f40b9b57e96",
+    "path": "fine_tune/H3/H3_valid.csv",
+    "url": "https://huggingface.co/datasets/biomap-research/DeepD/resolve/b1b888e2482a06a51b6bf03fa5091f40b9b57e96/fine_tune/H3/H3_valid.csv",
+    "sha256": "d66e8f81fa88845ceb9f16c17acb83cc0c86c9a1b9fce7e6b50cb4e352bde0e6",
+    "bytes": 836854,
+    "rows": 1497,
+    "columns": [
+      "unique_id",
+      "label",
+      "species",
+      "nt_seq"
+    ],
+    "values": {
+      "label": {
+        "0": 735,
+        "1": 762
+      },
+      "species": {
+        "GCF_000001405.40.fasta": 1497
+      }
+    }
+  },
+  {
+    "repo": "songlab/TraitGym",
+    "revision": "1fde19555fe8c0a55b1382bdf4c6f7082209f566",
+    "path": "complex_traits_matched_9/test.parquet",
+    "url": "https://huggingface.co/datasets/songlab/TraitGym/resolve/1fde19555fe8c0a55b1382bdf4c6f7082209f566/complex_traits_matched_9/test.parquet",
+    "sha256": "068940684e1e6f735a25a1a4418fb65390628023a96188af7f1a15dd17de7036",
+    "bytes": 411336,
+    "rows": 11400,
+    "columns": [
+      "chrom",
+      "pos",
+      "ref",
+      "alt",
+      "pip",
+      "trait",
+      "label",
+      "maf",
+      "ld_score",
+      "consequence",
+      "tss_dist",
+      "match_group"
+    ],
+    "values": {
+      "label": {
+        "False": 10260,
+        "True": 1140
+      },
+      "consequence": {
+        "non_coding_transcript_exon_variant": 690,
+        "PLS_flank": 150,
+        "dELS": 3140,
+        "PLS": 320,
+        "DNase-H3K4me3": 40,
+        "pELS": 1010,
+        "dELS_flank": 1670,
+        "intron_variant": 1900,
+        "3_prime_UTR_variant": 520,
+        "intergenic_variant": 1030,
+        "5_prime_UTR_variant": 420,
+        "CTCF-only_flank": 80,
+        "pELS_flank": 340,
+        "DNase-H3K4me3_flank": 50,
+        "downstream_gene_variant": 30,
+        "CTCF-only": 10
+      },
+      "chrom": {
+        "1": 1000,
+        "2": 900,
+        "3": 650,
+        "4": 400,
+        "5": 510,
+        "6": 780,
+        "7": 540,
+        "8": 460,
+        "9": 440,
+        "10": 510,
+        "11": 680,
+        "12": 590,
+        "13": 200,
+        "14": 380,
+        "15": 390,
+        "16": 590,
+        "17": 560,
+        "18": 290,
+        "19": 580,
+        "20": 530,
+        "21": 140,
+        "22": 280
+      }
+    }
+  },
+  {
+    "repo": "songlab/TraitGym",
+    "revision": "1fde19555fe8c0a55b1382bdf4c6f7082209f566",
+    "path": "mendelian_traits_matched_9/test.parquet",
+    "url": "https://huggingface.co/datasets/songlab/TraitGym/resolve/1fde19555fe8c0a55b1382bdf4c6f7082209f566/mendelian_traits_matched_9/test.parquet",
+    "sha256": "144db4bf965e3c2b8936cd675448bade96369b6546cfdadb5c7b2bca17389607",
+    "bytes": 50205,
+    "rows": 3380,
+    "columns": [
+      "chrom",
+      "pos",
+      "ref",
+      "alt",
+      "OMIM",
+      "consequence",
+      "label",
+      "tss_dist",
+      "match_group"
+    ],
+    "values": {
+      "label": {
+        "False": 3042,
+        "True": 338
+      },
+      "consequence": {
+        "PLS": 630,
+        "5_prime_UTR_variant": 1140,
+        "3_prime_UTR_variant": 290,
+        "non_coding_transcript_exon_variant": 710,
+        "dELS": 150,
+        "dELS_flank": 60,
+        "intron_variant": 90,
+        "pELS": 30,
+        "PLS_flank": 20,
+        "pELS_flank": 40,
+        "upstream_gene_variant": 210,
+        "intergenic_variant": 10
+      },
+      "chrom": {
+        "1": 210,
+        "2": 230,
+        "3": 310,
+        "5": 20,
+        "6": 30,
+        "7": 210,
+        "8": 70,
+        "9": 240,
+        "10": 190,
+        "11": 480,
+        "12": 30,
+        "13": 210,
+        "14": 40,
+        "16": 80,
+        "17": 60,
+        "19": 400,
+        "20": 50,
+        "22": 20,
+        "X": 500
+      }
+    }
+  },
+  {
+    "repo": "tattabio/ec_classification_dna",
+    "revision": "cd61c74b4930cf9f1963e6d73ff7f14e2c8e74dd",
+    "path": "data/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/tattabio/ec_classification_dna/resolve/cd61c74b4930cf9f1963e6d73ff7f14e2c8e74dd/data/test-00000-of-00001.parquet",
+    "sha256": "c9fe7d0b91f407ec5c94d70651d2f68a439c969bd41865a6fc6a77d46eac0261",
+    "bytes": 120682,
+    "rows": 128,
+    "columns": [
+      "Entry",
+      "Label",
+      "Sequence"
+    ],
+    "values": {
+      "Label": {
+        "1.14.14.18": 1,
+        "1.15.1.1": 1,
+        "1.16.3.1": 1,
+        "1.17.4.1": 1,
+        "1.5.98.3": 1,
+        "1.8.3.2": 1,
+        "2.1.1.354": 1,
+        "2.1.1.360": 1,
+        "2.1.1.37": 1,
+        "2.1.1.72": 1,
+        "2.1.1.77": 1,
+        "2.1.1.86": 1,
+        "2.1.3.15": 1,
+        "2.3.1.225": 1,
+        "2.3.1.269": 1,
+        "2.3.1.48": 1,
+        "2.3.1.51": 1,
+        "2.3.2.23": 1,
+        "2.3.2.26": 1,
+        "2.3.2.27": 1,
+        "2.3.2.31": 1,
+        "2.4.1.109": 1,
+        "2.4.1.198": 1,
+        "2.4.2.31": 1,
+        "2.5.1.18": 1,
+        "2.7.1.107": 1,
+        "2.7.1.21": 1,
+        "2.7.1.33": 1,
+        "2.7.1.67": 1,
+        "2.7.10.1": 1,
+        "2.7.10.2": 1,
+        "2.7.11.1": 1,
+        "2.7.11.25": 1,
+        "2.7.13.3": 1,
+        "2.7.4.3": 1,
+        "2.7.6.1": 1,
+        "2.7.7.108": 1,
+        "2.7.7.19": 1,
+        "2.7.7.48": 1,
+        "2.7.7.49": 1,
+        "2.7.7.6": 1,
+        "2.7.7.65": 1,
+        "2.7.7.7": 1,
+        "2.7.8.7": 1,
+        "2.8.1.13": 1,
+        "3.1.1.1": 1,
+        "3.1.1.3": 1,
+        "3.1.1.32": 1,
+        "3.1.1.4": 1,
+        "3.1.1.96": 1,
+        "3.1.11.2": 1,
+        "3.1.11.6": 1,
+        "3.1.12.1": 1,
+        "3.1.13.4": 1,
+        "3.1.21.10": 1,
+        "3.1.21.4": 1,
+        "3.1.26.3": 1,
+        "3.1.26.4": 1,
+        "3.1.26.5": 1,
+        "3.1.3.16": 1,
+        "3.1.3.18": 1,
+        "3.1.3.2": 1,
+        "3.1.3.3": 1,
+        "3.1.3.48": 1,
+        "3.1.3.5": 1,
+        "3.1.4.12": 1,
+        "3.1.4.35": 1,
+        "3.1.4.4": 1,
+        "3.1.4.52": 1,
+        "3.2.1.1": 1,
+        "3.2.1.14": 1,
+        "3.2.1.17": 1,
+        "3.2.1.18": 1,
+        "3.2.1.22": 1,
+        "3.2.1.23": 1,
+        "3.2.1.35": 1,
+        "3.2.1.39": 1,
+        "3.2.1.4": 1,
+        "3.2.1.52": 1,
+        "3.2.1.55": 1,
+        "3.2.1.78": 1,
+        "3.2.1.8": 1,
+        "3.2.1.96": 1,
+        "3.2.2.22": 1,
+        "3.2.2.6": 1,
+        "3.4.19.12": 1,
+        "3.4.21.105": 1,
+        "3.4.22.49": 1,
+        "3.4.23.36": 1,
+        "3.5.1.28": 1,
+        "3.5.1.98": 1,
+        "3.5.2.6": 1,
+        "3.6.1.1": 1,
+        "3.6.1.13": 1,
+        "3.6.1.23": 1,
+        "3.6.1.5": 1,
+        "3.6.1.9": 1,
+        "3.6.4.12": 1,
+        "3.6.4.13": 1,
+        "3.8.1.2": 1,
+        "4.2.1.1": 1,
+        "4.2.1.10": 1,
+        "4.2.1.2": 1,
+        "4.2.1.20": 1,
+        "4.2.2.2": 1,
+        "4.2.2.3": 1,
+        "4.2.2.n1": 1,
+        "4.4.1.3": 1,
+        "4.6.1.1": 1,
+        "4.6.1.16": 1,
+        "4.6.1.2": 1,
+        "5.2.1.8": 1,
+        "5.3.4.1": 1,
+        "5.4.99.5": 1,
+        "5.6.2.2": 1,
+        "5.6.2.4": 1,
+        "6.1.1.19": 1,
+        "6.3.2.4": 1,
+        "6.3.4.19": 1,
+        "6.3.5.2": 1,
+        "6.3.5.5": 1,
+        "6.5.1.1": 1,
+        "6.5.1.3": 1,
+        "7.1.1.2": 1,
+        "7.1.1.8": 1,
+        "7.1.1.9": 1,
+        "7.1.2.2": 1,
+        "7.2.1.1": 1
+      }
+    },
+    "sequence_column": "Sequence",
+    "length": {
+      "min": 102,
+      "max": 10746
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "tattabio/ec_classification_dna",
+    "revision": "cd61c74b4930cf9f1963e6d73ff7f14e2c8e74dd",
+    "path": "data/train-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/tattabio/ec_classification_dna/resolve/cd61c74b4930cf9f1963e6d73ff7f14e2c8e74dd/data/train-00000-of-00001.parquet",
+    "sha256": "8590d91cde07f8caefce817b467a2da782f871b2e27244c1f8dfe91e9d6a326d",
+    "bytes": 405317,
+    "rows": 512,
+    "columns": [
+      "Entry",
+      "Label",
+      "Sequence"
+    ],
+    "values": {
+      "Label": {
+        "1.14.14.18": 4,
+        "1.15.1.1": 4,
+        "1.16.3.1": 4,
+        "1.17.4.1": 4,
+        "1.5.98.3": 4,
+        "1.8.3.2": 4,
+        "2.1.1.354": 4,
+        "2.1.1.360": 4,
+        "2.1.1.37": 4,
+        "2.1.1.72": 4,
+        "2.1.1.77": 4,
+        "2.1.1.86": 4,
+        "2.1.3.15": 4,
+        "2.3.1.225": 4,
+        "2.3.1.269": 4,
+        "2.3.1.48": 4,
+        "2.3.1.51": 4,
+        "2.3.2.23": 4,
+        "2.3.2.26": 4,
+        "2.3.2.27": 4,
+        "2.3.2.31": 4,
+        "2.4.1.109": 4,
+        "2.4.1.198": 4,
+        "2.4.2.31": 4,
+        "2.5.1.18": 4,
+        "2.7.1.107": 4,
+        "2.7.1.21": 4,
+        "2.7.1.33": 4,
+        "2.7.1.67": 4,
+        "2.7.10.1": 4,
+        "2.7.10.2": 4,
+        "2.7.11.1": 4,
+        "2.7.11.25": 4,
+        "2.7.13.3": 4,
+        "2.7.4.3": 4,
+        "2.7.6.1": 4,
+        "2.7.7.108": 4,
+        "2.7.7.19": 4,
+        "2.7.7.48": 4,
+        "2.7.7.49": 4,
+        "2.7.7.6": 4,
+        "2.7.7.65": 4,
+        "2.7.7.7": 4,
+        "2.7.8.7": 4,
+        "2.8.1.13": 4,
+        "3.1.1.1": 4,
+        "3.1.1.3": 4,
+        "3.1.1.32": 4,
+        "3.1.1.4": 4,
+        "3.1.1.96": 4,
+        "3.1.11.2": 4,
+        "3.1.11.6": 4,
+        "3.1.12.1": 4,
+        "3.1.13.4": 4,
+        "3.1.21.10": 4,
+        "3.1.21.4": 4,
+        "3.1.26.3": 4,
+        "3.1.26.4": 4,
+        "3.1.26.5": 4,
+        "3.1.3.16": 4,
+        "3.1.3.18": 4,
+        "3.1.3.2": 4,
+        "3.1.3.3": 4,
+        "3.1.3.48": 4,
+        "3.1.3.5": 4,
+        "3.1.4.12": 4,
+        "3.1.4.35": 4,
+        "3.1.4.4": 4,
+        "3.1.4.52": 4,
+        "3.2.1.1": 4,
+        "3.2.1.14": 4,
+        "3.2.1.17": 4,
+        "3.2.1.18": 4,
+        "3.2.1.22": 4,
+        "3.2.1.23": 4,
+        "3.2.1.35": 4,
+        "3.2.1.39": 4,
+        "3.2.1.4": 4,
+        "3.2.1.52": 4,
+        "3.2.1.55": 4,
+        "3.2.1.78": 4,
+        "3.2.1.8": 4,
+        "3.2.1.96": 4,
+        "3.2.2.22": 4,
+        "3.2.2.6": 4,
+        "3.4.19.12": 4,
+        "3.4.21.105": 4,
+        "3.4.22.49": 4,
+        "3.4.23.36": 4,
+        "3.5.1.28": 4,
+        "3.5.1.98": 4,
+        "3.5.2.6": 4,
+        "3.6.1.1": 4,
+        "3.6.1.13": 4,
+        "3.6.1.23": 4,
+        "3.6.1.5": 4,
+        "3.6.1.9": 4,
+        "3.6.4.12": 4,
+        "3.6.4.13": 4,
+        "3.8.1.2": 4,
+        "4.2.1.1": 4,
+        "4.2.1.10": 4,
+        "4.2.1.2": 4,
+        "4.2.1.20": 4,
+        "4.2.2.2": 4,
+        "4.2.2.3": 4,
+        "4.2.2.n1": 4,
+        "4.4.1.3": 4,
+        "4.6.1.1": 4,
+        "4.6.1.16": 4,
+        "4.6.1.2": 4,
+        "5.2.1.8": 4,
+        "5.3.4.1": 4,
+        "5.4.99.5": 4,
+        "5.6.2.2": 4,
+        "5.6.2.4": 4,
+        "6.1.1.19": 4,
+        "6.3.2.4": 4,
+        "6.3.4.19": 4,
+        "6.3.5.2": 4,
+        "6.3.5.5": 4,
+        "6.5.1.1": 4,
+        "6.5.1.3": 4,
+        "7.1.1.2": 4,
+        "7.1.1.8": 4,
+        "7.1.1.9": 4,
+        "7.1.2.2": 4,
+        "7.2.1.1": 4
+      }
+    },
+    "sequence_column": "Sequence",
+    "length": {
+      "min": 123,
+      "max": 14739
+    },
+    "sequence_alphabet": "ACGT"
+  },
+  {
+    "repo": "macwiatrak/bacbench-essential-genes-dna",
+    "revision": "0210c2445e89c765c0fe5d69618b8a6c262e5d30",
+    "path": "data/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/macwiatrak/bacbench-essential-genes-dna/resolve/0210c2445e89c765c0fe5d69618b8a6c262e5d30/data/test-00000-of-00001.parquet",
+    "sha256": "914145a0e08f9b779ac0536d2c5b53cea0260b6ec56656bcfe89ea78925fbf2a",
+    "bytes": 15416636,
+    "rows": 9,
+    "columns": [
+      "genome_name",
+      "strain_name",
+      "contig_id",
+      "start",
+      "end",
+      "strand",
+      "essential",
+      "dna_sequence",
+      "gene_name",
+      "protein_id",
+      "product",
+      "locus_tag",
+      "old_locus_tag",
+      "family",
+      "genus"
+    ],
+    "values": {
+      "genus": {
+        "Bacillus": 2,
+        "Vibrio": 2,
+        "Mycoplasma": 3,
+        "Shewanella": 1,
+        "Rhodopseudomonas": 1
+      }
+    },
+    "gene_count": 27666
+  },
+  {
+    "repo": "macwiatrak/bacbench-essential-genes-dna",
+    "revision": "0210c2445e89c765c0fe5d69618b8a6c262e5d30",
+    "path": "data/train-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/macwiatrak/bacbench-essential-genes-dna/resolve/0210c2445e89c765c0fe5d69618b8a6c262e5d30/data/train-00000-of-00001.parquet",
+    "sha256": "2e991eb9edc02b0d3e1a63401aa102d2e2d6c5e6a2b46f5c7c9eb0deb3e7d12f",
+    "bytes": 75559219,
+    "rows": 37,
+    "columns": [
+      "genome_name",
+      "strain_name",
+      "contig_id",
+      "start",
+      "end",
+      "strand",
+      "essential",
+      "dna_sequence",
+      "gene_name",
+      "protein_id",
+      "product",
+      "locus_tag",
+      "old_locus_tag",
+      "family",
+      "genus"
+    ],
+    "values": {
+      "genus": {
+        "Staphylococcus": 7,
+        "Streptococcus": 6,
+        "Helicobacter": 1,
+        "Acinetobacter": 2,
+        "Pseudomonas": 2,
+        "Escherichia": 3,
+        "Caulobacter": 1,
+        "Bacteroides": 2,
+        "Burkholderia": 4,
+        "Mycobacterium": 2,
+        "Sphingomonas": 1,
+        "Campylobacter": 2,
+        "Porphyromonas": 1,
+        "Agrobacterium": 1,
+        "Neisseria": 1,
+        "Providencia": 1
+      }
+    },
+    "gene_count": 136278
+  },
+  {
+    "repo": "macwiatrak/bacbench-essential-genes-dna",
+    "revision": "0210c2445e89c765c0fe5d69618b8a6c262e5d30",
+    "path": "data/validation-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/macwiatrak/bacbench-essential-genes-dna/resolve/0210c2445e89c765c0fe5d69618b8a6c262e5d30/data/validation-00000-of-00001.parquet",
+    "sha256": "f63339487a8b5f0bb3f09e745a5835b232a6c4cb25016eda5299be3c591deb8a",
+    "bytes": 16162744,
+    "rows": 9,
+    "columns": [
+      "genome_name",
+      "strain_name",
+      "contig_id",
+      "start",
+      "end",
+      "strand",
+      "essential",
+      "dna_sequence",
+      "gene_name",
+      "protein_id",
+      "product",
+      "locus_tag",
+      "old_locus_tag",
+      "family",
+      "genus"
+    ],
+    "values": {
+      "genus": {
+        "Haemophilus": 1,
+        "Salmonella": 3,
+        "Francisella": 2,
+        "Synechococcus": 1,
+        "Brevundimonas": 1,
+        "Ralstonia": 1
+      }
+    },
+    "gene_count": 29269
+  }
+]

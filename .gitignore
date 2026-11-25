@@ -1,0 +1,8 @@
+research/sources/
+research/papers/
+research/artifacts/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+site/screenshots/
