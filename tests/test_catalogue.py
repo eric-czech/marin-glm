@@ -67,6 +67,34 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn((11,'genosm-essential-cohort'),[tuple(r) for r in rows])
         self.assertTrue(any(r['value']==9 and r['variant_id']!='genosm-essential-cohort' for r in rows))
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE paper_id IN ('aido2','genosm') AND model_id='evo2' AND provenance='original-paper'").fetchone()[0],0)
+    def test_plantcad_species_variants_do_not_duplicate_task_units(self):
+        released={r[0] for r in self.db.execute("SELECT task_id FROM evaluation_tasks WHERE evaluation_id='plantcad2-zero'")}
+        self.assertEqual(len(released),14)  # 12 released targets + potato + pretraining diagnostic
+        self.assertIn('plantcad2-potato-gerp',released)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id LIKE 'plantcad2-%_recovery'").fetchone()[0],4)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM evaluation_tasks WHERE evaluation_id='plantcad2-ft'").fetchone()[0],9)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE model_id='evo2' AND paper_id LIKE 'plantcad2%' AND provenance='original-paper'").fetchone()[0],0)
+    def test_genecad_is_an_adaptation_with_versioned_training(self):
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM models WHERE id='genecad'").fetchone()[0],0)
+        legacy=self.db.execute("SELECT adaptation,requires_embeddings FROM protocols WHERE id='genecad-legacy-cds-frozen'").fetchone()
+        self.assertEqual(tuple(legacy),('frozen backbone; trained annotation head',1))
+        current=self.db.execute("SELECT adaptation FROM protocols WHERE id='genecad-cds-transcript-strict'").fetchone()[0]
+        self.assertEqual(current,'full fine-tune')
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM task_categories WHERE task_id LIKE 'genecad-cds-%' AND category_id IN ('utr5','utr3')").fetchone()[0],0)
+        marmoset=self.db.execute("SELECT COUNT(*) FROM task_populations WHERE task_id LIKE 'genecad-cds-%' AND population_id='marmoset'").fetchone()[0]
+        self.assertEqual(marmoset,6)
+    def test_plantcad_translation_and_motif_targets_are_distinct(self):
+        task=self.db.execute("SELECT task_type FROM tasks WHERE id='plantcad2-tis_recovery'").fetchone()[0]
+        self.assertEqual(task,'sequence reconstruction')
+        label=self.db.execute("SELECT target FROM tasks WHERE id='plantcad2-ft-cross_species_leaf_absolute_translation'").fetchone()[0]
+        self.assertIn('Ribo-seq',label)
+        region=self.db.execute("SELECT category_id FROM task_categories WHERE task_id='plantcad2-tis_recovery' AND category_id='translation-start'").fetchone()
+        self.assertIsNotNone(region)
+        self.assertIn('1 +',label)
+        rows=json.loads((ROOT/'data/plantcad-artifact-inspections.json').read_text())
+        regressions=[r for r in rows if r['path'].startswith('cross_species_leaf_absolute_translation/')]
+        self.assertEqual(len(regressions),3)
+        self.assertTrue(all(r['label_transform_checks']['log10_1_plus_tpm_max_abs_error']<1e-12 for r in regressions))
     def test_site_embeds_database_export(self):
         html=(ROOT/'index.html').read_text()
         raw=html.split('<script id="catalogue" type="application/json">',1)[1].split('</script>',1)[0]

@@ -1,0 +1,2036 @@
+[
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cell_type_specific_acr/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cell_type_specific_acr/test-00000-of-00001.parquet",
+    "bytes": 73306862,
+    "rows": 243845,
+    "row_groups": 244,
+    "columns": [
+      "chr",
+      "start",
+      "end",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "5f0bcc4eefaa78781f290f9b09f3525a98a56163eb830dae1c5904d965c0c6d0",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "chr_counts": {
+      "chr10": 243845
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 600,
+          "center": "ACCCTAA"
+        },
+        {
+          "length": 600,
+          "center": "AAACCCT"
+        },
+        {
+          "length": 600,
+          "center": "AACCCTA"
+        },
+        {
+          "length": 600,
+          "center": "CCTACAC"
+        }
+      ]
+    },
+    "range_bytes_read": 17590969,
+    "label_vector_lengths": {
+      "92": 243845
+    },
+    "positive_counts_by_target_index": [
+      4713,
+      4648,
+      4600,
+      4758,
+      4815,
+      4794,
+      4693,
+      4673,
+      4807,
+      4780,
+      4867,
+      4019,
+      4797,
+      4743,
+      4433,
+      5007,
+      4783,
+      4860,
+      4973,
+      4797,
+      4806,
+      4851,
+      4699,
+      4952,
+      5023,
+      4615,
+      4809,
+      4839,
+      4766,
+      4590,
+      4811,
+      6012,
+      3081,
+      3930,
+      5112,
+      4713,
+      3692,
+      4721,
+      4462,
+      4684,
+      4800,
+      5124,
+      5039,
+      4271,
+      4498,
+      4558,
+      4030,
+      4756,
+      6183,
+      4955,
+      4643,
+      5262,
+      4548,
+      4928,
+      4919,
+      4647,
+      3461,
+      3863,
+      5686,
+      4129,
+      5543,
+      4470,
+      4132,
+      4422,
+      4660,
+      3608,
+      4744,
+      5174,
+      2932,
+      5523,
+      6958,
+      4738,
+      4728,
+      4799,
+      4684,
+      5023,
+      4524,
+      4643,
+      4678,
+      5057,
+      4675,
+      4931,
+      5362,
+      4529,
+      4369,
+      5282,
+      5608,
+      4994,
+      4745,
+      4842,
+      3710,
+      5033
+    ],
+    "label_encoding": "Binary string; one character per output"
+  },
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cross_species_leaf_absolute_translation/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cross_species_leaf_absolute_translation/test-00000-of-00001.parquet",
+    "bytes": 9932524,
+    "rows": 39035,
+    "row_groups": 40,
+    "columns": [
+      "gene",
+      "chr",
+      "strand",
+      "tpm",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "c4e920f80196e51e84ab3af3c2d81f0fd7469415691435486cfbcb30545034fc",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "chr_counts": {
+      "1": 5892,
+      "2": 4751,
+      "3": 4103,
+      "4": 4093,
+      "5": 4485,
+      "6": 3412,
+      "7": 3070,
+      "8": 3536,
+      "9": 2988,
+      "10": 2705
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 500,
+          "center": "ATGCCCT"
+        },
+        {
+          "length": 500,
+          "center": "GAAATTG"
+        },
+        {
+          "length": 500,
+          "center": "GCAGGAA"
+        },
+        {
+          "length": 500,
+          "center": "AAGAACG"
+        }
+      ]
+    },
+    "range_bytes_read": 3377714,
+    "continuous_label_summary": {
+      "min": 0.0,
+      "max": 5.0941514946262,
+      "mean": 0.5088614764437345,
+      "null_count": 0
+    },
+    "label_transform_checks": {
+      "log10_1_plus_tpm_max_abs_error": 5.329070518200751e-15,
+      "positive_tpm_log10_max_abs_error": 2.697783828546107,
+      "zero_tpm_rows": 19748
+    }
+  },
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cross_species_leaf_absolute_translation/train-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cross_species_leaf_absolute_translation/train-00000-of-00001.parquet",
+    "bytes": 5715941,
+    "rows": 21894,
+    "row_groups": 22,
+    "columns": [
+      "gene",
+      "chr",
+      "strand",
+      "tpm",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "00f04fcc2dd417bd73f7cb8da4f519a8bd84ea18e06099d9a8445c342f98dfc5",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "chr_counts": {
+      "1": 5741,
+      "2": 3399,
+      "3": 4386,
+      "4": 3309,
+      "5": 5059
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 500,
+          "center": "AACAACA"
+        },
+        {
+          "length": 500,
+          "center": "TCCATGT"
+        },
+        {
+          "length": 500,
+          "center": "GAGATCA"
+        },
+        {
+          "length": 500,
+          "center": "TTCTAAT"
+        }
+      ]
+    },
+    "range_bytes_read": 1885121,
+    "continuous_label_summary": {
+      "min": 0.0,
+      "max": 3.67322911063865,
+      "mean": 0.7466056059569709,
+      "null_count": 0
+    },
+    "label_transform_checks": {
+      "log10_1_plus_tpm_max_abs_error": 6.217248937900877e-15,
+      "positive_tpm_log10_max_abs_error": 6.17609154858524,
+      "zero_tpm_rows": 3335
+    }
+  },
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cross_species_leaf_absolute_translation/validation-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cross_species_leaf_absolute_translation/validation-00000-of-00001.parquet",
+    "bytes": 1440163,
+    "rows": 5492,
+    "row_groups": 6,
+    "columns": [
+      "gene",
+      "chr",
+      "strand",
+      "tpm",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "2157ef5cd5e9bfe16c5858c9d6b4bc5f2fb718c0decee7b057c7718eb87c007e",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "chr_counts": {
+      "1": 1397,
+      "2": 912,
+      "3": 1060,
+      "4": 860,
+      "5": 1263
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 500,
+          "center": "TTTTTAT"
+        },
+        {
+          "length": 500,
+          "center": "AATAACT"
+        },
+        {
+          "length": 500,
+          "center": "GAATATT"
+        },
+        {
+          "length": 500,
+          "center": "GCTAATA"
+        }
+      ]
+    },
+    "range_bytes_read": 861127,
+    "continuous_label_summary": {
+      "min": 0.0,
+      "max": 3.70714751104479,
+      "mean": 0.7256494337044751,
+      "null_count": 0
+    },
+    "label_transform_checks": {
+      "log10_1_plus_tpm_max_abs_error": 5.995204332975845e-15,
+      "positive_tpm_log10_max_abs_error": 4.828767685725769,
+      "zero_tpm_rows": 824
+    }
+  },
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cross_species_leaf_on_off_translation/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cross_species_leaf_on_off_translation/test-00000-of-00001.parquet",
+    "bytes": 9741251,
+    "rows": 39035,
+    "row_groups": 40,
+    "columns": [
+      "gene",
+      "chr",
+      "strand",
+      "tpm",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "788fbc4c2ac8d1fdd5b77b895c77e0ee67deda3b14e91e2374361d6df8f7944f",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "0": 22870,
+      "1": 16165
+    },
+    "chr_counts": {
+      "1": 5892,
+      "2": 4751,
+      "3": 4103,
+      "4": 4093,
+      "5": 4485,
+      "6": 3412,
+      "7": 3070,
+      "8": 3536,
+      "9": 2988,
+      "10": 2705
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 500,
+          "center": "ATGCCCT"
+        },
+        {
+          "length": 500,
+          "center": "GAAATTG"
+        },
+        {
+          "length": 500,
+          "center": "GCAGGAA"
+        },
+        {
+          "length": 500,
+          "center": "AAGAACG"
+        }
+      ]
+    },
+    "range_bytes_read": 3055367,
+    "label_transform_checks": {
+      "tpm_gt1_mismatches": 0
+    }
+  },
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cross_species_leaf_on_off_translation/train-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cross_species_leaf_on_off_translation/train-00000-of-00001.parquet",
+    "bytes": 5543301,
+    "rows": 21894,
+    "row_groups": 22,
+    "columns": [
+      "gene",
+      "chr",
+      "strand",
+      "tpm",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "213fec1b744e27655297dc48acb7984ea7ab23d7041538faf63a628aec34e8db",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 13974,
+      "0": 7920
+    },
+    "chr_counts": {
+      "1": 5741,
+      "2": 3399,
+      "3": 4386,
+      "4": 3309,
+      "5": 5059
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 500,
+          "center": "AACAACA"
+        },
+        {
+          "length": 500,
+          "center": "TCCATGT"
+        },
+        {
+          "length": 500,
+          "center": "GAGATCA"
+        },
+        {
+          "length": 500,
+          "center": "TTCTAAT"
+        }
+      ]
+    },
+    "range_bytes_read": 1843527,
+    "label_transform_checks": {
+      "tpm_gt1_mismatches": 0
+    }
+  },
+  {
+    "repo": "plantcad/PlantCAD2_fine_tuning_tasks",
+    "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+    "path": "cross_species_leaf_on_off_translation/validation-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_fine_tuning_tasks/blob/de8bd9b67bb413b1502c4bf9e369ddc46180cb10/cross_species_leaf_on_off_translation/validation-00000-of-00001.parquet",
+    "bytes": 1396756,
+    "rows": 5492,
+    "row_groups": 6,
+    "columns": [
+      "gene",
+      "chr",
+      "strand",
+      "tpm",
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "c05de80d18b37ed0a76b757b057cbed285a4d67380f9bc8f49ab62021ff318f0",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 3531,
+      "0": 1961
+    },
+    "chr_counts": {
+      "1": 1397,
+      "2": 912,
+      "3": 1060,
+      "4": 860,
+      "5": 1263
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 500,
+          "center": "TTTTTAT"
+        },
+        {
+          "length": 500,
+          "center": "AATAACT"
+        },
+        {
+          "length": 500,
+          "center": "GAATATT"
+        },
+        {
+          "length": 500,
+          "center": "GCTAATA"
+        }
+      ]
+    },
+    "range_bytes_read": 621103,
+    "label_transform_checks": {
+      "tpm_gt1_mismatches": 0
+    }
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_core_noncore_classification/test_maize-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_core_noncore_classification/test_maize-00000-of-00003.parquet",
+    "bytes": 163780708,
+    "rows": 48184,
+    "row_groups": 49,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "d5e5ec56c997e2ba75a9d8f9f64d15ed727a765bf245a2f013582d6143ac7c79",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 40781,
+      "0": 7403
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GCAGCAA"
+        },
+        {
+          "length": 8192,
+          "center": "ATAGGAC"
+        },
+        {
+          "length": 8192,
+          "center": "CCAGGGG"
+        },
+        {
+          "length": 8192,
+          "center": "CTAGGCC"
+        }
+      ]
+    },
+    "range_bytes_read": 33309101
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_core_noncore_classification/test_maize-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_core_noncore_classification/test_maize-00001-of-00003.parquet",
+    "bytes": 162732650,
+    "rows": 48183,
+    "row_groups": 49,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "c63010301a611fef4f379464b6028c3f0c9d335f7400e9257c4ffae676722b1b",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 41461,
+      "0": 6722
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GAAGCAT"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGGAT"
+        },
+        {
+          "length": 8192,
+          "center": "CCAGATA"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGGGC"
+        }
+      ]
+    },
+    "range_bytes_read": 32850867
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_core_noncore_classification/test_maize-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_core_noncore_classification/test_maize-00002-of-00003.parquet",
+    "bytes": 163565149,
+    "rows": 48183,
+    "row_groups": 49,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "d2471a2c85f2e68cfaade7ffc62f395ba2d593e23b96ade28edb10eeceb1e372",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "0": 7242,
+      "1": 40941
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GCAGGAT"
+        },
+        {
+          "length": 8192,
+          "center": "CCAGTCG"
+        },
+        {
+          "length": 8192,
+          "center": "ACAGGGA"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGGAG"
+        }
+      ]
+    },
+    "range_bytes_read": 33224614
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_core_noncore_classification/test_tomato-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_core_noncore_classification/test_tomato-00000-of-00003.parquet",
+    "bytes": 94996917,
+    "rows": 46817,
+    "row_groups": 47,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "b17cf9bbe5ea0c1053f2dd50589316dc35f37bfbbdb482e211b91501eb55b1a0",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 44157,
+      "0": 2660
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TGAGGTT"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGGAT"
+        },
+        {
+          "length": 8192,
+          "center": "TTAGAAC"
+        },
+        {
+          "length": 8192,
+          "center": "TAAGGTT"
+        }
+      ]
+    },
+    "range_bytes_read": 34910510
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_core_noncore_classification/test_tomato-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_core_noncore_classification/test_tomato-00001-of-00003.parquet",
+    "bytes": 95823511,
+    "rows": 46817,
+    "row_groups": 47,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "62b0ef7e684c24616089cad6e23b26de06517f12bbcd486cd74c69f1568ba34f",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 44419,
+      "0": 2398
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GTAGGGA"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGGCT"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGGAC"
+        },
+        {
+          "length": 8192,
+          "center": "ACAGACT"
+        }
+      ]
+    },
+    "range_bytes_read": 34426384
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_core_noncore_classification/test_tomato-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_core_noncore_classification/test_tomato-00002-of-00003.parquet",
+    "bytes": 97126390,
+    "rows": 46817,
+    "row_groups": 47,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "5fff4f01706f37c3278289ccd7073548a0da4ff6f70654e522845be0bce4df3f",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 43600,
+      "0": 3217
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GTAGCTC"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGACA"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGAAC"
+        },
+        {
+          "length": 8192,
+          "center": "GTAGGTT"
+        }
+      ]
+    },
+    "range_bytes_read": 35467119
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_recovery/test_maize-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_recovery/test_maize-00000-of-00003.parquet",
+    "bytes": 174558677,
+    "rows": 51290,
+    "row_groups": 52,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "170873c9a7a56b9d02da194ad7b337537b343a3a3493987c391deaca2dcbb646",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "ATAGGTT"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGATG"
+        },
+        {
+          "length": 8192,
+          "center": "CTAGGCT"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGATT"
+        }
+      ]
+    },
+    "range_bytes_read": 30974831
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_recovery/test_maize-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_recovery/test_maize-00001-of-00003.parquet",
+    "bytes": 173243095,
+    "rows": 51290,
+    "row_groups": 52,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "5d8d6c047dbcdf3aa9c9635f9a78b544a5427edfddfa062298715e9c7c575ca6",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "ACAGGAA"
+        },
+        {
+          "length": 8192,
+          "center": "ACAGGCA"
+        },
+        {
+          "length": 8192,
+          "center": "GTAGGAA"
+        },
+        {
+          "length": 8192,
+          "center": "ACAGAAC"
+        }
+      ]
+    },
+    "range_bytes_read": 30576753
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_recovery/test_maize-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_recovery/test_maize-00002-of-00003.parquet",
+    "bytes": 174299790,
+    "rows": 51289,
+    "row_groups": 52,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "794b26cd6c3a8f4966b14b24a352060f92f370b56f14fb10aebbef66f782d076",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TCAGATT"
+        },
+        {
+          "length": 8192,
+          "center": "ACAGATA"
+        },
+        {
+          "length": 8192,
+          "center": "ATAGAAT"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGTGG"
+        }
+      ]
+    },
+    "range_bytes_read": 30519336
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_recovery/test_tomato-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_recovery/test_tomato-00000-of-00003.parquet",
+    "bytes": 95257311,
+    "rows": 46819,
+    "row_groups": 47,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "f7626ca83ddfdefc990fa2bb0e44ce40809d3ff44866e19582d9cc7e7aea43c2",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TGAGGTT"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGGAT"
+        },
+        {
+          "length": 8192,
+          "center": "TTAGAAC"
+        },
+        {
+          "length": 8192,
+          "center": "TAAGGTT"
+        }
+      ]
+    },
+    "range_bytes_read": 32937582
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_recovery/test_tomato-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_recovery/test_tomato-00001-of-00003.parquet",
+    "bytes": 95767292,
+    "rows": 46818,
+    "row_groups": 47,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "93b86f5958f89b5c25cae89d7c5f4c917707522d037ee53dca39508b2955ceeb",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TCAGGCT"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGGAC"
+        },
+        {
+          "length": 8192,
+          "center": "ACAGACT"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGCTG"
+        }
+      ]
+    },
+    "range_bytes_read": 32530059
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "acceptor_recovery/test_tomato-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/acceptor_recovery/test_tomato-00002-of-00003.parquet",
+    "bytes": 97229437,
+    "rows": 46818,
+    "row_groups": 47,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "a661cb73bc8f41037d96cea69286c22daf4067d9204fd79532fc61aec19501ab",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GCAGACA"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGAAC"
+        },
+        {
+          "length": 8192,
+          "center": "GTAGGTT"
+        },
+        {
+          "length": 8192,
+          "center": "GCAGTGT"
+        }
+      ]
+    },
+    "range_bytes_read": 33533452
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "conservation_within_andropogoneae/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/conservation_within_andropogoneae/test-00000-of-00001.parquet",
+    "bytes": 144838381,
+    "rows": 38060,
+    "row_groups": 39,
+    "columns": [
+      "label",
+      "sequence"
+    ],
+    "footer_sha256": "d10530ff726c1dfd1fb1af4b6a3359eac9164f02168dd563f1db30425e28b18b",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 19030,
+      "0": 19030
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TTTAGGA"
+        },
+        {
+          "length": 8192,
+          "center": "TCAGTAA"
+        },
+        {
+          "length": 8192,
+          "center": "TGCAGGT"
+        },
+        {
+          "length": 8192,
+          "center": "ATTCATA"
+        }
+      ]
+    },
+    "range_bytes_read": 32583734
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "conservation_within_poaceae_non_tis/test-00000-of-00004.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/conservation_within_poaceae_non_tis/test-00000-of-00004.parquet",
+    "bytes": 143044339,
+    "rows": 45922,
+    "row_groups": 46,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "a1184d2dab79ef833871631e210abf6739aee0f058f21f63c667cf54873f357b",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 45922
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GACCATT"
+        },
+        {
+          "length": 8192,
+          "center": "AGGCAGA"
+        },
+        {
+          "length": 8192,
+          "center": "TCCGGCT"
+        },
+        {
+          "length": 8192,
+          "center": "GGCGGGG"
+        }
+      ]
+    },
+    "range_bytes_read": 34461112
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "conservation_within_poaceae_non_tis/test-00001-of-00004.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/conservation_within_poaceae_non_tis/test-00001-of-00004.parquet",
+    "bytes": 139894583,
+    "rows": 45921,
+    "row_groups": 46,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "13bb98dd1d8ba2eb696021f11a82746511473af4384664ae4e09b7786211d1de",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 45921
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "CAGAGTC"
+        },
+        {
+          "length": 8192,
+          "center": "TGAATGC"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTGGT"
+        },
+        {
+          "length": 8192,
+          "center": "TGAGTGC"
+        }
+      ]
+    },
+    "range_bytes_read": 33146357
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "conservation_within_poaceae_non_tis/test-00002-of-00004.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/conservation_within_poaceae_non_tis/test-00002-of-00004.parquet",
+    "bytes": 145858957,
+    "rows": 45921,
+    "row_groups": 46,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "12bb2c988f795e80ad9dd9e00384e445e6ab8c8cf48a1fcd41f1bdf48a93063f",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 11525,
+      "0": 34396
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GCATGAA"
+        },
+        {
+          "length": 8192,
+          "center": "ATTCAGT"
+        },
+        {
+          "length": 8192,
+          "center": "GCAAAGT"
+        },
+        {
+          "length": 8192,
+          "center": "TCTTTGC"
+        }
+      ]
+    },
+    "range_bytes_read": 33867865
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "conservation_within_poaceae_non_tis/test-00003-of-00004.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/conservation_within_poaceae_non_tis/test-00003-of-00004.parquet",
+    "bytes": 146730418,
+    "rows": 45921,
+    "row_groups": 46,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "09c29be16478a791e1f451f207c13acb1725bf390f2816843a08efe0cb3b352c",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "0": 45921
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "CTTTCCT"
+        },
+        {
+          "length": 8192,
+          "center": "AGCTCCA"
+        },
+        {
+          "length": 8192,
+          "center": "GACGACA"
+        },
+        {
+          "length": 8192,
+          "center": "CCGGTCA"
+        }
+      ]
+    },
+    "range_bytes_read": 35001477
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "conservation_within_poaceae_tis/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/conservation_within_poaceae_tis/test-00000-of-00001.parquet",
+    "bytes": 139559957,
+    "rows": 36662,
+    "row_groups": 37,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "61fb92a4a7b79a50e76407d28195838dcdcd538eb13a73defcfb3d098046ae45",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 26650,
+      "0": 10012
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGATGGC"
+        },
+        {
+          "length": 8192,
+          "center": "CCATGGC"
+        },
+        {
+          "length": 8192,
+          "center": "ACATGTC"
+        },
+        {
+          "length": 8192,
+          "center": "AAATGGC"
+        }
+      ]
+    },
+    "range_bytes_read": 32482260
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_core_noncore_classification/test_maize-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_core_noncore_classification/test_maize-00000-of-00003.parquet",
+    "bytes": 163956726,
+    "rows": 48184,
+    "row_groups": 49,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "d3785513f80fa7be4eac2386cdc9d60ed4b8de5e44545aad2458819db39f226a",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 40781,
+      "0": 7403
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGGTACG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTAGA"
+        },
+        {
+          "length": 8192,
+          "center": "GGGTATG"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTACA"
+        }
+      ]
+    },
+    "range_bytes_read": 33485119
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_core_noncore_classification/test_maize-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_core_noncore_classification/test_maize-00001-of-00003.parquet",
+    "bytes": 163131102,
+    "rows": 48183,
+    "row_groups": 49,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "76b0e067b78dede317ee7fecda6e72754e84783718c40d2c5931416278e5d7eb",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 41461,
+      "0": 6722
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGGTTTT"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTCAG"
+        },
+        {
+          "length": 8192,
+          "center": "CAGTTAG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTTCT"
+        }
+      ]
+    },
+    "range_bytes_read": 33052711
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_core_noncore_classification/test_maize-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_core_noncore_classification/test_maize-00002-of-00003.parquet",
+    "bytes": 164486670,
+    "rows": 48183,
+    "row_groups": 49,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "4f452cf15c06f0d7c120cba193261f4db0e6cc92134c28386f07c3e4ec489dd7",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "0": 7242,
+      "1": 40941
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TGGTACC"
+        },
+        {
+          "length": 8192,
+          "center": "GCGTAAG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTACT"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTGCG"
+        }
+      ]
+    },
+    "range_bytes_read": 33294167
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_core_noncore_classification/test_tomato-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_core_noncore_classification/test_tomato-00000-of-00003.parquet",
+    "bytes": 95425290,
+    "rows": 46817,
+    "row_groups": 47,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "bfa10b88939c096537f43d94b243a626f8c10a328c181a3298342720c68e83d2",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 44158,
+      "0": 2659
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GGGTCCA"
+        },
+        {
+          "length": 8192,
+          "center": "GAGTAAT"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTAAA"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTAAT"
+        }
+      ]
+    },
+    "range_bytes_read": 35011203
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_core_noncore_classification/test_tomato-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_core_noncore_classification/test_tomato-00001-of-00003.parquet",
+    "bytes": 96152572,
+    "rows": 46817,
+    "row_groups": 47,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "13203d5ffd703d9c26e5817191356f38610a15cb17a79832659b14461cd93e50",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 44419,
+      "0": 2398
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGGTGTG"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTATG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTAAA"
+        },
+        {
+          "length": 8192,
+          "center": "TTGTAAG"
+        }
+      ]
+    },
+    "range_bytes_read": 34558837
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_core_noncore_classification/test_tomato-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_core_noncore_classification/test_tomato-00002-of-00003.parquet",
+    "bytes": 97332914,
+    "rows": 46817,
+    "row_groups": 47,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "da25c8a15a8a571adeb5312946b93c288e8e0f9f95f2e8a1a544f889346ac933",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 43599,
+      "0": 3218
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGGTAAT"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTACA"
+        },
+        {
+          "length": 8192,
+          "center": "ATGTACA"
+        },
+        {
+          "length": 8192,
+          "center": "GTGTAAG"
+        }
+      ]
+    },
+    "range_bytes_read": 35411499
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_recovery/test_maize-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_recovery/test_maize-00000-of-00003.parquet",
+    "bytes": 174930929,
+    "rows": 51290,
+    "row_groups": 52,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "0949dedeecbee3468f8cf405459b09e08f8ace56fcfa54762f357fff1a25ad2a",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GGGTCAG"
+        },
+        {
+          "length": 8192,
+          "center": "AAGTAAG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTATT"
+        },
+        {
+          "length": 8192,
+          "center": "GGGTAAG"
+        }
+      ]
+    },
+    "range_bytes_read": 30953867
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_recovery/test_maize-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_recovery/test_maize-00001-of-00003.parquet",
+    "bytes": 173595159,
+    "rows": 51290,
+    "row_groups": 52,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "9ea40db9587e027fc6b13572bf4954861acae33dddbfe21acd9eb1465eb6b1a9",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TGGTTAG"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTATA"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTACA"
+        },
+        {
+          "length": 8192,
+          "center": "GTGTATG"
+        }
+      ]
+    },
+    "range_bytes_read": 30535601
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_recovery/test_maize-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_recovery/test_maize-00002-of-00003.parquet",
+    "bytes": 174912028,
+    "rows": 51289,
+    "row_groups": 52,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "2d9a783925cb6083b0d4c0c9da7498a464e3f5adad698899fa674f44b1b9e4c4",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGGTGAG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTAGC"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTGTG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTATG"
+        }
+      ]
+    },
+    "range_bytes_read": 30607286
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_recovery/test_tomato-00000-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_recovery/test_tomato-00000-of-00003.parquet",
+    "bytes": 95630368,
+    "rows": 46819,
+    "row_groups": 47,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "d3689ed69d8e7ac70171431ea7b1c9d5c4e355af242cc9b26cdae996024cdb75",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GGGTCCA"
+        },
+        {
+          "length": 8192,
+          "center": "GAGTAAT"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTAAA"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTAAT"
+        }
+      ]
+    },
+    "range_bytes_read": 33048495
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_recovery/test_tomato-00001-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_recovery/test_tomato-00001-of-00003.parquet",
+    "bytes": 96138256,
+    "rows": 46819,
+    "row_groups": 47,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "035340c63b661c01d29e6d7502fa915989710e07d3f0f9e24529ade54b0a7751",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AGGTGTG"
+        },
+        {
+          "length": 8192,
+          "center": "TGGTATG"
+        },
+        {
+          "length": 8192,
+          "center": "AGGTAAA"
+        },
+        {
+          "length": 8192,
+          "center": "TTGTAAG"
+        }
+      ]
+    },
+    "range_bytes_read": 32638879
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "donor_recovery/test_tomato-00002-of-00003.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/donor_recovery/test_tomato-00002-of-00003.parquet",
+    "bytes": 97207444,
+    "rows": 46818,
+    "row_groups": 47,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "deb3fb24d099ef5ac73fffa2380518cbbc213de6d5a788e95b90583a1e21de92",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TGGTACA"
+        },
+        {
+          "length": 8192,
+          "center": "ATGTACA"
+        },
+        {
+          "length": 8192,
+          "center": "GTGTAAG"
+        },
+        {
+          "length": 8192,
+          "center": "ATGTATG"
+        }
+      ]
+    },
+    "range_bytes_read": 33380387
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "structural_variant_effect_prediction/test-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/structural_variant_effect_prediction/test-00000-of-00001.parquet",
+    "bytes": 121316313,
+    "rows": 18075,
+    "row_groups": 19,
+    "columns": [
+      "Chromosome",
+      "Start",
+      "End",
+      "DelLen",
+      "RefSeq",
+      "MutSeq",
+      "left",
+      "right",
+      "label"
+    ],
+    "footer_sha256": "5852e6ae982835299f1bf2c9b96618a19372485de97c290adf9888d196b8e084",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "0": 10413,
+      "1": 7662
+    },
+    "sequence_samples": {
+      "RefSeq": [
+        {
+          "length": 8192,
+          "center": "CGGCGAA"
+        },
+        {
+          "length": 8192,
+          "center": "GTAAAGA"
+        },
+        {
+          "length": 8192,
+          "center": "GGCCGTT"
+        },
+        {
+          "length": 8192,
+          "center": "GTTGATA"
+        }
+      ],
+      "MutSeq": [
+        {
+          "length": 8192,
+          "center": "GAATCCC"
+        },
+        {
+          "length": 8192,
+          "center": "TAAAAAT"
+        },
+        {
+          "length": 8192,
+          "center": "GAAAGTC"
+        },
+        {
+          "length": 8192,
+          "center": "TACGTCC"
+        }
+      ]
+    },
+    "range_bytes_read": 8089207
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tis_core_noncore_classification/test_maize-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tis_core_noncore_classification/test_maize-00000-of-00001.parquet",
+    "bytes": 136984735,
+    "rows": 36409,
+    "row_groups": 37,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "6f1ed544848d9bb220eea6bb35c3ad9d51c6cf0d6e9e2a6faa9e0cf50d86c1ce",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 28291,
+      "0": 8118
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GATGGCT"
+        },
+        {
+          "length": 8192,
+          "center": "TATGCCA"
+        },
+        {
+          "length": 8192,
+          "center": "GATGGGG"
+        },
+        {
+          "length": 8192,
+          "center": "GATGAAG"
+        }
+      ]
+    },
+    "range_bytes_read": 32069726
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tis_core_noncore_classification/test_tomato-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tis_core_noncore_classification/test_tomato-00000-of-00001.parquet",
+    "bytes": 122800765,
+    "rows": 35478,
+    "row_groups": 36,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "6d604be250ea952229a03e204d3a44eec56a5ffc9db526b80267bedbab3bbb60",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 29809,
+      "0": 5669
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AATGTTT"
+        },
+        {
+          "length": 8192,
+          "center": "AATGGAA"
+        },
+        {
+          "length": 8192,
+          "center": "GATGGCG"
+        },
+        {
+          "length": 8192,
+          "center": "GATGCTA"
+        }
+      ]
+    },
+    "range_bytes_read": 32893289
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tis_recovery/test_maize-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tis_recovery/test_maize-00000-of-00001.parquet",
+    "bytes": 146817870,
+    "rows": 39035,
+    "row_groups": 40,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "b9cd46600fd373fbda8a340f0a108feb450340caa04cf5bea5f498dbf88e3335",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "CATGGCC"
+        },
+        {
+          "length": 8192,
+          "center": "GATGGCT"
+        },
+        {
+          "length": 8192,
+          "center": "TATGCCA"
+        },
+        {
+          "length": 8192,
+          "center": "GATGGGG"
+        }
+      ]
+    },
+    "range_bytes_read": 30233679
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tis_recovery/test_tomato-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tis_recovery/test_tomato-00000-of-00001.parquet",
+    "bytes": 122639481,
+    "rows": 35484,
+    "row_groups": 36,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "e5c7af077a2a5701c314112763250b47f8ab63d7c1d9cc528481d608abd0ced1",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "AATGTTT"
+        },
+        {
+          "length": 8192,
+          "center": "AATGGAA"
+        },
+        {
+          "length": 8192,
+          "center": "GATGGCG"
+        },
+        {
+          "length": 8192,
+          "center": "GATGCTA"
+        }
+      ]
+    },
+    "range_bytes_read": 31089651
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tts_core_noncore_classification/test_maize-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tts_core_noncore_classification/test_maize-00000-of-00001.parquet",
+    "bytes": 137013166,
+    "rows": 36409,
+    "row_groups": 37,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "4be2ae19a17fa19634cebc824313960f5078f6daaab82da048ebc7525a0f9385",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 28291,
+      "0": 8118
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "GTAAGAA"
+        },
+        {
+          "length": 8192,
+          "center": "TTAGTGA"
+        },
+        {
+          "length": 8192,
+          "center": "CTAACTG"
+        },
+        {
+          "length": 8192,
+          "center": "GTAGCTC"
+        }
+      ]
+    },
+    "range_bytes_read": 32163693
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tts_core_noncore_classification/test_tomato-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tts_core_noncore_classification/test_tomato-00000-of-00001.parquet",
+    "bytes": 123002475,
+    "rows": 35477,
+    "row_groups": 36,
+    "columns": [
+      "sequence",
+      "label"
+    ],
+    "footer_sha256": "9803cf2bd357344a27d52e8e7aae956def72b653383632112703cfd0b969ce89",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "label_counts": {
+      "1": 29806,
+      "0": 5671
+    },
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "CTAGCCA"
+        },
+        {
+          "length": 8192,
+          "center": "TTAAATA"
+        },
+        {
+          "length": 8192,
+          "center": "CTGAAAA"
+        },
+        {
+          "length": 8192,
+          "center": "CTAGACT"
+        }
+      ]
+    },
+    "range_bytes_read": 32963927
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tts_recovery/test_maize-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tts_recovery/test_maize-00000-of-00001.parquet",
+    "bytes": 146829674,
+    "rows": 39035,
+    "row_groups": 40,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "ad00d71aa04c8d25e3f93806feab3bf3e3fba4b8cf2e5cfc1eee05cd4027e21a",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "TTAATTT"
+        },
+        {
+          "length": 8192,
+          "center": "GTAAGAA"
+        },
+        {
+          "length": 8192,
+          "center": "TTAGTGA"
+        },
+        {
+          "length": 8192,
+          "center": "CTAACTG"
+        }
+      ]
+    },
+    "range_bytes_read": 30245483
+  },
+  {
+    "repo": "plantcad/PlantCAD2_zero_shot_tasks",
+    "revision": "d340debe0c8402c84f0696cd2002f87c2f7ba6db",
+    "path": "tts_recovery/test_tomato-00000-of-00001.parquet",
+    "url": "https://huggingface.co/datasets/plantcad/PlantCAD2_zero_shot_tasks/blob/d340debe0c8402c84f0696cd2002f87c2f7ba6db/tts_recovery/test_tomato-00000-of-00001.parquet",
+    "bytes": 123042359,
+    "rows": 35483,
+    "row_groups": 36,
+    "columns": [
+      "sequence"
+    ],
+    "footer_sha256": "feb86e281400a002e37c709e3cd2021fb90168cac1a5e091f1c1f02e902c56ec",
+    "method": "Pinned Parquet footer; full selected-label column scan; first4 sequence rows sampled per file",
+    "inspected": "2026-11-26",
+    "sequence_samples": {
+      "sequence": [
+        {
+          "length": 8192,
+          "center": "CTAGCCA"
+        },
+        {
+          "length": 8192,
+          "center": "TTAAATA"
+        },
+        {
+          "length": 8192,
+          "center": "CTGAAAA"
+        },
+        {
+          "length": 8192,
+          "center": "CTAGACT"
+        }
+      ]
+    },
+    "range_bytes_read": 31230385
+  }
+]

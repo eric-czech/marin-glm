@@ -866,5 +866,82 @@
     "ref": "f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03",
     "url": "https://github.com/BGI-HangzhouAI/Genos-m/blob/f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03/Scripts/Genos-m-4.7B-pretrain.sh",
     "local": "research/sources/new-models/genosm/Scripts/Genos-m-4.7B-pretrain.sh"
+  },
+  {
+    "repo": "plantcad/plantcad",
+    "ref": "5f28c156dfa16af03e1c704a79a7b2f6c39013c7",
+    "path": "docs/PlantCAD2-overview.md",
+    "url": "https://github.com/plantcad/plantcad/blob/5f28c156dfa16af03e1c704a79a7b2f6c39013c7/docs/PlantCAD2-overview.md",
+    "local": "research/sources/plantcad--plantcad/docs/PlantCAD2-overview.md"
+  },
+  {
+    "repo": "plantcad/plantcad",
+    "ref": "5f28c156dfa16af03e1c704a79a7b2f6c39013c7",
+    "path": "docs/zero-shot-eval.md",
+    "url": "https://github.com/plantcad/plantcad/blob/5f28c156dfa16af03e1c704a79a7b2f6c39013c7/docs/zero-shot-eval.md",
+    "local": "research/sources/plantcad--plantcad/docs/zero-shot-eval.md"
+  },
+  {
+    "repo": "plantcad/plantcad",
+    "ref": "5f28c156dfa16af03e1c704a79a7b2f6c39013c7",
+    "path": "src/zero-shot-eval.py",
+    "url": "https://github.com/plantcad/plantcad/blob/5f28c156dfa16af03e1c704a79a7b2f6c39013c7/src/zero-shot-eval.py",
+    "local": "research/sources/plantcad--plantcad/src/zero-shot-eval.py"
+  },
+  {
+    "repo": "plantcad/plantcad",
+    "ref": "5f28c156dfa16af03e1c704a79a7b2f6c39013c7",
+    "path": "src/lora_fine_tune.py",
+    "url": "https://github.com/plantcad/plantcad/blob/5f28c156dfa16af03e1c704a79a7b2f6c39013c7/src/lora_fine_tune.py",
+    "local": "research/sources/plantcad--plantcad/src/lora_fine_tune.py"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "README.md",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/README.md",
+    "local": "research/sources/plantcad--genecad/README.md"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "docs/training_protocol.md",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/docs/training_protocol.md",
+    "local": "research/sources/plantcad--genecad/docs/training_protocol.md"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "src/modeling.py",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/src/modeling.py",
+    "local": "research/sources/plantcad--genecad/src/modeling.py"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "src/gff_eval.py",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/src/gff_eval.py",
+    "local": "research/sources/plantcad--genecad/src/gff_eval.py"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "src/training_protocol.py",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/src/training_protocol.py",
+    "local": "research/sources/plantcad--genecad/src/training_protocol.py"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "src/gff_compare.py",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/src/gff_compare.py",
+    "local": "research/sources/plantcad--genecad/src/gff_compare.py"
+  },
+  {
+    "repo": "plantcad/genecad",
+    "ref": "3a5bed49db573bdde8e10318e1e92f7a365b7bf3",
+    "path": "scripts/sample.py",
+    "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/scripts/sample.py",
+    "local": "research/sources/plantcad--genecad/scripts/sample.py"
   }
 ]

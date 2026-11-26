@@ -31,7 +31,7 @@ with sync_playwright() as p:
     page.wait_for_selector('.collection')
     assert 'DART' in page.locator('#results').inner_text()
     # A direct link restores one task, its facts, counts and provenance.
-    for task in ['bacbench-essential','nt-revised-enhancers_types','gue-H3','gpn-rvat','gpn-annotation','traitgym-mendelian','bend-opensplice','deepstarr-dev','aido2-clinvar-snv','genosm-bgc-types','genosm-crc']:
+    for task in ['bacbench-essential','nt-revised-enhancers_types','gue-H3','gpn-rvat','gpn-annotation','traitgym-mendelian','bend-opensplice','deepstarr-dev','aido2-clinvar-snv','genosm-bgc-types','genosm-crc','plantcad2-tis_recovery','plantcad2-potato-gerp','plantcad2-ft-cell_type_specific_acr','genecad-cds-transcript','genecad-legacy-transcript']:
         page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&task='+task)
         page.wait_for_selector('details.task[open] .detail-body h4')
         assert page.locator('details.task').count()==1

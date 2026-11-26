@@ -18,6 +18,7 @@ TABLES = ['metadata', 'sources', 'papers', 'models', 'model_properties', 'eviden
 
 class Catalogue:
     def __init__(self):
+        self.date = DATE
         self.rows = {name: [] for name in TABLES}
         self.ids = {name: set() for name in TABLES}
         self.snapshots = json.loads((ROOT / 'data/source-snapshots.json').read_text())
@@ -35,7 +36,7 @@ class Catalogue:
         if local_path and (ROOT / local_path).exists():
             digest = hashlib.sha256((ROOT / local_path).read_bytes()).hexdigest()
         self.add('sources', id=id, title=title, kind=kind, url=url, version=version,
-                 retrieved=DATE, sha256=digest, local_path=local_path,
+                 retrieved=self.date, sha256=digest, local_path=local_path,
                  availability='available', notes=notes)
         return id
 
@@ -46,7 +47,7 @@ class Catalogue:
     def ev(self, id, source_id, locator, statement, basis='paper', url=None):
         source = next(s for s in self.rows['sources'] if s['id'] == source_id)
         return self.add('evidence', id=id, source_id=source_id, locator=locator,
-                        statement=statement, basis=basis, url=url or source['url'], inspected=DATE)
+                        statement=statement, basis=basis, url=url or source['url'], inspected=self.date)
 
     def code(self, id, repo, path, needle, statement, end_needle=None, basis='code', ref=None):
         snapshot = next((s for s in self.snapshots if s['repo'] == repo and s['path'] == path and (not ref or s['ref'] == ref)), None)
@@ -235,11 +236,12 @@ def vocabulary(c):
 
 def main():
     c = Catalogue()
-    c.add('metadata', key='updated', value=DATE)
+    c.add('metadata', key='updated', value='2026-11-26')
     c.add('metadata', key='repository', value='eric-czech/marin-glm')
     c.add('metadata', key='task_unit', value='Dataset × prediction target; species, tracks, conditions and protocols are linked variants.')
     vocabulary(c)
-    for module in ('sources', 'evo', 'benchmarks', 'model_evals', 'gpnstar', 'paper_extensions', 'new_models', 'artifacts'):
+    for module in ('sources', 'evo', 'benchmarks', 'model_evals', 'gpnstar', 'paper_extensions', 'new_models', 'artifacts', 'plantcad'):
+        c.date = '2026-11-26' if module == 'plantcad' else DATE
         importlib.import_module('curation.' + module).populate(c)
     (ROOT / 'data/catalogue.json').write_text(json.dumps(c.rows, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({name: len(rows) for name, rows in c.rows.items()}, indent=2))

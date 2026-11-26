@@ -2,7 +2,7 @@
 
 A technical catalogue of genomic language models, papers, evaluation collections, tasks and protocols. The local, single-page draft is [index.html](index.html). It works directly from disk and can be served unchanged by GitHub Pages.
 
-Primary model scope: Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2 and Genos-m. LOAM and other models are retained as additional evaluation sources. Carbon-X has official release documentation; AIDO.DNA2 has an official technical web report.
+Primary model scope: Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2, Genos-m and PlantCAD2. LOAM and other models are retained as additional evaluation sources. Carbon-X has official release documentation; AIDO.DNA2 has an official technical web report. GeneCAD is recorded as a PlantCAD2-family annotation adaptation, not a separate primary foundation model.
 
 The catalogue is a research draft. Registered sources, composite panels awaiting decomposition, paper/protocol audits and selected artifact audits are explicitly distinguished. The number of database records is **not** the number of independently validated biological tasks. The site does not assign ID/OD categories or rank models.
 
@@ -12,6 +12,7 @@ The catalogue is a research draft. Registered sources, composite panels awaiting
 - `data/catalogue.json`: committed authoring export, organized by database table.
 - `data/schema.sql`: relational schema and collection-summary view.
 - `data/artifact-inspections.json`: measured public-file statistics, immutable revisions and byte-level SHA-256 hashes. Raw datasets are not committed.
+- `data/plantcad-artifact-inspections.json`: pinned PlantCAD Parquet footer counts, selected full-column scans and sampled sequence lengths. Its footer hashes are explicitly **not whole-file hashes**.
 - `data/source-snapshots.json`: pinned GitHub files used during the audit.
 - `data/site-data.json`: database export consumed by the page build.
 - `site/`: HTML template, CSS and JavaScript.
@@ -38,7 +39,7 @@ Application categories describe research functions such as plant breeding, varia
 
 Evidence is attached to task definitions, individual fields, classifications, variants, protocols, counts and model usage. Source locators include paper sections/PDF pages, pinned repository lines and pinned dataset files. Unknown values remain unknown. A source registration alone does not constitute a full-text or data audit.
 
-`model_properties` holds cited corpus, architecture, tokenization, training and context details, initially for AIDO.DNA2 and Genos-m. Corpus size, consumed training tokens, pretraining context, inference input size and task-specific pooling are separate properties. These model-level descriptions do not define the future pretraining-data catalogue. AIDO.DNA2 tokenization remains unresolved. Genos-m's reported vocabulary of 128 differs from the released config (256) and tokenizer (17 listed entries); the distinction is explicit.
+`model_properties` holds cited corpus, architecture, tokenization, training and context details, initially for AIDO.DNA2, Genos-m and PlantCAD2. Corpus size, consumed training tokens, pretraining context, inference input size and task-specific pooling are separate properties. These model-level descriptions do not define the future pretraining-data catalogue. AIDO.DNA2 tokenization remains unresolved. Genos-m's reported vocabulary of 128 differs from the released config (256) and tokenizer (17 listed entries); the distinction is explicit.
 
 The current status labels are:
 
@@ -62,6 +63,12 @@ Source hashes refer to the cached representation named by `local_path`; for pape
 Audit findings are stored in SQLite and shown on the page. Significant remaining work includes individual assay decomposition for GPN-Star ProteinGym and DeepD panels; RNA structure and NABench assay/split audits; LAMBDA task expansion and BGCs-Bench split-file verification; exact NTv3 track manifests; reconciliation of original/revised releases and reused source assays; and completion of task-specific count, coordinate and homology checks. GENEB and RNAGym manifest entries are not all independently audited. Additional model papers remain source registrations until task evidence is established.
 
 AIDO.DNA2 and Genos-m evaluation additions are supported by the inspected report/paper and pinned project documentation, not recounted task artifacts. Genos-m reuses BacBench essentiality and 13 RNAGym assays with separate protocols, while its MIBiG-derived cohorts, VFDB controls and microbiome applications have distinct records. Its documented essentiality cohort differs from the artifact inspected for LOAM. The project labels a benchmark checkpoint `cpt32k` while advertising 1M context; checkpoint correspondence and comparator windowing remain unresolved.
+
+PlantCAD2 has 12 released zero-shot configurations with linked maize/tomato variants, seven released supervised configurations, and separate paper-only endpoints. The [leaderboard](https://huggingface.co/spaces/plantcad/plantcad2-zeroshot-leaderboard) splits the zero-shot configurations into 20 entries; those are not 20 independent dataset/target tasks. Published potato GERP conservation, maximum-across-tissues expression, and Arabidopsis-to-maize expression transfer have no matching named configuration in the inspected HF releases. Known-site motif recovery and core-gene membership do not establish genome-wide site detection. Ribo-seq-derived translation abundance is not direct protein quantitation.
+
+All 39 zero-shot Parquet files were inspected for footer counts, relevant label columns and sampled sequence lengths. Seven supervised files were checked: all translation splits and the maize cell-type accessibility test. The latter contains only chromosome 10 and 92-character binary labels. Translation regression labels match `log10(1 + TPM)` in all splits, whereas the paper describes `log10(TPM)`; binary labels match `TPM > 1`. Translation train and validation both contain Arabidopsis chromosomes 1–5. Most supervised files still have card-reported counts only; sequence lengths were sampled, not exhaustively scanned.
+
+GeneCAD's 2025 preprint froze PlantCAD2 and trained an annotation head on five species. The pinned 2026 release explicitly fine-tunes a 200M PlantCAD2-family backbone on eight species, with random-window validation within chromosomes. Its released coding benchmark converts CDS segments into exon chains and ignores UTRs, with separate default and strict gffcompare scoring. Historical full-annotation tasks, revised coding-only tasks, boundary detection and BUSCO completeness remain separate. Distant plant cohorts and the single experimental vertebrate-model case are linked variants; the vertebrate result is not attributed to the plant-trained checkpoint. Prediction manifests and released results were inspected, but reference genomes and every prediction GFF have not been independently re-scored.
 
 The separate pretraining-data section is intentionally work in progress. No data policy or ID/OD policy is implied by the current categories.
 
