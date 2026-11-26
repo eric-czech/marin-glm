@@ -102,5 +102,39 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(len(data['tasks']),self.db.execute('SELECT COUNT(*) FROM tasks').fetchone()[0])
         self.assertIn('gpnstar',{m['id'] for m in data['models']})
         self.assertNotIn('__CATALOGUE_JSON__',html)
+    def test_projects_require_dedicated_purpose_and_independent_adoption(self):
+        projects=self.db.execute('SELECT * FROM project_summary').fetchall()
+        self.assertTrue(projects)
+        for p in projects:
+            self.assertGreaterEqual(p['independent_groups'],2,p['id'])
+            r=self.db.execute('SELECT * FROM project_reviews WHERE id=?',(p['review_id'],)).fetchone()
+            self.assertEqual((r['decision'],r['dedicated']),('qualified',1))
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM projects WHERE id IN ('geneb','omnigenbench','gfmbench','guanine')").fetchone()[0],0)
+    def test_every_collection_has_an_explicit_project_review(self):
+        self.assertEqual(self.db.execute('''SELECT e.id FROM evaluations e
+          LEFT JOIN project_review_evaluations r ON e.id=r.evaluation_id
+          WHERE r.review_id IS NULL''').fetchall(),[])
+        for id in ('gue','nt-original','nt-revised','pgb','gene-mteb'):
+            r=self.db.execute('''SELECT r.decision FROM project_reviews r
+              JOIN project_review_evaluations e ON e.review_id=r.id WHERE e.evaluation_id=?''',(id,)).fetchone()
+            self.assertEqual(r[0],'outside-definition',id)
+    def test_adoption_is_version_subset_and_modality_specific(self):
+        links={tuple(r) for r in self.db.execute("SELECT evaluation_id,relation FROM project_review_evaluations WHERE review_id='bend'")}
+        self.assertEqual(links,{('bend-original','defines'),('bend','successor-release')})
+        original=self.db.execute("SELECT scope FROM project_adoptions WHERE id='adoption-dart-evo'").fetchone()[0]
+        self.assertIn('1,2,5 only',original)
+        self.assertEqual(self.db.execute("SELECT independence FROM project_adoptions WHERE id='adoption-trait-gpn'").fetchone()[0],'shared-authorship')
+        self.assertIn('Protein-only',self.db.execute("SELECT scope FROM project_adoptions WHERE id='adoption-dgeb-protberta'").fetchone()[0])
+        # Literature/project registration must not manufacture new tasks/model uses.
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM tasks').fetchone()[0],508)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM models WHERE scope='primary'").fetchone()[0],13)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE paper_id IN ('dnachunker','patchdna','genezip','ribospan','mimic')").fetchone()[0],0)
+    def test_project_paper_links_cite_their_own_source(self):
+        self.assertEqual(self.db.execute('''SELECT r.review_id,r.paper_id FROM project_review_papers r
+          JOIN papers p ON p.id=r.paper_id JOIN evidence e ON e.id=r.evidence_id
+          WHERE r.relation!='adoption-evidence' AND e.source_id!=p.source_id''').fetchall(),[])
+        self.assertEqual(self.db.execute('''SELECT r.evaluation_id FROM project_review_evaluations r
+          JOIN evaluations e ON e.id=r.evaluation_id
+          WHERE r.relation='successor-release' AND r.evidence_id!=e.evidence_id''').fetchall(),[])
 
 if __name__=='__main__':unittest.main()

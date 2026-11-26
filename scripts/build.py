@@ -6,7 +6,8 @@ import sqlite3
 ROOT=Path(__file__).resolve().parents[1]
 INSERT_ORDER=['metadata','sources','papers','evidence','models','model_properties','populations','categories','metrics',
               'evaluations','tasks','variants','evaluation_tasks','task_populations','task_categories',
-              'protocols','protocol_metrics','counts','model_evaluations','findings','field_evidence']
+              'protocols','protocol_metrics','counts','model_evaluations','findings',
+              'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence']
 
 def build():
     data=json.loads((ROOT/'data/catalogue.json').read_text())
@@ -21,6 +22,13 @@ def build():
                 columns=list(row)
                 db.execute(f'INSERT INTO {table} ({",".join(columns)}) VALUES ({",".join("?" for _ in columns)})',[row[k] for k in columns])
     assert not db.execute('PRAGMA foreign_key_check').fetchall()
+    # Project status requires dedicated purpose and two independent user groups.
+    bad=db.execute("""SELECT p.id FROM project_summary p JOIN project_reviews r ON r.id=p.review_id
+      WHERE r.decision!='qualified' OR r.dedicated!=1 OR p.independent_groups<2""").fetchall()
+    if bad:raise ValueError(f'Project inclusion rule not met: {bad}')
+    bad=db.execute("""SELECT r.id FROM project_reviews r LEFT JOIN projects p ON p.review_id=r.id
+      WHERE r.decision='qualified' AND p.id IS NULL""").fetchall()
+    if bad:raise ValueError(f'Qualified review missing project: {bad}')
     # A variant/protocol count cannot silently belong to a different task.
     for table,column in [('counts','protocol_id'),('counts','variant_id'),('protocols','variant_id'),('model_evaluations','protocol_id')]:
         target='protocols' if column=='protocol_id' else 'variants'
@@ -32,6 +40,7 @@ def build():
     # The web payload is queried from SQLite, not independently maintained content.
     payload={table:[dict(r) for r in db.execute('SELECT * FROM '+table)] for table in INSERT_ORDER}
     payload['evaluation_summary']=[dict(r) for r in db.execute('SELECT * FROM evaluation_summary')]
+    payload['project_summary']=[dict(r) for r in db.execute('SELECT * FROM project_summary')]
     db.execute('VACUUM')
     db.close()
     temporary.replace(ROOT/'data/catalogue.sqlite')

@@ -44,7 +44,30 @@ with sync_playwright() as p:
     download=download_info.value
     content=Path(download.path()).read_text()
     assert 'gpn-clinvar' in content and 'gpn-rare-arabidopsis' in content
-    for view in ['models','papers','data','audit']:
+    # Projects preserve source/release distinctions and filter canonical tasks.
+    page.goto((ROOT/'index.html').as_uri()+'#view=projects')
+    page.wait_for_selector('.project')
+    assert page.locator('.project').count()==10
+    assert page.locator('.project-reviews').count()==1
+    assert not page.locator('.project-reviews').evaluate('(el)=>el.open')
+    assert page.locator('#project-dart').count()==1
+    page.screenshot(path='/tmp/marin-glm-projects.png',full_page=True)
+    page.goto((ROOT/'index.html').as_uri()+'#view=projects&project=bend')
+    page.wait_for_selector('.project-adoption[open]')
+    assert page.locator('.project').count()==1
+    assert 'not evidence of independent BEND 2.0 adoption' in page.locator('.project').inner_text()
+    page.set_viewport_size({'width':390,'height':844})
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.screenshot(path='/tmp/marin-glm-project-mobile.png',full_page=True)
+    page.set_viewport_size({'width':1440,'height':1100})
+    page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&mode=collections&project=lrb')
+    page.wait_for_selector('.collection')
+    assert page.locator('.collection').count()==1
+    assert 'decomposition' in page.locator('.collection').inner_text()
+    page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&project=dart&evo=original')
+    page.wait_for_selector('details.task')
+    assert page.locator('details.task').count()==4
+    for view in ['projects','models','papers','data','audit']:
         page.goto((ROOT/'index.html').as_uri()+'#view='+view)
         page.wait_for_function(f"document.getElementById('other-view').hidden === false && document.querySelector('nav a[aria-current=page]').dataset.view === '{view}'")
         assert page.locator('#other-view').inner_text().strip()

@@ -1,6 +1,6 @@
 # marin-glm
 
-A technical catalogue of genomic language models, papers, evaluation collections, tasks and protocols. The local, single-page draft is [index.html](index.html). It works directly from disk and can be served unchanged by GitHub Pages.
+A technical catalogue of genomic language models, papers, benchmark projects, evaluation collections, tasks and protocols. The public site is [eric-czech.github.io/marin-glm](https://eric-czech.github.io/marin-glm/). The single-page [index.html](index.html) also works directly from disk.
 
 Primary model scope: Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2, Genos-m and PlantCAD2. LOAM and other models are retained as additional evaluation sources. Carbon-X has official release documentation; AIDO.DNA2 has an official technical web report. GeneCAD is recorded as a PlantCAD2-family annotation adaptation, not a separate primary foundation model.
 
@@ -57,6 +57,22 @@ Source hashes refer to the cached representation named by `local_path`; for pape
 ## Evo 2 provenance
 
 `model_evaluations.provenance` distinguishes `original-paper`, `original-release`, `external-evaluation` and `released-example`. The original Evo 2 paper used DART tasks 1, 2 and 5, not the full suite. Later LOAM, mRNABench, GENERator-v2 and GPN-Star comparisons are recorded as external evaluations. Source-specific ClinVar cohorts, scoring contexts, readouts and DMS conversions are not merged merely because they use the same resource name. Missing association is unknown, not a verified negative.
+
+## Benchmark projects
+
+A project is a **substantial, primarily dedicated effort to build a reusable standardized evaluation framework or benchmark suite for genomic/nucleotide models**, with documented use by **at least two distinct independent research groups**. This is a conservative catalogue inclusion rule, not a scientific quality ranking. A project can contain multiple benchmark releases; a collection does not need a project to remain in scope.
+
+Concrete evaluation or software use qualifies as adoption. Citation-only mentions, surveys, repository stars, downloads, model wrappers and author-run leaderboards do not. Follow-up evaluations with shared benchmark authorship do not count toward the independent-group threshold. Adoption records identify the actual release, subset, modality and adaptation; copied comparator scores do not count as new experiments. Independence is a cited curatorial assessment of the research groups, not a claim about funding or institutional separation. The review is dated and non-exhaustive: **adoption not established** does not mean **no users exist**.
+
+The first qualifying set is Genomic Benchmarks (2023), DART-Eval, TraitGym, BEND, Genomics LRB, DNALongBench, RNAGym, mRNABench, DGEB and BacBench. Original BEND and BEND 2.0 are separate collections within the BEND project; the external-use evidence currently concerns original BEND. DGEB's protein-only adoption is explicitly identified and does not establish nucleotide-task performance. BacBench is a standalone resource predating the later BacLM addition; LOAM and Genos-m use subsets with different cohorts/protocols. Its related anonymous ICLR submission is registered without asserting equivalence to the current repository or a later publication.
+
+GUE, the original/revised NT benchmarks, Plant Genomic Benchmark and Gene-MTEB remain model-associated collections rather than projects under this definition. Dedicated efforts such as GENEB, GUANinE, OmniGenBench, GFMBench-API, GenBench, DNA Foundation Benchmark, NABench and the newer Genomic Benchmarks QC/audit ecosystem retain their papers and source records, but are not shown as qualified projects where independent adoption was not established. The QC/audit ecosystem is distinct from the 2023 Genomic Benchmarks dataset collection. No published paper is invented for its manuscript in preparation.
+
+The project review revisits every existing evaluation collection. `project_reviews` stores purpose, decision, rationale, search scope and evidence. `projects` contains only qualified entries. `project_review_papers` links introducing/update papers and adoption evidence; `project_review_evaluations` links versioned collections; `project_adoptions` records external use and independence. `project_summary` counts linked **catalogue coverage**, not a project's full published task inventory. Database build checks enforce the purpose and adoption rule. Reviews that do not qualify are collapsed in the Projects view, and remain queryable in SQLite.
+
+The Projects view links to collections, papers and release-specific adoption evidence. A project filter composes with application, taxon, capability, functional-region and Evo 2 provenance filters; CSV exports include project membership. Project membership never changes original Evo 2 attribution. New papers used only to establish adoption do not expand the primary model list.
+
+Original BEND, LRB, DNALongBench, GenBench, DNA Foundation Benchmark and Gene-MTEB are now explicitly registered collections. Individual dataset × target expansion and data/protocol equivalence checks remain pending; no paper-level inventory has been converted into fabricated task records or inherited classifications. Existing tasks, variants, counts, protocols and model-use associations are preserved. GUE and NT collections now link their introducing model papers; GENEB's published conference version is registered separately from its existing arXiv/code task evidence.
 
 ## Work remaining
 

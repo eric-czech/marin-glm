@@ -943,5 +943,61 @@
     "path": "scripts/sample.py",
     "url": "https://github.com/plantcad/genecad/blob/3a5bed49db573bdde8e10318e1e92f7a365b7bf3/scripts/sample.py",
     "local": "research/sources/plantcad--genecad/scripts/sample.py"
+  },
+  {
+    "repo": "NVIDIA/GFMBench-api",
+    "ref": "55723dcefae91293fe6da01106857ddb1cbf9ab6",
+    "path": "README.md",
+    "url": "https://github.com/NVIDIA/GFMBench-api/blob/55723dcefae91293fe6da01106857ddb1cbf9ab6/README.md",
+    "local": "research/sources/projects/NVIDIA--GFMBench-api--README.md"
+  },
+  {
+    "repo": "metagene-ai/gene-mteb",
+    "ref": "cdfacab370d8ec49370a78d3ab283f6a27d98cf0",
+    "path": "README.md",
+    "url": "https://github.com/metagene-ai/gene-mteb/blob/cdfacab370d8ec49370a78d3ab283f6a27d98cf0/README.md",
+    "local": "research/sources/projects/metagene-ai--gene-mteb--README.md"
+  },
+  {
+    "repo": "COLA-Laboratory/OmniGenBench",
+    "ref": "e50db524580eb7354f1f5a5dd3d8ad593281843a",
+    "path": "README.MD",
+    "url": "https://github.com/COLA-Laboratory/OmniGenBench/blob/e50db524580eb7354f1f5a5dd3d8ad593281843a/README.MD",
+    "local": "research/sources/projects/COLA-Laboratory--OmniGenBench--README.MD"
+  },
+  {
+    "repo": "ChongWuLab/dna_foundation_benchmark",
+    "ref": "3f4c81ce066f3c47422a83466b085aac1a6be902",
+    "path": "README.md",
+    "url": "https://github.com/ChongWuLab/dna_foundation_benchmark/blob/3f4c81ce066f3c47422a83466b085aac1a6be902/README.md",
+    "local": "research/sources/projects/ChongWuLab--dna_foundation_benchmark--README.md"
+  },
+  {
+    "repo": "ma-compbio/DNALONGBENCH",
+    "ref": "6c43266c6dc85b5529b5a784b880ee88cc1a54b3",
+    "path": "README.md",
+    "url": "https://github.com/ma-compbio/DNALONGBENCH/blob/6c43266c6dc85b5529b5a784b880ee88cc1a54b3/README.md",
+    "local": "research/sources/projects/ma-compbio--DNALONGBENCH--README.md"
+  },
+  {
+    "repo": "genomic-benchmarks/genomic-benchmarks-audit",
+    "ref": "66bf08759c86aad5296f24b2a8206e14b6772d4d",
+    "path": "README.md",
+    "url": "https://github.com/genomic-benchmarks/genomic-benchmarks-audit/blob/66bf08759c86aad5296f24b2a8206e14b6772d4d/README.md",
+    "local": "research/sources/projects/genomic-benchmarks--genomic-benchmarks-audit--README.md"
+  },
+  {
+    "repo": "genomic-benchmarks/genomic-benchmarks-qc",
+    "ref": "d3f7f396a25e8ecf96e8c730e06374783f462593",
+    "path": "README.md",
+    "url": "https://github.com/genomic-benchmarks/genomic-benchmarks-qc/blob/d3f7f396a25e8ecf96e8c730e06374783f462593/README.md",
+    "local": "research/sources/projects/genomic-benchmarks--genomic-benchmarks-qc--README.md"
+  },
+  {
+    "repo": "frederikkemarin/BEND",
+    "ref": "58ad41011125cfca339d511e9b8eb536a54b582a",
+    "path": "README.md",
+    "url": "https://github.com/frederikkemarin/BEND/blob/58ad41011125cfca339d511e9b8eb536a54b582a/README.md",
+    "local": "research/sources/projects/frederikkemarin--BEND--README.md"
   }
 ]

@@ -11,6 +11,10 @@
     {
       "key": "task_unit",
       "value": "Dataset × prediction target; species, tracks, conditions and protocols are linked variants."
+    },
+    {
+      "key": "project_policy",
+      "value": "A project must primarily develop a substantial, reusable, standardized evaluation framework or benchmark suite for nucleotide/genomic models. Require documented evaluation or software use by at least two distinct external research groups. Citations, surveys, stars, downloads, model adapters, and author-run leaderboards alone do not establish adoption. Shared benchmark authorship does not count as independent adoption. Qualification is not a quality endorsement; adoption is specific to the release and subset actually used."
     }
   ],
   "sources": [
@@ -4513,6 +4517,354 @@
       "local_path": null,
       "availability": "available",
       "notes": "HTTP-range inspection. Parquet footer SHA256=feb86e281400a002e37c709e3cd2021fb90168cac1a5e091f1c1f02e902c56ec. This is not a whole-file hash. Label columns scanned fully; sequence lengths sampled only."
+    },
+    {
+      "id": "project-paper-omnigenbench",
+      "title": "OmniGenBench: A Modular Platform for Reproducible Genomic Foundation Models Benchmarking",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2505.14402v1",
+      "version": "arXiv:2505.14402v1",
+      "retrieved": "2026-11-26",
+      "sha256": "0a1364f8a38b425b34d934ef5687b9cdb489c5ffe956ab3063a161a4b96fd7bd",
+      "local_path": "research/sources/projects/omnigenbench.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-genbench",
+      "title": "GenBench: A Benchmarking Suite for Systematic Evaluation of Genomic Foundation Models",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2406.01627v2",
+      "version": "arXiv:2406.01627v2",
+      "retrieved": "2026-11-26",
+      "sha256": "d1f30516c666fda95d769320d1d4df01cc14500ea698cb3495f3e9b3c0422c2c",
+      "local_path": "research/sources/projects/genbench.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-gfmbench",
+      "title": "GFMBench-API: A Standardized Interface for Benchmarking Genomic Foundation Models",
+      "kind": "paper",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.02.19.706811v2",
+      "version": "bioRxiv v2, 2026-08-11",
+      "retrieved": "2026-11-26",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": "Paper abstract/metadata and pinned repository documentation inspected. Full-text PDF retrieval was rate-limited; no full-paper audit claimed. Distinct from the earlier GFMBench name used by the OmniGenBench authors."
+    },
+    {
+      "id": "project-paper-bend-original",
+      "title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2311.12570v4",
+      "version": "ICLR 2024; arXiv v4",
+      "retrieved": "2026-11-26",
+      "sha256": "49ad15c6b4d2f0856b75ba48b20a619ffe126e8edb19917fd5365f4509f1d5e1",
+      "local_path": "research/sources/projects/bend-original.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-guanine-original",
+      "title": "GUANinE v1.0: Benchmark Datasets for Genomic AI Sequence-to-Function Models",
+      "kind": "paper",
+      "url": "https://proceedings.mlr.press/v240/robson24a/robson24a.pdf",
+      "version": "PMLR 240, 2024; earlier preprint 2023",
+      "retrieved": "2026-11-26",
+      "sha256": "72db15d3e204d7d36fcfccf4d7015c46bffb37845f64a2f3d4782aa00c0fa041",
+      "local_path": "research/sources/projects/guanine-original.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-dna-foundation",
+      "title": "Benchmarking DNA foundation models for genomic and genetic tasks",
+      "kind": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12663285/",
+      "version": "Nature Communications 16,10780; 2025-11-28",
+      "retrieved": "2026-11-26",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": "Published full text is available at PMC. Selected paper sections were inspected through web retrieval and the pinned analysis README was inspected; a local full-text cache was not obtained. Individual dataset/target and protocol decomposition remains pending."
+    },
+    {
+      "id": "project-paper-nt-original-paper",
+      "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+      "kind": "paper",
+      "url": "https://www.nature.com/articles/s41592-024-02523-z",
+      "version": "Nature Methods 22,287–297; published 2024, volume 2025",
+      "retrieved": "2026-11-26",
+      "sha256": "1bb3877d86bd895b494b1741732201b6f8710119f1565cbe888e2681be682456",
+      "local_path": "research/sources/projects/nt-original-paper.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-dnabert2",
+      "title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2306.15006v2",
+      "version": "arXiv v2, 2024-03-18; original 2023",
+      "retrieved": "2026-11-26",
+      "sha256": "f87609afeda5c59390bef4d14a610e94150f2df87f565b7b1386fba455fa51c1",
+      "local_path": "research/sources/projects/dnabert2.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-lrb",
+      "title": "Advancing DNA Language Models: The Genomics Long-Range Benchmark",
+      "kind": "paper",
+      "url": "https://llms4science-community.github.io/aaai2024/papers/LLMs4Bio24_paper_12.pdf",
+      "version": "AAAI 2024 LLMs4Bio workshop version; subsequent submissions tracked separately",
+      "retrieved": "2026-11-26",
+      "sha256": "afb149e1964ef86166ddbfadde4b32695b6438bbb03463307a268b3e4bf80d22",
+      "local_path": "research/sources/projects/lrb.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-dnalongbench",
+      "title": "DNALongBench: A Benchmark Suite for Long-Range DNA Prediction Tasks",
+      "kind": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11741265/",
+      "version": "bioRxiv v1, 2025-01-08",
+      "retrieved": "2026-11-26",
+      "sha256": "265f5e94bc3f204a8ac0341773e42848c17f96f4b541bc1bae18e507bdfde040",
+      "local_path": "research/sources/projects/dnalongbench.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-metagene1",
+      "title": "METAGENE-1: Metagenomic Foundation Model for Pandemic Monitoring",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2501.02045v1",
+      "version": "arXiv:2501.02045v1; Gene-MTEB section 5.3",
+      "retrieved": "2026-11-26",
+      "sha256": "df0af6b686b81a5a0edba1833ce77ed4f451d661dee49e59e0098c425e970193",
+      "local_path": "research/sources/projects/metagene1.txt",
+      "availability": "available",
+      "notes": "Included as the introducing source for Gene-MTEB (section 5.3), not an expansion of the primary model list."
+    },
+    {
+      "id": "project-paper-dnachunker",
+      "title": "DNACHUNKER: Learnable Tokenization for DNA Language Models",
+      "kind": "paper",
+      "url": "https://proceedings.mlr.press/v306/kim26bn.html",
+      "version": "ICML 2026, PMLR 306:58951–58968; publisher PDF inspected",
+      "retrieved": "2026-11-26",
+      "sha256": "5085946b790e70c10db2fe8ce9e0b94a0e4654dd4b6d2a7cbb8c24b799b40ee9",
+      "local_path": "research/sources/projects/dnachunker.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-patchdna",
+      "title": "PatchDNA: A Flexible and Biologically-Informed Alternative to Tokenization for DNA",
+      "kind": "paper",
+      "url": "https://abdullah-athar.github.io/assets/pdfs/PatchDNA.pdf",
+      "version": "Author-hosted ICLR 2026 submission PDF; inspected version says under review",
+      "retrieved": "2026-11-26",
+      "sha256": "04965bdb3682b8d8ec7487b51abf7d8b1846897fbbc032f755b835eebf745167",
+      "local_path": "research/sources/projects/patchdna.txt",
+      "availability": "available",
+      "notes": "Adoption evidence from the author-hosted submission PDF, Tables 1–3 and section 4.2–4.4. Later ICLR publication metadata does not change which PDF was inspected. Comparator numbers can be quoted from original benchmarks rather than rerun."
+    },
+    {
+      "id": "project-paper-genezip",
+      "title": "GeneZip: Region-Aware Compression for Long Context DNA Modeling",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2602.17739v4",
+      "version": "arXiv:2602.17739v4, 2026-11-09",
+      "retrieved": "2026-11-26",
+      "sha256": "67753bcd8f699217100cc1abd36504a4af66073ad40bce6a88bb697fc34ba41f",
+      "local_path": "research/sources/projects/genezip.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-ribospan",
+      "title": "RIBOSPAN: A Long-Context RNA Foundation Model for Versatile RNA Modeling",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2608.22849v3",
+      "version": "arXiv:2608.22849v3, 2026-11-24",
+      "retrieved": "2026-11-26",
+      "sha256": "984f714be0d2535beba0c1ffee1fd59262714403d0a9313ead94f59eef4cc6ab",
+      "local_path": "research/sources/projects/ribospan.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-mimic",
+      "title": "MIMIC: A Generative Multimodal Foundation Model for Biomolecules",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2604.24506v1",
+      "version": "arXiv:2604.24506v1",
+      "retrieved": "2026-11-26",
+      "sha256": "0b85f82bd439259290fdc067d76d1c3d39a9864a1aa99695273c62de86ae52dd",
+      "local_path": "research/sources/projects/mimic.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-genome-factory",
+      "title": "Genome-Factory: A Library for Tuning, Deploying, and Interpreting Genomic Foundation Models",
+      "kind": "paper",
+      "url": "https://arxiv.org/html/2509.12266v3",
+      "version": "arXiv v3, 2026-11-05; first posted 2025",
+      "retrieved": "2026-11-26",
+      "sha256": "fcf22f34383206ae14af2b6fd69a5c0bd678baa1a6a8529acb3d126f49fa6a73",
+      "local_path": "research/sources/projects/genome-factory.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-paper-protberta",
+      "title": "Optimizing protein tokenization: reduced amino acid alphabets for efficient and accurate protein language models",
+      "kind": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13340227/",
+      "version": "Bioinformatics 42,Supplement_1,btag226",
+      "retrieved": "2026-11-26",
+      "sha256": "70ca7025055decfeaa1ad806551f9d774c9907da32c8df95be161db7caf6e69f",
+      "local_path": "research/sources/projects/protberta.txt",
+      "availability": "available",
+      "notes": "Full text retrieved where cached; only cited sections were reviewed. No numerical results reproduced."
+    },
+    {
+      "id": "project-geneb-published",
+      "title": "GENEB published conference paper",
+      "kind": "paper",
+      "url": "https://proceedings.mlr.press/v306/ledneva26b.html",
+      "version": "ICML 2026, PMLR306:63325–63391",
+      "retrieved": "2026-11-26",
+      "sha256": "e482fce2c200eb357bdaacc04d4a12b621af93cb821a341e07737a7db39e2bf6",
+      "local_path": "research/sources/projects/geneb-published.txt",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-guanine-update",
+      "title": "GUANinE v1.1 published full text",
+      "kind": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13501288/",
+      "version": "Bioinformatics 2026,btag427",
+      "retrieved": "2026-11-26",
+      "sha256": "cd69cf0d5afc4f38c623b98e35fc681349544ee6e7f1cfdbda2eb440362d0f14",
+      "local_path": "research/sources/projects/guanine-update.txt",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-readme-gfm-intent",
+      "title": "NVIDIA/GFMBench-api: README.md",
+      "kind": "repository-file",
+      "url": "https://github.com/NVIDIA/GFMBench-api/blob/55723dcefae91293fe6da01106857ddb1cbf9ab6/README.md",
+      "version": "55723dcefae91293fe6da01106857ddb1cbf9ab6",
+      "retrieved": "2026-11-26",
+      "sha256": "36c782e8a128d02e1d7e812835a5b5654cbb6deb6bea30d1c81b61383092c886",
+      "local_path": "research/sources/projects/NVIDIA--GFMBench-api--README.md",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-readme-dna-foundation-intent",
+      "title": "ChongWuLab/dna_foundation_benchmark: README.md",
+      "kind": "repository-file",
+      "url": "https://github.com/ChongWuLab/dna_foundation_benchmark/blob/3f4c81ce066f3c47422a83466b085aac1a6be902/README.md",
+      "version": "3f4c81ce066f3c47422a83466b085aac1a6be902",
+      "retrieved": "2026-11-26",
+      "sha256": "e678c69a91fd0b709864d2c0b83f33e273b82e389dd07b6f380b76236631fac2",
+      "local_path": "research/sources/projects/ChongWuLab--dna_foundation_benchmark--README.md",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-readme-qc-intent",
+      "title": "genomic-benchmarks/genomic-benchmarks-audit: README.md",
+      "kind": "repository-file",
+      "url": "https://github.com/genomic-benchmarks/genomic-benchmarks-audit/blob/66bf08759c86aad5296f24b2a8206e14b6772d4d/README.md",
+      "version": "66bf08759c86aad5296f24b2a8206e14b6772d4d",
+      "retrieved": "2026-11-26",
+      "sha256": "4a410e3f2bc33207fb712ec233f349a902762784ad4b22cd9146b661dfe05dff",
+      "local_path": "research/sources/projects/genomic-benchmarks--genomic-benchmarks-audit--README.md",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-readme-bacbench-intent",
+      "title": "macwiatrak/BacBench: README.md",
+      "kind": "repository-file",
+      "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/README.md",
+      "version": "64b7d45823b2ff2ef88458e3aa235caa461a12aa",
+      "retrieved": "2026-11-26",
+      "sha256": "c9d28efef5b4cc30adbcc9de224c350100f5aa2a15a025beaf10dcdeb86cd93e",
+      "local_path": "research/sources/projects/macwiatrak--BacBench--README.md",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-readme-loam-use",
+      "title": "Soilytix/gLMBench: README.md",
+      "kind": "repository-file",
+      "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/README.md",
+      "version": "4b1510e843b5b971fc059d8327fb6ac5e2b153d1",
+      "retrieved": "2026-11-26",
+      "sha256": "77f82afc02d25617f815422ff271c8c2ca368a97d8dfcdaa85e1b6a2d4a3adbc",
+      "local_path": "research/sources/projects/Soilytix--gLMBench--README.md",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-readme-gene-mteb-count",
+      "title": "metagene-ai/gene-mteb: README.md",
+      "kind": "repository-file",
+      "url": "https://github.com/metagene-ai/gene-mteb/blob/cdfacab370d8ec49370a78d3ab283f6a27d98cf0/README.md",
+      "version": "cdfacab370d8ec49370a78d3ab283f6a27d98cf0",
+      "retrieved": "2026-11-26",
+      "sha256": "958694f15eeab0a8cab2f51f71f54393658839e8c2295f2828a772e0dc00c5c4",
+      "local_path": "research/sources/projects/metagene-ai--gene-mteb--README.md",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-protberta-section",
+      "title": "ProtBERTa published DGEB evaluation",
+      "kind": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13340227/",
+      "version": "Bioinformatics 2026,btag226",
+      "retrieved": "2026-11-26",
+      "sha256": "70ca7025055decfeaa1ad806551f9d774c9907da32c8df95be161db7caf6e69f",
+      "local_path": "research/sources/projects/protberta.txt",
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-policy",
+      "title": "marin-glm project inclusion policy",
+      "kind": "curatorial",
+      "url": "https://github.com/eric-czech/marin-glm#benchmark-projects",
+      "version": "2026-11-26",
+      "retrieved": "2026-11-26",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "project-bacbench-submission",
+      "title": "BacBench ICLR 2026 submission",
+      "kind": "paper",
+      "url": "https://openreview.net/pdf?id=2wu96xvRIG",
+      "version": "Anonymous ICLR 2026 submission",
+      "retrieved": "2026-11-26",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": "Indexed abstract and task description inspected; direct full-text retrieval blocked by OpenReview. Current repository-to-submission version correspondence remains unresolved."
     }
   ],
   "papers": [
@@ -4743,9 +5095,9 @@
       "publication_date": null,
       "doi": null,
       "source_id": "geneb-paper",
-      "status": "preprint/report",
+      "status": "conference",
       "scope": "benchmark",
-      "notes": "Paper/report version and code/data versions are separate catalogue records."
+      "notes": "ICML 2026 conference version registered separately; existing task evidence remains tied to its inspected arXiv/code versions."
     },
     {
       "id": "lambda",
@@ -4889,6 +5241,215 @@
       "status": "preprint v2",
       "scope": "additional-evaluation-source",
       "notes": "GeneCAD is treated as a downstream PlantCAD2 annotation adaptation, not a separate primary foundation model."
+    },
+    {
+      "id": "omnigenbench",
+      "title": "OmniGenBench: A Modular Platform for Reproducible Genomic Foundation Models Benchmarking",
+      "year": 2025,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2505.14402",
+      "source_id": "project-paper-omnigenbench",
+      "status": "preprint",
+      "scope": "benchmark",
+      "notes": null
+    },
+    {
+      "id": "genbench",
+      "title": "GenBench: A Benchmarking Suite for Systematic Evaluation of Genomic Foundation Models",
+      "year": 2024,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2406.01627",
+      "source_id": "project-paper-genbench",
+      "status": "preprint",
+      "scope": "benchmark",
+      "notes": null
+    },
+    {
+      "id": "gfmbench",
+      "title": "GFMBench-API: A Standardized Interface for Benchmarking Genomic Foundation Models",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.64898/2026.02.19.706811",
+      "source_id": "project-paper-gfmbench",
+      "status": "preprint",
+      "scope": "benchmark",
+      "notes": "Paper abstract/metadata and pinned repository documentation inspected. Full-text PDF retrieval was rate-limited; no full-paper audit claimed. Distinct from the earlier GFMBench name used by the OmniGenBench authors."
+    },
+    {
+      "id": "bend-original",
+      "title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+      "year": 2024,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2311.12570",
+      "source_id": "project-paper-bend-original",
+      "status": "conference",
+      "scope": "benchmark",
+      "notes": null
+    },
+    {
+      "id": "guanine-original",
+      "title": "GUANinE v1.0: Benchmark Datasets for Genomic AI Sequence-to-Function Models",
+      "year": 2024,
+      "publication_date": null,
+      "doi": null,
+      "source_id": "project-paper-guanine-original",
+      "status": "conference",
+      "scope": "benchmark",
+      "notes": null
+    },
+    {
+      "id": "dna-foundation",
+      "title": "Benchmarking DNA foundation models for genomic and genetic tasks",
+      "year": 2025,
+      "publication_date": null,
+      "doi": "10.1038/s41467-025-65823-8",
+      "source_id": "project-paper-dna-foundation",
+      "status": "journal",
+      "scope": "benchmark",
+      "notes": "Published full text is available at PMC. Selected paper sections were inspected through web retrieval and the pinned analysis README was inspected; a local full-text cache was not obtained. Individual dataset/target and protocol decomposition remains pending."
+    },
+    {
+      "id": "nt-original-paper",
+      "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+      "year": 2025,
+      "publication_date": null,
+      "doi": "10.1038/s41592-024-02523-z",
+      "source_id": "project-paper-nt-original-paper",
+      "status": "journal",
+      "scope": "associated-model",
+      "notes": null
+    },
+    {
+      "id": "dnabert2",
+      "title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
+      "year": 2024,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2306.15006",
+      "source_id": "project-paper-dnabert2",
+      "status": "preprint",
+      "scope": "associated-model",
+      "notes": null
+    },
+    {
+      "id": "lrb",
+      "title": "Advancing DNA Language Models: The Genomics Long-Range Benchmark",
+      "year": 2024,
+      "publication_date": null,
+      "doi": null,
+      "source_id": "project-paper-lrb",
+      "status": "conference",
+      "scope": "benchmark",
+      "notes": null
+    },
+    {
+      "id": "dnalongbench",
+      "title": "DNALongBench: A Benchmark Suite for Long-Range DNA Prediction Tasks",
+      "year": 2025,
+      "publication_date": null,
+      "doi": "10.1101/2025.01.06.631595",
+      "source_id": "project-paper-dnalongbench",
+      "status": "preprint",
+      "scope": "benchmark",
+      "notes": null
+    },
+    {
+      "id": "metagene1",
+      "title": "METAGENE-1: Metagenomic Foundation Model for Pandemic Monitoring",
+      "year": 2025,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2501.02045",
+      "source_id": "project-paper-metagene1",
+      "status": "preprint",
+      "scope": "associated-model",
+      "notes": "Included as the introducing source for Gene-MTEB (section 5.3), not an expansion of the primary model list."
+    },
+    {
+      "id": "dnachunker",
+      "title": "DNACHUNKER: Learnable Tokenization for DNA Language Models",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2601.03019",
+      "source_id": "project-paper-dnachunker",
+      "status": "conference",
+      "scope": "adoption-evidence",
+      "notes": null
+    },
+    {
+      "id": "patchdna",
+      "title": "PatchDNA: A Flexible and Biologically-Informed Alternative to Tokenization for DNA",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.1101/2025.11.28.691095",
+      "source_id": "project-paper-patchdna",
+      "status": "preprint",
+      "scope": "adoption-evidence",
+      "notes": "Adoption evidence from the author-hosted submission PDF, Tables 1–3 and section 4.2–4.4. Later ICLR publication metadata does not change which PDF was inspected. Comparator numbers can be quoted from original benchmarks rather than rerun."
+    },
+    {
+      "id": "genezip",
+      "title": "GeneZip: Region-Aware Compression for Long Context DNA Modeling",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2602.17739",
+      "source_id": "project-paper-genezip",
+      "status": "preprint",
+      "scope": "adoption-evidence",
+      "notes": null
+    },
+    {
+      "id": "ribospan",
+      "title": "RIBOSPAN: A Long-Context RNA Foundation Model for Versatile RNA Modeling",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2608.22849",
+      "source_id": "project-paper-ribospan",
+      "status": "preprint",
+      "scope": "adoption-evidence",
+      "notes": null
+    },
+    {
+      "id": "mimic",
+      "title": "MIMIC: A Generative Multimodal Foundation Model for Biomolecules",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2604.24506",
+      "source_id": "project-paper-mimic",
+      "status": "preprint",
+      "scope": "adoption-evidence",
+      "notes": null
+    },
+    {
+      "id": "genome-factory",
+      "title": "Genome-Factory: A Library for Tuning, Deploying, and Interpreting Genomic Foundation Models",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.48550/arXiv.2509.12266",
+      "source_id": "project-paper-genome-factory",
+      "status": "preprint",
+      "scope": "adoption-evidence",
+      "notes": null
+    },
+    {
+      "id": "protberta",
+      "title": "Optimizing protein tokenization: reduced amino acid alphabets for efficient and accurate protein language models",
+      "year": 2026,
+      "publication_date": null,
+      "doi": "10.1093/bioinformatics/btag226",
+      "source_id": "project-paper-protberta",
+      "status": "journal",
+      "scope": "adoption-evidence",
+      "notes": null
+    },
+    {
+      "id": "bacbench-submission",
+      "title": "BacBench: Evaluating Genomic Language Models for Bacteria",
+      "year": 2026,
+      "publication_date": null,
+      "doi": null,
+      "source_id": "project-bacbench-submission",
+      "status": "conference-submission",
+      "scope": "benchmark",
+      "notes": "Related anonymous submission describes 11 datasets and 6 tasks. Pinned repository has five active task families plus deprecated strain clustering and says citation details are forthcoming. No acceptance status or current-release equivalence inferred."
     }
   ],
   "evidence": [
@@ -8977,6 +9538,690 @@
       "basis": "data",
       "statement": "{\"rows\": 35483, \"columns\": [\"sequence\"], \"sequence_samples\": {\"sequence\": [{\"length\": 8192, \"center\": \"CTAGCCA\"}, {\"length\": 8192, \"center\": \"TTAAATA\"}, {\"length\": 8192, \"center\": \"CTGAAAA\"}, {\"length\": 8192, \"center\": \"CTAGACT\"}]}}",
       "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-geneb-publication",
+      "source_id": "project-geneb-published",
+      "locator": "Publisher metadata and benchmark definition",
+      "url": "https://proceedings.mlr.press/v306/ledneva26b.html",
+      "basis": "paper",
+      "statement": "GENEB is a dedicated benchmarking paper published at ICML 2026. Publication and an author-run leaderboard do not establish independent adoption.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-guanine-update",
+      "source_id": "project-guanine-update",
+      "locator": "Introduction; Methods and datasets",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13501288/",
+      "basis": "paper",
+      "statement": "GUANinE v1.1 extends v1.0 with variant interpretation tasks and model comparisons; versions remain distinct.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-bend-intent",
+      "source_id": "project-paper-bend-original",
+      "locator": "Introduction; Tasks and datasets",
+      "url": "https://arxiv.org/html/2311.12570v4#S1",
+      "basis": "paper",
+      "statement": "Seven human-genome tasks and an adaptable embedding/readout framework are the main benchmark contribution.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-lrb-intent",
+      "source_id": "project-paper-lrb",
+      "locator": "PDF pp.1–3; benchmark definition",
+      "url": "https://llms4science-community.github.io/aaai2024/papers/LLMs4Bio24_paper_12.pdf",
+      "basis": "paper",
+      "statement": "Dedicated long-range evaluation resource with task definitions, baselines and context-length experiments.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-dnalong-intent",
+      "source_id": "project-paper-dnalongbench",
+      "locator": "Abstract; Tasks and Datasets",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11741265/",
+      "basis": "paper",
+      "statement": "Dedicated benchmark spanning enhancer–gene links, eQTLs, contact maps, regulatory tracks and initiation profiles.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-omni-intent",
+      "source_id": "project-paper-omnigenbench",
+      "locator": "Abstract; Section 2, framework and benchmark modules",
+      "url": "https://arxiv.org/html/2505.14402v1#S2",
+      "basis": "paper",
+      "statement": "Dedicated benchmarking software integrating existing DNA/RNA suites; integrations do not create independent datasets.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-genbench-intent",
+      "source_id": "project-paper-genbench",
+      "locator": "Introduction; datasets; Codebase Structure",
+      "url": "https://arxiv.org/html/2406.01627v2",
+      "basis": "paper",
+      "statement": "Dedicated benchmarking paper and modular framework. Downstream reuse must be verified separately.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-gfm-intent",
+      "source_id": "project-readme-gfm-intent",
+      "locator": "Lines 1–17",
+      "url": "https://github.com/NVIDIA/GFMBench-api/blob/55723dcefae91293fe6da01106857ddb1cbf9ab6/README.md#L1-L17",
+      "basis": "documentation",
+      "statement": "Dedicated model/task middleware and benchmark implementations; not evidence of external users.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-gene-mteb-intent",
+      "source_id": "project-paper-metagene1",
+      "locator": "Section 5.3; Table 3",
+      "url": "https://arxiv.org/html/2501.02045v1#S5.SS3",
+      "basis": "paper",
+      "statement": "Gene-MTEB is introduced within METAGENE-1 evaluation: eight classification and eight clustering task entries in this paper.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-dna-foundation-intent",
+      "source_id": "project-readme-dna-foundation-intent",
+      "locator": "Lines 2–216",
+      "url": "https://github.com/ChongWuLab/dna_foundation_benchmark/blob/3f4c81ce066f3c47422a83466b085aac1a6be902/README.md#L2-L216",
+      "basis": "documentation",
+      "statement": "Dedicated comparative evaluation of DNA model embeddings; paper, processed datasets and analysis scripts are provided.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-qc-intent",
+      "source_id": "project-readme-qc-intent",
+      "locator": "Lines 15–35",
+      "url": "https://github.com/genomic-benchmarks/genomic-benchmarks-audit/blob/66bf08759c86aad5296f24b2a8206e14b6772d4d/README.md#L15-L35",
+      "basis": "documentation",
+      "statement": "A separate dataset-QC/audit effort. It is not the Grešová et al. 2023 Genomic Benchmarks dataset collection.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-bacbench-intent",
+      "source_id": "project-readme-bacbench-intent",
+      "locator": "Lines 1–50",
+      "url": "https://github.com/macwiatrak/BacBench/blob/64b7d45823b2ff2ef88458e3aa235caa461a12aa/README.md#L1-L50",
+      "basis": "documentation",
+      "statement": "Standalone reusable multi-scale bacterial benchmark; five active tasks and deprecated strain clustering are distinguished.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-loam-use",
+      "source_id": "project-readme-loam-use",
+      "locator": "Lines 38–57",
+      "url": "https://github.com/Soilytix/gLMBench/blob/4b1510e843b5b971fc059d8327fb6ac5e2b153d1/README.md#L38-L57",
+      "basis": "documentation",
+      "statement": "LOAM independently evaluates BacBench essentiality, DGEB DNA EC and prokaryotic RNAGym assays; subset use does not validate full parent suites.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-nt-paper-nt-revised",
+      "source_id": "project-paper-nt-original-paper",
+      "locator": "Downstream tasks and evaluation",
+      "url": "https://www.nature.com/articles/s41592-024-02523-z",
+      "basis": "paper",
+      "statement": "The NT model paper is the associated source; this link does not equate original and revised datasets.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-nt-paper-nt-original",
+      "source_id": "project-paper-nt-original-paper",
+      "locator": "Downstream tasks and evaluation",
+      "url": "https://www.nature.com/articles/s41592-024-02523-z",
+      "basis": "paper",
+      "statement": "The NT model paper is the associated source; this link does not equate original and revised datasets.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-gue-paper",
+      "source_id": "project-paper-dnabert2",
+      "locator": "Introduction; GUE benchmark",
+      "url": "https://arxiv.org/html/2306.15006v2",
+      "basis": "paper",
+      "statement": "GUE is introduced with DNABERT-2; manuscript versions and repository task inventories differ.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-gene-mteb-count",
+      "source_id": "project-readme-gene-mteb-count",
+      "locator": "Lines 9–23",
+      "url": "https://github.com/metagene-ai/gene-mteb/blob/cdfacab370d8ec49370a78d3ab283f6a27d98cf0/README.md#L9-L23",
+      "basis": "documentation",
+      "statement": "README overview and listed task modules have inconsistent clustering counts.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-gb-gb",
+      "source_id": "gb-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://doi.org/10.1186/s12863-023-01123-8",
+      "basis": "curatorial",
+      "statement": "This source is linked to Genomic Benchmarks (2023) as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-dart-dart",
+      "source_id": "dart-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2412.05430v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to DART-Eval as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-traitgym-traitgym",
+      "source_id": "traitgym-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.1101/2025.02.11.637758v2",
+      "basis": "curatorial",
+      "statement": "This source is linked to TraitGym as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-bend-bend-original",
+      "source_id": "project-paper-bend-original",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2311.12570v4",
+      "basis": "curatorial",
+      "statement": "This source is linked to BEND as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-bend-bend",
+      "source_id": "bend-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2611.03806v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to BEND as update. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-lrb-lrb",
+      "source_id": "project-paper-lrb",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://llms4science-community.github.io/aaai2024/papers/LLMs4Bio24_paper_12.pdf",
+      "basis": "curatorial",
+      "statement": "This source is linked to Genomics Long-Range Benchmark as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-dnalongbench-dnalongbench",
+      "source_id": "project-paper-dnalongbench",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11741265/",
+      "basis": "curatorial",
+      "statement": "This source is linked to DNALongBench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-rna-rna",
+      "source_id": "rna-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.1101/2025.06.16.660049v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to RNAGym as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-mrna-mrna",
+      "source_id": "mrna-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+      "basis": "curatorial",
+      "statement": "This source is linked to mRNABench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-dgeb-dgeb",
+      "source_id": "dgeb-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.07.10.602933v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to DGEB as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-chunker-gb",
+      "source_id": "project-paper-dnachunker",
+      "locator": "Section 4.1; Table 3",
+      "url": "https://proceedings.mlr.press/v306/kim26bn.html",
+      "basis": "paper",
+      "statement": "DNAChunker evaluates Genomic Benchmarks; this is external benchmark use, not a claim all comparator models were rerun.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-patch-dart",
+      "source_id": "project-paper-patchdna",
+      "locator": "Section 4.2; Table 1; PDF pp.6–7",
+      "url": "https://abdullah-athar.github.io/assets/pdfs/PatchDNA.pdf",
+      "basis": "paper",
+      "statement": "PatchDNA runs DART tasks, using zero-shot scoring where available and trained probes for other tasks; comparator scores can be inherited.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-carbon-traitgym",
+      "source_id": "carbon-paper",
+      "locator": "Evaluation benchmarks; TraitGym Mendelian; Appendix E",
+      "url": "https://huggingface.co/HuggingFaceBio/Carbon-3B/resolve/main/tech-report.pdf",
+      "basis": "paper",
+      "statement": "Carbon reports TraitGym Mendelian evaluations, separately from its ClinVar and BRCA2 tests. The Carbon author group is external to the TraitGym benchmark authors.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-ceno-traitgym",
+      "source_id": "ceno-paper",
+      "locator": "Title-page author list; variant-effect evaluation; TraitGym context comparison",
+      "url": "https://cladeteam.github.io/ceno.github.io/assets/paper/CENO_Technical_Report_Version.pdf",
+      "basis": "paper",
+      "statement": "Shanghai AI Laboratory and collaborators report CENO TraitGym Mendelian/complex-trait evaluations; this is external to the Song lab TraitGym author group.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-chunker-bend",
+      "source_id": "project-paper-dnachunker",
+      "locator": "Section 4.1; Table 4; PDF p.8",
+      "url": "https://proceedings.mlr.press/v306/kim26bn.html",
+      "basis": "paper",
+      "statement": "DNAChunker reports original BEND results across seven tasks.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-patch-bend",
+      "source_id": "project-paper-patchdna",
+      "locator": "Section 4.3; Table 2; Appendix A.3.3",
+      "url": "https://abdullah-athar.github.io/assets/pdfs/PatchDNA.pdf",
+      "basis": "paper",
+      "statement": "PatchDNA evaluates original BEND using frozen embeddings and fitted probes; copied comparator rows are not new experiments.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-patch-lrb",
+      "source_id": "project-paper-patchdna",
+      "locator": "Section 4.4; Table 3; Appendix A.3.6",
+      "url": "https://abdullah-athar.github.io/assets/pdfs/PatchDNA.pdf",
+      "basis": "paper",
+      "statement": "PatchDNA uses LRB CAGE with 50 tracks and 114,688-bp input; fine-tunes models and reports correlations.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-factory-lrb",
+      "source_id": "project-paper-genome-factory",
+      "locator": "Appendix; Table 8",
+      "url": "https://arxiv.org/html/2509.12266v3",
+      "basis": "paper",
+      "statement": "Genome-Factory reports LoRA evaluations on LRB and GUANinE. Its aggregate MCC is source-specific and not interchangeable with original regression metrics.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-chunker-dnalong",
+      "source_id": "project-paper-dnachunker",
+      "locator": "Section 4.1; Figure 2; Appendix C.4",
+      "url": "https://proceedings.mlr.press/v306/kim26bn.html",
+      "basis": "paper",
+      "statement": "DNAChunker evaluates five DNALongBench task families using frozen-backbone linear probes; published fine-tuning baselines are distinct.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-genezip-dnalong",
+      "source_id": "project-paper-genezip",
+      "locator": "DNALongBench downstream evaluation; Table 3",
+      "url": "https://arxiv.org/html/2602.17739v4#S4.SS3",
+      "basis": "paper",
+      "statement": "GeneZip adapts its model to four DNALongBench tasks: contact map, eQTL, enhancer–target gene and initiation signal.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-ribospan-rna",
+      "source_id": "project-paper-ribospan",
+      "locator": "Section 3.4.1; Appendix D",
+      "url": "https://arxiv.org/html/2608.22849v3#S3.SS4.SSS1",
+      "basis": "paper",
+      "statement": "RiboSpan evaluates RNAGym mutation fitness with assay-specific scoring and aggregation.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-ribospan-mrna",
+      "source_id": "project-paper-ribospan",
+      "locator": "Section 3.4.2; Appendix E",
+      "url": "https://arxiv.org/html/2608.22849v3#S3.SS4.SSS2",
+      "basis": "paper",
+      "statement": "RiboSpan evaluates six mRNABench task families using frozen transcript representations and linear probes.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-mimic-mrna",
+      "source_id": "project-paper-mimic",
+      "locator": "Section 4.2; Appendix D.3; Table S11",
+      "url": "https://arxiv.org/html/2604.24506v1#A4.SS3",
+      "basis": "paper",
+      "statement": "MIMIC trains probes on its own representations for mRNABench. Comparator results are copied from prior work; modality conditioning is selected on validation.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-protberta-dgeb",
+      "source_id": "project-protberta-section",
+      "locator": "Section 3.2.1; Table 2; Figure 2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13340227/",
+      "basis": "paper",
+      "statement": "Rannon and Burstein evaluate their ProtBERTa models on amino-acid DGEB tasks. This establishes external project adoption only, not nucleotide-task performance.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-omnigenbench-omnigenbench",
+      "source_id": "project-paper-omnigenbench",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2505.14402v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to OmniGenBench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-gfmbench-gfmbench",
+      "source_id": "project-paper-gfmbench",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.02.19.706811v2",
+      "basis": "curatorial",
+      "statement": "This source is linked to GFMBench-API as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-genbench-genbench",
+      "source_id": "project-paper-genbench",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2406.01627v2",
+      "basis": "curatorial",
+      "statement": "This source is linked to GenBench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-dna-foundation-dna-foundation",
+      "source_id": "project-paper-dna-foundation",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12663285/",
+      "basis": "curatorial",
+      "statement": "This source is linked to DNA Foundation Benchmark as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-geneb-geneb",
+      "source_id": "geneb-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2606.04525v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to GENEB as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-guanine-guanine-original",
+      "source_id": "project-paper-guanine-original",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://proceedings.mlr.press/v240/robson24a/robson24a.pdf",
+      "basis": "curatorial",
+      "statement": "This source is linked to GUANinE as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-guanine-guanine",
+      "source_id": "guanine-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://academic.oup.com/bioinformatics/article/42/Supplement_2/btag427/8767277",
+      "basis": "curatorial",
+      "statement": "This source is linked to GUANinE as update. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-evo-original-evo",
+      "source_id": "evo-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13128491/",
+      "basis": "curatorial",
+      "statement": "This source is linked to Evo 2 original-paper evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-loam-evals-loam",
+      "source_id": "loam-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://doi.org/10.64898/2026.09.28.755120",
+      "basis": "curatorial",
+      "statement": "This source is linked to LOAM / gLMBench evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-bgc-bgc",
+      "source_id": "bgc-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2611.02275v2",
+      "basis": "curatorial",
+      "statement": "This source is linked to BGC-Bench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-bgcs-bgcs",
+      "source_id": "bgcs-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.05.12.724296v1.full",
+      "basis": "curatorial",
+      "statement": "This source is linked to BGCs-Bench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-nt-revised-nt-original-paper",
+      "source_id": "project-paper-nt-original-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.nature.com/articles/s41592-024-02523-z",
+      "basis": "curatorial",
+      "statement": "This source is linked to Nucleotide Transformer revised benchmark as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-nt-original-nt-original-paper",
+      "source_id": "project-paper-nt-original-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.nature.com/articles/s41592-024-02523-z",
+      "basis": "curatorial",
+      "statement": "This source is linked to Nucleotide Transformer benchmark as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-gue-dnabert2",
+      "source_id": "project-paper-dnabert2",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2306.15006v2",
+      "basis": "curatorial",
+      "statement": "This source is linked to GUE as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-nabench-na",
+      "source_id": "na-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2511.02888v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to NABench as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-pgb-pgb",
+      "source_id": "pgb-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://doi.org/10.1038/s42003-024-06465-2",
+      "basis": "curatorial",
+      "statement": "This source is linked to Plant Genomic Benchmark as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-lambda-lambda",
+      "source_id": "lambda-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://academic.oup.com/nargab/article/8/3/lqag103/8787816",
+      "basis": "curatorial",
+      "statement": "This source is linked to LAMBDA as introducing. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-generator-evals-generator",
+      "source_id": "generator-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2502.07272v5",
+      "basis": "curatorial",
+      "statement": "This source is linked to GENERator evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-generator2-evals-generator2",
+      "source_id": "generator2-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.01.27.702015v2.full",
+      "basis": "curatorial",
+      "statement": "This source is linked to GENERator-v2 evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-carbon-evals-carbon",
+      "source_id": "carbon-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://huggingface.co/HuggingFaceBio/Carbon-3B/resolve/main/tech-report.pdf",
+      "basis": "curatorial",
+      "statement": "This source is linked to Carbon evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-ceno-evals-ceno",
+      "source_id": "ceno-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://cladeteam.github.io/ceno.github.io/assets/paper/CENO_Technical_Report_Version.pdf",
+      "basis": "curatorial",
+      "statement": "This source is linked to CENO evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-botanic1-evals-botanic",
+      "source_id": "botanic-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://huggingface.co/spaces/living-models/botanic1-report/resolve/main/botanic1-report-v3.pdf",
+      "basis": "curatorial",
+      "statement": "This source is linked to BOTANIC-1 evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-ntv3-evals-ntv3",
+      "source_id": "ntv3-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13733737/",
+      "basis": "curatorial",
+      "statement": "This source is linked to NTv3 evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-deepd-evals-deepd",
+      "source_id": "deepd-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758170v1.full",
+      "basis": "curatorial",
+      "statement": "This source is linked to DeepD evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-carbonx-evals-carbonx",
+      "source_id": "carbonx-card",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://huggingface.co/HuggingFaceBio/Carbon-X/blob/17de89165e25c49e7de4f845d0e5d464469de359/README.md",
+      "basis": "curatorial",
+      "statement": "This source is linked to Carbon-X evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-gpn-evals-gpn",
+      "source_id": "gpn-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.nature.com/articles/s41586-026-11005-5",
+      "basis": "curatorial",
+      "statement": "This source is linked to GPN-Star evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-proteingym-proteingym",
+      "source_id": "proteingym-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10723403/",
+      "basis": "curatorial",
+      "statement": "This source is linked to ProteinGym as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-aido2-evals-aido2",
+      "source_id": "aido2-report",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://genbio.ai/aido-dna2-multi-species-genomic-pretraining-model/",
+      "basis": "curatorial",
+      "statement": "This source is linked to AIDO.DNA2 evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-genosm-evals-genosm",
+      "source_id": "genosm-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.05.21.726868v1.full",
+      "basis": "curatorial",
+      "statement": "This source is linked to Genos-m evaluations as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-plantcad2-zero-plantcad2",
+      "source_id": "plantcad2-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13576720/",
+      "basis": "curatorial",
+      "statement": "This source is linked to PlantCAD2 zero-shot tasks as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-plantcad2-ft-plantcad2",
+      "source_id": "plantcad2-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13576720/",
+      "basis": "curatorial",
+      "statement": "This source is linked to PlantCAD2 supervised tasks as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-genecad-genecad",
+      "source_id": "genecad-paper",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12637538/",
+      "basis": "curatorial",
+      "statement": "This source is linked to GeneCAD genome annotation as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-paper-link-collection-gene-mteb-metagene1",
+      "source_id": "project-paper-metagene1",
+      "locator": "Paper identity and catalogue relationship",
+      "url": "https://arxiv.org/html/2501.02045v1",
+      "basis": "curatorial",
+      "statement": "This source is linked to Gene-MTEB as associated model. The relationship is curatorial; it does not equate paper, code or dataset versions.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-policy",
+      "source_id": "project-policy",
+      "locator": "Benchmark projects: inclusion and adoption criteria",
+      "url": "https://github.com/eric-czech/marin-glm#benchmark-projects",
+      "basis": "curatorial",
+      "statement": "A project must primarily develop a substantial, reusable, standardized evaluation framework or benchmark suite for nucleotide/genomic models. Require documented evaluation or software use by at least two distinct external research groups. Citations, surveys, stars, downloads, model adapters, and author-run leaderboards alone do not establish adoption. Shared benchmark authorship does not count as independent adoption. Qualification is not a quality endorsement; adoption is specific to the release and subset actually used.",
+      "inspected": "2026-11-26"
+    },
+    {
+      "id": "project-bacbench-paper",
+      "source_id": "project-bacbench-submission",
+      "locator": "Indexed abstract; benchmark definition",
+      "url": "https://openreview.net/pdf?id=2wu96xvRIG",
+      "basis": "paper",
+      "statement": "Related BacBench submission describes a dedicated bacterial benchmark; correspondence to the current release and later publication is not established.",
+      "inspected": "2026-11-26"
     }
   ],
   "models": [
@@ -10712,7 +11957,7 @@
       "id": "nt-revised",
       "name": "Nucleotide Transformer revised benchmark",
       "description": "18 human sequence-classification targets; chromosome-held-out test cohorts. Keep separate from original NT.",
-      "paper_id": null,
+      "paper_id": "nt-original-paper",
       "source_id": null,
       "status": "partial",
       "scope_note": "Task records describe the inspected version; protocol variants are linked separately.",
@@ -10723,7 +11968,7 @@
       "id": "nt-original",
       "name": "Nucleotide Transformer original benchmark",
       "description": "Original NT target collection. Do not transfer revised-release species, negative construction or chromosome splits to this version.",
-      "paper_id": null,
+      "paper_id": "nt-original-paper",
       "source_id": null,
       "status": "partial",
       "scope_note": "Task records describe the inspected version; protocol variants are linked separately.",
@@ -10734,7 +11979,7 @@
       "id": "gue",
       "name": "GUE regulatory tasks",
       "description": "Source suite for the released DeepD H3 example; complete suite expansion pending.",
-      "paper_id": null,
+      "paper_id": "dnabert2",
       "source_id": null,
       "status": "partial",
       "scope_note": "Task records describe the inspected version; protocol variants are linked separately.",
@@ -11092,6 +12337,72 @@
       "scope_note": "Task records describe the inspected version; protocol variants are linked separately.",
       "evidence_id": "genecad-release-overview-ev",
       "notes": "GeneCAD is not counted as a separate primary foundation model. Keep frozen 2025 versus unfrozen 2026 backbones, species cohorts, decoding, optional protein filtering and scoring definitions separate."
+    },
+    {
+      "id": "bend-original",
+      "name": "BEND (original)",
+      "description": "Original seven-task human-genome benchmark; separate from BEND 2.0.",
+      "paper_id": "bend-original",
+      "source_id": "project-paper-bend-original",
+      "status": "registered",
+      "scope_note": "Paper/source registered in the project review. Individual dataset × target decomposition, released-data mapping and protocol verification remain pending. Published task counts are not imported as audited task records.",
+      "evidence_id": "project-bend-intent",
+      "notes": null
+    },
+    {
+      "id": "lrb",
+      "name": "Genomics Long-Range Benchmark (LRB)",
+      "description": "Configurable-context human regulatory and variant benchmarks.",
+      "paper_id": "lrb",
+      "source_id": "project-paper-lrb",
+      "status": "registered",
+      "scope_note": "Paper/source registered in the project review. Individual dataset × target decomposition, released-data mapping and protocol verification remain pending. Published task counts are not imported as audited task records.",
+      "evidence_id": "project-lrb-intent",
+      "notes": null
+    },
+    {
+      "id": "dnalongbench",
+      "name": "DNALongBench",
+      "description": "Long-input prediction of gene regulation, eQTLs and chromatin contacts.",
+      "paper_id": "dnalongbench",
+      "source_id": "project-paper-dnalongbench",
+      "status": "registered",
+      "scope_note": "Paper/source registered in the project review. Individual dataset × target decomposition, released-data mapping and protocol verification remain pending. Published task counts are not imported as audited task records.",
+      "evidence_id": "project-dnalong-intent",
+      "notes": null
+    },
+    {
+      "id": "genbench",
+      "name": "GenBench",
+      "description": "Short- and long-input genomic prediction collection.",
+      "paper_id": "genbench",
+      "source_id": "project-paper-genbench",
+      "status": "registered",
+      "scope_note": "Paper/source registered in the project review. Individual dataset × target decomposition, released-data mapping and protocol verification remain pending. Published task counts are not imported as audited task records.",
+      "evidence_id": "project-genbench-intent",
+      "notes": null
+    },
+    {
+      "id": "dna-foundation",
+      "name": "DNA Foundation Benchmark",
+      "description": "Sequence classification, personal expression, variant effects and TAD analysis.",
+      "paper_id": "dna-foundation",
+      "source_id": "project-paper-dna-foundation",
+      "status": "registered",
+      "scope_note": "Paper/source registered in the project review. Individual dataset × target decomposition, released-data mapping and protocol verification remain pending. Published task counts are not imported as audited task records.",
+      "evidence_id": "project-dna-foundation-intent",
+      "notes": null
+    },
+    {
+      "id": "gene-mteb",
+      "name": "Gene-MTEB",
+      "description": "Metagenomic sequence embedding classification and clustering.",
+      "paper_id": "metagene1",
+      "source_id": "project-paper-metagene1",
+      "status": "registered",
+      "scope_note": "Paper/source registered in the project review. Individual dataset × target decomposition, released-data mapping and protocol verification remain pending. Published task counts are not imported as audited task records.",
+      "evidence_id": "project-gene-mteb-intent",
+      "notes": null
     }
   ],
   "tasks": [
@@ -76033,6 +77344,1620 @@
       "severity": "limitation",
       "description": "Inspected translation train and validation files both contain Arabidopsis chromosomes 1–5. This is not chromosome-held-out validation. The exact gene-selection rule remains unresolved; test contains maize chromosomes 1–10.",
       "evidence_id": "plantcad2-artifact-4-ev"
+    },
+    {
+      "id": "finding-045",
+      "task_id": null,
+      "evaluation_id": "gue",
+      "severity": "version-difference",
+      "description": "GUE is version-dependent: the supplied list describes an original 28-dataset/7-category suite, whereas DNABERT-2 arXiv v2 describes 36 datasets across 9 tasks. Existing selective GUE records are retained; neither headline count is treated as complete artifact-audited coverage.",
+      "evidence_id": "project-gue-paper"
+    },
+    {
+      "id": "finding-046",
+      "task_id": null,
+      "evaluation_id": "gene-mteb",
+      "severity": "discrepancy",
+      "description": "Gene-MTEB README says four clustering tasks in its overview but lists four human-virus and four HMP clustering entries; METAGENE-1 section 5.3 describes eight. Reconcile implementation and actual datasets before task expansion.",
+      "evidence_id": "project-gene-mteb-count"
+    }
+  ],
+  "project_reviews": [
+    {
+      "id": "gb",
+      "name": "Genomic Benchmarks (2023)",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "gb-definition"
+    },
+    {
+      "id": "dart",
+      "name": "DART-Eval",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "dart-definition"
+    },
+    {
+      "id": "traitgym",
+      "name": "TraitGym",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "traitgym-definition"
+    },
+    {
+      "id": "bend",
+      "name": "BEND",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "project-bend-intent"
+    },
+    {
+      "id": "lrb",
+      "name": "Genomics Long-Range Benchmark",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "project-lrb-intent"
+    },
+    {
+      "id": "dnalongbench",
+      "name": "DNALongBench",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "project-dnalong-intent"
+    },
+    {
+      "id": "rna",
+      "name": "RNAGym",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "rnagym-definition"
+    },
+    {
+      "id": "mrna",
+      "name": "mRNABench",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "mrna-catalog"
+    },
+    {
+      "id": "dgeb",
+      "name": "DGEB",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "dgeb-definition"
+    },
+    {
+      "id": "bacbench",
+      "name": "BacBench",
+      "decision": "qualified",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark effort with at least two documented independent adopter groups; evidence and used subsets are listed separately.",
+      "evidence_id": "project-bacbench-intent"
+    },
+    {
+      "id": "qc",
+      "name": "Genomic Benchmarks QC / audit",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated QC/audit ecosystem, distinct from the 2023 dataset collection. No qualifying pair of independent evaluation/software users established; manuscript is in preparation, not a published paper.",
+      "evidence_id": "project-qc-intent"
+    },
+    {
+      "id": "omnigenbench",
+      "name": "OmniGenBench",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Substantial dedicated software/paper; two independently verified external adopter groups were not established in this review. Model integrations and author-run demonstrations do not meet the threshold.",
+      "evidence_id": "project-omni-intent"
+    },
+    {
+      "id": "gfmbench",
+      "name": "GFMBench-API",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated middleware and released tasks. Two external adopter groups were not established. NVIDIA JEPA-DNA use is same-organization evidence, not automatically independent.",
+      "evidence_id": "project-gfm-intent"
+    },
+    {
+      "id": "genbench",
+      "name": "GenBench",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark paper; citations in reviews and reuse of comparator numbers do not establish two independent users of its released task/protocol collection.",
+      "evidence_id": "project-genbench-intent"
+    },
+    {
+      "id": "dna-foundation",
+      "name": "DNA Foundation Benchmark",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated comparative study with released data/code. Two independent external users of this particular processed release/protocol were not established.",
+      "evidence_id": "project-dna-foundation-intent"
+    },
+    {
+      "id": "geneb",
+      "name": "GENEB",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated published benchmark and public submission harness. No two independently verified external adopter groups established; benchmarking other groups’ models is not their adoption of GENEB.",
+      "evidence_id": "geneb-spec"
+    },
+    {
+      "id": "guanine",
+      "name": "GUANinE",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark, but only one external evaluation group established here (Genome-Factory). v1.0 use does not establish v1.1 adoption.",
+      "evidence_id": "project-guanine-update"
+    },
+    {
+      "id": "collection-evo-original",
+      "name": "Evo 2 original-paper evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "evo-a3"
+    },
+    {
+      "id": "collection-loam-evals",
+      "name": "LOAM / gLMBench evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "loam-essential"
+    },
+    {
+      "id": "collection-bgc",
+      "name": "BGC-Bench",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark paper; very recent release. Two independent adopter groups were not established. Keep its multimodal task records without a project entry.",
+      "evidence_id": "bgc-card"
+    },
+    {
+      "id": "collection-bgcs",
+      "name": "BGCs-Bench",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmarking effort; two independent adopter groups were not established. Distinct from BGC-Bench.",
+      "evidence_id": "bgcs-definition"
+    },
+    {
+      "id": "collection-nt-revised",
+      "name": "Nucleotide Transformer revised benchmark",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Revised release of a model-associated benchmark; retained separately from original NT without creating a dedicated project.",
+      "evidence_id": "nt-revised-card"
+    },
+    {
+      "id": "collection-nt-original",
+      "name": "Nucleotide Transformer benchmark",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Model-associated benchmark introduced with NT. Independent reuse does not change the model-centered origin; retained as versioned collections.",
+      "evidence_id": "nt-original-definition"
+    },
+    {
+      "id": "collection-gue",
+      "name": "GUE",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Model-associated benchmark introduced with DNABERT-2. Widely reused, but not a primarily dedicated benchmark project under this catalogue’s definition.",
+      "evidence_id": "gue-registration"
+    },
+    {
+      "id": "collection-nabench",
+      "name": "NABench",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated benchmark with paper and released manifest, but two independent adopter groups were not established. Existing registered assays remain in scope.",
+      "evidence_id": "nabench-manifest"
+    },
+    {
+      "id": "collection-pgb",
+      "name": "Plant Genomic Benchmark",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Introduced in the AgroNT model paper. Useful multi-species collection, but a model-associated benchmark rather than a dedicated project.",
+      "evidence_id": "pgb-card"
+    },
+    {
+      "id": "collection-lambda",
+      "name": "LAMBDA",
+      "decision": "adoption-not-established",
+      "dedicated": 1,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated prophage-detection benchmark; two independent adopter groups were not established. Task/source registration remains in scope.",
+      "evidence_id": "lambda-registration"
+    },
+    {
+      "id": "collection-generator-evals",
+      "name": "GENERator evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "generator-eval-methods"
+    },
+    {
+      "id": "collection-generator2-evals",
+      "name": "GENERator-v2 evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "generator2-eval-methods"
+    },
+    {
+      "id": "collection-gener-tasks",
+      "name": "GenerTasks",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "gener-tasks-card"
+    },
+    {
+      "id": "collection-deepstarr",
+      "name": "DeepSTARR",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "deepstarr-card"
+    },
+    {
+      "id": "collection-carbon-evals",
+      "name": "Carbon evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "carbon-eval-methods"
+    },
+    {
+      "id": "collection-ceno-evals",
+      "name": "CENO evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "ceno-eval-methods"
+    },
+    {
+      "id": "collection-botanic1-evals",
+      "name": "BOTANIC-1 evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "botanic1-eval-methods"
+    },
+    {
+      "id": "collection-ntv3-evals",
+      "name": "NTv3 evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "ntv3-eval-methods"
+    },
+    {
+      "id": "collection-deepd-evals",
+      "name": "DeepD evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "deepd-eval-methods"
+    },
+    {
+      "id": "collection-carbonx-evals",
+      "name": "Carbon-X evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "carbonx-evals"
+    },
+    {
+      "id": "collection-gpn-evals",
+      "name": "GPN-Star evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "gpn-benchmarks"
+    },
+    {
+      "id": "collection-compass",
+      "name": "COMPASS splicing assays",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "bend-paper-extras"
+    },
+    {
+      "id": "collection-trip",
+      "name": "TRIP editing-efficiency assays",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "bend-paper-extras"
+    },
+    {
+      "id": "collection-mage",
+      "name": "MAGE personal-sequence expression",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "bend-paper-extras"
+    },
+    {
+      "id": "collection-proteingym",
+      "name": "ProteinGym",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Dedicated and adopted protein benchmark, but its project is outside the nucleotide/genomic framework scope. Selected gLM-compatible assays remain linked.",
+      "evidence_id": "proteingym-parent"
+    },
+    {
+      "id": "collection-seiplant",
+      "name": "SeiPlant",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "id": "collection-deepfarm",
+      "name": "DeepFARM",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "id": "collection-daniodecima",
+      "name": "DanioDecima",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "id": "collection-re2g",
+      "name": "ENCODE-rE2G",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "id": "collection-aido2-evals",
+      "name": "AIDO.DNA2 evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "aido2-architecture"
+    },
+    {
+      "id": "collection-genosm-evals",
+      "name": "Genos-m evaluations",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "genosm-supervised"
+    },
+    {
+      "id": "collection-plantcad2-zero",
+      "name": "PlantCAD2 zero-shot tasks",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "plantcad2-zero-card-ev"
+    },
+    {
+      "id": "collection-plantcad2-ft",
+      "name": "PlantCAD2 supervised tasks",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "plantcad2-ft-card-ev"
+    },
+    {
+      "id": "collection-genecad",
+      "name": "GeneCAD genome annotation",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "A model-associated evaluation collection, experimental assay resource, or task-specific method; not a primarily dedicated standardized gLM evaluation framework. Retained as an evaluation source.",
+      "evidence_id": "genecad-release-overview-ev"
+    },
+    {
+      "id": "collection-gene-mteb",
+      "name": "Gene-MTEB",
+      "decision": "outside-definition",
+      "dedicated": 0,
+      "reviewed": "2026-11-26",
+      "search_scope": "Supplied candidate list and all previously registered collections; primary papers, pinned repositories and targeted searches for external evaluation/software use. This is a dated, non-exhaustive adoption review, not a citation-count survey.",
+      "rationale": "Gene-MTEB is introduced within METAGENE-1 section 5.3. Its software and tasks remain sources; it does not meet the primarily dedicated project requirement.",
+      "evidence_id": "project-gene-mteb-intent"
+    }
+  ],
+  "projects": [
+    {
+      "id": "gb",
+      "name": "Genomic Benchmarks (2023)",
+      "review_id": "gb",
+      "description": "Dedicated sequence-classification dataset package and reusable evaluation resource.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "gb-definition"
+    },
+    {
+      "id": "dart",
+      "name": "DART-Eval",
+      "review_id": "dart",
+      "description": "Dedicated regulatory DNA benchmark with zero-shot, probed and fine-tuned comparisons.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "dart-definition"
+    },
+    {
+      "id": "traitgym",
+      "name": "TraitGym",
+      "review_id": "traitgym",
+      "description": "Dedicated benchmark of causal regulatory variant prioritization.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "traitgym-definition"
+    },
+    {
+      "id": "bend",
+      "name": "BEND",
+      "review_id": "bend",
+      "description": "Dedicated human genomic benchmark with original BEND and separately versioned BEND 2.0.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-bend-intent"
+    },
+    {
+      "id": "lrb",
+      "name": "Genomics Long-Range Benchmark",
+      "review_id": "lrb",
+      "description": "Dedicated benchmark with configurable sequence context and human regulatory/variant targets.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-lrb-intent"
+    },
+    {
+      "id": "dnalongbench",
+      "name": "DNALongBench",
+      "review_id": "dnalongbench",
+      "description": "Dedicated long-range genomic prediction benchmark.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-dnalong-intent"
+    },
+    {
+      "id": "rna",
+      "name": "RNAGym",
+      "review_id": "rna",
+      "description": "Dedicated RNA fitness and structure benchmark used by nucleotide models.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "rnagym-definition"
+    },
+    {
+      "id": "mrna",
+      "name": "mRNABench",
+      "review_id": "mrna",
+      "description": "Dedicated mature-mRNA representation benchmark with common probing procedures.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "mrna-catalog"
+    },
+    {
+      "id": "dgeb",
+      "name": "DGEB",
+      "review_id": "dgeb",
+      "description": "Dedicated functional/evolutionary embedding evaluation across nucleic-acid and protein modalities.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "dgeb-definition"
+    },
+    {
+      "id": "bacbench",
+      "name": "BacBench",
+      "review_id": "bacbench",
+      "description": "Dedicated multi-scale bacterial benchmark, released separately from the later BacLM addition.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-bacbench-intent"
+    }
+  ],
+  "project_review_papers": [
+    {
+      "review_id": "gb",
+      "paper_id": "gb",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-gb-gb"
+    },
+    {
+      "review_id": "dart",
+      "paper_id": "dart",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-dart-dart"
+    },
+    {
+      "review_id": "traitgym",
+      "paper_id": "traitgym",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-traitgym-traitgym"
+    },
+    {
+      "review_id": "bend",
+      "paper_id": "bend-original",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-bend-bend-original"
+    },
+    {
+      "review_id": "bend",
+      "paper_id": "bend",
+      "relation": "update",
+      "evidence_id": "project-paper-link-bend-bend"
+    },
+    {
+      "review_id": "lrb",
+      "paper_id": "lrb",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-lrb-lrb"
+    },
+    {
+      "review_id": "dnalongbench",
+      "paper_id": "dnalongbench",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-dnalongbench-dnalongbench"
+    },
+    {
+      "review_id": "rna",
+      "paper_id": "rna",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-rna-rna"
+    },
+    {
+      "review_id": "mrna",
+      "paper_id": "mrna",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-mrna-mrna"
+    },
+    {
+      "review_id": "dgeb",
+      "paper_id": "dgeb",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-dgeb-dgeb"
+    },
+    {
+      "review_id": "gb",
+      "paper_id": "dnachunker",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-chunker-gb"
+    },
+    {
+      "review_id": "gb",
+      "paper_id": "generator",
+      "relation": "adoption-evidence",
+      "evidence_id": "generator-eval-methods"
+    },
+    {
+      "review_id": "dart",
+      "paper_id": "patchdna",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-patch-dart"
+    },
+    {
+      "review_id": "dart",
+      "paper_id": "evo",
+      "relation": "adoption-evidence",
+      "evidence_id": "evo-a3"
+    },
+    {
+      "review_id": "traitgym",
+      "paper_id": "carbon",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-carbon-traitgym"
+    },
+    {
+      "review_id": "traitgym",
+      "paper_id": "ceno",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-ceno-traitgym"
+    },
+    {
+      "review_id": "traitgym",
+      "paper_id": "gpn",
+      "relation": "adoption-evidence",
+      "evidence_id": "gpn-benchmarks"
+    },
+    {
+      "review_id": "bend",
+      "paper_id": "dnachunker",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-chunker-bend"
+    },
+    {
+      "review_id": "bend",
+      "paper_id": "patchdna",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-patch-bend"
+    },
+    {
+      "review_id": "lrb",
+      "paper_id": "patchdna",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-patch-lrb"
+    },
+    {
+      "review_id": "lrb",
+      "paper_id": "genome-factory",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-factory-lrb"
+    },
+    {
+      "review_id": "dnalongbench",
+      "paper_id": "dnachunker",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-chunker-dnalong"
+    },
+    {
+      "review_id": "dnalongbench",
+      "paper_id": "genezip",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-genezip-dnalong"
+    },
+    {
+      "review_id": "rna",
+      "paper_id": "ribospan",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-ribospan-rna"
+    },
+    {
+      "review_id": "rna",
+      "paper_id": "genosm",
+      "relation": "adoption-evidence",
+      "evidence_id": "genosm-doc-rna"
+    },
+    {
+      "review_id": "mrna",
+      "paper_id": "ribospan",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-ribospan-mrna"
+    },
+    {
+      "review_id": "mrna",
+      "paper_id": "mimic",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-mimic-mrna"
+    },
+    {
+      "review_id": "dgeb",
+      "paper_id": "loam",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-loam-use"
+    },
+    {
+      "review_id": "dgeb",
+      "paper_id": "protberta",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-protberta-dgeb"
+    },
+    {
+      "review_id": "bacbench",
+      "paper_id": "loam",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-loam-use"
+    },
+    {
+      "review_id": "bacbench",
+      "paper_id": "genosm",
+      "relation": "adoption-evidence",
+      "evidence_id": "genosm-doc-essential"
+    },
+    {
+      "review_id": "omnigenbench",
+      "paper_id": "omnigenbench",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-omnigenbench-omnigenbench"
+    },
+    {
+      "review_id": "gfmbench",
+      "paper_id": "gfmbench",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-gfmbench-gfmbench"
+    },
+    {
+      "review_id": "genbench",
+      "paper_id": "genbench",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-genbench-genbench"
+    },
+    {
+      "review_id": "dna-foundation",
+      "paper_id": "dna-foundation",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-dna-foundation-dna-foundation"
+    },
+    {
+      "review_id": "geneb",
+      "paper_id": "geneb",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-geneb-geneb"
+    },
+    {
+      "review_id": "guanine",
+      "paper_id": "guanine-original",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-guanine-guanine-original"
+    },
+    {
+      "review_id": "guanine",
+      "paper_id": "guanine",
+      "relation": "update",
+      "evidence_id": "project-paper-link-guanine-guanine"
+    },
+    {
+      "review_id": "guanine",
+      "paper_id": "genome-factory",
+      "relation": "adoption-evidence",
+      "evidence_id": "project-factory-lrb"
+    },
+    {
+      "review_id": "collection-evo-original",
+      "paper_id": "evo",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-evo-original-evo"
+    },
+    {
+      "review_id": "collection-loam-evals",
+      "paper_id": "loam",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-loam-evals-loam"
+    },
+    {
+      "review_id": "collection-bgc",
+      "paper_id": "bgc",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-collection-bgc-bgc"
+    },
+    {
+      "review_id": "collection-bgcs",
+      "paper_id": "bgcs",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-collection-bgcs-bgcs"
+    },
+    {
+      "review_id": "collection-nt-revised",
+      "paper_id": "nt-original-paper",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-nt-revised-nt-original-paper"
+    },
+    {
+      "review_id": "collection-nt-original",
+      "paper_id": "nt-original-paper",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-nt-original-nt-original-paper"
+    },
+    {
+      "review_id": "collection-gue",
+      "paper_id": "dnabert2",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-gue-dnabert2"
+    },
+    {
+      "review_id": "collection-nabench",
+      "paper_id": "na",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-collection-nabench-na"
+    },
+    {
+      "review_id": "collection-pgb",
+      "paper_id": "pgb",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-pgb-pgb"
+    },
+    {
+      "review_id": "collection-lambda",
+      "paper_id": "lambda",
+      "relation": "introducing",
+      "evidence_id": "project-paper-link-collection-lambda-lambda"
+    },
+    {
+      "review_id": "collection-generator-evals",
+      "paper_id": "generator",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-generator-evals-generator"
+    },
+    {
+      "review_id": "collection-generator2-evals",
+      "paper_id": "generator2",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-generator2-evals-generator2"
+    },
+    {
+      "review_id": "collection-carbon-evals",
+      "paper_id": "carbon",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-carbon-evals-carbon"
+    },
+    {
+      "review_id": "collection-ceno-evals",
+      "paper_id": "ceno",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-ceno-evals-ceno"
+    },
+    {
+      "review_id": "collection-botanic1-evals",
+      "paper_id": "botanic",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-botanic1-evals-botanic"
+    },
+    {
+      "review_id": "collection-ntv3-evals",
+      "paper_id": "ntv3",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-ntv3-evals-ntv3"
+    },
+    {
+      "review_id": "collection-deepd-evals",
+      "paper_id": "deepd",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-deepd-evals-deepd"
+    },
+    {
+      "review_id": "collection-carbonx-evals",
+      "paper_id": "carbonx",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-carbonx-evals-carbonx"
+    },
+    {
+      "review_id": "collection-gpn-evals",
+      "paper_id": "gpn",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-gpn-evals-gpn"
+    },
+    {
+      "review_id": "collection-proteingym",
+      "paper_id": "proteingym",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-proteingym-proteingym"
+    },
+    {
+      "review_id": "collection-aido2-evals",
+      "paper_id": "aido2",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-aido2-evals-aido2"
+    },
+    {
+      "review_id": "collection-genosm-evals",
+      "paper_id": "genosm",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-genosm-evals-genosm"
+    },
+    {
+      "review_id": "collection-plantcad2-zero",
+      "paper_id": "plantcad2",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-plantcad2-zero-plantcad2"
+    },
+    {
+      "review_id": "collection-plantcad2-ft",
+      "paper_id": "plantcad2",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-plantcad2-ft-plantcad2"
+    },
+    {
+      "review_id": "collection-genecad",
+      "paper_id": "genecad",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-genecad-genecad"
+    },
+    {
+      "review_id": "collection-gene-mteb",
+      "paper_id": "metagene1",
+      "relation": "associated-model",
+      "evidence_id": "project-paper-link-collection-gene-mteb-metagene1"
+    },
+    {
+      "review_id": "bacbench",
+      "paper_id": "bacbench-submission",
+      "relation": "related-report",
+      "evidence_id": "project-bacbench-paper"
+    }
+  ],
+  "project_review_evaluations": [
+    {
+      "review_id": "gb",
+      "evaluation_id": "gb",
+      "relation": "defines",
+      "note": "The Grešová et al. dataset collection. Shared naming with the later QC/audit ecosystem does not establish release or project identity.",
+      "evidence_id": "gb-definition"
+    },
+    {
+      "review_id": "dart",
+      "evaluation_id": "dart",
+      "relation": "defines",
+      "note": "Task numbers contain distinct targets and adaptation procedures.",
+      "evidence_id": "dart-definition"
+    },
+    {
+      "review_id": "traitgym",
+      "evaluation_id": "traitgym",
+      "relation": "defines",
+      "note": "Control matching and human variant cohorts remain task/protocol specific.",
+      "evidence_id": "traitgym-definition"
+    },
+    {
+      "review_id": "bend",
+      "evaluation_id": "bend-original",
+      "relation": "defines",
+      "note": "Independent adoption evidence below concerns original BEND.",
+      "evidence_id": "project-bend-intent"
+    },
+    {
+      "review_id": "bend",
+      "evaluation_id": "bend",
+      "relation": "successor-release",
+      "note": "BEND 2.0 is a successor. Original BEND adoption is not evidence of independent BEND 2.0 adoption.",
+      "evidence_id": "bend-tasks"
+    },
+    {
+      "review_id": "lrb",
+      "evaluation_id": "lrb",
+      "relation": "defines",
+      "note": "2024 paper version and current dataset release require task-level reconciliation.",
+      "evidence_id": "project-lrb-intent"
+    },
+    {
+      "review_id": "dnalongbench",
+      "evaluation_id": "dnalongbench",
+      "relation": "defines",
+      "note": "Published five task families; individual task records are pending.",
+      "evidence_id": "project-dnalong-intent"
+    },
+    {
+      "review_id": "rna",
+      "evaluation_id": "rnagym",
+      "relation": "defines",
+      "note": "DNA-model fitness scoring uses subsets of an RNA resource; structure evaluation is distinct.",
+      "evidence_id": "rnagym-definition"
+    },
+    {
+      "review_id": "mrna",
+      "evaluation_id": "mrnabench",
+      "relation": "defines",
+      "note": "Released catalogue and original paper have different inventories; linked targets retain versions.",
+      "evidence_id": "mrna-catalog"
+    },
+    {
+      "review_id": "dgeb",
+      "evaluation_id": "dgeb",
+      "relation": "defines",
+      "note": "DNA/RNA and protein task interfaces are distinct. Protein-only adoption is marked below.",
+      "evidence_id": "dgeb-definition"
+    },
+    {
+      "review_id": "bacbench",
+      "evaluation_id": "bacbench",
+      "relation": "defines",
+      "note": "Five active task families; deprecated clustering is not made active by historical use.",
+      "evidence_id": "bacbench-essential"
+    },
+    {
+      "review_id": "genbench",
+      "evaluation_id": "genbench",
+      "relation": "defines",
+      "note": "Task decomposition pending.",
+      "evidence_id": "project-genbench-intent"
+    },
+    {
+      "review_id": "dna-foundation",
+      "evaluation_id": "dna-foundation",
+      "relation": "defines",
+      "note": "Task decomposition and overlap reconciliation pending.",
+      "evidence_id": "project-dna-foundation-intent"
+    },
+    {
+      "review_id": "geneb",
+      "evaluation_id": "geneb",
+      "relation": "defines",
+      "note": "Existing manifest/protocol records retained.",
+      "evidence_id": "geneb-spec"
+    },
+    {
+      "review_id": "guanine",
+      "evaluation_id": "guanine",
+      "relation": "successor-release",
+      "note": "Existing v1.1 task records retained.",
+      "evidence_id": "guanine-definition"
+    },
+    {
+      "review_id": "collection-evo-original",
+      "evaluation_id": "evo-original",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "evo-a3"
+    },
+    {
+      "review_id": "collection-loam-evals",
+      "evaluation_id": "loam-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "loam-essential"
+    },
+    {
+      "review_id": "collection-bgc",
+      "evaluation_id": "bgc",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "bgc-card"
+    },
+    {
+      "review_id": "collection-bgcs",
+      "evaluation_id": "bgcs",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "bgcs-definition"
+    },
+    {
+      "review_id": "collection-nt-revised",
+      "evaluation_id": "nt-revised",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "nt-revised-card"
+    },
+    {
+      "review_id": "collection-nt-original",
+      "evaluation_id": "nt-original",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "nt-original-definition"
+    },
+    {
+      "review_id": "collection-gue",
+      "evaluation_id": "gue",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "gue-registration"
+    },
+    {
+      "review_id": "collection-nabench",
+      "evaluation_id": "nabench",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "nabench-manifest"
+    },
+    {
+      "review_id": "collection-pgb",
+      "evaluation_id": "pgb",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "pgb-card"
+    },
+    {
+      "review_id": "collection-lambda",
+      "evaluation_id": "lambda",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "lambda-registration"
+    },
+    {
+      "review_id": "collection-generator-evals",
+      "evaluation_id": "generator-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "generator-eval-methods"
+    },
+    {
+      "review_id": "collection-generator2-evals",
+      "evaluation_id": "generator2-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "generator2-eval-methods"
+    },
+    {
+      "review_id": "collection-gener-tasks",
+      "evaluation_id": "gener-tasks",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "gener-tasks-card"
+    },
+    {
+      "review_id": "collection-deepstarr",
+      "evaluation_id": "deepstarr",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "deepstarr-card"
+    },
+    {
+      "review_id": "collection-carbon-evals",
+      "evaluation_id": "carbon-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "carbon-eval-methods"
+    },
+    {
+      "review_id": "collection-ceno-evals",
+      "evaluation_id": "ceno-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "ceno-eval-methods"
+    },
+    {
+      "review_id": "collection-botanic1-evals",
+      "evaluation_id": "botanic1-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "botanic1-eval-methods"
+    },
+    {
+      "review_id": "collection-ntv3-evals",
+      "evaluation_id": "ntv3-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "ntv3-eval-methods"
+    },
+    {
+      "review_id": "collection-deepd-evals",
+      "evaluation_id": "deepd-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "deepd-eval-methods"
+    },
+    {
+      "review_id": "collection-carbonx-evals",
+      "evaluation_id": "carbonx-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "carbonx-evals"
+    },
+    {
+      "review_id": "collection-gpn-evals",
+      "evaluation_id": "gpn-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "gpn-benchmarks"
+    },
+    {
+      "review_id": "collection-compass",
+      "evaluation_id": "compass",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "bend-paper-extras"
+    },
+    {
+      "review_id": "collection-trip",
+      "evaluation_id": "trip",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "bend-paper-extras"
+    },
+    {
+      "review_id": "collection-mage",
+      "evaluation_id": "mage",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "bend-paper-extras"
+    },
+    {
+      "review_id": "collection-proteingym",
+      "evaluation_id": "proteingym",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "proteingym-parent"
+    },
+    {
+      "review_id": "collection-seiplant",
+      "evaluation_id": "seiplant",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "review_id": "collection-deepfarm",
+      "evaluation_id": "deepfarm",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "review_id": "collection-daniodecima",
+      "evaluation_id": "daniodecima",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "review_id": "collection-re2g",
+      "evaluation_id": "re2g",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "named-resource-links"
+    },
+    {
+      "review_id": "collection-aido2-evals",
+      "evaluation_id": "aido2-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "aido2-architecture"
+    },
+    {
+      "review_id": "collection-genosm-evals",
+      "evaluation_id": "genosm-evals",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "genosm-supervised"
+    },
+    {
+      "review_id": "collection-plantcad2-zero",
+      "evaluation_id": "plantcad2-zero",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "plantcad2-zero-card-ev"
+    },
+    {
+      "review_id": "collection-plantcad2-ft",
+      "evaluation_id": "plantcad2-ft",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "plantcad2-ft-card-ev"
+    },
+    {
+      "review_id": "collection-genecad",
+      "evaluation_id": "genecad",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "genecad-release-overview-ev"
+    },
+    {
+      "review_id": "collection-gene-mteb",
+      "evaluation_id": "gene-mteb",
+      "relation": "associated-collection",
+      "note": "Retained in the task catalogue; no qualified project membership.",
+      "evidence_id": "project-gene-mteb-intent"
+    }
+  ],
+  "project_adoptions": [
+    {
+      "id": "adoption-gb-chunker",
+      "review_id": "gb",
+      "paper_id": "dnachunker",
+      "adopter_group": "KAIST / INOCRAS DNAChunker",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Genomic Benchmarks sequence-classification evaluation.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-chunker-gb"
+    },
+    {
+      "id": "adoption-gb-generator",
+      "review_id": "gb",
+      "paper_id": "generator",
+      "adopter_group": "GENERator author group",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Original GENERator evaluation on the Genomic Benchmarks dataset collection.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "generator-eval-methods"
+    },
+    {
+      "id": "adoption-dart-patch",
+      "review_id": "dart",
+      "paper_id": "patchdna",
+      "adopter_group": "Relation Therapeutics PatchDNA",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "DART tasks 1–5 with protocol-specific zero-shot and frozen-probe settings.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-patch-dart"
+    },
+    {
+      "id": "adoption-dart-evo",
+      "review_id": "dart",
+      "paper_id": "evo",
+      "adopter_group": "Arc Institute / Evo 2",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Original Evo 2 DART tasks 1,2,5 only; caQTL/dsQTL endpoints, not full-suite use.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "evo-a3"
+    },
+    {
+      "id": "adoption-trait-carbon",
+      "review_id": "traitgym",
+      "paper_id": "carbon",
+      "adopter_group": "Hugging Face Carbon",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "TraitGym Mendelian variant evaluation; protocol and cohort documented separately.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-carbon-traitgym"
+    },
+    {
+      "id": "adoption-trait-ceno",
+      "review_id": "traitgym",
+      "paper_id": "ceno",
+      "adopter_group": "Shanghai AI Laboratory / CENO",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "TraitGym Mendelian and complex-trait evaluation with context/protocol variants.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-ceno-traitgym"
+    },
+    {
+      "id": "adoption-trait-gpn",
+      "review_id": "traitgym",
+      "paper_id": "gpn",
+      "adopter_group": "Song lab GPN-Star",
+      "kind": "evaluation-use",
+      "independence": "shared-authorship",
+      "scope": "TraitGym cohorts used in GPN-Star; retained as related-author follow-up, not independent adoption.",
+      "independence_note": "TraitGym and GPN-Star are Song lab/Benegas-lineage work; this follow-up does not contribute to the external-group threshold.",
+      "evidence_id": "gpn-benchmarks"
+    },
+    {
+      "id": "adoption-bend-chunker",
+      "review_id": "bend",
+      "paper_id": "dnachunker",
+      "adopter_group": "KAIST / INOCRAS DNAChunker",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Original BEND, seven downstream tasks. No BEND 2.0 use asserted.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-chunker-bend"
+    },
+    {
+      "id": "adoption-bend-patch",
+      "review_id": "bend",
+      "paper_id": "patchdna",
+      "adopter_group": "Relation Therapeutics PatchDNA",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Original BEND gene finding, chromatin annotation and additional long-range/VEP endpoints; not BEND 2.0.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-patch-bend"
+    },
+    {
+      "id": "adoption-lrb-patch",
+      "review_id": "lrb",
+      "paper_id": "patchdna",
+      "adopter_group": "Relation Therapeutics PatchDNA",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "LRB CAGE subset; context/readout differs from short classification tasks.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-patch-lrb"
+    },
+    {
+      "id": "adoption-lrb-factory",
+      "review_id": "lrb",
+      "paper_id": "genome-factory",
+      "adopter_group": "Northwestern Genome-Factory",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "LRB aggregate as reported in Table 8; task-level metric/cohort reconciliation pending.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-factory-lrb"
+    },
+    {
+      "id": "adoption-dnalong-chunker",
+      "review_id": "dnalongbench",
+      "paper_id": "dnachunker",
+      "adopter_group": "KAIST / INOCRAS DNAChunker",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Five DNALongBench task families under linear probing, not a reproduction of every full-fine-tuning baseline.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-chunker-dnalong"
+    },
+    {
+      "id": "adoption-dnalong-genezip",
+      "review_id": "dnalongbench",
+      "paper_id": "genezip",
+      "adopter_group": "GeneZip Zhao / Tang group",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Four task families; regulatory sequence activity is not included in this adoption record.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-genezip-dnalong"
+    },
+    {
+      "id": "adoption-rna-ribospan",
+      "review_id": "rna",
+      "paper_id": "ribospan",
+      "adopter_group": "Shanghai AI Laboratory / RiboSpan",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "RNAfitness evaluation; does not establish adoption of every RNAGym structure task.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-ribospan-rna"
+    },
+    {
+      "id": "adoption-rna-genosm",
+      "review_id": "rna",
+      "paper_id": "genosm",
+      "adopter_group": "Genos-m author group",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Thirteen prokaryote-related RNAGym assays; subset and scoring differ from the entire suite.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "genosm-doc-rna"
+    },
+    {
+      "id": "adoption-mrna-ribospan",
+      "review_id": "mrna",
+      "paper_id": "ribospan",
+      "adopter_group": "Shanghai AI Laboratory / RiboSpan",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Six mature-transcript task families; not every released mRNABench configuration.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-ribospan-mrna"
+    },
+    {
+      "id": "adoption-mrna-mimic",
+      "review_id": "mrna",
+      "paper_id": "mimic",
+      "adopter_group": "Polymathic AI / MIMIC",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "MIMIC probe experiments count as external use; inherited comparator rows do not. Some inputs include protein/codon modalities.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-mimic-mrna"
+    },
+    {
+      "id": "adoption-dgeb-loam",
+      "review_id": "dgeb",
+      "paper_id": "loam",
+      "adopter_group": "Soilytix / LOAM",
+      "kind": "software-use",
+      "independence": "independent",
+      "scope": "DGEB DNA enzyme-classification subset; one task, not the entire DNA/protein suite.",
+      "independence_note": "Soilytix/LOAM is an external adopter to TattaBio/DGEB; this is a distinct release/author group, not the DGEB authors’ own gLM2 evaluation.",
+      "evidence_id": "project-loam-use"
+    },
+    {
+      "id": "adoption-dgeb-protberta",
+      "review_id": "dgeb",
+      "paper_id": "protberta",
+      "adopter_group": "Burstein lab / ProtBERTa",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "Protein-only DGEB evaluation. No protein-task equivalence or nucleotide-model evaluation is inferred.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-protberta-dgeb"
+    },
+    {
+      "id": "adoption-bacbench-loam",
+      "review_id": "bacbench",
+      "paper_id": "loam",
+      "adopter_group": "Soilytix / LOAM",
+      "kind": "software-use",
+      "independence": "independent",
+      "scope": "BacBench essentiality reimplementation with frozen probes; parent-suite coverage is partial.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-loam-use"
+    },
+    {
+      "id": "adoption-bacbench-genosm",
+      "review_id": "bacbench",
+      "paper_id": "genosm",
+      "adopter_group": "Genos-m author group",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "BacBench essentiality plus phenotype cohorts; source cohorts and splits differ from LOAM.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "genosm-doc-essential"
+    },
+    {
+      "id": "adoption-guanine-factory",
+      "review_id": "guanine",
+      "paper_id": "genome-factory",
+      "adopter_group": "Northwestern Genome-Factory",
+      "kind": "evaluation-use",
+      "independence": "independent",
+      "scope": "GUANinE v1.0 only; Table 8 aggregate MCC requires reconciliation with original regression targets.",
+      "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
+      "evidence_id": "project-factory-lrb"
     }
   ],
   "field_evidence": [
@@ -91666,6 +94591,111 @@
       "field": "value",
       "evidence_id": "plantcad2-artifact-45-ev",
       "note": null
+    },
+    {
+      "entity_table": "papers",
+      "entity_id": "geneb",
+      "field": "status",
+      "evidence_id": "project-geneb-publication",
+      "note": null
+    },
+    {
+      "entity_table": "papers",
+      "entity_id": "guanine",
+      "field": "notes",
+      "evidence_id": "project-guanine-update",
+      "note": null
+    },
+    {
+      "entity_table": "evaluations",
+      "entity_id": "nt-revised",
+      "field": "paper_id",
+      "evidence_id": "project-nt-paper-nt-revised",
+      "note": null
+    },
+    {
+      "entity_table": "evaluations",
+      "entity_id": "nt-original",
+      "field": "paper_id",
+      "evidence_id": "project-nt-paper-nt-original",
+      "note": null
+    },
+    {
+      "entity_table": "evaluations",
+      "entity_id": "gue",
+      "field": "paper_id",
+      "evidence_id": "project-gue-paper",
+      "note": null
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "gb",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "dart",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "traitgym",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "bend",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "lrb",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "dnalongbench",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "rna",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "mrna",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "dgeb",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
+    },
+    {
+      "entity_table": "projects",
+      "entity_id": "bacbench",
+      "field": "review_id",
+      "evidence_id": "project-policy",
+      "note": "Project qualification is an explicit curatorial decision supported by purpose and independent-use evidence."
     }
   ],
   "evaluation_summary": [
@@ -91689,6 +94719,13 @@
       "status": "partial",
       "catalogued_tasks": 14,
       "classifications": 21
+    },
+    {
+      "id": "bend-original",
+      "name": "BEND (original)",
+      "status": "registered",
+      "catalogued_tasks": 0,
+      "classifications": 0
     },
     {
       "id": "bgc",
@@ -91782,6 +94819,20 @@
       "classifications": 9
     },
     {
+      "id": "dna-foundation",
+      "name": "DNA Foundation Benchmark",
+      "status": "registered",
+      "catalogued_tasks": 0,
+      "classifications": 0
+    },
+    {
+      "id": "dnalongbench",
+      "name": "DNALongBench",
+      "status": "registered",
+      "catalogued_tasks": 0,
+      "classifications": 0
+    },
+    {
       "id": "evo-original",
       "name": "Evo 2 original-paper evaluations",
       "status": "partial",
@@ -91794,6 +94845,20 @@
       "status": "partial",
       "catalogued_tasks": 9,
       "classifications": 9
+    },
+    {
+      "id": "genbench",
+      "name": "GenBench",
+      "status": "registered",
+      "catalogued_tasks": 0,
+      "classifications": 0
+    },
+    {
+      "id": "gene-mteb",
+      "name": "Gene-MTEB",
+      "status": "registered",
+      "catalogued_tasks": 0,
+      "classifications": 0
     },
     {
       "id": "geneb",
@@ -91871,6 +94936,13 @@
       "status": "partial",
       "catalogued_tasks": 13,
       "classifications": 8
+    },
+    {
+      "id": "lrb",
+      "name": "Genomics Long-Range Benchmark (LRB)",
+      "status": "registered",
+      "catalogued_tasks": 0,
+      "classifications": 0
     },
     {
       "id": "mage",
@@ -91976,6 +95048,118 @@
       "status": "partial",
       "catalogued_tasks": 1,
       "classifications": 5
+    }
+  ],
+  "project_summary": [
+    {
+      "id": "gb",
+      "name": "Genomic Benchmarks (2023)",
+      "review_id": "gb",
+      "description": "Dedicated sequence-classification dataset package and reusable evaluation resource.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "gb-definition",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 9
+    },
+    {
+      "id": "dart",
+      "name": "DART-Eval",
+      "review_id": "dart",
+      "description": "Dedicated regulatory DNA benchmark with zero-shot, probed and fine-tuned comparisons.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "dart-definition",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 8
+    },
+    {
+      "id": "traitgym",
+      "name": "TraitGym",
+      "review_id": "traitgym",
+      "description": "Dedicated benchmark of causal regulatory variant prioritization.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "traitgym-definition",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 2
+    },
+    {
+      "id": "bend",
+      "name": "BEND",
+      "review_id": "bend",
+      "description": "Dedicated human genomic benchmark with original BEND and separately versioned BEND 2.0.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-bend-intent",
+      "independent_groups": 2,
+      "collection_count": 2,
+      "task_count": 14
+    },
+    {
+      "id": "lrb",
+      "name": "Genomics Long-Range Benchmark",
+      "review_id": "lrb",
+      "description": "Dedicated benchmark with configurable sequence context and human regulatory/variant targets.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-lrb-intent",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 0
+    },
+    {
+      "id": "dnalongbench",
+      "name": "DNALongBench",
+      "review_id": "dnalongbench",
+      "description": "Dedicated long-range genomic prediction benchmark.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-dnalong-intent",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 0
+    },
+    {
+      "id": "rna",
+      "name": "RNAGym",
+      "review_id": "rna",
+      "description": "Dedicated RNA fitness and structure benchmark used by nucleotide models.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "rnagym-definition",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 70
+    },
+    {
+      "id": "mrna",
+      "name": "mRNABench",
+      "review_id": "mrna",
+      "description": "Dedicated mature-mRNA representation benchmark with common probing procedures.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "mrna-catalog",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 24
+    },
+    {
+      "id": "dgeb",
+      "name": "DGEB",
+      "review_id": "dgeb",
+      "description": "Dedicated functional/evolutionary embedding evaluation across nucleic-acid and protein modalities.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "dgeb-definition",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 22
+    },
+    {
+      "id": "bacbench",
+      "name": "BacBench",
+      "review_id": "bacbench",
+      "description": "Dedicated multi-scale bacterial benchmark, released separately from the later BacLM addition.",
+      "scope_note": "Project membership does not establish dataset equivalence, full-suite coverage, task validity, or original Evo 2 use. See cited release/subset-specific adoption records.",
+      "evidence_id": "project-bacbench-intent",
+      "independent_groups": 2,
+      "collection_count": 1,
+      "task_count": 12
     }
   ]
 }

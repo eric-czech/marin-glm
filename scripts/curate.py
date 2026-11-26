@@ -14,7 +14,8 @@ DATE = '2026-11-25'
 TABLES = ['metadata', 'sources', 'papers', 'models', 'model_properties', 'evidence', 'evaluations', 'tasks',
           'evaluation_tasks', 'variants', 'populations', 'task_populations', 'categories',
           'task_categories', 'protocols', 'metrics', 'protocol_metrics', 'counts',
-          'model_evaluations', 'findings', 'field_evidence']
+          'model_evaluations', 'findings', 'field_evidence', 'project_reviews', 'projects',
+          'project_review_papers', 'project_review_evaluations', 'project_adoptions']
 
 class Catalogue:
     def __init__(self):
@@ -240,8 +241,8 @@ def main():
     c.add('metadata', key='repository', value='eric-czech/marin-glm')
     c.add('metadata', key='task_unit', value='Dataset × prediction target; species, tracks, conditions and protocols are linked variants.')
     vocabulary(c)
-    for module in ('sources', 'evo', 'benchmarks', 'model_evals', 'gpnstar', 'paper_extensions', 'new_models', 'artifacts', 'plantcad'):
-        c.date = '2026-11-26' if module == 'plantcad' else DATE
+    for module in ('sources', 'evo', 'benchmarks', 'model_evals', 'gpnstar', 'paper_extensions', 'new_models', 'artifacts', 'plantcad', 'projects'):
+        c.date = '2026-11-26' if module in ('plantcad','projects') else DATE
         importlib.import_module('curation.' + module).populate(c)
     (ROOT / 'data/catalogue.json').write_text(json.dumps(c.rows, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({name: len(rows) for name, rows in c.rows.items()}, indent=2))

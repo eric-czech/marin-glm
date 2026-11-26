@@ -34,6 +34,52 @@ CREATE TABLE evaluations (
   status TEXT NOT NULL, scope_note TEXT NOT NULL,
   evidence_id TEXT REFERENCES evidence(id), notes TEXT
 );
+-- Projects are dedicated benchmark efforts with verified independent adoption.
+-- A collection or a model-associated benchmark need not belong to a project.
+CREATE TABLE project_reviews (
+  id TEXT PRIMARY KEY, name TEXT NOT NULL,
+  decision TEXT NOT NULL CHECK(decision IN ('qualified','adoption-not-established','outside-definition')),
+  dedicated INTEGER NOT NULL CHECK(dedicated IN (0,1)),
+  reviewed TEXT NOT NULL, search_scope TEXT NOT NULL,
+  rationale TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE projects (
+  id TEXT PRIMARY KEY, name TEXT NOT NULL,
+  review_id TEXT NOT NULL UNIQUE REFERENCES project_reviews(id),
+  description TEXT NOT NULL, scope_note TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE project_review_papers (
+  review_id TEXT NOT NULL REFERENCES project_reviews(id),
+  paper_id TEXT NOT NULL REFERENCES papers(id),
+  relation TEXT NOT NULL CHECK(relation IN ('introducing','update','associated-model','adoption-evidence','related-report')),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(review_id,paper_id,relation)
+);
+CREATE TABLE project_review_evaluations (
+  review_id TEXT NOT NULL REFERENCES project_reviews(id),
+  evaluation_id TEXT NOT NULL REFERENCES evaluations(id),
+  relation TEXT NOT NULL CHECK(relation IN ('defines','successor-release','implements','associated-collection')),
+  note TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(review_id,evaluation_id)
+);
+CREATE TABLE project_adoptions (
+  id TEXT PRIMARY KEY, review_id TEXT NOT NULL REFERENCES project_reviews(id),
+  paper_id TEXT REFERENCES papers(id), adopter_group TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK(kind IN ('evaluation-use','software-use','dataset-reuse','citation-only')),
+  independence TEXT NOT NULL CHECK(independence IN ('independent','shared-authorship','not-established')),
+  scope TEXT NOT NULL, independence_note TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE VIEW project_summary AS
+SELECT p.*,
+ (SELECT COUNT(DISTINCT a.adopter_group) FROM project_adoptions a
+  WHERE a.review_id=p.review_id AND a.independence='independent' AND a.kind!='citation-only') AS independent_groups,
+ (SELECT COUNT(*) FROM project_review_evaluations r WHERE r.review_id=p.review_id) AS collection_count,
+ (SELECT COUNT(DISTINCT et.task_id) FROM project_review_evaluations r
+  JOIN evaluation_tasks et ON et.evaluation_id=r.evaluation_id
+  WHERE r.review_id=p.review_id AND r.relation IN ('defines','successor-release')) AS task_count
+FROM projects p;
 CREATE TABLE tasks (
   id TEXT PRIMARY KEY, name TEXT NOT NULL, dataset_name TEXT NOT NULL,
   target TEXT NOT NULL, description TEXT NOT NULL, task_type TEXT NOT NULL,
