@@ -82,7 +82,15 @@
   const option=(value,label)=>{const el=document.createElement("option");el.value=value;el.textContent=label;return el;};
   for(const dim of ["application","capability","region"]){for(const r of db.categories.filter(r=>r.dimension===dim).sort((a,b)=>a.name.localeCompare(b.name)))$(dim).append(option(r.id,r.name));}
   const popChildren=group(db.populations,"parent_id");
-  const popOptions=(parent,depth=0)=>{for(const p of (popChildren[parent]??[]).sort((a,b)=>a.name.localeCompare(b.name))){$("population").append(option(p.id,"· ".repeat(depth)+p.name));popOptions(p.id,depth+1);}};
+  const popOptions=(parent,prefix="")=>{
+    const children=[...(popChildren[parent]??[])].sort((a,b)=>a.name.localeCompare(b.name));
+    children.forEach((p,i)=>{
+      const root=parent===null,last=i===children.length-1;
+      $("population").append(option(p.id,prefix+(root?"":last?"└─ ":"├─ ")+p.name));
+      // Nonbreaking spaces preserve indentation in native select menus.
+      popOptions(p.id,root?"":prefix+(last?"\u00a0\u00a0\u00a0":"│\u00a0\u00a0"));
+    });
+  };
   popOptions(null);
   for(const s of [...db.evaluations].sort((a,b)=>a.name.localeCompare(b.name)))$("suite").append(option(s.id,s.name));
   $("updated").textContent=db.metadata.find(r=>r.key==="updated")?.value??"";
