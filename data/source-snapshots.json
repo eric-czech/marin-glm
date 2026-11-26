@@ -999,5 +999,138 @@
     "path": "README.md",
     "url": "https://github.com/frederikkemarin/BEND/blob/58ad41011125cfca339d511e9b8eb536a54b582a/README.md",
     "local": "research/sources/projects/frederikkemarin--BEND--README.md"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/README.md",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/README.md",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/README.md"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/evaluate.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/evaluate.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/evaluate.py"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/job.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/job.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/job.py"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/tasks/bioreason.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/tasks/bioreason.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/tasks/bioreason.py"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/tasks/genomeqa.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/tasks/genomeqa.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/tasks/genomeqa.py"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/tasks/metrics.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/tasks/metrics.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/tasks/metrics.py"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/tasks/seqrecqa.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/tasks/seqrecqa.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/tasks/seqrecqa.py"
+  },
+  {
+    "repo": "huggingface/carbon",
+    "path": "carbon-x/evaluation/tasks/vepqa.py",
+    "ref": "4ca3ce3e5c55e5821d6068bac5c6e3806027a26f",
+    "url": "https://github.com/huggingface/carbon/blob/4ca3ce3e5c55e5821d6068bac5c6e3806027a26f/carbon-x/evaluation/tasks/vepqa.py",
+    "local": "research/sources/huggingface--carbon/carbon-x/evaluation/tasks/vepqa.py"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/data/README.md",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/data/README.md",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/data/README.md"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/data/best_layers.csv",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/data/best_layers.csv",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/data/best_layers.csv"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/data/human/annotations.csv",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/data/human/annotations.csv",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/data/human/annotations.csv"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/data/human/reference_predictions.csv",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/data/human/reference_predictions.csv",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/data/human/reference_predictions.csv"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/data/manifest.json",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/data/manifest.json",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/data/manifest.json"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/figures/reference/human_HBB_raw_truth_chr11_5220000_5240000_plotted_tracks_summary.csv",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/figures/reference/human_HBB_raw_truth_chr11_5220000_5240000_plotted_tracks_summary.csv",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/figures/reference/human_HBB_raw_truth_chr11_5220000_5240000_plotted_tracks_summary.csv"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/hbb_ovr_demo.py",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/hbb_ovr_demo.py",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/hbb_ovr_demo.py"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/models/manifest.csv",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/models/manifest.csv",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/models/manifest.csv"
+  },
+  {
+    "repo": "biomap-research/DeepD",
+    "path": "notebook/interpretability/plot_ovr_full_prediction_tracks_stable_pdf.py",
+    "ref": "2896082aa1b7483d3c4062e125050ebc815aea25",
+    "url": "https://github.com/biomap-research/DeepD/blob/2896082aa1b7483d3c4062e125050ebc815aea25/notebook/interpretability/plot_ovr_full_prediction_tracks_stable_pdf.py",
+    "local": "research/sources/biomap-research--DeepD/notebook/interpretability/plot_ovr_full_prediction_tracks_stable_pdf.py"
+  },
+  {
+    "repo": "MarksLab-DasLab/RNAGym",
+    "path": "fitness/baselines/Evo/score_evo_single_dms.py",
+    "ref": "2828cf99316d75daaa8d832a2573cbb25bbd35fe",
+    "url": "https://github.com/MarksLab-DasLab/RNAGym/blob/2828cf99316d75daaa8d832a2573cbb25bbd35fe/fitness/baselines/Evo/score_evo_single_dms.py",
+    "local": "research/sources/MarksLab-DasLab--RNAGym/fitness/baselines/Evo/score_evo_single_dms.py"
+  },
+  {
+    "repo": "MarksLab-DasLab/RNAGym",
+    "path": "fitness/utils/cv_split.py",
+    "ref": "2828cf99316d75daaa8d832a2573cbb25bbd35fe",
+    "url": "https://github.com/MarksLab-DasLab/RNAGym/blob/2828cf99316d75daaa8d832a2573cbb25bbd35fe/fitness/utils/cv_split.py",
+    "local": "research/sources/MarksLab-DasLab--RNAGym/fitness/utils/cv_split.py"
   }
 ]

@@ -44,6 +44,27 @@ with sync_playwright() as p:
     download=download_info.value
     content=Path(download.path()).read_text()
     assert 'gpn-clinvar' in content and 'gpn-rare-arabidopsis' in content
+    # A persistent search must remain visible when combined with a capability.
+    page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&q=ceno&capability=generation')
+    page.wait_for_selector('button[data-clear-filter="q"]')
+    assert '3 matching records' in page.locator('#result-count').inner_text()
+    assert 'combined' in page.locator('#active-filters').inner_text()
+    page.locator('button[data-clear-filter="q"]').click()
+    assert '20 matching records' in page.locator('#result-count').inner_text()
+    assert 'conditional' in page.locator('#capability-definition').inner_text()
+    page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&suite=genecad&capability=dense-annotation')
+    page.wait_for_selector('details.task')
+    assert '15 matching records' in page.locator('#result-count').inner_text()
+    page.screenshot(path='/tmp/marin-glm-genecad-dense.png',full_page=True)
+    page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&task=deepd-annotation-human')
+    page.wait_for_selector('details.task')
+    assert '6 matching records' in page.locator('#result-count').inner_text()
+    page.goto((ROOT/'index.html').as_uri()+'#view=evaluations&capability=unconditional-generation')
+    page.wait_for_selector('details.task')
+    assert '2 matching records' in page.locator('#result-count').inner_text()
+    page.set_viewport_size({'width':390,'height':844})
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.set_viewport_size({'width':1440,'height':1100})
     # Projects preserve source/release distinctions and filter canonical tasks.
     page.goto((ROOT/'index.html').as_uri()+'#view=projects')
     page.wait_for_selector('.project')

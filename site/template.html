@@ -37,10 +37,12 @@
       <label>Collection<select id="suite" name="suite"><option value="">All collections</option></select></label>
       <label>Benchmark project<select id="project" name="project"><option value="">All tasks</option></select></label>
       <label>Evo 2 provenance<select id="evo" name="evo"><option value="">All tasks</option><option value="original">Documented in original paper</option><option value="external">Documented in external evaluation</option><option value="both">Documented in both</option></select></label>
-      <label>Audit status<select id="status" name="status"><option value="">All statuses</option><option value="artifact-audited">Selected artifacts audited</option><option value="paper-audited">Paper / protocol audit</option><option value="registered">Registered; task audit pending</option><option value="panel-pending">Composite panel; expansion pending</option></select></label>
+      <label>Audit status<select id="status" name="status"><option value="">All statuses</option><option value="artifact-audited">Selected artifacts audited</option><option value="paper-audited">Paper / protocol audit</option><option value="registered">Registered; task audit pending</option><option value="panel-pending">Composite panel; source information missing</option></select></label>
       <div class="filter-actions"><button type="reset" class="secondary">Reset filters</button><button type="button" id="export">Export matching tasks (CSV)</button></div>
     </form>
     <p class="filter-note" id="classification-note">Organism filters include descendant taxa. Assignments distinguish sequence origin from assay host where established. Application mappings are editorial, not validation claims. Missing annotations do not imply biological absence.</p>
+    <p class="filter-note" id="active-filters" aria-live="polite"></p>
+    <p class="filter-note" id="capability-definition" hidden></p>
     <div class="toolbar"><div class="switch" aria-label="Display"><button id="task-mode" type="button" aria-pressed="true">Tasks</button><button id="suite-mode" type="button" aria-pressed="false">Collections</button></div><p role="status" aria-live="polite" id="result-count"></p></div>
     <div id="results"></div>
     <button type="button" id="more" hidden>Show more</button>

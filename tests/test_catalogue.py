@@ -125,10 +125,38 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn('1,2,5 only',original)
         self.assertEqual(self.db.execute("SELECT independence FROM project_adoptions WHERE id='adoption-trait-gpn'").fetchone()[0],'shared-authorship')
         self.assertIn('Protein-only',self.db.execute("SELECT scope FROM project_adoptions WHERE id='adoption-dgeb-protberta'").fetchone()[0])
-        # Literature/project registration must not manufacture new tasks/model uses.
-        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM tasks').fetchone()[0],508)
+        # Adoption papers do not manufacture primary models or model-use claims.
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM models WHERE scope='primary'").fetchone()[0],13)
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE paper_id IN ('dnachunker','patchdna','genezip','ribospan','mimic')").fetchone()[0],0)
+    def test_followup_records_have_artifact_counts_and_specific_source_gaps(self):
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE status='registered'").fetchone()[0],0)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id LIKE 'rnagym-%' AND status='artifact-audited'").fetchone()[0],70)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id LIKE 'deepd-human-routing-%'").fetchone()[0],6)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id='deepd-annotation-human'").fetchone()[0],0)
+        pending=self.db.execute("SELECT id FROM tasks WHERE status='panel-pending'").fetchall()
+        self.assertEqual(len(pending),8)
+        for t in pending:
+            self.assertTrue(self.db.execute("SELECT 1 FROM field_evidence WHERE entity_table='tasks' AND entity_id=? AND field='limitations'",(t[0],)).fetchone())
+        summaries=json.loads((ROOT/'data/geneb-artifact-inspections.json').read_text())
+        self.assertEqual(len(summaries),200)
+        self.assertEqual(sum(x['rows'] for x in summaries),3393004)
+        self.assertEqual(sum(x['split']=='test' and x['train_test_exact_sequence_overlap']>0 for x in summaries),25)
+        self.assertIn('401',self.db.execute("SELECT limitations FROM tasks WHERE id='carbonx-frontier'").fetchone()[0])
+    def test_rnagym_metric_semantics_and_split_counts(self):
+        self.assertEqual({r[0] for r in self.db.execute("SELECT metric_id FROM protocol_metrics WHERE protocol_id='rnagym-andreasson-2020-ribozyme-rnagym'")},{'abs-spearman','symmetric-auroc','abs-mcc'})
+        rows=json.loads((ROOT/'data/rnagym-artifact-inspections.json').read_text())
+        assays=[x for x in rows if x['archive']=='fitness_processed_assays']
+        self.assertEqual(len(assays),70)
+        self.assertEqual(sum(x['rows'] for x in assays),1117406)
+        self.assertEqual(len([x for x in rows if x['archive']=='fitness_CV_splits']),124)
+        self.assertTrue(any(x.get('train_validation_exact_sequence_overlap',0)>0 for x in rows))
+    def test_capability_parent_membership_and_genecad_dense_outputs(self):
+        self.assertEqual(self.db.execute("""SELECT task_id FROM task_categories c
+          WHERE category_id IN ('conditional-generation','unconditional-generation') AND NOT EXISTS
+          (SELECT 1 FROM task_categories p WHERE p.task_id=c.task_id AND p.category_id='generation')""").fetchall(),[])
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM task_categories WHERE task_id LIKE 'genecad-%' AND category_id='dense-annotation'").fetchone()[0],15)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM task_categories WHERE task_id='botanic1-atac-counts' AND category_id='dense-annotation'").fetchone()[0],0)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM task_categories WHERE task_id LIKE 'geneb-leannmlindsey-gue-mouse-%' AND category_id='enhancer'").fetchone()[0],0)
     def test_project_paper_links_cite_their_own_source(self):
         self.assertEqual(self.db.execute('''SELECT r.review_id,r.paper_id FROM project_review_papers r
           JOIN papers p ON p.id=r.paper_id JOIN evidence e ON e.id=r.evidence_id

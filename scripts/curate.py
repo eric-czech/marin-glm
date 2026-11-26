@@ -241,8 +241,8 @@ def main():
     c.add('metadata', key='repository', value='eric-czech/marin-glm')
     c.add('metadata', key='task_unit', value='Dataset × prediction target; species, tracks, conditions and protocols are linked variants.')
     vocabulary(c)
-    for module in ('sources', 'evo', 'benchmarks', 'model_evals', 'gpnstar', 'paper_extensions', 'new_models', 'artifacts', 'plantcad', 'projects'):
-        c.date = '2026-11-26' if module in ('plantcad','projects') else DATE
+    for module in ('sources', 'evo', 'benchmarks', 'model_evals', 'gpnstar', 'paper_extensions', 'new_models', 'artifacts', 'plantcad', 'projects', 'audit_followup'):
+        c.date = '2026-11-26' if module in ('plantcad','projects','audit_followup') else DATE
         importlib.import_module('curation.' + module).populate(c)
     (ROOT / 'data/catalogue.json').write_text(json.dumps(c.rows, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({name: len(rows) for name, rows in c.rows.items()}, indent=2))

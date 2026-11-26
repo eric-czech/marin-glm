@@ -1,0 +1,5604 @@
+[
+  {
+    "rows": 10715,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "bcc14310acce720c9a8f04a720b2b8502032478c3a34daf01ebbc09941d9e0a0",
+    "bytes": 18460221,
+    "label_counts": null,
+    "label_distinct": 10715,
+    "length_min": 1695,
+    "length_max": 1695,
+    "missing": {},
+    "distinct_sequences": 10715,
+    "numeric_score_range": [
+      -4.920218557,
+      1.835260321
+    ],
+    "scored_mutant_rows_before_model_missingness": 10715,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/A0A2Z5U3Z0_9INFA_Doud_2016.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 7343,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e32f10e186d54ec0055fc0c9498f5b99d2f52469e28d5cb0706243a8de1e8f23",
+    "bytes": 720825,
+    "label_counts": null,
+    "label_distinct": 4943,
+    "length_min": 74,
+    "length_max": 74,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 7343,
+    "numeric_score_range": [
+      1e-06,
+      0.151589221
+    ],
+    "scored_mutant_rows_before_model_missingness": 7342,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Andreasson_2020_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1652,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7b86c565f3e6457c4c249817da1c07929355dff4e25cc484b27e906d27af7941",
+    "bytes": 456804,
+    "label_counts": null,
+    "label_distinct": 1652,
+    "length_min": 156,
+    "length_max": 156,
+    "missing": {},
+    "distinct_sequences": 1652,
+    "numeric_score_range": [
+      -4.775673980698629,
+      0.854502115472541
+    ],
+    "scored_mutant_rows_before_model_missingness": 1652,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/BCHB_CHLTE_Tsuboyama_2023_2KRU.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 4783,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "39e103df4ea7035548b2c2972c80fc65cc1c50140c5fbd51ff31e4c7fa6f5faf",
+    "bytes": 4216010,
+    "label_counts": null,
+    "label_distinct": 2736,
+    "length_min": 861,
+    "length_max": 861,
+    "missing": {},
+    "distinct_sequences": 4783,
+    "numeric_score_range": [
+      0.0008,
+      2.9024
+    ],
+    "scored_mutant_rows_before_model_missingness": 4783,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/BLAT_ECOLX_Firnberg_2014.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 989,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "3e409ba080c4a61d32e5e92aeb81ce299b71a3557590664c222c39432b4ed72f",
+    "bytes": 865741,
+    "label_counts": null,
+    "label_distinct": 84,
+    "length_min": 861,
+    "length_max": 861,
+    "missing": {},
+    "distinct_sequences": 989,
+    "numeric_score_range": [
+      -5.321928,
+      1.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 989,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/BLAT_ECOLX_Jacquier_2013.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 886,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b245055d2f105a118f7a6f33bbbe0fa0b3f97f6cff3846658ff6370948e2ad9b",
+    "bytes": 4972512,
+    "label_counts": null,
+    "label_distinct": 886,
+    "length_min": 5592,
+    "length_max": 5592,
+    "missing": {},
+    "distinct_sequences": 886,
+    "numeric_score_range": [
+      -3.718221153,
+      1.306892088
+    ],
+    "scored_mutant_rows_before_model_missingness": 886,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/BRCA1_HUMAN_Findlay_2018.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 21321,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "819a37df769497802fd20ac54545bd8e914dbb70393c63adffbdbf6b62c27fc7",
+    "bytes": 2009751,
+    "label_counts": null,
+    "label_distinct": 11741,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 21321,
+    "numeric_score_range": [
+      0.004926108,
+      0.969530103
+    ],
+    "scored_mutant_rows_before_model_missingness": 21321,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Beck_2022_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 10754,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "cb084083744d45bc2f98dd1226968bc157d4ec8023f299b18212f8cf662d0576",
+    "bytes": 18656351,
+    "label_counts": null,
+    "label_distinct": 10754,
+    "length_min": 1701,
+    "length_max": 1701,
+    "missing": {},
+    "distinct_sequences": 10754,
+    "numeric_score_range": [
+      -4.848302697591858,
+      2.3325294311575995
+    ],
+    "scored_mutant_rows_before_model_missingness": 10754,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/C6KNH7_9INFA_Lee_2018.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1813,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ece72ee0578b9f30e4d0c3535a9c7cfcf46e02de9633b9819c3f973dd3b75faa",
+    "bytes": 859808,
+    "label_counts": null,
+    "label_distinct": 1802,
+    "length_min": 450,
+    "length_max": 450,
+    "missing": {},
+    "distinct_sequences": 1813,
+    "numeric_score_range": [
+      -0.483185729,
+      1.361692691
+    ],
+    "scored_mutant_rows_before_model_missingness": 1813,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/CALM1_HUMAN_Weile_2017.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 42328,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "3363b78cd5c5e61be63c36b2c77e7aee3d4c7f85bb9404201094bc5a106e7a05",
+    "bytes": 96901722,
+    "label_counts": null,
+    "label_distinct": 37636,
+    "length_min": 2208,
+    "length_max": 2208,
+    "missing": {},
+    "distinct_sequences": 42328,
+    "numeric_score_range": [
+      -9.544672364814057,
+      9.53645667061
+    ],
+    "scored_mutant_rows_before_model_missingness": 42328,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/CAPSD_AAV2S_Sinai_2021.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 7217,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5dd10209c42be59c5326d6ff3c8ffaed4be988a64d88c314c766c659c76ebb5b",
+    "bytes": 12158474,
+    "label_counts": null,
+    "label_distinct": 5342,
+    "length_min": 1656,
+    "length_max": 1656,
+    "missing": {},
+    "distinct_sequences": 7217,
+    "numeric_score_range": [
+      0.0,
+      2.35909663759924
+    ],
+    "scored_mutant_rows_before_model_missingness": 7217,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/CBS_HUMAN_Sun_2020.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1176,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "0f120c040d904406f5659ffdc97aefc57dbb598d31ebf67238a4d0d8fe25b439",
+    "bytes": 381669,
+    "label_counts": {
+      "-66.0": 25,
+      "-57.0": 29,
+      "-38.0": 11,
+      "-73.0": 12,
+      "-60.0": 27,
+      "-16.0": 29,
+      "-19.0": 10,
+      "-17.0": 11,
+      "-32.0": 5,
+      "-1.0": 178,
+      "-6.0": 15,
+      "-7.0": 55,
+      "-25.0": 13,
+      "-9.0": 65,
+      "-28.0": 22,
+      "-30.0": 18,
+      "-61.0": 27,
+      "-15.0": 35,
+      "-65.0": 12,
+      "-26.0": 24,
+      "-22.0": 35,
+      "-55.0": 13,
+      "-63.0": 11,
+      "-86.0": 11,
+      "-11.0": 23,
+      "-14.0": 34,
+      "-18.0": 34,
+      "-12.0": 14,
+      "-42.0": 16,
+      "-46.0": 23,
+      "-13.0": 37,
+      "-8.0": 39,
+      "-33.0": 14,
+      "-20.0": 10,
+      "-54.0": 14,
+      "-21.0": 21,
+      "-36.0": 8,
+      "-24.0": 48,
+      "-23.0": 12,
+      "-47.0": 8,
+      "-64.0": 12,
+      "-10.0": 10,
+      "-68.0": 8,
+      "-48.0": 14,
+      "-44.0": 26,
+      "-85.0": 12,
+      "-80.0": 16,
+      "-87.0": 13,
+      "-31.0": 17
+    },
+    "label_distinct": 49,
+    "length_min": 306,
+    "length_max": 306,
+    "missing": {},
+    "distinct_sequences": 1176,
+    "numeric_score_range": [
+      -87.0,
+      -1.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 1176,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/CCDB_ECOLI_Adkar_2012.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1576,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4a375892cf0ed8a695993f7491e9b27ad6d8f23f076d996eaf0fa7fdf10b2f13",
+    "bytes": 3466166,
+    "label_counts": null,
+    "label_distinct": 1565,
+    "length_min": 2175,
+    "length_max": 2175,
+    "missing": {},
+    "distinct_sequences": 1576,
+    "numeric_score_range": [
+      -1.8809,
+      0.33424
+    ],
+    "scored_mutant_rows_before_model_missingness": 1576,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/DLG4_RAT_McLaughlin_2012.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 3099,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "994e616650b2dc952d2abe502685c6569f528d5b4fa79d1ce7def42aea068318",
+    "bytes": 846291,
+    "label_counts": null,
+    "label_distinct": 3099,
+    "length_min": 198,
+    "length_max": 198,
+    "missing": {},
+    "distinct_sequences": 3098,
+    "numeric_score_range": [
+      -3.1022841979440914,
+      2.431976702563532
+    ],
+    "scored_mutant_rows_before_model_missingness": 3099,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/DOCK1_MOUSE_Tsuboyama_2023_2M0Y.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 4175,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "0fc24f07d0539f81b10a5a3902bd25afa5c5fec32054e3eac8aec5dbe7ce951c",
+    "bytes": 475739,
+    "label_counts": null,
+    "label_distinct": 4175,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {},
+    "distinct_sequences": 4175,
+    "numeric_score_range": [
+      -0.862634597,
+      0.09085339
+    ],
+    "scored_mutant_rows_before_model_missingness": 4175,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Domingo_2018_tRNA.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 2172,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "bcdd60b261d7f503a3d5a1feacb7383ec3885fbd20a5e1b5e3728e98b45a24fd",
+    "bytes": 1429562,
+    "label_counts": null,
+    "label_distinct": 877,
+    "length_min": 639,
+    "length_max": 639,
+    "missing": {},
+    "distinct_sequences": 2172,
+    "numeric_score_range": [
+      40.02,
+      55.98
+    ],
+    "scored_mutant_rows_before_model_missingness": 2172,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/ESTA_BACSU_Nutschel_2020.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 7922,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4f54be051ba9a06d27615ec71fa940df76293271b80b127487f41ad9c0aa0057",
+    "bytes": 2874855,
+    "label_counts": null,
+    "label_distinct": 7634,
+    "length_min": 282,
+    "length_max": 282,
+    "missing": {},
+    "distinct_sequences": 7922,
+    "numeric_score_range": [
+      -0.3493506629001458,
+      1.3315460290640055
+    ],
+    "scored_mutant_rows_before_model_missingness": 7922,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/F7YBW8_MESOW_Ding_2023.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 51714,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "protein_mutant"
+    ],
+    "sha256": "8a59a4ca6556a054d48efc303a2f03e970e15ca026ca32cd92281e3b9a1faf52",
+    "bytes": 40300022,
+    "label_counts": null,
+    "label_distinct": 51238,
+    "length_min": 717,
+    "length_max": 717,
+    "missing": {},
+    "distinct_sequences": 51714,
+    "numeric_score_range": [
+      1.28341923933,
+      4.12310906338
+    ],
+    "scored_mutant_rows_before_model_missingness": 51714,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/GFP_AEQVI_Sarkisyan_2016.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 25491,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e165173c387cafc180ada21f21395d6f42a83355fc751b522fa661b85e88bdb2",
+    "bytes": 3347291,
+    "label_counts": null,
+    "label_distinct": 3670,
+    "length_min": 105,
+    "length_max": 105,
+    "missing": {},
+    "distinct_sequences": 25491,
+    "numeric_score_range": [
+      0.008372,
+      1.248
+    ],
+    "scored_mutant_rows_before_model_missingness": 25491,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Guy_2014_tRNA.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 6835,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a34720416144db61f51ff4c1f90a1f9e875d7e558bf4a26df7a47390d1d36d8a",
+    "bytes": 2264505,
+    "label_counts": null,
+    "label_distinct": 6835,
+    "length_min": 216,
+    "length_max": 216,
+    "missing": {},
+    "distinct_sequences": 6784,
+    "numeric_score_range": [
+      -3.467620335688504,
+      1.1357408609303352
+    ],
+    "scored_mutant_rows_before_model_missingness": 6835,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/HECD1_HUMAN_Tsuboyama_2023_3DKM.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1367,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b5ac6dbee25b9b52a963b7c7d2d32cfcdb37222db45d3d5b509c38343fd43d26",
+    "bytes": 327225,
+    "label_counts": null,
+    "label_distinct": 918,
+    "length_min": 219,
+    "length_max": 219,
+    "missing": {},
+    "distinct_sequences": 1367,
+    "numeric_score_range": [
+      -0.2435,
+      1.12
+    ],
+    "scored_mutant_rows_before_model_missingness": 1367,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/IF1_ECOLI_Kelsic_2016.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sha256": "12de303241ec52bb6d6dc81392d306dc24f7974dd0592d02046cd1e55e192c08",
+    "bytes": 196618,
+    "label_counts": null,
+    "label_distinct": 1953,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {
+      "": 1953
+    },
+    "distinct_sequences": 1953,
+    "numeric_score_range": [
+      2.468344373,
+      628.9341065
+    ],
+    "scored_mutant_rows_before_model_missingness": 1953,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Janzen_2022_fam1a1_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8b7f67b6ce530ad2255ecf2489fa385a77f75f906cd4a0283d614263cd027b3c",
+    "bytes": 186839,
+    "label_counts": null,
+    "label_distinct": 1953,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {},
+    "distinct_sequences": 1953,
+    "numeric_score_range": [
+      2.119293045,
+      245.2236336
+    ],
+    "scored_mutant_rows_before_model_missingness": 1953,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Janzen_2022_fam1b1_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sha256": "4e012e4d6003c27daf0d18841a419bd8754b87a26c47a1d3e4f005184b994b51",
+    "bytes": 194683,
+    "label_counts": null,
+    "label_distinct": 1953,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {
+      "": 1953
+    },
+    "distinct_sequences": 1953,
+    "numeric_score_range": [
+      3.240672966,
+      1220.756957
+    ],
+    "scored_mutant_rows_before_model_missingness": 1953,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Janzen_2022_fam21_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sha256": "d5fb06a05ec188d4214d608486259c8e4eff021655625f33448818861f2b44ac",
+    "bytes": 194672,
+    "label_counts": null,
+    "label_distinct": 1953,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {
+      "": 1953
+    },
+    "distinct_sequences": 1953,
+    "numeric_score_range": [
+      2.65649757,
+      1309.993422
+    ],
+    "scored_mutant_rows_before_model_missingness": 1953,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Janzen_2022_fam22_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sha256": "f7535773b0324bcdb1242d4e54d157bbff8476adc12a8975b4107d9cfbac280a",
+    "bytes": 194652,
+    "label_counts": null,
+    "label_distinct": 1953,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {
+      "": 1953
+    },
+    "distinct_sequences": 1953,
+    "numeric_score_range": [
+      2.557078184,
+      68.93041376
+    ],
+    "scored_mutant_rows_before_model_missingness": 1953,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Janzen_2022_fam31_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 189,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c0b8c4706cf86faf9ae7020d2a7f5b8b4030a5c4ff725e05058daa3639886e98",
+    "bytes": 14267,
+    "label_counts": null,
+    "label_distinct": 181,
+    "length_min": 63,
+    "length_max": 63,
+    "missing": {},
+    "distinct_sequences": 189,
+    "numeric_score_range": [
+      -6.715,
+      1.456
+    ],
+    "scored_mutant_rows_before_model_missingness": 189,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Julien_2016_mRNA.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 5559,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ea9c649e02bb0106e18a6b4638a943c1623c5c8278130b83bd086126844132cc",
+    "bytes": 496312,
+    "label_counts": null,
+    "label_distinct": 5510,
+    "length_min": 51,
+    "length_max": 51,
+    "missing": {},
+    "distinct_sequences": 5533,
+    "numeric_score_range": [
+      0.000362639,
+      6.549092636
+    ],
+    "scored_mutant_rows_before_model_missingness": 5559,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Ke_2017_mRNA.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 255,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "9f45ffa7c4fd1ad9e3d96ce692a745ce744dd18ff89e1b415c3642677f6b85ed",
+    "bytes": 66281,
+    "label_counts": null,
+    "label_distinct": 255,
+    "length_min": 230,
+    "length_max": 230,
+    "missing": {},
+    "distinct_sequences": 255,
+    "numeric_score_range": [
+      0.015097447,
+      0.757357646
+    ],
+    "scored_mutant_rows_before_model_missingness": 255,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Kobori_2015_ribozyme_j12.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 255,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "33fcaa2c2ee9113ff9b54a8c12fa169e012b3d2a30a5990369a0619395729e56",
+    "bytes": 56851,
+    "label_counts": null,
+    "label_distinct": 255,
+    "length_min": 190,
+    "length_max": 190,
+    "missing": {},
+    "distinct_sequences": 255,
+    "numeric_score_range": [
+      0.009583134,
+      0.865439404
+    ],
+    "scored_mutant_rows_before_model_missingness": 255,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Kobori_2015_ribozyme_p4.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1023,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5fccae4296dba20ba0190cafd6ac796dfca0df9c6dc468b584b627be24c38ec1",
+    "bytes": 111187,
+    "label_counts": null,
+    "label_distinct": 730,
+    "length_min": 77,
+    "length_max": 77,
+    "missing": {},
+    "distinct_sequences": 1023,
+    "numeric_score_range": [
+      0.0,
+      0.860526316
+    ],
+    "scored_mutant_rows_before_model_missingness": 1023,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Kobori_2015_ribozyme_tw.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 10296,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c34249b74e0d9421e902d4719e266b148c09c898e24eece56e5e3dfa52bfbac3",
+    "bytes": 738248,
+    "label_counts": null,
+    "label_distinct": 109,
+    "length_min": 54,
+    "length_max": 54,
+    "missing": {},
+    "distinct_sequences": 10296,
+    "numeric_score_range": [
+      0.0,
+      1.08
+    ],
+    "scored_mutant_rows_before_model_missingness": 10296,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Kobori_2016_osa_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 16383,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "",
+      "",
+      ""
+    ],
+    "sha256": "13db4af49d733d96346b451328286bbd1d4cd6e747287bd323cd62dc1ccc7462",
+    "bytes": 3307513,
+    "label_counts": null,
+    "label_distinct": 16383,
+    "length_min": 160,
+    "length_max": 160,
+    "missing": {
+      "": 16383
+    },
+    "distinct_sequences": 16383,
+    "numeric_score_range": [
+      0.718976729,
+      5.20412205
+    ],
+    "scored_mutant_rows_before_model_missingness": 16383,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Kobori_2018_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 65536,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4ee5ae9eb313d3e645857f949cc2a3df419fc9c3d895fa49bbd880bc4559a3e2",
+    "bytes": 6540341,
+    "label_counts": null,
+    "label_distinct": 22669,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {},
+    "distinct_sequences": 65536,
+    "numeric_score_range": [
+      0.5,
+      1.283526699
+    ],
+    "scored_mutant_rows_before_model_missingness": 65536,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Li_2016_tRNA.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 4007,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "de57dcb3df153c0a4e8fc9d44d7d6120eae0c41d8dc39aed455cbce2633d2917",
+    "bytes": 2662109,
+    "label_counts": null,
+    "label_distinct": 4006,
+    "length_min": 636,
+    "length_max": 636,
+    "missing": {},
+    "distinct_sequences": 4007,
+    "numeric_score_range": [
+      -1.6666248625,
+      0.333992586
+    ],
+    "scored_mutant_rows_before_model_missingness": 4007,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/MLAC_ECOLI_MacRae_2023.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 12464,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "cbc10b94060ef10402ff79bc997151557108874f926f99dc53bc9e1c8efc6e7f",
+    "bytes": 24834582,
+    "label_counts": null,
+    "label_distinct": 6268,
+    "length_min": 1971,
+    "length_max": 1971,
+    "missing": {},
+    "distinct_sequences": 12464,
+    "numeric_score_range": [
+      0.006,
+      0.9965
+    ],
+    "scored_mutant_rows_before_model_missingness": 12464,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/MTHR_HUMAN_Weile_2021.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 74942,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "313afdcacc9d9bc9414c8e5aeb6ff83f1cad933674d8d54fd6a52d76dfc1d198",
+    "bytes": 14470092,
+    "label_counts": null,
+    "label_distinct": 41287,
+    "length_min": 152,
+    "length_max": 152,
+    "missing": {},
+    "distinct_sequences": 74942,
+    "numeric_score_range": [
+      -9.486980292,
+      2.883629092266328
+    ],
+    "scored_mutant_rows_before_model_missingness": 74942,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/McRae_2024_5tu_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 47503,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "9d04536ddd116aa3721e155107873d2a4ea652584d1fcc5e3a0ba90e144566ae",
+    "bytes": 8014182,
+    "label_counts": null,
+    "label_distinct": 39043,
+    "length_min": 135,
+    "length_max": 135,
+    "missing": {},
+    "distinct_sequences": 47503,
+    "numeric_score_range": [
+      -8.937278479,
+      3.411766022537047
+    ],
+    "scored_mutant_rows_before_model_missingness": 47503,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/McRae_2024_t1_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 3421,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c41cd7f55bdbdbd05b0f214098374ed7e67f5e39bb1d1260c0355a9051f7eab1",
+    "bytes": 930197,
+    "label_counts": null,
+    "label_distinct": 3421,
+    "length_min": 195,
+    "length_max": 195,
+    "missing": {},
+    "distinct_sequences": 3421,
+    "numeric_score_range": [
+      -4.554890605593245,
+      1.2589763245853112
+    ],
+    "scored_mutant_rows_before_model_missingness": 3421,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/OBSCN_HUMAN_Tsuboyama_2023_1V1C.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 6396,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "d8c0c9210be2c82d1daf37820690b6e7dba2e10e0b0e9f266f330a468d5408da",
+    "bytes": 7192514,
+    "label_counts": null,
+    "label_distinct": 6357,
+    "length_min": 1092,
+    "length_max": 1092,
+    "missing": {},
+    "distinct_sequences": 6396,
+    "numeric_score_range": [
+      -0.22454578775723,
+      0.444889371424248
+    ],
+    "scored_mutant_rows_before_model_missingness": 6396,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/OXDA_RHOTO_Vanella_2023_activity.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1048,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "9d8cccfe7041f902b065aab040dd66f5e05c5b590fa6af0298693a17a3dc7cb4",
+    "bytes": 1262577,
+    "label_counts": null,
+    "label_distinct": 1048,
+    "length_min": 1182,
+    "length_max": 1182,
+    "missing": {},
+    "distinct_sequences": 1048,
+    "numeric_score_range": [
+      -1.49239895273,
+      3.95175181197
+    ],
+    "scored_mutant_rows_before_model_missingness": 1048,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/P53_HUMAN_Kotler_2018.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1305,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e1cbe42618844f16467a2a894a56060a5f49f9d89871c4b7eed0921097c23c98",
+    "bytes": 373899,
+    "label_counts": null,
+    "label_distinct": 1305,
+    "length_min": 213,
+    "length_max": 213,
+    "missing": {},
+    "distinct_sequences": 1305,
+    "numeric_score_range": [
+      -3.3298582536173016,
+      1.0998623138488153
+    ],
+    "scored_mutant_rows_before_model_missingness": 1305,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/PKN1_HUMAN_Tsuboyama_2023_1URF.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 16897,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "081a827692438d8f6c351612a4fc7d8a992f50dbf3cce54120ce1912a6d89661",
+    "bytes": 46185173,
+    "label_counts": null,
+    "label_distinct": 16424,
+    "length_min": 2700,
+    "length_max": 2700,
+    "missing": {},
+    "distinct_sequences": 16897,
+    "numeric_score_range": [
+      -8.882119702851849,
+      2.5473933798814303
+    ],
+    "scored_mutant_rows_before_model_missingness": 16897,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/POLG_DEN26_Suphatrakul_2023.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 6287,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1ed62f79d89f55c10e82c88e91bb8c1b75c3df7fb45596f65d89b594a28dbe38",
+    "bytes": 1656697,
+    "label_counts": null,
+    "label_distinct": 6287,
+    "length_min": 159,
+    "length_max": 159,
+    "missing": {},
+    "distinct_sequences": 6285,
+    "numeric_score_range": [
+      -4.899673927121792,
+      1.0358621256280545
+    ],
+    "scored_mutant_rows_before_model_missingness": 6287,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/POLG_PESV_Tsuboyama_2023_2MXD.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1616,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "07db56354a509d50d31fe6d7eaf02afcb5171d7ee0c1997ff611d2358551b1fa",
+    "bytes": 502664,
+    "label_counts": null,
+    "label_distinct": 1616,
+    "length_min": 204,
+    "length_max": 204,
+    "missing": {},
+    "distinct_sequences": 1616,
+    "numeric_score_range": [
+      -2.332697537784608,
+      3.125428981086977
+    ],
+    "scored_mutant_rows_before_model_missingness": 1616,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/PSAE_PICP2_Tsuboyama_2023_1PSE.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 7260,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "bf8ba0af35dfeb083fcc4e3c891853308c0d3b5b5fb4966e4d8981f7bfacbc44",
+    "bytes": 8997496,
+    "label_counts": null,
+    "label_distinct": 7230,
+    "length_min": 1212,
+    "length_max": 1212,
+    "missing": {},
+    "distinct_sequences": 7260,
+    "numeric_score_range": [
+      -5.754822338999992,
+      2.817850545
+    ],
+    "scored_mutant_rows_before_model_missingness": 7260,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/PTEN_HUMAN_Mighell_2018.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 16383,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "6f02290ddb7c7ecfe6271d7c768b1629b7067ec17433bb1540da95c02f9f746e",
+    "bytes": 3975199,
+    "label_counts": null,
+    "label_distinct": 16381,
+    "length_min": 197,
+    "length_max": 197,
+    "missing": {},
+    "distinct_sequences": 16383,
+    "numeric_score_range": [
+      0.000985379,
+      1.01099515
+    ],
+    "scored_mutant_rows_before_model_missingness": 16383,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Peri_2022_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 186,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "797438688ce17055440e43627e399b85bcd589c982b6b6a914fb6396628566d7",
+    "bytes": 18760,
+    "label_counts": null,
+    "label_distinct": 145,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 162,
+    "numeric_score_range": [
+      0.00072,
+      0.10681
+    ],
+    "scored_mutant_rows_before_model_missingness": 186,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Pitt_2010_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 697,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8d58be0dfa7915b33299374244bc7381a5d85794bc6d194a97889e05e1010d85",
+    "bytes": 1255930,
+    "label_counts": null,
+    "label_distinct": 696,
+    "length_min": 1770,
+    "length_max": 1770,
+    "missing": {},
+    "distinct_sequences": 697,
+    "numeric_score_range": [
+      -7.0,
+      0.4623365403333332
+    ],
+    "scored_mutant_rows_before_model_missingness": 697,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Q837P4_ENTFA_Meier_2023.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 5725,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "66c29f1c1cffc29f2400ce3724e3070c39085d1f9b98fed819c23c86cf5dfa68",
+    "bytes": 5435441,
+    "label_counts": null,
+    "label_distinct": 5725,
+    "length_min": 918,
+    "length_max": 918,
+    "missing": {},
+    "distinct_sequences": 5725,
+    "numeric_score_range": [
+      -0.11426433994886,
+      1.04645565780245
+    ],
+    "scored_mutant_rows_before_model_missingness": 5725,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/R1AB_SARS2_Flynn_2022.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 2401,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "24138861f03dcadf7aefc3687e033f39f17a80d6cdfba13163223b1ad34744a3",
+    "bytes": 615651,
+    "label_counts": null,
+    "label_distinct": 2401,
+    "length_min": 189,
+    "length_max": 189,
+    "missing": {},
+    "distinct_sequences": 2396,
+    "numeric_score_range": [
+      -5.142998097936452,
+      0.7512166449361235
+    ],
+    "scored_mutant_rows_before_model_missingness": 2401,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/RCRO_LAMBD_Tsuboyama_2023_1ORC.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 12003,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "f810491d8d34faa146ba2f648740881a8c0940e736fb3552053f645f4b979bb1",
+    "bytes": 27659763,
+    "label_counts": null,
+    "label_distinct": 11252,
+    "length_min": 2271,
+    "length_max": 2271,
+    "missing": {},
+    "distinct_sequences": 12003,
+    "numeric_score_range": [
+      -2.82454165604271,
+      1.10658666247271
+    ],
+    "scored_mutant_rows_before_model_missingness": 12003,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/RDRP_I33A0_Li_2023.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 4277,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "f680ccc3fe37895ccaeb3da6a3ed011b33cb71223243c40c752d478691101eaf",
+    "bytes": 3023220,
+    "label_counts": null,
+    "label_distinct": 4277,
+    "length_min": 681,
+    "length_max": 681,
+    "missing": {},
+    "distinct_sequences": 4277,
+    "numeric_score_range": [
+      -3.146097942,
+      0.337495458
+    ],
+    "scored_mutant_rows_before_model_missingness": 4277,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/RNC_ECOLI_Weeks_2023.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 33930,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "452f8c565b24b34181aca5bdcbc831ffc12f60c4ca5c860b64569e9b703c37df",
+    "bytes": 3773378,
+    "label_counts": null,
+    "label_distinct": 2809,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 33930,
+    "numeric_score_range": [
+      0.0,
+      1.59708538
+    ],
+    "scored_mutant_rows_before_model_missingness": 33930,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Roberts_2023_HDV_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 21321,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "54e3bcf265ffdffef9198cd3bc73c046bab49e8887ecc8215f845a7152e8d8df",
+    "bytes": 1994780,
+    "label_counts": null,
+    "label_distinct": 21307,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 21321,
+    "numeric_score_range": [
+      0.0,
+      1.106220252
+    ],
+    "scored_mutant_rows_before_model_missingness": 21321,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Roberts_2023_cepeb3_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 9045,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "fbc2d67320fcccb87155e143f14529d9987d69ee25d7e7283a34968862edf068",
+    "bytes": 627545,
+    "label_counts": null,
+    "label_distinct": 9045,
+    "length_min": 45,
+    "length_max": 45,
+    "missing": {},
+    "distinct_sequences": 9045,
+    "numeric_score_range": [
+      0.146994217,
+      2.169776247
+    ],
+    "scored_mutant_rows_before_model_missingness": 9045,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Roberts_2023_hh_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 22578,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "94e8ce48327fc648760a4cf5b74e5c0da89ab1e318e86cd32a52226f169a31b4",
+    "bytes": 2157253,
+    "label_counts": null,
+    "label_distinct": 22069,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {},
+    "distinct_sequences": 22578,
+    "numeric_score_range": [
+      0.0,
+      1.853688299
+    ],
+    "scored_mutant_rows_before_model_missingness": 22578,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Roberts_2023_hp_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 10296,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c3ebf6911412ad15ea3b23e6883bd7b3919d9157b54a2b9beb88a1d2ee271b37",
+    "bytes": 745631,
+    "label_counts": null,
+    "label_distinct": 10295,
+    "length_min": 48,
+    "length_max": 48,
+    "missing": {},
+    "distinct_sequences": 10296,
+    "numeric_score_range": [
+      0.0,
+      1.608097253
+    ],
+    "scored_mutant_rows_before_model_missingness": 10296,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Roberts_2023_tw_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 3802,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5d7fa3bd9626fbd6987ba84930e0c8abe04a74c7972856a811804e0a518a4f56",
+    "bytes": 14611483,
+    "label_counts": null,
+    "label_distinct": 451,
+    "length_min": 3822,
+    "length_max": 3822,
+    "missing": {},
+    "distinct_sequences": 3802,
+    "numeric_score_range": [
+      -4.84,
+      0.3
+    ],
+    "scored_mutant_rows_before_model_missingness": 3802,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/SPIKE_SARS2_Starr_2020_binding.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 3485,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "069f04b0dc088949f9b411d27e6d24966955866f2a065226c4c1943418533620",
+    "bytes": 996799,
+    "label_counts": null,
+    "label_distinct": 3485,
+    "length_min": 180,
+    "length_max": 180,
+    "missing": {},
+    "distinct_sequences": 3484,
+    "numeric_score_range": [
+      -5.0028373381716715,
+      0.9479893458806572
+    ],
+    "scored_mutant_rows_before_model_missingness": 3485,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/SPTN1_CHICK_Tsuboyama_2023_1TUD.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1663,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ff166ca23f60fbbd33975e3dd3473f14299fe9dfbe4e1c780e74834d4b76416f",
+    "bytes": 383518,
+    "label_counts": null,
+    "label_distinct": 1663,
+    "length_min": 144,
+    "length_max": 144,
+    "missing": {},
+    "distinct_sequences": 1663,
+    "numeric_score_range": [
+      -3.969136126877321,
+      1.0192090201333586
+    ],
+    "scored_mutant_rows_before_model_missingness": 1663,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/SR43C_ARATH_Tsuboyama_2023_2N88.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1700,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7d103e67f1e0f438069198cd131e1a3e914e8c42358d6ee38127de1e2cc704ee",
+    "bytes": 563743,
+    "label_counts": null,
+    "label_distinct": 1700,
+    "length_min": 306,
+    "length_max": 306,
+    "missing": {},
+    "distinct_sequences": 1700,
+    "numeric_score_range": [
+      -0.608227062,
+      1.669742052
+    ],
+    "scored_mutant_rows_before_model_missingness": 1700,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/SUMO1_HUMAN_Weile_2017.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 63430,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c6c14d024da50bf9f5f31d8d9773bc674b73d9e8c20158f10bcda9d140b7a8b4",
+    "bytes": 29720631,
+    "label_counts": null,
+    "label_distinct": 62524,
+    "length_min": 425,
+    "length_max": 425,
+    "missing": {},
+    "distinct_sequences": 63430,
+    "numeric_score_range": [
+      -6.086246248,
+      2.295283886
+    ],
+    "scored_mutant_rows_before_model_missingness": 63430,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Soo_2021_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 1577,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ffd808dcf0ef4cfe0ed7580176cf956c5c8bfe10fdfe21ff187f980b8f2e8dad",
+    "bytes": 452933,
+    "label_counts": null,
+    "label_distinct": 1577,
+    "length_min": 258,
+    "length_max": 258,
+    "missing": {},
+    "distinct_sequences": 1577,
+    "numeric_score_range": [
+      -0.633169647703,
+      1.0880162353799998
+    ],
+    "scored_mutant_rows_before_model_missingness": 1577,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/TAT_HV1BR_Fernandes_2016.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 417,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c991518f452077d8745193098693bed6f22516d48b6351ae236bf8a173f57a29",
+    "bytes": 43251,
+    "label_counts": null,
+    "label_distinct": 379,
+    "length_min": 82,
+    "length_max": 82,
+    "missing": {},
+    "distinct_sequences": 417,
+    "numeric_score_range": [
+      -5.37886378,
+      13.28914358
+    ],
+    "scored_mutant_rows_before_model_missingness": 417,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Tome_2014_GFP_aptamer.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 2652,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c141e9b672d210a98344bee448b567b80329313b32d010321654c4a5ddb0db93",
+    "bytes": 251229,
+    "label_counts": null,
+    "label_distinct": 2652,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 2652,
+    "numeric_score_range": [
+      -4.690112937,
+      0.841038935
+    ],
+    "scored_mutant_rows_before_model_missingness": 2652,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Tome_2014_NELFE_aptamer.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 111417,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "255e390184dc1007256a5912be13a5a7a3853e058aa720bb62f0a8ae4ed8aaed",
+    "bytes": 12050201,
+    "label_counts": null,
+    "label_distinct": 156,
+    "length_min": 81,
+    "length_max": 81,
+    "missing": {},
+    "distinct_sequences": 111417,
+    "numeric_score_range": [
+      0.0,
+      1.73
+    ],
+    "scored_mutant_rows_before_model_missingness": 111417,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Zhang_2020_cpeb3_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 61393,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c2e3bd80d5a03e78d9e31b7119a53af4bcd2b96dfd5380d7e85b02c1309507df",
+    "bytes": 10164162,
+    "label_counts": null,
+    "label_distinct": 385,
+    "length_min": 140,
+    "length_max": 140,
+    "missing": {},
+    "distinct_sequences": 61393,
+    "numeric_score_range": [
+      0.0,
+      5.92
+    ],
+    "scored_mutant_rows_before_model_missingness": 61393,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Zhang_2024_OR4K15_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 69583,
+    "columns": [
+      "mutant",
+      "sequence",
+      "DMS_score"
+    ],
+    "sha256": "636a22b979b66ceffe61804a087e7bf5e092478ea325f96181ae883f8bed290d",
+    "bytes": 11886333,
+    "label_counts": null,
+    "label_distinct": 412,
+    "length_min": 146,
+    "length_max": 146,
+    "missing": {},
+    "distinct_sequences": 69583,
+    "numeric_score_range": [
+      0.0,
+      9.19
+    ],
+    "scored_mutant_rows_before_model_missingness": 69583,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Zhang_2024_line1_full_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 149710,
+    "columns": [
+      "mutant",
+      "sequence",
+      "DMS_score"
+    ],
+    "sha256": "211f3af0b55c1316f5ec5d6343d85f7a6b8730621c361f36f9ad836da5783020",
+    "bytes": 10774271,
+    "label_counts": null,
+    "label_distinct": 474,
+    "length_min": 46,
+    "length_max": 46,
+    "missing": {},
+    "distinct_sequences": 149710,
+    "numeric_score_range": [
+      0.0,
+      36.81
+    ],
+    "scored_mutant_rows_before_model_missingness": 149710,
+    "archive": "fitness_processed_assays",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip",
+    "archive_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
+    "member": "assays/Zhang_2024_line1_mini_ribozyme.csv",
+    "sequence_column": "sequence"
+  },
+  {
+    "rows": 5874,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8783d59bec3bd12eee599995037a1e87bc21e3357091e1165209307d907516f6",
+    "bytes": 576761,
+    "label_counts": null,
+    "label_distinct": 4125,
+    "length_min": 74,
+    "length_max": 74,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 5874,
+    "numeric_score_range": [
+      1e-06,
+      0.150862988
+    ],
+    "scored_mutant_rows_before_model_missingness": 5873,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Andreasson_2020_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 17056,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "3ecf9b98a2b3467a347eb63d9bd6e48a5f4915d9c1da54806160c4fa1ce2d4fa",
+    "bytes": 1607784,
+    "label_counts": null,
+    "label_distinct": 10212,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 17056,
+    "numeric_score_range": [
+      0.004926108,
+      0.956
+    ],
+    "scored_mutant_rows_before_model_missingness": 17056,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Beck_2022_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3340,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1ad0ed58560a9128700f3f7cb2fb7d78b92b9e169d26cd8a56308328342ce3b9",
+    "bytes": 380276,
+    "label_counts": null,
+    "label_distinct": 3340,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 3340,
+    "numeric_score_range": [
+      -0.862634597,
+      0.09085339
+    ],
+    "scored_mutant_rows_before_model_missingness": 3339,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Domingo_2018_tRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 20393,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ae9add9e883fc30e5cfd8b1ec3aa6c00380a289d23d2546070c3c688fe8f785e",
+    "bytes": 3250844,
+    "label_counts": null,
+    "label_distinct": 3308,
+    "length_min": 132,
+    "length_max": 132,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 20393,
+    "numeric_score_range": [
+      0.008372,
+      1.248
+    ],
+    "scored_mutant_rows_before_model_missingness": 20392,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Guy_2014_tRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "49eb8238da960f0bf9aed4ee68f64644bc1d02251c36cc63054776062404f165",
+    "bytes": 179210,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.831339938,
+      628.9341065
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Janzen_2022_fam1a1_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "563abb42a776e2fc50f666fdedfdc6bd26de61773ad9ff7e2560ba1f6d865129",
+    "bytes": 179206,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.349734679,
+      245.2236336
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Janzen_2022_fam1b1_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5944d93cc130e1063980a3c4865e61805e841576b0cfe90c50ad5ce2442418e9",
+    "bytes": 179288,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      3.240672966,
+      1213.621332
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Janzen_2022_fam21_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "0d0eca8e3c825d5272163f68d5d1a47affc19448f5fa1b8f9f372bee59225e33",
+    "bytes": 179221,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.65649757,
+      1309.993422
+    ],
+    "scored_mutant_rows_before_model_missingness": 1563,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Janzen_2022_fam22_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "aeec0b4ab9a5ece4bba508c4d29eef4f1d6a25547dbee27d561ffaf2e89f3a0b",
+    "bytes": 179228,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.557078184,
+      68.93041376
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Janzen_2022_fam31_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13533,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e16defe38cb616777a4442593b7227f909235d7fb89324a6b89a5cce49e68a30",
+    "bytes": 1193821,
+    "label_counts": null,
+    "label_distinct": 8775,
+    "length_min": 63,
+    "length_max": 63,
+    "missing": {},
+    "distinct_sequences": 13533,
+    "numeric_score_range": [
+      -12.03549535,
+      10.46328729
+    ],
+    "scored_mutant_rows_before_model_missingness": 13533,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Julien_2016_mRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4448,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "74f6b54ffdac4656dbb8c0065ed8382d76b9318d01873b32d27e59cdfc516d09",
+    "bytes": 606613,
+    "label_counts": null,
+    "label_distinct": 4414,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 4429,
+    "numeric_score_range": [
+      0.000362639,
+      6.549092636397955
+    ],
+    "scored_mutant_rows_before_model_missingness": 4447,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Ke_2017_mRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 7
+  },
+  {
+    "rows": 204,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a5c08ff69e5923009711b1215f14a71d523882619a5136ff381c5623f8c93885",
+    "bytes": 58211,
+    "label_counts": null,
+    "label_distinct": 204,
+    "length_min": 247,
+    "length_max": 247,
+    "missing": {},
+    "distinct_sequences": 204,
+    "numeric_score_range": [
+      0.005481597,
+      0.3607147139944837
+    ],
+    "scored_mutant_rows_before_model_missingness": 204,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Kobori_2015_ribozyme_j12_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 204,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8b1e0bfd1274c139aa415d31f8f515835c2feccb07f2ff6cfeb6f6960348302f",
+    "bytes": 51037,
+    "label_counts": null,
+    "label_distinct": 203,
+    "length_min": 207,
+    "length_max": 207,
+    "missing": {},
+    "distinct_sequences": 204,
+    "numeric_score_range": [
+      0.004514673,
+      0.7138613861386138
+    ],
+    "scored_mutant_rows_before_model_missingness": 204,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Kobori_2015_ribozyme_p4_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 819,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "02bf5b74aa37f3d92d0bb398a02de88e3643f1efffd2cc8d8062831aad02aa50",
+    "bytes": 108497,
+    "label_counts": null,
+    "label_distinct": 600,
+    "length_min": 94,
+    "length_max": 94,
+    "missing": {},
+    "distinct_sequences": 819,
+    "numeric_score_range": [
+      0.0,
+      0.9205397301349324
+    ],
+    "scored_mutant_rows_before_model_missingness": 819,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Kobori_2015_ribozyme_tw_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13107,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "bf9a2baa5d2e78c62d9c5afc17e9a2927f73a9c77c72ee377f9bb5ff35aa4b09",
+    "bytes": 3055398,
+    "label_counts": null,
+    "label_distinct": 13072,
+    "length_min": 177,
+    "length_max": 177,
+    "missing": {},
+    "distinct_sequences": 13107,
+    "numeric_score_range": [
+      0.066225166,
+      0.9304347826086956
+    ],
+    "scored_mutant_rows_before_model_missingness": 13107,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Kobori_2018_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 52429,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "243fa033a3606ab58678a5b77cd43a5fec78e65199b86c500ae467058c91ff40",
+    "bytes": 5232848,
+    "label_counts": null,
+    "label_distinct": 18507,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 52429,
+    "numeric_score_range": [
+      0.5,
+      1.283526699
+    ],
+    "scored_mutant_rows_before_model_missingness": 52428,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Li_2016_tRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13107,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "fd460dc7c9b2546f031850b643f9e442dd73b9df783d262b7eb83e7dff731f7e",
+    "bytes": 3345619,
+    "label_counts": null,
+    "label_distinct": 13105,
+    "length_min": 197,
+    "length_max": 197,
+    "missing": {},
+    "distinct_sequences": 13107,
+    "numeric_score_range": [
+      0.000985379,
+      1.010995149757985
+    ],
+    "scored_mutant_rows_before_model_missingness": 13107,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Peri_2022_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 148,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "3f9306ab936e78762c4ec981c730dc1e635b1c5101ab3925d15a055cff0bec9d",
+    "bytes": 14930,
+    "label_counts": null,
+    "label_distinct": 122,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 133,
+    "numeric_score_range": [
+      0.00072,
+      0.0545
+    ],
+    "scored_mutant_rows_before_model_missingness": 148,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Pitt_2010_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 6
+  },
+  {
+    "rows": 27144,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7dbc9027d36fe8c7e9668458f076ef19dc0d9f0d77fcf81c228af5492bf29be8",
+    "bytes": 2790220,
+    "label_counts": null,
+    "label_distinct": 427,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 27144,
+    "numeric_score_range": [
+      4.0,
+      438152.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 27143,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Roberts_2023_HDV_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 17057,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b7635273251561fbaddcbbb6f55dfed0ba70e164f63ca5f3e9b766981c8d21c1",
+    "bytes": 1595924,
+    "label_counts": null,
+    "label_distinct": 17047,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 17057,
+    "numeric_score_range": [
+      0.0,
+      1.106220252
+    ],
+    "scored_mutant_rows_before_model_missingness": 17056,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Roberts_2023_cepeb3_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 7236,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a003cca8045cf22309eabf5f9c13577107a68dfb20e10fd7958eb2e4abbd04c6",
+    "bytes": 501991,
+    "label_counts": null,
+    "label_distinct": 7236,
+    "length_min": 45,
+    "length_max": 45,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 7236,
+    "numeric_score_range": [
+      0.146994217,
+      2.169776247
+    ],
+    "scored_mutant_rows_before_model_missingness": 7235,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Roberts_2023_hh_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 18063,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b99eebf32278b2352f85c581618a153e2efd20ae900401ae2aaf181e378cdd57",
+    "bytes": 1726027,
+    "label_counts": null,
+    "label_distinct": 17704,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 18063,
+    "numeric_score_range": [
+      0.0,
+      1.853688299
+    ],
+    "scored_mutant_rows_before_model_missingness": 18062,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Roberts_2023_hp_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 8237,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c5bf51028472eadcd8c86e19a3686859d3cebb7ecdb6e3a9e8807adbe058e7d7",
+    "bytes": 596520,
+    "label_counts": null,
+    "label_distinct": 8236,
+    "length_min": 48,
+    "length_max": 48,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 8237,
+    "numeric_score_range": [
+      0.0,
+      1.608097253
+    ],
+    "scored_mutant_rows_before_model_missingness": 8236,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Roberts_2023_tw_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 51216,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5734d99e152d26189be16c79db91e095ad79cd7d3650f8c36ccc52d1bbd35688",
+    "bytes": 23992059,
+    "label_counts": null,
+    "label_distinct": 50056,
+    "length_min": 425,
+    "length_max": 425,
+    "missing": {
+      "DMS_score": 465,
+      "mutant": 1
+    },
+    "distinct_sequences": 51216,
+    "numeric_score_range": [
+      -6.086246248,
+      2.177159084
+    ],
+    "scored_mutant_rows_before_model_missingness": 50750,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Soo_2021_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 333,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "dccc3a736007074b1cae912cfc524b13f93531f1814b3192081bfdce0f9c1677",
+    "bytes": 34528,
+    "label_counts": null,
+    "label_distinct": 299,
+    "length_min": 82,
+    "length_max": 82,
+    "missing": {},
+    "distinct_sequences": 333,
+    "numeric_score_range": [
+      -5.37886378,
+      13.28914358
+    ],
+    "scored_mutant_rows_before_model_missingness": 333,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Tome_2014_GFP_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 2121,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7a542ae063e8753c1ecfd452fd2138031a06c9ef167fb136a289ce50c9dae71c",
+    "bytes": 200934,
+    "label_counts": null,
+    "label_distinct": 2121,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 2121,
+    "numeric_score_range": [
+      -4.690112937,
+      0.841038935
+    ],
+    "scored_mutant_rows_before_model_missingness": 2121,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Tome_2014_NELFE_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 165,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "602a4704f091bc6c49d1b0bd1cd3323fee7836945eee636eec295fdd52d9a9a1",
+    "bytes": 49507,
+    "label_counts": null,
+    "label_distinct": 165,
+    "length_min": 75,
+    "length_max": 75,
+    "missing": {},
+    "distinct_sequences": 165,
+    "numeric_score_range": [
+      1.103113032,
+      6.33899393
+    ],
+    "scored_mutant_rows_before_model_missingness": 165,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Townshend_2015_4nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 570,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8cc6e701b34f3c88e7697b84e3efd4081720bf46f866422569aac74d040b9133",
+    "bytes": 157286,
+    "label_counts": null,
+    "label_distinct": 570,
+    "length_min": 76,
+    "length_max": 76,
+    "missing": {},
+    "distinct_sequences": 570,
+    "numeric_score_range": [
+      0.41025783,
+      22.87664882
+    ],
+    "scored_mutant_rows_before_model_missingness": 570,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Townshend_2015_5nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 2198,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "96a2e13b7ae403917ea319c825cd60aa9dfde648338a0098ce032be091ae49f9",
+    "bytes": 652581,
+    "label_counts": null,
+    "label_distinct": 2198,
+    "length_min": 77,
+    "length_max": 77,
+    "missing": {},
+    "distinct_sequences": 2198,
+    "numeric_score_range": [
+      0.429014475,
+      24.63857859
+    ],
+    "scored_mutant_rows_before_model_missingness": 2198,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Townshend_2015_6nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 7086,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4f6b24a5eac73627611f3dd0ebce05ec871cc57b2271443710976ad28c224d28",
+    "bytes": 2252591,
+    "label_counts": null,
+    "label_distinct": 7086,
+    "length_min": 78,
+    "length_max": 78,
+    "missing": {},
+    "distinct_sequences": 7086,
+    "numeric_score_range": [
+      0.032982283,
+      32.56777141
+    ],
+    "scored_mutant_rows_before_model_missingness": 7086,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Townshend_2015_7nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 19601,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7cf2b9e49ebc496c9312678d746c3ba729b16f3ac8ca3d8249f580ab70968f8f",
+    "bytes": 5858494,
+    "label_counts": null,
+    "label_distinct": 19597,
+    "length_min": 79,
+    "length_max": 79,
+    "missing": {},
+    "distinct_sequences": 19601,
+    "numeric_score_range": [
+      0.021385446,
+      100.3477184
+    ],
+    "scored_mutant_rows_before_model_missingness": 19601,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/train/Townshend_2015_8nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1469,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "72f698d89dd680aaf158062d91a63ecfc49091e664dddcbd465f70b6141de905",
+    "bytes": 144090,
+    "label_counts": null,
+    "label_distinct": 1283,
+    "length_min": 74,
+    "length_max": 74,
+    "missing": {},
+    "distinct_sequences": 1469,
+    "numeric_score_range": [
+      1.06e-06,
+      0.151589221
+    ],
+    "scored_mutant_rows_before_model_missingness": 1469,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Andreasson_2020_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4265,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "67979c0786d854c9f8ea99d4e6c5529ae9fe37550cc71bfcd82cf5abb99747e5",
+    "bytes": 401993,
+    "label_counts": null,
+    "label_distinct": 3507,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 4265,
+    "numeric_score_range": [
+      0.007751938,
+      0.969530103
+    ],
+    "scored_mutant_rows_before_model_missingness": 4265,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Beck_2022_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 836,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "3eba2b3579d746bf468daa4aa2d98a7a0f7ad9243d1a7697421eeb76770a012e",
+    "bytes": 95568,
+    "label_counts": null,
+    "label_distinct": 836,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {},
+    "distinct_sequences": 836,
+    "numeric_score_range": [
+      -0.813708981,
+      0.074984733
+    ],
+    "scored_mutant_rows_before_model_missingness": 836,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Domingo_2018_tRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 5099,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "71d9197cd42f79268fcb78c5f93e15e30142d1673bb3f2edd1567d05b8845fd9",
+    "bytes": 812675,
+    "label_counts": null,
+    "label_distinct": 1821,
+    "length_min": 132,
+    "length_max": 132,
+    "missing": {},
+    "distinct_sequences": 5099,
+    "numeric_score_range": [
+      0.008825,
+      1.206
+    ],
+    "scored_mutant_rows_before_model_missingness": 5099,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Guy_2014_tRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e6092cce3de39206111fe6aab5d148226b62695e73cfecbd0294c6f3e4c4c841",
+    "bytes": 44875,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      2.468344373,
+      364.677891
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Janzen_2022_fam1a1_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "d122840f6ee26b63db95a342977b65bb5722a2634c6bdf605773a6759bfb4712",
+    "bytes": 44871,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      2.119293045,
+      191.8503772
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Janzen_2022_fam1b1_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c5ad8aa23353edecf336f4eae6d7208e91adfcc156fc3c8aea0443ac95189ad8",
+    "bytes": 44816,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      3.454067205,
+      1220.756957
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Janzen_2022_fam21_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "11f55fc3b28e74252ab2c07457ee3c2ef54bb780a8df66387251f081f4951867",
+    "bytes": 44873,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      2.916199132,
+      736.7754285
+    ],
+    "scored_mutant_rows_before_model_missingness": 390,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Janzen_2022_fam22_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5f9528ab4806672ce7cb66dff1f0ad08dfbf3f7f40e6e2b6241d7dce5e3bb0a6",
+    "bytes": 44846,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      3.235747814,
+      66.48539186
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Janzen_2022_fam31_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3384,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a243c4c8c5f947b132619234019db429d52ad8abcb43af71c1b65bb4281788ee",
+    "bytes": 298468,
+    "label_counts": null,
+    "label_distinct": 2785,
+    "length_min": 63,
+    "length_max": 63,
+    "missing": {},
+    "distinct_sequences": 3384,
+    "numeric_score_range": [
+      -11.84315294,
+      4.435892943
+    ],
+    "scored_mutant_rows_before_model_missingness": 3384,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Julien_2016_mRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1112,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "53103a4524a6349b15010b1079faa4ad0aabab3685a915bdb129de062f71cb54",
+    "bytes": 152484,
+    "label_counts": null,
+    "label_distinct": 1112,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 1112,
+    "numeric_score_range": [
+      0.000480571,
+      6.293730902147372
+    ],
+    "scored_mutant_rows_before_model_missingness": 1112,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Ke_2017_mRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 7
+  },
+  {
+    "rows": 52,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b71217c01f112268f2e8820aacd667738450f3563283083dff772515c7112426",
+    "bytes": 14903,
+    "label_counts": null,
+    "label_distinct": 52,
+    "length_min": 247,
+    "length_max": 247,
+    "missing": {},
+    "distinct_sequences": 52,
+    "numeric_score_range": [
+      0.0143448275862068,
+      0.2782817046037994
+    ],
+    "scored_mutant_rows_before_model_missingness": 52,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Kobori_2015_ribozyme_j12_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 52,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1a2eff78098f8ef5fcce2fb1ca1be943ced90d762a42b807d5456e717a6e3dd2",
+    "bytes": 13021,
+    "label_counts": null,
+    "label_distinct": 52,
+    "length_min": 207,
+    "length_max": 207,
+    "missing": {},
+    "distinct_sequences": 52,
+    "numeric_score_range": [
+      0.005639098,
+      0.2526427061310782
+    ],
+    "scored_mutant_rows_before_model_missingness": 52,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Kobori_2015_ribozyme_p4_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 205,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "6fd9527815dd8c57e92e52314ea5644ad4981504f1e0739892728ebca77e961c",
+    "bytes": 27192,
+    "label_counts": null,
+    "label_distinct": 163,
+    "length_min": 94,
+    "length_max": 94,
+    "missing": {},
+    "distinct_sequences": 205,
+    "numeric_score_range": [
+      0.0,
+      0.5674846625766872
+    ],
+    "scored_mutant_rows_before_model_missingness": 205,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Kobori_2015_ribozyme_tw_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3277,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "18f6fe1abd77fc91fbda7c1640b295c1e092acd649b8e4e858938f27e923acad",
+    "bytes": 764055,
+    "label_counts": null,
+    "label_distinct": 3274,
+    "length_min": 177,
+    "length_max": 177,
+    "missing": {},
+    "distinct_sequences": 3277,
+    "numeric_score_range": [
+      0.06268183,
+      0.9071591196559576
+    ],
+    "scored_mutant_rows_before_model_missingness": 3277,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Kobori_2018_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13108,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b7a702335232e6c7d3c598e0ba87501a81fe9aa30f2d694e0574da9ff151508d",
+    "bytes": 1307598,
+    "label_counts": null,
+    "label_distinct": 5207,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {},
+    "distinct_sequences": 13108,
+    "numeric_score_range": [
+      0.5,
+      1.199882609
+    ],
+    "scored_mutant_rows_before_model_missingness": 13108,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Li_2016_tRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3277,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7f42168c5576623199c772ded37031223369bf886e6283f8806a4dd35a48977f",
+    "bytes": 836546,
+    "label_counts": null,
+    "label_distinct": 3277,
+    "length_min": 197,
+    "length_max": 197,
+    "missing": {},
+    "distinct_sequences": 3277,
+    "numeric_score_range": [
+      0.001298261,
+      0.958217533096092
+    ],
+    "scored_mutant_rows_before_model_missingness": 3277,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Peri_2022_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 38,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b12d9b7afb3fae140b05da460b5cac8620cca0c056225036eaa92f78826e0701",
+    "bytes": 3856,
+    "label_counts": {
+      "0.00148": 1,
+      "0.00088": 2,
+      "0.04375": 1,
+      "0.01106": 1,
+      "0.00145": 1,
+      "0.04396": 1,
+      "0.04324": 1,
+      "0.00085": 1,
+      "0.00213": 1,
+      "0.00138": 1,
+      "0.04846": 1,
+      "0.00176": 1,
+      "0.00106": 1,
+      "0.00198": 1,
+      "0.00119": 1,
+      "0.01215": 1,
+      "0.0014": 1,
+      "0.10681": 1,
+      "0.00089": 2,
+      "0.04277": 1,
+      "0.01238": 1,
+      "0.0009": 2,
+      "0.00092": 2,
+      "0.00599": 1,
+      "0.04117": 1,
+      "0.04148": 1,
+      "0.00227": 1,
+      "0.00125": 1,
+      "0.00976": 1,
+      "0.06597": 1,
+      "0.00116": 1,
+      "0.0174": 1,
+      "0.00108": 1,
+      "0.02618": 1
+    },
+    "label_distinct": 34,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 35,
+    "numeric_score_range": [
+      0.00085,
+      0.10681
+    ],
+    "scored_mutant_rows_before_model_missingness": 38,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Pitt_2010_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 6
+  },
+  {
+    "rows": 6787,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8a06c250b091e34adbfc2b3b7936355afd646d70e4342ca263e6a7d1e9bd073e",
+    "bytes": 697607,
+    "label_counts": null,
+    "label_distinct": 232,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 6787,
+    "numeric_score_range": [
+      7.0,
+      8857.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 6787,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Roberts_2023_HDV_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4265,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8f8e9462b83b84df9bf4dc2f865fbad79b67a1758427d2c279429fccc74f1884",
+    "bytes": 398968,
+    "label_counts": null,
+    "label_distinct": 4265,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 4265,
+    "numeric_score_range": [
+      0.0,
+      1.104928548
+    ],
+    "scored_mutant_rows_before_model_missingness": 4265,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Roberts_2023_cepeb3_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1810,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "65c263aaae170428123d2425eade3e7baae3a786eb276fdadd7340974f676fc7",
+    "bytes": 125632,
+    "label_counts": null,
+    "label_distinct": 1810,
+    "length_min": 45,
+    "length_max": 45,
+    "missing": {},
+    "distinct_sequences": 1810,
+    "numeric_score_range": [
+      0.181385564,
+      2.060899754
+    ],
+    "scored_mutant_rows_before_model_missingness": 1810,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Roberts_2023_hh_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4516,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b0996276022e4ad7670f6d5317b252ea30ca64953310c84b5ecba1d25a8d6e8b",
+    "bytes": 431434,
+    "label_counts": null,
+    "label_distinct": 4474,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {},
+    "distinct_sequences": 4516,
+    "numeric_score_range": [
+      0.0,
+      1.660503982
+    ],
+    "scored_mutant_rows_before_model_missingness": 4516,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Roberts_2023_hp_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 2060,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ec647ba6f220b72763a784d2c38490f378ba5655f5f08851ac984ffb4e188089",
+    "bytes": 149196,
+    "label_counts": null,
+    "label_distinct": 2060,
+    "length_min": 48,
+    "length_max": 48,
+    "missing": {},
+    "distinct_sequences": 2060,
+    "numeric_score_range": [
+      0.014781368,
+      1.603861573
+    ],
+    "scored_mutant_rows_before_model_missingness": 2060,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Roberts_2023_tw_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 12804,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "2e3e3347aaa77fb9c01dbe631a1db0c6fdd2dcf7baa7afc6d990139929c90f42",
+    "bytes": 5997759,
+    "label_counts": null,
+    "label_distinct": 12593,
+    "length_min": 425,
+    "length_max": 425,
+    "missing": {
+      "DMS_score": 124
+    },
+    "distinct_sequences": 12804,
+    "numeric_score_range": [
+      -4.997486256,
+      2.295283886
+    ],
+    "scored_mutant_rows_before_model_missingness": 12680,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Soo_2021_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 84,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "2dec36681d155ad8444130d91c8712a3c62104801bf69b08fe9f9d9a1c75b4ed",
+    "bytes": 8749,
+    "label_counts": null,
+    "label_distinct": 81,
+    "length_min": 82,
+    "length_max": 82,
+    "missing": {},
+    "distinct_sequences": 84,
+    "numeric_score_range": [
+      -4.871929545,
+      2.342858633
+    ],
+    "scored_mutant_rows_before_model_missingness": 84,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Tome_2014_GFP_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 531,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "6911ee000b62b12718ec255bebba6ce30fdb138608f63ff44d5dde57ddc22e00",
+    "bytes": 50321,
+    "label_counts": null,
+    "label_distinct": 531,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 531,
+    "numeric_score_range": [
+      -4.582564214,
+      0.507192284
+    ],
+    "scored_mutant_rows_before_model_missingness": 531,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Tome_2014_NELFE_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 42,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "00c4ce36afccffd5e61e7939f13f09f49e91dc915539395428b6652db1961cdc",
+    "bytes": 12625,
+    "label_counts": {
+      "2.066072565": 1,
+      "1.776489289": 1,
+      "1.151561403": 1,
+      "2.575759886": 1,
+      "2.491272947": 1,
+      "2.234313623": 1,
+      "2.004803919": 1,
+      "2.811424048": 1,
+      "1.715268569": 1,
+      "3.342253413": 1,
+      "1.885559276": 1,
+      "2.348848925": 1,
+      "1.437313786": 1,
+      "1.953407747": 1,
+      "1.843114667": 1,
+      "1.479400705": 1,
+      "2.52478484": 1,
+      "1.891942699": 1,
+      "2.382992072": 1,
+      "2.110435434": 1,
+      "3.228043388": 1,
+      "1.295709007": 1,
+      "1.892279522": 1,
+      "2.107815101": 1,
+      "2.837554723": 1,
+      "4.129510594": 1,
+      "2.260288431": 1,
+      "1.682281779": 1,
+      "1.765790907": 1,
+      "2.003432529": 1,
+      "2.478111021": 1,
+      "2.826163411": 1,
+      "2.412348941": 1,
+      "2.152873313": 1,
+      "1.631161528": 1,
+      "1.674337354": 1,
+      "3.117797592": 1,
+      "1.692743943": 1,
+      "1.939742263": 1,
+      "2.098309421": 1,
+      "2.479870551": 1,
+      "2.653032678": 1
+    },
+    "label_distinct": 42,
+    "length_min": 75,
+    "length_max": 75,
+    "missing": {},
+    "distinct_sequences": 42,
+    "numeric_score_range": [
+      1.151561403,
+      4.129510594
+    ],
+    "scored_mutant_rows_before_model_missingness": 42,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Townshend_2015_4nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 143,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "cbd5cd1701570883d7d1ed1034019dbdd47517795d6ad908e678ae0ed6d6fdcb",
+    "bytes": 39481,
+    "label_counts": null,
+    "label_distinct": 143,
+    "length_min": 76,
+    "length_max": 76,
+    "missing": {},
+    "distinct_sequences": 143,
+    "numeric_score_range": [
+      0.586923742,
+      36.22710817
+    ],
+    "scored_mutant_rows_before_model_missingness": 143,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Townshend_2015_5nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 550,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "45a969c0e2e6166a058d54df2884d908c58c4ede4d529daed08c054a051d5fd0",
+    "bytes": 163311,
+    "label_counts": null,
+    "label_distinct": 550,
+    "length_min": 77,
+    "length_max": 77,
+    "missing": {},
+    "distinct_sequences": 550,
+    "numeric_score_range": [
+      0.192402305,
+      14.86244444
+    ],
+    "scored_mutant_rows_before_model_missingness": 550,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Townshend_2015_6nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1772,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "be2364979e28b095bf9e3620fa0b871b8aaf72f2328505d8dd472e49fc02202b",
+    "bytes": 563312,
+    "label_counts": null,
+    "label_distinct": 1772,
+    "length_min": 78,
+    "length_max": 78,
+    "missing": {},
+    "distinct_sequences": 1772,
+    "numeric_score_range": [
+      0.140890978,
+      13.46473915
+    ],
+    "scored_mutant_rows_before_model_missingness": 1772,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Townshend_2015_7nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4901,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "dda06f13a8d366c55a55d9bd26f3094fd79c3bbfb204c4a927bf13909b6783d1",
+    "bytes": 1464858,
+    "label_counts": null,
+    "label_distinct": 4901,
+    "length_min": 79,
+    "length_max": 79,
+    "missing": {},
+    "distinct_sequences": 4901,
+    "numeric_score_range": [
+      0.154266543,
+      42.53693348
+    ],
+    "scored_mutant_rows_before_model_missingness": 4901,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/min_similarity/val/Townshend_2015_8nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 5874,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "64788162af78060de73e100271a3cfded8f3c8b9539da7e2eb9b6e0bfeba2d56",
+    "bytes": 576684,
+    "label_counts": null,
+    "label_distinct": 4139,
+    "length_min": 74,
+    "length_max": 74,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 5874,
+    "numeric_score_range": [
+      1e-06,
+      0.151589221
+    ],
+    "scored_mutant_rows_before_model_missingness": 5873,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Andreasson_2020_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 17056,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a43a340b883b2fabc37f21c84c47d768112ef8495ccbb2e0c00bc7874640181d",
+    "bytes": 1607671,
+    "label_counts": null,
+    "label_distinct": 10170,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 17056,
+    "numeric_score_range": [
+      0.004926108,
+      0.969530103
+    ],
+    "scored_mutant_rows_before_model_missingness": 17056,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Beck_2022_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3340,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a05e7949d05b3fed479c35d7be9cf5b3cee7c6fd0d68e2afb26428c3a6658fa9",
+    "bytes": 381127,
+    "label_counts": null,
+    "label_distinct": 3340,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 3340,
+    "numeric_score_range": [
+      -0.862634597,
+      0.09085339
+    ],
+    "scored_mutant_rows_before_model_missingness": 3339,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Domingo_2018_tRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 20393,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "d28fff14e43bd7b5e3d11ecf84eae5b58526076bf570367e1c598d4db2e5ac2f",
+    "bytes": 3250848,
+    "label_counts": null,
+    "label_distinct": 3337,
+    "length_min": 132,
+    "length_max": 132,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 20393,
+    "numeric_score_range": [
+      0.008372,
+      1.248
+    ],
+    "scored_mutant_rows_before_model_missingness": 20392,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Guy_2014_tRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1b839213c5f36bf7023ffbdc742c8cee4ae0b94c7ae05ff62b3336c4e22d3eec",
+    "bytes": 179217,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.468344373,
+      628.9341065
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Janzen_2022_fam1a1_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1fce2716eab89fc6596361b196ec418e61ee3188ca9aceb24b46d793e51d64bc",
+    "bytes": 179190,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.119293045,
+      245.2236336
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Janzen_2022_fam1b1_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "9504bb1a1d03368f764ae18c3b662a3f6e41c8a865d7b98f1a88d1ea9bb77446",
+    "bytes": 179274,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      3.240672966,
+      1220.756957
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Janzen_2022_fam21_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5482c82f17ecc4c3c4fbfbd02318e4ff5ea4f5ac139a238629f05361b7cd46f1",
+    "bytes": 179224,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      3.050866829,
+      1309.993422
+    ],
+    "scored_mutant_rows_before_model_missingness": 1563,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Janzen_2022_fam22_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1563,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "cbe2785b69c05f27c1387883a7ce0dec112c5f18917161646bc00d600526fe33",
+    "bytes": 179263,
+    "label_counts": null,
+    "label_distinct": 1563,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 1563,
+    "numeric_score_range": [
+      2.557078184,
+      68.93041376
+    ],
+    "scored_mutant_rows_before_model_missingness": 1562,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Janzen_2022_fam31_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13533,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "69a8cc46f75a08be53f8fe0232a147dfa882308a2a86cc7bd112ffe2f71e1e35",
+    "bytes": 1193800,
+    "label_counts": null,
+    "label_distinct": 8794,
+    "length_min": 63,
+    "length_max": 63,
+    "missing": {},
+    "distinct_sequences": 13533,
+    "numeric_score_range": [
+      -12.03549535,
+      4.767697777
+    ],
+    "scored_mutant_rows_before_model_missingness": 13533,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Julien_2016_mRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4448,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "d453f79a9b23aeabf8d9a3d1e8b599a9eb513c66dce146721f771f6c0231e746",
+    "bytes": 607883,
+    "label_counts": null,
+    "label_distinct": 4417,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 4431,
+    "numeric_score_range": [
+      0.000362639,
+      6.293730902147372
+    ],
+    "scored_mutant_rows_before_model_missingness": 4447,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Ke_2017_mRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 8
+  },
+  {
+    "rows": 204,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1050cec7700a4282553ac88642cc2f532ba9b1e6cb54d12e27bebe8468160954",
+    "bytes": 58209,
+    "label_counts": null,
+    "label_distinct": 204,
+    "length_min": 247,
+    "length_max": 247,
+    "missing": {},
+    "distinct_sequences": 204,
+    "numeric_score_range": [
+      0.005481597,
+      0.3607147139944837
+    ],
+    "scored_mutant_rows_before_model_missingness": 204,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Kobori_2015_ribozyme_j12_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 204,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "cbe24d0fdbf5b6c851122ee8e17f6956247a78c6cad572294f8d2eb106e7bca1",
+    "bytes": 51042,
+    "label_counts": null,
+    "label_distinct": 202,
+    "length_min": 207,
+    "length_max": 207,
+    "missing": {},
+    "distinct_sequences": 204,
+    "numeric_score_range": [
+      0.004514673,
+      0.7138613861386138
+    ],
+    "scored_mutant_rows_before_model_missingness": 204,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Kobori_2015_ribozyme_p4_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 819,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b21c47e1d17a93ef207c2894edfb2f5cb3626b4a1d4d030ac6eeb6c4a07be9b7",
+    "bytes": 108506,
+    "label_counts": null,
+    "label_distinct": 596,
+    "length_min": 94,
+    "length_max": 94,
+    "missing": {},
+    "distinct_sequences": 819,
+    "numeric_score_range": [
+      0.0,
+      0.9205397301349324
+    ],
+    "scored_mutant_rows_before_model_missingness": 819,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Kobori_2015_ribozyme_tw_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13107,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "77f402a1c56a4d90805a83a312b86ede92438f7be1c47f98168869e8caff5cd4",
+    "bytes": 3055375,
+    "label_counts": null,
+    "label_distinct": 13066,
+    "length_min": 177,
+    "length_max": 177,
+    "missing": {},
+    "distinct_sequences": 13107,
+    "numeric_score_range": [
+      0.06268183,
+      0.9304347826086956
+    ],
+    "scored_mutant_rows_before_model_missingness": 13107,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Kobori_2018_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 52429,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "d64aac4aa93e3d7d0d20bd0ed48b2c0e11c2944f43c36e53592ea9ab81906ddd",
+    "bytes": 5231544,
+    "label_counts": null,
+    "label_distinct": 18585,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 52429,
+    "numeric_score_range": [
+      0.5,
+      1.283526699
+    ],
+    "scored_mutant_rows_before_model_missingness": 52428,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Li_2016_tRNA_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13107,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "488ef363826e13988421315cb6f27b5e897173656033b37abf18ea11602a4e34",
+    "bytes": 3345823,
+    "label_counts": null,
+    "label_distinct": 13106,
+    "length_min": 197,
+    "length_max": 197,
+    "missing": {},
+    "distinct_sequences": 13107,
+    "numeric_score_range": [
+      0.000985379,
+      1.010995149757985
+    ],
+    "scored_mutant_rows_before_model_missingness": 13107,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Peri_2022_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 148,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "91c467debfbf7e781a5231ee21478fd0934951223eb18ef80f20e1e2fdb1f41f",
+    "bytes": 14936,
+    "label_counts": null,
+    "label_distinct": 118,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 132,
+    "numeric_score_range": [
+      0.00085,
+      0.10681
+    ],
+    "scored_mutant_rows_before_model_missingness": 148,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Pitt_2010_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 6
+  },
+  {
+    "rows": 27144,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "30d0254ebfb4b192ca2c56ff6d3580628b8ce489a357a358ad2a49b8c616f260",
+    "bytes": 2790163,
+    "label_counts": null,
+    "label_distinct": 426,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 27144,
+    "numeric_score_range": [
+      6.0,
+      12687.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 27144,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Roberts_2023_HDV_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 17057,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4f72372ae03f923f26ab37f020767821e4c78a57ed4892f1bc25fb7b6695c0e2",
+    "bytes": 1595932,
+    "label_counts": null,
+    "label_distinct": 17051,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 17057,
+    "numeric_score_range": [
+      0.0,
+      1.106220252
+    ],
+    "scored_mutant_rows_before_model_missingness": 17056,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Roberts_2023_cepeb3_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 7236,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "fe7a2166a02f77f29639795e2a005276c795f6475c1682bb6357827caf563bc6",
+    "bytes": 501979,
+    "label_counts": null,
+    "label_distinct": 7236,
+    "length_min": 45,
+    "length_max": 45,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 7236,
+    "numeric_score_range": [
+      0.146994217,
+      2.169776247
+    ],
+    "scored_mutant_rows_before_model_missingness": 7235,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Roberts_2023_hh_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 18063,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "99c36440014c3b8566b5d6cb5e6538a6f24ec367ff5d64d13d89b8b945501290",
+    "bytes": 1725925,
+    "label_counts": null,
+    "label_distinct": 17707,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 18063,
+    "numeric_score_range": [
+      0.0,
+      1.853688299
+    ],
+    "scored_mutant_rows_before_model_missingness": 18062,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Roberts_2023_hp_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 8237,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e692f590b63045033f80967e0184c31de89954f43429e62a45313dadfd0dd1ca",
+    "bytes": 596513,
+    "label_counts": null,
+    "label_distinct": 8236,
+    "length_min": 48,
+    "length_max": 48,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 8237,
+    "numeric_score_range": [
+      0.0,
+      1.608097253
+    ],
+    "scored_mutant_rows_before_model_missingness": 8236,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Roberts_2023_tw_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 51216,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8eed7a0c75c7c9d85903adb64c4ff2787e8f59917ccafde2629626855cac54c9",
+    "bytes": 23992398,
+    "label_counts": null,
+    "label_distinct": 50057,
+    "length_min": 425,
+    "length_max": 425,
+    "missing": {
+      "DMS_score": 477,
+      "mutant": 1
+    },
+    "distinct_sequences": 51216,
+    "numeric_score_range": [
+      -6.086246248,
+      2.295283886
+    ],
+    "scored_mutant_rows_before_model_missingness": 50738,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Soo_2021_ribozyme_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 333,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1c4de1de6e4eee902f81d00433aec725540d4225c635941069a034d75b0350d9",
+    "bytes": 34543,
+    "label_counts": null,
+    "label_distinct": 299,
+    "length_min": 82,
+    "length_max": 82,
+    "missing": {},
+    "distinct_sequences": 333,
+    "numeric_score_range": [
+      -5.37886378,
+      13.28914358
+    ],
+    "scored_mutant_rows_before_model_missingness": 333,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Tome_2014_GFP_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 2121,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1f37e0517c9b7535fcc21e077f3fb8434b3e913de50156abc1b7708e1c553181",
+    "bytes": 200883,
+    "label_counts": null,
+    "label_distinct": 2121,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 2121,
+    "numeric_score_range": [
+      -4.690112937,
+      0.841038935
+    ],
+    "scored_mutant_rows_before_model_missingness": 2121,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Tome_2014_NELFE_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 165,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "77a04ab6ba39491ba034c237ffbdebdf305d3b33b8eee0649b8838769278406a",
+    "bytes": 49513,
+    "label_counts": null,
+    "label_distinct": 165,
+    "length_min": 75,
+    "length_max": 75,
+    "missing": {},
+    "distinct_sequences": 165,
+    "numeric_score_range": [
+      1.103113032,
+      6.33899393
+    ],
+    "scored_mutant_rows_before_model_missingness": 165,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Townshend_2015_4nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 570,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5966b0e79ace65f1e1bff4dfbdf1afb8d5eae888c76f50472b5f1e3f09277dc5",
+    "bytes": 157281,
+    "label_counts": null,
+    "label_distinct": 570,
+    "length_min": 76,
+    "length_max": 76,
+    "missing": {},
+    "distinct_sequences": 570,
+    "numeric_score_range": [
+      0.41025783,
+      22.87664882
+    ],
+    "scored_mutant_rows_before_model_missingness": 570,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Townshend_2015_5nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 2198,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1b6c54a520ddba1f68c5634582b3370de751aac08c641360ef895dc380989df5",
+    "bytes": 652570,
+    "label_counts": null,
+    "label_distinct": 2198,
+    "length_min": 77,
+    "length_max": 77,
+    "missing": {},
+    "distinct_sequences": 2198,
+    "numeric_score_range": [
+      0.192402305,
+      24.63857859
+    ],
+    "scored_mutant_rows_before_model_missingness": 2198,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Townshend_2015_6nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 7086,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "f4e0cf1959ad5ed27cb9fd4c4687e3cc0633dc5133a8e254b29111563fe4dff5",
+    "bytes": 2252584,
+    "label_counts": null,
+    "label_distinct": 7086,
+    "length_min": 78,
+    "length_max": 78,
+    "missing": {},
+    "distinct_sequences": 7086,
+    "numeric_score_range": [
+      0.032982283,
+      32.56777141
+    ],
+    "scored_mutant_rows_before_model_missingness": 7086,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Townshend_2015_7nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 19601,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "c6ad2ad7c1e2dac9ec5b7adf7e4a02ad5a562777aedfe4a0eae02aacc7355934",
+    "bytes": 5858489,
+    "label_counts": null,
+    "label_distinct": 19593,
+    "length_min": 79,
+    "length_max": 79,
+    "missing": {},
+    "distinct_sequences": 19601,
+    "numeric_score_range": [
+      0.05252351,
+      100.3477184
+    ],
+    "scored_mutant_rows_before_model_missingness": 19601,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/train/Townshend_2015_8nt_aptamer_train.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1469,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "2747f2267cc38bf2d13532563a482f4ae725bfb3f79ad3ea462cafebf89fd22d",
+    "bytes": 144167,
+    "label_counts": null,
+    "label_distinct": 1290,
+    "length_min": 74,
+    "length_max": 74,
+    "missing": {},
+    "distinct_sequences": 1469,
+    "numeric_score_range": [
+      1e-06,
+      0.150862988
+    ],
+    "scored_mutant_rows_before_model_missingness": 1469,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Andreasson_2020_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4265,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "221aded2f60836a0a3ddaa6fc2bb4b2c030cab15d10c0a8ad5986de1d6bc6320",
+    "bytes": 402106,
+    "label_counts": null,
+    "label_distinct": 3495,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 4265,
+    "numeric_score_range": [
+      0.01183432,
+      0.935162095
+    ],
+    "scored_mutant_rows_before_model_missingness": 4265,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Beck_2022_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 836,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "49b469b5f9b4e0a7c0da862e1ec9b727a0124e9684f4968cb0ffa922d6d4dbd8",
+    "bytes": 94717,
+    "label_counts": null,
+    "label_distinct": 836,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {},
+    "distinct_sequences": 836,
+    "numeric_score_range": [
+      -0.726306268,
+      0.024424104
+    ],
+    "scored_mutant_rows_before_model_missingness": 836,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Domingo_2018_tRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 5099,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "883f379221bfa635f60cb37aaaa970c22ce96b6ea2ef19e1d1ce5360ccddc064",
+    "bytes": 812671,
+    "label_counts": null,
+    "label_distinct": 1780,
+    "length_min": 132,
+    "length_max": 132,
+    "missing": {},
+    "distinct_sequences": 5099,
+    "numeric_score_range": [
+      0.008381,
+      1.248
+    ],
+    "scored_mutant_rows_before_model_missingness": 5099,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Guy_2014_tRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "3311727cd3cae30177616d5b3a3934e8a234ca88cde195c413a311b4007aa5c8",
+    "bytes": 44868,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      3.063133857,
+      287.3435174
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Janzen_2022_fam1a1_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5c7c77041f73f8c5cf7a9c97f3871b12d4be6e4cd5507cf052ad6d77afe3bf80",
+    "bytes": 44887,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      2.584418178,
+      240.1640819
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Janzen_2022_fam1b1_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "6c92e55280a8a0182b9a4e070622a9bfea9d23aff14d7ef8e2fbae9df0641378",
+    "bytes": 44830,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      3.367449486,
+      1170.275937
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Janzen_2022_fam21_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "0176f0d783e545ba61c94812e3e5d6afde54702c4fb537871c467fd8b05f98f1",
+    "bytes": 44870,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      2.65649757,
+      896.3102168
+    ],
+    "scored_mutant_rows_before_model_missingness": 390,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Janzen_2022_fam22_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 391,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7ddd64f4b081a76ddebb537047edd485fb4b2902c603f671ae5c5027b58586db",
+    "bytes": 44811,
+    "label_counts": null,
+    "label_distinct": 391,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 391,
+    "numeric_score_range": [
+      2.695600233,
+      66.48539186
+    ],
+    "scored_mutant_rows_before_model_missingness": 391,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Janzen_2022_fam31_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3384,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7d44b834dfd7821db40ad7b896939792dfd0dbe53ae957f50e2b7f786383ce5c",
+    "bytes": 298489,
+    "label_counts": null,
+    "label_distinct": 2782,
+    "length_min": 63,
+    "length_max": 63,
+    "missing": {},
+    "distinct_sequences": 3384,
+    "numeric_score_range": [
+      -11.94648234,
+      10.46328729
+    ],
+    "scored_mutant_rows_before_model_missingness": 3384,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Julien_2016_mRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1112,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "5fd69beb80ad62604da3163b8455062a160200952bae06f7ca91bfe53823307a",
+    "bytes": 151214,
+    "label_counts": null,
+    "label_distinct": 1110,
+    "length_min": 90,
+    "length_max": 90,
+    "missing": {},
+    "distinct_sequences": 1111,
+    "numeric_score_range": [
+      0.000462956,
+      6.549092636397955
+    ],
+    "scored_mutant_rows_before_model_missingness": 1112,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Ke_2017_mRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 8
+  },
+  {
+    "rows": 52,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4939a59d93efc8d2a7577dff482d4451c50b575e255905a7efb8f8d5cd098a60",
+    "bytes": 14905,
+    "label_counts": null,
+    "label_distinct": 52,
+    "length_min": 247,
+    "length_max": 247,
+    "missing": {},
+    "distinct_sequences": 52,
+    "numeric_score_range": [
+      0.008193598,
+      0.2782817046037994
+    ],
+    "scored_mutant_rows_before_model_missingness": 52,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Kobori_2015_ribozyme_j12_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 52,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4667d69ed354bb7197d837dd13cec950b2fb2d41f0f4e375f972502a682f6b55",
+    "bytes": 13016,
+    "label_counts": null,
+    "label_distinct": 52,
+    "length_min": 207,
+    "length_max": 207,
+    "missing": {},
+    "distinct_sequences": 52,
+    "numeric_score_range": [
+      0.005639098,
+      0.2526427061310782
+    ],
+    "scored_mutant_rows_before_model_missingness": 52,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Kobori_2015_ribozyme_p4_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 205,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4467e972a90f07809900c4dc0cd2c9eaf3107a29950c0dccc0f557f9068f252e",
+    "bytes": 27183,
+    "label_counts": null,
+    "label_distinct": 163,
+    "length_min": 94,
+    "length_max": 94,
+    "missing": {},
+    "distinct_sequences": 205,
+    "numeric_score_range": [
+      0.0,
+      0.8540462427745664
+    ],
+    "scored_mutant_rows_before_model_missingness": 205,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Kobori_2015_ribozyme_tw_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3277,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "b4a9b78830625dd5f08c70a98ad10c3adec6142b01db17629b8451fdd172a28d",
+    "bytes": 764078,
+    "label_counts": null,
+    "label_distinct": 3273,
+    "length_min": 177,
+    "length_max": 177,
+    "missing": {},
+    "distinct_sequences": 3277,
+    "numeric_score_range": [
+      0.066225166,
+      0.9245532759761748
+    ],
+    "scored_mutant_rows_before_model_missingness": 3277,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Kobori_2018_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 13108,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "9127c4786396343a6b496de40e4b0e05e034f78a26538959c06c783bc7b301d6",
+    "bytes": 1308902,
+    "label_counts": null,
+    "label_distinct": 5162,
+    "length_min": 72,
+    "length_max": 72,
+    "missing": {},
+    "distinct_sequences": 13108,
+    "numeric_score_range": [
+      0.5,
+      1.268216118
+    ],
+    "scored_mutant_rows_before_model_missingness": 13108,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Li_2016_tRNA_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 3277,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "8c0c90b77929e83f1b3553d276af1ff390f07228b59c4d4aad871ce6e12944a8",
+    "bytes": 836342,
+    "label_counts": null,
+    "label_distinct": 3276,
+    "length_min": 197,
+    "length_max": 197,
+    "missing": {},
+    "distinct_sequences": 3277,
+    "numeric_score_range": [
+      0.001089972,
+      1.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 3277,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Peri_2022_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 38,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e8f07f62965cdd4a5a086513f031472c19421a88008612265be14d4e1896a861",
+    "bytes": 3850,
+    "label_counts": {
+      "0.00732": 1,
+      "0.05374": 1,
+      "0.02023": 1,
+      "0.00162": 2,
+      "0.00122": 1,
+      "0.00756": 1,
+      "0.01048": 1,
+      "0.01188": 1,
+      "0.00753": 1,
+      "0.00176": 2,
+      "0.00886": 1,
+      "0.00124": 1,
+      "0.00098": 1,
+      "0.0023": 1,
+      "0.00072": 1,
+      "0.00872": 1,
+      "0.02841": 1,
+      "0.04278": 1,
+      "0.00132": 1,
+      "0.01555": 1,
+      "0.01286": 1,
+      "0.00316": 1,
+      "0.03777": 1,
+      "0.0009": 2,
+      "0.0045": 1,
+      "0.00258": 1,
+      "0.0421": 1,
+      "0.00173": 1,
+      "0.01258": 1,
+      "0.0025": 1,
+      "0.0483": 1,
+      "0.01474": 1,
+      "0.04434": 1,
+      "0.00108": 1,
+      "0.00224": 1
+    },
+    "label_distinct": 35,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {},
+    "distinct_sequences": 36,
+    "numeric_score_range": [
+      0.00072,
+      0.05374
+    ],
+    "scored_mutant_rows_before_model_missingness": 38,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Pitt_2010_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 6
+  },
+  {
+    "rows": 6787,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "558d6a13a428483e2c7b63c2d93cd5c273ca30a910b97cdfa7a6a1047e863373",
+    "bytes": 697664,
+    "label_counts": null,
+    "label_distinct": 231,
+    "length_min": 87,
+    "length_max": 87,
+    "missing": {
+      "mutant": 1
+    },
+    "distinct_sequences": 6787,
+    "numeric_score_range": [
+      4.0,
+      438152.0
+    ],
+    "scored_mutant_rows_before_model_missingness": 6786,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Roberts_2023_HDV_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4265,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "1b40c649158243d976548ce87c56d32e8eca47773c2ecee3103dcc47ff51a32c",
+    "bytes": 398960,
+    "label_counts": null,
+    "label_distinct": 4263,
+    "length_min": 69,
+    "length_max": 69,
+    "missing": {},
+    "distinct_sequences": 4265,
+    "numeric_score_range": [
+      0.0,
+      1.105027924
+    ],
+    "scored_mutant_rows_before_model_missingness": 4265,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Roberts_2023_cepeb3_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1810,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "2e5ed0026c9b726c3d6d8611c5a21bbd8269f60f398a33f32a8402c5fc6645aa",
+    "bytes": 125644,
+    "label_counts": null,
+    "label_distinct": 1810,
+    "length_min": 45,
+    "length_max": 45,
+    "missing": {},
+    "distinct_sequences": 1810,
+    "numeric_score_range": [
+      0.212300237,
+      2.060899754
+    ],
+    "scored_mutant_rows_before_model_missingness": 1810,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Roberts_2023_hh_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4516,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "94512f96e6741a778349b7111e4a7dbf62759a9cb8f1281a73ace1659681afa4",
+    "bytes": 431536,
+    "label_counts": null,
+    "label_distinct": 4479,
+    "length_min": 71,
+    "length_max": 71,
+    "missing": {},
+    "distinct_sequences": 4516,
+    "numeric_score_range": [
+      0.0,
+      1.78941166
+    ],
+    "scored_mutant_rows_before_model_missingness": 4516,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Roberts_2023_hp_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 2060,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "ce6c090c11a9e3ffe040748635532b68548283cb078211d777c9d5eb5e8ab34e",
+    "bytes": 149203,
+    "label_counts": null,
+    "label_distinct": 2060,
+    "length_min": 48,
+    "length_max": 48,
+    "missing": {},
+    "distinct_sequences": 2060,
+    "numeric_score_range": [
+      0.014781368,
+      1.603861573
+    ],
+    "scored_mutant_rows_before_model_missingness": 2060,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Roberts_2023_tw_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 12804,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "2c57fc616081842bde681e450df76566dc2cb938c2589674d3cb2c55b2077b93",
+    "bytes": 5997420,
+    "label_counts": null,
+    "label_distinct": 12592,
+    "length_min": 425,
+    "length_max": 425,
+    "missing": {
+      "DMS_score": 112
+    },
+    "distinct_sequences": 12804,
+    "numeric_score_range": [
+      -5.454069463,
+      2.177159084
+    ],
+    "scored_mutant_rows_before_model_missingness": 12692,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Soo_2021_ribozyme_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 84,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "7ef2c66770dba7453a98948092cd681630988fd860adc82f80ac5d7fc61f0b4a",
+    "bytes": 8734,
+    "label_counts": null,
+    "label_distinct": 81,
+    "length_min": 82,
+    "length_max": 82,
+    "missing": {},
+    "distinct_sequences": 84,
+    "numeric_score_range": [
+      -4.871929545,
+      2.342858633
+    ],
+    "scored_mutant_rows_before_model_missingness": 84,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Tome_2014_GFP_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 531,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "e67d06f99869806cb1c7f8a3af37bc346f632a484624d1e8a8a0829c779f1dac",
+    "bytes": 50372,
+    "label_counts": null,
+    "label_distinct": 531,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 531,
+    "numeric_score_range": [
+      -4.619732098,
+      0.531025321
+    ],
+    "scored_mutant_rows_before_model_missingness": 531,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Tome_2014_NELFE_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 42,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "2f8c1cfd6b2db5f180fa7745fc07a9834a44868f1f00eafe247184a70dea7fc3",
+    "bytes": 12619,
+    "label_counts": {
+      "1.897382031": 1,
+      "1.4388863": 1,
+      "1.978444759": 1,
+      "2.329049512": 1,
+      "3.362606523": 1,
+      "1.700920384": 1,
+      "3.723362439": 1,
+      "2.846665241": 1,
+      "1.87552044": 1,
+      "1.973818204": 1,
+      "2.223628142": 1,
+      "1.967656033": 1,
+      "1.792393921": 1,
+      "5.078827353": 1,
+      "3.04657485": 1,
+      "2.746994997": 1,
+      "3.050977343": 1,
+      "2.020368056": 1,
+      "1.802912436": 1,
+      "1.844885902": 1,
+      "1.540388962": 1,
+      "2.199737759": 1,
+      "3.343521463": 1,
+      "1.955367108": 1,
+      "2.256624377": 1,
+      "1.94291098": 1,
+      "2.319190199": 1,
+      "2.110760843": 1,
+      "1.95258334": 1,
+      "2.382763468": 1,
+      "2.536556136": 1,
+      "2.018212342": 1,
+      "2.812603218": 1,
+      "2.953404834": 1,
+      "2.810496626": 1,
+      "2.09145072": 1,
+      "2.651478029": 1,
+      "1.804561225": 1,
+      "2.053569233": 1,
+      "2.311160074": 1,
+      "1.267325661": 1,
+      "2.040084533": 1
+    },
+    "label_distinct": 42,
+    "length_min": 75,
+    "length_max": 75,
+    "missing": {},
+    "distinct_sequences": 42,
+    "numeric_score_range": [
+      1.267325661,
+      5.078827353
+    ],
+    "scored_mutant_rows_before_model_missingness": 42,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Townshend_2015_4nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 143,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "d1f739a2f9a2bdc2dec4b5f345b8ebdd6f8ef2a4f5036187adbebdaf6543c95b",
+    "bytes": 39486,
+    "label_counts": null,
+    "label_distinct": 143,
+    "length_min": 76,
+    "length_max": 76,
+    "missing": {},
+    "distinct_sequences": 143,
+    "numeric_score_range": [
+      0.586923742,
+      36.22710817
+    ],
+    "scored_mutant_rows_before_model_missingness": 143,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Townshend_2015_5nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 550,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4b11c167d3fa938b8ae5cca9b469ea5dea527109323ca90301d8c9b571e3bdfb",
+    "bytes": 163322,
+    "label_counts": null,
+    "label_distinct": 550,
+    "length_min": 77,
+    "length_max": 77,
+    "missing": {},
+    "distinct_sequences": 550,
+    "numeric_score_range": [
+      0.508649261,
+      13.48525301
+    ],
+    "scored_mutant_rows_before_model_missingness": 550,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Townshend_2015_6nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 1772,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "4d015c48a026ab2d7c04b59d7638f818a611814708cc43e0bc0fcdb23868042b",
+    "bytes": 563319,
+    "label_counts": null,
+    "label_distinct": 1772,
+    "length_min": 78,
+    "length_max": 78,
+    "missing": {},
+    "distinct_sequences": 1772,
+    "numeric_score_range": [
+      0.081537194,
+      12.0651802
+    ],
+    "scored_mutant_rows_before_model_missingness": 1772,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Townshend_2015_7nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  },
+  {
+    "rows": 4901,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence"
+    ],
+    "sha256": "a72771542d657d4d845af7e295fc76cb400dc15cd0b82009a62371481857f3c2",
+    "bytes": 1464863,
+    "label_counts": null,
+    "label_distinct": 4901,
+    "length_min": 79,
+    "length_max": 79,
+    "missing": {},
+    "distinct_sequences": 4901,
+    "numeric_score_range": [
+      0.021385446,
+      19.35811934
+    ],
+    "scored_mutant_rows_before_model_missingness": 4901,
+    "archive": "fitness_CV_splits",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip",
+    "archive_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+    "member": "CV_splits/random/val/Townshend_2015_8nt_aptamer_val.csv",
+    "sequence_column": "sequence",
+    "folds": {},
+    "train_validation_exact_sequence_overlap": 0
+  }
+]

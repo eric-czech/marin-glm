@@ -1,0 +1,5310 @@
+[
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3/test.csv",
+    "rows": 1497,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f0a21a848b959711808d250cf628e1f760d70c08152c1c222e9303a7c7210223",
+    "bytes": 754100,
+    "label_counts": {
+      "1": 767,
+      "0": 730
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 1497,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3/train.csv",
+    "rows": 13468,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "9453539125a2929152ba865a07be562775b45dd093447fe87bcaf89611448229",
+    "bytes": 6787884,
+    "label_counts": {
+      "0": 6568,
+      "1": 6900
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 13468,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K14ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K14ac/test.csv",
+    "rows": 3305,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d101a9d228b6f52308943c13b54f6085404e41ba3506fd852c481ee9eb99ff8c",
+    "bytes": 1665681,
+    "label_counts": {
+      "1": 1877,
+      "0": 1428
+    },
+    "label_distinct": 2,
+    "length_min": 449,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3305,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K14ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K14ac/train.csv",
+    "rows": 29743,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d9deb0aed542696a3de147223f7b59b9b07fb9aff7315a3b58e2f128da18cb95",
+    "bytes": 14990084,
+    "label_counts": {
+      "1": 16894,
+      "0": 12849
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 29743,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K36me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K36me3/test.csv",
+    "rows": 3488,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "acebe9d3cd1bb628020495c67f497a35762b91d830bf0a057d5d10b9b4e0baca",
+    "bytes": 1757913,
+    "label_counts": {
+      "1": 1889,
+      "0": 1599
+    },
+    "label_distinct": 2,
+    "length_min": 449,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3488,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K36me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K36me3/train.csv",
+    "rows": 31392,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "dac8fb8345f27f20f97d428b6a3bea5e62d8e3e894b2643d882dac5ff5bb9283",
+    "bytes": 15821390,
+    "label_counts": {
+      "1": 17003,
+      "0": 14389
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 31392,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me1",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me1/test.csv",
+    "rows": 3168,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "523187d7d27902bfb6ba759e019d84f8d407e81d4ab8b636964a727c3b936556",
+    "bytes": 1596494,
+    "label_counts": {
+      "0": 1441,
+      "1": 1727
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3168,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me1",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me1/train.csv",
+    "rows": 28509,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "50b85fd4d7c3419bcb28240c326063dbca63e55d3796de9fd7fac3eaef2e2b98",
+    "bytes": 14368338,
+    "label_counts": {
+      "1": 15539,
+      "0": 12970
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 28509,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me2",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me2/test.csv",
+    "rows": 3069,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6b683bf852c03dcbfab10a444c81bdbc965788e56b5575746559b79082c59416",
+    "bytes": 1546788,
+    "label_counts": {
+      "1": 1815,
+      "0": 1254
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3069,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me2",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me2/train.csv",
+    "rows": 27614,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7e5f945897e3c8db08f79567205a6ae0ff8b5a5c357a41917a96ee37a499e891",
+    "bytes": 13917068,
+    "label_counts": {
+      "0": 11286,
+      "1": 16328
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 27614,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me3/test.csv",
+    "rows": 3680,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "2ffd0fab99e0905fdb3d22b0dd2a60f7d21fbc70a0499ad4f6e6d2b435d20103",
+    "bytes": 1854732,
+    "label_counts": {
+      "1": 1960,
+      "0": 1720
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3680,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K4me3/train.csv",
+    "rows": 33119,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "e33289afb0580aa980f3ee1e5fe724c2397d8f9ac6269038c24037f364d12ac8",
+    "bytes": 16691537,
+    "label_counts": {
+      "1": 17644,
+      "0": 15475
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 33119,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K79me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K79me3/test.csv",
+    "rows": 2884,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5bd6022659fa6d9f9d788bdfaaf8e269842a180bbe8d664d6305962f273ebddb",
+    "bytes": 1453358,
+    "label_counts": {
+      "1": 1534,
+      "0": 1350
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 2884,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K79me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K79me3/train.csv",
+    "rows": 25953,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "04a19ab68fc44a5a429e016b9be986bd6909f059086c605ddeca963a40c442e8",
+    "bytes": 13080273,
+    "label_counts": {
+      "1": 13803,
+      "0": 12150
+    },
+    "label_distinct": 2,
+    "length_min": 449,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 25953,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K9ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K9ac/test.csv",
+    "rows": 2779,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7cbb25b2872feb01682d7f7688d1f4fadf7094cf708f1c9c88a0d6539b566b3d",
+    "bytes": 1400628,
+    "label_counts": {
+      "0": 1237,
+      "1": 1542
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 2779,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K9ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H3K9ac/train.csv",
+    "rows": 25003,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3b8f1177bc61c651d6b2e22790feea59432c91acb7c9debc53e673afb6a574ca",
+    "bytes": 12601314,
+    "label_counts": {
+      "1": 13873,
+      "0": 11130
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 25003,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H4",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H4/test.csv",
+    "rows": 1461,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "54f0e31b1427f251bfdd57f9c03248a7723c4df4cca1d402e3af360dabeae60e",
+    "bytes": 736166,
+    "label_counts": {
+      "1": 648,
+      "0": 813
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 1461,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H4",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H4/train.csv",
+    "rows": 13140,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "39e5203d0e2f3f06bcce580e7a7e2a29aebc6c0135550dd95553e8a9ecc0e834",
+    "bytes": 6622521,
+    "label_counts": {
+      "1": 5832,
+      "0": 7308
+    },
+    "label_distinct": 2,
+    "length_min": 449,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 13140,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H4ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H4ac/test.csv",
+    "rows": 3410,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4689372a9b190db577c7e9fd88bf0b88ce716a30eaaf02a8f9d4d53350faa354",
+    "bytes": 1718442,
+    "label_counts": {
+      "0": 1569,
+      "1": 1841
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3410,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_H4ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_H4ac/train.csv",
+    "rows": 30685,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ca22f42fc18786d7d4c8e28aaff83c928783b1856d556a083700594eb05f77a7",
+    "bytes": 15465201,
+    "label_counts": {
+      "0": 14116,
+      "1": 16569
+    },
+    "label_distinct": 2,
+    "length_min": 449,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 30685,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers/test.csv",
+    "rows": 400,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "332619cdd59783b8257c53f1c80b5e0fdfc8013eab195a63b39e955b450bbd14",
+    "bytes": 81612,
+    "label_counts": {
+      "0": 200,
+      "1": 200
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 400,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 100
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers/train.csv",
+    "rows": 14968,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5d37023cc19651b9d266b533c319c23d23c1608f9f1bcf76c102b8befb68b502",
+    "bytes": 3042449,
+    "label_counts": {
+      "0": 7484,
+      "1": 7484
+    },
+    "label_distinct": 2,
+    "length_min": 199,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 14002,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 100
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers_types",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers_types/test.csv",
+    "rows": 400,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "dc0ad4e5e1dc5fc72071c727775a993cb3318f315a0bf8661990d766ee5d228a",
+    "bytes": 81612,
+    "label_counts": {
+      "0": 200,
+      "2": 100,
+      "1": 100
+    },
+    "label_distinct": 3,
+    "length_min": 200,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 400,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 100
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers_types",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_enhancers_types/train.csv",
+    "rows": 14968,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "35f875f6faad03cd34d5db08a075d79bd3ac4f5f98aed580f17a7c6c18197d86",
+    "bytes": 3042449,
+    "label_counts": {
+      "0": 7484,
+      "2": 3742,
+      "1": 3742
+    },
+    "label_distinct": 3,
+    "length_min": 199,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 14002,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 100
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_all",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_all/test.csv",
+    "rows": 5920,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f43cb2d485056eccd2f0c065fe7b8925c71c0cea22422ef1c41d3f0f9059d4f3",
+    "bytes": 1799692,
+    "label_counts": {
+      "0": 2960,
+      "1": 2960
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 5920,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 21
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_all",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_all/train.csv",
+    "rows": 53276,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d5445df27cb1f6a902b541047c28fc7ee9157a3a8d0df36cd9d0ccebac6646b1",
+    "bytes": 16195916,
+    "label_counts": {
+      "0": 26638,
+      "1": 26638
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 53177,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 21
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_no_tata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_no_tata/test.csv",
+    "rows": 5299,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "34258ad7e1b66b331caff1aace5be6fdda03395462c0fddcc1b1e9bc2528b3b0",
+    "bytes": 1610908,
+    "label_counts": {
+      "0": 2671,
+      "1": 2628
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 5299,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 15
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_no_tata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_no_tata/train.csv",
+    "rows": 47767,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "8c5ba13ce5818d7d400b43563e012b391b30487112d7cada3fbe56639ed0e321",
+    "bytes": 14521180,
+    "label_counts": {
+      "0": 23862,
+      "1": 23905
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 47684,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 15
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_tata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_tata/test.csv",
+    "rows": 621,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ad7585aa613fd3d592faf4e505d1f512fafb78aab43a5abe86a576f6606d1217",
+    "bytes": 188796,
+    "label_counts": {
+      "1": 332,
+      "0": 289
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 621,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 6
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_tata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_promoter_tata/train.csv",
+    "rows": 5509,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c75f6adac0401f826397de62a5f08565c1ee6f96711d268fc4319da56ec42bbc",
+    "bytes": 1674748,
+    "label_counts": {
+      "0": 2776,
+      "1": 2733
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 5493,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 6
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H2AFZ",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H2AFZ/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "02bc400471b85d3a8001107a764c12ac0c8bb726ba05cf45451ca236330fabeb",
+    "bytes": 3012012,
+    "label_counts": {
+      "0": 1506,
+      "1": 1494
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 2960,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H2AFZ",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H2AFZ/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5a6ea5a7fb7754bbbe5756ea81a836b0421b2480b30f91dbd07b7dc112880853",
+    "bytes": 30120012,
+    "label_counts": {
+      "0": 15003,
+      "1": 14997
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29853,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27ac/test.csv",
+    "rows": 1616,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c7984830fb897c53091b718dfc50fabfef8544445b6120c07c09b2b3464838b0",
+    "bytes": 1622476,
+    "label_counts": {
+      "1": 808,
+      "0": 808
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 1605,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27ac/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "eb5092c2b3426bed4f48c450bc0652cfc7fa1f001da6c4d8305e482aecc0ccf1",
+    "bytes": 30120012,
+    "label_counts": {
+      "0": 14995,
+      "1": 15005
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29885,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27me3/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "cbe399d06ef31315478bb3c6dbf752ae540a2324994cba5ff0d693aa1cb0c8ff",
+    "bytes": 3012012,
+    "label_counts": {
+      "1": 1493,
+      "0": 1507
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 2947,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K27me3/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "94a85932a34b1d0427f4825b76397b35f968b49dcc59bb2644da005e0006277e",
+    "bytes": 30120012,
+    "label_counts": {
+      "1": 14901,
+      "0": 15099
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29871,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K36me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K36me3/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "1f65bef912215d9277e8cf9ae711e189fb8c686cd33912606f10cdda100aed6a",
+    "bytes": 3012012,
+    "label_counts": {
+      "0": 1494,
+      "1": 1506
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 2960,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K36me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K36me3/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a067b332aa204d11d5037adbf373d13e376d79828d891d39244d4039be1ac7b1",
+    "bytes": 30120012,
+    "label_counts": {
+      "0": 15074,
+      "1": 14926
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29885,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me1",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me1/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "fb72201e5d5b4b1009f6a4d7422790183bb4b8be0d82da60b71ec081d1128271",
+    "bytes": 3012012,
+    "label_counts": {
+      "0": 1495,
+      "1": 1505
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 2967,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me1",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me1/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b85bed0e8c12d58beeb43c842808fc00c5104971f1251885d97b852e48374246",
+    "bytes": 30120012,
+    "label_counts": {
+      "1": 14980,
+      "0": 15020
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29877,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me2",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me2/test.csv",
+    "rows": 2138,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7826c50fca5f0045fcb156a37ac5e12d1ec0b0bd6edf8920b12cdb5ce9cb03c4",
+    "bytes": 2146564,
+    "label_counts": {
+      "1": 1069,
+      "0": 1069
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 2114,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me2",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me2/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d0d878302912aabc52812a4d459fd9aff508e75528a19f9d9eb8c70060ae3108",
+    "bytes": 30120012,
+    "label_counts": {
+      "1": 15036,
+      "0": 14964
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29898,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me3/test.csv",
+    "rows": 776,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4bb59b2d4dad365f2566a1e98fbaaf80049688819957fb3e2561c64d169e65fe",
+    "bytes": 779116,
+    "label_counts": {
+      "1": 388,
+      "0": 388
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 773,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K4me3/train.csv",
+    "rows": 17468,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "75b7fedbe5e497d6a12adf21e50e97962c23cf38a699baf99d03fdf276d9e755",
+    "bytes": 17537884,
+    "label_counts": {
+      "1": 8734,
+      "0": 8734
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 17423,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9ac/test.csv",
+    "rows": 1004,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ce3361ef0314f112d19a347eecd95c423056194ba44f7d89205d7a85cdf48edc",
+    "bytes": 1008028,
+    "label_counts": {
+      "1": 502,
+      "0": 502
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9ac/train.csv",
+    "rows": 23274,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "82c353656907b3c94c5a3936607abf232cbd858c4098bd306c6bea33412cd604",
+    "bytes": 23367108,
+    "label_counts": {
+      "1": 11637,
+      "0": 11637
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 23203,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9me3/test.csv",
+    "rows": 850,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "47f1364a2c92e6a405fa85e8ad80f220ab552ff9ef3e264c2944d9efcd23a52d",
+    "bytes": 853412,
+    "label_counts": {
+      "1": 425,
+      "0": 425
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 845,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H3K9me3/train.csv",
+    "rows": 27438,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c1164c788cb36bf6c60e6a50905a1a358baa44d263abd09fccb467c68d99b994",
+    "bytes": 27547764,
+    "label_counts": {
+      "1": 13719,
+      "0": 13719
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 27332,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H4K20me1",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H4K20me1/test.csv",
+    "rows": 2270,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3ba075287e2f936018b151cb651b20d2b922e2d1cf65f9e1dc02f3d80810d5bf",
+    "bytes": 2279092,
+    "label_counts": {
+      "1": 1135,
+      "0": 1135
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 2242,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H4K20me1",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_H4K20me1/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "68ee8ec6837b09f20fd043274658d599c1a61dd350237c92cc11cd8299be8898",
+    "bytes": 30120012,
+    "label_counts": {
+      "1": 15026,
+      "0": 14974
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 29862,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "154cda1f2ab234aea4ece53a273fe4d548de442b26fd089d2a26fbae86882038",
+    "bytes": 1212012,
+    "label_counts": {
+      "1": 1453,
+      "0": 1547
+    },
+    "label_distinct": 2,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 2943,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "30795ed8310a934b32c21bf282289e062c81c21cb9da00867776a1aacaea7bf6",
+    "bytes": 12120012,
+    "label_counts": {
+      "1": 15006,
+      "0": 14994
+    },
+    "label_distinct": 2,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 29803,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers_types",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers_types/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "cf70f956cd11bab308b96e4fdc173ade28db3d27f693be3d9b2337d2c19e6917",
+    "bytes": 1212012,
+    "label_counts": {
+      "1": 1332,
+      "0": 1547,
+      "2": 121
+    },
+    "label_distinct": 3,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 2943,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers_types",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_enhancers_types/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "38231f1186ba65a296a1f5e31a42dfd2385ae1cd8e7330ad34659994c56da24c",
+    "bytes": 12120012,
+    "label_counts": {
+      "1": 13922,
+      "0": 14994,
+      "2": 1084
+    },
+    "label_distinct": 3,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 29803,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_all",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_all/test.csv",
+    "rows": 1584,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "12c5bde0447d5095ccd836586d7e9aa0ce9f630861c5468a753a1f8a957d982e",
+    "bytes": 481548,
+    "label_counts": {
+      "1": 792,
+      "0": 792
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 1571,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_all",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_all/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "47996f324f2c9661a35b5c6a3d4741461a8d62644ef962f52fe537b317fffc47",
+    "bytes": 9120012,
+    "label_counts": {
+      "0": 14950,
+      "1": 15050
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 29872,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_no_tata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_no_tata/test.csv",
+    "rows": 1372,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "eb6aa5c6cc849c44ae37796ec2b756359a2b6dc012dd61868d28813220955aba",
+    "bytes": 417100,
+    "label_counts": {
+      "1": 686,
+      "0": 686
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 1363,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_no_tata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_no_tata/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4bc2d5439c317f1a0ccc4af646021727b73e1ff267cedbc8c818cf51f508fb2f",
+    "bytes": 9120012,
+    "label_counts": {
+      "1": 14980,
+      "0": 15020
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 29872,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_tata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_tata/test.csv",
+    "rows": 212,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "192b1417357722627273fdfaa2d8a1d4b34385255949948f18d47cb8feead688",
+    "bytes": 64460,
+    "label_counts": {
+      "1": 106,
+      "0": 106
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 212,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_tata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_promoter_tata/train.csv",
+    "rows": 5062,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "22112ab7f331c750dbc1e0a0e7148696dc91786f2e47cf48888fe1727f68bbb1",
+    "bytes": 1538860,
+    "label_counts": {
+      "1": 2531,
+      "0": 2531
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 5059,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_acceptors",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_acceptors/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7ce6cbce64fa6a108361b4cae1caf2a18cc281eac0f37b5597ede2b26521eef3",
+    "bytes": 1812012,
+    "label_counts": {
+      "1": 1475,
+      "0": 1525
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 2964,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_acceptors",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_acceptors/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "0e005afda51e3cdd49f30c81fde0338aceb7ab4ce27aa4a7f14d1c328e91a96d",
+    "bytes": 18120012,
+    "label_counts": {
+      "1": 15031,
+      "0": 14969
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 29858,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_all",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_all/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "557f25bdc92a34c698b7f8353b9c1bd1fe00b0c1e5e7fb4dd99faca754f90e24",
+    "bytes": 1812012,
+    "label_counts": {
+      "1": 952,
+      "2": 1019,
+      "0": 1029
+    },
+    "label_distinct": 3,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 2976,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_all",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_all/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "132c7851dce196f4aecd2e3b0d42131080d7ef5258b54b62793a25d6c94acd90",
+    "bytes": 18120012,
+    "label_counts": {
+      "1": 10047,
+      "0": 9846,
+      "2": 10107
+    },
+    "label_distinct": 3,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 29937,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_donors",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_donors/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "0f0be0d8d1272aacff88bc9c82af053bcf496a921b21b1cf245a668754c4be51",
+    "bytes": 1812012,
+    "label_counts": {
+      "1": 1480,
+      "0": 1520
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 2957,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_donors",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_revised_splice_sites_donors/train.csv",
+    "rows": 30000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a7df999c3089e2e2f80217d047b66edfb72f24b566176d7f9f494b6aef4d57e7",
+    "bytes": 18120012,
+    "label_counts": {
+      "1": 15084,
+      "0": 14916
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 29840,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_acceptors",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_acceptors/test.csv",
+    "rows": 2218,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "739604078c7915f8c69523a4987b9b73434abf83693f76002629e6470eafd8eb",
+    "bytes": 1339684,
+    "label_counts": {
+      "1": 1118,
+      "0": 1100
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 2218,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_acceptors",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_acceptors/train.csv",
+    "rows": 19961,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4958687a3e75902e222eeaa74755f4f932fb075dc679b4d74fafb1be1ed42505",
+    "bytes": 12056456,
+    "label_counts": {
+      "0": 9900,
+      "1": 10061
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 19960,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_all",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_all/test.csv",
+    "rows": 3000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3cfac9865afe02d33ceb2a6e8dc53db72963514dd3f1be5d5188a3e3477d895e",
+    "bytes": 1212012,
+    "label_counts": {
+      "0": 1000,
+      "1": 1000,
+      "2": 1000
+    },
+    "label_distinct": 3,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 2986,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 217
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_all",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_all/train.csv",
+    "rows": 27000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7e0776bfd32b4404df661165b0e4844a6cf2b8fd24326d20df98a53bfa2208ae",
+    "bytes": 10908012,
+    "label_counts": {
+      "0": 9000,
+      "1": 9000,
+      "2": 9000
+    },
+    "label_distinct": 3,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 26011,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 217
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_donors",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_donors/test.csv",
+    "rows": 2198,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6b19983034b1a850358ae1d75ad0acf5b2b3fdfc12aff6cd74038ecd253fb8b8",
+    "bytes": 1327604,
+    "label_counts": {
+      "1": 1098,
+      "0": 1100
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 2198,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_donors",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_nucleotide_transformer_downstream_tasks_splice_sites_donors/train.csv",
+    "rows": 19775,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "175914d52b9199b70df3c5a4ea7a593c783725f3eb6b4f91713d7928c8ce9786",
+    "bytes": 11944112,
+    "label_counts": {
+      "1": 9875,
+      "0": 9900
+    },
+    "label_distinct": 2,
+    "length_min": 600,
+    "length_max": 600,
+    "missing": {},
+    "distinct_sequences": 19775,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.g_max",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.g_max/test.csv",
+    "rows": 490,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "e6fcb9ebef67cc09e1fd0cabc09505603588cb4007ded37806b7b94a43d3aaad",
+    "bytes": 303799,
+    "label_counts": {
+      "1": 244,
+      "0": 246
+    },
+    "label_distinct": 2,
+    "length_min": 120,
+    "length_max": 1644,
+    "missing": {},
+    "distinct_sequences": 421,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.g_max",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.g_max/train.csv",
+    "rows": 11430,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7f043ec4862eaeb5c5a7735a8b7f8db5630acdb5adad3cbe1132005521b61432",
+    "bytes": 7389404,
+    "label_counts": {
+      "1": 5716,
+      "0": 5714
+    },
+    "label_distinct": 2,
+    "length_min": 102,
+    "length_max": 1800,
+    "missing": {},
+    "distinct_sequences": 9825,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.m_esculenta",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.m_esculenta/test.csv",
+    "rows": 360,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3dfac35977ac87aef9c1ada67dda1f0ea1d71bd4730d085e5f77cbbf35a59e91",
+    "bytes": 236710,
+    "label_counts": {
+      "1": 172,
+      "0": 188
+    },
+    "label_distinct": 2,
+    "length_min": 138,
+    "length_max": 1719,
+    "missing": {},
+    "distinct_sequences": 320,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.m_esculenta",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.m_esculenta/train.csv",
+    "rows": 4934,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ae825787c36a704aeba00cdbcf6c30d19b068d92201a890ec0cab98a27377544",
+    "bytes": 3218470,
+    "label_counts": {
+      "1": 2475,
+      "0": 2459
+    },
+    "label_distinct": 2,
+    "length_min": 108,
+    "length_max": 2534,
+    "missing": {},
+    "distinct_sequences": 4365,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.s_bicolor",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.s_bicolor/test.csv",
+    "rows": 734,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ae0a4900435c1f5bd3c2862a01d1d87db618b0ce33db2e062213921f586b6632",
+    "bytes": 830896,
+    "label_counts": {
+      "1": 344,
+      "0": 390
+    },
+    "label_distinct": 2,
+    "length_min": 171,
+    "length_max": 5473,
+    "missing": {},
+    "distinct_sequences": 711,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.s_bicolor",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.s_bicolor/train.csv",
+    "rows": 8654,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "46aa434844ba848c03fff787a53ffd528863d8f2dc7b1b2a6c18367ade3f4856",
+    "bytes": 8374276,
+    "label_counts": {
+      "1": 4350,
+      "0": 4304
+    },
+    "label_distinct": 2,
+    "length_min": 117,
+    "length_max": 5971,
+    "missing": {},
+    "distinct_sequences": 8314,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.s_lycopersicum",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.s_lycopersicum/test.csv",
+    "rows": 1072,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "beeffba4d18d5cb3643a7ab1fc667a03c2e11de9ce819bed7db021c945baec64",
+    "bytes": 596393,
+    "label_counts": {
+      "1": 566,
+      "0": 506
+    },
+    "label_distinct": 2,
+    "length_min": 111,
+    "length_max": 6000,
+    "missing": {},
+    "distinct_sequences": 1048,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.s_lycopersicum",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.s_lycopersicum/train.csv",
+    "rows": 7274,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "fbcdfbf3853613feab131a4c5d898044ccce492c83c6fab3c4eb4c0febec0c29",
+    "bytes": 3905444,
+    "label_counts": {
+      "1": 3607,
+      "0": 3667
+    },
+    "label_distinct": 2,
+    "length_min": 105,
+    "length_max": 5964,
+    "missing": {},
+    "distinct_sequences": 7022,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.t_aestivum",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.t_aestivum/test.csv",
+    "rows": 1810,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d1f15b728f8427a9e54c126c7d6e782ed591ad6ea64bee67e321833afe00eda1",
+    "bytes": 764721,
+    "label_counts": {
+      "1": 935,
+      "0": 875
+    },
+    "label_distinct": 2,
+    "length_min": 111,
+    "length_max": 4361,
+    "missing": {},
+    "distinct_sequences": 1451,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 16
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.t_aestivum",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.t_aestivum/train.csv",
+    "rows": 11252,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d6af0a2e60b25fbf9e0ed859f28b3564f0e33b4fc58e862785bfccf46807ce4b",
+    "bytes": 4855889,
+    "label_counts": {
+      "1": 5596,
+      "0": 5656
+    },
+    "label_distinct": 2,
+    "length_min": 108,
+    "length_max": 4880,
+    "missing": {},
+    "distinct_sequences": 9110,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 16
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.z_mays",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.z_mays/test.csv",
+    "rows": 1629,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "e8aa914d64589f063f1d19080551620f43250ef6bd4f8bebedc7e9c5eb6d4a45",
+    "bytes": 867857,
+    "label_counts": {
+      "1": 911,
+      "0": 718
+    },
+    "label_distinct": 2,
+    "length_min": 201,
+    "length_max": 2467,
+    "missing": {},
+    "distinct_sequences": 1397,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 22
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_lncrna.z_mays",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_lncrna.z_mays/train.csv",
+    "rows": 8423,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "58db8dc4f763a7dd567744d1d5a0152108a00b9236b2784ed984b88679815243",
+    "bytes": 4715353,
+    "label_counts": {
+      "1": 4115,
+      "0": 4308
+    },
+    "label_distinct": 2,
+    "length_min": 201,
+    "length_max": 2600,
+    "missing": {},
+    "distinct_sequences": 7435,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 22
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_pro_seq.m_esculenta",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_pro_seq.m_esculenta/test.csv",
+    "rows": 812,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "dea734e30c910390e5a73088b6006723c711a0fa36f83bbc701a50626c193faa",
+    "bytes": 815260,
+    "label_counts": {
+      "1": 395,
+      "0": 417
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 812,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "InstaDeepAI_plant-genomic-benchmark_pro_seq.m_esculenta",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/InstaDeepAI_plant-genomic-benchmark_pro_seq.m_esculenta/train.csv",
+    "rows": 16852,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "65843ada52fda3e1ba4bcb71d03a2c2168c81537ff9404c546d31230969d431e",
+    "bytes": 16919420,
+    "label_counts": {
+      "1": 8235,
+      "0": 8617
+    },
+    "label_distinct": 2,
+    "length_min": 1000,
+    "length_max": 1000,
+    "missing": {},
+    "distinct_sequences": 16851,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_A.thaliana_4mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_A.thaliana_4mC/test.csv",
+    "rows": 67157,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7b9a3396b59551f13350f2dff6d0cc168e35b6e5602ffd59a0669fb8701fdf18",
+    "bytes": 3022077,
+    "label_counts": {
+      "0": 33579,
+      "1": 33578
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 67157,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_A.thaliana_4mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_A.thaliana_4mC/train.csv",
+    "rows": 100000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "49260a163c5b43df0f6253de70d38e26ebb662f0b1db0283f9615c1dedb7f248",
+    "bytes": 4500012,
+    "label_counts": {
+      "0": 50000,
+      "1": 50000
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 100000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_C.elegans_4mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_C.elegans_4mC/test.csv",
+    "rows": 36398,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "88f607ecd1fcdab8c84de7fc9460777021ea4349ad8f72f93cd58605986fb594",
+    "bytes": 1637922,
+    "label_counts": {
+      "1": 18199,
+      "0": 18199
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 36398,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_C.elegans_4mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_C.elegans_4mC/train.csv",
+    "rows": 84926,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "09d7f4527fe0e0a4c28b0fb4994859fad5b6e2491a03dd6e89760f6ac994ea65",
+    "bytes": 3821682,
+    "label_counts": {
+      "0": 42463,
+      "1": 42463
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 84926,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_D.melanogaster_4mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_D.melanogaster_4mC/test.csv",
+    "rows": 54200,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "565370becf77a9f67534c7067550cf0a7df4f1066dd80c5f73b459cbea011ab5",
+    "bytes": 2439012,
+    "label_counts": {
+      "0": 27100,
+      "1": 27100
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 54200,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_D.melanogaster_4mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_D.melanogaster_4mC/train.csv",
+    "rows": 100000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6eb72c4ad5bf841c5c9fb6e7aafdb280ff87b9fd5bd32eb0ccdc2edde2be766f",
+    "bytes": 4500012,
+    "label_counts": {
+      "0": 50000,
+      "1": 50000
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 100000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_E.coli_4mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_E.coli_4mC/test.csv",
+    "rows": 3721,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "36c500e2d3f951bd297053ca202418c1c5bc9f72d09e816455caaea2c515ad7d",
+    "bytes": 167457,
+    "label_counts": {
+      "1": 620,
+      "0": 3101
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 3721,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_E.coli_4mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_E.coli_4mC/train.csv",
+    "rows": 8681,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f0c6b3017cc229d58f72b37ce63152a039ed8af3a07782e8aa5a25f55d08a936",
+    "bytes": 390657,
+    "label_counts": {
+      "0": 7234,
+      "1": 1447
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 8681,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_G.pickeringii_4mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_G.pickeringii_4mC/test.csv",
+    "rows": 10309,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "77f45b4ba953434daca25b1a9d481e7b300848ca39309edfcfc000f8328aa129",
+    "bytes": 463917,
+    "label_counts": {
+      "0": 8591,
+      "1": 1718
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 10309,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_G.pickeringii_4mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_G.pickeringii_4mC/train.csv",
+    "rows": 24053,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6b85da5e385ad76296d72b984c41fae0635befff57c9acf53d5d34a08568b1af",
+    "bytes": 1082397,
+    "label_counts": {
+      "0": 20044,
+      "1": 4009
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 24053,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_G.subterraneus_4mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_G.subterraneus_4mC/test.csv",
+    "rows": 27243,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "cf96615e3a4d85568694e5d08a11bf8047b4e92fded2f93e94c1ce5bb59a8506",
+    "bytes": 1225947,
+    "label_counts": {
+      "0": 22703,
+      "1": 4540
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 27243,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "deep4mc_G.subterraneus_4mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/deep4mc_G.subterraneus_4mC/train.csv",
+    "rows": 63567,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "72390ff86d3f3892a39c9d7f3b44b7618e79fb46155f880640e62b86dcd912c3",
+    "bytes": 2860527,
+    "label_counts": {
+      "0": 52972,
+      "1": 10595
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 63567,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iDHS-EL_DNase_I",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iDHS-EL_DNase_I/test.csv",
+    "rows": 306,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b9452d58447e14de9b903bf374c4babbb2915f0dd6342896b6035c8f568134ce",
+    "bytes": 75468,
+    "label_counts": {
+      "0": 222,
+      "1": 84
+    },
+    "label_distinct": 2,
+    "length_min": 220,
+    "length_max": 275,
+    "missing": {},
+    "distinct_sequences": 306,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iDHS-EL_DNase_I",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iDHS-EL_DNase_I/train.csv",
+    "rows": 711,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a6a9568e19a0bde5ee3e1e4e12bf99d6e29ea279b9420bb1190d08a84f8a43aa",
+    "bytes": 175366,
+    "label_counts": {
+      "0": 515,
+      "1": 196
+    },
+    "label_distinct": 2,
+    "length_min": 225,
+    "length_max": 275,
+    "missing": {},
+    "distinct_sequences": 711,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iDNA_ABF_5mC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iDNA_ABF_5mC/test.csv",
+    "rows": 2344,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "59b4c30dc16ea29f45d190216bea187a3a66b76c14097f94bc5b731562389420",
+    "bytes": 105492,
+    "label_counts": {
+      "1": 1172,
+      "0": 1172
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 2344,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iDNA_ABF_5mC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iDNA_ABF_5mC/train.csv",
+    "rows": 2344,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5b914333555b9926c663610e04d9f615259ce209402f96520c8b34177e153bef",
+    "bytes": 105492,
+    "label_counts": {
+      "1": 1172,
+      "0": 1172
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 2344,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iDNA_ABF_6mA",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iDNA_ABF_6mA/test.csv",
+    "rows": 18334,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "99befad2f611d9ad25f2483a8ff6d55534a03e4bac0a9d3b8245571dc98b7f0f",
+    "bytes": 825042,
+    "label_counts": {
+      "1": 9167,
+      "0": 9167
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 18332,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "iDNA_ABF_6mA",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iDNA_ABF_6mA/train.csv",
+    "rows": 18336,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a00d63f7674efc8e80f3e0994014ba0f4edcd5ed98b28aa25bb70965ca1b7d94",
+    "bytes": 825132,
+    "label_counts": {
+      "1": 9168,
+      "0": 9168
+    },
+    "label_distinct": 2,
+    "length_min": 41,
+    "length_max": 41,
+    "missing": {},
+    "distinct_sequences": 18336,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "iPro-WAEL_Promoter_Arabidopsis_NonTATA",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_Arabidopsis_NonTATA/test.csv",
+    "rows": 3543,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ac07d4ce182b1619c77e5a061b15e8b48a2183a330c80b4ab5f6aac4f61137a4",
+    "bytes": 903477,
+    "label_counts": {
+      "0": 1772,
+      "1": 1771
+    },
+    "label_distinct": 2,
+    "length_min": 251,
+    "length_max": 251,
+    "missing": {},
+    "distinct_sequences": 3543,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "iPro-WAEL_Promoter_Arabidopsis_NonTATA",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_Arabidopsis_NonTATA/train.csv",
+    "rows": 8267,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "fb2715ed8d882849b7e10ab3219d6ee391a4e149d9281f47589ebb616c19d4c0",
+    "bytes": 2108097,
+    "label_counts": {
+      "1": 4134,
+      "0": 4133
+    },
+    "label_distinct": 2,
+    "length_min": 251,
+    "length_max": 251,
+    "missing": {},
+    "distinct_sequences": 8265,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "iPro-WAEL_Promoter_Arabidopsis_TATA",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_Arabidopsis_TATA/test.csv",
+    "rows": 1313,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "2745512ec4dbf0fc76102cf97b12c269b46138848441994cec14d9be68a78dee",
+    "bytes": 334827,
+    "label_counts": {
+      "0": 864,
+      "1": 449
+    },
+    "label_distinct": 2,
+    "length_min": 251,
+    "length_max": 251,
+    "missing": {},
+    "distinct_sequences": 1313,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_Arabidopsis_TATA",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_Arabidopsis_TATA/train.csv",
+    "rows": 3063,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b1218fb44a6dd10f7717fc0b719c7b869ed0973734e8dc35ec531034a6702414",
+    "bytes": 781077,
+    "label_counts": {
+      "0": 2015,
+      "1": 1048
+    },
+    "label_distinct": 2,
+    "length_min": 251,
+    "length_max": 251,
+    "missing": {},
+    "distinct_sequences": 3062,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_B_amyloliquefaciens",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_B_amyloliquefaciens/test.csv",
+    "rows": 636,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "852c4c63fcf2f6cb2d5e835a29a5becc4441a4e9fc44fd93956592323636d4f2",
+    "bytes": 27996,
+    "label_counts": {
+      "1": 319,
+      "0": 317
+    },
+    "label_distinct": 2,
+    "length_min": 40,
+    "length_max": 40,
+    "missing": {},
+    "distinct_sequences": 636,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_B_amyloliquefaciens",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_B_amyloliquefaciens/train.csv",
+    "rows": 1483,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3cf46ba30494bf4b95cf62ce62365f9f444a4b879d745656ea643f3421fe36ab",
+    "bytes": 65264,
+    "label_counts": {
+      "1": 745,
+      "0": 738
+    },
+    "label_distinct": 2,
+    "length_min": 40,
+    "length_max": 40,
+    "missing": {},
+    "distinct_sequences": 1483,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_GM12878",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_GM12878/test.csv",
+    "rows": 2750,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b300a1fdaa67a6296c9a4a0b2d530e83a8fb7b780345081e9c9c91cd8d6277a3",
+    "bytes": 4396846,
+    "label_counts": {
+      "1": 1375,
+      "0": 1375
+    },
+    "label_distinct": 2,
+    "length_min": 102,
+    "length_max": 2995,
+    "missing": {},
+    "distinct_sequences": 2750,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_GM12878",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_GM12878/train.csv",
+    "rows": 10992,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "da231ba97d59ca357a92faa0ec8111168445c7384f6f74f5f95e470a7e467de8",
+    "bytes": 17960658,
+    "label_counts": {
+      "1": 5496,
+      "0": 5496
+    },
+    "label_distinct": 2,
+    "length_min": 102,
+    "length_max": 2999,
+    "missing": {},
+    "distinct_sequences": 10992,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_HUVEC",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_HUVEC/test.csv",
+    "rows": 2982,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ea9d62f93405b60c04b8f87f90cffec36c7e4be590cafd75b5dfd058ac16f185",
+    "bytes": 3988282,
+    "label_counts": {
+      "1": 1491,
+      "0": 1491
+    },
+    "label_distinct": 2,
+    "length_min": 108,
+    "length_max": 2993,
+    "missing": {},
+    "distinct_sequences": 2982,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_HUVEC",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_HUVEC/train.csv",
+    "rows": 11928,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6fe4dafed84cf056f70f4bff983b9f1771741a4c044d2c77763f64686a05606b",
+    "bytes": 15800402,
+    "label_counts": {
+      "1": 5964,
+      "0": 5964
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 2997,
+    "missing": {},
+    "distinct_sequences": 11928,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_Hela-S3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_Hela-S3/test.csv",
+    "rows": 2936,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "266425d7521712ff2229b15b2050ce48996e4add6eac5ad18b09815da2a250e4",
+    "bytes": 3433272,
+    "label_counts": {
+      "1": 1468,
+      "0": 1468
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 2998,
+    "missing": {},
+    "distinct_sequences": 2936,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_Hela-S3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_Hela-S3/train.csv",
+    "rows": 11736,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "1424b4fc941f9960fb6fdfa76e41af3380d11dbe2214051c6f53e3e195ddd23c",
+    "bytes": 13720638,
+    "label_counts": {
+      "1": 5868,
+      "0": 5868
+    },
+    "label_distinct": 2,
+    "length_min": 103,
+    "length_max": 2999,
+    "missing": {},
+    "distinct_sequences": 11736,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_NHEK",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_NHEK/test.csv",
+    "rows": 2044,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d0ffb2a22f0737fe290f2d4aed1bd41f27e079c6ba36e8c4b224a89dc83ffd8c",
+    "bytes": 1034988,
+    "label_counts": {
+      "1": 1022,
+      "0": 1022
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 1800,
+    "missing": {},
+    "distinct_sequences": 2044,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_NHEK",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_NHEK/train.csv",
+    "rows": 8170,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "58d091b1d363c5fa05316ef4bc8c09a69a928b632c516d9b6c13e3227ed0b221",
+    "bytes": 4111892,
+    "label_counts": {
+      "1": 4085,
+      "0": 4085
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 2400,
+    "missing": {},
+    "distinct_sequences": 8170,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "iPro-WAEL_Promoter_R_capsulatus",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_R_capsulatus/test.csv",
+    "rows": 3175,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3742270833ef744607846dc821e977aa8e3b2e998dbf4cefaee691326aee969c",
+    "bytes": 139712,
+    "label_counts": {
+      "1": 1613,
+      "0": 1562
+    },
+    "label_distinct": 2,
+    "length_min": 40,
+    "length_max": 40,
+    "missing": {},
+    "distinct_sequences": 3168,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 18
+  },
+  {
+    "task": "iPro-WAEL_Promoter_R_capsulatus",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/iPro-WAEL_Promoter_R_capsulatus/train.csv",
+    "rows": 7406,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d31657c8bdcbba49f4dccccaabade6374e12d63f02821c4463850ffcc721ad00",
+    "bytes": 325876,
+    "label_counts": {
+      "1": 3761,
+      "0": 3645
+    },
+    "label_distinct": 2,
+    "length_min": 40,
+    "length_max": 40,
+    "missing": {},
+    "distinct_sequences": 7371,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 18
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_demo_coding_vs_intergenomic_seqs",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_demo_coding_vs_intergenomic_seqs/test.csv",
+    "rows": 25000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b80ecc20926098b4fb312810ee27fe70ccd9acaa819c9233753b646f807cc22e",
+    "bytes": 5100012,
+    "label_counts": {
+      "1": 12500,
+      "0": 12500
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 24997,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 34
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_demo_coding_vs_intergenomic_seqs",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_demo_coding_vs_intergenomic_seqs/train.csv",
+    "rows": 75000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a96272378ecbc7077bcadddc4451de3d06ea3cfd6097c758f0e5e45ad279c87b",
+    "bytes": 15300012,
+    "label_counts": {
+      "1": 37500,
+      "0": 37500
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 74956,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 34
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_demo_human_or_worm",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_demo_human_or_worm/test.csv",
+    "rows": 25000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "73aba83d69fe53fca7f2c5e56059ec2af3e23098a30bfb005a8efd36a4a42e22",
+    "bytes": 5100012,
+    "label_counts": {
+      "1": 12500,
+      "0": 12500
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 24357,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 4
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_demo_human_or_worm",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_demo_human_or_worm/train.csv",
+    "rows": 75000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "2447b5823153d75cbf703df6a692d92c983327211f48d0bd28c304e6edeb5df6",
+    "bytes": 15300012,
+    "label_counts": {
+      "1": 37500,
+      "0": 37500
+    },
+    "label_distinct": 2,
+    "length_min": 200,
+    "length_max": 200,
+    "missing": {},
+    "distinct_sequences": 73118,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 4
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_drosophila_enhancers_stark",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_drosophila_enhancers_stark/test.csv",
+    "rows": 1730,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "33a30719b9298ebe876f601dbb3bf245586f049b168633d062c1f794316924ae",
+    "bytes": 3680934,
+    "label_counts": {
+      "0": 865,
+      "1": 865
+    },
+    "label_distinct": 2,
+    "length_min": 258,
+    "length_max": 3061,
+    "missing": {},
+    "distinct_sequences": 1730,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_drosophila_enhancers_stark",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_drosophila_enhancers_stark/train.csv",
+    "rows": 5184,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b61f76ba17d546d86b10bb43fb17bfe3b8397d953769c15c4890637fa3ec2c6f",
+    "bytes": 10991454,
+    "label_counts": {
+      "0": 2592,
+      "1": 2592
+    },
+    "label_distinct": 2,
+    "length_min": 236,
+    "length_max": 3237,
+    "missing": {},
+    "distinct_sequences": 5184,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_dummy_mouse_enhancers_ensembl",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_dummy_mouse_enhancers_ensembl/test.csv",
+    "rows": 242,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "e2a43a3e9defad716866e5b349f1e2f69993b677f9807b79f8af02912b3f84fe",
+    "bytes": 606138,
+    "label_counts": {
+      "0": 121,
+      "1": 121
+    },
+    "label_distinct": 2,
+    "length_min": 579,
+    "length_max": 4776,
+    "missing": {},
+    "distinct_sequences": 242,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_dummy_mouse_enhancers_ensembl",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_dummy_mouse_enhancers_ensembl/train.csv",
+    "rows": 968,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ef961348101c35c33f2ce5a2d60e353fd04f7d5cf200eca3419fae7aab68c677",
+    "bytes": 2265914,
+    "label_counts": {
+      "0": 484,
+      "1": 484
+    },
+    "label_distinct": 2,
+    "length_min": 331,
+    "length_max": 4707,
+    "missing": {},
+    "distinct_sequences": 968,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_enhancers_cohn",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_enhancers_cohn/test.csv",
+    "rows": 6948,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b3fc1235d6f48e041ed902cdade03908e745fb4bba89be085236e7eed59e4976",
+    "bytes": 3501804,
+    "label_counts": {
+      "0": 3474,
+      "1": 3474
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 6948,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_enhancers_cohn",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_enhancers_cohn/train.csv",
+    "rows": 20843,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4d82769bfcd7356aa694115ee9f5880d97f3e5cef0181a22953adc6a0d7c8209",
+    "bytes": 10504884,
+    "label_counts": {
+      "0": 10422,
+      "1": 10421
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 20843,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_enhancers_ensembl",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_enhancers_ensembl/test.csv",
+    "rows": 30970,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "198d8294fd3b76004e48e22a72890bf828b6bf18dcb010f41b9b4f8dc2db996e",
+    "bytes": 8420424,
+    "label_counts": {
+      "0": 15485,
+      "1": 15485
+    },
+    "label_distinct": 2,
+    "length_min": 2,
+    "length_max": 573,
+    "missing": {},
+    "distinct_sequences": 29469,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 9502
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_enhancers_ensembl",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_enhancers_ensembl/train.csv",
+    "rows": 100000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "168de6b13a0634fe1ca6ff794c03a5b3d796af3e60543a596ff861e68de66474",
+    "bytes": 27313839,
+    "label_counts": {
+      "1": 50000,
+      "0": 50000
+    },
+    "label_distinct": 2,
+    "length_min": 2,
+    "length_max": 573,
+    "missing": {},
+    "distinct_sequences": 84531,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 9502
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_ensembl_regulatory",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_ensembl_regulatory/test.csv",
+    "rows": 57713,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "51915f907056effa7c935d85001324c2458f8889f173ac29a65ca30ba0789194",
+    "bytes": 25052607,
+    "label_counts": {
+      "0": 18859,
+      "1": 21378,
+      "2": 17476
+    },
+    "label_distinct": 3,
+    "length_min": 84,
+    "length_max": 802,
+    "missing": {},
+    "distinct_sequences": 57713,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_ensembl_regulatory",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_ensembl_regulatory/train.csv",
+    "rows": 100000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c6758fb87786be954d97d69353c39cc1f96375bc6a0ee1be0f6b5e4051d84f20",
+    "bytes": 43375502,
+    "label_counts": {
+      "1": 36963,
+      "2": 30215,
+      "0": 32822
+    },
+    "label_distinct": 3,
+    "length_min": 78,
+    "length_max": 802,
+    "missing": {},
+    "distinct_sequences": 99998,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_nontata_promoters",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_nontata_promoters/test.csv",
+    "rows": 9034,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f6bc2830d26e99dc5c5eb23d4e3b723100ee7f60ae4f335c28a6054598247817",
+    "bytes": 2303682,
+    "label_counts": {
+      "0": 4119,
+      "1": 4915
+    },
+    "label_distinct": 2,
+    "length_min": 251,
+    "length_max": 251,
+    "missing": {},
+    "distinct_sequences": 9034,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_nontata_promoters",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_nontata_promoters/train.csv",
+    "rows": 27097,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "12e49e64b07fd6061db3f7258ffb479ac9c0c09aad6ddd9bf27444f5fdd5f6fc",
+    "bytes": 6909747,
+    "label_counts": {
+      "0": 12355,
+      "1": 14742
+    },
+    "label_distinct": 2,
+    "length_min": 251,
+    "length_max": 251,
+    "missing": {},
+    "distinct_sequences": 27097,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_ocr_ensembl",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_ocr_ensembl/test.csv",
+    "rows": 34952,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "1f358b86caa63bb2bab8121010f7af6ee0bc8914e58a1a6802aa6fbee3b3073a",
+    "bytes": 11565264,
+    "label_counts": {
+      "0": 17476,
+      "1": 17476
+    },
+    "label_distinct": 2,
+    "length_min": 84,
+    "length_max": 593,
+    "missing": {},
+    "distinct_sequences": 34952,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 2
+  },
+  {
+    "task": "katarinagresova_Genomic_Benchmarks_human_ocr_ensembl",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/katarinagresova_Genomic_Benchmarks_human_ocr_ensembl/train.csv",
+    "rows": 100000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "8d57a9787f817c330d88602057b2074970b55a4e5ad327b4faf62ca9500638f6",
+    "bytes": 32998855,
+    "label_counts": {
+      "1": 50000,
+      "0": 50000
+    },
+    "label_distinct": 2,
+    "length_min": 71,
+    "length_max": 593,
+    "missing": {},
+    "distinct_sequences": 99998,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 2
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3/test.csv",
+    "rows": 1497,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "de53a3ffeba255d6f6ffb4026d38a33bf3c5b205f126b61fd1d7f5bee3a6e306",
+    "bytes": 754500,
+    "label_counts": {
+      "1": 755,
+      "0": 742
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 1497,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3/train.csv",
+    "rows": 11971,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "7080f1461f885c19932bd6f323e4199501679444bfaac9df92b16ce5f562149c",
+    "bytes": 6032996,
+    "label_counts": {
+      "1": 6150,
+      "0": 5821
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 11971,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K14ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K14ac/test.csv",
+    "rows": 3305,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "8811528578f489706772f9a6e6864bc5efb587084e92169bb60828c8976edb38",
+    "bytes": 1665732,
+    "label_counts": {
+      "0": 1409,
+      "1": 1896
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3305,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K14ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K14ac/train.csv",
+    "rows": 26438,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "75f7b9212545b9cc0ef952ed3ef2c9a32debcc0e13ac081032edc378ac8980e7",
+    "bytes": 13324523,
+    "label_counts": {
+      "0": 11489,
+      "1": 14949
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 26438,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K36me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K36me3/test.csv",
+    "rows": 3488,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "eb89216952daed27d4999dad21a03e1350898fd61e38f966fa3582894a5e365e",
+    "bytes": 1757964,
+    "label_counts": {
+      "1": 1942,
+      "0": 1546
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3488,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K36me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K36me3/train.csv",
+    "rows": 27904,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a2aea35f68c15da2b2240e52fb3587caa8c4e2d217a2828bbed3a9ee6b7ee428",
+    "bytes": 14063387,
+    "label_counts": {
+      "0": 12815,
+      "1": 15089
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 27904,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K4me1",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K4me1/test.csv",
+    "rows": 3168,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a1d919d110d714a74edb37e4d5040504522c679217a9224ee36a3f788b8492de",
+    "bytes": 1596474,
+    "label_counts": {
+      "1": 1734,
+      "0": 1434
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3168,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K4me1",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K4me1/train.csv",
+    "rows": 25341,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "84da4298d04e81fde81f38e99be0eaff8d5e8bd827689c4b4c41b3b3f880574e",
+    "bytes": 12771686,
+    "label_counts": {
+      "0": 11500,
+      "1": 13841
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 25341,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K4me2",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K4me2/test.csv",
+    "rows": 3069,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a3e9cd5c53e7c5e54b2cd7a402171e21233332c0120a05997cbd9380d285e1f9",
+    "bytes": 1546788,
+    "label_counts": {
+      "1": 1795,
+      "0": 1274
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3069,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K4me2",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K4me2/train.csv",
+    "rows": 24545,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "1d1a9ca3ba79c1ba91c80fc175f1dd40e8cf0b3c801df40ffa741c911b181d3f",
+    "bytes": 12370292,
+    "label_counts": {
+      "0": 9996,
+      "1": 14549
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 24545,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K4me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K4me3/test.csv",
+    "rows": 3680,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "39f50e825054900b4b933f6d48d667046f0255bf91a11391228bde42d6ae615c",
+    "bytes": 1854732,
+    "label_counts": {
+      "1": 1949,
+      "0": 1731
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3680,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K4me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K4me3/train.csv",
+    "rows": 29439,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "bb31f7ffa1b39f5efab6b343b2a2f73ee1360f60809fd9ddd89dac6e58e1fd00",
+    "bytes": 14836817,
+    "label_counts": {
+      "1": 15701,
+      "0": 13738
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 29439,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K79me3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K79me3/test.csv",
+    "rows": 2884,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "2f0f697a394b4e25af1f4ee751549ea9ffa6a2e43392a2ff45f61572e0f2fc85",
+    "bytes": 1453548,
+    "label_counts": {
+      "0": 1358,
+      "1": 1526
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 2884,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K79me3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K79me3/train.csv",
+    "rows": 23069,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5d23f066c0eafdfc90e7343a3483c704cfe06e5c3d3061518e02ef529f42005a",
+    "bytes": 11626547,
+    "label_counts": {
+      "1": 12249,
+      "0": 10820
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 23069,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K9ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K9ac/test.csv",
+    "rows": 2779,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "873eb0e40934ded581d41f19a8185aceace89131100c24e6d1cfb18d55b147fb",
+    "bytes": 1400628,
+    "label_counts": {
+      "1": 1535,
+      "0": 1244
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 2779,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H3K9ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H3K9ac/train.csv",
+    "rows": 22224,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "73784c183b00bdc5c39a015f5d59c928e53758b0d06a07a2d081990e65d25619",
+    "bytes": 11200698,
+    "label_counts": {
+      "1": 12363,
+      "0": 9861
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 22224,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H4",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H4/test.csv",
+    "rows": 1461,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "79ffeb7e11b06ca379a0710910df30476b94bda8d8c2a8eed7ce878776aa33ed",
+    "bytes": 736356,
+    "label_counts": {
+      "0": 814,
+      "1": 647
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 1461,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H4",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H4/train.csv",
+    "rows": 11679,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4adcd21888d3871904e074b4ef237d742d6039ba52f0f0319ad2b81f8566235c",
+    "bytes": 5885987,
+    "label_counts": {
+      "1": 5195,
+      "0": 6484
+    },
+    "label_distinct": 2,
+    "length_min": 310,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 11679,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H4ac",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H4ac/test.csv",
+    "rows": 3410,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5faf3f30f3f8e467de1f552d26520bd3e9ba8650464baa37e7790f2f1e3b9e8e",
+    "bytes": 1718652,
+    "label_counts": {
+      "1": 1815,
+      "0": 1595
+    },
+    "label_distinct": 2,
+    "length_min": 500,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 3410,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_emp_H4ac",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_emp_H4ac/train.csv",
+    "rows": 27275,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6f372694e53a84f168b966d5c0589fa559aa7b5f68a91ad091c6ff0a9c2f4a95",
+    "bytes": 13746402,
+    "label_counts": {
+      "1": 14772,
+      "0": 12503
+    },
+    "label_distinct": 2,
+    "length_min": 290,
+    "length_max": 500,
+    "missing": {},
+    "distinct_sequences": 27275,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_fungi_species_20",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_fungi_species_20/test.csv",
+    "rows": 1000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ea526a4e9e7a0e9e1881e9a902880f24e0a6e17f0aa1a964db765eccab7f6b2a",
+    "bytes": 10004512,
+    "label_counts": {
+      "9": 50,
+      "16": 50,
+      "6": 50,
+      "13": 50,
+      "1": 50,
+      "0": 50,
+      "17": 50,
+      "14": 50,
+      "7": 50,
+      "10": 50,
+      "5": 50,
+      "2": 50,
+      "12": 50,
+      "19": 50,
+      "3": 50,
+      "8": 50,
+      "18": 50,
+      "4": 50,
+      "11": 50,
+      "15": 50
+    },
+    "label_distinct": 20,
+    "length_min": 10000,
+    "length_max": 10000,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_fungi_species_20",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_fungi_species_20/train.csv",
+    "rows": 8000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "8b036b3aed3ff455f2033835f561664b1ef25fd6318fc3ec19faa551034f2697",
+    "bytes": 80036012,
+    "label_counts": {
+      "10": 400,
+      "1": 400,
+      "3": 400,
+      "15": 400,
+      "11": 400,
+      "5": 400,
+      "16": 400,
+      "8": 400,
+      "6": 400,
+      "17": 400,
+      "18": 400,
+      "12": 400,
+      "9": 400,
+      "2": 400,
+      "13": 400,
+      "14": 400,
+      "0": 400,
+      "4": 400,
+      "7": 400,
+      "19": 400
+    },
+    "label_distinct": 20,
+    "length_min": 10000,
+    "length_max": 10000,
+    "missing": {},
+    "distinct_sequences": 8000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_0",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_0/test.csv",
+    "rows": 1000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "afa5e99978fffa758fc64f0a54f970eb2aed9dbd3a9f17ee8dac17666430181d",
+    "bytes": 105012,
+    "label_counts": {
+      "1": 500,
+      "0": 500
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_0",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_0/train.csv",
+    "rows": 32378,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "fd0e8fb0a52cc9cd99df73185a761b557da5c51f1c3de801aeea68dac2195a8e",
+    "bytes": 3399702,
+    "label_counts": {
+      "0": 16206,
+      "1": 16172
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 32370,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_1",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_1/test.csv",
+    "rows": 1000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "db85e1d06354b58ae67236b9a425030e4533430092a90a016eaed297302362e7",
+    "bytes": 105012,
+    "label_counts": {
+      "1": 500,
+      "0": 500
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_1",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_1/train.csv",
+    "rows": 30672,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "6f067c3699ebf22c83c2458841243a5da8f9c6e7cd0498551645d98a48ef9d8d",
+    "bytes": 3220572,
+    "label_counts": {
+      "1": 15340,
+      "0": 15332
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 30672,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_2",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_2/test.csv",
+    "rows": 1000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f4358cfa9d175bf21f3b631575bf860919e44bdc2355501eb96d2c5553fea60f",
+    "bytes": 105012,
+    "label_counts": {
+      "1": 500,
+      "0": 500
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_2",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_2/train.csv",
+    "rows": 19000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "9911bb41a52fdb3c4ab6ae60137b2761fcf0fff108d6e2154335f8cb2fa8fd91",
+    "bytes": 1995012,
+    "label_counts": {
+      "1": 9492,
+      "0": 9508
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 18815,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_3/test.csv",
+    "rows": 1000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "4f61b269a2f2e887c0d8d2eacce6858572a11e04adc3a7ce20aab3c3524b72e3",
+    "bytes": 105012,
+    "label_counts": {
+      "1": 500,
+      "0": 500
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_3/train.csv",
+    "rows": 27294,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b6c023ea24eed5e2395bce7d6309fc745f599f8b42fcbe01e26d41789d80bb84",
+    "bytes": 2865882,
+    "label_counts": {
+      "0": 13665,
+      "1": 13629
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 27274,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_4",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_4/test.csv",
+    "rows": 1000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "b6e8b295e03268f0b566906a9958aa81d02a1687ba5d3fd444cecb4307bdacf4",
+    "bytes": 105012,
+    "label_counts": {
+      "1": 500,
+      "0": 500
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_human_tf_4",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_human_tf_4/train.csv",
+    "rows": 19000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "05fd107eaa9a914133e15ced296475be0db7966374a89b38c388ff3510730db8",
+    "bytes": 1995012,
+    "label_counts": {
+      "0": 9505,
+      "1": 9495
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 15211,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_0",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_0/test.csv",
+    "rows": 810,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "65e3210dcb7ba9f3b72a9da39bc37979b4122cfebc94c9e2871dfea3d7f6b251",
+    "bytes": 85062,
+    "label_counts": {
+      "1": 405,
+      "0": 405
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 810,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_0",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_0/train.csv",
+    "rows": 6478,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a56dc4d0762d7700c906b23b1bc37708a01bd7346768b3c7d68ac0341e97b5d8",
+    "bytes": 680202,
+    "label_counts": {
+      "0": 3229,
+      "1": 3249
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 6478,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_1",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_1/test.csv",
+    "rows": 6745,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "8326a90d007b5d077401bc158a0ab0b5abe6094abd0d1d267636f33795cb09dd",
+    "bytes": 708237,
+    "label_counts": {
+      "0": 3373,
+      "1": 3372
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 6745,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_1",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_1/train.csv",
+    "rows": 53952,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "e76ad5868a94bd950220f05de14aa9112f50cfa75530fd14ff7c89ade9aaa2db",
+    "bytes": 5664972,
+    "label_counts": {
+      "0": 26994,
+      "1": 26958
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 53952,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_2",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_2/test.csv",
+    "rows": 328,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "65e860bac19254282b87fbc640026422e9bb613fb6a9febad84d0e69be40e62a",
+    "bytes": 34452,
+    "label_counts": {
+      "0": 164,
+      "1": 164
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 328,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_2",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_2/train.csv",
+    "rows": 2620,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c44cc6303e71a7573913b32b6129f18f5c89ba4edb5568fdcd77adc1e71a5591",
+    "bytes": 275112,
+    "label_counts": {
+      "0": 1311,
+      "1": 1309
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 2620,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_3",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_3/test.csv",
+    "rows": 239,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a586606c413052484729c6812a781418f144a70ef5b7540f3e3cca223e82ac17",
+    "bytes": 25107,
+    "label_counts": {
+      "1": 119,
+      "0": 120
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 239,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_3",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_3/train.csv",
+    "rows": 1904,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f2702e30f6e52a8d2fac3c57f0086e6c7c8bde248b02bb2aa71c5131ed22a4c5",
+    "bytes": 199932,
+    "label_counts": {
+      "1": 952,
+      "0": 952
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1904,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_4",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_4/test.csv",
+    "rows": 1883,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "f10e8b786f4f6a9c89419fa88f40fa58b3afd16dfc9d8f12ef61111733dd0e5f",
+    "bytes": 197727,
+    "label_counts": {
+      "1": 941,
+      "0": 942
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 1883,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_mouse_4",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_mouse_4/train.csv",
+    "rows": 15064,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3a709d26007ba9f726d7b72aecbed3f8dbde529367c4e4efd3b292e14a04377b",
+    "bytes": 1581732,
+    "label_counts": {
+      "1": 7496,
+      "0": 7568
+    },
+    "label_distinct": 2,
+    "length_min": 101,
+    "length_max": 101,
+    "missing": {},
+    "distinct_sequences": 15064,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_phage_fragments",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_phage_fragments/test.csv",
+    "rows": 4630,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c2873032068f0bf3c07492cff48747eeda9d2eb5b670047f15c6c700bb10cafd",
+    "bytes": 18538532,
+    "label_counts": {
+      "0": 2315,
+      "1": 2315
+    },
+    "label_distinct": 2,
+    "length_min": 4000,
+    "length_max": 4000,
+    "missing": {},
+    "distinct_sequences": 4630,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_phage_fragments",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_phage_fragments/train.csv",
+    "rows": 37044,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "e9c782e587386aa81fe2e9eeac28d6176679e732e139e0c7ae6a704f788824ec",
+    "bytes": 148324188,
+    "label_counts": {
+      "1": 18522,
+      "0": 18522
+    },
+    "label_distinct": 2,
+    "length_min": 4000,
+    "length_max": 4000,
+    "missing": {},
+    "distinct_sequences": 37044,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_300_all",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_300_all/test.csv",
+    "rows": 5920,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5082a8075c8a2f9ccb24c8f40ef44a2942d623b52fc3b8953cb5f4f18e6513e6",
+    "bytes": 1799692,
+    "label_counts": {
+      "1": 2980,
+      "0": 2940
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 5917,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 19
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_300_all",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_300_all/train.csv",
+    "rows": 47356,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "95e57be0cade4ba222a7b8e53018308f2f7dc182b1cc793d99702df17644a601",
+    "bytes": 14396236,
+    "label_counts": {
+      "0": 23684,
+      "1": 23672
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 47242,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 19
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_300_notata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_300_notata/test.csv",
+    "rows": 5307,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d1a90fa1b197fcce0e9de7e3388d1a5fd6eef561862b535383d0770bbf6281e3",
+    "bytes": 1613340,
+    "label_counts": {
+      "0": 2625,
+      "1": 2682
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 5306,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 11
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_300_notata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_300_notata/train.csv",
+    "rows": 42452,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "eeecf552834bfb85854002d45d488325045c7a6bbeca05390c264803d4ec961b",
+    "bytes": 12905420,
+    "label_counts": {
+      "1": 21225,
+      "0": 21227
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 42388,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 11
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_300_tata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_300_tata/test.csv",
+    "rows": 613,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ca10f7a7e55d5373dc1fc6e4793b2c92bcacab4c9ccdbea5ce4aca3a949487ef",
+    "bytes": 186364,
+    "label_counts": {
+      "1": 298,
+      "0": 315
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 611,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 6
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_300_tata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_300_tata/train.csv",
+    "rows": 4904,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "34b2e75b9eeeef4af78510407e248bafd770c0d6f73478a7b3b37b2a178b326a",
+    "bytes": 1490828,
+    "label_counts": {
+      "1": 2444,
+      "0": 2460
+    },
+    "label_distinct": 2,
+    "length_min": 300,
+    "length_max": 300,
+    "missing": {},
+    "distinct_sequences": 4848,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 6
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_core_all",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_core_all/test.csv",
+    "rows": 5920,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "d19966f77250e1c4c42f386c0d3483c2874d8e7886513afd9fbee393fa058e52",
+    "bytes": 438092,
+    "label_counts": {
+      "0": 2952,
+      "1": 2968
+    },
+    "label_distinct": 2,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 5916,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 42
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_core_all",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_core_all/train.csv",
+    "rows": 47356,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "580ac7ad53ff48314b59ce49228a359bc4127ef668232944fb4db5ab8044dbb4",
+    "bytes": 3504356,
+    "label_counts": {
+      "1": 23651,
+      "0": 23705
+    },
+    "label_distinct": 2,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 47208,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 42
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_core_notata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_core_notata/test.csv",
+    "rows": 5307,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "087faf6a7bb0a66bf0c6172d782084e24c8d5aeec394c7b45c94f08098d649ab",
+    "bytes": 392730,
+    "label_counts": {
+      "0": 2648,
+      "1": 2659
+    },
+    "label_distinct": 2,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 5305,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 29
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_core_notata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_core_notata/train.csv",
+    "rows": 42452,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "a0ff714f6120c06e36a3da12c46f9114434cd792a5b78c37414d35b8e8726b28",
+    "bytes": 3141460,
+    "label_counts": {
+      "0": 21284,
+      "1": 21168
+    },
+    "label_distinct": 2,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 42338,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 29
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_core_tata",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_core_tata/test.csv",
+    "rows": 613,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "5f0cbb3708df4607db7bb570f73a69ae1ce0c0ae6c264beb425752faa33da8d7",
+    "bytes": 45374,
+    "label_counts": {
+      "0": 304,
+      "1": 309
+    },
+    "label_distinct": 2,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 611,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 16
+  },
+  {
+    "task": "leannmlindsey_GUE_prom_core_tata",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_prom_core_tata/train.csv",
+    "rows": 4904,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "08b89a499443894ec9c230cf23daa3116374ab2d2491d8669ba02bf127485935",
+    "bytes": 362908,
+    "label_counts": {
+      "1": 2449,
+      "0": 2455
+    },
+    "label_distinct": 2,
+    "length_min": 70,
+    "length_max": 70,
+    "missing": {},
+    "distinct_sequences": 4847,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 16
+  },
+  {
+    "task": "leannmlindsey_GUE_splice_reconstructed",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_splice_reconstructed/test.csv",
+    "rows": 4562,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "2bdbcbb70e5d085654807265c5c4cb9b7aeecbe9baacf0776d9253ad6eb1e8f1",
+    "bytes": 1843060,
+    "label_counts": {
+      "1": 1025,
+      "2": 2581,
+      "0": 956
+    },
+    "label_distinct": 3,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 4543,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 195
+  },
+  {
+    "task": "leannmlindsey_GUE_splice_reconstructed",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_splice_reconstructed/train.csv",
+    "rows": 36496,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "ba752177a0646fb7cbf9babaa2d8df831fa7ad05dd07400b04cd0bd65b218aa4",
+    "bytes": 14744396,
+    "label_counts": {
+      "1": 7988,
+      "2": 20465,
+      "0": 8043
+    },
+    "label_distinct": 3,
+    "length_min": 400,
+    "length_max": 400,
+    "missing": {},
+    "distinct_sequences": 35716,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 195
+  },
+  {
+    "task": "leannmlindsey_GUE_virus_covid",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_virus_covid/test.csv",
+    "rows": 9168,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "c61199f0a1df496ff5742c6107a0c3e2d22476354e817e9b1f86fbc0ee8de385",
+    "bytes": 9195516,
+    "label_counts": {
+      "2": 1077,
+      "0": 1083,
+      "8": 1113,
+      "3": 1087,
+      "4": 1134,
+      "7": 761,
+      "6": 1082,
+      "5": 715,
+      "1": 1116
+    },
+    "label_distinct": 9,
+    "length_min": 999,
+    "length_max": 999,
+    "missing": {},
+    "distinct_sequences": 9079,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1084
+  },
+  {
+    "task": "leannmlindsey_GUE_virus_covid",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_virus_covid/train.csv",
+    "rows": 73335,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "3334edb7021c6bbc0c0959390afb110df3548abf8096f9e94aba875b9065eb92",
+    "bytes": 73555017,
+    "label_counts": {
+      "7": 6155,
+      "3": 8813,
+      "1": 8763,
+      "4": 8784,
+      "0": 8869,
+      "8": 8814,
+      "2": 8802,
+      "5": 5524,
+      "6": 8811
+    },
+    "label_distinct": 9,
+    "length_min": 999,
+    "length_max": 999,
+    "missing": {},
+    "distinct_sequences": 68689,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 1084
+  },
+  {
+    "task": "leannmlindsey_GUE_virus_species_40",
+    "split": "test",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_virus_species_40/test.csv",
+    "rows": 500,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "63ea8fb914ced5b9608a07b039e4cb89ed71fe84761c9a5f5e6915401f70fac1",
+    "bytes": 2502312,
+    "label_counts": {
+      "9": 20,
+      "3": 20,
+      "11": 20,
+      "19": 20,
+      "0": 20,
+      "24": 20,
+      "22": 20,
+      "17": 20,
+      "2": 20,
+      "18": 20,
+      "13": 20,
+      "5": 20,
+      "7": 20,
+      "6": 20,
+      "1": 20,
+      "8": 20,
+      "10": 20,
+      "12": 20,
+      "14": 20,
+      "20": 20,
+      "21": 20,
+      "15": 20,
+      "4": 20,
+      "16": 20,
+      "23": 20
+    },
+    "label_distinct": 25,
+    "length_min": 5000,
+    "length_max": 5000,
+    "missing": {},
+    "distinct_sequences": 500,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  },
+  {
+    "task": "leannmlindsey_GUE_virus_species_40",
+    "split": "train",
+    "repo": "darlednik/geneb-tasks",
+    "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
+    "path": "tasks/leannmlindsey_GUE_virus_species_40/train.csv",
+    "rows": 4000,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "sha256": "218f99dfc5e1062902ce9ce6363abf8cd06c36bbb494a28624a28e7a35557f6b",
+    "bytes": 20018412,
+    "label_counts": {
+      "21": 160,
+      "20": 160,
+      "14": 160,
+      "10": 160,
+      "13": 160,
+      "3": 160,
+      "15": 160,
+      "4": 160,
+      "2": 160,
+      "11": 160,
+      "5": 160,
+      "7": 160,
+      "23": 160,
+      "9": 160,
+      "24": 160,
+      "12": 160,
+      "19": 160,
+      "18": 160,
+      "8": 160,
+      "1": 160,
+      "22": 160,
+      "0": 160,
+      "16": 160,
+      "17": 160,
+      "6": 160
+    },
+    "label_distinct": 25,
+    "length_min": 5000,
+    "length_max": 5000,
+    "missing": {},
+    "distinct_sequences": 4000,
+    "numeric_score_range": null,
+    "scored_mutant_rows_before_model_missingness": null,
+    "train_test_exact_sequence_overlap": 0
+  }
+]

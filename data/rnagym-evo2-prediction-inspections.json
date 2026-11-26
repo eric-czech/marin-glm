@@ -1,0 +1,1353 @@
+[
+  {
+    "member": "model_predictions/evo2/A0A2Z5U3Z0_9INFA_Doud_2016.csv",
+    "rows": 10715,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 10715
+    },
+    "sha256": "a06b39ae56f06684450cbf28aad656ff0f856f8603471901ffd81d3573dcdff8",
+    "zip_crc32": "29ea947c",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Andreasson_2020_ribozyme.csv",
+    "rows": 7343,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 7342
+    },
+    "sha256": "9b36dd4ec933326bf6d7f70eb545491a4e89276683cbe79122d421aeee932ba3",
+    "zip_crc32": "f0fa64ed",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/BCHB_CHLTE_Tsuboyama_2023_2KRU.csv",
+    "rows": 1652,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1652
+    },
+    "sha256": "75c99b3e7c60e5aa7b9a17fef8f9320d904012e6805706853c8dbe1f6bea08b1",
+    "zip_crc32": "7dafc2af",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/BLAT_ECOLX_Firnberg_2014.csv",
+    "rows": 4783,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 4783
+    },
+    "sha256": "d5fb09a7acb1a4ccd62394ff5e879f4c2e8022a51eb21c55fca1a3508af26583",
+    "zip_crc32": "34ce522a",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/BLAT_ECOLX_Jacquier_2013.csv",
+    "rows": 989,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 989
+    },
+    "sha256": "38cccffef8cb406869777c44ffc3dd321156c286e77c22a927db5fab5e65624b",
+    "zip_crc32": "66f9bda3",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/BRCA1_HUMAN_Findlay_2018.csv",
+    "rows": 886,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 886
+    },
+    "sha256": "3f24acd736ffd17f7dd028768284444d2607a02d24a3a5de7985373d1017ca32",
+    "zip_crc32": "625ab0ba",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Beck_2022_ribozyme.csv",
+    "rows": 21321,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 21321
+    },
+    "sha256": "e90fdd03cd7053bb5ca834f5be8f236100b7f5d1925daa5a231832a86b527591",
+    "zip_crc32": "78b87c50",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/C6KNH7_9INFA_Lee_2018.csv",
+    "rows": 10754,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 10754
+    },
+    "sha256": "57e961d0ca08386fcb5e923a4f58832e77e02806a52636e2cfcc19160df46039",
+    "zip_crc32": "336d74f2",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/CALM1_HUMAN_Weile_2017.csv",
+    "rows": 1813,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1813
+    },
+    "sha256": "7227e139575a4d11c2383d25f6ad1d99aac7b699b433592a5bbe657eedb02a29",
+    "zip_crc32": "855e9b17",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/CAPSD_AAV2S_Sinai_2021.csv",
+    "rows": 42328,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 42328
+    },
+    "sha256": "6b9ffd4443ea32a69a3b2f4ee8ff728b0eb558d3e6c0d52ed3a2135962a1303b",
+    "zip_crc32": "761cf353",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/CBS_HUMAN_Sun_2020.csv",
+    "rows": 7217,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 7217
+    },
+    "sha256": "5bf4268d4876ca4e01bf34213f6c5e947f9cfcb0f8ef78c4cd33a993c94f6311",
+    "zip_crc32": "78f5a298",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/CCDB_ECOLI_Adkar_2012.csv",
+    "rows": 1176,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1176
+    },
+    "sha256": "51a4c682a3bc6b62c13fb64f8a3cfe4e88dcca5ba15ad47b9418caa82b1a456e",
+    "zip_crc32": "a03e74e3",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/DLG4_RAT_McLaughlin_2012.csv",
+    "rows": 1576,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1576
+    },
+    "sha256": "7179efa7d6b10e68dab319248382cb32cf28ba56787089c4a632edeaa3ffcd26",
+    "zip_crc32": "487e7496",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/DOCK1_MOUSE_Tsuboyama_2023_2M0Y.csv",
+    "rows": 3099,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 3099
+    },
+    "sha256": "f3f3d1733cfdcfb9c7cd74b83d5e058b000944211615890482e78f3a26610b21",
+    "zip_crc32": "8f303d83",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Domingo_2018_tRNA.csv",
+    "rows": 4175,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 4175
+    },
+    "sha256": "41c14535d3c1eb9e8f1a5c3c7b721e30265f95054bd0016c0fcda14232e743c6",
+    "zip_crc32": "7de5cfd7",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/ESTA_BACSU_Nutschel_2020.csv",
+    "rows": 2172,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 2172
+    },
+    "sha256": "f5924e9dfdb6419df36740d8bf5da89cd53d9c4522e4f4ecd12b92b877ff6c0c",
+    "zip_crc32": "4836a253",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/F7YBW8_MESOW_Ding_2023.csv",
+    "rows": 7922,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 7922
+    },
+    "sha256": "290a82c5e62d97c36736530b5237f17887efb115badc0a2a1531cb3f2a62cd35",
+    "zip_crc32": "74e2859a",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/GFP_AEQVI_Sarkisyan_2016.csv",
+    "rows": 51714,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "protein_mutant",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 51714
+    },
+    "sha256": "7ea0643591b2a10b66ac6466dfb1ac617dfe11a28d752489c99176684ed63468",
+    "zip_crc32": "186132a6",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Guy_2014_tRNA.csv",
+    "rows": 25491,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 25491
+    },
+    "sha256": "6b1e4de98fdd2d132b8b237bb050c9860f839a1f4bbf39fc97299f52c72612a0",
+    "zip_crc32": "eae679a0",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/HECD1_HUMAN_Tsuboyama_2023_3DKM.csv",
+    "rows": 6835,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 6835
+    },
+    "sha256": "7939a1eab17977af8c76844399d03ab0eea628357951eba44d713e33d5541466",
+    "zip_crc32": "5ba8be53",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/IF1_ECOLI_Kelsic_2016.csv",
+    "rows": 1367,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1367
+    },
+    "sha256": "19e48b8dfa22fc94bd0e809c73c39bed0409655df275c240e5a1cdd36f470ed7",
+    "zip_crc32": "82d475cc",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Janzen_2022_fam1a1_ribozyme.csv",
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "Unnamed: 3",
+      "Unnamed: 4",
+      "Unnamed: 5",
+      "Unnamed: 6",
+      "Unnamed: 7",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1953
+    },
+    "sha256": "4098753590cc06e07759d04aa46feb3490647fe9058e45197cc4cc8a1fe2840b",
+    "zip_crc32": "4ef7a25b",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Janzen_2022_fam1b1_ribozyme.csv",
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1953
+    },
+    "sha256": "da940c37fea31196c0771a2e7aefa1492ffc5ff02a3c9a104c231a03522b7991",
+    "zip_crc32": "799fcf59",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Janzen_2022_fam21_ribozyme.csv",
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "Unnamed: 3",
+      "Unnamed: 4",
+      "Unnamed: 5",
+      "Unnamed: 6",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1953
+    },
+    "sha256": "04c559177d0f360f7ab8554109b7b6b73e9b3c3bdf146c5926b432ac3d1bf0b7",
+    "zip_crc32": "85c96652",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Janzen_2022_fam22_ribozyme.csv",
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "Unnamed: 3",
+      "Unnamed: 4",
+      "Unnamed: 5",
+      "Unnamed: 6",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1953
+    },
+    "sha256": "31c83b2cc3b7281012204bdfeb75308dda437975b008e212de9b4967f4f0bdaf",
+    "zip_crc32": "85051994",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Janzen_2022_fam31_ribozyme.csv",
+    "rows": 1953,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "Unnamed: 3",
+      "Unnamed: 4",
+      "Unnamed: 5",
+      "Unnamed: 6",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1953
+    },
+    "sha256": "6a1d2f90ec7297b040ab0a784abfb4a6f8ad90ae86a689c58d56fa031ba6a7b3",
+    "zip_crc32": "c2bd6f21",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Julien_2016_mRNA.csv",
+    "rows": 189,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 189
+    },
+    "sha256": "54702f4689b61461d6ea701b41120050bfc556b2a010f14b3e724074d4731f19",
+    "zip_crc32": "582d731f",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Ke_2017_mRNA.csv",
+    "rows": 5559,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 5559
+    },
+    "sha256": "5e82e04240f7d69bcdeba0585fd1c81e8693dacdab1d60b9f9183469d5e79dba",
+    "zip_crc32": "1c99c8e8",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Kobori_2015_ribozyme_j12.csv",
+    "rows": 255,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 255
+    },
+    "sha256": "8d3d3522b4d14b3675751020803bd7782de675c9e67a685ab935a3a724dab6d3",
+    "zip_crc32": "ee07e12c",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Kobori_2015_ribozyme_p4.csv",
+    "rows": 255,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 255
+    },
+    "sha256": "79eeee831c6d4f3c1c6710c5a2753de26069789367eec9498fc163c3b964a365",
+    "zip_crc32": "33056b1e",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Kobori_2015_ribozyme_tw.csv",
+    "rows": 1023,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1023
+    },
+    "sha256": "5943afdba9641a41b00f78e71a2aa23f9679d7e7231efb59b615d57de423af8c",
+    "zip_crc32": "747eb45e",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Kobori_2016_osa_ribozyme.csv",
+    "rows": 10296,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 10296
+    },
+    "sha256": "27028236fbbbe743dd645fa467cbadaf53d099669951b73afe66c712c11176ed",
+    "zip_crc32": "e40d7d7c",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Kobori_2018_ribozyme.csv",
+    "rows": 16383,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "Unnamed: 3",
+      "Unnamed: 4",
+      "Unnamed: 5",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 16383
+    },
+    "sha256": "1d9c53e4f9c2387449118b8d32a546fed763ce3c7b3a1464109f3e88803e4c78",
+    "zip_crc32": "a116aea1",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Li_2016_tRNA.csv",
+    "rows": 65536,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 65536
+    },
+    "sha256": "3a7f4e4c53effcdc3bdd0d176fb7fa529d27fd7b06dcf718c46e138bb1fbfc6f",
+    "zip_crc32": "88b78259",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/MLAC_ECOLI_MacRae_2023.csv",
+    "rows": 4007,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 4007
+    },
+    "sha256": "59f7bce79bec0255d144bdcb983cb272aa536b46b8eed96c945181638297ba2e",
+    "zip_crc32": "6199b8ef",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/MTHR_HUMAN_Weile_2021.csv",
+    "rows": 12464,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 12464
+    },
+    "sha256": "fabcf73577cc416787e92a36a09a08153578eeb3a97687560c8234ba671daaf9",
+    "zip_crc32": "bab647c1",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/McRae_2024_5tu_ribozyme.csv",
+    "rows": 74942,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 74942
+    },
+    "sha256": "e94f47f31022c5c9e86de0df79077bea0cb49ca9e2093fb22a9162d44180cb7d",
+    "zip_crc32": "c875c363",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/McRae_2024_t1_ribozyme.csv",
+    "rows": 47503,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 47503
+    },
+    "sha256": "94a9faefe6439fceb86c235b603f76658de92b3758998701f2ed99ceaeb0ec25",
+    "zip_crc32": "b6c9906b",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/OBSCN_HUMAN_Tsuboyama_2023_1V1C.csv",
+    "rows": 3421,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 3421
+    },
+    "sha256": "4ebb18c29fe259255fa6c7244582e4ef4475fbdc358f12a7ed8f049555c9a00b",
+    "zip_crc32": "82fdfa0b",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/OXDA_RHOTO_Vanella_2023_activity.csv",
+    "rows": 6396,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 6396
+    },
+    "sha256": "575165c432d4c099f2b6f6fd8f66fbf3e4f4f4ae2a4f19000538e818769ef354",
+    "zip_crc32": "b53bc9be",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/P53_HUMAN_Kotler_2018.csv",
+    "rows": 1048,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1048
+    },
+    "sha256": "caf1752cccf1ff264354859ac6fda5f2851efa571115aae26329a9260102777e",
+    "zip_crc32": "941f75b1",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/PKN1_HUMAN_Tsuboyama_2023_1URF.csv",
+    "rows": 1305,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1305
+    },
+    "sha256": "55208deba9f4fe3f9d4db80a0dca614d50196c9ddc33da02eb1f793e74aad2ff",
+    "zip_crc32": "44636af6",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/POLG_DEN26_Suphatrakul_2023.csv",
+    "rows": 16897,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 16897
+    },
+    "sha256": "32ab4f7e77ff66643116d3022544367f2a7e8ee293636cb785d2a6fc56f49d1a",
+    "zip_crc32": "ca3f327c",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/POLG_PESV_Tsuboyama_2023_2MXD.csv",
+    "rows": 6287,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 6287
+    },
+    "sha256": "c08b06b481f0aac6d3021c25467159e5a43f372e6ba4489bd3f4bda532ea24de",
+    "zip_crc32": "7b737a9c",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/PSAE_PICP2_Tsuboyama_2023_1PSE.csv",
+    "rows": 1616,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1616
+    },
+    "sha256": "ad2198ae1ee1bf4aa2e884a4d5215173e373eab256d51968194b6411a8766652",
+    "zip_crc32": "15be7649",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/PTEN_HUMAN_Mighell_2018.csv",
+    "rows": 7260,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 7260
+    },
+    "sha256": "86ab0bce7c595324dd853e310c4cf182063f81bce8f1b2d49ee756ee0d9fa484",
+    "zip_crc32": "03bd32bb",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Peri_2022_ribozyme.csv",
+    "rows": 16383,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 16383
+    },
+    "sha256": "c8f917918d5576e7a9e69b8e39a20c4cf667713b596b5814ad6466de919f3a1b",
+    "zip_crc32": "8075dea4",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Pitt_2010_ribozyme.csv",
+    "rows": 186,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 186
+    },
+    "sha256": "ee7fb7711b512bf64295529a86eb685531bb78da621ee41e031b2cdc31b6c6bb",
+    "zip_crc32": "79bb8708",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Q837P4_ENTFA_Meier_2023.csv",
+    "rows": 697,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 697
+    },
+    "sha256": "9d7c9e16f9eef8d8d27e6c2603e3649d81bcc8d089931f1dd7c679d46ba4d2e2",
+    "zip_crc32": "1b08832f",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/R1AB_SARS2_Flynn_2022.csv",
+    "rows": 5725,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 5725
+    },
+    "sha256": "5b62b2acd0c26302064cbf398db973ee073069e4fb80c1a04466b0deabaa5256",
+    "zip_crc32": "da9b0dec",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/RCRO_LAMBD_Tsuboyama_2023_1ORC.csv",
+    "rows": 2401,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 2401
+    },
+    "sha256": "d4ead2e67eb99ec749be77b11bc8bd93bb2a40f7bfae7a6482e4bf7ff4b9ecd0",
+    "zip_crc32": "305d6b55",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/RDRP_I33A0_Li_2023.csv",
+    "rows": 12003,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 12003
+    },
+    "sha256": "17ebaf8cbcb9f96c75f252eb4bc52d35996a30ba964e6a70ca8e05a87bb56166",
+    "zip_crc32": "1c0df2a5",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/RNC_ECOLI_Weeks_2023.csv",
+    "rows": 4277,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 4277
+    },
+    "sha256": "acdfb25f10d33a9f169d15788116de388c563e7400541ac8c17b5a99dde3edf1",
+    "zip_crc32": "ad355d52",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Roberts_2023_HDV_ribozyme.csv",
+    "rows": 33930,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 33930
+    },
+    "sha256": "6129c740944d7b63a2baa334bfa0138546ac92b57bc5358c69fef3281d880918",
+    "zip_crc32": "87f64430",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Roberts_2023_cepeb3_ribozyme.csv",
+    "rows": 21321,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 21321
+    },
+    "sha256": "7bbfcc1a39f868e58428550797a2617ff6dc4cdbe740d1b4c3758d592eaf5562",
+    "zip_crc32": "1da7d8f5",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Roberts_2023_hh_ribozyme.csv",
+    "rows": 9045,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 9045
+    },
+    "sha256": "fab55db49031f96d26ae3fbdf09883eb2c3d38249a228da09dc396587a365db8",
+    "zip_crc32": "1f84f9dc",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Roberts_2023_hp_ribozyme.csv",
+    "rows": 22578,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 22578
+    },
+    "sha256": "32a3c3196dff83ed9fd41fc4d36f669ca05dbb140827bac8dcd06639df23c7f7",
+    "zip_crc32": "77323501",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Roberts_2023_tw_ribozyme.csv",
+    "rows": 10296,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 10296
+    },
+    "sha256": "0b22169a14770897054fffe3e33ed6ae83948dad729ff4f8665b33d9ffd6a73e",
+    "zip_crc32": "9f3645a7",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/SPIKE_SARS2_Starr_2020_binding.csv",
+    "rows": 3802,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 3802
+    },
+    "sha256": "d64366b52acdb2c8606ee868c600a002f76309604d574aead95d0c827ab7dc82",
+    "zip_crc32": "686f91e9",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/SPTN1_CHICK_Tsuboyama_2023_1TUD.csv",
+    "rows": 3485,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 3485
+    },
+    "sha256": "d16f3710909a875857b5249d88af9c9235af284b8b33fff5965e6b447f8f8918",
+    "zip_crc32": "712ae632",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/SR43C_ARATH_Tsuboyama_2023_2N88.csv",
+    "rows": 1663,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1663
+    },
+    "sha256": "232cde47f089ae94706543093a016f04441e19ec99138d5f9e018d78bf4a19d9",
+    "zip_crc32": "5fa2bf58",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/SUMO1_HUMAN_Weile_2017.csv",
+    "rows": 1700,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1700
+    },
+    "sha256": "8f6cf8aad0d1bca420fdb3cff150e06bbd3bed35964ab2861e85e7112e45c65c",
+    "zip_crc32": "a7bd1869",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Soo_2021_ribozyme.csv",
+    "rows": 64019,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 63430
+    },
+    "sha256": "f5d60e2b531ca489e304b15e827aaaf1a772c11ca958198cb37b22c706cacfa6",
+    "zip_crc32": "970205c2",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/TAT_HV1BR_Fernandes_2016.csv",
+    "rows": 1577,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 1577
+    },
+    "sha256": "d5e8c3a05eec610b15b181cd2411e4e1a1d6d535bc590355f6065687ab0f83dc",
+    "zip_crc32": "725c324c",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Tome_2014_GFP_aptamer.csv",
+    "rows": 417,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 417
+    },
+    "sha256": "da20f013f5a86732d230fbbef79a42c43670d9589454e37c976c56be1211ddd2",
+    "zip_crc32": "2a95ffd6",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Tome_2014_NELFE_aptamer.csv",
+    "rows": 2652,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 2652
+    },
+    "sha256": "fd476d5389231de95cef45c6c88ec95cc1e549ec14eafea845f15c7ecc32c34d",
+    "zip_crc32": "f2fc1e8e",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Zhang_2020_cpeb3_ribozyme.csv",
+    "rows": 111417,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 111417
+    },
+    "sha256": "f9764c1b9017a11b014cfced6fca27c3b80ca999c2afbab7a13ddfcccb36a657",
+    "zip_crc32": "44161a53",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Zhang_2024_OR4K15_ribozyme.csv",
+    "rows": 61393,
+    "columns": [
+      "mutant",
+      "DMS_score",
+      "sequence",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 61393
+    },
+    "sha256": "e87d5f3499853eec533c5b65bd1e7caa22686f5dc18afa193f33e72cee5c4ed1",
+    "zip_crc32": "3bc8ec69",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Zhang_2024_line1_full_ribozyme.csv",
+    "rows": 69583,
+    "columns": [
+      "mutant",
+      "sequence",
+      "DMS_score",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 69583
+    },
+    "sha256": "28cb39c083e2c7fff111e2ee737027d1ec365d1401eeff1c32e0ea5dd2bcc7bc",
+    "zip_crc32": "95e441e5",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  },
+  {
+    "member": "model_predictions/evo2/Zhang_2024_line1_mini_ribozyme.csv",
+    "rows": 149710,
+    "columns": [
+      "mutant",
+      "sequence",
+      "DMS_score",
+      "evo2_7b_score"
+    ],
+    "score_columns": [
+      "evo2_7b_score"
+    ],
+    "scored_rows": {
+      "evo2_7b_score": 149710
+    },
+    "sha256": "c272f32104806adb7267f365cd1b12442cef0ad20801bbc1ba8880d0f1faed65",
+    "zip_crc32": "dedd444e",
+    "archive_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/model_predictions.zip"
+  }
+]
