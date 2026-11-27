@@ -411,7 +411,16 @@
           "bytes": 191745287
         }
       ],
-      "viewer_rows_verified": 20
+      "viewer_rows_verified": 20,
+      "distinct_sequences": {
+        "test": 243844,
+        "validation": 629305
+      },
+      "duplicate_sequence_rows": {
+        "test": 1,
+        "validation": 10
+      },
+      "denominator_method": "Complete test and validation DNA columns read from the same pinned cached Parquets to count distinct exact strings. No new training sequence scan. Shared-string percentages use this unique-string denominator, not an affected-row denominator."
     },
     "rnagym-random-Ke_2017_mRNA": {
       "partitions": {
