@@ -1,4 +1,7 @@
 """Integrity and scientifically material provenance checks for the published catalogue."""
+import os
+import subprocess
+import sys
 from pathlib import Path
 from collections import Counter
 import json
@@ -424,6 +427,12 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual({r['dataset'] for r in inspection['GB_GENEB']},names)
         self.assertTrue(all(r['geneb_rows_all_present_with_same_label'] for r in inspection['GB_GENEB']))
         self.assertTrue(all(r['rowwise_sequence_label_equal'] for arm in inspection['GUE_GENEB'].values() for r in arm.values()))
+
+    def test_coverage_export_is_reproducible_across_hash_seeds(self):
+        code='import hashlib,json,sys;sys.path.insert(0,"scripts");from coverage_data import export_coverage;d=json.load(open("data/catalogue.json"));print(hashlib.sha256(json.dumps(export_coverage(d),ensure_ascii=False).encode()).hexdigest())'
+        hashes=[subprocess.check_output([sys.executable,'-c',code],cwd=ROOT,
+            env={**os.environ,'PYTHONHASHSEED':seed},text=True).strip() for seed in ['1','42']]
+        self.assertEqual(hashes[0],hashes[1])
 
     def test_shared_maize_target_keeps_distinct_paper_partitions(self):
         target='plantcad2-ft-cell_type_specific_acr'

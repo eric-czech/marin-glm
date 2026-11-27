@@ -86,7 +86,7 @@ def export_coverage(db):
             for rid in sorted(assigned):
                 if rid not in rowtasks:raise ValueError('Unknown coverage row: '+rid)
                 rowtasks[rid].append(i)
-                for feature in {f for m in t['mappings'] if m[field]==rid for f in m['features']}:cells[rid+'|'+feature].append(i)
+                for feature in sorted({f for m in t['mappings'] if m[field]==rid for f in m['features']}):cells[rid+'|'+feature].append(i)
         if {i for ids in rowtasks.values() for i in ids}!=set(range(len(tasks))):raise ValueError('Coverage lost tasks')
         for r in rs:
             path=[];n=lookup[r['displayParent']];seen=set()

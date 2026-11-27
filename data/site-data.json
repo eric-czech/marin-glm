@@ -390770,27 +390770,27 @@
               731,
               739
             ],
-            "mammalia|intron": [
+            "mammalia|exon": [
               2,
               3,
               8,
               45,
               46,
               48,
-              310,
+              120,
+              354,
+              355,
               400,
               401,
-              478,
-              479,
+              499,
               506,
               507,
               522,
-              527,
-              528,
-              604,
-              612,
-              651,
-              665
+              543,
+              546,
+              628,
+              652,
+              653
             ],
             "mammalia|gene": [
               2,
@@ -390843,30 +390843,27 @@
               732,
               733
             ],
-            "mammalia|exon": [
+            "mammalia|intron": [
               2,
               3,
               8,
               45,
               46,
               48,
-              120,
-              354,
-              355,
+              310,
               400,
               401,
-              499,
+              478,
+              479,
               506,
               507,
               522,
-              543,
-              546,
-              628,
-              652,
-              653
-            ],
-            "archaea-unresolved|gene": [
-              4
+              527,
+              528,
+              604,
+              612,
+              651,
+              665
             ],
             "archaea-unresolved|cds": [
               4,
@@ -390876,21 +390873,8 @@
               142,
               300
             ],
-            "bacteria-unresolved|gene": [
-              4,
-              55,
-              56,
-              57,
-              426,
-              428,
-              429,
-              430,
-              431,
-              432,
-              433,
-              434,
-              435,
-              436
+            "archaea-unresolved|gene": [
+              4
             ],
             "bacteria-unresolved|cds": [
               4,
@@ -390931,12 +390915,28 @@
               585,
               654
             ],
-            "duplodnaviria|gene": [
-              5
+            "bacteria-unresolved|gene": [
+              4,
+              55,
+              56,
+              57,
+              426,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436
             ],
             "duplodnaviria|cds": [
               5,
               252
+            ],
+            "duplodnaviria|gene": [
+              5
             ],
             "mammalia|cds": [
               6,
@@ -391020,6 +391020,15 @@
               295,
               738
             ],
+            "eudicots|exon": [
+              8,
+              332,
+              354,
+              355,
+              483,
+              485,
+              634
+            ],
             "eudicots|intron": [
               8,
               332,
@@ -391030,7 +391039,13 @@
               604,
               634
             ],
-            "eudicots|exon": [
+            "lycophytes|exon": [
+              8
+            ],
+            "lycophytes|intron": [
+              8
+            ],
+            "poaceae|exon": [
               8,
               332,
               354,
@@ -391038,12 +391053,6 @@
               483,
               485,
               634
-            ],
-            "lycophytes|intron": [
-              8
-            ],
-            "lycophytes|exon": [
-              8
             ],
             "poaceae|intron": [
               8,
@@ -391055,21 +391064,12 @@
               604,
               634
             ],
-            "poaceae|exon": [
-              8,
-              332,
-              354,
-              355,
-              483,
-              485,
-              634
+            "teleostei|exon": [
+              8
             ],
             "teleostei|intron": [
               8,
               604
-            ],
-            "teleostei|exon": [
-              8
             ],
             "unknown|ncrna": [
               24,
@@ -391195,21 +391195,21 @@
               604,
               606
             ],
-            "mammalia|trna": [
-              32,
-              604
-            ],
             "mammalia|rrna": [
               32,
               417,
               604
             ],
-            "mycoplasmatota|genome": [
-              33
+            "mammalia|trna": [
+              32,
+              604
             ],
             "mycoplasmatota|cds": [
               33,
               605
+            ],
+            "mycoplasmatota|genome": [
+              33
             ],
             "saccharomycotina|genome": [
               34,
@@ -391348,48 +391348,6 @@
               705,
               706
             ],
-            "mammalia|utr5": [
-              45,
-              46,
-              296,
-              298,
-              299,
-              310,
-              392,
-              397,
-              417,
-              527,
-              528,
-              604
-            ],
-            "mammalia|intergenic": [
-              45,
-              46,
-              120,
-              397,
-              522,
-              527,
-              528,
-              604,
-              628
-            ],
-            "mammalia|utr3": [
-              45,
-              46,
-              297,
-              298,
-              299,
-              310,
-              392,
-              397,
-              417,
-              527,
-              528,
-              604,
-              722,
-              733,
-              740
-            ],
             "mammalia|enhancer": [
               45,
               46,
@@ -391414,6 +391372,17 @@
               709,
               714,
               715
+            ],
+            "mammalia|intergenic": [
+              45,
+              46,
+              120,
+              397,
+              522,
+              527,
+              528,
+              604,
+              628
             ],
             "mammalia|promoter": [
               45,
@@ -391468,6 +391437,37 @@
               676,
               678,
               734
+            ],
+            "mammalia|utr3": [
+              45,
+              46,
+              297,
+              298,
+              299,
+              310,
+              392,
+              397,
+              417,
+              527,
+              528,
+              604,
+              722,
+              733,
+              740
+            ],
+            "mammalia|utr5": [
+              45,
+              46,
+              296,
+              298,
+              299,
+              310,
+              392,
+              397,
+              417,
+              527,
+              528,
+              604
             ],
             "bacteria-unresolved|operon": [
               56,
@@ -391730,12 +391730,6 @@
               684,
               685
             ],
-            "unknown|splice": [
-              206,
-              207,
-              376,
-              554
-            ],
             "unknown|exon": [
               206,
               207,
@@ -391744,6 +391738,12 @@
             "unknown|mrna": [
               206,
               207
+            ],
+            "unknown|splice": [
+              206,
+              207,
+              376,
+              554
             ],
             "unknown|aptamer": [
               221,
@@ -391941,15 +391941,15 @@
               313,
               377
             ],
-            "euk-unresolved|ncrna": [
-              305
-            ],
             "euk-unresolved|gene": [
               305
             ],
             "euk-unresolved|intergenic": [
               305,
               408
+            ],
+            "euk-unresolved|ncrna": [
+              305
             ],
             "mammalia|chromatin-boundary": [
               325,
@@ -391972,12 +391972,13 @@
               603,
               606
             ],
-            "eudicots|utr5": [
+            "eudicots|intergenic": [
               332,
+              408,
+              465,
               482,
-              483,
-              485,
-              604
+              604,
+              634
             ],
             "eudicots|ncrna": [
               332,
@@ -391987,14 +391988,6 @@
               332,
               465
             ],
-            "eudicots|intergenic": [
-              332,
-              408,
-              465,
-              482,
-              604,
-              634
-            ],
             "eudicots|utr3": [
               332,
               482,
@@ -392002,30 +391995,7 @@
               485,
               604
             ],
-            "poaceae|utr5": [
-              332,
-              482,
-              483,
-              485,
-              604
-            ],
-            "poaceae|ncrna": [
-              332,
-              604
-            ],
-            "poaceae|repeat": [
-              332,
-              594,
-              595,
-              596
-            ],
-            "poaceae|intergenic": [
-              332,
-              482,
-              604,
-              634
-            ],
-            "poaceae|utr3": [
+            "eudicots|utr5": [
               332,
               482,
               483,
@@ -392054,6 +392024,36 @@
               604,
               634,
               636
+            ],
+            "poaceae|intergenic": [
+              332,
+              482,
+              604,
+              634
+            ],
+            "poaceae|ncrna": [
+              332,
+              604
+            ],
+            "poaceae|repeat": [
+              332,
+              594,
+              595,
+              596
+            ],
+            "poaceae|utr3": [
+              332,
+              482,
+              483,
+              485,
+              604
+            ],
+            "poaceae|utr5": [
+              332,
+              482,
+              483,
+              485,
+              604
             ],
             "poaceae|genome": [
               333,
@@ -392198,15 +392198,15 @@
               354,
               355
             ],
-            "monocots-other|splice": [
-              354,
-              355
-            ],
             "monocots-other|cds": [
               354,
               355
             ],
             "monocots-other|exon": [
+              354,
+              355
+            ],
+            "monocots-other|splice": [
               354,
               355
             ],
@@ -392259,13 +392259,13 @@
               481,
               507
             ],
+            "monocots-other|gene": [
+              355
+            ],
             "monocots-other|splice-junction": [
               355
             ],
             "monocots-other|transcript": [
-              355
-            ],
-            "monocots-other|gene": [
               355
             ],
             "poaceae|splice-junction": [
@@ -392367,10 +392367,10 @@
               451,
               452
             ],
-            "angiosperms-unresolved|genome": [
+            "angiosperms-unresolved|gene": [
               466
             ],
-            "angiosperms-unresolved|gene": [
+            "angiosperms-unresolved|genome": [
               466
             ],
             "arecales|cds": [
@@ -392514,113 +392514,116 @@
               598,
               639
             ],
-            "actinomycetota|translation-stop": [
-              602
-            ],
             "actinomycetota|translation-start": [
               602
             ],
-            "alveolata|translation-stop": [
+            "actinomycetota|translation-stop": [
               602
             ],
             "alveolata|translation-start": [
               602
             ],
-            "amphibia|translation-stop": [
+            "alveolata|translation-stop": [
               602
             ],
             "amphibia|translation-start": [
               602
             ],
-            "bacillota|translation-stop": [
+            "amphibia|translation-stop": [
               602
             ],
             "bacillota|translation-start": [
               602
             ],
-            "bacteroidota|translation-stop": [
+            "bacillota|translation-stop": [
               602
             ],
             "bacteroidota|translation-start": [
               602
             ],
-            "chlorophyta|translation-stop": [
+            "bacteroidota|translation-stop": [
               602
             ],
             "chlorophyta|translation-start": [
               602
             ],
-            "cyanobacteriota|translation-stop": [
+            "chlorophyta|translation-stop": [
               602
             ],
             "cyanobacteriota|translation-start": [
               602
             ],
-            "insecta|translation-stop": [
+            "cyanobacteriota|translation-stop": [
               602
             ],
             "insecta|translation-start": [
               602
             ],
-            "mammalia|translation-stop": [
+            "insecta|translation-stop": [
               602
             ],
             "mammalia|translation-start": [
               602
             ],
-            "methanobacteriota|translation-stop": [
+            "mammalia|translation-stop": [
               602
             ],
             "methanobacteriota|translation-start": [
               602
             ],
-            "nanobdellota|translation-stop": [
+            "methanobacteriota|translation-stop": [
               602
             ],
             "nanobdellota|translation-start": [
               602
             ],
-            "nematoda|translation-stop": [
+            "nanobdellota|translation-stop": [
               602
             ],
             "nematoda|translation-start": [
               602
             ],
-            "nitrososphaerota|translation-stop": [
+            "nematoda|translation-stop": [
               602
             ],
             "nitrososphaerota|translation-start": [
               602
             ],
-            "pseudomonadota|translation-stop": [
+            "nitrososphaerota|translation-stop": [
               602
             ],
             "pseudomonadota|translation-start": [
               602
             ],
-            "saccharomycotina|translation-stop": [
+            "pseudomonadota|translation-stop": [
               602
             ],
             "saccharomycotina|translation-start": [
               602
             ],
-            "stramenopiles|translation-stop": [
+            "saccharomycotina|translation-stop": [
               602
             ],
             "stramenopiles|translation-start": [
               602
             ],
-            "teleostei|translation-stop": [
+            "stramenopiles|translation-stop": [
               602
             ],
             "teleostei|translation-start": [
               602
             ],
-            "thermoproteota|translation-stop": [
+            "teleostei|translation-stop": [
               602
             ],
             "thermoproteota|translation-start": [
               602
+            ],
+            "thermoproteota|translation-stop": [
+              602
+            ],
+            "actinomycetota|intergenic": [
+              603
             ],
             "actinomycetota|ncrna": [
               603
@@ -392628,10 +392631,10 @@
             "actinomycetota|rrna": [
               603
             ],
-            "actinomycetota|intergenic": [
+            "actinomycetota|trna": [
               603
             ],
-            "actinomycetota|trna": [
+            "bacillota|intergenic": [
               603
             ],
             "bacillota|ncrna": [
@@ -392640,10 +392643,13 @@
             "bacillota|rrna": [
               603
             ],
-            "bacillota|intergenic": [
+            "bacillota|trna": [
               603
             ],
-            "bacillota|trna": [
+            "bacteroidota|cds": [
+              603
+            ],
+            "bacteroidota|intergenic": [
               603
             ],
             "bacteroidota|ncrna": [
@@ -392652,13 +392658,10 @@
             "bacteroidota|rrna": [
               603
             ],
-            "bacteroidota|intergenic": [
-              603
-            ],
             "bacteroidota|trna": [
               603
             ],
-            "bacteroidota|cds": [
+            "cyanobacteriota|intergenic": [
               603
             ],
             "cyanobacteriota|ncrna": [
@@ -392667,10 +392670,10 @@
             "cyanobacteriota|rrna": [
               603
             ],
-            "cyanobacteriota|intergenic": [
+            "cyanobacteriota|trna": [
               603
             ],
-            "cyanobacteriota|trna": [
+            "methanobacteriota|intergenic": [
               603
             ],
             "methanobacteriota|ncrna": [
@@ -392679,10 +392682,13 @@
             "methanobacteriota|rrna": [
               603
             ],
-            "methanobacteriota|intergenic": [
+            "methanobacteriota|trna": [
               603
             ],
-            "methanobacteriota|trna": [
+            "nanobdellota|cds": [
+              603
+            ],
+            "nanobdellota|intergenic": [
               603
             ],
             "nanobdellota|ncrna": [
@@ -392691,13 +392697,13 @@
             "nanobdellota|rrna": [
               603
             ],
-            "nanobdellota|intergenic": [
-              603
-            ],
             "nanobdellota|trna": [
               603
             ],
-            "nanobdellota|cds": [
+            "nitrososphaerota|cds": [
+              603
+            ],
+            "nitrososphaerota|intergenic": [
               603
             ],
             "nitrososphaerota|ncrna": [
@@ -392706,16 +392712,13 @@
             "nitrososphaerota|rrna": [
               603
             ],
-            "nitrososphaerota|intergenic": [
-              603
-            ],
             "nitrososphaerota|trna": [
               603
             ],
-            "nitrososphaerota|cds": [
+            "pseudomonadota|ncrna": [
               603
             ],
-            "pseudomonadota|ncrna": [
+            "thermoproteota|intergenic": [
               603
             ],
             "thermoproteota|ncrna": [
@@ -392724,13 +392727,17 @@
             "thermoproteota|rrna": [
               603
             ],
-            "thermoproteota|intergenic": [
-              603
-            ],
             "thermoproteota|trna": [
               603
             ],
-            "alveolata|utr5": [
+            "alveolata|cds": [
+              604,
+              605
+            ],
+            "alveolata|intergenic": [
+              604
+            ],
+            "alveolata|intron": [
               604
             ],
             "alveolata|lncrna": [
@@ -392742,23 +392749,22 @@
             "alveolata|rrna": [
               604
             ],
-            "alveolata|intergenic": [
-              604
-            ],
             "alveolata|trna": [
               604
             ],
             "alveolata|utr3": [
               604
             ],
-            "alveolata|intron": [
+            "alveolata|utr5": [
               604
             ],
-            "alveolata|cds": [
-              604,
-              605
+            "amphibia|cds": [
+              604
             ],
-            "amphibia|utr5": [
+            "amphibia|intergenic": [
+              604
+            ],
+            "amphibia|intron": [
               604
             ],
             "amphibia|lncrna": [
@@ -392770,22 +392776,16 @@
             "amphibia|rrna": [
               604
             ],
-            "amphibia|intergenic": [
-              604
-            ],
             "amphibia|trna": [
               604
             ],
             "amphibia|utr3": [
               604
             ],
-            "amphibia|intron": [
+            "amphibia|utr5": [
               604
             ],
-            "amphibia|cds": [
-              604
-            ],
-            "chlorophyta|utr5": [
+            "chlorophyta|intergenic": [
               604
             ],
             "chlorophyta|lncrna": [
@@ -392797,13 +392797,13 @@
             "chlorophyta|rrna": [
               604
             ],
-            "chlorophyta|intergenic": [
-              604
-            ],
             "chlorophyta|trna": [
               604
             ],
             "chlorophyta|utr3": [
+              604
+            ],
+            "chlorophyta|utr5": [
               604
             ],
             "eudicots|rrna": [
@@ -392812,7 +392812,10 @@
             "eudicots|trna": [
               604
             ],
-            "insecta|utr5": [
+            "insecta|intergenic": [
+              604
+            ],
+            "insecta|intron": [
               604
             ],
             "insecta|lncrna": [
@@ -392824,19 +392827,22 @@
             "insecta|rrna": [
               604
             ],
-            "insecta|intergenic": [
-              604
-            ],
             "insecta|trna": [
               604
             ],
             "insecta|utr3": [
               604
             ],
-            "insecta|intron": [
+            "insecta|utr5": [
               604
             ],
-            "nematoda|utr5": [
+            "nematoda|cds": [
+              604
+            ],
+            "nematoda|intergenic": [
+              604
+            ],
+            "nematoda|intron": [
               604
             ],
             "nematoda|lncrna": [
@@ -392848,19 +392854,13 @@
             "nematoda|rrna": [
               604
             ],
-            "nematoda|intergenic": [
-              604
-            ],
             "nematoda|trna": [
               604
             ],
             "nematoda|utr3": [
               604
             ],
-            "nematoda|intron": [
-              604
-            ],
-            "nematoda|cds": [
+            "nematoda|utr5": [
               604
             ],
             "poaceae|rrna": [
@@ -392869,7 +392869,10 @@
             "poaceae|trna": [
               604
             ],
-            "saccharomycotina|utr5": [
+            "saccharomycotina|intergenic": [
+              604
+            ],
+            "saccharomycotina|intron": [
               604
             ],
             "saccharomycotina|lncrna": [
@@ -392881,19 +392884,23 @@
             "saccharomycotina|rrna": [
               604
             ],
-            "saccharomycotina|intergenic": [
-              604
-            ],
             "saccharomycotina|trna": [
               604
             ],
             "saccharomycotina|utr3": [
               604
             ],
-            "saccharomycotina|intron": [
+            "saccharomycotina|utr5": [
               604
             ],
-            "stramenopiles|utr5": [
+            "stramenopiles|cds": [
+              604,
+              605
+            ],
+            "stramenopiles|intergenic": [
+              604
+            ],
+            "stramenopiles|intron": [
               604
             ],
             "stramenopiles|lncrna": [
@@ -392905,23 +392912,19 @@
             "stramenopiles|rrna": [
               604
             ],
-            "stramenopiles|intergenic": [
-              604
-            ],
             "stramenopiles|trna": [
               604
             ],
             "stramenopiles|utr3": [
               604
             ],
-            "stramenopiles|intron": [
+            "stramenopiles|utr5": [
               604
             ],
-            "stramenopiles|cds": [
-              604,
-              605
+            "teleostei|cds": [
+              604
             ],
-            "teleostei|utr5": [
+            "teleostei|intergenic": [
               604
             ],
             "teleostei|lncrna": [
@@ -392933,16 +392936,13 @@
             "teleostei|rrna": [
               604
             ],
-            "teleostei|intergenic": [
-              604
-            ],
             "teleostei|trna": [
               604
             ],
             "teleostei|utr3": [
               604
             ],
-            "teleostei|cds": [
+            "teleostei|utr5": [
               604
             ],
             "mammalia|polya": [
@@ -397035,24 +397035,25 @@
               731,
               739
             ],
-            "mammalia-sp-9606|intron": [
+            "mammalia-sp-9606|exon": [
               2,
               3,
               8,
               45,
               46,
               48,
-              310,
+              120,
               400,
               401,
+              499,
               506,
               507,
               522,
-              527,
-              528,
-              604,
-              612,
-              651
+              543,
+              546,
+              628,
+              652,
+              653
             ],
             "mammalia-sp-9606|gene": [
               2,
@@ -397103,28 +397104,24 @@
               732,
               733
             ],
-            "mammalia-sp-9606|exon": [
+            "mammalia-sp-9606|intron": [
               2,
               3,
               8,
               45,
               46,
               48,
-              120,
+              310,
               400,
               401,
-              499,
               506,
               507,
               522,
-              543,
-              546,
-              628,
-              652,
-              653
-            ],
-            "archaea-unresolved|gene": [
-              4
+              527,
+              528,
+              604,
+              612,
+              651
             ],
             "archaea-unresolved|cds": [
               4,
@@ -397134,21 +397131,8 @@
               142,
               300
             ],
-            "bacteria-unresolved|gene": [
-              4,
-              55,
-              56,
-              57,
-              426,
-              428,
-              429,
-              430,
-              431,
-              432,
-              433,
-              434,
-              435,
-              436
+            "archaea-unresolved|gene": [
+              4
             ],
             "bacteria-unresolved|cds": [
               4,
@@ -397189,12 +397173,28 @@
               585,
               654
             ],
-            "duplodnaviria|gene": [
-              5
+            "bacteria-unresolved|gene": [
+              4,
+              55,
+              56,
+              57,
+              426,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436
             ],
             "duplodnaviria|cds": [
               5,
               252
+            ],
+            "duplodnaviria|gene": [
+              5
             ],
             "mammalia-sp-9606|cds": [
               6,
@@ -397261,6 +397261,13 @@
               294,
               738
             ],
+            "eudicots-other|exon": [
+              8,
+              354,
+              355,
+              483,
+              485
+            ],
             "eudicots-other|intron": [
               8,
               465,
@@ -397269,38 +397276,31 @@
               482,
               604
             ],
-            "eudicots-other|exon": [
-              8,
-              354,
-              355,
-              483,
-              485
+            "lycophytes-other|exon": [
+              8
             ],
             "lycophytes-other|intron": [
               8
             ],
-            "lycophytes-other|exon": [
+            "mammalia-sp-10090|exon": [
               8
             ],
             "mammalia-sp-10090|intron": [
               8,
               604
             ],
-            "mammalia-sp-10090|exon": [
+            "poaceae-other|exon": [
               8
             ],
             "poaceae-other|intron": [
               8
             ],
-            "poaceae-other|exon": [
+            "teleostei-sp-7955|exon": [
               8
             ],
             "teleostei-sp-7955|intron": [
               8,
               604
-            ],
-            "teleostei-sp-7955|exon": [
-              8
             ],
             "unknown|ncrna": [
               24,
@@ -397412,21 +397412,21 @@
               604,
               606
             ],
-            "mammalia-sp-9606|trna": [
-              32,
-              604
-            ],
             "mammalia-sp-9606|rrna": [
               32,
               417,
               604
             ],
-            "mycoplasmatota-other|genome": [
-              33
+            "mammalia-sp-9606|trna": [
+              32,
+              604
             ],
             "mycoplasmatota-other|cds": [
               33,
               605
+            ],
+            "mycoplasmatota-other|genome": [
+              33
             ],
             "saccharomycotina-sp-4932|genome": [
               34,
@@ -397567,46 +397567,6 @@
               705,
               706
             ],
-            "mammalia-sp-9606|utr5": [
-              45,
-              46,
-              296,
-              298,
-              299,
-              310,
-              397,
-              417,
-              527,
-              528,
-              604
-            ],
-            "mammalia-sp-9606|intergenic": [
-              45,
-              46,
-              120,
-              397,
-              522,
-              527,
-              528,
-              604,
-              628
-            ],
-            "mammalia-sp-9606|utr3": [
-              45,
-              46,
-              297,
-              298,
-              299,
-              310,
-              397,
-              417,
-              527,
-              528,
-              604,
-              722,
-              733,
-              740
-            ],
             "mammalia-sp-9606|enhancer": [
               45,
               46,
@@ -397629,6 +397589,17 @@
               709,
               714,
               715
+            ],
+            "mammalia-sp-9606|intergenic": [
+              45,
+              46,
+              120,
+              397,
+              522,
+              527,
+              528,
+              604,
+              628
             ],
             "mammalia-sp-9606|promoter": [
               45,
@@ -397683,6 +397654,35 @@
               676,
               678,
               734
+            ],
+            "mammalia-sp-9606|utr3": [
+              45,
+              46,
+              297,
+              298,
+              299,
+              310,
+              397,
+              417,
+              527,
+              528,
+              604,
+              722,
+              733,
+              740
+            ],
+            "mammalia-sp-9606|utr5": [
+              45,
+              46,
+              296,
+              298,
+              299,
+              310,
+              397,
+              417,
+              527,
+              528,
+              604
             ],
             "bacteria-unresolved|operon": [
               56,
@@ -397985,12 +397985,6 @@
               684,
               685
             ],
-            "unknown|splice": [
-              206,
-              207,
-              376,
-              554
-            ],
             "unknown|exon": [
               206,
               207,
@@ -397999,6 +397993,12 @@
             "unknown|mrna": [
               206,
               207
+            ],
+            "unknown|splice": [
+              206,
+              207,
+              376,
+              554
             ],
             "unknown|aptamer": [
               221,
@@ -398299,15 +398299,15 @@
               313,
               377
             ],
-            "euk-unresolved|ncrna": [
-              305
-            ],
             "euk-unresolved|gene": [
               305
             ],
             "euk-unresolved|intergenic": [
               305,
               408
+            ],
+            "euk-unresolved|ncrna": [
+              305
             ],
             "mammalia-sp-10090|chromatin-boundary": [
               325
@@ -398335,9 +398335,20 @@
               603,
               606
             ],
-            "eudicots-sp-3702|utr5": [
+            "eudicots-sp-3702|exon": [
               332,
-              604
+              634
+            ],
+            "eudicots-sp-3702|intergenic": [
+              332,
+              408,
+              604,
+              634
+            ],
+            "eudicots-sp-3702|intron": [
+              332,
+              604,
+              634
             ],
             "eudicots-sp-3702|ncrna": [
               332,
@@ -398346,48 +398357,13 @@
             "eudicots-sp-3702|repeat": [
               332
             ],
-            "eudicots-sp-3702|intergenic": [
-              332,
-              408,
-              604,
-              634
-            ],
             "eudicots-sp-3702|utr3": [
               332,
               604
             ],
-            "eudicots-sp-3702|intron": [
+            "eudicots-sp-3702|utr5": [
               332,
-              604,
-              634
-            ],
-            "eudicots-sp-3702|exon": [
-              332,
-              634
-            ],
-            "eudicots-sp-4081|utr5": [
-              332
-            ],
-            "eudicots-sp-4081|ncrna": [
-              332
-            ],
-            "eudicots-sp-4081|repeat": [
-              332
-            ],
-            "eudicots-sp-4081|intergenic": [
-              332,
-              634
-            ],
-            "eudicots-sp-4081|utr3": [
-              332
-            ],
-            "eudicots-sp-4081|intron": [
-              332,
-              634
-            ],
-            "eudicots-sp-4081|regulatory": [
-              332,
-              656
+              604
             ],
             "eudicots-sp-4081|cds": [
               332,
@@ -398399,30 +398375,29 @@
               332,
               634
             ],
-            "poaceae-sp-4530|utr5": [
+            "eudicots-sp-4081|intergenic": [
               332,
-              604
+              634
             ],
-            "poaceae-sp-4530|ncrna": [
+            "eudicots-sp-4081|intron": [
               332,
-              604
+              634
             ],
-            "poaceae-sp-4530|repeat": [
+            "eudicots-sp-4081|ncrna": [
               332
             ],
-            "poaceae-sp-4530|intergenic": [
+            "eudicots-sp-4081|regulatory": [
               332,
-              604,
-              634
+              656
             ],
-            "poaceae-sp-4530|utr3": [
-              332,
-              604
+            "eudicots-sp-4081|repeat": [
+              332
             ],
-            "poaceae-sp-4530|intron": [
-              332,
-              604,
-              634
+            "eudicots-sp-4081|utr3": [
+              332
+            ],
+            "eudicots-sp-4081|utr5": [
+              332
             ],
             "poaceae-sp-4530|cds": [
               332,
@@ -398437,39 +398412,30 @@
               332,
               634
             ],
-            "poaceae-sp-4577|utr5": [
+            "poaceae-sp-4530|intergenic": [
               332,
-              482,
-              483,
-              485
+              604,
+              634
             ],
-            "poaceae-sp-4577|ncrna": [
+            "poaceae-sp-4530|intron": [
+              332,
+              604,
+              634
+            ],
+            "poaceae-sp-4530|ncrna": [
+              332,
+              604
+            ],
+            "poaceae-sp-4530|repeat": [
               332
             ],
-            "poaceae-sp-4577|repeat": [
+            "poaceae-sp-4530|utr3": [
               332,
-              594,
-              595,
-              596
+              604
             ],
-            "poaceae-sp-4577|intergenic": [
+            "poaceae-sp-4530|utr5": [
               332,
-              482,
-              634
-            ],
-            "poaceae-sp-4577|utr3": [
-              332,
-              482,
-              483,
-              485
-            ],
-            "poaceae-sp-4577|intron": [
-              332,
-              478,
-              479,
-              482,
-              591,
-              634
+              604
             ],
             "poaceae-sp-4577|cds": [
               332,
@@ -398495,6 +398461,40 @@
               485,
               634
             ],
+            "poaceae-sp-4577|intergenic": [
+              332,
+              482,
+              634
+            ],
+            "poaceae-sp-4577|intron": [
+              332,
+              478,
+              479,
+              482,
+              591,
+              634
+            ],
+            "poaceae-sp-4577|ncrna": [
+              332
+            ],
+            "poaceae-sp-4577|repeat": [
+              332,
+              594,
+              595,
+              596
+            ],
+            "poaceae-sp-4577|utr3": [
+              332,
+              482,
+              483,
+              485
+            ],
+            "poaceae-sp-4577|utr5": [
+              332,
+              482,
+              483,
+              485
+            ],
             "poaceae-sp-4558|genome": [
               333,
               453
@@ -398514,13 +398514,13 @@
               602,
               635
             ],
-            "poaceae-sp-4558|translation-start": [
-              334
-            ],
             "poaceae-sp-4558|cds": [
               334,
               335,
               337
+            ],
+            "poaceae-sp-4558|translation-start": [
+              334
             ],
             "poaceae-sp-4577|translation-start": [
               334,
@@ -398555,9 +398555,6 @@
             "angiosperms-other|cds": [
               337
             ],
-            "eudicots-sp-3847|splice": [
-              337
-            ],
             "eudicots-sp-3847|cds": [
               337
             ],
@@ -398566,6 +398563,9 @@
               343,
               467,
               468
+            ],
+            "eudicots-sp-3847|splice": [
+              337
             ],
             "poaceae-other|cds": [
               337
@@ -398581,16 +398581,16 @@
               631,
               635
             ],
-            "poaceae-sp-4565|splice": [
-              337
-            ],
-            "poaceae-sp-4565|tfbs": [
-              337
-            ],
             "poaceae-sp-4565|cds": [
               337
             ],
             "poaceae-sp-4565|regulatory": [
+              337
+            ],
+            "poaceae-sp-4565|splice": [
+              337
+            ],
+            "poaceae-sp-4565|tfbs": [
               337
             ],
             "poaceae-sp-4577|splice": [
@@ -398747,13 +398747,6 @@
             "poaceae-sp-4577|tfbs": [
               348
             ],
-            "eudicots-other|splice": [
-              354,
-              355,
-              484,
-              488,
-              489
-            ],
             "eudicots-other|cds": [
               354,
               355,
@@ -398769,6 +398762,13 @@
               490,
               604
             ],
+            "eudicots-other|splice": [
+              354,
+              355,
+              484,
+              488,
+              489
+            ],
             "insecta-other|cds": [
               354,
               355
@@ -398781,10 +398781,6 @@
               354,
               355
             ],
-            "monocots-other-sp-244028|splice": [
-              354,
-              355
-            ],
             "monocots-other-sp-244028|cds": [
               354,
               355
@@ -398793,11 +398789,15 @@
               354,
               355
             ],
-            "poaceae-sp-15368|splice": [
+            "monocots-other-sp-244028|splice": [
               354,
               355
             ],
             "poaceae-sp-15368|exon": [
+              354,
+              355
+            ],
+            "poaceae-sp-15368|splice": [
               354,
               355
             ],
@@ -398817,13 +398817,13 @@
               484,
               485
             ],
+            "insecta-other|gene": [
+              355
+            ],
             "insecta-other|splice-junction": [
               355
             ],
             "insecta-other|transcript": [
-              355
-            ],
-            "insecta-other|gene": [
               355
             ],
             "mammalia-other|splice-junction": [
@@ -398838,22 +398838,22 @@
               480,
               481
             ],
+            "monocots-other-sp-244028|gene": [
+              355
+            ],
             "monocots-other-sp-244028|splice-junction": [
               355
             ],
             "monocots-other-sp-244028|transcript": [
               355
             ],
-            "monocots-other-sp-244028|gene": [
+            "poaceae-sp-15368|gene": [
               355
             ],
             "poaceae-sp-15368|splice-junction": [
               355
             ],
             "poaceae-sp-15368|transcript": [
-              355
-            ],
-            "poaceae-sp-15368|gene": [
               355
             ],
             "poaceae-other|genome": [
@@ -398983,9 +398983,6 @@
               465,
               669
             ],
-            "eudicots-other|repeat": [
-              465
-            ],
             "eudicots-other|intergenic": [
               465,
               482,
@@ -398996,10 +398993,13 @@
               467,
               468
             ],
-            "angiosperms-unresolved|genome": [
-              466
+            "eudicots-other|repeat": [
+              465
             ],
             "angiosperms-unresolved|gene": [
+              466
+            ],
+            "angiosperms-unresolved|genome": [
               466
             ],
             "poaceae-unresolved|promoter": [
@@ -399158,13 +399158,13 @@
               484,
               485
             ],
-            "eudicots-other|utr5": [
+            "eudicots-other|utr3": [
               482,
               483,
               485,
               604
             ],
-            "eudicots-other|utr3": [
+            "eudicots-other|utr5": [
               482,
               483,
               485,
@@ -399269,167 +399269,173 @@
               598,
               639
             ],
-            "actinomycetota|translation-stop": [
-              602
-            ],
             "actinomycetota|translation-start": [
               602
             ],
-            "actinomycetota-sp-1902|translation-stop": [
+            "actinomycetota|translation-stop": [
               602
             ],
             "actinomycetota-sp-1902|translation-start": [
               602
             ],
-            "alveolata-sp-5888|translation-stop": [
+            "actinomycetota-sp-1902|translation-stop": [
               602
             ],
             "alveolata-sp-5888|translation-start": [
               602
             ],
-            "alveolata-sp-5911|translation-stop": [
+            "alveolata-sp-5888|translation-stop": [
               602
             ],
             "alveolata-sp-5911|translation-start": [
               602
             ],
-            "amphibia-sp-8364|translation-stop": [
+            "alveolata-sp-5911|translation-stop": [
               602
             ],
             "amphibia-sp-8364|translation-start": [
               602
             ],
-            "bacillota|translation-stop": [
+            "amphibia-sp-8364|translation-stop": [
               602
             ],
             "bacillota|translation-start": [
               602
             ],
-            "bacillota-other|translation-stop": [
+            "bacillota|translation-stop": [
               602
             ],
             "bacillota-other|translation-start": [
               602
             ],
-            "bacteroidota-sp-818|translation-stop": [
+            "bacillota-other|translation-stop": [
               602
             ],
             "bacteroidota-sp-818|translation-start": [
               602
             ],
-            "chlorophyta-sp-3055|translation-stop": [
+            "bacteroidota-sp-818|translation-stop": [
               602
             ],
             "chlorophyta-sp-3055|translation-start": [
               602
             ],
-            "cyanobacteriota-other|translation-stop": [
+            "chlorophyta-sp-3055|translation-stop": [
               602
             ],
             "cyanobacteriota-other|translation-start": [
               602
             ],
-            "insecta-sp-7227|translation-stop": [
+            "cyanobacteriota-other|translation-stop": [
               602
             ],
             "insecta-sp-7227|translation-start": [
               602
             ],
-            "mammalia-other|translation-stop": [
+            "insecta-sp-7227|translation-stop": [
               602
             ],
             "mammalia-other|translation-start": [
               602
             ],
-            "mammalia-sp-10090|translation-stop": [
+            "mammalia-other|translation-stop": [
               602
             ],
             "mammalia-sp-10090|translation-start": [
               602
             ],
-            "mammalia-sp-9544|translation-stop": [
+            "mammalia-sp-10090|translation-stop": [
               602
             ],
             "mammalia-sp-9544|translation-start": [
               602
             ],
-            "mammalia-sp-9606|translation-stop": [
+            "mammalia-sp-9544|translation-stop": [
               602
             ],
             "mammalia-sp-9606|translation-start": [
               602
             ],
-            "methanobacteriota-other|translation-stop": [
+            "mammalia-sp-9606|translation-stop": [
               602
             ],
             "methanobacteriota-other|translation-start": [
               602
             ],
-            "methanobacteriota-sp-2246|translation-stop": [
+            "methanobacteriota-other|translation-stop": [
               602
             ],
             "methanobacteriota-sp-2246|translation-start": [
               602
             ],
-            "methanobacteriota-sp-39152|translation-stop": [
+            "methanobacteriota-sp-2246|translation-stop": [
               602
             ],
             "methanobacteriota-sp-39152|translation-start": [
               602
             ],
-            "nanobdellota-other|translation-stop": [
+            "methanobacteriota-sp-39152|translation-stop": [
               602
             ],
             "nanobdellota-other|translation-start": [
               602
             ],
-            "nematoda-sp-6239|translation-stop": [
+            "nanobdellota-other|translation-stop": [
               602
             ],
             "nematoda-sp-6239|translation-start": [
               602
             ],
-            "nitrososphaerota-other|translation-stop": [
+            "nematoda-sp-6239|translation-stop": [
               602
             ],
             "nitrososphaerota-other|translation-start": [
               602
             ],
-            "pseudomonadota-other|translation-stop": [
+            "nitrososphaerota-other|translation-stop": [
               602
             ],
             "pseudomonadota-other|translation-start": [
               602
             ],
-            "pseudomonadota-sp-562|translation-stop": [
+            "pseudomonadota-other|translation-stop": [
               602
             ],
             "pseudomonadota-sp-562|translation-start": [
               602
             ],
-            "saccharomycotina-sp-4932|translation-stop": [
+            "pseudomonadota-sp-562|translation-stop": [
               602
             ],
             "saccharomycotina-sp-4932|translation-start": [
               602
             ],
-            "stramenopiles-sp-35128|translation-stop": [
+            "saccharomycotina-sp-4932|translation-stop": [
               602
             ],
             "stramenopiles-sp-35128|translation-start": [
               602
             ],
-            "teleostei-sp-7955|translation-stop": [
+            "stramenopiles-sp-35128|translation-stop": [
               602
             ],
             "teleostei-sp-7955|translation-start": [
               602
             ],
-            "thermoproteota-other|translation-stop": [
+            "teleostei-sp-7955|translation-stop": [
               602
             ],
             "thermoproteota-other|translation-start": [
               602
+            ],
+            "thermoproteota-other|translation-stop": [
+              602
+            ],
+            "actinomycetota|cds": [
+              603
+            ],
+            "actinomycetota|intergenic": [
+              603
             ],
             "actinomycetota|ncrna": [
               603
@@ -399437,13 +399443,10 @@
             "actinomycetota|rrna": [
               603
             ],
-            "actinomycetota|intergenic": [
-              603
-            ],
             "actinomycetota|trna": [
               603
             ],
-            "actinomycetota|cds": [
+            "actinomycetota-sp-1902|intergenic": [
               603
             ],
             "actinomycetota-sp-1902|ncrna": [
@@ -399452,10 +399455,10 @@
             "actinomycetota-sp-1902|rrna": [
               603
             ],
-            "actinomycetota-sp-1902|intergenic": [
+            "actinomycetota-sp-1902|trna": [
               603
             ],
-            "actinomycetota-sp-1902|trna": [
+            "bacillota|intergenic": [
               603
             ],
             "bacillota|ncrna": [
@@ -399464,10 +399467,13 @@
             "bacillota|rrna": [
               603
             ],
-            "bacillota|intergenic": [
+            "bacillota|trna": [
               603
             ],
-            "bacillota|trna": [
+            "bacillota-other|cds": [
+              603
+            ],
+            "bacillota-other|intergenic": [
               603
             ],
             "bacillota-other|ncrna": [
@@ -399476,13 +399482,13 @@
             "bacillota-other|rrna": [
               603
             ],
-            "bacillota-other|intergenic": [
-              603
-            ],
             "bacillota-other|trna": [
               603
             ],
-            "bacillota-other|cds": [
+            "bacteroidota-sp-818|cds": [
+              603
+            ],
+            "bacteroidota-sp-818|intergenic": [
               603
             ],
             "bacteroidota-sp-818|ncrna": [
@@ -399491,13 +399497,13 @@
             "bacteroidota-sp-818|rrna": [
               603
             ],
-            "bacteroidota-sp-818|intergenic": [
-              603
-            ],
             "bacteroidota-sp-818|trna": [
               603
             ],
-            "bacteroidota-sp-818|cds": [
+            "cyanobacteriota-other|cds": [
+              603
+            ],
+            "cyanobacteriota-other|intergenic": [
               603
             ],
             "cyanobacteriota-other|ncrna": [
@@ -399506,13 +399512,10 @@
             "cyanobacteriota-other|rrna": [
               603
             ],
-            "cyanobacteriota-other|intergenic": [
-              603
-            ],
             "cyanobacteriota-other|trna": [
               603
             ],
-            "cyanobacteriota-other|cds": [
+            "methanobacteriota-other|intergenic": [
               603
             ],
             "methanobacteriota-other|ncrna": [
@@ -399521,10 +399524,10 @@
             "methanobacteriota-other|rrna": [
               603
             ],
-            "methanobacteriota-other|intergenic": [
+            "methanobacteriota-other|trna": [
               603
             ],
-            "methanobacteriota-other|trna": [
+            "methanobacteriota-sp-2246|intergenic": [
               603
             ],
             "methanobacteriota-sp-2246|ncrna": [
@@ -399533,10 +399536,13 @@
             "methanobacteriota-sp-2246|rrna": [
               603
             ],
-            "methanobacteriota-sp-2246|intergenic": [
+            "methanobacteriota-sp-2246|trna": [
               603
             ],
-            "methanobacteriota-sp-2246|trna": [
+            "methanobacteriota-sp-39152|cds": [
+              603
+            ],
+            "methanobacteriota-sp-39152|intergenic": [
               603
             ],
             "methanobacteriota-sp-39152|ncrna": [
@@ -399545,13 +399551,13 @@
             "methanobacteriota-sp-39152|rrna": [
               603
             ],
-            "methanobacteriota-sp-39152|intergenic": [
-              603
-            ],
             "methanobacteriota-sp-39152|trna": [
               603
             ],
-            "methanobacteriota-sp-39152|cds": [
+            "nanobdellota-other|cds": [
+              603
+            ],
+            "nanobdellota-other|intergenic": [
               603
             ],
             "nanobdellota-other|ncrna": [
@@ -399560,13 +399566,13 @@
             "nanobdellota-other|rrna": [
               603
             ],
-            "nanobdellota-other|intergenic": [
-              603
-            ],
             "nanobdellota-other|trna": [
               603
             ],
-            "nanobdellota-other|cds": [
+            "nitrososphaerota-other|cds": [
+              603
+            ],
+            "nitrososphaerota-other|intergenic": [
               603
             ],
             "nitrososphaerota-other|ncrna": [
@@ -399575,13 +399581,10 @@
             "nitrososphaerota-other|rrna": [
               603
             ],
-            "nitrososphaerota-other|intergenic": [
-              603
-            ],
             "nitrososphaerota-other|trna": [
               603
             ],
-            "nitrososphaerota-other|cds": [
+            "pseudomonadota-other|intergenic": [
               603
             ],
             "pseudomonadota-other|ncrna": [
@@ -399590,13 +399593,13 @@
             "pseudomonadota-other|rrna": [
               603
             ],
-            "pseudomonadota-other|intergenic": [
-              603
-            ],
             "pseudomonadota-other|trna": [
               603
             ],
             "pseudomonadota-sp-562|ncrna": [
+              603
+            ],
+            "thermoproteota-other|intergenic": [
               603
             ],
             "thermoproteota-other|ncrna": [
@@ -399605,13 +399608,17 @@
             "thermoproteota-other|rrna": [
               603
             ],
-            "thermoproteota-other|intergenic": [
-              603
-            ],
             "thermoproteota-other|trna": [
               603
             ],
-            "alveolata-sp-5888|utr5": [
+            "alveolata-sp-5888|cds": [
+              604,
+              605
+            ],
+            "alveolata-sp-5888|intergenic": [
+              604
+            ],
+            "alveolata-sp-5888|intron": [
               604
             ],
             "alveolata-sp-5888|lncrna": [
@@ -399623,23 +399630,23 @@
             "alveolata-sp-5888|rrna": [
               604
             ],
-            "alveolata-sp-5888|intergenic": [
-              604
-            ],
             "alveolata-sp-5888|trna": [
               604
             ],
             "alveolata-sp-5888|utr3": [
               604
             ],
-            "alveolata-sp-5888|intron": [
+            "alveolata-sp-5888|utr5": [
               604
             ],
-            "alveolata-sp-5888|cds": [
+            "alveolata-sp-5911|cds": [
               604,
               605
             ],
-            "alveolata-sp-5911|utr5": [
+            "alveolata-sp-5911|intergenic": [
+              604
+            ],
+            "alveolata-sp-5911|intron": [
               604
             ],
             "alveolata-sp-5911|lncrna": [
@@ -399651,23 +399658,22 @@
             "alveolata-sp-5911|rrna": [
               604
             ],
-            "alveolata-sp-5911|intergenic": [
-              604
-            ],
             "alveolata-sp-5911|trna": [
               604
             ],
             "alveolata-sp-5911|utr3": [
               604
             ],
-            "alveolata-sp-5911|intron": [
+            "alveolata-sp-5911|utr5": [
               604
             ],
-            "alveolata-sp-5911|cds": [
-              604,
-              605
+            "amphibia-sp-8364|cds": [
+              604
             ],
-            "amphibia-sp-8364|utr5": [
+            "amphibia-sp-8364|intergenic": [
+              604
+            ],
+            "amphibia-sp-8364|intron": [
               604
             ],
             "amphibia-sp-8364|lncrna": [
@@ -399679,22 +399685,16 @@
             "amphibia-sp-8364|rrna": [
               604
             ],
-            "amphibia-sp-8364|intergenic": [
-              604
-            ],
             "amphibia-sp-8364|trna": [
               604
             ],
             "amphibia-sp-8364|utr3": [
               604
             ],
-            "amphibia-sp-8364|intron": [
+            "amphibia-sp-8364|utr5": [
               604
             ],
-            "amphibia-sp-8364|cds": [
-              604
-            ],
-            "chlorophyta-sp-3055|utr5": [
+            "chlorophyta-sp-3055|intergenic": [
               604
             ],
             "chlorophyta-sp-3055|lncrna": [
@@ -399706,13 +399706,13 @@
             "chlorophyta-sp-3055|rrna": [
               604
             ],
-            "chlorophyta-sp-3055|intergenic": [
-              604
-            ],
             "chlorophyta-sp-3055|trna": [
               604
             ],
             "chlorophyta-sp-3055|utr3": [
+              604
+            ],
+            "chlorophyta-sp-3055|utr5": [
               604
             ],
             "eudicots-other|ncrna": [
@@ -399733,7 +399733,10 @@
             "eudicots-sp-3702|trna": [
               604
             ],
-            "insecta-sp-7227|utr5": [
+            "insecta-sp-7227|intergenic": [
+              604
+            ],
+            "insecta-sp-7227|intron": [
               604
             ],
             "insecta-sp-7227|lncrna": [
@@ -399745,19 +399748,16 @@
             "insecta-sp-7227|rrna": [
               604
             ],
-            "insecta-sp-7227|intergenic": [
-              604
-            ],
             "insecta-sp-7227|trna": [
               604
             ],
             "insecta-sp-7227|utr3": [
               604
             ],
-            "insecta-sp-7227|intron": [
+            "insecta-sp-7227|utr5": [
               604
             ],
-            "mammalia-other|utr5": [
+            "mammalia-other|intergenic": [
               604
             ],
             "mammalia-other|lncrna": [
@@ -399769,13 +399769,16 @@
             "mammalia-other|rrna": [
               604
             ],
-            "mammalia-other|intergenic": [
-              604
-            ],
             "mammalia-other|trna": [
               604
             ],
             "mammalia-other|utr3": [
+              604
+            ],
+            "mammalia-other|utr5": [
+              604
+            ],
+            "mammalia-sp-10090|intergenic": [
               604
             ],
             "mammalia-sp-10090|lncrna": [
@@ -399787,13 +399790,16 @@
             "mammalia-sp-10090|rrna": [
               604
             ],
-            "mammalia-sp-10090|intergenic": [
-              604
-            ],
             "mammalia-sp-10090|trna": [
               604
             ],
-            "mammalia-sp-9544|utr5": [
+            "mammalia-sp-9544|cds": [
+              604
+            ],
+            "mammalia-sp-9544|intergenic": [
+              604
+            ],
+            "mammalia-sp-9544|intron": [
               604
             ],
             "mammalia-sp-9544|lncrna": [
@@ -399805,22 +399811,22 @@
             "mammalia-sp-9544|rrna": [
               604
             ],
-            "mammalia-sp-9544|intergenic": [
-              604
-            ],
             "mammalia-sp-9544|trna": [
               604
             ],
             "mammalia-sp-9544|utr3": [
               604
             ],
-            "mammalia-sp-9544|intron": [
+            "mammalia-sp-9544|utr5": [
               604
             ],
-            "mammalia-sp-9544|cds": [
+            "nematoda-sp-6239|cds": [
               604
             ],
-            "nematoda-sp-6239|utr5": [
+            "nematoda-sp-6239|intergenic": [
+              604
+            ],
+            "nematoda-sp-6239|intron": [
               604
             ],
             "nematoda-sp-6239|lncrna": [
@@ -399832,19 +399838,13 @@
             "nematoda-sp-6239|rrna": [
               604
             ],
-            "nematoda-sp-6239|intergenic": [
-              604
-            ],
             "nematoda-sp-6239|trna": [
               604
             ],
             "nematoda-sp-6239|utr3": [
               604
             ],
-            "nematoda-sp-6239|intron": [
-              604
-            ],
-            "nematoda-sp-6239|cds": [
+            "nematoda-sp-6239|utr5": [
               604
             ],
             "poaceae-sp-4530|lncrna": [
@@ -399856,7 +399856,10 @@
             "poaceae-sp-4530|trna": [
               604
             ],
-            "saccharomycotina-sp-4932|utr5": [
+            "saccharomycotina-sp-4932|intergenic": [
+              604
+            ],
+            "saccharomycotina-sp-4932|intron": [
               604
             ],
             "saccharomycotina-sp-4932|lncrna": [
@@ -399868,19 +399871,23 @@
             "saccharomycotina-sp-4932|rrna": [
               604
             ],
-            "saccharomycotina-sp-4932|intergenic": [
-              604
-            ],
             "saccharomycotina-sp-4932|trna": [
               604
             ],
             "saccharomycotina-sp-4932|utr3": [
               604
             ],
-            "saccharomycotina-sp-4932|intron": [
+            "saccharomycotina-sp-4932|utr5": [
               604
             ],
-            "stramenopiles-sp-35128|utr5": [
+            "stramenopiles-sp-35128|cds": [
+              604,
+              605
+            ],
+            "stramenopiles-sp-35128|intergenic": [
+              604
+            ],
+            "stramenopiles-sp-35128|intron": [
               604
             ],
             "stramenopiles-sp-35128|lncrna": [
@@ -399892,23 +399899,19 @@
             "stramenopiles-sp-35128|rrna": [
               604
             ],
-            "stramenopiles-sp-35128|intergenic": [
-              604
-            ],
             "stramenopiles-sp-35128|trna": [
               604
             ],
             "stramenopiles-sp-35128|utr3": [
               604
             ],
-            "stramenopiles-sp-35128|intron": [
+            "stramenopiles-sp-35128|utr5": [
               604
             ],
-            "stramenopiles-sp-35128|cds": [
-              604,
-              605
+            "teleostei-sp-7955|cds": [
+              604
             ],
-            "teleostei-sp-7955|utr5": [
+            "teleostei-sp-7955|intergenic": [
               604
             ],
             "teleostei-sp-7955|lncrna": [
@@ -399920,16 +399923,13 @@
             "teleostei-sp-7955|rrna": [
               604
             ],
-            "teleostei-sp-7955|intergenic": [
-              604
-            ],
             "teleostei-sp-7955|trna": [
               604
             ],
             "teleostei-sp-7955|utr3": [
               604
             ],
-            "teleostei-sp-7955|cds": [
+            "teleostei-sp-7955|utr5": [
               604
             ],
             "mammalia-sp-9606|polya": [
@@ -408051,24 +408051,25 @@
               731,
               739
             ],
-            "mammalia-sp-9606|intron": [
+            "mammalia-sp-9606|exon": [
               2,
               3,
               8,
               45,
               46,
               48,
-              310,
+              120,
               400,
               401,
+              499,
               506,
               507,
               522,
-              527,
-              528,
-              604,
-              612,
-              651
+              543,
+              546,
+              628,
+              652,
+              653
             ],
             "mammalia-sp-9606|gene": [
               2,
@@ -408119,28 +408120,24 @@
               732,
               733
             ],
-            "mammalia-sp-9606|exon": [
+            "mammalia-sp-9606|intron": [
               2,
               3,
               8,
               45,
               46,
               48,
-              120,
+              310,
               400,
               401,
-              499,
               506,
               507,
               522,
-              543,
-              546,
-              628,
-              652,
-              653
-            ],
-            "archaea-unresolved|gene": [
-              4
+              527,
+              528,
+              604,
+              612,
+              651
             ],
             "archaea-unresolved|cds": [
               4,
@@ -408150,21 +408147,8 @@
               142,
               300
             ],
-            "bacteria-unresolved|gene": [
-              4,
-              55,
-              56,
-              57,
-              426,
-              428,
-              429,
-              430,
-              431,
-              432,
-              433,
-              434,
-              435,
-              436
+            "archaea-unresolved|gene": [
+              4
             ],
             "bacteria-unresolved|cds": [
               4,
@@ -408205,18 +408189,34 @@
               585,
               654
             ],
-            "duplodnaviria-sp-10678|gene": [
-              5
+            "bacteria-unresolved|gene": [
+              4,
+              55,
+              56,
+              57,
+              426,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436
             ],
             "duplodnaviria-sp-10678|cds": [
               5
             ],
-            "duplodnaviria-sp-10710|gene": [
+            "duplodnaviria-sp-10678|gene": [
               5
             ],
             "duplodnaviria-sp-10710|cds": [
               5,
               252
+            ],
+            "duplodnaviria-sp-10710|gene": [
+              5
             ],
             "mammalia-sp-9606|cds": [
               6,
@@ -408283,49 +408283,49 @@
               294,
               738
             ],
-            "eudicots-sp-29760|intron": [
-              8
-            ],
             "eudicots-sp-29760|exon": [
               8
             ],
-            "eudicots-sp-3562|intron": [
+            "eudicots-sp-29760|intron": [
               8
             ],
             "eudicots-sp-3562|exon": [
               8
             ],
-            "eudicots-sp-3641|intron": [
+            "eudicots-sp-3562|intron": [
               8
             ],
             "eudicots-sp-3641|exon": [
               8
             ],
-            "lycophytes-sp-88036|intron": [
+            "eudicots-sp-3641|intron": [
               8
             ],
             "lycophytes-sp-88036|exon": [
+              8
+            ],
+            "lycophytes-sp-88036|intron": [
+              8
+            ],
+            "mammalia-sp-10090|exon": [
               8
             ],
             "mammalia-sp-10090|intron": [
               8,
               604
             ],
-            "mammalia-sp-10090|exon": [
+            "poaceae-sp-4513|exon": [
               8
             ],
             "poaceae-sp-4513|intron": [
               8
             ],
-            "poaceae-sp-4513|exon": [
+            "teleostei-sp-7955|exon": [
               8
             ],
             "teleostei-sp-7955|intron": [
               8,
               604
-            ],
-            "teleostei-sp-7955|exon": [
-              8
             ],
             "unknown|ncrna": [
               24,
@@ -408437,19 +408437,19 @@
               604,
               606
             ],
-            "mammalia-sp-9606|trna": [
-              32,
-              604
-            ],
             "mammalia-sp-9606|rrna": [
               32,
               417,
               604
             ],
-            "mycoplasmatota-sp-2097|genome": [
-              33
+            "mammalia-sp-9606|trna": [
+              32,
+              604
             ],
             "mycoplasmatota-sp-2097|cds": [
+              33
+            ],
+            "mycoplasmatota-sp-2097|genome": [
               33
             ],
             "saccharomycotina-sp-4932|genome": [
@@ -408591,46 +408591,6 @@
               705,
               706
             ],
-            "mammalia-sp-9606|utr5": [
-              45,
-              46,
-              296,
-              298,
-              299,
-              310,
-              397,
-              417,
-              527,
-              528,
-              604
-            ],
-            "mammalia-sp-9606|intergenic": [
-              45,
-              46,
-              120,
-              397,
-              522,
-              527,
-              528,
-              604,
-              628
-            ],
-            "mammalia-sp-9606|utr3": [
-              45,
-              46,
-              297,
-              298,
-              299,
-              310,
-              397,
-              417,
-              527,
-              528,
-              604,
-              722,
-              733,
-              740
-            ],
             "mammalia-sp-9606|enhancer": [
               45,
               46,
@@ -408653,6 +408613,17 @@
               709,
               714,
               715
+            ],
+            "mammalia-sp-9606|intergenic": [
+              45,
+              46,
+              120,
+              397,
+              522,
+              527,
+              528,
+              604,
+              628
             ],
             "mammalia-sp-9606|promoter": [
               45,
@@ -408707,6 +408678,35 @@
               676,
               678,
               734
+            ],
+            "mammalia-sp-9606|utr3": [
+              45,
+              46,
+              297,
+              298,
+              299,
+              310,
+              397,
+              417,
+              527,
+              528,
+              604,
+              722,
+              733,
+              740
+            ],
+            "mammalia-sp-9606|utr5": [
+              45,
+              46,
+              296,
+              298,
+              299,
+              310,
+              397,
+              417,
+              527,
+              528,
+              604
             ],
             "bacteria-unresolved|operon": [
               56,
@@ -409039,12 +409039,6 @@
               684,
               685
             ],
-            "unknown|splice": [
-              206,
-              207,
-              376,
-              554
-            ],
             "unknown|exon": [
               206,
               207,
@@ -409053,6 +409047,12 @@
             "unknown|mrna": [
               206,
               207
+            ],
+            "unknown|splice": [
+              206,
+              207,
+              376,
+              554
             ],
             "unknown|aptamer": [
               221,
@@ -409343,15 +409343,15 @@
               313,
               377
             ],
-            "euk-unresolved|ncrna": [
-              305
-            ],
             "euk-unresolved|gene": [
               305
             ],
             "euk-unresolved|intergenic": [
               305,
               408
+            ],
+            "euk-unresolved|ncrna": [
+              305
             ],
             "mammalia-sp-10090|chromatin-boundary": [
               325
@@ -409377,9 +409377,20 @@
               327,
               603
             ],
-            "eudicots-sp-3702|utr5": [
+            "eudicots-sp-3702|exon": [
               332,
-              604
+              634
+            ],
+            "eudicots-sp-3702|intergenic": [
+              332,
+              408,
+              604,
+              634
+            ],
+            "eudicots-sp-3702|intron": [
+              332,
+              604,
+              634
             ],
             "eudicots-sp-3702|ncrna": [
               332,
@@ -409388,48 +409399,13 @@
             "eudicots-sp-3702|repeat": [
               332
             ],
-            "eudicots-sp-3702|intergenic": [
-              332,
-              408,
-              604,
-              634
-            ],
             "eudicots-sp-3702|utr3": [
               332,
               604
             ],
-            "eudicots-sp-3702|intron": [
+            "eudicots-sp-3702|utr5": [
               332,
-              604,
-              634
-            ],
-            "eudicots-sp-3702|exon": [
-              332,
-              634
-            ],
-            "eudicots-sp-4081|utr5": [
-              332
-            ],
-            "eudicots-sp-4081|ncrna": [
-              332
-            ],
-            "eudicots-sp-4081|repeat": [
-              332
-            ],
-            "eudicots-sp-4081|intergenic": [
-              332,
-              634
-            ],
-            "eudicots-sp-4081|utr3": [
-              332
-            ],
-            "eudicots-sp-4081|intron": [
-              332,
-              634
-            ],
-            "eudicots-sp-4081|regulatory": [
-              332,
-              656
+              604
             ],
             "eudicots-sp-4081|cds": [
               332,
@@ -409441,30 +409417,29 @@
               332,
               634
             ],
-            "poaceae-sp-4530|utr5": [
+            "eudicots-sp-4081|intergenic": [
               332,
-              604
+              634
             ],
-            "poaceae-sp-4530|ncrna": [
+            "eudicots-sp-4081|intron": [
               332,
-              604
+              634
             ],
-            "poaceae-sp-4530|repeat": [
+            "eudicots-sp-4081|ncrna": [
               332
             ],
-            "poaceae-sp-4530|intergenic": [
+            "eudicots-sp-4081|regulatory": [
               332,
-              604,
-              634
+              656
             ],
-            "poaceae-sp-4530|utr3": [
-              332,
-              604
+            "eudicots-sp-4081|repeat": [
+              332
             ],
-            "poaceae-sp-4530|intron": [
-              332,
-              604,
-              634
+            "eudicots-sp-4081|utr3": [
+              332
+            ],
+            "eudicots-sp-4081|utr5": [
+              332
             ],
             "poaceae-sp-4530|cds": [
               332,
@@ -409479,39 +409454,30 @@
               332,
               634
             ],
-            "poaceae-sp-4577|utr5": [
+            "poaceae-sp-4530|intergenic": [
               332,
-              482,
-              483,
-              485
+              604,
+              634
             ],
-            "poaceae-sp-4577|ncrna": [
+            "poaceae-sp-4530|intron": [
+              332,
+              604,
+              634
+            ],
+            "poaceae-sp-4530|ncrna": [
+              332,
+              604
+            ],
+            "poaceae-sp-4530|repeat": [
               332
             ],
-            "poaceae-sp-4577|repeat": [
+            "poaceae-sp-4530|utr3": [
               332,
-              594,
-              595,
-              596
+              604
             ],
-            "poaceae-sp-4577|intergenic": [
+            "poaceae-sp-4530|utr5": [
               332,
-              482,
-              634
-            ],
-            "poaceae-sp-4577|utr3": [
-              332,
-              482,
-              483,
-              485
-            ],
-            "poaceae-sp-4577|intron": [
-              332,
-              478,
-              479,
-              482,
-              591,
-              634
+              604
             ],
             "poaceae-sp-4577|cds": [
               332,
@@ -409537,6 +409503,40 @@
               485,
               634
             ],
+            "poaceae-sp-4577|intergenic": [
+              332,
+              482,
+              634
+            ],
+            "poaceae-sp-4577|intron": [
+              332,
+              478,
+              479,
+              482,
+              591,
+              634
+            ],
+            "poaceae-sp-4577|ncrna": [
+              332
+            ],
+            "poaceae-sp-4577|repeat": [
+              332,
+              594,
+              595,
+              596
+            ],
+            "poaceae-sp-4577|utr3": [
+              332,
+              482,
+              483,
+              485
+            ],
+            "poaceae-sp-4577|utr5": [
+              332,
+              482,
+              483,
+              485
+            ],
             "poaceae-sp-4558|genome": [
               333,
               453
@@ -409556,13 +409556,13 @@
               602,
               635
             ],
-            "poaceae-sp-4558|translation-start": [
-              334
-            ],
             "poaceae-sp-4558|cds": [
               334,
               335,
               337
+            ],
+            "poaceae-sp-4558|translation-start": [
+              334
             ],
             "poaceae-sp-4577|translation-start": [
               334,
@@ -409603,9 +409603,6 @@
             "angiosperms-sp-4232|cds": [
               337
             ],
-            "eudicots-sp-3847|splice": [
-              337
-            ],
             "eudicots-sp-3847|cds": [
               337
             ],
@@ -409614,6 +409611,9 @@
               343,
               467,
               468
+            ],
+            "eudicots-sp-3847|splice": [
+              337
             ],
             "poaceae-sp-15368|cds": [
               337,
@@ -409632,16 +409632,16 @@
               631,
               635
             ],
-            "poaceae-sp-4565|splice": [
-              337
-            ],
-            "poaceae-sp-4565|tfbs": [
-              337
-            ],
             "poaceae-sp-4565|cds": [
               337
             ],
             "poaceae-sp-4565|regulatory": [
+              337
+            ],
+            "poaceae-sp-4565|splice": [
+              337
+            ],
+            "poaceae-sp-4565|tfbs": [
               337
             ],
             "poaceae-sp-4571|cds": [
@@ -409817,10 +409817,6 @@
             "poaceae-sp-4577|tfbs": [
               348
             ],
-            "eudicots-sp-3467|splice": [
-              354,
-              355
-            ],
             "eudicots-sp-3467|cds": [
               354,
               355
@@ -409829,7 +409825,7 @@
               354,
               355
             ],
-            "eudicots-sp-3880|splice": [
+            "eudicots-sp-3467|splice": [
               354,
               355
             ],
@@ -409841,7 +409837,7 @@
               354,
               355
             ],
-            "eudicots-sp-4155|splice": [
+            "eudicots-sp-3880|splice": [
               354,
               355
             ],
@@ -409853,7 +409849,7 @@
               354,
               355
             ],
-            "insecta-sp-1086592|splice": [
+            "eudicots-sp-4155|splice": [
               354,
               355
             ],
@@ -409865,7 +409861,7 @@
               354,
               355
             ],
-            "insecta-sp-13037|splice": [
+            "insecta-sp-1086592|splice": [
               354,
               355
             ],
@@ -409877,7 +409873,7 @@
               354,
               355
             ],
-            "insecta-sp-1437190|splice": [
+            "insecta-sp-13037|splice": [
               354,
               355
             ],
@@ -409889,7 +409885,7 @@
               354,
               355
             ],
-            "insecta-sp-171585|splice": [
+            "insecta-sp-1437190|splice": [
               354,
               355
             ],
@@ -409901,7 +409897,7 @@
               354,
               355
             ],
-            "insecta-sp-171605|splice": [
+            "insecta-sp-171585|splice": [
               354,
               355
             ],
@@ -409913,7 +409909,7 @@
               354,
               355
             ],
-            "insecta-sp-189913|splice": [
+            "insecta-sp-171605|splice": [
               354,
               355
             ],
@@ -409925,7 +409921,7 @@
               354,
               355
             ],
-            "insecta-sp-33412|splice": [
+            "insecta-sp-189913|splice": [
               354,
               355
             ],
@@ -409934,6 +409930,10 @@
               355
             ],
             "insecta-sp-33412|exon": [
+              354,
+              355
+            ],
+            "insecta-sp-33412|splice": [
               354,
               355
             ],
@@ -409953,10 +409953,6 @@
               354,
               355
             ],
-            "insecta-sp-72248|splice": [
-              354,
-              355
-            ],
             "insecta-sp-72248|cds": [
               354,
               355
@@ -409965,10 +409961,9 @@
               354,
               355
             ],
-            "mammalia-sp-9749|splice": [
+            "insecta-sp-72248|splice": [
               354,
-              355,
-              665
+              355
             ],
             "mammalia-sp-9749|cds": [
               354,
@@ -409982,6 +409977,11 @@
               354,
               355
             ],
+            "mammalia-sp-9749|splice": [
+              354,
+              355,
+              665
+            ],
             "mammalia-sp-9913|cds": [
               354,
               355,
@@ -409994,10 +409994,6 @@
               354,
               355
             ],
-            "monocots-other-sp-244028|splice": [
-              354,
-              355
-            ],
             "monocots-other-sp-244028|cds": [
               354,
               355
@@ -410006,12 +410002,19 @@
               354,
               355
             ],
-            "poaceae-sp-15368|splice": [
+            "monocots-other-sp-244028|splice": [
               354,
               355
             ],
             "poaceae-sp-15368|exon": [
               354,
+              355
+            ],
+            "poaceae-sp-15368|splice": [
+              354,
+              355
+            ],
+            "eudicots-sp-3467|gene": [
               355
             ],
             "eudicots-sp-3467|splice-junction": [
@@ -410020,7 +410023,7 @@
             "eudicots-sp-3467|transcript": [
               355
             ],
-            "eudicots-sp-3467|gene": [
+            "eudicots-sp-3880|gene": [
               355
             ],
             "eudicots-sp-3880|splice-junction": [
@@ -410029,7 +410032,7 @@
             "eudicots-sp-3880|transcript": [
               355
             ],
-            "eudicots-sp-3880|gene": [
+            "eudicots-sp-4155|gene": [
               355
             ],
             "eudicots-sp-4155|splice-junction": [
@@ -410038,7 +410041,7 @@
             "eudicots-sp-4155|transcript": [
               355
             ],
-            "eudicots-sp-4155|gene": [
+            "insecta-sp-1086592|gene": [
               355
             ],
             "insecta-sp-1086592|splice-junction": [
@@ -410047,7 +410050,7 @@
             "insecta-sp-1086592|transcript": [
               355
             ],
-            "insecta-sp-1086592|gene": [
+            "insecta-sp-13037|gene": [
               355
             ],
             "insecta-sp-13037|splice-junction": [
@@ -410056,7 +410059,7 @@
             "insecta-sp-13037|transcript": [
               355
             ],
-            "insecta-sp-13037|gene": [
+            "insecta-sp-1437190|gene": [
               355
             ],
             "insecta-sp-1437190|splice-junction": [
@@ -410065,7 +410068,7 @@
             "insecta-sp-1437190|transcript": [
               355
             ],
-            "insecta-sp-1437190|gene": [
+            "insecta-sp-171585|gene": [
               355
             ],
             "insecta-sp-171585|splice-junction": [
@@ -410074,7 +410077,7 @@
             "insecta-sp-171585|transcript": [
               355
             ],
-            "insecta-sp-171585|gene": [
+            "insecta-sp-171605|gene": [
               355
             ],
             "insecta-sp-171605|splice-junction": [
@@ -410083,7 +410086,7 @@
             "insecta-sp-171605|transcript": [
               355
             ],
-            "insecta-sp-171605|gene": [
+            "insecta-sp-189913|gene": [
               355
             ],
             "insecta-sp-189913|splice-junction": [
@@ -410092,7 +410095,7 @@
             "insecta-sp-189913|transcript": [
               355
             ],
-            "insecta-sp-189913|gene": [
+            "insecta-sp-33412|gene": [
               355
             ],
             "insecta-sp-33412|splice-junction": [
@@ -410101,7 +410104,7 @@
             "insecta-sp-33412|transcript": [
               355
             ],
-            "insecta-sp-33412|gene": [
+            "insecta-sp-7070|gene": [
               355
             ],
             "insecta-sp-7070|splice-junction": [
@@ -410110,7 +410113,7 @@
             "insecta-sp-7070|transcript": [
               355
             ],
-            "insecta-sp-7070|gene": [
+            "insecta-sp-7091|gene": [
               355
             ],
             "insecta-sp-7091|splice-junction": [
@@ -410119,7 +410122,7 @@
             "insecta-sp-7091|transcript": [
               355
             ],
-            "insecta-sp-7091|gene": [
+            "insecta-sp-72248|gene": [
               355
             ],
             "insecta-sp-72248|splice-junction": [
@@ -410128,7 +410131,7 @@
             "insecta-sp-72248|transcript": [
               355
             ],
-            "insecta-sp-72248|gene": [
+            "mammalia-sp-9749|gene": [
               355
             ],
             "mammalia-sp-9749|splice-junction": [
@@ -410137,8 +410140,9 @@
             "mammalia-sp-9749|transcript": [
               355
             ],
-            "mammalia-sp-9749|gene": [
-              355
+            "mammalia-sp-9913|gene": [
+              355,
+              661
             ],
             "mammalia-sp-9913|splice-junction": [
               355
@@ -410146,9 +410150,8 @@
             "mammalia-sp-9913|transcript": [
               355
             ],
-            "mammalia-sp-9913|gene": [
-              355,
-              661
+            "monocots-other-sp-244028|gene": [
+              355
             ],
             "monocots-other-sp-244028|splice-junction": [
               355
@@ -410156,16 +410159,13 @@
             "monocots-other-sp-244028|transcript": [
               355
             ],
-            "monocots-other-sp-244028|gene": [
+            "poaceae-sp-15368|gene": [
               355
             ],
             "poaceae-sp-15368|splice-junction": [
               355
             ],
             "poaceae-sp-15368|transcript": [
-              355
-            ],
-            "poaceae-sp-15368|gene": [
               355
             ],
             "angiosperms-sp-3708|genome": [
@@ -410300,10 +410300,10 @@
               463,
               635
             ],
-            "eudicots-sp-4113|genome": [
+            "eudicots-sp-4113|cds": [
               465
             ],
-            "eudicots-sp-4113|repeat": [
+            "eudicots-sp-4113|genome": [
               465
             ],
             "eudicots-sp-4113|intergenic": [
@@ -410312,19 +410312,19 @@
             "eudicots-sp-4113|intron": [
               465
             ],
-            "eudicots-sp-4113|regulatory": [
-              465
-            ],
             "eudicots-sp-4113|promoter": [
               465
             ],
-            "eudicots-sp-4113|cds": [
+            "eudicots-sp-4113|regulatory": [
               465
             ],
-            "angiosperms-unresolved|genome": [
-              466
+            "eudicots-sp-4113|repeat": [
+              465
             ],
             "angiosperms-unresolved|gene": [
+              466
+            ],
+            "angiosperms-unresolved|genome": [
               466
             ],
             "eudicots-sp-3694|regulatory": [
@@ -410739,11 +410739,6 @@
               484,
               485
             ],
-            "eudicots-sp-13443|utr5": [
-              482,
-              483,
-              485
-            ],
             "eudicots-sp-13443|intergenic": [
               482
             ],
@@ -410752,7 +410747,7 @@
               483,
               485
             ],
-            "eudicots-sp-3885|utr5": [
+            "eudicots-sp-13443|utr5": [
               482,
               483,
               485
@@ -410765,7 +410760,7 @@
               483,
               485
             ],
-            "eudicots-sp-4096|utr5": [
+            "eudicots-sp-3885|utr5": [
               482,
               483,
               485
@@ -410778,7 +410773,7 @@
               483,
               485
             ],
-            "eudicots-sp-4097|utr5": [
+            "eudicots-sp-4096|utr5": [
               482,
               483,
               485
@@ -410791,7 +410786,7 @@
               483,
               485
             ],
-            "eudicots-sp-51240|utr5": [
+            "eudicots-sp-4097|utr5": [
               482,
               483,
               485
@@ -410800,6 +410795,11 @@
               482
             ],
             "eudicots-sp-51240|utr3": [
+              482,
+              483,
+              485
+            ],
+            "eudicots-sp-51240|utr5": [
               482,
               483,
               485
@@ -411137,209 +411137,215 @@
               598,
               639
             ],
-            "actinomycetota-sp-1773|translation-stop": [
-              602
-            ],
             "actinomycetota-sp-1773|translation-start": [
               602
             ],
-            "actinomycetota-sp-1902|translation-stop": [
+            "actinomycetota-sp-1773|translation-stop": [
               602
             ],
             "actinomycetota-sp-1902|translation-start": [
               602
             ],
-            "alveolata-sp-5888|translation-stop": [
+            "actinomycetota-sp-1902|translation-stop": [
               602
             ],
             "alveolata-sp-5888|translation-start": [
               602
             ],
-            "alveolata-sp-5911|translation-stop": [
+            "alveolata-sp-5888|translation-stop": [
               602
             ],
             "alveolata-sp-5911|translation-start": [
               602
             ],
-            "amphibia-sp-8364|translation-stop": [
+            "alveolata-sp-5911|translation-stop": [
               602
             ],
             "amphibia-sp-8364|translation-start": [
               602
             ],
-            "bacillota-sp-1280|translation-stop": [
+            "amphibia-sp-8364|translation-stop": [
               602
             ],
             "bacillota-sp-1280|translation-start": [
               602
             ],
-            "bacillota-sp-1352|translation-stop": [
+            "bacillota-sp-1280|translation-stop": [
               602
             ],
             "bacillota-sp-1352|translation-start": [
               602
             ],
-            "bacillota-sp-1423|translation-stop": [
+            "bacillota-sp-1352|translation-stop": [
               602
             ],
             "bacillota-sp-1423|translation-start": [
               602
             ],
-            "bacteroidota-sp-818|translation-stop": [
+            "bacillota-sp-1423|translation-stop": [
               602
             ],
             "bacteroidota-sp-818|translation-start": [
               602
             ],
-            "chlorophyta-sp-3055|translation-stop": [
+            "bacteroidota-sp-818|translation-stop": [
               602
             ],
             "chlorophyta-sp-3055|translation-start": [
               602
             ],
-            "cyanobacteriota-sp-1148|translation-stop": [
+            "chlorophyta-sp-3055|translation-stop": [
               602
             ],
             "cyanobacteriota-sp-1148|translation-start": [
               602
             ],
-            "eudicots-sp-49451|translation-stop": [
+            "cyanobacteriota-sp-1148|translation-stop": [
               602
             ],
             "eudicots-sp-49451|translation-start": [
               602
             ],
-            "insecta-sp-7227|translation-stop": [
+            "eudicots-sp-49451|translation-stop": [
               602
             ],
             "insecta-sp-7227|translation-start": [
               602
             ],
-            "mammalia-sp-10090|translation-stop": [
+            "insecta-sp-7227|translation-stop": [
               602
             ],
             "mammalia-sp-10090|translation-start": [
               602
             ],
-            "mammalia-sp-9483|translation-stop": [
+            "mammalia-sp-10090|translation-stop": [
               602
             ],
             "mammalia-sp-9483|translation-start": [
               602
             ],
-            "mammalia-sp-9544|translation-stop": [
+            "mammalia-sp-9483|translation-stop": [
               602
             ],
             "mammalia-sp-9544|translation-start": [
               602
             ],
-            "mammalia-sp-9606|translation-stop": [
+            "mammalia-sp-9544|translation-stop": [
               602
             ],
             "mammalia-sp-9606|translation-start": [
               602
             ],
-            "methanobacteriota-sp-2190|translation-stop": [
+            "mammalia-sp-9606|translation-stop": [
               602
             ],
             "methanobacteriota-sp-2190|translation-start": [
               602
             ],
-            "methanobacteriota-sp-2246|translation-stop": [
+            "methanobacteriota-sp-2190|translation-stop": [
               602
             ],
             "methanobacteriota-sp-2246|translation-start": [
               602
             ],
-            "methanobacteriota-sp-311400|translation-stop": [
+            "methanobacteriota-sp-2246|translation-stop": [
               602
             ],
             "methanobacteriota-sp-311400|translation-start": [
               602
             ],
-            "methanobacteriota-sp-39152|translation-stop": [
+            "methanobacteriota-sp-311400|translation-stop": [
               602
             ],
             "methanobacteriota-sp-39152|translation-start": [
               602
             ],
-            "nanobdellota-sp-160232|translation-stop": [
+            "methanobacteriota-sp-39152|translation-stop": [
               602
             ],
             "nanobdellota-sp-160232|translation-start": [
               602
             ],
-            "nematoda-sp-6239|translation-stop": [
+            "nanobdellota-sp-160232|translation-stop": [
               602
             ],
             "nematoda-sp-6239|translation-start": [
               602
             ],
-            "nitrososphaerota-sp-338192|translation-stop": [
+            "nematoda-sp-6239|translation-stop": [
               602
             ],
             "nitrososphaerota-sp-338192|translation-start": [
               602
             ],
-            "pseudomonadota-sp-287|translation-stop": [
+            "nitrososphaerota-sp-338192|translation-stop": [
               602
             ],
             "pseudomonadota-sp-287|translation-start": [
               602
             ],
-            "pseudomonadota-sp-470|translation-stop": [
+            "pseudomonadota-sp-287|translation-stop": [
               602
             ],
             "pseudomonadota-sp-470|translation-start": [
               602
             ],
-            "pseudomonadota-sp-485|translation-stop": [
+            "pseudomonadota-sp-470|translation-stop": [
               602
             ],
             "pseudomonadota-sp-485|translation-start": [
               602
             ],
-            "pseudomonadota-sp-487|translation-stop": [
+            "pseudomonadota-sp-485|translation-stop": [
               602
             ],
             "pseudomonadota-sp-487|translation-start": [
               602
             ],
-            "pseudomonadota-sp-562|translation-stop": [
+            "pseudomonadota-sp-487|translation-stop": [
               602
             ],
             "pseudomonadota-sp-562|translation-start": [
               602
             ],
-            "pseudomonadota-sp-573|translation-stop": [
+            "pseudomonadota-sp-562|translation-stop": [
               602
             ],
             "pseudomonadota-sp-573|translation-start": [
               602
             ],
-            "saccharomycotina-sp-4932|translation-stop": [
+            "pseudomonadota-sp-573|translation-stop": [
               602
             ],
             "saccharomycotina-sp-4932|translation-start": [
               602
             ],
-            "stramenopiles-sp-35128|translation-stop": [
+            "saccharomycotina-sp-4932|translation-stop": [
               602
             ],
             "stramenopiles-sp-35128|translation-start": [
               602
             ],
-            "teleostei-sp-7955|translation-stop": [
+            "stramenopiles-sp-35128|translation-stop": [
               602
             ],
             "teleostei-sp-7955|translation-start": [
               602
             ],
-            "thermoproteota-sp-2287|translation-stop": [
+            "teleostei-sp-7955|translation-stop": [
               602
             ],
             "thermoproteota-sp-2287|translation-start": [
               602
+            ],
+            "thermoproteota-sp-2287|translation-stop": [
+              602
+            ],
+            "actinomycetota-sp-1773|cds": [
+              603
+            ],
+            "actinomycetota-sp-1773|intergenic": [
+              603
             ],
             "actinomycetota-sp-1773|ncrna": [
               603
@@ -411347,13 +411353,10 @@
             "actinomycetota-sp-1773|rrna": [
               603
             ],
-            "actinomycetota-sp-1773|intergenic": [
-              603
-            ],
             "actinomycetota-sp-1773|trna": [
               603
             ],
-            "actinomycetota-sp-1773|cds": [
+            "actinomycetota-sp-1902|intergenic": [
               603
             ],
             "actinomycetota-sp-1902|ncrna": [
@@ -411362,10 +411365,13 @@
             "actinomycetota-sp-1902|rrna": [
               603
             ],
-            "actinomycetota-sp-1902|intergenic": [
+            "actinomycetota-sp-1902|trna": [
               603
             ],
-            "actinomycetota-sp-1902|trna": [
+            "bacillota-sp-1280|cds": [
+              603
+            ],
+            "bacillota-sp-1280|intergenic": [
               603
             ],
             "bacillota-sp-1280|ncrna": [
@@ -411374,13 +411380,13 @@
             "bacillota-sp-1280|rrna": [
               603
             ],
-            "bacillota-sp-1280|intergenic": [
-              603
-            ],
             "bacillota-sp-1280|trna": [
               603
             ],
-            "bacillota-sp-1280|cds": [
+            "bacillota-sp-1352|cds": [
+              603
+            ],
+            "bacillota-sp-1352|intergenic": [
               603
             ],
             "bacillota-sp-1352|ncrna": [
@@ -411389,13 +411395,10 @@
             "bacillota-sp-1352|rrna": [
               603
             ],
-            "bacillota-sp-1352|intergenic": [
-              603
-            ],
             "bacillota-sp-1352|trna": [
               603
             ],
-            "bacillota-sp-1352|cds": [
+            "bacillota-sp-1423|intergenic": [
               603
             ],
             "bacillota-sp-1423|ncrna": [
@@ -411404,10 +411407,13 @@
             "bacillota-sp-1423|rrna": [
               603
             ],
-            "bacillota-sp-1423|intergenic": [
+            "bacillota-sp-1423|trna": [
               603
             ],
-            "bacillota-sp-1423|trna": [
+            "bacteroidota-sp-818|cds": [
+              603
+            ],
+            "bacteroidota-sp-818|intergenic": [
               603
             ],
             "bacteroidota-sp-818|ncrna": [
@@ -411416,13 +411422,13 @@
             "bacteroidota-sp-818|rrna": [
               603
             ],
-            "bacteroidota-sp-818|intergenic": [
-              603
-            ],
             "bacteroidota-sp-818|trna": [
               603
             ],
-            "bacteroidota-sp-818|cds": [
+            "cyanobacteriota-sp-1148|cds": [
+              603
+            ],
+            "cyanobacteriota-sp-1148|intergenic": [
               603
             ],
             "cyanobacteriota-sp-1148|ncrna": [
@@ -411431,13 +411437,13 @@
             "cyanobacteriota-sp-1148|rrna": [
               603
             ],
-            "cyanobacteriota-sp-1148|intergenic": [
-              603
-            ],
             "cyanobacteriota-sp-1148|trna": [
               603
             ],
-            "cyanobacteriota-sp-1148|cds": [
+            "methanobacteriota-sp-2190|cds": [
+              603
+            ],
+            "methanobacteriota-sp-2190|intergenic": [
               603
             ],
             "methanobacteriota-sp-2190|ncrna": [
@@ -411446,13 +411452,10 @@
             "methanobacteriota-sp-2190|rrna": [
               603
             ],
-            "methanobacteriota-sp-2190|intergenic": [
-              603
-            ],
             "methanobacteriota-sp-2190|trna": [
               603
             ],
-            "methanobacteriota-sp-2190|cds": [
+            "methanobacteriota-sp-2246|intergenic": [
               603
             ],
             "methanobacteriota-sp-2246|ncrna": [
@@ -411461,10 +411464,13 @@
             "methanobacteriota-sp-2246|rrna": [
               603
             ],
-            "methanobacteriota-sp-2246|intergenic": [
+            "methanobacteriota-sp-2246|trna": [
               603
             ],
-            "methanobacteriota-sp-2246|trna": [
+            "methanobacteriota-sp-311400|cds": [
+              603
+            ],
+            "methanobacteriota-sp-311400|intergenic": [
               603
             ],
             "methanobacteriota-sp-311400|ncrna": [
@@ -411473,13 +411479,13 @@
             "methanobacteriota-sp-311400|rrna": [
               603
             ],
-            "methanobacteriota-sp-311400|intergenic": [
-              603
-            ],
             "methanobacteriota-sp-311400|trna": [
               603
             ],
-            "methanobacteriota-sp-311400|cds": [
+            "methanobacteriota-sp-39152|cds": [
+              603
+            ],
+            "methanobacteriota-sp-39152|intergenic": [
               603
             ],
             "methanobacteriota-sp-39152|ncrna": [
@@ -411488,13 +411494,13 @@
             "methanobacteriota-sp-39152|rrna": [
               603
             ],
-            "methanobacteriota-sp-39152|intergenic": [
-              603
-            ],
             "methanobacteriota-sp-39152|trna": [
               603
             ],
-            "methanobacteriota-sp-39152|cds": [
+            "nanobdellota-sp-160232|cds": [
+              603
+            ],
+            "nanobdellota-sp-160232|intergenic": [
               603
             ],
             "nanobdellota-sp-160232|ncrna": [
@@ -411503,13 +411509,13 @@
             "nanobdellota-sp-160232|rrna": [
               603
             ],
-            "nanobdellota-sp-160232|intergenic": [
-              603
-            ],
             "nanobdellota-sp-160232|trna": [
               603
             ],
-            "nanobdellota-sp-160232|cds": [
+            "nitrososphaerota-sp-338192|cds": [
+              603
+            ],
+            "nitrososphaerota-sp-338192|intergenic": [
               603
             ],
             "nitrososphaerota-sp-338192|ncrna": [
@@ -411518,13 +411524,13 @@
             "nitrososphaerota-sp-338192|rrna": [
               603
             ],
-            "nitrososphaerota-sp-338192|intergenic": [
-              603
-            ],
             "nitrososphaerota-sp-338192|trna": [
               603
             ],
-            "nitrososphaerota-sp-338192|cds": [
+            "pseudomonadota-sp-287|cds": [
+              603
+            ],
+            "pseudomonadota-sp-287|intergenic": [
               603
             ],
             "pseudomonadota-sp-287|ncrna": [
@@ -411533,13 +411539,13 @@
             "pseudomonadota-sp-287|rrna": [
               603
             ],
-            "pseudomonadota-sp-287|intergenic": [
-              603
-            ],
             "pseudomonadota-sp-287|trna": [
               603
             ],
-            "pseudomonadota-sp-287|cds": [
+            "pseudomonadota-sp-470|cds": [
+              603
+            ],
+            "pseudomonadota-sp-470|intergenic": [
               603
             ],
             "pseudomonadota-sp-470|ncrna": [
@@ -411548,13 +411554,13 @@
             "pseudomonadota-sp-470|rrna": [
               603
             ],
-            "pseudomonadota-sp-470|intergenic": [
-              603
-            ],
             "pseudomonadota-sp-470|trna": [
               603
             ],
-            "pseudomonadota-sp-470|cds": [
+            "pseudomonadota-sp-485|cds": [
+              603
+            ],
+            "pseudomonadota-sp-485|intergenic": [
               603
             ],
             "pseudomonadota-sp-485|ncrna": [
@@ -411563,13 +411569,13 @@
             "pseudomonadota-sp-485|rrna": [
               603
             ],
-            "pseudomonadota-sp-485|intergenic": [
-              603
-            ],
             "pseudomonadota-sp-485|trna": [
               603
             ],
-            "pseudomonadota-sp-485|cds": [
+            "pseudomonadota-sp-487|cds": [
+              603
+            ],
+            "pseudomonadota-sp-487|intergenic": [
               603
             ],
             "pseudomonadota-sp-487|ncrna": [
@@ -411578,16 +411584,16 @@
             "pseudomonadota-sp-487|rrna": [
               603
             ],
-            "pseudomonadota-sp-487|intergenic": [
-              603
-            ],
             "pseudomonadota-sp-487|trna": [
               603
             ],
-            "pseudomonadota-sp-487|cds": [
+            "pseudomonadota-sp-562|ncrna": [
               603
             ],
-            "pseudomonadota-sp-562|ncrna": [
+            "pseudomonadota-sp-573|cds": [
+              603
+            ],
+            "pseudomonadota-sp-573|intergenic": [
               603
             ],
             "pseudomonadota-sp-573|ncrna": [
@@ -411596,13 +411602,10 @@
             "pseudomonadota-sp-573|rrna": [
               603
             ],
-            "pseudomonadota-sp-573|intergenic": [
-              603
-            ],
             "pseudomonadota-sp-573|trna": [
               603
             ],
-            "pseudomonadota-sp-573|cds": [
+            "thermoproteota-sp-2287|intergenic": [
               603
             ],
             "thermoproteota-sp-2287|ncrna": [
@@ -411611,13 +411614,17 @@
             "thermoproteota-sp-2287|rrna": [
               603
             ],
-            "thermoproteota-sp-2287|intergenic": [
-              603
-            ],
             "thermoproteota-sp-2287|trna": [
               603
             ],
-            "alveolata-sp-5888|utr5": [
+            "alveolata-sp-5888|cds": [
+              604,
+              605
+            ],
+            "alveolata-sp-5888|intergenic": [
+              604
+            ],
+            "alveolata-sp-5888|intron": [
               604
             ],
             "alveolata-sp-5888|lncrna": [
@@ -411629,23 +411636,23 @@
             "alveolata-sp-5888|rrna": [
               604
             ],
-            "alveolata-sp-5888|intergenic": [
-              604
-            ],
             "alveolata-sp-5888|trna": [
               604
             ],
             "alveolata-sp-5888|utr3": [
               604
             ],
-            "alveolata-sp-5888|intron": [
+            "alveolata-sp-5888|utr5": [
               604
             ],
-            "alveolata-sp-5888|cds": [
+            "alveolata-sp-5911|cds": [
               604,
               605
             ],
-            "alveolata-sp-5911|utr5": [
+            "alveolata-sp-5911|intergenic": [
+              604
+            ],
+            "alveolata-sp-5911|intron": [
               604
             ],
             "alveolata-sp-5911|lncrna": [
@@ -411657,23 +411664,22 @@
             "alveolata-sp-5911|rrna": [
               604
             ],
-            "alveolata-sp-5911|intergenic": [
-              604
-            ],
             "alveolata-sp-5911|trna": [
               604
             ],
             "alveolata-sp-5911|utr3": [
               604
             ],
-            "alveolata-sp-5911|intron": [
+            "alveolata-sp-5911|utr5": [
               604
             ],
-            "alveolata-sp-5911|cds": [
-              604,
-              605
+            "amphibia-sp-8364|cds": [
+              604
             ],
-            "amphibia-sp-8364|utr5": [
+            "amphibia-sp-8364|intergenic": [
+              604
+            ],
+            "amphibia-sp-8364|intron": [
               604
             ],
             "amphibia-sp-8364|lncrna": [
@@ -411685,22 +411691,16 @@
             "amphibia-sp-8364|rrna": [
               604
             ],
-            "amphibia-sp-8364|intergenic": [
-              604
-            ],
             "amphibia-sp-8364|trna": [
               604
             ],
             "amphibia-sp-8364|utr3": [
               604
             ],
-            "amphibia-sp-8364|intron": [
+            "amphibia-sp-8364|utr5": [
               604
             ],
-            "amphibia-sp-8364|cds": [
-              604
-            ],
-            "chlorophyta-sp-3055|utr5": [
+            "chlorophyta-sp-3055|intergenic": [
               604
             ],
             "chlorophyta-sp-3055|lncrna": [
@@ -411712,13 +411712,13 @@
             "chlorophyta-sp-3055|rrna": [
               604
             ],
-            "chlorophyta-sp-3055|intergenic": [
-              604
-            ],
             "chlorophyta-sp-3055|trna": [
               604
             ],
             "chlorophyta-sp-3055|utr3": [
+              604
+            ],
+            "chlorophyta-sp-3055|utr5": [
               604
             ],
             "eudicots-sp-3702|lncrna": [
@@ -411730,7 +411730,13 @@
             "eudicots-sp-3702|trna": [
               604
             ],
-            "eudicots-sp-49451|utr5": [
+            "eudicots-sp-49451|cds": [
+              604
+            ],
+            "eudicots-sp-49451|intergenic": [
+              604
+            ],
+            "eudicots-sp-49451|intron": [
               604
             ],
             "eudicots-sp-49451|lncrna": [
@@ -411742,22 +411748,19 @@
             "eudicots-sp-49451|rrna": [
               604
             ],
-            "eudicots-sp-49451|intergenic": [
-              604
-            ],
             "eudicots-sp-49451|trna": [
               604
             ],
             "eudicots-sp-49451|utr3": [
               604
             ],
-            "eudicots-sp-49451|intron": [
+            "eudicots-sp-49451|utr5": [
               604
             ],
-            "eudicots-sp-49451|cds": [
+            "insecta-sp-7227|intergenic": [
               604
             ],
-            "insecta-sp-7227|utr5": [
+            "insecta-sp-7227|intron": [
               604
             ],
             "insecta-sp-7227|lncrna": [
@@ -411769,16 +411772,16 @@
             "insecta-sp-7227|rrna": [
               604
             ],
-            "insecta-sp-7227|intergenic": [
-              604
-            ],
             "insecta-sp-7227|trna": [
               604
             ],
             "insecta-sp-7227|utr3": [
               604
             ],
-            "insecta-sp-7227|intron": [
+            "insecta-sp-7227|utr5": [
+              604
+            ],
+            "mammalia-sp-10090|intergenic": [
               604
             ],
             "mammalia-sp-10090|lncrna": [
@@ -411790,13 +411793,10 @@
             "mammalia-sp-10090|rrna": [
               604
             ],
-            "mammalia-sp-10090|intergenic": [
-              604
-            ],
             "mammalia-sp-10090|trna": [
               604
             ],
-            "mammalia-sp-9483|utr5": [
+            "mammalia-sp-9483|intergenic": [
               604
             ],
             "mammalia-sp-9483|lncrna": [
@@ -411808,16 +411808,22 @@
             "mammalia-sp-9483|rrna": [
               604
             ],
-            "mammalia-sp-9483|intergenic": [
-              604
-            ],
             "mammalia-sp-9483|trna": [
               604
             ],
             "mammalia-sp-9483|utr3": [
               604
             ],
-            "mammalia-sp-9544|utr5": [
+            "mammalia-sp-9483|utr5": [
+              604
+            ],
+            "mammalia-sp-9544|cds": [
+              604
+            ],
+            "mammalia-sp-9544|intergenic": [
+              604
+            ],
+            "mammalia-sp-9544|intron": [
               604
             ],
             "mammalia-sp-9544|lncrna": [
@@ -411829,22 +411835,22 @@
             "mammalia-sp-9544|rrna": [
               604
             ],
-            "mammalia-sp-9544|intergenic": [
-              604
-            ],
             "mammalia-sp-9544|trna": [
               604
             ],
             "mammalia-sp-9544|utr3": [
               604
             ],
-            "mammalia-sp-9544|intron": [
+            "mammalia-sp-9544|utr5": [
               604
             ],
-            "mammalia-sp-9544|cds": [
+            "nematoda-sp-6239|cds": [
               604
             ],
-            "nematoda-sp-6239|utr5": [
+            "nematoda-sp-6239|intergenic": [
+              604
+            ],
+            "nematoda-sp-6239|intron": [
               604
             ],
             "nematoda-sp-6239|lncrna": [
@@ -411856,19 +411862,13 @@
             "nematoda-sp-6239|rrna": [
               604
             ],
-            "nematoda-sp-6239|intergenic": [
-              604
-            ],
             "nematoda-sp-6239|trna": [
               604
             ],
             "nematoda-sp-6239|utr3": [
               604
             ],
-            "nematoda-sp-6239|intron": [
-              604
-            ],
-            "nematoda-sp-6239|cds": [
+            "nematoda-sp-6239|utr5": [
               604
             ],
             "poaceae-sp-4530|lncrna": [
@@ -411880,7 +411880,10 @@
             "poaceae-sp-4530|trna": [
               604
             ],
-            "saccharomycotina-sp-4932|utr5": [
+            "saccharomycotina-sp-4932|intergenic": [
+              604
+            ],
+            "saccharomycotina-sp-4932|intron": [
               604
             ],
             "saccharomycotina-sp-4932|lncrna": [
@@ -411892,19 +411895,23 @@
             "saccharomycotina-sp-4932|rrna": [
               604
             ],
-            "saccharomycotina-sp-4932|intergenic": [
-              604
-            ],
             "saccharomycotina-sp-4932|trna": [
               604
             ],
             "saccharomycotina-sp-4932|utr3": [
               604
             ],
-            "saccharomycotina-sp-4932|intron": [
+            "saccharomycotina-sp-4932|utr5": [
               604
             ],
-            "stramenopiles-sp-35128|utr5": [
+            "stramenopiles-sp-35128|cds": [
+              604,
+              605
+            ],
+            "stramenopiles-sp-35128|intergenic": [
+              604
+            ],
+            "stramenopiles-sp-35128|intron": [
               604
             ],
             "stramenopiles-sp-35128|lncrna": [
@@ -411916,23 +411923,19 @@
             "stramenopiles-sp-35128|rrna": [
               604
             ],
-            "stramenopiles-sp-35128|intergenic": [
-              604
-            ],
             "stramenopiles-sp-35128|trna": [
               604
             ],
             "stramenopiles-sp-35128|utr3": [
               604
             ],
-            "stramenopiles-sp-35128|intron": [
+            "stramenopiles-sp-35128|utr5": [
               604
             ],
-            "stramenopiles-sp-35128|cds": [
-              604,
-              605
+            "teleostei-sp-7955|cds": [
+              604
             ],
-            "teleostei-sp-7955|utr5": [
+            "teleostei-sp-7955|intergenic": [
               604
             ],
             "teleostei-sp-7955|lncrna": [
@@ -411944,16 +411947,13 @@
             "teleostei-sp-7955|rrna": [
               604
             ],
-            "teleostei-sp-7955|intergenic": [
-              604
-            ],
             "teleostei-sp-7955|trna": [
               604
             ],
             "teleostei-sp-7955|utr3": [
               604
             ],
-            "teleostei-sp-7955|cds": [
+            "teleostei-sp-7955|utr5": [
               604
             ],
             "mycoplasmatota-sp-2104|cds": [
