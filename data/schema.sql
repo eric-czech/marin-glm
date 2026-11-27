@@ -122,6 +122,37 @@ CREATE TABLE task_categories (
   attribution TEXT NOT NULL CHECK (attribution IN ('source','curatorial')),
   PRIMARY KEY (task_id, category_id, relation)
 );
+-- Biological placement and display choices are separate. JSON fields contain
+-- presentation metadata or lists of evidence IDs, never a second task record.
+CREATE TABLE coverage_nodes (
+  id TEXT PRIMARY KEY, parent_id TEXT REFERENCES coverage_nodes(id),
+  population_id TEXT REFERENCES populations(id), label TEXT NOT NULL,
+  scientific TEXT NOT NULL, rank TEXT NOT NULL, note TEXT NOT NULL,
+  section TEXT NOT NULL, jump TEXT, sources_json TEXT NOT NULL CHECK(json_valid(sources_json))
+);
+CREATE TABLE coverage_rows (
+  id TEXT PRIMARY KEY, view TEXT NOT NULL CHECK(view IN ('clade','species','allSpecies')),
+  row_key TEXT NOT NULL, node_id TEXT NOT NULL REFERENCES coverage_nodes(id),
+  population_ids_json TEXT NOT NULL CHECK(json_valid(population_ids_json)),
+  metadata_json TEXT NOT NULL CHECK(json_valid(metadata_json)), UNIQUE(view,row_key)
+);
+CREATE TABLE coverage_mappings (
+  id TEXT PRIMARY KEY, task_id TEXT NOT NULL REFERENCES tasks(id),
+  population_id TEXT REFERENCES populations(id), basis TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  supporting_json TEXT NOT NULL CHECK(json_valid(supporting_json)),
+  clade_row TEXT NOT NULL REFERENCES coverage_rows(id),
+  species_row TEXT NOT NULL REFERENCES coverage_rows(id),
+  all_species_row TEXT NOT NULL REFERENCES coverage_rows(id),
+  metadata_json TEXT NOT NULL CHECK(json_valid(metadata_json))
+);
+CREATE TABLE coverage_notes (
+  id TEXT PRIMARY KEY, kind TEXT NOT NULL CHECK(kind IN ('gap','known','context')),
+  node_id TEXT NOT NULL REFERENCES coverage_nodes(id),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  payload_json TEXT NOT NULL CHECK(json_valid(payload_json))
+);
+CREATE TABLE coverage_settings (key TEXT PRIMARY KEY, value_json TEXT NOT NULL CHECK(json_valid(value_json)));
 CREATE TABLE protocols (
   id TEXT PRIMARY KEY, task_id TEXT NOT NULL REFERENCES tasks(id),
   variant_id TEXT REFERENCES variants(id), name TEXT NOT NULL,

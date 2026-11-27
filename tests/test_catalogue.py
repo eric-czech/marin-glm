@@ -165,4 +165,47 @@ class CatalogueTests(unittest.TestCase):
           JOIN evaluations e ON e.id=r.evaluation_id
           WHERE r.relation='successor-release' AND r.evidence_id!=e.evidence_id''').fetchall(),[])
 
+    def test_coverage_uses_canonical_tasks_and_preserves_every_view(self):
+        payload=json.loads((ROOT/'data/site-data.json').read_text())
+        coverage=payload['coverage']
+        tasks={r['id'] for r in payload['tasks']}
+        self.assertEqual({t['id'] for t in coverage['tasks']},tasks)
+        for view,expected_rows,expected_marks in [('species',48,879),('allSpecies',87,1102),('clade',32,820)]:
+            values=coverage['presentation']['views'][view]
+            self.assertEqual(len(values['rows']),expected_rows)
+            self.assertEqual(sum(len(ids) for ids in values['cells'].values()),expected_marks)
+            self.assertEqual({coverage['tasks'][i]['id'] for ids in values['cells'].values() for i in ids},tasks)
+            self.assertTrue(all(len(ids)==len(set(ids)) for ids in values['cells'].values()))
+        self.assertEqual(sum(t['protein'] for t in coverage['tasks']),14)
+        self.assertEqual(len(coverage['presentation']['gaps']),6)
+        self.assertEqual(len(coverage['presentation']['known']),6)
+
+    def test_coverage_assignments_have_cited_origins_not_host_inference(self):
+        self.assertEqual(self.db.execute('''SELECT t.id FROM tasks t LEFT JOIN coverage_mappings m
+          ON m.task_id=t.id WHERE m.id IS NULL''').fetchall(),[])
+        for row in self.db.execute('SELECT * FROM coverage_mappings'):
+            for eid in json.loads(row['supporting_json']):
+                self.assertIsNotNone(self.db.execute('SELECT 1 FROM evidence WHERE id=?',(eid,)).fetchone())
+            if row['basis']=='metadata gap':self.assertIsNone(row['population_id'])
+        targets=self.db.execute("SELECT COUNT(*) FROM coverage_mappings WHERE basis='protein-target' AND population_id IS NOT NULL").fetchone()[0]
+        self.assertGreater(targets,30)
+
+    def test_ntv3_coverage_is_the_scored_heldout_panel(self):
+        tasks=self.db.execute("SELECT id FROM tasks WHERE name IN ('Exact CDS-exon structures','Exact whole-gene structures')").fetchall()
+        self.assertEqual(len(tasks),2)
+        for task in tasks:
+            rows=self.db.execute('''SELECT m.*,p.name,p.rank FROM coverage_mappings m JOIN populations p
+              ON p.id=m.population_id WHERE m.task_id=?''',(task['id'],)).fetchall()
+            self.assertEqual(len(rows),17)
+            self.assertTrue(all(r['basis']=='paper-test-panel' and r['rank']=='species' for r in rows))
+            self.assertNotIn('Drosophila melanogaster',{r['name'] for r in rows})
+            esch=next(r for r in rows if r['name']=='Eschscholzia californica')
+            evidence=[self.db.execute('SELECT statement FROM evidence WHERE id=?',(eid,)).fetchone()[0] for eid in json.loads(esch['supporting_json'])]
+            self.assertTrue(any('Ranunculales' in text and 'EUDICOTS' in text for text in evidence))
+
+    def test_display_remainders_are_not_new_biological_clades(self):
+        self.assertIsNone(self.db.execute("SELECT 1 FROM populations WHERE id='monocots-other'").fetchone())
+        self.assertEqual(self.db.execute("SELECT population_id FROM coverage_nodes WHERE id='monocots-other'").fetchone()[0],'monocots')
+        self.assertEqual(self.db.execute("SELECT COUNT(DISTINCT task_id) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'").fetchone()[0],41)
+
 if __name__=='__main__':unittest.main()

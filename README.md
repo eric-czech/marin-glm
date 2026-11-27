@@ -25,7 +25,19 @@ python -m unittest discover -s tests -p 'test_*.py'
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000`, or open `index.html` directly. Filters are encoded in the URL fragment. Task links restore a single expanded record. The CSV export contains all matching records, including those beyond the visible page.
+Open `http://localhost:8000`, or open `index.html` directly. Evaluations opens in Coverage, with Tasks and Collections as alternate views. Shared filters, selected matrix cells, taxon detail, sorting, pagination and expanded table rows are encoded in the URL fragment. Existing task links still restore a single expanded record. The CSV export contains all matching records, including those beyond the visible page. Tables default to 100 rows and support 25, 50, 100 or 250 rows per page.
+
+## Evaluation coverage
+
+Coverage plots individual task/panel associations by biological division/species and genomic feature. Four colors distinguish prediction, generation, retrieval/comparison and analysis/diagnostic tasks; six source shapes preserve original Evo 2 attribution separately from later collection membership. Protein-only references use hollow symbols; unresolved panels use faint symbols. Color is a presentation-level aggregation of the cited task type/capabilities, not an additional claim about model architecture.
+
+All 513 task/panel records are retained. Selected organisms has 48 populated rows and 879 markers; every named species has 87 rows and 1,102 markers; clades only has 32 rows and 820 markers. A marker is a task-level co-annotation, not proof of a released species × feature subset or an independent biological cohort. Row counts are unique records and cannot be added. Known-origin synthetic constructs stay with their taxa; construction remains an attribute. Broad labels are never projected to all descendants. Assay/sample hosts alone do not qualify a task for an organism filter.
+
+Cell selection narrows the shared task table and remains visible as a removable filter in all three views. Organism/feature filters restrict plotted associations as well as canonical task IDs, avoiding unrelated species markers from a multi-species task. Tables provide sorting, pagination and expandable protocol/count/evidence details; collections without decomposed tasks remain available in Collections. Secondary sections remain Projects, Models, Papers, Data and Audit notes.
+
+The displayed hierarchy retains domains and selected familiar biological divisions, with 30 division headers in the default view. Intermediate ancestry, trait explanations and sources are available in Taxonomy details. Six cited priority coverage questions are below the matrix; positive paper evidence lacking decomposed tasks receives notes rather than invented markers. Neither constitutes a claim of exhaustive dataset absence. No ID/OD policy is assigned.
+
+`coverage_nodes`, `coverage_rows`, `coverage_mappings`, `coverage_notes` and `coverage_settings` store cited assignments and presentation configuration in SQLite. The node graph and its population links are separate from the simplified display. `scripts/coverage_data.py` compiles them with the canonical task classifications and model-use records during the offline build. The page embeds only that compiled representation, not another set of task definitions. `scripts/curation/import_coverage.py` records the one-time promotion of the audited local prototype and its cached taxonomy responses; routine builds require neither the prototype nor its cache. NTv3's two exact-structure tasks now link the 17 explicitly scored held-out species. Verified UniProt/GenBank protein-target origins remain distinct from assay host and native genomic coordinates.
 
 An optional browser check, `tests/browser.py`, requires Playwright and Chromium. It checks actual filtering, taxon ancestry, provenance, direct links, downloads, navigation, JavaScript errors and mobile overflow without external requests.
 

@@ -10,27 +10,30 @@
   const projectMemberships=group(db.project_review_evaluations.filter(r=>projectsByReview[r.review_id]&&["defines","successor-release"].includes(r.relation)),"evaluation_id");
   const taskProjectIds=ids=>[...new Set(ids.flatMap(id=>(projectMemberships[id]??[]).map(r=>projectsByReview[r.review_id].id)))];
   const taskCategories=group(db.task_categories,"task_id"), taskPops=group(db.task_populations,"task_id"), memberships=group(db.evaluation_tasks,"task_id"), protocols=group(db.protocols,"task_id"), variants=group(db.variants,"task_id"), counts=group(db.counts,"task_id"), uses=group(db.model_evaluations,"task_id"), metricLinks=group(db.protocol_metrics,"protocol_id"), fields=group(db.field_evidence,"entity_id");
+  const coverageByTask=index(db.coverage.tasks);
   const statusNames={"artifact-audited":"Selected artifacts audited","paper-audited":"Paper / protocol audit","registered":"Registered; task audit pending","panel-pending":"Composite panel; source information missing"};
   db.evidence.forEach((e,i)=>e.number=i+1);
   const cite = id => {const e=evidence[id];return e?`<a class="citation" href="${esc(e.url)}" target="_blank" rel="noopener" title="${esc(e.locator+': '+e.statement)}" aria-label="Source ${e.number}: ${esc(e.locator)}">[${e.number}]</a>`:"";};
   const citations = ids => [...new Set(ids.filter(Boolean))].map(cite).join("");
   const tags = (values,cls="") => values.map(v=>`<span class="tag ${cls}">${esc(v)}</span>`).join("");
   const fieldEvidence = (id,field,fallback) => {const rows=(fields[id]??[]).filter(r=>r.field===field);return citations(rows.length?rows.map(r=>r.evidence_id):[fallback]);};
-  const ancestors = id => {const out=[];for(let p=populations[id];p;p=populations[p.parent_id])out.push(p.id);return out;};
+  const ancestors = id => coveragePopulationIds(id,populations,db.coverage.populationGroups);
   const categoryNames=(t,dimension)=>(taskCategories[t.id]??[]).filter(r=>categories[r.category_id].dimension===dimension).map(r=>categories[r.category_id].name);
   const taskList=db.tasks.map(t=>{
     t._cats=(taskCategories[t.id]??[]).map(r=>r.category_id);
-    t._pops=[...new Set((taskPops[t.id]??[]).flatMap(r=>ancestors(r.population_id)))];
+    const mapped=coverageByTask[t.id].mappings.filter(m=>m.population).map(m=>m.population);
+    t._pops=[...new Set(mapped.flatMap(ancestors))];
     t._uses=uses[t.id]??[];
     t._original=t._uses.some(r=>r.model_id==="evo2"&&r.provenance==="original-paper");
     t._external=t._uses.some(r=>r.model_id==="evo2"&&r.provenance==="external-evaluation");
     t._suites=(memberships[t.id]??[]).map(r=>r.evaluation_id);
     t._projects=taskProjectIds(t._suites);
-    t._search=[t.name,t.dataset_name,t.target,t.description,t.task_type,t.label_basis,t.input_description,t.limitations,...t._cats.map(k=>categories[k].name),...t._pops.map(k=>populations[k].name),...t._suites.map(k=>suites[k].name),...t._projects.map(k=>projects[k].name),...(protocols[t.id]??[]).map(p=>[p.name,p.adaptation,p.model_interface,p.split_rule,p.notes].join(" ")),...t._uses.map(u=>models[u.model_id].name)].join(" ").toLowerCase();
+    t._search=[t.id,t.name,t.dataset_name,t.target,t.description,t.task_type,t.label_basis,t.input_description,t.limitations,...t._cats.map(k=>categories[k].name),...t._pops.map(k=>populations[k].name),...t._suites.map(k=>suites[k].name),...t._projects.map(k=>projects[k].name),...(protocols[t.id]??[]).map(p=>[p.name,p.adaptation,p.model_interface,p.split_rule,p.notes].join(" ")),...t._uses.map(u=>models[u.model_id].name)].join(" ").toLowerCase();
     return t;
   }).sort((a,b)=>a.name.localeCompare(b.name));
   const tasks=index(taskList);
-  let state={}, limit=40, matching=[];
+  let state={}, matching=[];
+  const coverageMatrix=createCoverageMatrix($("coverage-view"),db.coverage,tasks,populations,changes=>setState({...state,...changes}));
   const filterKeys=["q","application","population","capability","region","suite","project","evo","status"];
   const controls={q:"search",application:"application",population:"population",capability:"capability",region:"region",suite:"suite",project:"project",evo:"evo",status:"status"};
   const option=(value,label)=>{const el=document.createElement("option");el.value=value;el.textContent=label;return el;};
@@ -50,19 +53,34 @@
   for(const p of [...db.projects].sort((a,b)=>a.name.localeCompare(b.name)))$("project").append(option(p.id,p.name));
   $("updated").textContent=db.metadata.find(r=>r.key==="updated")?.value??"";
 
-  function readState(){state=Object.fromEntries(new URLSearchParams(location.hash.slice(1)));if(state.task==="deepd-annotation-human")state={view:"evaluations",suite:"deepd-evals",q:"human routing probe"};state.view??="evaluations";if(!["evaluations","projects","models","papers","data","audit"].includes(state.view))state.view="evaluations";for(const key of filterKeys)$(controls[key]).value=state[key]??"";limit=40;render();}
+  function readState(){state=Object.fromEntries(new URLSearchParams(location.hash.slice(1)));if(state.task==="deepd-annotation-human")state={view:"evaluations",mode:"tasks",suite:"deepd-evals",q:"human routing probe"};state.view??="evaluations";if(!["evaluations","projects","models","papers","data","audit"].includes(state.view))state.view="evaluations";if(!["coverage","tasks","collections"].includes(state.mode))state.mode=state.task?"tasks":"coverage";if(!["species","allSpecies","clade"].includes(state.taxonDetail))state.taxonDetail="species";for(const key of filterKeys)$(controls[key]).value=state[key]??"";render();}
   function setState(next){const params=new URLSearchParams(Object.entries(next).filter(([,v])=>v));const hash=params.toString();if(location.hash.slice(1)!==hash)history.pushState(null,"","#"+hash);readState();}
-  function fromControls(){const next={view:"evaluations",mode:state.mode};for(const key of filterKeys)next[key]=$(controls[key]).value;setState(next);}
+  function fromControls(){const next={view:"evaluations",mode:state.mode,taxonDetail:state.taxonDetail,sort:state.sort,dir:state.dir,perPage:state.perPage};for(const key of filterKeys)next[key]=$(controls[key]).value;setState(next);}
   $("filters").addEventListener("submit",e=>e.preventDefault());
   $("filters").addEventListener("change",fromControls);
-  $("search").addEventListener("input",()=>{const next={...state,q:$("search").value,task:""};history.replaceState(null,"","#"+new URLSearchParams(Object.entries(next).filter(([,v])=>v)));state=next;limit=40;renderEvaluations();});
+  $("search").addEventListener("input",()=>{const next={...state,q:$("search").value,task:"",cellRow:"",cellFeature:"",open:"",page:""};history.replaceState(null,"","#"+new URLSearchParams(Object.entries(next).filter(([,v])=>v)));state=next;renderEvaluations();});
   $("filters").addEventListener("reset",e=>{e.preventDefault();setState({view:"evaluations",mode:state.mode});});
-  $("task-mode").addEventListener("click",()=>setState({...state,mode:"tasks",task:""}));
-  $("suite-mode").addEventListener("click",()=>setState({...state,mode:"collections",task:""}));
-  $("more").addEventListener("click",()=>{limit+=40;renderEvaluations();});
+  $("coverage-mode").addEventListener("click",()=>setState({...state,mode:"coverage",page:""}));
+  $("task-mode").addEventListener("click",()=>setState({...state,mode:"tasks",page:""}));
+  $("suite-mode").addEventListener("click",()=>setState({...state,mode:"collections",page:""}));
+  $("page-size").addEventListener("change",()=>setState({...state,perPage:$("page-size").value,page:""}));
+  function changePage(page){setState({...state,page:String(Math.max(1,page))});$('table-tools').scrollIntoView({block:'start'});}
+  $("previous-page").addEventListener("click",()=>changePage(Number(state.page||1)-1));
+  $("next-page").addEventListener("click",()=>changePage(Number(state.page||1)+1));
   window.addEventListener("hashchange",readState);
-  document.addEventListener("click",e=>{const button=e.target.closest("button[data-task],button[data-suite]");if(button?.dataset.task)setState({view:"evaluations",task:button.dataset.task,mode:"tasks"});if(button?.dataset.suite)setState({view:"evaluations",suite:button.dataset.suite,mode:"tasks"});});
-  document.addEventListener("click",e=>{const button=e.target.closest("button[data-clear-filter]");if(button){const next={...state};delete next[button.dataset.clearFilter];setState(next);}});
+  document.addEventListener("click",e=>{const button=e.target.closest("button[data-task],button[data-suite]");if(button?.dataset.task)setState({view:"evaluations",task:button.dataset.task,mode:"tasks"});if(button?.dataset.suite)setState({...state,view:"evaluations",suite:button.dataset.suite,mode:"tasks",task:"",page:"",open:""});});
+  document.addEventListener("click",e=>{const button=e.target.closest("button[data-clear-filter]");if(button){const next={...state,page:"",cellRow:"",cellFeature:"",open:""};delete next[button.dataset.clearFilter];setState(next);}});
+  $("results").addEventListener("click",e=>{
+    const sort=e.target.closest('[data-sort]');if(sort){setState({...state,sort:sort.dataset.sort,dir:(state.sort||'name')===sort.dataset.sort&&state.dir!=="desc"?"desc":"asc",page:""});return;}
+    const pager=e.target.closest('[data-page-change]');if(pager){changePage(Number(state.page||1)+Number(pager.dataset.pageChange));return;}
+    const button=e.target.closest('[data-expand-task],[data-expand-suite]');if(!button)return;
+    const id=button.dataset.expandTask||button.dataset.expandSuite;
+    state={...state,open:state.open===id?'':id};
+    history.replaceState(null,'','#'+new URLSearchParams(Object.entries(state).filter(([,v])=>v)));
+    if(state.mode==='collections')renderCollectionTable();else renderTaskTable();
+    const restored=document.querySelector(`[${button.dataset.expandTask?'data-expand-task':'data-expand-suite'}="${CSS.escape(id)}"]`);
+    restored?.focus({preventScroll:true});
+  });
 
   function match(t){
     if(state.task&&t.id!==state.task)return false;
@@ -77,49 +95,72 @@
   }
   function render(){
     for(const a of document.querySelectorAll("nav a")){if(a.dataset.view===state.view)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");}
-    const titles={evaluations:"Evaluation catalogue",projects:"Benchmark projects",models:"Models",papers:"Papers and reports",data:"Data",audit:"Audit notes and evidence"};
-    const descriptions={evaluations:"Tasks are organized by application, organism, model capability and functional region. A task is a dataset × prediction target; assay conditions and protocols are linked variants.",projects:"Dedicated, reusable benchmarking efforts with documented independent adoption. Papers, benchmark releases and tasks remain separate records.",models:"Primary model scope and additional models included as evaluation sources. Model usage is attributed to the paper or release that documents it.",papers:"Primary papers, reports and benchmark sources. Versions, full-text inspection and released artifacts are separate records.",data:"The pretraining-data catalogue is work in progress. No entries have been defined.",audit:"Evidence levels, unresolved differences and the scope of the current audit. An inspected field does not establish that an entire task has been verified."};
+    const titles={evaluations:"Evaluations",projects:"Benchmark projects",models:"Models",papers:"Papers and reports",data:"Data",audit:"Audit notes and evidence"};
+    const descriptions={evaluations:"Explore task associations by organism and genomic feature, or browse tasks and collections. Filters apply across all three views.",projects:"Dedicated, reusable benchmarking efforts with documented independent adoption. Papers, benchmark releases and tasks remain separate records.",models:"Primary model scope and additional models included as evaluation sources. Model usage is attributed to the paper or release that documents it.",papers:"Primary papers, reports and benchmark sources. Versions, full-text inspection and released artifacts are separate records.",data:"The pretraining-data catalogue is work in progress. No entries have been defined.",audit:"Evidence levels, unresolved differences and the scope of the current audit. An inspected field does not establish that an entire task has been verified."};
     $("page-title").textContent=titles[state.view];$("page-description").textContent=descriptions[state.view];
     const pending=taskList.filter(t=>["registered","panel-pending"].includes(t.status)).length;
     $("coverage").textContent=`${db.models.filter(m=>m.scope==="primary").length} primary models · ${db.projects.length} benchmark projects · ${db.papers.length} paper/report sources · ${db.evaluations.length} collections · ${taskList.length} task/panel records (${pending} pending task audit or decomposition) · ${db.evidence.length} evidence records. Updated ${$("updated").textContent}.`;
     $("eval-view").hidden=state.view!=="evaluations";$("other-view").hidden=state.view==="evaluations";
-    if(state.view==="evaluations")renderEvaluations();else renderOther();
+    if(state.view==="evaluations")renderEvaluations();else{coverageMatrix.close();renderOther();}
   }
   function renderEvaluations(){
-    const active=[...filterKeys,"task"].filter(k=>state[k]);
-    $("active-filters").innerHTML=active.length?'Active filters (combined): '+active.map(k=>{const control=controls[k]&&$(controls[k]);const value=k==="task"?tasks[state[k]]?.name??state[k]:control?.tagName==="SELECT"?control.selectedOptions[0]?.textContent??state[k]:state[k];return `<button type="button" class="secondary" data-clear-filter="${esc(k)}" aria-label="Remove ${esc(k)} filter">${esc(k)}: ${esc(value)} ×</button>`;}).join(" "):'No active filters. Numbers in category menus count all catalogue records, before other filters.';
+    const active=[...filterKeys,"task","cellRow"].filter(k=>state[k]);
+    const cellLabel=()=>{const r=db.coverage.presentation.views[state.taxonDetail||'species'].rows.find(r=>r.id===state.cellRow),f=db.coverage.features.find(f=>f.id===state.cellFeature);return (r?.displayLabel||state.cellRow)+(f?' × '+f.label:' — all features');};
+    $("active-filters").innerHTML=active.length?'Active filters (combined): '+active.map(k=>{const control=controls[k]&&$(controls[k]);const value=k==='cellRow'?cellLabel():k==="task"?tasks[state[k]]?.name??state[k]:control?.tagName==="SELECT"?control.selectedOptions[0]?.textContent??state[k]:state[k];return `<button type="button" class="secondary" data-clear-filter="${esc(k)}" aria-label="Remove ${esc(k==='cellRow'?'selected cell':k)} filter">${esc(k==='cellRow'?'Selected cell':k)}: ${esc(value)} ×</button>`;}).join(" "):'No active filters. Numbers in category menus count all catalogue records, before other filters.';
     const capability=categories[state.capability];$("capability-definition").hidden=!capability;
     $("capability-definition").textContent=capability?capability.name+': '+capability.definition+' '+capability.accommodation:'';
-    matching=taskList.filter(match);
-    const collectionMode=state.mode==="collections";
-    $("task-mode").setAttribute("aria-pressed",String(!collectionMode));$("suite-mode").setAttribute("aria-pressed",String(collectionMode));
-    if(collectionMode){
-      const matchedIds=new Set(matching.map(t=>t.id));
-      // With no task filters, also show registered sources with no decomposed tasks.
-      const filtered=filterKeys.some(k=>state[k])||state.task;
-      const visible=db.evaluations.filter(s=>((!filtered&&!state.suite)||state.suite===s.id||db.evaluation_tasks.some(r=>r.evaluation_id===s.id&&matchedIds.has(r.task_id))||(state.project&&!state.suite&&!filterKeys.some(k=>k!=="project"&&state[k])&&taskProjectIds([s.id]).includes(state.project)))&&(!state.project||taskProjectIds([s.id]).includes(state.project))).sort((a,b)=>a.name.localeCompare(b.name));
-      $("results").innerHTML=visible.map(s=>renderSuite(s,matching)).join("")||'<p class="empty">No matching collections.</p>';
-      $("result-count").textContent=`${visible.length} collections · ${matching.length} matching task/panel records`;
-      $("more").hidden=true;
-    }else{
-      const projectPending=state.project&&projects[state.project]&&!taskList.some(t=>t._projects.includes(state.project));
-      const empty=projectPending?`<p class="empty">This project’s collections are registered; individual task decomposition is pending. <a href="#view=evaluations&amp;mode=collections&amp;project=${encodeURIComponent(state.project)}">View collections</a>.</p>`:'<p class="empty">No matching tasks. Missing metadata can exclude a task from a filtered view.</p>';
-      $("results").innerHTML=matching.slice(0,limit).map(renderTaskSummary).join("")||empty;
-      $("result-count").textContent=`${matching.length} matching records · ${matching.filter(t=>t._original).length} with original Evo 2 usage`;
-      $("more").hidden=matching.length<=limit;
-      $("results").querySelectorAll("details.task").forEach(el=>el.addEventListener("toggle",()=>{if(el.open&&!el.dataset.loaded){el.querySelector(".detail-body").innerHTML=renderTaskDetail(tasks[el.dataset.id]);el.dataset.loaded="true";}}));
-      if(state.task){const el=$("results").querySelector("details.task");if(el){el.open=true;el.querySelector(".detail-body").innerHTML=renderTaskDetail(tasks[el.dataset.id]);el.dataset.loaded="true";}}
-    }
+    const base=taskList.filter(match);
+    const coverage=coverageMatrix.render(state,base,!filterKeys.some(k=>state[k])&&!state.task);
+    matching=coverage.tasks;
+    const coverageMode=state.mode==='coverage';
+    $("coverage-view").hidden=!coverageMode;
+    for(const mode of ['coverage','tasks','collections'])$(mode==='collections'?'suite-mode':mode==='tasks'?'task-mode':'coverage-mode').setAttribute('aria-pressed',String(state.mode===mode));
+    if(!coverageMode)coverageMatrix.close();
+    $("result-count").textContent=`${matching.length} matching records · ${matching.filter(t=>t._original).length} with original Evo 2 usage`+(coverageMode?` · ${coverage.rows} rows · ${coverage.associations.toLocaleString()} markers`:'');
+    if(state.mode==='collections')renderCollectionTable();else renderTaskTable();
   }
-  function renderTaskSummary(t){
-    const pending=["registered","panel-pending"].includes(t.status);
-    const names=(taskPops[t.id]??[]).map(p=>populations[p.population_id].name);
-    return `<details class="task" data-id="${esc(t.id)}"><summary><div class="row-top"><span class="task-name">${esc(t.name)}</span><span class="row-meta">${esc(t.task_type)} · ${esc(statusNames[t.status]??t.status)}</span></div><p class="row-description">${esc(t.dataset_name)} · ${esc(t.target)}</p><div class="tags">${tags(t._suites.map(k=>suites[k].name))}${tags(names)}${t._original?tags(["Evo 2: original paper"],"evo"):""}${t._external?tags(["Evo 2: external evaluation"],"evo"):""}${pending?tags([t.status==="panel-pending"?"Source details missing":"Task audit pending"],"pending"):""}</div></summary><div class="detail-body"></div></details>`;
+  function pageSlice(items){
+    const size=[25,50,100,250].includes(Number(state.perPage))?Number(state.perPage):100;
+    const opened=items.findIndex(t=>t.id===(state.open||state.task));
+    const requested=state.page?Number(state.page):opened>=0?Math.floor(opened/size)+1:1;
+    const pages=Math.max(1,Math.ceil(items.length/size)),page=Math.min(pages,Math.max(1,requested||1));
+    state.page=String(page);$('page-size').value=String(size);
+    $('previous-page').disabled=page===1;$('next-page').disabled=page===pages;
+    $('page-number').textContent=`${page} / ${pages}`;
+    $('table-count').textContent=items.length?`${(page-1)*size+1}–${Math.min(page*size,items.length)} of ${items.length} ${state.mode==='collections'?'collections':'tasks'}`:'No matching records';
+    return items.slice((page-1)*size,page*size);
+  }
+  const brief=(values,max=2)=>{const unique=[...new Set(values)];return unique.length?`<span title="${esc(unique.join('; '))}">${esc(unique.slice(0,max).join('; '))}${unique.length>max?' +'+(unique.length-max):''}</span>`:'';};
+  const originNames=t=>[...new Set(coverageByTask[t.id].mappings.filter(m=>m.population&&m.population!=='synthetic').map(m=>populations[m.population].name))];
+  const evoLabel=t=>t._original&&t._external?'Original; external':t._original?'Original paper':t._external?'External':'Not established';
+  function sorted(items,value){const key=state.sort||'name',direction=state.dir==='desc'?-1:1;return [...items].sort((a,b)=>direction*String(value(a,key)).localeCompare(String(value(b,key)),undefined,{numeric:true})||a.id.localeCompare(b.id));}
+  function column(label,key){return `<th scope="col" aria-sort="${(state.sort||'name')===key?(state.dir==='desc'?'descending':'ascending'):'none'}"><button type="button" class="sort-button" data-sort="${key}">${esc(label)}${(state.sort||'name')===key?(state.dir==='desc'?' (desc)':' (asc)'):''}</button></th>`;}
+  function renderTaskTable(){
+    const value=(t,key)=>key==='suite'?t._suites.map(k=>suites[k].name).sort().join('; '):key==='organism'?originNames(t).join('; '):key==='type'?t.task_type:key==='evo'?evoLabel(t):key==='status'?statusNames[t.status]:t.name;
+    const visible=pageSlice(sorted(matching,value));
+    const open=state.open||state.task;
+    const shortStatus={'artifact-audited':'Artifacts','paper-audited':'Paper / protocol','panel-pending':'Composite panel','registered':'Registered'};
+    const body=visible.map(t=>{
+      const expanded=open===t.id;
+      return `<tr class="compact-task-row" data-id="${esc(t.id)}"><td><button type="button" class="task-toggle" data-expand-task="${esc(t.id)}" aria-expanded="${expanded}" aria-controls="detail-${esc(t.id)}" title="${esc(t.dataset_name)}">${esc(t.name)}</button></td><td>${brief(t._suites.map(k=>suites[k].name))}</td><td>${brief(originNames(t))||'Unresolved'}${coverageByTask[t.id].protein?'<small>Protein-only reference</small>':''}</td><td>${esc(t.task_type)}</td><td class="provenance">${esc(evoLabel(t))}</td><td class="evidence-status" title="${esc(statusNames[t.status])}">${esc(shortStatus[t.status])}</td></tr><tr id="detail-${esc(t.id)}" class="task-detail-row" ${expanded?'':'hidden'}><td colspan="6" class="task-detail-cell"><div class="detail-body">${expanded?renderTaskDetail(t):''}</div></td></tr>`;
+    }).join('');
+    $('results').innerHTML=visible.length?'<div class="table-wrap"><table class="compact-table tasks-table"><thead><tr>'+column('Task','name')+column('Collection','suite')+column('Organisms / targets','organism')+column('Task type','type')+column('Evo 2 use','evo')+column('Evidence','status')+'</tr></thead><tbody>'+body+'</tbody></table></div>'+bottomPager():'<p class="empty">No matching tasks. Missing metadata can exclude a task. Collections without decomposed tasks remain available in Collections.</p>';
+  }
+  function bottomPager(){return `<div class="result-pager"><button type="button" class="secondary" data-page-change="-1" ${$('previous-page').disabled?'disabled':''}>Previous</button><span>${esc($('page-number').textContent)}</span><button type="button" class="secondary" data-page-change="1" ${$('next-page').disabled?'disabled':''}>Next</button></div>`;}
+  function renderCollectionTable(){
+    const matchedIds=new Set(matching.map(t=>t.id)),filtered=filterKeys.some(k=>state[k])||state.task||state.cellRow;
+    const items=db.evaluations.filter(s=>((!filtered&&!state.suite)||state.suite===s.id||db.evaluation_tasks.some(r=>r.evaluation_id===s.id&&matchedIds.has(r.task_id))||(state.project&&!state.suite&&!filterKeys.some(k=>k!=='project'&&state[k])&&taskProjectIds([s.id]).includes(state.project)))&&(!state.project||taskProjectIds([s.id]).includes(state.project)));
+    const taskIds=s=>db.evaluation_tasks.filter(r=>r.evaluation_id===s.id).map(r=>r.task_id),count=s=>taskIds(s).filter(id=>matchedIds.has(id)).length;
+    const value=(s,key)=>key==='count'?String(count(s)):key==='evo'?String(taskIds(s).filter(id=>tasks[id]._original).length):key==='status'?s.status:s.name;
+    const visible=pageSlice(sorted(items,value));
+    $('result-count').textContent=`${items.length} collections · ${matching.length} matching task/panel records`;
+    $('results').innerHTML=visible.length?'<div class="table-wrap"><table class="compact-table collections-table"><thead><tr>'+column('Collection','name')+column('Matching / catalogued tasks','count')+column('Original Evo 2 tasks','evo')+column('Evidence','status')+'</tr></thead><tbody>'+visible.map(s=>`<tr><td><button type="button" class="collection-toggle" data-expand-suite="${esc(s.id)}" aria-expanded="${state.open===s.id}" aria-controls="collection-detail-${esc(s.id)}">${esc(s.name)}</button></td><td>${count(s)} / ${taskIds(s).length}</td><td>${taskIds(s).filter(id=>tasks[id]._original).length}</td><td>${esc(s.status)}</td></tr><tr id="collection-detail-${esc(s.id)}" ${state.open===s.id?'':'hidden'}><td colspan="4" class="task-detail-cell">${state.open===s.id?renderSuite(s,matching):''}</td></tr>`).join('')+'</tbody></table></div>':'<p class="empty">No matching collections.</p>';
   }
   function fact(label,value,citation=""){return `<dt>${esc(label)}</dt><dd>${esc(value||"Not established in inspected sources")}${citation}</dd>`;}
   function renderTaskDetail(t){
     const ps=protocols[t.id]??[],vs=variants[t.id]??[],ns=counts[t.id]??[],us=uses[t.id]??[];
     let html=`<p>${esc(t.description)}${cite(t.evidence_id)}</p><dl class="facts">${fact("Dataset",t.dataset_name,fieldEvidence(t.id,"dataset_name",t.evidence_id))}${fact("Target",t.target,fieldEvidence(t.id,"target",t.evidence_id))}${fact("Input",t.input_description,fieldEvidence(t.id,"input_description",t.evidence_id))}${fact("Output",t.output_description)}${fact("Label basis",t.label_basis,fieldEvidence(t.id,"label_basis",t.evidence_id))}</dl>`;
+    html+='<p>Collections: '+(memberships[t.id]||[]).map(m=>`<a href="#view=evaluations&amp;mode=collections&amp;suite=${encodeURIComponent(m.evaluation_id)}">${esc(suites[m.evaluation_id].name)}</a>${cite(m.evidence_id)}`).join('; ')+'</p>';
     if(t._projects.length)html+='<p>Benchmark project: '+t._projects.map(id=>`<a href="#view=projects&amp;project=${encodeURIComponent(id)}">${esc(projects[id].name)}</a>`).join('; ')+'</p>';
     if(t.limitations)html+=`<p class="note">${esc(t.limitations)}${cite(t.evidence_id)}</p>`;
     html+='<h4>Classification</h4><dl class="facts">';
@@ -131,7 +172,9 @@
     html+='<h4>Documented model usage</h4>'+(us.length?'<div class="table-wrap"><table><thead><tr><th>Model</th><th>Attribution</th><th>Source / protocol</th></tr></thead><tbody>'+us.map(u=>`<tr><td>${esc(models[u.model_id].name)}</td><td>${esc(u.provenance.replaceAll("-"," "))}</td><td>${esc(papers[u.paper_id]?.title)}${cite(u.evidence_id)}${u.protocol_id?'<br>'+esc(ps.find(p=>p.id===u.protocol_id)?.name??u.protocol_id):""}${u.note?'<br><span class="muted">'+esc(u.note)+'</span>':""}</td></tr>`).join("")+'</tbody></table></div>':'<p class="muted">No model–task association has yet been established. This does not assert that the task was unused.</p>');
     if(!t._original)html+='<p class="muted">Original Evo 2 use is not documented for this record in the current audit. This is not a verified absence claim.</p>';
     const fs=db.findings.filter(f=>f.task_id===t.id);if(fs.length)html+='<h4>Audit findings</h4>'+fs.map(f=>`<p class="finding note">${esc(f.description)}${cite(f.evidence_id)}</p>`).join("");
-    const ids=new Set([t.evidence_id,...ps.map(p=>p.source_evidence_id),...ns.map(n=>n.evidence_id),...vs.map(v=>v.evidence_id),...us.map(u=>u.evidence_id),...fs.map(f=>f.evidence_id),...(fields[t.id]??[]).map(f=>f.evidence_id)]);
+    const mapping=coverageByTask[t.id].mappings;
+    html+='<details class="coverage-mapping-evidence"><summary>Coverage placement and evidence</summary><p>Assignments identify sequence origin or protein-target provenance; assay/sample host alone does not establish either. Taxon and genomic-feature co-annotation does not establish a released joint subset.</p><ul>'+mapping.map(m=>`<li><strong>${esc(m.name)}</strong> · ${esc(m.basis)}. ${esc(m.note||'')}${cite(m.evidence)}${citations(m.supporting)}</li>`).join('')+'</ul></details>';
+    const ids=new Set([t.evidence_id,...ps.map(p=>p.source_evidence_id),...ns.map(n=>n.evidence_id),...vs.map(v=>v.evidence_id),...us.map(u=>u.evidence_id),...fs.map(f=>f.evidence_id),...(fields[t.id]??[]).map(f=>f.evidence_id),...mapping.flatMap(m=>[m.evidence,...m.supporting])]);
     html+=renderReferences([...ids]);
     html+=`<p class="muted">Record: <code>${esc(t.id)}</code> · <a href="#view=evaluations&amp;task=${encodeURIComponent(t.id)}">Permanent task link</a></p>`;
     return html;
@@ -185,8 +228,8 @@
   }
   $("export").addEventListener("click",()=>{
     const quote=s=>'"'+String(s??"").replaceAll('"','""')+'"';
-    const rows=[["id","task","dataset","target","type","audit_status","collections","projects","applications","organisms","capabilities","regions","evo2_original","evo2_external","source"]];
-    for(const t of matching)rows.push([t.id,t.name,t.dataset_name,t.target,t.task_type,t.status,t._suites.map(k=>suites[k].name).join("; "),t._projects.map(k=>projects[k].name).join("; "),categoryNames(t,"application").join("; "),(taskPops[t.id]??[]).map(p=>populations[p.population_id].name).join("; "),categoryNames(t,"capability").join("; "),categoryNames(t,"region").join("; "),t._original?"documented":"not established",t._external?"documented":"not established",evidence[t.evidence_id].url]);
+    const rows=[["id","task","dataset","target","type","audit_status","collections","projects","applications","organisms","assay_or_sample_hosts","capabilities","regions","evo2_original","evo2_external","source"]];
+    for(const t of matching)rows.push([t.id,t.name,t.dataset_name,t.target,t.task_type,t.status,t._suites.map(k=>suites[k].name).join("; "),t._projects.map(k=>projects[k].name).join("; "),categoryNames(t,"application").join("; "),originNames(t).join('; '),(taskPops[t.id]??[]).filter(p=>['assay-host','sample-host'].includes(p.relation)).map(p=>populations[p.population_id].name+' ('+p.relation+')').join('; '),categoryNames(t,"capability").join("; "),categoryNames(t,"region").join("; "),t._original?"documented":"not established",t._external?"documented":"not established",evidence[t.evidence_id].url]);
     const url=URL.createObjectURL(new Blob([rows.map(r=>r.map(quote).join(",")).join("\r\n")],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="marin-glm-tasks.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
   readState();

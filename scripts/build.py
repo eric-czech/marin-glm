@@ -2,12 +2,14 @@
 from pathlib import Path
 import json
 import sqlite3
+from coverage_data import export_coverage
 
 ROOT=Path(__file__).resolve().parents[1]
 INSERT_ORDER=['metadata','sources','papers','evidence','models','model_properties','populations','categories','metrics',
               'evaluations','tasks','variants','evaluation_tasks','task_populations','task_categories',
               'protocols','protocol_metrics','counts','model_evaluations','findings',
-              'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence']
+              'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
+              'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings']
 
 def build():
     data=json.loads((ROOT/'data/catalogue.json').read_text())
@@ -22,6 +24,13 @@ def build():
                 columns=list(row)
                 db.execute(f'INSERT INTO {table} ({",".join(columns)}) VALUES ({",".join("?" for _ in columns)})',[row[k] for k in columns])
     assert not db.execute('PRAGMA foreign_key_check').fetchall()
+    for table in ('populations','coverage_nodes'):
+        parents=dict(db.execute('SELECT id,parent_id FROM '+table))
+        for key in parents:
+            seen=set();current=key
+            while current:
+                if current in seen:raise ValueError(f'{table} ancestry cycle: {key}')
+                seen.add(current);current=parents[current]
     # Project status requires dedicated purpose and two independent user groups.
     bad=db.execute("""SELECT p.id FROM project_summary p JOIN project_reviews r ON r.id=p.review_id
       WHERE r.decision!='qualified' OR r.dedicated!=1 OR p.independent_groups<2""").fetchall()
@@ -41,12 +50,18 @@ def build():
     payload={table:[dict(r) for r in db.execute('SELECT * FROM '+table)] for table in INSERT_ORDER}
     payload['evaluation_summary']=[dict(r) for r in db.execute('SELECT * FROM evaluation_summary')]
     payload['project_summary']=[dict(r) for r in db.execute('SELECT * FROM project_summary')]
+    payload['coverage']=export_coverage(payload)
+    # Layout and mapping tables are normalized in SQLite/catalogue.json. The
+    # page receives only their compiled form, without embedding both copies.
+    for table in INSERT_ORDER:
+        if table.startswith('coverage_'):payload.pop(table)
     db.execute('VACUUM')
     db.close()
     temporary.replace(ROOT/'data/catalogue.sqlite')
     compact=json.dumps(payload,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
     template=(ROOT/'site/template.html').read_text()
-    html=template.replace('/*__STYLE__*/',(ROOT/'site/style.css').read_text()).replace('/*__SCRIPT__*/',(ROOT/'site/app.js').read_text()).replace('__CATALOGUE_JSON__',compact)
+    script=(ROOT/'site/coverage.js').read_text()+'\n'+(ROOT/'site/app.js').read_text()
+    html=template.replace('/*__STYLE__*/',(ROOT/'site/style.css').read_text()).replace('/*__SCRIPT__*/',script).replace('__CATALOGUE_JSON__',compact)
     (ROOT/'index.html').write_text(html)
     (ROOT/'data/site-data.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
     print(f'Built {len(payload["tasks"])} task records, {len(payload["evaluations"])} collections, {len(payload["evidence"])} evidence records.')

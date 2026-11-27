@@ -23,7 +23,7 @@
 <main id="content">
   <noscript>This page’s filters require JavaScript. The complete catalogue is available as <a href="data/catalogue.json">JSON</a> or <a href="data/catalogue.sqlite">SQLite</a>.</noscript>
   <section class="intro">
-    <h1 id="page-title">Evaluation catalogue</h1>
+    <h1 id="page-title">Evaluations</h1>
     <p id="page-description">Tasks are organized by application, organism, model capability and functional region. A task is a dataset × prediction target; assay conditions and protocols are linked variants.</p>
     <p class="muted" id="coverage"></p>
   </section>
@@ -40,12 +40,13 @@
       <label>Audit status<select id="status" name="status"><option value="">All statuses</option><option value="artifact-audited">Selected artifacts audited</option><option value="paper-audited">Paper / protocol audit</option><option value="registered">Registered; task audit pending</option><option value="panel-pending">Composite panel; source information missing</option></select></label>
       <div class="filter-actions"><button type="reset" class="secondary">Reset filters</button><button type="button" id="export">Export matching tasks (CSV)</button></div>
     </form>
-    <p class="filter-note" id="classification-note">Organism filters include descendant taxa. Assignments distinguish sequence origin from assay host where established. Application mappings are editorial, not validation claims. Missing annotations do not imply biological absence.</p>
+    <details class="filter-explanation"><summary>Assignments and evidence</summary><p class="filter-note" id="classification-note">Organism filters include descendant taxa and established protein-target provenance, excluding assay/sample hosts alone. Application mappings are editorial, not validation claims. Markers show task-level taxon and feature associations; they do not establish a released species × feature subset. Missing annotations do not imply biological absence.</p></details>
     <p class="filter-note" id="active-filters" aria-live="polite"></p>
     <p class="filter-note" id="capability-definition" hidden></p>
-    <div class="toolbar"><div class="switch" aria-label="Display"><button id="task-mode" type="button" aria-pressed="true">Tasks</button><button id="suite-mode" type="button" aria-pressed="false">Collections</button></div><p role="status" aria-live="polite" id="result-count"></p></div>
+    <div class="toolbar"><div class="switch" aria-label="Evaluation display"><button id="coverage-mode" type="button" aria-pressed="true">Coverage</button><button id="task-mode" type="button" aria-pressed="false">Tasks</button><button id="suite-mode" type="button" aria-pressed="false">Collections</button></div><p role="status" aria-live="polite" id="result-count"></p></div>
+    <section id="coverage-view" aria-label="Evaluation coverage"></section>
+    <div id="table-tools" class="table-tools"><p id="table-count" role="status" aria-live="polite"></p><div class="table-pages"><label>Rows<select id="page-size"><option>25</option><option>50</option><option selected>100</option><option>250</option></select></label><button type="button" id="previous-page" class="secondary">Previous</button><span id="page-number"></span><button type="button" id="next-page" class="secondary">Next</button></div></div>
     <div id="results"></div>
-    <button type="button" id="more" hidden>Show more</button>
   </section>
   <section id="other-view" hidden></section>
 </main>
