@@ -2,7 +2,7 @@
 
 A technical catalogue of genomic language models, papers, benchmark projects, evaluation collections, tasks and protocols. The public site is [eric-czech.github.io/marin-glm](https://eric-czech.github.io/marin-glm/). The single-page [index.html](index.html) also works directly from disk.
 
-Primary model scope: Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2, Genos-m and PlantCAD2. LOAM and other models are retained as additional evaluation sources. Carbon-X has official release documentation; AIDO.DNA2 has an official technical web report. GeneCAD is recorded as a PlantCAD2-family annotation adaptation, not a separate primary foundation model.
+Primary model scope: Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2, Genos-m, PlantCAD2, SpliceAI and SpliceAI2. The latter two are supervised splicing specialists, included for annotation and variant-prediction comparisons. LOAM and other models are retained as additional evaluation sources. Carbon-X has official release documentation; AIDO.DNA2 has an official technical web report. GeneCAD is recorded as a PlantCAD2-family annotation adaptation, not a separate primary foundation model.
 
 The catalogue is a research draft. Registered sources, composite panels awaiting decomposition, paper/protocol audits and selected artifact audits are explicitly distinguished. The number of database records is **not** the number of independently validated biological tasks. The site does not assign ID/OD categories or rank models.
 
@@ -31,7 +31,7 @@ Open `http://localhost:8000`, or open `index.html` directly. Evaluations opens i
 
 Coverage plots individual task/panel associations by biological division/species and genomic feature. Four colors distinguish prediction, generation, retrieval/comparison and analysis/diagnostic tasks; six source shapes preserve original Evo 2 attribution separately from later collection membership. Protein-only references use hollow symbols; unresolved panels use faint symbols. Color is a presentation-level aggregation of the cited task type/capabilities, not an additional claim about model architecture.
 
-All 513 task/panel records are retained. Selected organisms has 48 populated rows and 879 markers; every named species has 87 rows and 1,102 markers; clades only has 32 rows and 820 markers. A marker is a task-level co-annotation, not proof of a released species × feature subset or an independent biological cohort. Row counts are unique records and cannot be added. Known-origin synthetic constructs stay with their taxa; construction remains an attribute. Broad labels are never projected to all descendants. Assay/sample hosts alone do not qualify a task for an organism filter.
+All 545 task/panel records are retained. Coverage defaults to 14 grouped feature columns, with separate coding-sequence and joint structure targets; individual features remain available. Selected organisms has 48 populated rows and 787 grouped markers (1,005 individual-feature markers); every named species has 87 rows and 919 grouped markers (1,322 individual); clades only has 32 rows and 739 grouped markers (934 individual). A marker is a task-level co-annotation, not proof of a released species × feature subset or an independent biological cohort. Row counts are unique records and cannot be added. Known-origin synthetic constructs stay with their taxa; construction remains an attribute. Broad labels are never projected to all descendants. Assay/sample hosts alone do not qualify a task for an organism filter.
 
 Cell selection narrows the shared task table and remains visible as a removable filter in all three views. Organism/feature filters restrict plotted associations as well as canonical task IDs, avoiding unrelated species markers from a multi-species task. Tables provide sorting, pagination and expandable protocol/count/evidence details; collections without decomposed tasks remain available in Collections. Secondary sections remain Projects, Models, Papers, Data and Audit notes.
 
@@ -43,15 +43,23 @@ An optional browser check, `tests/browser.py`, requires Playwright and Chromium.
 
 The generated page and database are committed so GitHub Pages can serve the repository root without a client-side database dependency or a build service. The repository includes CI validation; hosting configuration is separate.
 
+## Outputs and genomic features
+
+Every task/panel has a cited `task_outputs` review separating its prediction form from the unit actually scored. Isolated labels, sampled position labels, dense labels, signal profiles, detected intervals, jointly evaluated structures and diagnostic endpoints are separate. The shared Scored output filter, compact table, detailed task record and CSV expose this distinction. Partial and unresolved reviews remain visible.
+
+`task_feature_scopes` distinguishes CDS-specific targets from mixed region classifiers, broad input context, derived-proteome readouts and protein-only references. Coding-sequence evaluations retain a separate default column. Joint coding/gene and splice-pattern reconstruction have structure columns; individual genomic feature assignments are preserved. UTRs and translation boundaries remain distinct.
+
+[The source audit](docs/output-audit.md) documents the SpliceAI papers and protocols, original BEND decomposition, classification corrections and evidence limits. The original BEND gene-finding MCC measures dense base labels, while GeneCAD/NTv3 and the SpliceAI2 dominant-transcript benchmark provide distinct structure-level endpoints.
+
 ## Record unit and evidence
 
 A task is **dataset × prediction target**. Species, accessions, cell types, assay tracks, conditions, dataset revisions and scoring procedures are linked variants or protocols. Where a paper reports an unresolved panel, it remains explicitly marked as a panel rather than silently treated as one decomposed task. Some suites reuse datasets; collection membership is many-to-many and must not be summed as independent evidence.
 
-Application categories describe research functions such as plant breeding, variant interpretation, RNA engineering and regulatory-sequence engineering. These are editorial mappings from the measured target, not assertions of industrial validation. Capabilities describe what the model/interface must support. Functional-region and organism assignments cite the corresponding task evidence. An assay host and sequence origin can differ.
+Application categories describe research functions such as plant breeding, variant interpretation, RNA engineering and regulatory-sequence engineering. These are editorial mappings from the measured target, not assertions of industrial validation. Capabilities describe what the model/interface must support. Genomic-feature and organism assignments cite the corresponding task evidence. An assay host and sequence origin can differ.
 
 Evidence is attached to task definitions, individual fields, classifications, variants, protocols, counts and model usage. Source locators include paper sections/PDF pages, pinned repository lines and pinned dataset files. Unknown values remain unknown. A source registration alone does not constitute a full-text or data audit.
 
-`model_properties` holds cited corpus, architecture, tokenization, training and context details, initially for AIDO.DNA2, Genos-m and PlantCAD2. Corpus size, consumed training tokens, pretraining context, inference input size and task-specific pooling are separate properties. These model-level descriptions do not define the future pretraining-data catalogue. AIDO.DNA2 tokenization remains unresolved. Genos-m's reported vocabulary of 128 differs from the released config (256) and tokenizer (17 listed entries); the distinction is explicit.
+`model_properties` holds cited corpus, architecture, tokenization, training and context details, initially for AIDO.DNA2, Genos-m, PlantCAD2, SpliceAI and SpliceAI2. The latter two are supervised splicing specialists, included for annotation and variant-prediction comparisons. Corpus size, consumed training tokens, pretraining context, inference input size and task-specific pooling are separate properties. These model-level descriptions do not define the future pretraining-data catalogue. AIDO.DNA2 tokenization remains unresolved. Genos-m's reported vocabulary of 128 differs from the released config (256) and tokenizer (17 listed entries); the distinction is explicit.
 
 The current status labels are:
 

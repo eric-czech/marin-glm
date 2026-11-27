@@ -6,7 +6,7 @@ from coverage_data import export_coverage
 
 ROOT=Path(__file__).resolve().parents[1]
 INSERT_ORDER=['metadata','sources','papers','evidence','models','model_properties','populations','categories','metrics',
-              'evaluations','tasks','variants','evaluation_tasks','task_populations','task_categories',
+              'evaluations','tasks','task_outputs','task_feature_scopes','variants','evaluation_tasks','task_populations','task_categories',
               'protocols','protocol_metrics','counts','model_evaluations','findings',
               'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
               'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings']
@@ -24,6 +24,22 @@ def build():
                 columns=list(row)
                 db.execute(f'INSERT INTO {table} ({",".join(columns)}) VALUES ({",".join("?" for _ in columns)})',[row[k] for k in columns])
     assert not db.execute('PRAGMA foreign_key_check').fetchall()
+    bad=db.execute('''SELECT t.id FROM tasks t LEFT JOIN task_outputs o ON o.task_id=t.id
+      WHERE o.id IS NULL''').fetchall()
+    if bad:raise ValueError(f'Task output review missing: {bad}')
+    bad=db.execute('''SELECT o.id FROM task_outputs o JOIN categories c ON c.id=o.category_id
+      WHERE c.dimension!='output' ''').fetchall()
+    if bad:raise ValueError(f'Wrong output category dimension: {bad}')
+    bad=db.execute('''SELECT o.task_id FROM task_outputs o LEFT JOIN task_categories tc
+      ON tc.task_id=o.task_id AND tc.category_id=o.category_id
+      WHERE tc.task_id IS NULL
+      UNION SELECT tc.task_id FROM task_categories tc JOIN categories c ON c.id=tc.category_id
+      JOIN task_outputs o ON o.task_id=tc.task_id WHERE c.dimension='output' AND tc.category_id!=o.category_id''').fetchall()
+    if bad:raise ValueError(f'Inconsistent output classification: {bad}')
+    bad=db.execute('''SELECT tc.task_id FROM task_categories tc LEFT JOIN task_feature_scopes s
+      ON s.task_id=tc.task_id AND s.feature_id='cds'
+      WHERE tc.category_id='cds' AND s.id IS NULL''').fetchall()
+    if bad:raise ValueError(f'CDS scope review missing: {bad}')
     for table in ('populations','coverage_nodes'):
         parents=dict(db.execute('SELECT id,parent_id FROM '+table))
         for key in parents:

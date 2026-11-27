@@ -1,0 +1,164 @@
+[
+  {
+    "task": "gene_finding",
+    "file": "gene_finding.bed",
+    "sha256": "7829d9c65d14f82c77633e133604ddbe803d476a5f6d236ac57afe8a6f689eba",
+    "bytes": 375636,
+    "rows": 5977,
+    "split_counts": {
+      "train": 4783,
+      "test": 597,
+      "valid": 597
+    },
+    "unique_ids": 5974,
+    "duplicate_ids": {
+      "ENST00000381401.11": 2,
+      "ENST00000313871.9": 2,
+      "ENST00000381180.9": 2
+    },
+    "url": "https://sid.erda.dk/share_redirect/aNQa0Oz2lY/data/gene_finding/gene_finding.bed",
+    "coordinate_span_min": 1433,
+    "coordinate_span_max": 13000,
+    "row_id_overlap_between_splits": {
+      "test / train": 0,
+      "test / valid": 0,
+      "train / valid": 0
+    },
+    "flank_metadata_totals": {
+      "1000": 5977
+    },
+    "duplicates_within_train_only": true
+  },
+  {
+    "task": "enhancer_annotation",
+    "file": "enhancer_annotation.bed",
+    "sha256": "be9f7e963ff7eb383a5a8270e33371b816219220b7d74159217bdd6d1d81e460",
+    "bytes": 11189,
+    "rows": 285,
+    "split_counts": {
+      "part2": 27,
+      "part9": 35,
+      "part5": 28,
+      "part3": 28,
+      "part8": 24,
+      "part10": 33,
+      "part6": 31,
+      "part4": 28,
+      "part7": 24,
+      "part1": 27
+    },
+    "unique_ids": 285,
+    "duplicate_ids": {},
+    "url": "https://sid.erda.dk/share_redirect/aNQa0Oz2lY/data/enhancer_annotation/enhancer_annotation.bed",
+    "coordinate_span_min": 100096,
+    "coordinate_span_max": 100096,
+    "row_id_overlap_between_splits": {
+      "part1 / part10": 0,
+      "part1 / part2": 0,
+      "part1 / part3": 0,
+      "part1 / part4": 0,
+      "part1 / part5": 0,
+      "part1 / part6": 0,
+      "part1 / part7": 0,
+      "part1 / part8": 0,
+      "part1 / part9": 0,
+      "part10 / part2": 0,
+      "part10 / part3": 0,
+      "part10 / part4": 0,
+      "part10 / part5": 0,
+      "part10 / part6": 0,
+      "part10 / part7": 0,
+      "part10 / part8": 0,
+      "part10 / part9": 0,
+      "part2 / part3": 0,
+      "part2 / part4": 0,
+      "part2 / part5": 0,
+      "part2 / part6": 0,
+      "part2 / part7": 0,
+      "part2 / part8": 0,
+      "part2 / part9": 0,
+      "part3 / part4": 0,
+      "part3 / part5": 0,
+      "part3 / part6": 0,
+      "part3 / part7": 0,
+      "part3 / part8": 0,
+      "part3 / part9": 0,
+      "part4 / part5": 0,
+      "part4 / part6": 0,
+      "part4 / part7": 0,
+      "part4 / part8": 0,
+      "part4 / part9": 0,
+      "part5 / part6": 0,
+      "part5 / part7": 0,
+      "part5 / part8": 0,
+      "part5 / part9": 0,
+      "part6 / part7": 0,
+      "part6 / part8": 0,
+      "part6 / part9": 0,
+      "part7 / part8": 0,
+      "part7 / part9": 0,
+      "part8 / part9": 0
+    },
+    "fold_chromosomes": {
+      "part1": [
+        "chr18",
+        "chr7",
+        "chr8"
+      ],
+      "part10": [
+        "chr17",
+        "chr9"
+      ],
+      "part2": [
+        "chr10",
+        "chr13",
+        "chrX"
+      ],
+      "part3": [
+        "chr14",
+        "chr22",
+        "chr6"
+      ],
+      "part4": [
+        "chr20",
+        "chr3"
+      ],
+      "part5": [
+        "chr11",
+        "chr12"
+      ],
+      "part6": [
+        "chr19"
+      ],
+      "part7": [
+        "chr4",
+        "chr5"
+      ],
+      "part8": [
+        "chr15",
+        "chr2",
+        "chr21"
+      ],
+      "part9": [
+        "chr1",
+        "chr16"
+      ]
+    },
+    "label_hdf5": {
+      "dataset": "labels",
+      "container_shape": [
+        285
+      ],
+      "dtype": "object",
+      "vector_lengths": {
+        "782": 285
+      },
+      "values": {
+        "0.0": 220185,
+        "1.0": 2685
+      },
+      "sha256": "722e8260ca09848216c9198cb768956c6984659175a02fb61d76bb1c5196dd00",
+      "bytes": 1817552
+    }
+  }
+]

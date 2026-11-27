@@ -21,15 +21,33 @@ with sync_playwright() as p:
     visit()
     assert page.locator('#page-title').inner_text()=='Evaluations'
     assert page.locator('#coverage-mode').get_attribute('aria-pressed')=='true'
-    assert page.locator('.coverage-dot').count()==879
+    assert page.locator('.coverage-dot').count()==787
     assert page.locator('[data-taxon]').count()==48
     assert page.locator('.coverage-division').count()==30
-    assert '513 matching records' in page.locator('#result-count').inner_text()
+    assert '545 matching records' in page.locator('#result-count').inner_text()
     assert len(rows())==100
     assert page.locator('#next-page').is_enabled()
-    assert page.evaluate('new Set([...document.querySelectorAll(".coverage-dot")].map(e=>e.dataset.coverageTask)).size')==513
+    assert page.locator('.coverage-feature').count()==14
+    assert page.locator('.coverage-dot[data-coverage-task="evo-dms-blat-firnberg"][data-feature="coding-sequence"]').count()>0
+    assert page.locator('.coverage-dot[data-coverage-task="genosm-gene-class"][data-feature="coding-sequence"]').count()==0
+    # Biological grouping cannot turn fragments into a full structure benchmark.
+    structure=page.locator('.coverage-dot[data-coverage-task="spliceai2-top-transcript"]')
+    assert structure.count()==1
+    assert structure.get_attribute('data-feature')=='transcript-structures'
+    assert page.locator('.coverage-dot[data-coverage-task="evo-exon-intron"][data-feature="gene-structures"]').count()==0
+    assert page.evaluate('new Set([...document.querySelectorAll(".coverage-dot")].map(e=>e.dataset.coverageTask)).size')==545
     assert page.locator('.coverage-scroll').evaluate('(e)=>e.clientHeight')>=900
     page.screenshot(path='/tmp/marin-glm-coverage.png')
+    page.select_option('#output','output-dense-labels')
+    click_mode('tasks')
+    assert set(rows())=={'spliceai-sites-coding','spliceai-sites-linc','bgcs-cds','genecad-cds-base','genecad-legacy-nucleotide','bend1-gene-finding','bend1-enhancer-annotation'}
+    assert 'successive positions' in page.locator('#output-definition').inner_text()
+    click_mode('collections');assert page.locator('#output').input_value()=='output-dense-labels'
+    click_mode('coverage');assert page.locator('#output').input_value()=='output-dense-labels'
+    page.locator('.coverage-feature-detail').select_option('individual')
+    assert page.locator('#output').input_value()=='output-dense-labels'
+    assert page.locator('.coverage-dot[data-coverage-task="genecad-busco"]').count()==0
+    page.locator('button[type=reset]').click()
     # Compact browsing, pagination, sorting and lazy detail expansion.
     click_mode('tasks');first=rows()
     page.locator('#next-page').click();second=rows()
@@ -62,11 +80,12 @@ with sync_playwright() as p:
     page.select_option('#population','human')
     assert page.locator('[data-taxon]').count()==1
     assert page.locator('[data-taxon]').get_attribute('data-taxon')=='mammalia-sp-9606'
-    assert '181 matching records' in page.locator('#result-count').inner_text()
+    assert '213 matching records' in page.locator('#result-count').inner_text()
+    page.locator('.coverage-feature-detail').select_option('individual')
     page.select_option('#region','cds')
     assert page.locator('.coverage-feature').count()==1
     assert page.locator('.coverage-feature').inner_text()=='CDS'
-    assert '37 matching records' in page.locator('#result-count').inner_text()
+    assert '38 matching records' in page.locator('#result-count').inner_text()
     page.locator('button[type=reset]').click()
     page.select_option('#population','phages')
     assert page.locator('.coverage-dot[data-coverage-task="evo-phage-essential"]').count()>0
@@ -75,6 +94,7 @@ with sync_playwright() as p:
     assert set(page.locator('[data-taxon]').evaluate_all('(els)=>els.map(e=>e.dataset.taxon)'))=={'bryophytes-sp-3218','bryophytes-sp-3197'}
     page.locator('button[type=reset]').click()
     # Cell selection narrows the table and persists through mode changes/reload.
+    page.locator('.coverage-feature-detail').select_option('individual')
     dots=page.locator('.coverage-dot[data-row="pseudomonadota-sp-562"][data-feature="cds"]')
     expected=set(dots.evaluate_all('(els)=>els.map(e=>e.dataset.coverageTask)'))
     dots.first.click()
@@ -84,22 +104,30 @@ with sync_playwright() as p:
     page.reload();page.wait_for_selector('.compact-task-row')
     assert set(rows())==expected and page.locator('.task-detail-row:not([hidden])').count()==1
     page.locator('[data-clear-filter="cellRow"]').click()
-    assert '513 matching records' in page.locator('#result-count').inner_text()
+    assert '545 matching records' in page.locator('#result-count').inner_text()
     # CSV exports every matching task, including tasks outside the visible page.
     with page.expect_download() as info:page.locator('#export').click()
     exported=list(csv.DictReader(io.StringIO(Path(info.value.path()).read_text())))
-    assert len(exported)==513 and len({r['id'] for r in exported})==513
+    assert len(exported)==545 and len({r['id'] for r in exported})==545
+    assert all(r['scored_output'] and r['scoring_unit'] for r in exported)
     for task in ['bacbench-essential','nt-revised-enhancers_types','gue-H3','gpn-rvat','gpn-annotation','traitgym-mendelian','bend-opensplice','deepstarr-dev','aido2-clinvar-snv','genosm-bgc-types','genosm-crc','plantcad2-tis_recovery','plantcad2-potato-gerp','plantcad2-ft-cell_type_specific_acr','genecad-cds-transcript','genecad-legacy-transcript']:
         visit('#view=evaluations&task='+task)
         assert len(rows())==1 and page.locator('.task-detail-row:not([hidden])').count()==1
         assert page.locator('.task-detail-row:not([hidden]) .citation').count()>0
         assert 'Documented model usage' in page.locator('.task-detail-row:not([hidden])').inner_text()
+    for task in ['spliceai-sites-coding','spliceai2-top-transcript','spliceai2-tissue-variant','deepd-human-routing-cds']:
+        visit('#view=evaluations&task='+task)
+        text=page.locator('.task-detail-row:not([hidden])').inner_text()
+        assert 'Output and scoring scope' in text and 'Scoring unit' in text
+        if task=='spliceai2-top-transcript':assert '352' in text and 'TSS/TES' in text and 'human-only' in text
+    visit('#view=evaluations&mode=tasks&suite=spliceai2-evals&output=output-linked-structure')
+    assert rows()==['spliceai2-top-transcript']
     visit('#view=evaluations&mode=tasks&q=ceno&capability=generation')
     assert '3 matching records' in page.locator('#result-count').inner_text()
     page.locator('[data-clear-filter="q"]').click()
     assert '20 matching records' in page.locator('#result-count').inner_text()
     visit('#view=evaluations&mode=tasks&suite=genecad&capability=dense-annotation')
-    assert '15 matching records' in page.locator('#result-count').inner_text()
+    assert '14 matching records' in page.locator('#result-count').inner_text()
     visit('#view=evaluations&task=deepd-annotation-human')
     assert '6 matching records' in page.locator('#result-count').inner_text()
     visit('#view=evaluations&mode=tasks&capability=unconditional-generation')
@@ -112,10 +140,10 @@ with sync_playwright() as p:
     page.locator('.collection-toggle').click()
     assert 'decomposition' in page.locator('.collection').inner_text()
     # Detail levels retain task unions and the simplified hierarchy.
-    visit();page.locator('.coverage-detail').select_option('allSpecies')
-    assert page.locator('.coverage-dot').count()==1102 and page.locator('[data-taxon]').count()==87
+    visit();page.locator('.coverage-feature-detail').select_option('individual');page.locator('.coverage-detail').select_option('allSpecies')
+    assert page.locator('.coverage-dot').count()==1322 and page.locator('[data-taxon]').count()==87
     page.locator('.coverage-detail').select_option('clade')
-    assert page.locator('.coverage-dot').count()==820 and page.locator('[data-taxon]').count()==32
+    assert page.locator('.coverage-dot').count()==934 and page.locator('[data-taxon]').count()==32
     page.locator('.coverage-detail').select_option('species')
     assert page.locator('[data-node="vertebrates"]').get_attribute('data-display-parent')=='animals'
     assert page.locator('[data-taxon="teleostei-sp-7955"]').get_attribute('data-display-parent')=='vertebrates'
@@ -158,6 +186,6 @@ with sync_playwright() as p:
         page.set_viewport_size({'width':1440,'height':1100})
     assert not errors,errors
     assert not requests,requests
-    print(json.dumps({'result':'passed','task_records':513,'marker_associations':[879,1102,820],
+    print(json.dumps({'result':'passed','task_records':545,'marker_associations':[787,1322,934],
         'javascript_errors':errors,'external_runtime_requests':requests,'checks':['default coverage','shared filters','association filtering','compact tables','pagination','sorting','cell links','citations','CSV','Evo 2 provenance','scroll chaining','mobile','secondary sections']}))
     browser.close()

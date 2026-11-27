@@ -33,7 +33,8 @@
       <label>Application<select id="application" name="application"><option value="">All applications</option></select></label>
       <label>Organism / clade<select id="population" name="population"><option value="">All organisms</option></select></label>
       <label>Model capability<select id="capability" name="capability"><option value="">All capabilities</option></select></label>
-      <label>Functional region<select id="region" name="region"><option value="">All regions</option></select></label>
+      <label>Genomic feature<select id="region" name="region"><option value="">All features</option></select></label>
+      <label>Scored output<select id="output" name="output"><option value="">All outputs</option></select></label>
       <label>Collection<select id="suite" name="suite"><option value="">All collections</option></select></label>
       <label>Benchmark project<select id="project" name="project"><option value="">All tasks</option></select></label>
       <label>Evo 2 provenance<select id="evo" name="evo"><option value="">All tasks</option><option value="original">Documented in original paper</option><option value="external">Documented in external evaluation</option><option value="both">Documented in both</option></select></label>
@@ -43,6 +44,7 @@
     <details class="filter-explanation"><summary>Assignments and evidence</summary><p class="filter-note" id="classification-note">Organism filters include descendant taxa and established protein-target provenance, excluding assay/sample hosts alone. Application mappings are editorial, not validation claims. Markers show task-level taxon and feature associations; they do not establish a released species × feature subset. Missing annotations do not imply biological absence.</p></details>
     <p class="filter-note" id="active-filters" aria-live="polite"></p>
     <p class="filter-note" id="capability-definition" hidden></p>
+    <p class="filter-note" id="output-definition" hidden></p>
     <div class="toolbar"><div class="switch" aria-label="Evaluation display"><button id="coverage-mode" type="button" aria-pressed="true">Coverage</button><button id="task-mode" type="button" aria-pressed="false">Tasks</button><button id="suite-mode" type="button" aria-pressed="false">Collections</button></div><p role="status" aria-live="polite" id="result-count"></p></div>
     <section id="coverage-view" aria-label="Evaluation coverage"></section>
     <div id="table-tools" class="table-tools"><p id="table-count" role="status" aria-live="polite"></p><div class="table-pages"><label>Rows<select id="page-size"><option>25</option><option>50</option><option selected>100</option><option>250</option></select></label><button type="button" id="previous-page" class="secondary">Previous</button><span id="page-number"></span><button type="button" id="next-page" class="secondary">Next</button></div></div>

@@ -87,6 +87,28 @@ CREATE TABLE tasks (
   evidence_id TEXT NOT NULL REFERENCES evidence(id), limitations TEXT,
   input_description TEXT NOT NULL, output_description TEXT NOT NULL
 );
+-- The assessed output is independent of the biological feature. A model can
+-- emit a dense track while a particular benchmark scores only one selected site.
+CREATE TABLE task_outputs (
+  id TEXT PRIMARY KEY, task_id TEXT NOT NULL UNIQUE REFERENCES tasks(id),
+  category_id TEXT NOT NULL REFERENCES categories(id),
+  prediction_form TEXT NOT NULL, scoring_unit TEXT NOT NULL,
+  position_axis TEXT NOT NULL CHECK(position_axis IN
+    ('none','sampled','contiguous','interval-set','linked','unresolved')),
+  structure_scope TEXT NOT NULL CHECK(structure_scope IN
+    ('none','coding-chain','full-transcript','splice-pattern','gene-locus','unresolved')),
+  status TEXT NOT NULL CHECK(status IN ('supported','partial','unresolved')),
+  rationale TEXT NOT NULL, limitations TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE task_feature_scopes (
+  id TEXT PRIMARY KEY, task_id TEXT NOT NULL REFERENCES tasks(id),
+  feature_id TEXT NOT NULL REFERENCES categories(id),
+  scope TEXT NOT NULL CHECK(scope IN
+    ('restricted-target','mixed','context','protein-reference','derived-readout')),
+  rationale TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  UNIQUE(task_id,feature_id)
+);
 CREATE TABLE evaluation_tasks (
   evaluation_id TEXT NOT NULL REFERENCES evaluations(id),
   task_id TEXT NOT NULL REFERENCES tasks(id),
@@ -112,7 +134,7 @@ CREATE TABLE task_populations (
 );
 CREATE TABLE categories (
   id TEXT PRIMARY KEY, dimension TEXT NOT NULL CHECK
-    (dimension IN ('application','capability','region')),
+    (dimension IN ('application','capability','region','output')),
   name TEXT NOT NULL, definition TEXT NOT NULL, accommodation TEXT
 );
 CREATE TABLE task_categories (

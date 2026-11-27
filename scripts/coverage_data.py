@@ -32,6 +32,17 @@ def export_coverage(db):
     for m in db['evaluation_tasks']:memberships[m['task_id']].add(m['evaluation_id'])
     original={u['task_id'] for u in db['model_evaluations'] if u['model_id']=='evo2' and u['provenance']=='original-paper'}
     tasks=[]
+    outputs={r['task_id']:r for r in db['task_outputs']}
+    cds_scopes={r['task_id']:r['scope'] for r in db['task_feature_scopes'] if r['feature_id']=='cds'}
+    feature_families={
+        'gene-elements':{'gene','cds','exon','intron'},
+        'splice-elements':{'splice','splice-junction'},
+        'utrs':{'utr5','utr3'},'translation-boundaries':{'translation-start','translation-stop'},
+        'regulatory-elements':{'promoter','enhancer','tfbs','regulatory','polya','terminator'},
+        'chromatin-organization':{'chromatin-boundary'},
+        'rna-features':{'mrna','ncrna','lncrna','rrna','trna','ribozyme','aptamer'},
+        'clusters-operons':{'bgc','operon'},'repetitive':{'repeat'},
+        'intergenic-context':{'intergenic'},'broad-context':{'genome','unspecified'}}
     for t in db['tasks']:
         maps=taskmaps[t['id']]
         if not maps:raise ValueError('Coverage mapping missing: '+t['id'])
@@ -39,7 +50,19 @@ def export_coverage(db):
         mode=3 if any(x in typ for x in ('diagnostic','analysis','case study','computational','ortholog completeness')) else 1 if 'generation' in cs else 2 if any(x in typ for x in ('retrieval','clustering','bigene','eds')) else 0
         source=0 if t['id'] in original else 1 if sids&{'plantcad2-zero','plantcad2-ft','genecad'} else 2 if sids&{'nt-original','nt-revised','gue','gb','geneb'} else 3 if sids&{'rnagym','proteingym'} else 4 if sids&{'bacbench','dgeb','bgc','bgcs'} else 5
         features=[f['id'] for f in settings['features'] if f['id'] in cs] or ['unspecified']
+        output=outputs[t['id']]
+        if output['category_id']=='output-linked-structure':
+            grouped=['transcript-structures' if output['structure_scope']=='splice-pattern' else 'gene-structures']
+        else:
+            grouped=[key for key,values in feature_families.items() if values & set(features)]
+            if cds_scopes.get(t['id']) in ('restricted-target','protein-reference'):
+                # A coding component target is distinct from mixed gene-element
+                # labels. Retain genuinely separate non-gene feature contexts.
+                grouped=[g for g in grouped if g not in ('gene-elements','splice-elements','intergenic-context')]
+                grouped.insert(0,'coding-sequence')
+        if not grouped:raise ValueError('Grouped feature assignment missing: '+t['id'])
         tasks.append(dict(id=t['id'],features=features,mode=mode,source=source,
+                          groupedFeatures=grouped,output=output['category_id'],
                           protein=t['input_description'].startswith('PROTEIN'),mappings=maps))
     views={}
     for view,field in [('clade','clade'),('species','row'),('allSpecies','allSpeciesRow')]:
@@ -63,6 +86,7 @@ def export_coverage(db):
         views[view]=dict(rows=rs,cells=dict(cells),rowTasks=rowtasks)
     notes={kind:[json.loads(r['payload_json'])|{'evidence':r['evidence_id']} for r in db['coverage_notes'] if r['kind']==kind] for kind in ['gap','known','context']}
     return dict(tasks=tasks,features=settings['features'],featureGroups=settings['featureGroups'],
+                groupedFeatures=settings['groupedFeatures'],
                 modes=settings['modes'],sources=settings['sources'],references=settings['references'],populationGroups=settings.get('populationGroups',{}),
                 presentation=dict(nodes=nodes,views=views,sections=settings['sections'],
                                   gaps=notes['gap'],known=notes['known'],context=notes['context']))
