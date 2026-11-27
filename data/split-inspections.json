@@ -231,7 +231,35 @@
       "method": "Complete selected files; exact case-sensitive strings, plus uppercase reverse-complement equivalence for DNA only. No similarity search or pretraining comparison.",
       "repo": "darlednik/geneb-tasks",
       "revision": "4edd705be573e48c585c2cf79dc320f9f43c7b04",
-      "config": "katarinagresova_Genomic_Benchmarks_human_enhancers_ensembl"
+      "config": "katarinagresova_Genomic_Benchmarks_human_enhancers_ensembl",
+      "sequence_length_audit": {
+        "method": "Complete same pinned train/test CSVs, exact case-sensitive strings, lengths and label sets; no alignment or score-bias experiment.",
+        "length_unit": "nucleotides",
+        "strata": {
+          "1–9": {
+            "shared_unique_strings": 37,
+            "held_out_unique_strings": 114
+          },
+          "10–49": {
+            "shared_unique_strings": 310,
+            "held_out_unique_strings": 1019
+          },
+          "50–199": {
+            "shared_unique_strings": 2512,
+            "held_out_unique_strings": 8137
+          },
+          "200+": {
+            "shared_unique_strings": 6643,
+            "held_out_unique_strings": 20199
+          }
+        },
+        "shared_string_length_min": 2,
+        "shared_string_length_max": 573,
+        "shared_strings_with_different_label_sets": 5,
+        "shared_strings_with_single_conflicting_labels": 2,
+        "train_rows_with_shared_string": 9734,
+        "test_rows_with_shared_string": 9556
+      }
     },
     "dgeb-mibig-dna": {
       "partitions": {
