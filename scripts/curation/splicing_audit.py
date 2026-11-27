@@ -346,6 +346,13 @@ def populate(d):
         ('effect-size-trend','Score / measured-effect trend','Source score-bin distributions or controlled score changes; no single independent predictive correlation asserted.','context-dependent'),
         ('heterogeneity-p','Tissue heterogeneity test','Source chi-square p-value for observed novel-junction usage heterogeneity; not accuracy of a tissue-specific model.','context-dependent')]:
         put('metrics',dict(id=id,name=name,definition=definition,direction=direction))
+    # The shared cohort does not give the external SpliceAI baseline SpliceAI2's
+    # training partition, context or quantitative readout. Keep association IDs
+    # stable, but do not attach the native SpliceAI2 protocol to that comparator.
+    for row in d['model_evaluations']:
+        if row['model_id']=='spliceai' and row['paper_id']=='spliceai2':
+            row['protocol_id']=None
+            row['note'] += ' Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply.'
     return d
 
 

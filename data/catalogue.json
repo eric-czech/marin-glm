@@ -120533,11 +120533,11 @@
       "id": "spliceai2-spliceai-spliceai2-gtag-detection-spliceai2-spliceai2-gtag-detection-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-gtag-detection",
-      "protocol_id": "spliceai2-spliceai2-gtag-detection-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment."
+      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-gtag-usage-spliceai2-spliceai2-gtag-usage-protocol",
@@ -120553,11 +120553,11 @@
       "id": "spliceai2-spliceai-spliceai2-gtag-usage-spliceai2-spliceai2-gtag-usage-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-gtag-usage",
-      "protocol_id": "spliceai2-spliceai2-gtag-usage-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment."
+      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-sqtl-detection-spliceai2-spliceai2-sqtl-detection-protocol",
@@ -120573,11 +120573,11 @@
       "id": "spliceai2-spliceai-spliceai2-sqtl-detection-spliceai2-spliceai2-sqtl-detection-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-sqtl-detection",
-      "protocol_id": "spliceai2-spliceai2-sqtl-detection-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment."
+      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-sqtl-effect-spliceai2-spliceai2-sqtl-effect-protocol",
@@ -120593,11 +120593,11 @@
       "id": "spliceai2-spliceai-spliceai2-sqtl-effect-spliceai2-spliceai2-sqtl-effect-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-sqtl-effect",
-      "protocol_id": "spliceai2-spliceai2-sqtl-effect-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment."
+      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-gel-gtag-spliceai2-spliceai2-gel-gtag-protocol",
@@ -120613,11 +120613,11 @@
       "id": "spliceai2-spliceai-spliceai2-gel-gtag-spliceai2-spliceai2-gel-gtag-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-gel-gtag",
-      "protocol_id": "spliceai2-spliceai2-gel-gtag-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment."
+      "note": "External comparison in SpliceAI2 paper; not an original SpliceAI 2019 experiment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-bend-opensplice-spliceai2-bend-opensplice-protocol",
@@ -120633,11 +120633,11 @@
       "id": "spliceai2-spliceai-bend-opensplice-spliceai2-bend-opensplice-protocol",
       "model_id": "spliceai",
       "task_id": "bend-opensplice",
-      "protocol_id": "spliceai2-bend-opensplice-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-opensplice-method",
-      "note": "Released OpenSplice comparator scores; distinct from original-paper SpliceAI use."
+      "note": "Released OpenSplice comparator scores; distinct from original-paper SpliceAI use. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-tissue-junction-spliceai2-spliceai2-tissue-junction-protocol",
@@ -120703,11 +120703,11 @@
       "id": "spliceai2-spliceai-spliceai2-population-spliceai2-spliceai2-population-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-population",
-      "protocol_id": "spliceai2-spliceai2-population-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "Comparator settings vary by benchmark: position-resolved for protein, standard summaries for population/panel enrichment."
+      "note": "Comparator settings vary by benchmark: position-resolved for protein, standard summaries for population/panel enrichment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-protein-spliceai2-spliceai2-protein-protocol",
@@ -120723,11 +120723,11 @@
       "id": "spliceai2-spliceai-spliceai2-protein-spliceai2-spliceai2-protein-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-protein",
-      "protocol_id": "spliceai2-spliceai2-protein-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "Comparator settings vary by benchmark: position-resolved for protein, standard summaries for population/panel enrichment."
+      "note": "Comparator settings vary by benchmark: position-resolved for protein, standard summaries for population/panel enrichment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-gel-panel-spliceai2-spliceai2-gel-panel-protocol",
@@ -120743,11 +120743,11 @@
       "id": "spliceai2-spliceai-spliceai2-gel-panel-spliceai2-spliceai2-gel-panel-protocol",
       "model_id": "spliceai",
       "task_id": "spliceai2-gel-panel",
-      "protocol_id": "spliceai2-spliceai2-gel-panel-protocol",
+      "protocol_id": null,
       "paper_id": "spliceai2",
       "provenance": "external-evaluation",
       "evidence_id": "spliceai2-comparators",
-      "note": "Comparator settings vary by benchmark: position-resolved for protein, standard summaries for population/panel enrichment."
+      "note": "Comparator settings vary by benchmark: position-resolved for protein, standard summaries for population/panel enrichment. Comparator training and readout settings are described in the cited competing-methods section; SpliceAI2-specific protocol metadata does not apply."
     },
     {
       "id": "spliceai2-spliceai2-spliceai2-gel-rna-spliceai2-spliceai2-gel-rna-protocol",

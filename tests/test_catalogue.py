@@ -216,6 +216,10 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM counts WHERE task_id='spliceai-sites-coding' AND value=14289 AND unit='test donor–acceptor pairs'").fetchone()[0],1)
         # A native dense model's variant benchmark is not a new dense annotation task.
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM task_outputs WHERE task_id LIKE 'spliceai2-%' AND category_id='output-dense-labels'").fetchone()[0],0)
+        comparators=self.db.execute("SELECT protocol_id,note FROM model_evaluations WHERE model_id='spliceai' AND paper_id='spliceai2'").fetchall()
+        self.assertGreater(len(comparators),0)
+        self.assertTrue(all(r['protocol_id'] is None and 'SpliceAI2-specific protocol metadata does not apply' in r['note'] for r in comparators))
+        self.assertGreater(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE model_id='spliceai2' AND protocol_id IS NOT NULL").fetchone()[0],0)
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'").fetchone()[0],42)
         self.assertEqual(self.db.execute("SELECT COUNT(DISTINCT task_id) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'").fetchone()[0],41)
 
