@@ -18,7 +18,6 @@ Individual decisions, rationales, limitations and source citations are stored in
 | Sequence generation / recovery | The output is nucleotide sequence or nucleotide identity. | Dense biological annotation; predicted-oracle success is not experimental validation. |
 | Retrieval / selection | The model chooses/ranks supplied candidates. | Generating new sequence. |
 | Aggregate / diagnostic analysis | Representation, selection, interpretation, runtime or cohort statistics are analyzed. | A held-out annotation or causal-function test. |
-| Unresolved / mixed outputs | Available sources do not resolve the individual outputs or scoring cohort. | A negative conclusion about a model's capabilities. |
 
 These definitions concern the **evaluation**, not just the model's forward pass. The same dense predictor may participate in an isolated variant benchmark, a signal benchmark, or a structure benchmark. Per-task `prediction_form`, `scoring_unit`, `position_axis`, `structure_scope`, `status` and evidence retain that distinction. Protocol variants still specify adaptation, readout, split, aggregation and matching tolerance.
 
@@ -96,8 +95,10 @@ Complete released BED files and the enhancer-label HDF5 were inspected. The enha
 
 ## Source limits are explicit results of the audit
 
-Unresolved DeepD/GPN-Star panel identities remain visible as source-limited evaluation claims. No constituent assay is guessed from another paper’s equally sized panel. Carbon-X raw prompts returned HTTP 401; the complete public loader, prompt adapters and verifiers were inspected. DeepD’s separately linked DC2 methods document could not be retrieved, so absence from the inspected main/DC1/code sources is not described as proof of absence from DC2. These are availability/definition limits, not future-work placeholders.
+DeepD/GPN-Star panels without published assay identities remain visible as source-limited evaluation claims. No constituent assay is guessed from another paper’s equally sized panel. Carbon-X raw prompts returned HTTP 401; the complete public loader, prompt adapters and verifiers were inspected. DeepD’s separately linked DC2 methods document could not be retrieved, so absence from the inspected main/DC1/code sources is not described as proof of absence from DC2. These are availability/definition limits, not future-work placeholders.
 
 The [OpenSplice preprint](https://doi.org/10.64898/2026.05.22.727141) is retained alongside the inspected [canonical-site processing](https://github.com/lehner-lab/OpenSplice/blob/3e4ad8c037c216b952f1a8945f8f498669bff589/benchmarking_predictors/scripts/processing/process_spliceai_genome_outputs.py#L1-L16). Its full preprint returned HTTP 403. BEND and SpliceAI2 independently define their particular OpenSplice protocols; that does not constitute a full-paper audit of the unavailable original representation.
 
 All task and collection reviews have a completed scope and date in `source_reviews`. Precise limits and conflicts are recorded in `source_limits`; the page exposes both. No ID/OD policy, exhaustive taxonomic absence claim or model ranking follows from these classifications.
+
+Further source review resolves the NABench BRCA1 target by direct comparison with original scores, and consolidates the identical NT/GUE H3/H4 pools while preserving their different partitions. [Corrections and evidence](source-review.md).

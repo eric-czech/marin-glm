@@ -205,6 +205,16 @@ CREATE TABLE protocols (
 CREATE TABLE metrics (
   id TEXT PRIMARY KEY, name TEXT NOT NULL, definition TEXT NOT NULL, direction TEXT NOT NULL
 );
+-- Null source fields have an explicit interpretation. In particular, a dataset
+-- partition definition does not prescribe a fitting method or model interface.
+CREATE TABLE protocol_field_reviews (
+  protocol_id TEXT NOT NULL REFERENCES protocols(id),
+  field TEXT NOT NULL CHECK(field IN ('requires_embeddings','fitted_component','selection')),
+  state TEXT NOT NULL CHECK(state IN ('specified','model-dependent','not-applicable','not-reported','conflicting')),
+  detail TEXT NOT NULL CHECK(length(detail)>0),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(protocol_id,field)
+);
 CREATE TABLE protocol_metrics (
   protocol_id TEXT NOT NULL REFERENCES protocols(id), metric_id TEXT NOT NULL REFERENCES metrics(id),
   aggregation TEXT NOT NULL, is_primary INTEGER NOT NULL CHECK(is_primary IN (0,1)),
@@ -224,6 +234,15 @@ CREATE TABLE model_evaluations (
   paper_id TEXT REFERENCES papers(id),
   provenance TEXT NOT NULL CHECK(provenance IN ('original-paper','original-release','external-evaluation','released-example')),
   evidence_id TEXT NOT NULL REFERENCES evidence(id), note TEXT NOT NULL
+);
+-- Aggregate benchmark participation does not imply a model ran every assay/arm.
+CREATE TABLE model_collection_evaluations (
+  id TEXT PRIMARY KEY, model_id TEXT NOT NULL REFERENCES models(id),
+  evaluation_id TEXT NOT NULL REFERENCES evaluations(id),
+  paper_id TEXT NOT NULL REFERENCES papers(id),
+  provenance TEXT NOT NULL CHECK(provenance IN ('original-paper','external-evaluation')),
+  scope TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  UNIQUE(model_id,evaluation_id,paper_id)
 );
 CREATE TABLE findings (
   id TEXT PRIMARY KEY, task_id TEXT REFERENCES tasks(id),
@@ -248,7 +267,7 @@ CREATE TABLE source_limits (
   id TEXT PRIMARY KEY,
   entity_table TEXT NOT NULL CHECK(entity_table IN ('tasks','evaluations','models','papers','protocols')),
   entity_id TEXT NOT NULL, field TEXT NOT NULL,
-  reason TEXT NOT NULL CHECK(reason IN ('not-reported','not-released','not-retrieved','conflicting','access-restricted','not-applicable')),
+  reason TEXT NOT NULL CHECK(reason IN ('not-reported','not-released','not-retrieved','conflicting','access-restricted','size-excluded','not-applicable')),
   detail TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id)
 );
 CREATE TABLE data_resources (

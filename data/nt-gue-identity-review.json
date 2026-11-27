@@ -1,0 +1,226 @@
+{
+  "inspected": "2026-11-27",
+  "method": "Complete pinned native files; verify pre-existing SHA-256; compare uppercase sequence\u2013label multisets, separately for full pools and partition pairs. No approximate or coordinate mapping is inferred.",
+  "files": [
+    {
+      "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks",
+      "revision": "96d86d567d4cd33536e49b429dc7983121619a08",
+      "file": "H3/test.parquet",
+      "rows": 1497,
+      "sha256": "2c2be38d275fe9e243e5ab7890678110b4de6a35d68336319e96968111074a2e",
+      "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks/resolve/96d86d567d4cd33536e49b429dc7983121619a08/H3/test.parquet",
+      "bytes": 388611,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 1497,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks",
+      "revision": "96d86d567d4cd33536e49b429dc7983121619a08",
+      "file": "H3/train.parquet",
+      "rows": 13468,
+      "sha256": "0870c6e5dce6f94d2c6b3c2ab9d3af01b3f80ce1f4fb4b94dd7bf6c74f440568",
+      "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks/resolve/96d86d567d4cd33536e49b429dc7983121619a08/H3/train.parquet",
+      "bytes": 3479782,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 13468,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks",
+      "revision": "96d86d567d4cd33536e49b429dc7983121619a08",
+      "file": "H4/test.parquet",
+      "rows": 1461,
+      "sha256": "afd4cea896e91dd0b6703c438b8cee1f19b0f5c2529cd2089237744f507716e6",
+      "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks/resolve/96d86d567d4cd33536e49b429dc7983121619a08/H4/test.parquet",
+      "bytes": 379480,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 1461,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "InstaDeepAI/nucleotide_transformer_downstream_tasks",
+      "revision": "96d86d567d4cd33536e49b429dc7983121619a08",
+      "file": "H4/train.parquet",
+      "rows": 13140,
+      "sha256": "14081e244e2a7fdd5c184b1cc932fe8ba2ee2190846caff04965826344c6109e",
+      "url": "https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks/resolve/96d86d567d4cd33536e49b429dc7983121619a08/H4/train.parquet",
+      "bytes": 3391366,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 13140,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "leannmlindsey/GUE",
+      "revision": "240df51a2cd2c0fb1d88efffaf86e8d1e477f932",
+      "file": "GUE/emp_H3/dev.csv",
+      "rows": 1497,
+      "sha256": "9a1d8e477b04103a59a98ca65c90c517183cca59e028cf358f8ac57bb49e2270",
+      "url": "https://huggingface.co/datasets/leannmlindsey/GUE/resolve/240df51a2cd2c0fb1d88efffaf86e8d1e477f932/GUE/emp_H3/dev.csv",
+      "bytes": 754504,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 1497,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "leannmlindsey/GUE",
+      "revision": "240df51a2cd2c0fb1d88efffaf86e8d1e477f932",
+      "file": "GUE/emp_H3/test.csv",
+      "rows": 1497,
+      "sha256": "e5fa7206565f3adcf480b25c8e1545fa4cf812f39b141d0dddface495b1ddf4b",
+      "url": "https://huggingface.co/datasets/leannmlindsey/GUE/resolve/240df51a2cd2c0fb1d88efffaf86e8d1e477f932/GUE/emp_H3/test.csv",
+      "bytes": 754504,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 1497,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "leannmlindsey/GUE",
+      "revision": "240df51a2cd2c0fb1d88efffaf86e8d1e477f932",
+      "file": "GUE/emp_H3/train.csv",
+      "rows": 11971,
+      "sha256": "29d3296d932ed1d0783578f023e4d4c2d0c95759f3b0781fd2a9ab8edf84182b",
+      "url": "https://huggingface.co/datasets/leannmlindsey/GUE/resolve/240df51a2cd2c0fb1d88efffaf86e8d1e477f932/GUE/emp_H3/train.csv",
+      "bytes": 6033000,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 11971,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "leannmlindsey/GUE",
+      "revision": "240df51a2cd2c0fb1d88efffaf86e8d1e477f932",
+      "file": "GUE/emp_H4/dev.csv",
+      "rows": 1461,
+      "sha256": "506812e376a4260b3adc0bb5cdbc08693d6948b18026536e78c31a2e04af865c",
+      "url": "https://huggingface.co/datasets/leannmlindsey/GUE/resolve/240df51a2cd2c0fb1d88efffaf86e8d1e477f932/GUE/emp_H4/dev.csv",
+      "bytes": 736360,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 1461,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "leannmlindsey/GUE",
+      "revision": "240df51a2cd2c0fb1d88efffaf86e8d1e477f932",
+      "file": "GUE/emp_H4/test.csv",
+      "rows": 1461,
+      "sha256": "cd011ed4d9b65f404bd55022bd1dda935e44c7c43fc5bc6407ae598b22108267",
+      "url": "https://huggingface.co/datasets/leannmlindsey/GUE/resolve/240df51a2cd2c0fb1d88efffaf86e8d1e477f932/GUE/emp_H4/test.csv",
+      "bytes": 736360,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 1461,
+      "normalization_changed_rows": 0
+    },
+    {
+      "repo": "leannmlindsey/GUE",
+      "revision": "240df51a2cd2c0fb1d88efffaf86e8d1e477f932",
+      "file": "GUE/emp_H4/train.csv",
+      "rows": 11679,
+      "sha256": "6daa0fd1e86d99eccec529442793e1c39fd14aa5c306c6c15ebc3fcaa7feb91a",
+      "url": "https://huggingface.co/datasets/leannmlindsey/GUE/resolve/240df51a2cd2c0fb1d88efffaf86e8d1e477f932/GUE/emp_H4/train.csv",
+      "bytes": 5885991,
+      "sequence_column": "sequence",
+      "label_column": "label",
+      "unique_sequences": 11679,
+      "normalization_changed_rows": 0
+    }
+  ],
+  "comparisons": {
+    "H3": {
+      "nt_rows": 14965,
+      "gue_rows": 14965,
+      "nt_unique_sequences": 14965,
+      "gue_unique_sequences": 14965,
+      "shared_rows": 14965,
+      "identical_multisets": true,
+      "nt_only": 0,
+      "gue_only": 0,
+      "partition_pairs": [
+        {
+          "nt_partition": "test",
+          "gue_partition": "dev",
+          "shared_sequence_label_rows": 156
+        },
+        {
+          "nt_partition": "test",
+          "gue_partition": "test",
+          "shared_sequence_label_rows": 150
+        },
+        {
+          "nt_partition": "test",
+          "gue_partition": "train",
+          "shared_sequence_label_rows": 1191
+        },
+        {
+          "nt_partition": "train",
+          "gue_partition": "dev",
+          "shared_sequence_label_rows": 1341
+        },
+        {
+          "nt_partition": "train",
+          "gue_partition": "test",
+          "shared_sequence_label_rows": 1347
+        },
+        {
+          "nt_partition": "train",
+          "gue_partition": "train",
+          "shared_sequence_label_rows": 10780
+        }
+      ],
+      "examples_nt_only": [],
+      "examples_gue_only": []
+    },
+    "H4": {
+      "nt_rows": 14601,
+      "gue_rows": 14601,
+      "nt_unique_sequences": 14601,
+      "gue_unique_sequences": 14601,
+      "shared_rows": 14601,
+      "identical_multisets": true,
+      "nt_only": 0,
+      "gue_only": 0,
+      "partition_pairs": [
+        {
+          "nt_partition": "test",
+          "gue_partition": "dev",
+          "shared_sequence_label_rows": 148
+        },
+        {
+          "nt_partition": "test",
+          "gue_partition": "test",
+          "shared_sequence_label_rows": 125
+        },
+        {
+          "nt_partition": "test",
+          "gue_partition": "train",
+          "shared_sequence_label_rows": 1188
+        },
+        {
+          "nt_partition": "train",
+          "gue_partition": "dev",
+          "shared_sequence_label_rows": 1313
+        },
+        {
+          "nt_partition": "train",
+          "gue_partition": "test",
+          "shared_sequence_label_rows": 1336
+        },
+        {
+          "nt_partition": "train",
+          "gue_partition": "train",
+          "shared_sequence_label_rows": 10491
+        }
+      ],
+      "examples_nt_only": [],
+      "examples_gue_only": []
+    }
+  }
+}

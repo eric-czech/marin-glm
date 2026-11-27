@@ -71,8 +71,13 @@ class Catalogue:
         m=copy.deepcopy(template)
         m.update(id=task+'-mapping-'+population, task_id=task, population_id=population,
             evidence_id=evidence, supporting_json=json.dumps([evidence]), basis='source-defined population')
-        meta=json.loads(m['metadata_json'])
-        meta.update(basis='source-defined population',url=self.get('evidence',evidence)['url'])
+        meta={k:v for k,v in json.loads(m['metadata_json']).items() if k in
+              ('row','name','clade','allSpeciesRow','species','speciesId','taxonomy')}
+        meta.update(basis='source-defined population',url=self.get('evidence',evidence)['url'],note=note)
+        pop=self.get('populations',population)
+        meta['name']=pop['name']
+        if pop['ncbi_taxid']:
+            meta['taxonomy']='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id='+str(pop['ncbi_taxid'])
         m['metadata_json']=json.dumps(meta,ensure_ascii=False)
         self.put('coverage_mappings',m)
 

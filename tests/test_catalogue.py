@@ -60,12 +60,67 @@ class CatalogueTests(unittest.TestCase):
         scopes=dict(self.db.execute("SELECT id,scope FROM models WHERE id IN ('aido2','genosm')").fetchall())
         self.assertEqual(scopes,{'aido2':'primary','genosm':'primary'})
         props={r['id']:r for r in self.db.execute("SELECT * FROM model_properties WHERE model_id IN ('aido2','genosm')")}
-        self.assertEqual(props['aido2-tokenizer']['status'],'unresolved')
+        self.assertEqual(props['aido2-tokenizer']['status'],'not disclosed in technical report')
         self.assertIn('17 listed entries',props['genosm-tokenizer']['value'])
         self.assertIn('256',props['genosm-tokenizer']['value'])
         self.assertIn('128',props['genosm-tokenizer']['value'])
         self.assertIn('local sliding-window',props['aido2-coverage-context']['value'])
         self.assertNotEqual(props['aido2-coverage-context']['evidence_id'],props['aido2-curriculum']['evidence_id'])
+    def test_nullable_protocol_fields_have_specific_dispositions(self):
+        for field in ('requires_embeddings','fitted_component','selection'):
+            missing=self.db.execute(f'''SELECT p.id FROM protocols p LEFT JOIN protocol_field_reviews r
+                ON r.protocol_id=p.id AND r.field=? WHERE p.{field} IS NULL AND r.protocol_id IS NULL''',(field,)).fetchall()
+            self.assertEqual(missing,[])
+        state=self.db.execute("SELECT state,detail FROM protocol_field_reviews WHERE protocol_id='pgb-polya-protocol' AND field='requires_embeddings'").fetchone()
+        self.assertEqual(state['state'],'model-dependent')
+        self.assertIn('end-to-end',state['detail'])
+        self.assertEqual(self.db.execute("SELECT requires_embeddings FROM protocols WHERE id='ceno-enhancer-design-protocol'").fetchone()[0],0)
+        row=self.db.execute("SELECT state FROM protocol_field_reviews WHERE protocol_id='nabench-fuente-selection-nabench-random' AND field='requires_embeddings'").fetchone()
+        self.assertEqual(row[0],'conflicting')
+    def test_selection_rules_are_not_generic_missing_values(self):
+        trait=self.db.execute("SELECT selection FROM protocols WHERE id='traitgym-mendelian-probe'").fetchone()[0]
+        self.assertIn('GroupKFold',trait)
+        self.assertIn('average precision',trait)
+        geneb=self.db.execute("SELECT selection FROM protocols WHERE id='geneb-instadeepai-nucleotide-transformer-downstream-tasks-h3-probe'").fetchone()[0]
+        self.assertIn('no development-set tuning',geneb)
+        mrna=self.db.execute("SELECT selection FROM protocols WHERE id='mrna-rna-loc-fazal-protocol'").fetchone()[0]
+        self.assertIn('no classification-penalty search',mrna)
+    def test_original_inventory_and_aggregate_use_are_separate(self):
+        original={r[0] for r in self.db.execute("SELECT DISTINCT task_id FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'")}
+        inventory={r[0] for r in self.db.execute("SELECT task_id FROM evaluation_tasks WHERE evaluation_id='evo-original'")}
+        self.assertEqual(original,inventory)
+        self.assertEqual(len(inventory),83)
+        self.assertEqual({r[0]for r in self.db.execute("SELECT model_id FROM model_collection_evaluations WHERE evaluation_id='nabench'")},{'evo1','evo2','generator'})
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE paper_id='na'").fetchone()[0],0)
+    def test_context_variants_and_origin_assignments(self):
+        rows=self.db.execute("SELECT id FROM variants WHERE task_id='plantcad2-ft-cross_species_acr_train_on_arabidopsis' AND id LIKE '%-context-%'").fetchall()
+        self.assertEqual([r[0]for r in rows],['plantcad2-ft-cross_species_acr_train_on_arabidopsis-context-600'])
+        self.assertEqual(self.db.execute("SELECT population_id FROM task_populations WHERE task_id='rnagym-domingo-2018-trna' AND relation='sequence-origin'").fetchone()[0],'yeast')
+        self.assertEqual(self.db.execute("SELECT population_id FROM task_populations WHERE task_id='rnagym-janzen-2022-fam21-ribozyme' AND relation='sequence-origin'").fetchone()[0],'synthetic')
+        self.assertIsNone(self.db.execute("SELECT id FROM categories WHERE id='output-unresolved'").fetchone())
+    def test_nabench_findlay_target_is_directly_adjudicated(self):
+        r=json.loads((ROOT/'data/nabench-findlay-target-review.json').read_text())
+        self.assertEqual(r['matched_rows'],287)
+        self.assertEqual(r['transcript_strand_allele_matches'],287)
+        self.assertLess(r['max_absolute_error'],1e-12)
+        self.assertEqual({x['source_experiment']for x in r['pairs']},{'X20'})
+        self.assertEqual([x['column']for x in r['numerical_column_comparisons']if x['matching_nabench_rows']==287],['d11/lib.loess.r1'])
+        self.assertEqual(sum(r['consequences'].values()),287)
+        t=self.db.execute("SELECT target FROM tasks WHERE id='nabench-findlay-readout'").fetchone()[0]
+        self.assertIn('d11/lib.loess.r1',t)
+        self.assertIsNone(self.db.execute("SELECT id FROM source_limits WHERE entity_id='nabench-findlay-readout' AND field='target'").fetchone())
+        self.assertIsNone(self.db.execute("SELECT task_id FROM task_categories WHERE task_id='nabench-findlay-readout' AND category_id='rna-engineering'").fetchone())
+    def test_nt_gue_pool_identity_preserves_distinct_partitions(self):
+        r=json.loads((ROOT/'data/nt-gue-identity-review.json').read_text())
+        for mark,n in [('H3',14965),('H4',14601)]:
+            x=r['comparisons'][mark]
+            self.assertTrue(x['identical_multisets'])
+            self.assertEqual(x['shared_rows'],n)
+            self.assertEqual(sum(v['shared_sequence_label_rows']for v in x['partition_pairs']),n)
+            new='nt-original-'+mark
+            self.assertIsNone(self.db.execute('SELECT id FROM tasks WHERE id=?',('gue-'+mark,)).fetchone())
+            self.assertEqual(self.db.execute('SELECT replacement_task_id FROM task_redirects WHERE id=?',('gue-'+mark,)).fetchone()[0],new)
+            self.assertEqual(self.db.execute("SELECT variant_id FROM protocols WHERE id=?",('deepd-gue-'+mark,)).fetchone()[0],'deepd-gue-'+mark+'-source-cohort')
     def test_genosm_reuses_assays_and_retains_source_cohort(self):
         rows=self.db.execute("SELECT task_id FROM evaluation_tasks WHERE evaluation_id='genosm-evals' AND task_id LIKE 'rnagym-%'").fetchall()
         self.assertEqual(len(rows),13)
@@ -338,7 +393,7 @@ class CatalogueTests(unittest.TestCase):
     def test_source_limits_are_fields_not_unfinished_audits(self):
         limited=self.db.execute("SELECT id FROM tasks WHERE status='source-limited'").fetchall()
         self.assertTrue(limited)
-        allowed={'not-reported','not-released','not-retrieved','conflicting','access-restricted','not-applicable'}
+        allowed={'not-reported','not-released','not-retrieved','conflicting','access-restricted','size-excluded','not-applicable'}
         for task in limited:
             rows=self.db.execute("SELECT * FROM source_limits WHERE entity_table='tasks' AND entity_id=?",(task[0],)).fetchall()
             self.assertTrue(rows,task[0])
@@ -411,7 +466,7 @@ class CatalogueTests(unittest.TestCase):
             'human_enhancers_cohn','human_enhancers_ensembl','demo_human_or_worm','human_ensembl_regulatory',
             'human_ocr_ensembl','demo_coding_vs_intergenomic_seqs'}
         expected={'geneb-katarinagresova-genomic-benchmarks-'+n.replace('_','-'):'gb-'+n for n in names}
-        expected.update({'geneb-leannmlindsey-gue-emp-h3':'gue-H3','geneb-leannmlindsey-gue-emp-h4':'gue-H4',
+        expected.update({'geneb-leannmlindsey-gue-emp-h3':'nt-original-H3','geneb-leannmlindsey-gue-emp-h4':'nt-original-H4',
             'generator2-recovery':'generator-recovery',
             'botanic1-long-atac':'plantcad2-ft-cell_type_specific_acr'})
         self.assertEqual(len(expected),13)
@@ -533,6 +588,36 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(histone,14)
         self.assertEqual(self.db.execute('''SELECT COUNT(*) FROM task_tracks t JOIN assay_tracks a ON a.id=t.track_id
             JOIN populations p ON p.id=a.population_id WHERE t.task_id='ntv3-tracks-atac' AND p.name='Triticum aestivum' ''').fetchone()[0],0)
+
+    def test_reference_rna_origin_is_not_the_experimental_host(self):
+        expected={
+            'rnagym-soo-2021-ribozyme':'taxon-5911',
+            'evo-ncrna-zhang':'taxon-671',
+            'rnagym-peri-2022-ribozyme':'taxon-418699',
+            'rnagym-kobori-2015-ribozyme-j12':'synthetic',
+            'rnagym-kobori-2018-ribozyme':'synthetic',
+            'rnagym-tome-2014-nelfe-aptamer':'synthetic',
+            'rnagym-roberts-2023-hdv-ribozyme':'taxon-12475',
+            'rnagym-roberts-2023-hp-ribozyme':'taxon-31504',
+            'rnagym-roberts-2023-tw-ribozyme':'rice',
+            'rnagym-zhang-2020-cpeb3-ribozyme':'human'}
+        for task,pop in expected.items():
+            actual={r[0] for r in self.db.execute(
+                "SELECT population_id FROM task_populations WHERE task_id=? AND relation='sequence-origin'",(task,))}
+            self.assertEqual(actual,{pop},task)
+            self.assertEqual(self.db.execute(
+                'SELECT COUNT(*) FROM coverage_mappings WHERE task_id=? AND population_id IS NULL',(task,)).fetchone()[0],0)
+        parents=dict(self.db.execute('SELECT id,parent_id FROM populations'))
+        self.assertEqual(parents['taxon-12475'],'ribozyviria')
+        self.assertEqual(parents['taxon-31504'],'rna-satellites')
+        for task in ['rnagym-kobori-2015-ribozyme-tw','rnagym-roberts-2023-hh-ribozyme']:
+            limit=self.db.execute("SELECT detail FROM source_limits WHERE entity_id=? AND field='reference_organism'",(task,)).fetchone()[0]
+            self.assertIn('reference',limit)
+
+    def test_no_placeholder_outputs_or_unreviewed_retrieval_states(self):
+        self.assertEqual(self.db.execute("SELECT id FROM tasks WHERE output_description='Target prediction'").fetchall(),[])
+        self.assertEqual(self.db.execute("SELECT id FROM source_limits WHERE reason='not-retrieved'").fetchall(),[])
+        self.assertEqual(self.db.execute("SELECT id FROM data_resources WHERE availability='not-retrieved'").fetchall(),[])
 
     def test_profile_gene_vector_and_linked_structure_targets_remain_distinct(self):
         outputs={r['task_id']:dict(r) for r in self.db.execute('SELECT * FROM task_outputs')}

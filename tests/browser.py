@@ -51,6 +51,12 @@ with sync_playwright() as p:
     visit('#view=evaluations&evo=original')
     assert 'evo=' not in page.url and f'{TOTAL} matching records' in page.locator('#result-count').inner_text()
     assert page.locator('.coverage-feature').count()==len(DATA['coverage']['groupedFeatures'])
+    # Density must come from layout, without dropping task markers.
+    assert page.locator('.coverage-matrix thead').bounding_box()['height']<100
+    assert page.locator('.coverage-marks').first.evaluate('(e)=>getComputedStyle(e).gridTemplateColumns.split(" ").length')>5
+    assert page.locator('.tasks-table thead th').count()==6
+    assert 'Evo 2 use' not in page.locator('.tasks-table thead').inner_text()
+    assert page.locator('#output option[value="output-unresolved"]').count()==0
     assert page.evaluate('new Set([...document.querySelectorAll(".coverage-dot")].map(e=>e.dataset.coverageTask)).size')==TOTAL
     assert f'{TOTAL} matching records' in page.locator('#result-count').inner_text()
     assert len(rows())==100 and page.locator('#next-page').is_enabled()
@@ -143,8 +149,11 @@ with sync_playwright() as p:
     assert len(exported)==TOTAL and {r['id'] for r in exported}==set(TASKS)
     assert all(r['scored_output'] and r['scoring_unit'] and r['source_review_date'] for r in exported)
     assert {'data_resources','source_limits','evidence_level'}<=set(exported[0])
+    assert all('not established' not in r['evo2_original'] and 'not established' not in r['evo2_external'] for r in exported)
+    assert sum(r['evo2_original']=='listed in original-paper inventory' for r in exported)==83
+    assert next(r for r in exported if r['id']=='nabench-fuente-selection')['evo2_external']=='collection participant; assay execution not specified'
     # Direct links, datasets, source limits and retired IDs remain usable.
-    for task in ['bacbench-essential','nt-revised-enhancers_types','gue-H3','gpn-rvat','traitgym-mendelian','bend-opensplice','deepstarr-dev','aido2-clinvar-snv','genosm-bgc-types','plantcad2-tis_recovery','plantcad2-ft-cell_type_specific_acr','genecad-cds-transcript','spliceai2-top-transcript','deepd-human-routing-cds','carbon-triplet','evo-sae-prophage']:
+    for task in ['bacbench-essential','nt-revised-enhancers_types','nt-original-H3','gpn-rvat','traitgym-mendelian','bend-opensplice','deepstarr-dev','aido2-clinvar-snv','genosm-bgc-types','plantcad2-tis_recovery','plantcad2-ft-cell_type_specific_acr','genecad-cds-transcript','spliceai2-top-transcript','deepd-human-routing-cds','carbon-triplet','evo-sae-prophage']:
         visit('#view=evaluations&task='+task)
         assert rows()==[task]
         text=page.locator('.task-detail-row:not([hidden])').inner_text()
@@ -155,7 +164,7 @@ with sync_playwright() as p:
     assert page.locator('.resource-table a[href*="huggingface.co/datasets/songlab/TraitGym"]').count()>0
     visit('#view=evaluations&task=deepd-bacterial-fitness')
     assert 'Source limits' in page.locator('.task-detail-row:not([hidden])').inner_text()
-    for old in ['geneb-katarinagresova-genomic-benchmarks-human-nontata-promoters','generator2-recovery']:
+    for old in ['geneb-katarinagresova-genomic-benchmarks-human-nontata-promoters','generator2-recovery','gue-H3','geneb-leannmlindsey-gue-emp-h4']:
         if old not in ALIASES:continue
         visit('#view=evaluations&task='+old)
         assert rows()==[ALIASES[old]['replacement_task_id']]

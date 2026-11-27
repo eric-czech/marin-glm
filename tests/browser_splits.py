@@ -13,7 +13,8 @@ with sync_playwright() as p:
     url=(ROOT/'index.html').as_uri()
     page.goto(url+'#view=splits');page.wait_for_selector('.split-chart-row')
     assert page.locator('#page-title').inner_text()=='Splits'
-    assert page.locator('.split-chart-row').count()==12
+    assert page.locator('.split-chart-row').count()==16
+    assert page.locator('#split-cross-release .split-chart-row').count()==4
     for el in page.locator('.split-chart-row').all():
         c=C[el.get_attribute('data-comparison')];n=int(el.get_attribute('data-count'));d=int(el.get_attribute('data-denominator'))
         if c['overlap_type']=='exact-sequence':

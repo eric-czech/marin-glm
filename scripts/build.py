@@ -7,7 +7,7 @@ from coverage_data import export_coverage
 ROOT=Path(__file__).resolve().parents[1]
 INSERT_ORDER=['metadata','sources','papers','evidence','models','model_properties','populations','categories','metrics',
               'evaluations','tasks','task_outputs','task_feature_scopes','variants','assay_tracks','task_tracks','evaluation_tasks','task_populations','task_categories',
-              'protocols','protocol_metrics','counts','model_evaluations','findings',
+              'protocols','protocol_field_reviews','protocol_metrics','counts','model_evaluations','model_collection_evaluations','findings',
               'source_reviews','source_limits','data_resources','task_resources','evaluation_resources','task_redirects',
               'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
               'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings',
@@ -32,6 +32,18 @@ def load_catalogue(data, db):
         if bad:raise ValueError(f'{table}: completed source review missing: {[r[0] for r in bad]}')
     bad=db.execute("SELECT id FROM tasks WHERE status NOT IN ('artifact-audited','paper-audited','source-limited')").fetchall()
     if bad:raise ValueError(f'Unfinished task status: {[r[0] for r in bad]}')
+    for field in ('requires_embeddings','fitted_component','selection'):
+        bad=db.execute(f'''SELECT p.id FROM protocols p LEFT JOIN protocol_field_reviews r
+          ON r.protocol_id=p.id AND r.field=? WHERE p.{field} IS NULL AND r.protocol_id IS NULL''',(field,)).fetchall()
+        if bad:raise ValueError(f'Protocol field interpretation missing ({field}): {[r[0] for r in bad]}')
+    bad=db.execute("SELECT id FROM model_properties WHERE status IN ('unresolved','pending','incomplete')").fetchall()
+    if bad:raise ValueError(f'Unfinished model property: {[r[0] for r in bad]}')
+    bad=db.execute("SELECT id FROM source_limits WHERE reason='not-retrieved'").fetchall()
+    if bad:raise ValueError(f'Unfinished source retrieval: {[r[0] for r in bad]}')
+    bad=db.execute("SELECT id FROM data_resources WHERE availability='not-retrieved'").fetchall()
+    if bad:raise ValueError(f'Unreviewed data resource availability: {[r[0] for r in bad]}')
+    bad=db.execute("SELECT id FROM tasks WHERE output_description='Target prediction'").fetchall()
+    if bad:raise ValueError(f'Placeholder task output: {[r[0] for r in bad]}')
     bad=db.execute('''SELECT t.id FROM tasks t LEFT JOIN source_limits l
       ON l.entity_table='tasks' AND l.entity_id=t.id
       WHERE t.status='source-limited' GROUP BY t.id HAVING COUNT(l.id)=0''').fetchall()

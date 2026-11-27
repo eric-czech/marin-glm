@@ -1,0 +1,505 @@
+{
+  "reviewed": "2026-11-27",
+  "scope": "Primary reference-RNA papers and taxonomy; not a per-row alignment reconstruction",
+  "requests": [
+    {
+      "pmcid": "PMC7125110",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7125110/fullTextXML",
+      "status": 200,
+      "bytes": 123699,
+      "doi": "10.1038/s41467-020-15540-1",
+      "tasks": [
+        "rnagym-andreasson-2020-ribozyme"
+      ],
+      "sha256": "c9f269429af0c140619eaa83f74917f7053b09cf96b27074c070f89495222df7",
+      "paragraphs": 59
+    },
+    {
+      "pmcid": "PMC9421044",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9421044/fullTextXML",
+      "status": 200,
+      "bytes": 85912,
+      "doi": "10.3389/fmolb.2022.893864",
+      "tasks": [
+        "rnagym-beck-2022-ribozyme"
+      ],
+      "sha256": "b19db335e9b4b65df42fa37fcafc22d5ce6612520e601ee5c846e077ea896e6b",
+      "paragraphs": 42
+    },
+    {
+      "pmcid": "PMC4513843",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4513843/fullTextXML",
+      "status": 200,
+      "bytes": 83103,
+      "doi": "10.1093/nar/gkv265",
+      "tasks": [
+        "rnagym-kobori-2015-ribozyme-j12",
+        "rnagym-kobori-2015-ribozyme-p4",
+        "rnagym-kobori-2015-ribozyme-tw"
+      ],
+      "sha256": "70321a465f150b25ed92fc66c4fd12bcc7296f1239526f183a947d7481ec97bc",
+      "paragraphs": 46
+    },
+    {
+      "pmcid": "PMC4894649",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4894649/fullTextXML",
+      "status": 500,
+      "bytes": 150,
+      "doi": "10.1126/science.aae0568",
+      "tasks": [
+        "rnagym-li-2016-trna"
+      ]
+    },
+    {
+      "pmcid": "PMC8890501",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8890501/fullTextXML",
+      "status": 200,
+      "bytes": 106802,
+      "doi": "10.1093/molbev/msab373",
+      "tasks": [
+        "rnagym-peri-2022-ribozyme"
+      ],
+      "sha256": "bec8337b132cdc863d58caff7dff31a446e8e0c4c9de9e0b21d4b84d3937879d",
+      "paragraphs": 36
+    },
+    {
+      "pmcid": "PMC3392653",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3392653/fullTextXML",
+      "status": 500,
+      "bytes": 150,
+      "doi": "10.1126/science.1192001",
+      "tasks": [
+        "rnagym-pitt-2010-ribozyme"
+      ]
+    },
+    {
+      "pmcid": "PMC9901934",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9901934/fullTextXML",
+      "status": 200,
+      "bytes": 166263,
+      "doi": "10.7554/elife.80360",
+      "tasks": [
+        "rnagym-roberts-2023-cepeb3-ribozyme",
+        "rnagym-roberts-2023-hdv-ribozyme",
+        "rnagym-roberts-2023-hh-ribozyme",
+        "rnagym-roberts-2023-hp-ribozyme",
+        "rnagym-roberts-2023-tw-ribozyme"
+      ],
+      "sha256": "85e576e823369cb3b1d359da151a4b3a0676604c8e0d0da1e43231a4581945d2",
+      "paragraphs": 156
+    },
+    {
+      "pmcid": "PMC7877785",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7877785/fullTextXML",
+      "status": 200,
+      "bytes": 176968,
+      "doi": "10.1371/journal.pgen.1009353",
+      "tasks": [
+        "rnagym-soo-2021-ribozyme"
+      ],
+      "sha256": "b3f67533abc07101dc3ae4b82db8fd26ea960d058607e8ff17bf961593a2d023",
+      "paragraphs": 213
+    },
+    {
+      "pmcid": "PMC4073888",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4073888/fullTextXML",
+      "status": 200,
+      "bytes": 98905,
+      "doi": "10.1038/nmeth.2970",
+      "tasks": [
+        "rnagym-tome-2014-gfp-aptamer",
+        "rnagym-tome-2014-nelfe-aptamer"
+      ],
+      "sha256": "c01a9b79703938d7b1e7460981e382d68ea1fa69cba9d7e3e0ec3bdba5dd6075",
+      "paragraphs": 57
+    },
+    {
+      "pmcid": "PMC7026644",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7026644/fullTextXML",
+      "status": 200,
+      "bytes": 159371,
+      "doi": "10.1093/nar/gkz1192",
+      "tasks": [
+        "rnagym-zhang-2020-cpeb3-ribozyme"
+      ],
+      "sha256": "a89e5b0b708b155e946cdbe7b881caa2d76e1b7e434692fe23dded431138557e",
+      "paragraphs": 84
+    },
+    {
+      "pmcid": "PMC11620745",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11620745/fullTextXML",
+      "status": 200,
+      "bytes": 248018,
+      "doi": "10.7554/elife.90254",
+      "tasks": [
+        "rnagym-zhang-2024-line1-mini-ribozyme",
+        "rnagym-zhang-2024-line1-full-ribozyme",
+        "rnagym-zhang-2024-or4k15-ribozyme"
+      ],
+      "sha256": "c4479f8ba89ea4f14093e605fcfd729bb10236229be04788396617937ee55778",
+      "paragraphs": 305
+    },
+    {
+      "pmcid": "PMC10801858",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10801858/fullTextXML",
+      "status": 200,
+      "bytes": 107922,
+      "doi": "10.1073/pnas.2313332121",
+      "tasks": [
+        "rnagym-mcrae-2024-5tu-ribozyme",
+        "rnagym-mcrae-2024-t1-ribozyme"
+      ],
+      "sha256": "009e74f0c2c3d9d0c01099afc385ebae76a429c08d82146992366a18983a55ed",
+      "paragraphs": 64
+    },
+    {
+      "pmcid": "PMC5113685",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5113685/fullTextXML",
+      "status": 200,
+      "bytes": 49959,
+      "doi": "10.1002/anie.201605470",
+      "tasks": [
+        "rnagym-kobori-2016-osa-ribozyme"
+      ],
+      "sha256": "8ac9ee4287066219cd694cf91d9820348cfa03a9cda55868ae48650872e858e5",
+      "paragraphs": 27
+    },
+    {
+      "pmcid": "PMC4926175",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4926175/fullTextXML",
+      "status": 200,
+      "bytes": 141826,
+      "doi": "10.3390/v8060155",
+      "tasks": [
+        "rnagym-a0a2z5u3z0-9infa-doud-2016"
+      ],
+      "sha256": "09a603f73ae051b09901e612817861eccf2a642de791f0358c1bb7776d59f7fc",
+      "paragraphs": 57
+    },
+    {
+      "pmcid": "PMC3300005",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3300005/fullTextXML",
+      "status": 200,
+      "bytes": 90938,
+      "sha256": "301031511b6b5284ea0f26c8362e58125004c462cd5d413589899b39e57fe608"
+    },
+    {
+      "pmcid": "PMC3894171",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3894171/fullTextXML",
+      "status": 200,
+      "bytes": 145218,
+      "sha256": "041d9dd76777f3da07ee6c8aebbc8f2eae16c9dd591778e1bd91de8833704055"
+    },
+    {
+      "pmcid": "PMC5966336",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5966336/fullTextXML",
+      "status": 500,
+      "bytes": 150,
+      "sha256": "dd5f1cb0fb1660e4eedfff9a9697042dfeeb7bdffe9cd0abb6a331d6862b9737"
+    },
+    {
+      "key": "li-author",
+      "url": "https://public.websites.umich.edu/~zhanglab/publications/2016/Li_2016_Science.pdf",
+      "status": 200,
+      "bytes": 679801,
+      "sha256": "f07dfb26a659eff542d257c8b681649c4bf833b22f803f348689277330d35ba8"
+    },
+    {
+      "key": "zhang-rRNA-author",
+      "url": "https://zdzlab.einsteinmed.edu/m/publications/19041908.pdf",
+      "status": 403,
+      "bytes": 413,
+      "sha256": "6b451d1dd53d7716b376db6400d2cf7f03e6f31774566b53a2ce6b3ee241a24c"
+    },
+    {
+      "key": "taxonomy-12475",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=12475,31504,418699&retmode=xml",
+      "status": 200,
+      "bytes": 7210,
+      "sha256": "732f77a835a067ccfd7030ebe8f4cc057d0f579b6cf683962929fde0cbac31cd"
+    },
+    {
+      "key": "azo-genbank",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=DQ103524.1&rettype=gb&retmode=text",
+      "status": 200,
+      "bytes": 1360,
+      "sha256": "a2229aff7c4e886a80c3f620b6dcb43a23dfad6d6e8684b3d266a86e81bc9f0f"
+    },
+    {
+      "key": "kobori-acs",
+      "url": "https://pubs.acs.org/asbcd6/article/6/7/1283/730954/Deep-Sequencing-Analysis-of-Aptazyme-Variants",
+      "status": 403,
+      "bytes": 5727,
+      "sha256": "11ce4e1a82e96b024eb0374ad1d20c181128a1f7a187c45bc1d47fbb3705537a"
+    },
+    {
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=671&retmode=xml",
+      "status": 200,
+      "sha256": "4d5d07b4c325681c81ea0cd2bb6d0e09ea20e2212235875d2ae53d62dcbda38c",
+      "taxa": [
+        {
+          "id": "671",
+          "name": "Vibrio proteolyticus",
+          "rank": "species",
+          "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "evidence_id": "rna-origin-hayden",
+      "tasks": [
+        "evo-ncrna-hayden"
+      ],
+      "population": "pseudomonadota",
+      "locator": "Primary study organism indexing: Azoarcus/enzymology; cited reference group-I intron",
+      "conclusion": "The study identifies the bacterial Azoarcus group-I ribozyme. The genus belongs to Pseudomonadota; no exact species accession for Evo’s retained cohort is inferred from the separate Peri study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21637259/"
+    },
+    {
+      "evidence_id": "rna-origin-andreasson",
+      "tasks": [
+        "rnagym-andreasson-2020-ribozyme",
+        "evo-ncrna-andreasson"
+      ],
+      "population": "bacteria",
+      "locator": "Results: consensus core glmS construct; Methods: RNA library design",
+      "conclusion": "The reference is a consensus bacterial glmS ribozyme core, with designed linkers. This supports bacterial-family relevance, not a sampled natural species or a species-wide cohort.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7125110/"
+    },
+    {
+      "evidence_id": "rna-origin-beck",
+      "tasks": [
+        "rnagym-beck-2022-ribozyme"
+      ],
+      "population": "mammals",
+      "locator": "Introduction; Results: CPEB3 mutant library",
+      "conclusion": "The reference is a mammalian CPEB3 intronic ribozyme. The source describes this lineage but does not identify a species accession for the 69-nt reference; human origin is not inferred merely from the family name.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9421044/"
+    },
+    {
+      "evidence_id": "rna-origin-kobori2015-chimeras",
+      "tasks": [
+        "rnagym-kobori-2015-ribozyme-j12",
+        "rnagym-kobori-2015-ribozyme-p4"
+      ],
+      "population": "synthetic",
+      "locator": "Results: Design of ribozyme libraries; Figure2B–C",
+      "conclusion": "Lib-J1/2 and Lib-P4 fuse the Anopheles gambiae drz-Agam-2-1 ribozyme with a Bacillus subtilis guanine aptamer and randomized connectors. They are engineered chimeras, not natural single-species RNA cohorts.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4513843/"
+    },
+    {
+      "evidence_id": "rna-origin-kobori2015-environment",
+      "tasks": [
+        "rnagym-kobori-2015-ribozyme-tw",
+        "evo-ncrna-kobori"
+      ],
+      "population": null,
+      "locator": "Results: Design of ribozyme libraries; Figure2A",
+      "conclusion": "Lib-Tw uses the twister reference described as an environmental DNA sequence, with modified termini and five randomized bases. This source does not identify its organism. Evo’s Kobori panel cites this paper, which also contains cross-species engineered aptazymes; the original panel does not provide a retained-row manifest distinguishing these arms.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4513843/"
+    },
+    {
+      "evidence_id": "rna-origin-kobori2018",
+      "tasks": [
+        "rnagym-kobori-2018-ribozyme"
+      ],
+      "population": "synthetic",
+      "locator": "Results and Discussion; Figure1a",
+      "conclusion": "The aptazyme library fuses a pistol ribozyme from Alistipes putredinis with the Bacillus subtilis xpt-pbuX guanine aptamer and randomized connecting bases. This is an engineered chimera, not one natural organism.",
+      "url": "https://pubs.acs.org/asbcd6/article/6/7/1283/730954/Deep-Sequencing-Analysis-of-Aptazyme-Variants"
+    },
+    {
+      "evidence_id": "rna-origin-li2016",
+      "tasks": [
+        "rnagym-li-2016-trna"
+      ],
+      "population": "yeast",
+      "locator": "Main text: native-locus gene replacement and library design",
+      "conclusion": "The reference is the S.cerevisiae single-copy Arg-CCU tRNA. Mutant strains replace that gene at its native locus; the high-temperature growth assay does not represent multiple species.",
+      "url": "https://public.websites.umich.edu/~zhanglab/publications/2016/Li_2016_Science.pdf#page=1"
+    },
+    {
+      "evidence_id": "rna-origin-li2018",
+      "tasks": [
+        "nabench-li-environments"
+      ],
+      "population": "yeast",
+      "locator": "Results: Mapping multi-environment FLs of a tRNA gene",
+      "conclusion": "The reference is S.cerevisiae HSX1/Arg-CCU tRNA, replaced at its native locus and assayed across environments. Environment labels are not distinct species.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5966336/"
+    },
+    {
+      "evidence_id": "rna-origin-peri",
+      "tasks": [
+        "rnagym-peri-2022-ribozyme"
+      ],
+      "population": "taxon-418699",
+      "locator": "Introduction: reference accession DQ103524.1; Methods: DNA template",
+      "conclusion": "The reference derives from the Azoarcus group-I tRNA intron, accession DQ103524.1. Current GenBank identifies Azoarcus olearius, formerly Azoarcus sp.BH72. The study mutates seven sites and assays in vitro at eight magnesium concentrations; this is reference-RNA origin, not a panel of bacterial organisms.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8890501/"
+    },
+    {
+      "evidence_id": "rna-origin-pitt",
+      "tasks": [
+        "rnagym-pitt-2010-ribozyme",
+        "evo-ncrna-pitt"
+      ],
+      "population": "synthetic",
+      "locator": "Main text: choice of class-II ligase and isolate a4-11",
+      "conclusion": "The reference is the in-vitro-selected class-II ligase isolate a4-11. The experiment mutagenizes and reselects that artificial RNA; its comparison to viral population evolution does not assign it a viral organism.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3392653/"
+    },
+    {
+      "evidence_id": "rna-origin-roberts-cpeb3",
+      "tasks": [
+        "rnagym-roberts-2023-cepeb3-ribozyme"
+      ],
+      "population": "mammals",
+      "locator": "Results: Comprehensive analysis of mutational effects; Figures1–5; Methods: library preparation",
+      "conclusion": "The assayed reference is described as a mammalian CPEB3 ribozyme. No species accession is assigned to this 69-nt construct; it is not assumed identical to another CPEB3 assay.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901934/"
+    },
+    {
+      "evidence_id": "rna-origin-roberts-hdv",
+      "tasks": [
+        "rnagym-roberts-2023-hdv-ribozyme"
+      ],
+      "population": "taxon-12475",
+      "locator": "Results: Comprehensive analysis of mutational effects; Figures1–5; Methods: library preparation",
+      "conclusion": "The reference is a hepatitis delta virus ribozyme. Its lineage is Ribozyviria, not Riboviria; the in-vitro assay is not evidence of a human genomic RNA target.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901934/"
+    },
+    {
+      "evidence_id": "rna-origin-roberts-twister",
+      "tasks": [
+        "rnagym-roberts-2023-tw-ribozyme"
+      ],
+      "population": "rice",
+      "locator": "Results: Comprehensive analysis of mutational effects; Figures1–5; Methods: library preparation",
+      "conclusion": "The reference is explicitly an Oryza sativa twister ribozyme. A rice-derived RNA mutant assay does not establish genome-wide plant prediction.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901934/"
+    },
+    {
+      "evidence_id": "rna-origin-roberts-hairpin",
+      "tasks": [
+        "rnagym-roberts-2023-hp-ribozyme"
+      ],
+      "population": "taxon-31504",
+      "locator": "Results: Comprehensive analysis of mutational effects; Figures1–5; Methods: library preparation",
+      "conclusion": "The hairpin reference derives from tobacco ringspot virus satellite RNA. The satellite RNA, helper virus and tobacco host are distinct; the assignment follows the satellite reference.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901934/"
+    },
+    {
+      "evidence_id": "rna-origin-roberts-hammerhead",
+      "tasks": [
+        "rnagym-roberts-2023-hh-ribozyme"
+      ],
+      "population": null,
+      "locator": "Results: Comprehensive analysis of mutational effects; Figures1–5; Methods: library preparation",
+      "conclusion": "The assayed construct is a type-III hammerhead ribozyme. The paper compares it with sTRSV structural data but supplies no organism accession for this exact 45-nt reference; structural comparison alone does not establish its natural taxon.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9901934/"
+    },
+    {
+      "evidence_id": "rna-origin-soo",
+      "tasks": [
+        "rnagym-soo-2021-ribozyme"
+      ],
+      "population": "taxon-5911",
+      "locator": "Introduction; Results: in-vivo selection of group-I intron variants",
+      "conclusion": "The reference intron is from Tetrahymena thermophila. E.coli is the assay host, not the origin of the mutated intron sequence.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7877785/"
+    },
+    {
+      "evidence_id": "rna-origin-tome",
+      "tasks": [
+        "rnagym-tome-2014-gfp-aptamer",
+        "rnagym-tome-2014-nelfe-aptamer"
+      ],
+      "population": "synthetic",
+      "locator": "Main text; Online Methods: construction of HiTS-RAP halting templates; references16–17",
+      "conclusion": "The inputs are mutagenized GFP-binding and NELF-E-binding aptamers from selection studies. They are selected RNA constructs; the GFP or Drosophila protein target does not establish a natural species origin for the aptamer RNA.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4073888/"
+    },
+    {
+      "evidence_id": "rna-origin-gfp-selex",
+      "tasks": [],
+      "population": null,
+      "locator": "Results: aptamer selection; Methods: SELEX",
+      "conclusion": "The GFP aptamers were selected from a random-core RNA pool and optimized by deletion, substitution and additional SELEX.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3300005/"
+    },
+    {
+      "evidence_id": "rna-origin-nelf-selex",
+      "tasks": [],
+      "population": null,
+      "locator": "Results: aptamer selection; Methods: SELEX",
+      "conclusion": "The NELF-E aptamer selection starts from a 70-nucleotide randomized region with constant amplification flanks. A separate nascent-genomic-RNA selection is not the origin of this random-library aptamer.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3894171/"
+    },
+    {
+      "evidence_id": "rna-origin-zhang2020",
+      "tasks": [
+        "rnagym-zhang-2020-cpeb3-ribozyme"
+      ],
+      "population": "human",
+      "locator": "Introduction: 81-nucleotide CPEB3 reference",
+      "conclusion": "The source explicitly places its 81-nt CPEB3 ribozyme in an intron of the human CPEB3 gene. This human-origin assignment does not equate its cohort with the separate 69-nt CPEB3 assays.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7026644/"
+    },
+    {
+      "evidence_id": "rna-origin-zhang2024",
+      "tasks": [
+        "rnagym-zhang-2024-line1-mini-ribozyme",
+        "rnagym-zhang-2024-line1-full-ribozyme",
+        "rnagym-zhang-2024-or4k15-ribozyme"
+      ],
+      "population": "human",
+      "locator": "Results: LINE-1 and OR4K15 ribozyme identification and deep mutational scanning",
+      "conclusion": "The full/mini LINE-1 and OR4K15 references are identified in human genomic sequence. This is reference-sequence origin; in-vitro cleavage does not assess whole-gene or transcript recovery.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11620745/"
+    },
+    {
+      "evidence_id": "rna-origin-mcrae",
+      "tasks": [
+        "rnagym-mcrae-2024-5tu-ribozyme",
+        "rnagym-mcrae-2024-t1-ribozyme"
+      ],
+      "population": "synthetic",
+      "locator": "Introduction; Results: evolved polymerase ribozyme and 5TU/t1 components",
+      "conclusion": "The reference is an in-vitro-evolved RNA polymerase ribozyme, including the active 5TU and inactive t1 components. The study does not assign these selected constructs to a natural species.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10801858/"
+    },
+    {
+      "evidence_id": "rna-origin-kobori2016",
+      "tasks": [
+        "rnagym-kobori-2016-osa-ribozyme"
+      ],
+      "population": "rice",
+      "locator": "Main text: Osa-1-4 reference and library design",
+      "conclusion": "The 54-nt reference is Oryza sativa Osa-1-4; 48 positions are randomized for mutational analysis. The source names rice, rather than an unresolved environmental twister.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5113685/"
+    },
+    {
+      "evidence_id": "rna-origin-doud",
+      "tasks": [
+        "rnagym-a0a2z5u3z0-9infa-doud-2016"
+      ],
+      "population": "taxon-2955291",
+      "locator": "Methods: virus and HA mutant libraries",
+      "conclusion": "The target is A/WSN/1933 (H1N1) influenza hemagglutinin. The sequence assignment follows influenza A, not the mammalian culture host used to measure viral growth.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4926175/"
+    },
+    {
+      "evidence_id": "rna-origin-zhang2009",
+      "tasks": [
+        "evo-ncrna-zhang"
+      ],
+      "population": "taxon-671",
+      "locator": "§§2.1–2.2: pCV251 and pCV5S",
+      "conclusion": "The assayed 5S rRNA reference is Vibrio proteolyticus. The compensatory construct retains E.coli promoters/terminator and is assayed in an E.coli knockout host; the mutated 5S reference is not E.coli.",
+      "url": "https://zdzlab.einsteinmed.edu/m/publications/19041908.pdf#page=2"
+    }
+  ]
+}

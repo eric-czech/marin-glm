@@ -1,0 +1,458 @@
+{
+  "inspected": "2026-11-27",
+  "scope": "Bounded source availability and current release metadata; no model weights or large benchmark payloads downloaded.",
+  "requests": [
+    {
+      "url": "https://www.biorxiv.org/content/biorxiv/early/2026/10/18/2026.10.13.758170/DC2/embed/media-2.docx?download=true",
+      "status": 429,
+      "bytes": 11533,
+      "sha256": "cb432b74dfb9fa88a32d7d6313f6882e233b78b7009a7fff36c7c94fd6d4661a",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.biorxiv.org/content/biorxiv/early/2026/10/18/2026.10.13.758170/DC2/embed/media-2.docx?download=true",
+      "id": "deepd-dc2"
+    },
+    {
+      "url": "https://api.biorxiv.org/details/biorxiv/10.64898/2026.10.02.756377",
+      "status": 200,
+      "bytes": 2675,
+      "sha256": "9ece315374e41c7c6691dc6f6c56d146931eb6594d09f84b667959ba57aac2df",
+      "content_type": "application/json",
+      "final_url": "https://api.biorxiv.org/details/biorxiv/10.64898/2026.10.02.756377",
+      "id": "cerberus-api"
+    },
+    {
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.02.756377v1.full",
+      "status": 429,
+      "bytes": 12175,
+      "sha256": "6207529c9fece479d721f16e4894dd0ac7622c9836184d2a2da66f64b2ccfd65",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.biorxiv.org/content/10.64898/2026.10.02.756377v1.full",
+      "id": "cerberus-full"
+    },
+    {
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765857v1.supplementary-material",
+      "status": 429,
+      "bytes": 12175,
+      "sha256": "88b187a286b10249bb2cb3296a8f3b473ff7d4e5fad96e64ac956b986e298428",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765857v1.supplementary-material",
+      "id": "ag2-supplements"
+    },
+    {
+      "url": "https://huggingface.co/api/models?author=genbio-ai&limit=1000",
+      "status": 200,
+      "bytes": 19582,
+      "sha256": "b99464cb6936df1b8c0754a02cf7c28dea3c1eab04bd56625b92be587032d5f9",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://huggingface.co/api/models?author=genbio-ai&limit=1000",
+      "models": [
+        "genbio-ai/GB.DNA-dummy",
+        "genbio-ai/GB.DNA-300M",
+        "genbio-ai/GB.DNA-7B",
+        "genbio-ai/GB.RNA-650M",
+        "genbio-ai/GB.RNA-1.6B",
+        "genbio-ai/GB.Protein-16B",
+        "genbio-ai/GB.Protein-16B-v1",
+        "genbio-ai/dummy-ckpt-hf",
+        "genbio-ai/GB.DNA-7B-nt-enhancers",
+        "genbio-ai/GB.Cell-3M",
+        "genbio-ai/GB.RNA-1.6B-CDS",
+        "genbio-ai/GB.RNA-650M-CDS",
+        "genbio-ai/GB.RNA-1M-MARS",
+        "genbio-ai/GB.RNA-25M-MARS",
+        "genbio-ai/GB.DNA-7B-nt-promoter-all",
+        "genbio-ai/GB.RNA-300M-MARS",
+        "genbio-ai/GB.DNA-7B-gue-core-promoter-all",
+        "genbio-ai/GB.DNA-7B-gue-splice-reconstruction",
+        "genbio-ai/GB.RNA-1.6B-csp-acceptor",
+        "genbio-ai/GB.Protein-16B-dms-indels-B1LPA6_ECOSM_Russ_2020_indels",
+        "genbio-ai/GB.RNA-1.6B-nfc-bnoise0",
+        "genbio-ai/GB.Protein-16B-dms-indels-S22A1_HUMAN_Yee_2023_abundance_indels",
+        "genbio-ai/GB.RNA-1.6B-msp",
+        "genbio-ai/GB.Protein-16B-dms-indels-BLAT_ECOLX_Gonzalez_2019_indels",
+        "genbio-ai/GB.RNA-1.6B-CDS-protein-abundance-hsapiens",
+        "genbio-ai/GB.Protein-16B-dms-indels-FECA_ECOLI_Tsuboyama_2023_2D1U_indels",
+        "genbio-ai/GB.RNA-1.6B-transcript-abundance-ecoli",
+        "genbio-ai/GB.Protein-16B-dms-substitutions-VRPI_BPT7_Tsuboyama_2023_2WNM",
+        "genbio-ai/GB.Protein-16B-dms-substitutions-LGK_LIPST_Klesmith_2015",
+        "genbio-ai/GB.Protein-16B-dms-substitutions-A4GRB6_PSEAI_Chen_2020",
+        "genbio-ai/GB.Protein-16B-dms-substitutions-Q53Z42_HUMAN_McShan_2019_binding-TAPBPR",
+        "genbio-ai/GB.Protein-16B-dms-substitutions-CP2C9_HUMAN_Amorosi_2021_abundance",
+        "genbio-ai/GB.StructureTokenizer",
+        "genbio-ai/GB.Protein-16B-ssp_q3",
+        "genbio-ai/GB.Protein-16B-fold-prediction",
+        "genbio-ai/GB.Protein-16B-peptide_HLA_MHC_affinity",
+        "genbio-ai/GB.Protein-16B-tcr_pmhc_affinity",
+        "genbio-ai/GB.Protein-16B-fluorescence_prediction",
+        "genbio-ai/GB.RNA-1.6B-bpRNA_secondary_structure_prediction",
+        "genbio-ai/GB.StructureEncoder",
+        "genbio-ai/GB.StructureDecoder",
+        "genbio-ai/GB.RNA-1.6B-translation-efficiency-muscle",
+        "genbio-ai/GB.RNA-1.6B-mrna-expression-level-pc3",
+        "genbio-ai/GB.Protein2StructureToken-16B",
+        "genbio-ai/GB.Cell-10M",
+        "genbio-ai/GB.Cell-100M",
+        "genbio-ai/proteinfm-16b-contact_prediction_binary-ckpt",
+        "genbio-ai/GB.ProteinIF-16B",
+        "genbio-ai/GB.RNAIF-1.6B",
+        "genbio-ai/IsoformExpression-Enformer-GB.RNA-1.6B-CDS-ESM2-150M-ConcatFusion-rna-isoform-expression-ckpt",
+        "genbio-ai/IsoformExpression-Enformer-GB.RNA-1.6B-CDS-ConcatFusion-rna-isoform-expression-ckpt",
+        "genbio-ai/scFoundation",
+        "genbio-ai/GB.Tissue-3M",
+        "genbio-ai/GB.Tissue-60M",
+        "genbio-ai/GB.Protein-RAG-3B",
+        "genbio-ai/GB.Protein-RAG-16B",
+        "genbio-ai/GB.StructurePrediction",
+        "genbio-ai/GB.Protein-RAG-16B-proteingym-dms-zeroshot",
+        "genbio-ai/genbio-pathfm",
+        "genbio-ai/STRING_GNN"
+      ],
+      "id": "genbio-model-index"
+    },
+    {
+      "url": "https://huggingface.co/api/models?search=AIDO.DNA2&limit=100",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://huggingface.co/api/models?search=AIDO.DNA2&limit=100",
+      "models": [],
+      "id": "dna2-model-search"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/HuggingFaceBio/DNAIntelligenceIndex",
+      "status": 401,
+      "bytes": 41,
+      "sha256": "65842e3d84e6b7f62a470c85204e80b953bb8f944e9b69813130a9d7f3eaa1d8",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://huggingface.co/api/datasets/HuggingFaceBio/DNAIntelligenceIndex",
+      "id": "carbonx-data"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/HuggingFaceBio/brca2-vep",
+      "status": 401,
+      "bytes": 41,
+      "sha256": "65842e3d84e6b7f62a470c85204e80b953bb8f944e9b69813130a9d7f3eaa1d8",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://huggingface.co/api/datasets/HuggingFaceBio/brca2-vep",
+      "id": "carbon-brca2"
+    },
+    {
+      "url": "https://api.biorxiv.org/details/biorxiv/10.64898/2026.09.28.755120",
+      "status": 200,
+      "bytes": 2534,
+      "sha256": "51829bc35306396485d8292b89db8aa8a77cfadf214d4bbc6c70f28a2d8ebb43",
+      "content_type": "application/json",
+      "final_url": "https://api.biorxiv.org/details/biorxiv/10.64898/2026.09.28.755120",
+      "id": "loam-api"
+    },
+    {
+      "url": "https://api.github.com/repos/BGI-HangzhouAI/Genos-m/commits/main",
+      "status": 200,
+      "bytes": 7650,
+      "sha256": "81f16e0ecf982d160339b715af61afa5458ed982f393401409cb4df656c75577",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://api.github.com/repos/BGI-HangzhouAI/Genos-m/commits/main",
+      "revision": "f0b05fdbd5441fe74bf41bb2e8750f03e2c50a03",
+      "id": "genosm-head"
+    },
+    {
+      "url": "https://api.github.com/repos/biomap-research/DeepD/commits/main",
+      "status": 200,
+      "bytes": 6657,
+      "sha256": "c2c3558030f2f85c8c8b5acf9168e5d02786a7e38239a2773da29831d0c50b6d",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://api.github.com/repos/biomap-research/DeepD/commits/main",
+      "revision": "2896082aa1b7483d3c4062e125050ebc815aea25",
+      "id": "deepd-head"
+    },
+    {
+      "url": "https://api.github.com/repos/mrzzmrzz/NABench/commits/main",
+      "status": 200,
+      "bytes": 7396,
+      "sha256": "58db87d3b1f911121a8da9a3905ab7ca9318155c3ec53e686aed88d993aec0e3",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://api.github.com/repos/mrzzmrzz/NABench/commits/main",
+      "revision": "99c8681ec1eab706e10ff90a5c329dcf184cc1d1",
+      "id": "nabench-head"
+    },
+    {
+      "url": "https://api.github.com/repos/calico/baskerville/commits/main",
+      "status": 200,
+      "bytes": 144064,
+      "sha256": "c35a23595b8f494c940e03797d51dbff6c20121fbb44b3bfe87c1dacd9609efa",
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://api.github.com/repos/calico/baskerville/commits/main",
+      "revision": "4330a9281e8d3b060c03249a05047a4fb37d2576",
+      "id": "baskerville-head"
+    },
+    {
+      "id": "cerberus-xml",
+      "url": "https://www.biorxiv.org/content/early/2026/10/09/2026.10.02.756377.source.xml",
+      "status": 429,
+      "bytes": 12175
+    },
+    {
+      "id": "loam-xml",
+      "url": "https://www.biorxiv.org/content/early/2026/10/02/2026.09.28.755120.source.xml",
+      "status": 429,
+      "bytes": 12175
+    },
+    {
+      "id": "calico-tree",
+      "url": "https://api.github.com/repos/calico/baskerville/git/trees/4330a9281e8d3b060c03249a05047a4fb37d2576?recursive=1",
+      "status": 200,
+      "bytes": 63641,
+      "sha256": "3a204777b54bebed8d29e8149adf1102b17e0f32e46533c53333d5ec9c47facc"
+    },
+    {
+      "id": "ag2-blog",
+      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+      "status": 200,
+      "bytes": 157778,
+      "sha256": "123f806f00887e30ac7fb1725db2e30435722a04823aaeca35b6339d7e19841f"
+    },
+    {
+      "id": "cerberus-readme",
+      "url": "https://raw.githubusercontent.com/calico/baskerville/4330a9281e8d3b060c03249a05047a4fb37d2576/releases/cerberus/README.md",
+      "status": 200,
+      "bytes": 4290,
+      "sha256": "b8a878bc80a896956972aaa74795ea166d9ea78486b0f9b723bc9760bb3646db"
+    },
+    {
+      "id": "cerberus-download",
+      "url": "https://raw.githubusercontent.com/calico/baskerville/4330a9281e8d3b060c03249a05047a4fb37d2576/releases/cerberus/download.sh",
+      "status": 200,
+      "bytes": 955,
+      "sha256": "284292df1d79d0cf57317d08ef20d5694e8ef86d13ae6d09ebeaa0d45dc2fd41"
+    },
+    {
+      "id": "nabench-tree",
+      "url": "https://api.github.com/repos/mrzzmrzz/NABench/git/trees/99c8681ec1eab706e10ff90a5c329dcf184cc1d1?recursive=1",
+      "status": 200,
+      "bytes": 25572,
+      "sha256": "7831431ffef5e3bbc402fcf347be895d86b8d91d9fdbc12704ca0e5f344ed491"
+    }
+  ],
+  "findings": [
+    "The official GenBio model index contains no AIDO.DNA2 entry; exact-name search returns an empty list. This does not prove the absence of unpublished or unindexed artifacts.",
+    "Cerberus release README explicitly says processed training data are pending; the abstract claim of released data is not a processed cohort manifest.",
+    "NABench pinned tree contains extraction scripts but no downstream ridge runner or complete model-by-assay execution manifest.",
+    "Genos-m, DeepD and NABench main revisions match the previously inspected releases.",
+    "DeepD DC2, Cerberus/LOAM XML and AlphaGenome2 supplements remain inaccessible at the identified publisher endpoints (HTTP429); Carbon dataset APIs return401.",
+    "BaseSpace public share redirects to Illumina login in a browser; no authenticated access attempted.",
+    "Synapse task5 entity metadata is public, but both version2 file-handle endpoints returned403 for anonymous access.",
+    "All five DOI-specific DNALongBench Dataverse metadata API requests returned403."
+  ],
+  "access_checks": {
+    "basespace-browser": {
+      "url": "https://login.illumina.com/login/?clientId=basespace&rMethod=GET&rURL=aHR0cHM6Ly9iYXNlc3BhY2UuaWxsdW1pbmEuY29tL3MvNXU2VGhPYmxlY3Jo&isURLEncoded=true&isRedirected=true",
+      "api_responses": [],
+      "sign_in_redirect": true,
+      "page_heading": "Log in"
+    },
+    "synapse-metadata": [
+      {
+        "url": "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn59522070",
+        "status": 200,
+        "bytes": 316,
+        "sha256": "0ca6036edf2bde08f51fa00e782975859d188590a8e283db4a4932a7a275d65a",
+        "response": {
+          "name": "DART-Eval",
+          "id": "syn59522070",
+          "etag": "5965495e-3b13-4886-a1e4-815c6e5bbb67",
+          "createdOn": "2024-05-17T18:55:44.406Z",
+          "modifiedOn": "2026-05-21T03:09:38.770Z",
+          "createdBy": "3453718",
+          "modifiedBy": "3324230",
+          "parentId": "syn4489",
+          "concreteType": "org.sagebionetworks.repo.model.Project",
+          "alias": "DART_Eval_Benchmark"
+        }
+      },
+      {
+        "url": "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn60756043",
+        "status": 200,
+        "bytes": 389,
+        "sha256": "314371c5778f50a1673feed1f8920b7f4aad168aeb55c189873a3142eff2fc4d",
+        "response": {
+          "name": "Afr.CaQTLS.tsv",
+          "id": "syn60756043",
+          "etag": "495ed52c-928b-43da-83ce-35c7d78b53e4",
+          "createdOn": "2024-06-12T06:53:52.582Z",
+          "modifiedOn": "2026-05-19T19:48:56.329Z",
+          "createdBy": "3453718",
+          "modifiedBy": "3485485",
+          "parentId": "syn60581209",
+          "concreteType": "org.sagebionetworks.repo.model.FileEntity",
+          "versionNumber": 2,
+          "versionLabel": "2",
+          "isLatestVersion": true,
+          "dataFileHandleId": "173808988"
+        }
+      },
+      {
+        "url": "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn60756039",
+        "status": 200,
+        "bytes": 406,
+        "sha256": "2b347471099591f838ec7e608c75927c98f753850c9100c237080bb1d72a7e15",
+        "response": {
+          "name": "yoruban.dsqtls.benchmarking.tsv",
+          "id": "syn60756039",
+          "etag": "fdab24b9-8c3b-434b-8527-523e8200090b",
+          "createdOn": "2024-06-12T06:53:49.353Z",
+          "modifiedOn": "2026-05-19T19:48:50.008Z",
+          "createdBy": "3453718",
+          "modifiedBy": "3485485",
+          "parentId": "syn60581209",
+          "concreteType": "org.sagebionetworks.repo.model.FileEntity",
+          "versionNumber": 2,
+          "versionLabel": "2",
+          "isLatestVersion": true,
+          "dataFileHandleId": "173808975"
+        }
+      }
+    ],
+    "synapse-filehandles": [
+      {
+        "url": "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn60756043/version/2/filehandles",
+        "status": 403,
+        "response": {
+          "concreteType": "org.sagebionetworks.repo.model.ErrorResponse",
+          "reason": "Anonymous users have only READ access permission."
+        }
+      },
+      {
+        "url": "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn60756039/version/2/filehandles",
+        "status": 403,
+        "response": {
+          "concreteType": "org.sagebionetworks.repo.model.ErrorResponse",
+          "reason": "Anonymous users have only READ access permission."
+        }
+      }
+    ],
+    "dataverse-availability": [
+      {
+        "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/CTEQXX",
+        "status": 403,
+        "bytes": 199,
+        "sha256": "5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10",
+        "content_type": "text/html; charset=iso-8859-1"
+      },
+      {
+        "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/YUP2G5",
+        "status": 403,
+        "bytes": 199,
+        "sha256": "5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10",
+        "content_type": "text/html; charset=iso-8859-1"
+      },
+      {
+        "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/AZM25S",
+        "status": 403,
+        "bytes": 199,
+        "sha256": "5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10",
+        "content_type": "text/html; charset=iso-8859-1"
+      },
+      {
+        "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/MNUEZR",
+        "status": 403,
+        "bytes": 199,
+        "sha256": "5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10",
+        "content_type": "text/html; charset=iso-8859-1"
+      },
+      {
+        "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/VXQKWO",
+        "status": 403,
+        "bytes": 199,
+        "sha256": "5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10",
+        "content_type": "text/html; charset=iso-8859-1"
+      }
+    ]
+  },
+  "additional_file_inspections": [
+    {
+      "file": "evo1.pdf",
+      "bytes": 3228516,
+      "sha256": "641fb04a9a4db77dbdd5f838aa70d650c381e19e5b74f65210b5599264cc365d"
+    },
+    {
+      "file": "findlay-moesm3.xlsx",
+      "bytes": 2306341,
+      "sha256": "e9aa4186b8a5de91d61059d03f8dac1e5573d1e2802f50a6581c3053d22b923a"
+    },
+    {
+      "file": "findlay-moesm4.xlsx",
+      "bytes": 71136,
+      "sha256": "ff25eafd56632cb0c890b42f79930944fc2d7c75f0c660e26a81fa415d3be181"
+    },
+    {
+      "file": "findlay-moesm5.xlsx",
+      "bytes": 45762,
+      "sha256": "340c161b1cfb5ad49552a0980869f55af7682b34e06f177e5df8944b710168e6"
+    },
+    {
+      "file": "findlay-supp.pdf",
+      "bytes": 434619,
+      "sha256": "f400cda0c3de3f6922071e6e65b16cd65229e5df4930d47df9cf57692b738de6"
+    },
+    {
+      "file": "mrna-builder.py",
+      "bytes": 7694,
+      "sha256": "f37175dee6e38f35cbd9062335860a35be224d4d822fc4950e61d2e8e7a4218e"
+    },
+    {
+      "file": "mrna-probe.py",
+      "bytes": 9045,
+      "sha256": "122d5df79d120f719cce15f22aea7bbb26c0dd7d48e8ce9025b54c99425ed0fd"
+    },
+    {
+      "file": "nabench-Nucleotide_Transformer.py",
+      "bytes": 12064,
+      "sha256": "8c47be6ba7a9afa6bda2933d4f5e91377a68f8309a4fef8f1074d23066a5b5ec"
+    },
+    {
+      "file": "nabench-evo.py",
+      "bytes": 9034,
+      "sha256": "9427a911f382bf414bd93a4c5dc579ead3bf3ad3f59461beda6f3ba61dcd304a"
+    },
+    {
+      "file": "nabench-findlay.csv",
+      "bytes": 35791,
+      "sha256": "b1291d748958f57e2856e25f10511e90b95e66ec4f46eb7e3680704d8d7a1994"
+    },
+    {
+      "file": "nabench-generator.py",
+      "bytes": 9366,
+      "sha256": "9ac11e8800b8cad8d72858b46d5e964c0737ee10051deaa739591bb956073973"
+    }
+  ],
+  "additional_resource_checks": [
+    {
+      "id": "evo1-data-s1-resource",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12057570/bin/NIHMS2055853-supplement-S1.zip",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "1816",
+      "prefix_sha256": "264ce01e6b82407cd061740ce0e30df9d729e1ba00187f076a5623dd20432a3d",
+      "signature": "0a0a0a0a3c68746d6c3e0a20203c6865"
+    },
+    {
+      "id": "final-mrna-rna-loc-fazal-upstream-resource",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0092867419305550-mmc3.xlsx",
+      "status": 200,
+      "content_type": "application/excel",
+      "content_length": "599366",
+      "prefix_sha256": "96cd84d69dafa69ed6604d64c4783df4edd0ae17a4585ffdb4b5234dc49d08ef",
+      "signature": "504b0304140006000800000021007c6c"
+    },
+    {
+      "id": "final-mrna-mirna-target-upstream-resource",
+      "url": "https://cosbi.ee.ncku.edu.tw/MirTarClash_static/download/human_mRNA_chira_download.csv",
+      "status": 200,
+      "content_type": "text/csv",
+      "content_length": "10030260",
+      "prefix_sha256": "b64e652f1df25c39913a9e30b1f8dc1599a2fc36d08ba546ec92b392f6b92021",
+      "signature": "67656e652049442c67656e65206e616d"
+    }
+  ]
+}

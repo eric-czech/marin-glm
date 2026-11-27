@@ -6,7 +6,7 @@ A technical catalogue of genomic language models, papers, benchmark projects, ev
 
 The primary models are Evo 1, Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2, Genos-m, PlantCAD2, SpliceAI and SpliceAI2. SpliceAI and SpliceAI2 are supervised specialists. GeneCAD is a PlantCAD2-family annotation adaptation. Additional models and papers document related evaluations and independent benchmark use.
 
-All indexed task definitions and collections have completed source reviews. A review can establish that a publication omits a field or that a release is inaccessible; it cannot supply missing evidence. Those limitations remain explicit. The catalogue does not assign ID/OD categories or rank models, and record counts are not counts of independent biological assays.
+All indexed task definitions and collections have completed source reviews. A review can establish that a publication omits a field or that a release is inaccessible; it cannot supply missing evidence. Those limitations remain explicit. [Resolved fields and source findings](docs/source-review.md) document protocol choices, target identification and dataset consolidation. The catalogue does not assign ID/OD categories or rank models, and record counts are not counts of independent biological assays.
 
 ## Build and verification
 
@@ -29,9 +29,9 @@ A task is **dataset × prediction target**. Species, cell types, assay tracks, c
 | Tables | Purpose |
 | --- | --- |
 | `papers`, `sources`, `evidence`, `field_evidence` | Publication/release identity, exact locators and field-level support. |
-| `models`, `model_properties`, `model_evaluations` | Model details and documented task use, including original/external provenance. |
+| `models`, `model_properties`, `model_evaluations`, `model_collection_evaluations` | Model details, task-level execution and separately scoped collection participation. |
 | `evaluations`, `tasks`, `evaluation_tasks`, `variants` | Collections, dataset–target identities and source-specific variants. |
-| `protocols`, `protocol_metrics`, `counts` | Adaptation, interfaces, split/selection rules, metrics and qualified counts. |
+| `protocols`, `protocol_field_reviews`, `protocol_metrics`, `counts` | Adaptation, interfaces, explicit interpretations of source-null fields, split/selection rules, metrics and qualified counts. |
 | `assay_tracks`, `task_tracks` | Individual released track identities and biological contexts without creating one task per track. |
 | `categories`, `task_categories`, `task_outputs`, `task_feature_scopes` | Application, capability, feature and evaluated-output decisions. |
 | `source_reviews`, `source_limits` | Completed review scope and precise unreported, unreleased, inaccessible or conflicting fields. |
@@ -58,7 +58,7 @@ Task evidence levels describe the evidence inspected:
 | Paper and methods | The available primary text/procedure defines the task. Data access and omitted fields remain qualified. |
 | Source-limited definition | The source reports an evaluation whose assay identity, cohort or procedure cannot be fully resolved from the available material. The claim remains visible with explicit limits. |
 
-These levels are not work queues and are not filter options. `source_reviews` records a completed, dated scope. `source_limits.reason` distinguishes `not-reported`, `not-released`, `not-retrieved`, `access-restricted`, `conflicting` and `not-applicable`. A missing manifest is not borrowed from another model because its panel has the same name or size.
+These levels are not work queues and are not filter options. `source_reviews` records a completed, dated scope. `source_limits.reason` distinguishes `not-reported`, `not-released`, `access-restricted`, `size-excluded`, `conflicting` and `not-applicable`. A missing manifest is not borrowed from another model because its panel has the same name or size.
 
 Reported, measured and derived counts remain separate, with units and filtering qualifiers. A genome row may contain thousands of gene labels; a variant may have multiple tissue/scorer rows; a released split may precede score eligibility filtering. Counts are not additive across such views.
 
@@ -66,7 +66,7 @@ Data links distinguish **HF/GH data**, **manifests**, **evaluation code** and **
 
 ## Evaluations interface
 
-Evaluations opens in **Coverage**, with **Tasks** and **Collections** as alternate views. Search, Collection, Organism and Genomic feature form the primary filter row. Application, Model capability, Scored output and Benchmark project are available under **More filters**. Active secondary filters remain visible as removable chips and a count on the disclosure; shared links reveal their controls automatically. Evo 2 usage remains attributed in task records and the table. Cell selection narrows the same task table. Sorting, pagination, filters and expanded records are retained in URL fragments. CSV exports include every matching task, including off-page results.
+Evaluations opens in **Coverage**, with **Tasks** and **Collections** as alternate views. Search, Collection, Organism and Genomic feature form the primary filter row. Application, Model capability, Scored output and Benchmark project are available under **More filters**. Active secondary filters remain visible as removable chips and a count on the disclosure; shared links reveal their controls automatically. Original-paper model use and subsequent benchmark participation remain in the source associations and exports. Cell selection narrows the same task table. Sorting, pagination, filters and expanded records are retained in URL fragments. CSV exports include every matching task, including off-page results.
 
 Coverage uses four colors for prediction, generation, retrieval/comparison and analysis/diagnostics. Source shapes are ordered as follows:
 
