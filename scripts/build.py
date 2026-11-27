@@ -10,7 +10,9 @@ INSERT_ORDER=['metadata','sources','papers','evidence','models','model_propertie
               'protocols','protocol_metrics','counts','model_evaluations','findings',
               'source_reviews','source_limits','data_resources','task_resources','evaluation_resources','task_redirects',
               'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
-              'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings']
+              'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings',
+              'split_strategies','split_protocol_strategies','split_audits','split_audit_tasks',
+              'split_partitions','split_comparisons','split_audit_files','split_examples']
 
 def load_catalogue(data, db):
     """Insert and validate an authoring document in a supplied SQLite connection."""
@@ -78,6 +80,27 @@ def load_catalogue(data, db):
         if bad:raise ValueError(f'{table}.{column} task mismatch: {bad}')
     bad=db.execute('''SELECT r.id FROM task_redirects r JOIN tasks t ON t.id=r.id''').fetchall()
     if bad:raise ValueError(f'Redirect shadows a current task: {[r[0] for r in bad]}')
+    for table in ['split_comparisons','split_audit_files']:
+        cols=['left_partition_id','right_partition_id'] if table=='split_comparisons' else ['partition_id']
+        for col in cols:
+            bad=db.execute(f'SELECT a.id FROM {table} a JOIN split_partitions p ON a.{col}=p.id WHERE a.audit_id!=p.audit_id').fetchall()
+            if bad:raise ValueError('Cross-audit partition reference: '+table+'.'+col)
+    bad=db.execute('''SELECT c.id FROM split_comparisons c
+      JOIN split_audits a ON a.id=c.audit_id JOIN evidence e ON e.id=c.evidence_id
+      JOIN split_partitions l ON l.id=c.left_partition_id JOIN split_partitions r ON r.id=c.right_partition_id
+      WHERE e.basis!='data' OR a.status NOT IN ('measured','metadata-only')
+        OR l.id=r.id OR c.left_affected>l.row_count OR c.right_affected>r.row_count
+        OR (c.overlap_type='exact-sequence' AND (c.shared_count>l.unique_sequences OR c.shared_count>r.unique_sequences))''').fetchall()
+    if bad:raise ValueError('Invalid measured split comparison or denominator: '+str([r[0] for r in bad]))
+    bad=db.execute('''SELECT a.id FROM split_audits a LEFT JOIN split_audit_tasks l ON l.audit_id=a.id
+      WHERE l.id IS NULL''').fetchall()
+    if bad:raise ValueError('Split inspection without linked task: '+str([r[0] for r in bad]))
+    bad=db.execute('''SELECT x.id FROM split_examples x JOIN split_comparisons c ON c.id=x.comparison_id
+      WHERE c.shared_count=0''').fetchall()
+    if bad:raise ValueError('Overlap example attached to a zero comparison: '+str([r[0] for r in bad]))
+    for column,target in [('protocol_id','protocols'),('variant_id','variants')]:
+        bad=db.execute(f'SELECT a.id FROM split_audit_tasks a JOIN {target} p ON a.{column}=p.id WHERE a.task_id!=p.task_id').fetchall()
+        if bad:raise ValueError('Split audit task ownership mismatch: '+column)
     for row in db.execute('SELECT * FROM field_evidence'):
         if row['entity_table'] not in INSERT_ORDER:raise ValueError('Unknown evidence table')
         if not db.execute(f'SELECT 1 FROM {row["entity_table"]} WHERE id=?',(row['entity_id'],)).fetchone():raise ValueError('Missing field evidence entity: '+row['entity_id'])
@@ -117,7 +140,7 @@ def build():
     temporary.replace(ROOT/'data/catalogue.sqlite')
     compact=json.dumps(payload,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
     template=(ROOT/'site/template.html').read_text()
-    script=(ROOT/'site/coverage.js').read_text()+'\n'+(ROOT/'site/app.js').read_text()
+    script='\n'.join((ROOT/path).read_text() for path in ['site/coverage.js','site/splits.js','site/app.js'])
     html=template.replace('/*__STYLE__*/',(ROOT/'site/style.css').read_text()).replace('/*__SCRIPT__*/',script).replace('__CATALOGUE_JSON__',compact)
     (ROOT/'index.html').write_text(html)
     (ROOT/'data/site-data.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')

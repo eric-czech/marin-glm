@@ -286,3 +286,63 @@ CREATE VIEW evaluation_summary AS
     COUNT(DISTINCT tc.category_id) AS classifications
   FROM evaluations e LEFT JOIN evaluation_tasks et ON et.evaluation_id=e.id
   LEFT JOIN task_categories tc ON tc.task_id=et.task_id GROUP BY e.id;
+
+-- Split definitions and measured separation are distinct. An overlap observation
+-- is not, by itself, evidence of an inflated score or a violated source claim.
+CREATE TABLE split_strategies (
+  id TEXT PRIMARY KEY, name TEXT NOT NULL, split_unit TEXT NOT NULL,
+  description TEXT NOT NULL, protection TEXT NOT NULL, limitations TEXT NOT NULL,
+  sort_order INTEGER NOT NULL
+);
+CREATE TABLE split_protocol_strategies (
+  protocol_id TEXT NOT NULL REFERENCES protocols(id),
+  strategy_id TEXT NOT NULL REFERENCES split_strategies(id),
+  note TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(protocol_id,strategy_id)
+);
+CREATE TABLE split_audits (
+  id TEXT PRIMARY KEY, title TEXT NOT NULL, release_name TEXT NOT NULL,
+  evaluation_id TEXT REFERENCES evaluations(id),
+  status TEXT NOT NULL CHECK(status IN ('measured','metadata-only','skipped-size','unavailable','not-applicable')),
+  finding TEXT NOT NULL CHECK(finding IN ('overlap','no-overlap','limited','not-applicable')),
+  scope TEXT NOT NULL, method TEXT NOT NULL, conclusion TEXT NOT NULL,
+  limitations TEXT NOT NULL, checked TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id), sort_order INTEGER NOT NULL
+);
+CREATE TABLE split_audit_tasks (
+  id TEXT PRIMARY KEY, audit_id TEXT NOT NULL REFERENCES split_audits(id),
+  task_id TEXT NOT NULL REFERENCES tasks(id), protocol_id TEXT REFERENCES protocols(id),
+  variant_id TEXT REFERENCES variants(id), note TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE split_partitions (
+  id TEXT PRIMARY KEY, audit_id TEXT NOT NULL REFERENCES split_audits(id),
+  name TEXT NOT NULL, row_count INTEGER CHECK(row_count>=0),
+  unique_sequences INTEGER CHECK(unique_sequences>=0),
+  row_unit TEXT NOT NULL, detail TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id), UNIQUE(audit_id,name)
+);
+CREATE TABLE split_comparisons (
+  id TEXT PRIMARY KEY, audit_id TEXT NOT NULL REFERENCES split_audits(id),
+  left_partition_id TEXT NOT NULL REFERENCES split_partitions(id),
+  right_partition_id TEXT NOT NULL REFERENCES split_partitions(id),
+  overlap_type TEXT NOT NULL, shared_count INTEGER NOT NULL CHECK(shared_count>=0),
+  unit TEXT NOT NULL, left_affected INTEGER CHECK(left_affected>=0),
+  right_affected INTEGER CHECK(right_affected>=0), note TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE split_audit_files (
+  id TEXT PRIMARY KEY, audit_id TEXT NOT NULL REFERENCES split_audits(id),
+  partition_id TEXT REFERENCES split_partitions(id), url TEXT NOT NULL,
+  revision TEXT, sha256 TEXT, bytes INTEGER CHECK(bytes>=0),
+  row_count INTEGER CHECK(row_count>=0), scope TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE split_examples (
+  id TEXT PRIMARY KEY, comparison_id TEXT NOT NULL REFERENCES split_comparisons(id),
+  sequence_sha256 TEXT, sequence_length INTEGER CHECK(sequence_length>=0),
+  left_json TEXT NOT NULL CHECK(json_valid(left_json)),
+  right_json TEXT NOT NULL CHECK(json_valid(right_json)),
+  example_url TEXT NOT NULL, note TEXT NOT NULL,
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);

@@ -1,0 +1,75 @@
+{
+  "completed": "2026-11-27T18:37:11.526122+00:00",
+  "scope": "Removed ignored raw research artifact cache and two redundant raw DeepD CSVs. Source papers, source documentation/code, committed inspection reports, revisions, hashes and illustrative pointers retained. Ordinary builds and checks require no raw research data.",
+  "directories": [
+    {
+      "path": "research/artifacts/GenerTeam--DeepSTARR-enhancer-activity",
+      "files": 3,
+      "bytes": 60370919
+    },
+    {
+      "path": "research/artifacts/GenerTeam--gener-tasks",
+      "files": 4,
+      "bytes": 2445823503
+    },
+    {
+      "path": "research/artifacts/InstaDeepAI--nucleotide_transformer_downstream_tasks_revised",
+      "files": 36,
+      "bytes": 199238694
+    },
+    {
+      "path": "research/artifacts/Nugkta--bgc-bench",
+      "files": 19,
+      "bytes": 3404077
+    },
+    {
+      "path": "research/artifacts/audit-followup",
+      "files": 507,
+      "bytes": 3047129503
+    },
+    {
+      "path": "research/artifacts/biomap-research--DeepD",
+      "files": 3,
+      "bytes": 8365128
+    },
+    {
+      "path": "research/artifacts/final-audit",
+      "files": 14268,
+      "bytes": 18265334834
+    },
+    {
+      "path": "research/artifacts/macwiatrak--bacbench-essential-genes-dna",
+      "files": 3,
+      "bytes": 107138599
+    },
+    {
+      "path": "research/artifacts/songlab--TraitGym",
+      "files": 2,
+      "bytes": 461541
+    },
+    {
+      "path": "research/artifacts/splice-audit",
+      "files": 515,
+      "bytes": 222311137
+    },
+    {
+      "path": "research/artifacts/tattabio--ec_classification_dna",
+      "files": 2,
+      "bytes": 525999
+    }
+  ],
+  "additional_files": [
+    {
+      "path": "research/sources/biomap-research--DeepD/notebook/interpretability/data/human/reference_predictions.csv",
+      "bytes": 2966344,
+      "sha256": "557cbd106b481d5fdecb323688d06e8d943b4c0df2a2f37a3bdacfc097432cc7"
+    },
+    {
+      "path": "research/sources/biomap-research--DeepD/notebook/interpretability/data/human/annotations.csv",
+      "bytes": 3789107,
+      "sha256": "eab801d494fa38f52a60e80d838e441c9bde5c1f1f95b63f1921e8fa84d9f103"
+    }
+  ],
+  "removed_files": 15364,
+  "removed_bytes": 24366859385
+}

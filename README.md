@@ -2,7 +2,7 @@
 
 A technical catalogue of genomic language models, papers, benchmark projects, evaluation collections, tasks and protocols.
 
-[Public site](https://eric-czech.github.io/marin-glm/) · [SQLite](data/catalogue.sqlite) · [Authoring JSON](data/catalogue.json)
+[Public site](https://eric-czech.github.io/marin-glm/) · [Splits](https://eric-czech.github.io/marin-glm/#view=splits) · [SQLite](data/catalogue.sqlite) · [Authoring JSON](data/catalogue.json)
 
 The primary models are Evo 1, Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERator-v2, BOTANIC-1, NTv3, DeepD, GPN-Star, AIDO.DNA2, Genos-m, PlantCAD2, SpliceAI and SpliceAI2. SpliceAI and SpliceAI2 are supervised specialists. GeneCAD is a PlantCAD2-family annotation adaptation. Additional models and papers document related evaluations and independent benchmark use.
 
@@ -37,6 +37,9 @@ A task is **dataset × prediction target**. Species, cell types, assay tracks, c
 | `source_reviews`, `source_limits` | Completed review scope and precise unreported, unreleased, inaccessible or conflicting fields. |
 | `data_resources`, `task_resources`, `evaluation_resources` | Explicit dataset, manifest, code and result links. |
 | `project_reviews`, `projects`, `project_adoptions` | Dedicated benchmark qualification and independent use. |
+| `split_strategies`, `split_protocol_strategies` | Cited split definitions and protocol examples. |
+| `split_audits`, `split_audit_tasks`, `split_partitions`, `split_comparisons` | Release/cohort scope, denominators and measured separation axes. |
+| `split_audit_files`, `split_examples` | File hashes, revisions and illustrative overlapping pairs. |
 | `coverage_nodes`, `coverage_rows`, `coverage_mappings`, `coverage_settings` | Cited taxonomy assignments and simplified presentation. |
 
 [data/schema.sql](data/schema.sql) defines keys and constraints. [data/catalogue.json](data/catalogue.json) is the committed authoring document; the build inserts it into SQLite and queries SQLite to produce the page payload. Research helpers in `scripts/curation/` are authoring operations, not a chain of migrations run during a normal build.
@@ -79,6 +82,14 @@ Original Evo attribution takes precedence over collection membership in the shap
 The hierarchy separates cellular domains, selected eukaryotic lineages and viruses, with synthetic/unplaced contexts distinguished from taxa. Familiar biological divisions remain visible; intermediate ancestry and sources are available in Taxonomy details. Selected model organisms have individual rows. Broad source labels are not projected onto every descendant. Assay host and sequence origin are separate.
 
 A marker is a task association, not an independent cohort. Species-specific feature restrictions are used where released identities resolve them; otherwise task-level co-annotation does not establish a released species × feature subset. Priority coverage questions are catalogue-relative and do not assert exhaustive absence from every broad panel.
+
+## Splits
+
+Splits surveys random, chromosome, genomic-block, gene/homology, sequence-similarity, mutation-position, taxonomic, donor, condition, temporal and BGC/chemistry separation. Fixed zero-shot cohorts are identified separately from downstream fitting splits. Each source protocol retains its cited rule and fitting layer.
+
+Interactive figures show exact shared strings as a fraction of distinct held-out strings, and held-out windows overlapping training as a fraction of all held-out windows. Counts, denominators, units and source details come from SQLite. These measurements do not by themselves estimate pretraining contamination or score inflation. Searchable release-level checks include observed overlap, negative results on specific axes, size exclusions and unavailable cohorts. Pinned examples, file hashes, HF/GH links and CSV exports support inspection.
+
+[Measurement methods, selected results and limits](docs/splits.md). The optional `python tests/browser_splits.py` checks figures, keyboard interactions, deep links, examples, filters, CSV and mobile layout.
 
 ## Outputs and features
 
