@@ -66,7 +66,7 @@ Data links distinguish **HF/GH data**, **manifests**, **evaluation code** and **
 
 ## Evaluations interface
 
-Evaluations opens in **Coverage**, with **Tasks** and **Collections** as alternate views. Shared filters cover application, organism/clade, model capability, genomic feature, scored output, collection, project and Evo 2 provenance. Cell selection narrows the same task table. Sorting, pagination, filters and expanded records are retained in URL fragments. CSV exports include every matching task, including off-page results.
+Evaluations opens in **Coverage**, with **Tasks** and **Collections** as alternate views. Search, Collection, Organism and Genomic feature form the primary filter row. Application, Model capability, Scored output and Benchmark project are available under **More filters**. Active secondary filters remain visible as removable chips and a count on the disclosure; shared links reveal their controls automatically. Evo 2 usage remains attributed in task records and the table. Cell selection narrows the same task table. Sorting, pagination, filters and expanded records are retained in URL fragments. CSV exports include every matching task, including off-page results.
 
 Coverage uses four colors for prediction, generation, retrieval/comparison and analysis/diagnostics. Source shapes are ordered as follows:
 

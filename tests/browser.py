@@ -24,7 +24,8 @@ with sync_playwright() as p:
         page.wait_for_function('document.querySelector("nav a[aria-current=page]") !== null')
     def rows():return page.locator('.compact-task-row').evaluate_all('(els)=>els.map(e=>e.dataset.id)')
     def click_mode(mode):page.locator('#'+{'coverage':'coverage-mode','tasks':'task-mode','collections':'suite-mode'}[mode]).click()
-    def reset():page.locator('button[type=reset]').click()
+    def reset():
+        if page.locator('#clear-filters').is_enabled():page.locator('#clear-filters').click()
     def all_rows():
         page.locator('#page-size').select_option('250')
         result=[]
@@ -37,6 +38,18 @@ with sync_playwright() as p:
     assert page.locator('#page-title').inner_text()=='Evaluations'
     assert page.locator('#coverage-mode').get_attribute('aria-pressed')=='true'
     assert page.locator('#status').count()==0
+    assert page.locator('#evo').count()==0
+    assert page.locator('.primary-filters input,.primary-filters select').evaluate_all('(els)=>els.map(e=>e.id)')==['search','suite','population','region']
+    assert not page.locator('#more-filters').evaluate('e=>e.open')
+    assert page.locator('#active-filters').is_hidden()
+    assert page.locator('#clear-filters').is_disabled()
+    assert page.locator('#filters #export').count()==0 and page.locator('#table-tools #export').count()==1
+    positions=page.locator('.primary-filters input,.primary-filters select').evaluate_all('(els)=>els.map(e=>e.getBoundingClientRect().top)')
+    assert max(positions)-min(positions)<1
+    assert page.locator('#filters').bounding_box()['height']<125
+    # Retired shared links no longer retain an invisible provenance constraint.
+    visit('#view=evaluations&evo=original')
+    assert 'evo=' not in page.url and f'{TOTAL} matching records' in page.locator('#result-count').inner_text()
     assert page.locator('.coverage-feature').count()==len(DATA['coverage']['groupedFeatures'])
     assert page.evaluate('new Set([...document.querySelectorAll(".coverage-dot")].map(e=>e.dataset.coverageTask)).size')==TOTAL
     assert f'{TOTAL} matching records' in page.locator('#result-count').inner_text()
@@ -65,13 +78,31 @@ with sync_playwright() as p:
     dot.focus();page.wait_for_function('!document.querySelector(".coverage-tooltip").hidden')
     assert dot.get_attribute('aria-describedby')=='coverage-task-tooltip'
     # Output filtering stays composed through every view.
-    page.select_option('#output','output-dense-labels');click_mode('tasks')
+    page.locator('#more-filters>summary').click()
+    page.select_option('#output','output-dense-labels')
+    assert page.locator('#more-filter-count').inner_text()=='(1 active)'
+    assert 'Scored output:' in page.locator('#active-filters').inner_text()
+    page.locator('#more-filters>summary').click()
+    assert not page.locator('#more-filters').evaluate('e=>e.open')
+    click_mode('tasks')
     assert set(all_rows())=={tid for tid,form in OUTPUTS.items() if form=='output-dense-labels'}
     click_mode('collections');assert page.locator('#output').input_value()=='output-dense-labels'
     click_mode('coverage');assert page.locator('#output').input_value()=='output-dense-labels'
     page.locator('.coverage-feature-detail').select_option('individual')
     assert page.locator('.coverage-dot[data-coverage-task="genecad-busco"]').count()==0
     reset();click_mode('tasks')
+    assert not page.locator('#more-filters').evaluate('e=>e.open')
+    assert page.locator('#more-filter-count').is_hidden() and page.locator('#active-filters').is_hidden()
+    # Shared links reveal secondary filters and preserve them in every view.
+    visit('#view=evaluations&mode=tasks&output=output-dense-labels')
+    assert page.locator('#more-filters').evaluate('e=>e.open')
+    assert page.locator('#output').input_value()=='output-dense-labels'
+    page.locator('#more-filters>summary').click()
+    page.locator('[data-clear-filter="output"]').click()
+    assert page.locator('#output').input_value()=='' and page.locator('#more-filter-count').is_hidden()
+    reset()
+    # Clearing filters retains display preferences; choose 100 for pagination.
+    page.locator('#page-size').select_option('100')
     # Sorting/pagination/detail expansion and resource labels.
     first=rows();page.locator('#next-page').click();second=rows()
     assert len(second)==100 and not set(first)&set(second)
@@ -130,7 +161,7 @@ with sync_playwright() as p:
         assert rows()==[ALIASES[old]['replacement_task_id']]
     visit('#view=evaluations&status=panel-pending')
     assert f'{TOTAL} matching records' in page.locator('#result-count').inner_text()
-    assert page.locator('#active-filters').inner_text().startswith('No active filters')
+    assert page.locator('#active-filters').is_hidden()
     # Native taxonomy remains separate from the compact display hierarchy.
     visit()
     for detail in ['allSpecies','clade','species']:

@@ -45,8 +45,10 @@
   let state={}, matching=[];
   const coverageMatrix=createCoverageMatrix($("coverage-view"),db.coverage,tasks,populations,changes=>setState({...state,...changes}));
   const splitsExplorer=createSplitsExplorer($("other-view"),{db,esc,cite,tasks,protocols,renderReferences},next=>setState(next));
-  const filterKeys=["q","application","population","capability","region","output","suite","project","evo"];
-  const controls={q:"search",application:"application",population:"population",capability:"capability",region:"region",output:"output",suite:"suite",project:"project",evo:"evo"};
+  const filterKeys=["q","application","population","capability","region","output","suite","project"];
+  const additionalFilterKeys=["application","capability","output","project"];
+  const filterNames={q:"Search",suite:"Collection",population:"Organism",region:"Genomic feature",application:"Application",capability:"Model capability",output:"Scored output",project:"Benchmark project",task:"Task",cellRow:"Selected cell"};
+  const controls={q:"search",application:"application",population:"population",capability:"capability",region:"region",output:"output",suite:"suite",project:"project"};
   const option=(value,label)=>{const el=document.createElement("option");el.value=value;el.textContent=label;return el;};
   for(const dim of ["application","capability","output"]){for(const r of db.categories.filter(r=>r.dimension===dim).sort((a,b)=>a.name.localeCompare(b.name))){const total=taskList.filter(t=>t._cats.includes(r.id)).length;$(dim).append(option(r.id,r.name+` (${total})`));}}
   for(const g of db.coverage.featureGroups){const optgroup=document.createElement('optgroup');optgroup.label=g.label;for(const id of g.ids){const r=categories[id];if(r)optgroup.append(option(id,r.name+` (${taskList.filter(t=>t._cats.includes(id)).length})`));}$('region').append(optgroup);}
@@ -65,13 +67,32 @@
   for(const p of [...db.projects].sort((a,b)=>a.name.localeCompare(b.name)))$("project").append(option(p.id,p.name));
   $("updated").textContent=db.metadata.find(r=>r.key==="updated")?.value??"";
 
-  function readState(){state=Object.fromEntries(new URLSearchParams(location.hash.slice(1)));if(state.task==="deepd-annotation-human")state={view:"evaluations",mode:"tasks",suite:"deepd-evals",q:"human routing probe"};if(!state.featureDetail&&state.cellFeature&&db.coverage.features.some(f=>f.id===state.cellFeature))state.featureDetail="individual";delete state.status;if(state.view==="data")state.view="models";const redirect=db.task_redirects.find(r=>r.id===state.task);if(redirect){state.suite=redirect.evaluation_id;if(redirect.replacement_task_id){state.task=redirect.replacement_task_id;state.mode="tasks";}else{delete state.task;state.mode="collections";}}state.view??="evaluations";if(!["evaluations","splits","projects","models","papers","audit"].includes(state.view))state.view="evaluations";if(!["coverage","tasks","collections"].includes(state.mode))state.mode=state.task?"tasks":"coverage";if(!["species","allSpecies","clade"].includes(state.taxonDetail))state.taxonDetail="species";for(const key of filterKeys)$(controls[key]).value=state[key]??"";render();}
+  function readState(){
+    const previous=state,params=new URLSearchParams(location.hash.slice(1));
+    // Retired provenance links must not retain an invisible filter.
+    if(params.has("evo")){params.delete("evo");history.replaceState(null,"","#"+params);}
+    state=Object.fromEntries(params);
+    if(state.task==="deepd-annotation-human")state={view:"evaluations",mode:"tasks",suite:"deepd-evals",q:"human routing probe"};
+    if(!state.featureDetail&&state.cellFeature&&db.coverage.features.some(f=>f.id===state.cellFeature))state.featureDetail="individual";
+    delete state.status;
+    if(state.view==="data")state.view="models";
+    const redirect=db.task_redirects.find(r=>r.id===state.task);
+    if(redirect){state.suite=redirect.evaluation_id;if(redirect.replacement_task_id){state.task=redirect.replacement_task_id;state.mode="tasks";}else{delete state.task;state.mode="collections";}}
+    state.view??="evaluations";
+    if(!["evaluations","splits","projects","models","papers","audit"].includes(state.view))state.view="evaluations";
+    if(!["coverage","tasks","collections"].includes(state.mode))state.mode=state.task?"tasks":"coverage";
+    if(!["species","allSpecies","clade"].includes(state.taxonDetail))state.taxonDetail="species";
+    for(const key of filterKeys)$(controls[key]).value=state[key]??"";
+    // Reveal active secondary controls on shared links and history navigation.
+    if(additionalFilterKeys.some(key=>state[key]&&state[key]!==previous[key]))$("more-filters").open=true;
+    render();
+  }
   function setState(next){const params=new URLSearchParams(Object.entries(next).filter(([,v])=>v));const hash=params.toString();if(location.hash.slice(1)!==hash)history.pushState(null,"","#"+hash);readState();}
   function fromControls(){const next={view:"evaluations",mode:state.mode,taxonDetail:state.taxonDetail,featureDetail:state.featureDetail,sort:state.sort,dir:state.dir,perPage:state.perPage};for(const key of filterKeys)next[key]=$(controls[key]).value;setState(next);}
   $("filters").addEventListener("submit",e=>e.preventDefault());
   $("filters").addEventListener("change",fromControls);
   $("search").addEventListener("input",()=>{const next={...state,q:$("search").value,task:"",cellRow:"",cellFeature:"",open:"",page:""};history.replaceState(null,"","#"+new URLSearchParams(Object.entries(next).filter(([,v])=>v)));state=next;renderEvaluations();});
-  $("filters").addEventListener("reset",e=>{e.preventDefault();setState({view:"evaluations",mode:state.mode});});
+  $("filters").addEventListener("reset",e=>{e.preventDefault();$("more-filters").open=false;const next={view:"evaluations"};for(const key of ["mode","taxonDetail","featureDetail","sort","dir","perPage"])next[key]=state[key];setState(next);});
   $("coverage-mode").addEventListener("click",()=>setState({...state,mode:"coverage",page:""}));
   $("task-mode").addEventListener("click",()=>setState({...state,mode:"tasks",page:""}));
   $("suite-mode").addEventListener("click",()=>setState({...state,mode:"collections",page:""}));
@@ -101,7 +122,6 @@
     if(state.population&&!t._pops.includes(state.population))return false;
     if(state.suite&&!t._suites.includes(state.suite))return false;
     if(state.project&&!t._projects.includes(state.project))return false;
-    if(state.evo==="original"&&!t._original||state.evo==="external"&&!t._external||state.evo==="both"&&!(t._original&&t._external))return false;
     return true;
   }
   function render(){
@@ -116,7 +136,18 @@
   function renderEvaluations(){
     const active=[...filterKeys,"task","cellRow"].filter(k=>state[k]);
     const cellLabel=()=>{const r=db.coverage.presentation.views[state.taxonDetail||'species'].rows.find(r=>r.id===state.cellRow),f=[...db.coverage.features,...db.coverage.groupedFeatures].find(f=>f.id===state.cellFeature);return (r?.displayLabel||state.cellRow)+(f?' × '+f.label:' — all features');};
-    $("active-filters").innerHTML=active.length?'Active filters (combined): '+active.map(k=>{const control=controls[k]&&$(controls[k]);const value=k==='cellRow'?cellLabel():k==="task"?tasks[state[k]]?.name??state[k]:control?.tagName==="SELECT"?control.selectedOptions[0]?.textContent??state[k]:state[k];return `<button type="button" class="secondary" data-clear-filter="${esc(k)}" aria-label="Remove ${esc(k==='cellRow'?'selected cell':k)} filter">${esc(k==='cellRow'?'Selected cell':k)}: ${esc(value)} ×</button>`;}).join(" "):'No active filters. Numbers in category menus count all catalogue records, before other filters.';
+    $("active-filters").hidden=!active.length;
+    $("clear-filters").disabled=!active.length;
+    const secondaryCount=additionalFilterKeys.filter(key=>state[key]).length;
+    $("more-filter-count").hidden=!secondaryCount;
+    $("more-filter-count").textContent=secondaryCount?`(${secondaryCount} active)`:"";
+    $("active-filters").innerHTML=active.map(k=>{
+      const control=controls[k]&&$(controls[k]);
+      let value=k==='cellRow'?cellLabel():k==="task"?tasks[state[k]]?.name??state[k]:control?.tagName==="SELECT"?control.selectedOptions[0]?.textContent??state[k]:state[k];
+      if(k==="population")value=value.replace(/^[\s│├└─]+/,"");
+      const name=filterNames[k];
+      return `<button type="button" class="secondary" data-clear-filter="${esc(k)}" aria-label="Remove ${esc(name)} filter: ${esc(value)}">${esc(name)}: ${esc(value)} ×</button>`;
+    }).join(" ");
     const capability=categories[state.capability];$("capability-definition").hidden=!capability;
     $("capability-definition").textContent=capability?capability.name+': '+capability.definition+' '+capability.accommodation:'';
     const output=categories[state.output];$("output-definition").hidden=!output;$("output-definition").textContent=output?output.name+": "+output.definition:"";
