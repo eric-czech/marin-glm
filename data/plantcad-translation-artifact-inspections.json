@@ -1,0 +1,159 @@
+{
+  "revision": "de8bd9b67bb413b1502c4bf9e369ddc46180cb10",
+  "files": [
+    {
+      "path": "cross_species_leaf_absolute_translation/test-00000-of-00001.parquet",
+      "bytes": 9932524,
+      "rows": 39035,
+      "sha256": "9b94aecc76a994ff9a8fadd8642821e036ff1e6e9c0d48e1b9a6e567199ab635",
+      "chromosomes": {
+        "1": 5892,
+        "2": 4751,
+        "3": 4103,
+        "4": 4093,
+        "5": 4485,
+        "6": 3412,
+        "7": 3070,
+        "8": 3536,
+        "9": 2988,
+        "10": 2705
+      },
+      "sequence_lengths": {
+        "500": 39035
+      },
+      "gene_ids": 39035,
+      "binary_label_mismatches": 0,
+      "log10_1_plus_TPM_max_abs_error": 5.329070518200751e-15
+    },
+    {
+      "path": "cross_species_leaf_absolute_translation/train-00000-of-00001.parquet",
+      "bytes": 5715941,
+      "rows": 21894,
+      "sha256": "9c20bfaa5d9720fa308e417f6396d288c60bd9fbe263c1c4fbf4bb921f62cd0f",
+      "chromosomes": {
+        "1": 5741,
+        "2": 3399,
+        "3": 4386,
+        "4": 3309,
+        "5": 5059
+      },
+      "sequence_lengths": {
+        "500": 21894
+      },
+      "gene_ids": 21894,
+      "binary_label_mismatches": 0,
+      "log10_1_plus_TPM_max_abs_error": 6.217248937900877e-15
+    },
+    {
+      "path": "cross_species_leaf_absolute_translation/validation-00000-of-00001.parquet",
+      "bytes": 1440163,
+      "rows": 5492,
+      "sha256": "bf18149fcf2bd79449070b0eb346af68db04d7e738702fa79fa43a22742842b4",
+      "chromosomes": {
+        "1": 1397,
+        "2": 912,
+        "3": 1060,
+        "4": 860,
+        "5": 1263
+      },
+      "sequence_lengths": {
+        "500": 5492
+      },
+      "gene_ids": 5492,
+      "binary_label_mismatches": 0,
+      "log10_1_plus_TPM_max_abs_error": 5.995204332975845e-15
+    },
+    {
+      "path": "cross_species_leaf_on_off_translation/test-00000-of-00001.parquet",
+      "bytes": 9741251,
+      "rows": 39035,
+      "sha256": "c3b7bd8adaec9fb5e92e23521ef0be5a2f945d4ce9be23cc4aa133a4e0727d6e",
+      "chromosomes": {
+        "1": 5892,
+        "2": 4751,
+        "3": 4103,
+        "4": 4093,
+        "5": 4485,
+        "6": 3412,
+        "7": 3070,
+        "8": 3536,
+        "9": 2988,
+        "10": 2705
+      },
+      "sequence_lengths": {
+        "500": 39035
+      },
+      "gene_ids": 39035,
+      "binary_label_mismatches": 0,
+      "log10_1_plus_TPM_max_abs_error": 0
+    },
+    {
+      "path": "cross_species_leaf_on_off_translation/train-00000-of-00001.parquet",
+      "bytes": 5543301,
+      "rows": 21894,
+      "sha256": "e68f0d64e4e4d7a1606b6db4abc531f36f2c497684351bec15590821129f8709",
+      "chromosomes": {
+        "1": 5741,
+        "2": 3399,
+        "3": 4386,
+        "4": 3309,
+        "5": 5059
+      },
+      "sequence_lengths": {
+        "500": 21894
+      },
+      "gene_ids": 21894,
+      "binary_label_mismatches": 0,
+      "log10_1_plus_TPM_max_abs_error": 0
+    },
+    {
+      "path": "cross_species_leaf_on_off_translation/validation-00000-of-00001.parquet",
+      "bytes": 1396756,
+      "rows": 5492,
+      "sha256": "7cea6e7a9f60f18fd7c778d6af7ef077a9de4e4584490c406fad99264178a34d",
+      "chromosomes": {
+        "1": 1397,
+        "2": 912,
+        "3": 1060,
+        "4": 860,
+        "5": 1263
+      },
+      "sequence_lengths": {
+        "500": 5492
+      },
+      "gene_ids": 5492,
+      "binary_label_mismatches": 0,
+      "log10_1_plus_TPM_max_abs_error": 0
+    }
+  ],
+  "intersections": {
+    "cross_species_leaf_absolute_translation": {
+      "train-validation": {
+        "gene_ids": 0,
+        "exact_sequences": 0
+      },
+      "train-test": {
+        "gene_ids": 0,
+        "exact_sequences": 0
+      },
+      "validation-test": {
+        "gene_ids": 0,
+        "exact_sequences": 0
+      }
+    },
+    "cross_species_leaf_on_off_translation": {
+      "train-validation": {
+        "gene_ids": 0,
+        "exact_sequences": 0
+      },
+      "train-test": {
+        "gene_ids": 0,
+        "exact_sequences": 0
+      },
+      "validation-test": {
+        "gene_ids": 0,
+        "exact_sequences": 0
+      }
+    }
+  }
+}

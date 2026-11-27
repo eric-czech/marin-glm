@@ -17,7 +17,6 @@
   <a href="#view=projects" data-view="projects">Projects</a>
   <a href="#view=models" data-view="models">Models</a>
   <a href="#view=papers" data-view="papers">Papers</a>
-  <a href="#view=data" data-view="data">Data</a>
   <a href="#view=audit" data-view="audit">Audit notes</a>
 </nav>
 <main id="content">
@@ -38,7 +37,6 @@
       <label>Collection<select id="suite" name="suite"><option value="">All collections</option></select></label>
       <label>Benchmark project<select id="project" name="project"><option value="">All tasks</option></select></label>
       <label>Evo 2 provenance<select id="evo" name="evo"><option value="">All tasks</option><option value="original">Documented in original paper</option><option value="external">Documented in external evaluation</option><option value="both">Documented in both</option></select></label>
-      <label>Audit status<select id="status" name="status"><option value="">All statuses</option><option value="artifact-audited">Selected artifacts audited</option><option value="paper-audited">Paper / protocol audit</option><option value="registered">Registered; task audit pending</option><option value="panel-pending">Composite panel; source information missing</option></select></label>
       <div class="filter-actions"><button type="reset" class="secondary">Reset filters</button><button type="button" id="export">Export matching tasks (CSV)</button></div>
     </form>
     <details class="filter-explanation"><summary>Assignments and evidence</summary><p class="filter-note" id="classification-note">Organism filters include descendant taxa and established protein-target provenance, excluding assay/sample hosts alone. Application mappings are editorial, not validation claims. Markers show task-level taxon and feature associations; they do not establish a released species × feature subset. Missing annotations do not imply biological absence.</p></details>
@@ -52,7 +50,7 @@
   </section>
   <section id="other-view" hidden></section>
 </main>
-<footer>Source audit in progress · <span id="updated"></span>. Counts and protocols refer to the cited version. This catalogue does not rank models or assign ID/OD categories.</footer>
+<footer>Sources reviewed <span id="updated"></span>. Counts and protocols refer to the cited version. Missing published details and release discrepancies are stated in the records. This catalogue does not rank models or assign ID/OD categories.</footer>
 <script id="catalogue" type="application/json">__CATALOGUE_JSON__</script>
 <script>/*__SCRIPT__*/</script>
 </body>

@@ -109,6 +109,25 @@ CREATE TABLE task_feature_scopes (
   rationale TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id),
   UNIQUE(task_id,feature_id)
 );
+-- Track identity is retained without treating every assay track as a new task.
+-- Public pages use task/species/assay summaries; the downloadable DB preserves
+-- every source row and its biological context.
+CREATE TABLE assay_tracks (
+  id TEXT PRIMARY KEY,
+  source_id TEXT NOT NULL REFERENCES sources(id),
+  source_track_id TEXT NOT NULL,
+  population_id TEXT NOT NULL REFERENCES populations(id),
+  assay TEXT NOT NULL,
+  metadata_json TEXT NOT NULL CHECK(json_valid(metadata_json)),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE task_tracks (
+  task_id TEXT NOT NULL REFERENCES tasks(id),
+  track_id TEXT NOT NULL REFERENCES assay_tracks(id),
+  variant_id TEXT REFERENCES variants(id),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(task_id,track_id)
+);
 CREATE TABLE evaluation_tasks (
   evaluation_id TEXT NOT NULL REFERENCES evaluations(id),
   task_id TEXT NOT NULL REFERENCES tasks(id),
@@ -215,6 +234,48 @@ CREATE TABLE field_evidence (
   entity_table TEXT NOT NULL, entity_id TEXT NOT NULL, field TEXT NOT NULL,
   evidence_id TEXT NOT NULL REFERENCES evidence(id), note TEXT,
   PRIMARY KEY(entity_table, entity_id, field, evidence_id)
+);
+-- Completed source review and source availability are different facts. A review
+-- cannot make an unpublished split manifest or inaccessible supplement public.
+CREATE TABLE source_reviews (
+  id TEXT PRIMARY KEY,
+  entity_table TEXT NOT NULL CHECK(entity_table IN ('tasks','evaluations','models','papers','protocols')),
+  entity_id TEXT NOT NULL, reviewed TEXT NOT NULL, scope TEXT NOT NULL,
+  evidence_ids_json TEXT NOT NULL CHECK(json_valid(evidence_ids_json)),
+  limitations TEXT NOT NULL, UNIQUE(entity_table,entity_id)
+);
+CREATE TABLE source_limits (
+  id TEXT PRIMARY KEY,
+  entity_table TEXT NOT NULL CHECK(entity_table IN ('tasks','evaluations','models','papers','protocols')),
+  entity_id TEXT NOT NULL, field TEXT NOT NULL,
+  reason TEXT NOT NULL CHECK(reason IN ('not-reported','not-released','not-retrieved','conflicting','access-restricted','not-applicable')),
+  detail TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id)
+);
+CREATE TABLE data_resources (
+  id TEXT PRIMARY KEY, source_id TEXT NOT NULL REFERENCES sources(id),
+  title TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK(kind IN ('dataset','manifest','evaluation-code','results')),
+  host TEXT NOT NULL CHECK(host IN ('huggingface','github','zenodo','other')),
+  url TEXT NOT NULL, revision TEXT,
+  availability TEXT NOT NULL CHECK(availability IN ('public','restricted','not-released','not-retrieved')),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id), notes TEXT NOT NULL
+);
+CREATE TABLE task_resources (
+  task_id TEXT NOT NULL REFERENCES tasks(id), resource_id TEXT NOT NULL REFERENCES data_resources(id),
+  relation TEXT NOT NULL CHECK(relation IN ('evaluation-data','upstream-data','split-manifest','identity-manifest','evaluation-code','results')),
+  variant_id TEXT REFERENCES variants(id), evidence_id TEXT NOT NULL REFERENCES evidence(id), note TEXT NOT NULL,
+  PRIMARY KEY(task_id,resource_id,relation)
+);
+CREATE TABLE evaluation_resources (
+  evaluation_id TEXT NOT NULL REFERENCES evaluations(id), resource_id TEXT NOT NULL REFERENCES data_resources(id),
+  relation TEXT NOT NULL CHECK(relation IN ('evaluation-data','upstream-data','split-manifest','identity-manifest','evaluation-code','results')),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id), note TEXT NOT NULL,
+  PRIMARY KEY(evaluation_id,resource_id,relation)
+);
+CREATE TABLE task_redirects (
+  id TEXT PRIMARY KEY, evaluation_id TEXT NOT NULL REFERENCES evaluations(id),
+  replacement_task_id TEXT REFERENCES tasks(id),
+  reason TEXT NOT NULL
 );
 CREATE INDEX task_categories_dimension ON task_categories(category_id, task_id);
 CREATE INDEX model_evaluations_task ON model_evaluations(task_id, model_id, provenance);

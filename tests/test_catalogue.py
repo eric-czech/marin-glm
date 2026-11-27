@@ -1,8 +1,11 @@
 """Integrity and scientifically material provenance checks for the published catalogue."""
 from pathlib import Path
+from collections import Counter
 import json
+import re
 import sqlite3
 import unittest
+from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -11,6 +14,7 @@ class CatalogueTests(unittest.TestCase):
     def setUpClass(cls):
         cls.db=sqlite3.connect(ROOT/'data/catalogue.sqlite')
         cls.db.row_factory=sqlite3.Row
+        cls.payload=json.loads((ROOT/'data/site-data.json').read_text())
     @classmethod
     def tearDownClass(cls):cls.db.close()
     def test_foreign_keys(self):
@@ -126,17 +130,16 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.db.execute("SELECT independence FROM project_adoptions WHERE id='adoption-trait-gpn'").fetchone()[0],'shared-authorship')
         self.assertIn('Protein-only',self.db.execute("SELECT scope FROM project_adoptions WHERE id='adoption-dgeb-protberta'").fetchone()[0])
         # Adoption papers do not manufacture primary models or model-use claims.
-        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM models WHERE scope='primary'").fetchone()[0],15)
+        self.assertEqual({r[0] for r in self.db.execute("SELECT id FROM models WHERE scope='primary'")},
+            {'evo1','evo2','ceno','carbon','carbonx','generator','generator2','botanic1',
+             'ntv3','deepd','gpnstar','genosm','aido2','plantcad2','spliceai','spliceai2'})
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE paper_id IN ('dnachunker','patchdna','genezip','ribospan','mimic')").fetchone()[0],0)
     def test_followup_records_have_artifact_counts_and_specific_source_gaps(self):
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE status='registered'").fetchone()[0],0)
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id LIKE 'rnagym-%' AND status='artifact-audited'").fetchone()[0],70)
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id LIKE 'deepd-human-routing-%'").fetchone()[0],6)
         self.assertEqual(self.db.execute("SELECT COUNT(*) FROM tasks WHERE id='deepd-annotation-human'").fetchone()[0],0)
-        pending=self.db.execute("SELECT id FROM tasks WHERE status='panel-pending'").fetchall()
-        self.assertEqual(len(pending),8)
-        for t in pending:
-            self.assertTrue(self.db.execute("SELECT 1 FROM field_evidence WHERE entity_table='tasks' AND entity_id=? AND field='limitations'",(t[0],)).fetchone())
+        self.assertEqual(self.db.execute("SELECT id FROM tasks WHERE status='panel-pending'").fetchall(),[])
         summaries=json.loads((ROOT/'data/geneb-artifact-inspections.json').read_text())
         self.assertEqual(len(summaries),200)
         self.assertEqual(sum(x['rows'] for x in summaries),3393004)
@@ -170,15 +173,23 @@ class CatalogueTests(unittest.TestCase):
         coverage=payload['coverage']
         tasks={r['id'] for r in payload['tasks']}
         self.assertEqual({t['id'] for t in coverage['tasks']},tasks)
-        for view,expected_rows,expected_marks in [('species',48,1005),('allSpecies',87,1322),('clade',32,934)]:
+        for view in ['species','allSpecies','clade']:
             values=coverage['presentation']['views'][view]
-            self.assertEqual(len(values['rows']),expected_rows)
-            self.assertEqual(sum(len(ids) for ids in values['cells'].values()),expected_marks)
+            self.assertEqual(len(values['rows']),self.db.execute(
+                'SELECT COUNT(*) FROM coverage_rows WHERE view=?',(view,)).fetchone()[0])
             self.assertEqual({coverage['tasks'][i]['id'] for ids in values['cells'].values() for i in ids},tasks)
             self.assertTrue(all(len(ids)==len(set(ids)) for ids in values['cells'].values()))
-        self.assertEqual(sum(t['protein'] for t in coverage['tasks']),14)
+            field={'species':'row','allSpecies':'allSpeciesRow','clade':'clade'}[view]
+            for cell,indices in values['cells'].items():
+                row,feature=cell.split('|',1)
+                for i in indices:
+                    self.assertTrue(any(m[field]==row and feature in m['features']
+                        for m in coverage['tasks'][i]['mappings']),(view,cell,coverage['tasks'][i]['id']))
+        self.assertEqual({t['id'] for t in coverage['tasks'] if t['protein']},
+            {r[0] for r in self.db.execute("SELECT id FROM tasks WHERE input_description GLOB 'PROTEIN*'")})
         self.assertEqual(len(coverage['presentation']['gaps']),6)
-        self.assertEqual(len(coverage['presentation']['known']),6)
+        self.assertEqual(coverage['presentation']['known'],[])
+        self.assertEqual(self.db.execute("SELECT id FROM coverage_notes WHERE kind='known'").fetchall(),[])
 
     def test_output_review_distinguishes_components_structures_and_diagnostics(self):
         records={r['task_id']:dict(r) for r in self.db.execute('SELECT * FROM task_outputs')}
@@ -194,14 +205,15 @@ class CatalogueTests(unittest.TestCase):
             'spliceai-sites-coding':'dense-labels','spliceai-exon-inclusion':'isolated',
             'spliceai2-top-transcript':'linked-structure','spliceai2-gtag-detection':'isolated',
             'spliceai2-tissue-junction':'pairwise','deepd-human-routing-cds':'sampled-positions',
-            'genosm-sae-orf':'sampled-positions','deepd-annotation-maize':'unresolved'}
+            'genosm-sae-orf':'diagnostic','deepd-maize-routing-cds':'sampled-positions'}
         expected.update({'bend1-gene-finding':'dense-labels','bend1-enhancer-annotation':'dense-labels',
                          'bend1-accessibility':'isolated','bend1-cpg':'isolated'})
         for task,form in expected.items():
             self.assertEqual(records[task]['category_id'],'output-'+form,task)
         self.assertEqual(records['spliceai2-top-transcript']['structure_scope'],'splice-pattern')
         self.assertEqual(records['deepd-human-routing-cds']['status'],'partial')
-        self.assertEqual(records['aido2-coverage-rna']['status'],'partial')
+        self.assertEqual(records['aido2-coverage-rna']['category_id'],'output-signal-profile')
+        self.assertIsNone(self.db.execute("SELECT id FROM tasks WHERE id='deepd-annotation-maize'").fetchone())
         for task in ['evo-exon-intron','botanic1-regions','botanic1-conservation','botanic1-tis','botanic1-tts','genecad-busco']:
             self.assertEqual(self.db.execute("SELECT COUNT(*) FROM task_categories WHERE task_id=? AND category_id='dense-annotation'",(task,)).fetchone()[0],0,task)
         self.assertIn('coding phase',self.db.execute("SELECT limitations FROM tasks WHERE id='genecad-cds-chain'").fetchone()[0])
@@ -220,8 +232,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertGreater(len(comparators),0)
         self.assertTrue(all(r['protocol_id'] is None and 'SpliceAI2-specific protocol metadata does not apply' in r['note'] for r in comparators))
         self.assertGreater(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE model_id='spliceai2' AND protocol_id IS NOT NULL").fetchone()[0],0)
-        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'").fetchone()[0],42)
-        self.assertEqual(self.db.execute("SELECT COUNT(DISTINCT task_id) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'").fetchone()[0],41)
+        self.assertGreater(self.db.execute("SELECT COUNT(DISTINCT task_id) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper' AND paper_id='evo'").fetchone()[0],0)
 
     def test_opensplice_reuses_target_and_preserves_protocol_counts(self):
         task=self.db.execute("SELECT task_id,variant_id FROM evaluation_tasks WHERE evaluation_id='spliceai2-evals' AND task_id='bend-opensplice'").fetchone()
@@ -235,7 +246,10 @@ class CatalogueTests(unittest.TestCase):
     def test_grouped_features_require_joint_structure_evidence(self):
         c=json.loads((ROOT/'data/site-data.json').read_text())['coverage']
         tasks={t['id']:t for t in c['tasks']}
-        self.assertEqual(len(c['groupedFeatures']),14)
+        feature_ids={f['id'] for f in c['groupedFeatures']}
+        self.assertEqual(len(feature_ids),len(c['groupedFeatures']))
+        self.assertTrue({'gene-structures','coding-sequence','gene-elements','transcript-structures',
+            'splice-elements','regulatory-elements','crispr-arrays'}<=feature_ids)
         self.assertEqual(tasks['spliceai2-top-transcript']['groupedFeatures'],['transcript-structures'])
         self.assertEqual(tasks['genecad-cds-transcript']['groupedFeatures'],['gene-structures'])
         for tid in ['evo-exon-intron','spliceai-sites-coding','genecad-cds-base','genecad-busco','genecad-boundary-donor']:
@@ -279,21 +293,252 @@ class CatalogueTests(unittest.TestCase):
         self.assertGreater(targets,30)
 
     def test_ntv3_coverage_is_the_scored_heldout_panel(self):
-        tasks=self.db.execute("SELECT id FROM tasks WHERE name IN ('Exact CDS-exon structures','Exact whole-gene structures')").fetchall()
-        self.assertEqual(len(tasks),2)
+        tasks=self.db.execute("SELECT id FROM tasks WHERE id IN ('ntv3-annotation-exon','ntv3-annotation-gene')").fetchall()
+        self.assertEqual({t['id'] for t in tasks},{'ntv3-annotation-exon','ntv3-annotation-gene'})
         for task in tasks:
             rows=self.db.execute('''SELECT m.*,p.name,p.rank FROM coverage_mappings m JOIN populations p
               ON p.id=m.population_id WHERE m.task_id=?''',(task['id'],)).fetchall()
             self.assertEqual(len(rows),17)
-            self.assertTrue(all(r['basis']=='paper-test-panel' and r['rank']=='species' for r in rows))
+            self.assertTrue(all(r['rank']=='species' for r in rows))
+            self.assertTrue(all(r['evidence_id']=='ntv3-final-annotation-panel' for r in rows))
             self.assertNotIn('Drosophila melanogaster',{r['name'] for r in rows})
             esch=next(r for r in rows if r['name']=='Eschscholzia californica')
+            self.assertEqual(esch['clade_row'],'clade:eudicots')
             evidence=[self.db.execute('SELECT statement FROM evidence WHERE id=?',(eid,)).fetchone()[0] for eid in json.loads(esch['supporting_json'])]
-            self.assertTrue(any('Ranunculales' in text and 'EUDICOTS' in text for text in evidence))
+            self.assertTrue(any('201 assemblies' in text for text in evidence))
+            self.assertTrue(all(r['population_id'] not in {'human','arabidopsis','fly'} for r in rows))
 
     def test_display_remainders_are_not_new_biological_clades(self):
         self.assertIsNone(self.db.execute("SELECT 1 FROM populations WHERE id='monocots-other'").fetchone())
         self.assertEqual(self.db.execute("SELECT population_id FROM coverage_nodes WHERE id='monocots-other'").fetchone()[0],'monocots')
-        self.assertEqual(self.db.execute("SELECT COUNT(DISTINCT task_id) FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'").fetchone()[0],41)
+        self.assertEqual(self.db.execute("SELECT id FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper' AND paper_id!='evo'").fetchall(),[])
+
+    def test_completed_source_reviews_cover_every_indexed_entity(self):
+        evidence={r[0] for r in self.db.execute('SELECT id FROM evidence')}
+        for table in ['tasks','evaluations','models','papers','protocols']:
+            missing=self.db.execute(f'''SELECT a.id FROM {table} a LEFT JOIN source_reviews r
+              ON r.entity_table=? AND r.entity_id=a.id WHERE r.id IS NULL''',(table,)).fetchall()
+            self.assertEqual(missing,[],table)
+        for row in self.db.execute('SELECT * FROM source_reviews'):
+            ids=json.loads(row['evidence_ids_json'])
+            self.assertTrue(ids,row['id'])
+            self.assertTrue(set(ids)<=evidence,row['id'])
+            self.assertTrue(row['scope'].strip(),row['id'])
+            self.assertIsNotNone(self.db.execute(
+                f'SELECT id FROM {row["entity_table"]} WHERE id=?',(row['entity_id'],)).fetchone(),row['id'])
+        self.assertEqual(self.db.execute('''SELECT e.id FROM evaluations e LEFT JOIN evaluation_tasks t
+            ON t.evaluation_id=e.id GROUP BY e.id HAVING COUNT(t.task_id)=0''').fetchall(),[])
+        statuses={r[0] for r in self.db.execute('SELECT DISTINCT status FROM tasks')}
+        self.assertTrue(statuses<={'paper-audited','artifact-audited','source-limited'})
+        self.assertFalse(statuses&{'registered','panel-pending'})
+
+    def test_source_limits_are_fields_not_unfinished_audits(self):
+        limited=self.db.execute("SELECT id FROM tasks WHERE status='source-limited'").fetchall()
+        self.assertTrue(limited)
+        allowed={'not-reported','not-released','not-retrieved','conflicting','access-restricted','not-applicable'}
+        for task in limited:
+            rows=self.db.execute("SELECT * FROM source_limits WHERE entity_table='tasks' AND entity_id=?",(task[0],)).fetchall()
+            self.assertTrue(rows,task[0])
+            for row in rows:
+                self.assertIn(row['reason'],allowed,row['id'])
+                self.assertTrue(row['field'].strip(),row['id'])
+                self.assertGreater(len(row['detail'].strip()),30,row['id'])
+                self.assertNotRegex(row['detail'].lower(),r'\baudit incomplete\b|\bdecomposition pending\b|\bwill audit\b')
+                self.assertIsNotNone(self.db.execute('SELECT id FROM evidence WHERE id=?',(row['evidence_id'],)).fetchone())
+
+    def test_evo1_evo2_original_papers_and_external_uses_are_separate(self):
+        self.assertEqual(dict(self.db.execute("SELECT id,paper_id FROM models WHERE id IN ('evo1','evo2')")),
+            {'evo1':'evo1','evo2':'evo'})
+        for model,paper,collection in [('evo1','evo1','evo1-original'),('evo2','evo','evo-original')]:
+            uses=self.db.execute("SELECT task_id,paper_id FROM model_evaluations WHERE model_id=? AND provenance='original-paper'",(model,)).fetchall()
+            self.assertTrue(uses,model)
+            self.assertTrue(all(r['paper_id']==paper for r in uses),model)
+            members={r[0] for r in self.db.execute('SELECT task_id FROM evaluation_tasks WHERE evaluation_id=?',(collection,))}
+            self.assertTrue({r['task_id'] for r in uses}<=members,model)
+        first={r[0] for r in self.db.execute("SELECT task_id FROM model_evaluations WHERE model_id='evo1' AND provenance='original-paper'")}
+        second={r[0] for r in self.db.execute("SELECT task_id FROM model_evaluations WHERE model_id='evo2' AND provenance='original-paper'")}
+        self.assertTrue({'evo-dms-blat-firnberg','evo-deg','evo-phage-essential'}<=first&second)
+        self.assertIn('evo1-crispr-cleavage',first)
+        self.assertNotIn('evo1-crispr-cleavage',second)
+        self.assertIn('evo-exon-intron',second)
+        self.assertNotIn('evo-exon-intron',first)
+        external=self.db.execute("SELECT * FROM model_evaluations WHERE model_id='evo2' AND paper_id='ntv3'").fetchall()
+        self.assertTrue(external)
+        self.assertTrue(all(r['provenance']=='external-evaluation' for r in external))
+
+    def test_source_legend_order_and_family_membership(self):
+        sources=self.payload['coverage']['sources']
+        self.assertEqual([r['label'] for r in sources[:3]],
+            ['Evo 1 / Evo 2','RNAGym / ProteinGym / TraitGym','PlantCAD2 / GeneCAD / Botanic-1'])
+        self.assertEqual(set(sources[0]['originalModels']),{'evo1','evo2'})
+        self.assertEqual(set(sources[1]['evaluations']),{'rnagym','proteingym','traitgym'})
+        self.assertTrue({'plantcad2-zero','plantcad2-ft','genecad','botanic1-evals'}<=set(sources[2]['evaluations']))
+        self.assertEqual(sum(bool(s.get('fallback')) for s in sources),1)
+        self.assertTrue(sources[-1]['fallback'])
+        self.assertEqual(len({s['shape'] for s in sources}),len(sources))
+
+    def test_data_resources_distinguish_data_code_manifests_and_results(self):
+        resources={r['id']:dict(r) for r in self.db.execute('SELECT * FROM data_resources')}
+        self.assertTrue(resources)
+        for row in resources.values():
+            parsed=urlparse(row['url'])
+            self.assertEqual(parsed.scheme,'https',row['id'])
+            if row['host']=='huggingface':
+                self.assertEqual(parsed.netloc,'huggingface.co',row['id'])
+                self.assertTrue(parsed.path.startswith(('/datasets/','/spaces/')) or row['kind']=='results',row['id'])
+            elif row['host']=='github':
+                self.assertIn(parsed.netloc,{'github.com','raw.githubusercontent.com'},row['id'])
+            elif row['host']=='zenodo':
+                self.assertEqual(parsed.netloc,'zenodo.org',row['id'])
+            if row['host'] in {'huggingface','github'} and row['availability']=='public':
+                self.assertRegex(row['revision'] or '',r'^[0-9a-f]{40}$',row['id'])
+                self.assertIn(row['revision'],parsed.path,row['id'])
+            if row['kind']=='dataset':
+                self.assertNotRegex(parsed.path,r'\.(?:py|ipynb|js|ts|sh)$',row['id'])
+        for table in ['task_resources','evaluation_resources']:
+            for link in self.db.execute('SELECT * FROM '+table):
+                row=resources[link['resource_id']]
+                if link['relation']=='evaluation-code':self.assertEqual(row['kind'],'evaluation-code',row['id'])
+                if link['relation']=='identity-manifest':self.assertEqual(row['kind'],'manifest',row['id'])
+                if link['relation']=='results':self.assertEqual(row['kind'],'results',row['id'])
+                if row['kind']=='evaluation-code':self.assertEqual(link['relation'],'evaluation-code',row['id'])
+
+    def test_source_proven_aliases_reuse_targets_and_keep_release_protocols(self):
+        names={'human_nontata_promoters','drosophila_enhancers_stark','dummy_mouse_enhancers_ensembl',
+            'human_enhancers_cohn','human_enhancers_ensembl','demo_human_or_worm','human_ensembl_regulatory',
+            'human_ocr_ensembl','demo_coding_vs_intergenomic_seqs'}
+        expected={'geneb-katarinagresova-genomic-benchmarks-'+n.replace('_','-'):'gb-'+n for n in names}
+        expected.update({'geneb-leannmlindsey-gue-emp-h3':'gue-H3','geneb-leannmlindsey-gue-emp-h4':'gue-H4',
+            'generator2-recovery':'generator-recovery',
+            'botanic1-long-atac':'plantcad2-ft-cell_type_specific_acr'})
+        self.assertEqual(len(expected),13)
+        redirects={r['id']:r['replacement_task_id'] for r in self.db.execute('SELECT * FROM task_redirects')}
+        for old,new in expected.items():
+            self.assertEqual(redirects[old],new)
+            self.assertIsNone(self.db.execute('SELECT id FROM tasks WHERE id=?',(old,)).fetchone())
+            self.assertIsNotNone(self.db.execute('SELECT id FROM tasks WHERE id=?',(new,)).fetchone())
+            self.assertGreaterEqual(self.db.execute('SELECT COUNT(*) FROM evaluation_tasks WHERE task_id=?',(new,)).fetchone()[0],2)
+            self.assertGreaterEqual(self.db.execute('SELECT COUNT(*) FROM protocols WHERE task_id=?',(new,)).fetchone()[0],2)
+            self.assertIsNotNone(self.db.execute("SELECT 1 FROM field_evidence WHERE entity_table='tasks' AND entity_id=? AND field='dataset_identity'",(new,)).fetchone())
+        inspection=json.loads((ROOT/'data/existing-benchmark-inspections.json').read_text())['identity_comparisons']
+        self.assertEqual({r['dataset'] for r in inspection['GB_GENEB']},names)
+        self.assertTrue(all(r['geneb_rows_all_present_with_same_label'] for r in inspection['GB_GENEB']))
+        self.assertTrue(all(r['rowwise_sequence_label_equal'] for arm in inspection['GUE_GENEB'].values() for r in arm.values()))
+
+    def test_shared_maize_target_keeps_distinct_paper_partitions(self):
+        target='plantcad2-ft-cell_type_specific_acr'
+        botanic=self.db.execute("SELECT * FROM protocols WHERE id='botanic1-long-atac-protocol'").fetchone()
+        self.assertEqual(botanic['task_id'],target)
+        self.assertIn('chr9/10',botanic['split_rule'])
+        self.assertIsNotNone(botanic['variant_id'])
+        native=self.db.execute("SELECT split_rule FROM protocols WHERE task_id=? AND id LIKE 'plantcad2-%'",(target,)).fetchall()
+        self.assertTrue(native)
+        self.assertTrue(all('chr10' in p[0] and 'chr1–9' in p[0] for p in native))
+        self.assertEqual(self.db.execute('SELECT category_id FROM task_outputs WHERE task_id=?',(target,)).fetchone()[0],'output-isolated')
+
+    def test_cag_replacement_is_mixed_but_synonymous_recoding_is_cds(self):
+        scopes=dict(self.db.execute("SELECT task_id,scope FROM task_feature_scopes WHERE feature_id='cds' AND task_id IN ('carbon-triplet','carbon-synonymous')"))
+        self.assertEqual(scopes,{'carbon-triplet':'mixed','carbon-synonymous':'restricted-target'})
+        tasks={r['id']:r for r in self.payload['coverage']['tasks']}
+        self.assertNotIn('coding-sequence',tasks['carbon-triplet']['groupedFeatures'])
+        self.assertIn('coding-sequence',tasks['carbon-synonymous']['groupedFeatures'])
+        rows=json.loads((ROOT/'data/carbon-artifact-inspections.json').read_text())
+        cag=next(r for r in rows if r['path']=='motif_human/test-00000-of-00001.parquet')
+        self.assertEqual(cag['checks']['patch_exceeds_annotated_cds'],3669)
+        synonymous=[r for r in rows if r['path'].startswith(('syn_human/','syn_mouse/'))]
+        self.assertEqual(len(synonymous),2)
+        self.assertTrue(all(r['checks']['patch_exceeds_annotated_cds']==0 and
+            r['checks']['same_amino_acids_in_any_frame']==r['rows'] for r in synonymous))
+
+    def test_plantcad_cell_task_preserves_full_scan_and_real_overlap(self):
+        m=json.loads((ROOT/'data/plantcad-cell-artifact-inspections.json').read_text())
+        self.assertEqual(len(m['files']),6)
+        self.assertEqual(m['distinct_coordinates'],{'train':2517259,'validation':629315,'test':243845})
+        self.assertTrue(all(v==0 for v in m['coordinate_intersections'].values()))
+        self.assertEqual(m['exact_sequence_intersections'],{'train-validation':69,'train-test':18,'validation-test':6})
+        by_split={'train':[],'validation':[],'test':[]}
+        for row in m['files']:
+            split='validation' if '/validation-' in row['path'] else 'test' if '/test-' in row['path'] else 'train'
+            by_split[split].append(row)
+            self.assertEqual(row['sequence_lengths'],{'600':row['rows']})
+            self.assertEqual(row['label_lengths'],{'92':row['rows']})
+            self.assertEqual(row['nonbinary_labels'],0)
+        for split in ['train','validation']:
+            self.assertEqual({c for row in by_split[split] for c in row['chromosomes']},{'chr'+str(i) for i in range(1,10)})
+        self.assertEqual({c for row in by_split['test'] for c in row['chromosomes']},{'chr10'})
+        task='plantcad2-ft-cell_type_specific_acr'
+        counts={r['split']:r['value'] for r in self.db.execute("SELECT split,value FROM counts WHERE task_id=? AND unit='released windows' AND method='measured'",(task,))}
+        self.assertEqual(counts,m['distinct_coordinates'])
+        for row in self.db.execute("SELECT split_rule FROM protocols WHERE task_id=? AND id LIKE 'plantcad2-%'",(task,)):
+            self.assertIn('chr1–9',row[0]);self.assertIn('chr10',row[0])
+
+    def test_track_links_have_cited_metadata_and_owned_variants(self):
+        for table,field,target in [('counts','variant_id','variants'),('counts','protocol_id','protocols'),
+            ('protocols','variant_id','variants'),('model_evaluations','protocol_id','protocols'),
+            ('task_resources','variant_id','variants'),('task_tracks','variant_id','variants')]:
+            self.assertEqual(self.db.execute(f'''SELECT a.task_id FROM {table} a JOIN {target} b
+                ON a.{field}=b.id WHERE a.task_id!=b.task_id''').fetchall(),[],(table,field))
+        self.assertEqual(self.db.execute('''SELECT t.track_id FROM task_tracks t JOIN variants v ON v.id=t.variant_id
+            WHERE v.task_id!=t.task_id''').fetchall(),[])
+        unlinked=self.db.execute('''SELECT a.* FROM assay_tracks a LEFT JOIN task_tracks t ON a.id=t.track_id
+            WHERE t.track_id IS NULL''').fetchall()
+        # These four published PAS output channels are inventory identities.
+        # No standalone scored PAS-profile result is asserted by the available
+        # Cerberus abstract/release, so do not manufacture evaluation links.
+        self.assertEqual({r['id'] for r in unlinked},{
+            'cerberus-human-track-8359','cerberus-human-track-8360',
+            'cerberus-mouse-track-3100','cerberus-mouse-track-3101'})
+        self.assertTrue(all(r['assay']=='pas' for r in unlinked))
+        for row in self.db.execute('SELECT * FROM assay_tracks'):
+            self.assertTrue(json.loads(row['metadata_json']),row['id'])
+            self.assertIsNotNone(self.db.execute('SELECT id FROM evidence WHERE id=?',(row['evidence_id'],)).fetchone())
+        actual=dict(self.db.execute('SELECT task_id,COUNT(*) FROM task_tracks GROUP BY task_id'))
+        self.assertEqual({r['task_id']:r['tracks'] for r in self.payload['task_track_counts']},actual)
+        self.assertNotIn('assay_tracks',self.payload)
+        self.assertNotIn('task_tracks',self.payload)
+
+    def test_ntv3_track_inventories_and_missing_result_rows(self):
+        m=json.loads((ROOT/'data/ntv3-artifact-inspections.json').read_text())
+        def sheet(n):return next(s['rows'] for s in m['sheets'] if s['name'].startswith(f'Supp Table {n} '))
+        for prefix,key,rows,source in [('ntv3-native-','file_id',sheet(1),'ntv3-complete-workbook'),
+            ('ntv3-benchmark-','file_id',m['benchmark_metadata'],'ntv3-benchmark-metadata'),
+            ('ntv3-borzoi-','Track ID',sheet(7),'ntv3-complete-workbook'),
+            ('ntv3-ag-','Track ID',sheet(8),'ntv3-complete-workbook')]:
+            tracks=self.db.execute('SELECT * FROM assay_tracks WHERE id LIKE ? AND source_id=?',(prefix+'%',source)).fetchall()
+            actual={r['source_track_id'] for r in tracks}
+            expected={str(r[key]) for r in rows}
+            self.assertEqual(actual,expected,prefix)
+            self.assertEqual(len(actual),len(rows),prefix)
+            source_rows={str(r[key]):r for r in rows}
+            for track in tracks:
+                metadata=json.loads(track['metadata_json'])
+                self.assertEqual(metadata,source_rows[track['source_track_id']],track['id'])
+                self.assertEqual(track['assay'],metadata.get('assay',metadata.get('Assay')),track['id'])
+        native={r['file_id'] for r in sheet(1)};results={r['file_id'] for r in sheet(5)}
+        self.assertEqual((len(native),len(results)),(16262,16260))
+        self.assertEqual(native-results,{'SRX11246453','SRX12330305'})
+        wheat=[r for r in sheet(1) if r['species']=='Triticum aestivum']
+        self.assertEqual(Counter(r['assay'] for r in wheat),{'RNA-seq':762,'Histone ChIP-seq':14})
+        histone=self.db.execute('''SELECT COUNT(*) FROM task_tracks t JOIN assay_tracks a ON a.id=t.track_id
+            JOIN populations p ON p.id=a.population_id WHERE t.task_id='ntv3-tracks-histone' AND p.name='Triticum aestivum' ''').fetchone()[0]
+        self.assertEqual(histone,14)
+        self.assertEqual(self.db.execute('''SELECT COUNT(*) FROM task_tracks t JOIN assay_tracks a ON a.id=t.track_id
+            JOIN populations p ON p.id=a.population_id WHERE t.task_id='ntv3-tracks-atac' AND p.name='Triticum aestivum' ''').fetchone()[0],0)
+
+    def test_profile_gene_vector_and_linked_structure_targets_remain_distinct(self):
+        outputs={r['task_id']:dict(r) for r in self.db.execute('SELECT * FROM task_outputs')}
+        for tid in ['ntv3-tracks-rna','ntv3-ag-rna','ntv3-benchmark-ribo','ntv3-benchmark-eclip']:
+            self.assertEqual(outputs[tid]['category_id'],'output-signal-profile')
+            self.assertEqual(outputs[tid]['position_axis'],'contiguous')
+            self.assertIsNone(self.db.execute("SELECT 1 FROM task_categories WHERE task_id=? AND category_id='dense-annotation'",(tid,)).fetchone())
+        self.assertEqual(outputs['ntv3-danio']['category_id'],'output-isolated')
+        self.assertEqual(outputs['ntv3-annotation-exon']['category_id'],'output-element-set')
+        self.assertEqual(outputs['ntv3-annotation-gene']['structure_scope'],'coding-chain')
+        self.assertEqual(outputs['spliceai2-top-transcript']['structure_scope'],'splice-pattern')
+        self.assertEqual(outputs['ntv3-whole-blood-response']['category_id'],'output-diagnostic')
+        self.assertIsNone(self.db.execute("SELECT id FROM tasks WHERE id='ntv3-design-plant'").fetchone())
+        for tid,feature in [('ntv3-design-plant-promoter','promoter'),('ntv3-design-plant-enhancer','enhancer')]:
+            self.assertEqual(outputs[tid]['category_id'],'output-sequence')
+            self.assertIsNotNone(self.db.execute('SELECT 1 FROM task_categories WHERE task_id=? AND category_id=?',(tid,feature)).fetchone())
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,1559 @@
+{
+  "revision": "cb8f5903383761a82b10247a20276cc39737e1c7",
+  "files": [
+    {
+      "path": "data/niah_128k/test-00000-of-00001.parquet",
+      "bytes": 540661475,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "key_len_bp",
+        "value_len_bp",
+        "target_insert_start_bp",
+        "target_insert_end_bp",
+        "key",
+        "value",
+        "negative_value",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "786432": 500
+        },
+        "context_length_tokens": {
+          "131072": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "0": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "190cda5de33621edae66a99580a193508a862daa2266e0741aa6d3c3bd825670",
+        "size": 540661475,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_16k/test-00000-of-00001.parquet",
+      "bytes": 67360514,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "key_len_bp",
+        "value_len_bp",
+        "target_insert_start_bp",
+        "target_insert_end_bp",
+        "key",
+        "value",
+        "negative_value",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "98304": 500
+        },
+        "context_length_tokens": {
+          "16384": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "0": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "ded1a097f2b4c1db1e46c64fa55a5650bfdf3c6fab25b6ae98f1146463e7a382",
+        "size": 67360514,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_32k/test-00000-of-00001.parquet",
+      "bytes": 134536280,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "key_len_bp",
+        "value_len_bp",
+        "target_insert_start_bp",
+        "target_insert_end_bp",
+        "key",
+        "value",
+        "negative_value",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "196608": 500
+        },
+        "context_length_tokens": {
+          "32768": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "0": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "2f08a4fc2be562a4dbc04a174de224435e3d78105503fb92e5140cf0bb314399",
+        "size": 134536280,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_4k/test-00000-of-00001.parquet",
+      "bytes": 16866230,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "key_len_bp",
+        "value_len_bp",
+        "target_insert_start_bp",
+        "target_insert_end_bp",
+        "key",
+        "value",
+        "negative_value",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "24576": 500
+        },
+        "context_length_tokens": {
+          "4096": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "0": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "c61a397b374c0951a28cb4229fe9c61c87c1303140affcfd40ff4ebd0f8de786",
+        "size": 16866230,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_64k/test-00000-of-00001.parquet",
+      "bytes": 269845940,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "key_len_bp",
+        "value_len_bp",
+        "target_insert_start_bp",
+        "target_insert_end_bp",
+        "key",
+        "value",
+        "negative_value",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "393216": 500
+        },
+        "context_length_tokens": {
+          "65536": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "0": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "682dca7649b6756af5d1cab2dac7091a2f4ab4863904d85127c9efafdf5dbce5",
+        "size": 269845940,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_8k/test-00000-of-00001.parquet",
+      "bytes": 33668189,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "key_len_bp",
+        "value_len_bp",
+        "target_insert_start_bp",
+        "target_insert_end_bp",
+        "key",
+        "value",
+        "negative_value",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "49152": 500
+        },
+        "context_length_tokens": {
+          "8192": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "0": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "b49af7c70d4e75a8c68dfc320791769a2343242021bb874b9a98cb30cda4cae0",
+        "size": 33668189,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d1_128k/test-00000-of-00001.parquet",
+      "bytes": 538234039,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "786432": 500
+        },
+        "context_length_tokens": {
+          "131072": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "1": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "da2e741548b9d4efcd74b39af1eb4312fa5a712e266c418cdbd9a05d75bab7c6",
+        "size": 538234039,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d1_16k/test-00000-of-00001.parquet",
+      "bytes": 67411573,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "98304": 500
+        },
+        "context_length_tokens": {
+          "16384": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "1": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "ead7f98ed9547db6bf8e0033c9cc1439765f6c93e481b4e69cbdda197d2946db",
+        "size": 67411573,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d1_32k/test-00000-of-00001.parquet",
+      "bytes": 135042453,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "196608": 500
+        },
+        "context_length_tokens": {
+          "32768": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "1": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "9322fd4b52c2538e9b5c8670e647a2542af6e2cb5a402f83877aba451223734a",
+        "size": 135042453,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d1_4k/test-00000-of-00001.parquet",
+      "bytes": 16939613,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "24576": 500
+        },
+        "context_length_tokens": {
+          "4096": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "1": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "f45e2a037aa9f3b6635bf8e0cd2d4d17d97d4cb9dc17ed9980986a6ae948d175",
+        "size": 16939613,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d1_64k/test-00000-of-00001.parquet",
+      "bytes": 270192674,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "393216": 500
+        },
+        "context_length_tokens": {
+          "65536": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "1": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "e370efe8f2c1e3520920c046498117d5d29203e1ab666abd256014c1a4546d29",
+        "size": 270192674,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d1_8k/test-00000-of-00001.parquet",
+      "bytes": 33792639,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "49152": 500
+        },
+        "context_length_tokens": {
+          "8192": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "1": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "38b03fc2212df0d478ef70e6aa2833a6a9445e87eadf277532f6c7d345a0432b",
+        "size": 33792639,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d2_128k/test-00000-of-00001.parquet",
+      "bytes": 538947077,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "786432": 500
+        },
+        "context_length_tokens": {
+          "131072": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "2": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "32c4d94c43bdf31da22e559b6873a75f3c317343a7f203ed8200fea75b5a0d04",
+        "size": 538947077,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d2_16k/test-00000-of-00001.parquet",
+      "bytes": 67524883,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "98304": 500
+        },
+        "context_length_tokens": {
+          "16384": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "2": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "a0a0ebaf522164c5cf177fe562eb7e5c0b0fa60159fc294600e10b176f61f8f0",
+        "size": 67524883,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d2_32k/test-00000-of-00001.parquet",
+      "bytes": 135136189,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "196608": 500
+        },
+        "context_length_tokens": {
+          "32768": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "2": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "210ce66420363a84e12b5efa1818b707b7439d8cffdaf35eddbc381b0d54daa0",
+        "size": 135136189,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d2_4k/test-00000-of-00001.parquet",
+      "bytes": 17019833,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "24576": 500
+        },
+        "context_length_tokens": {
+          "4096": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "2": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "b9f49fee9787b34ce21cb7e1b9c87839de5ab3e620a18aa71e8ffc1dd82bc892",
+        "size": 17019833,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d2_64k/test-00000-of-00001.parquet",
+      "bytes": 270104983,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "393216": 500
+        },
+        "context_length_tokens": {
+          "65536": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "2": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "606ba07d69befd3e6a380dfe41c44855d9a35c50a47419c02dd4b7fc0ce3ea16",
+        "size": 270104983,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d2_8k/test-00000-of-00001.parquet",
+      "bytes": 33954610,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "49152": 500
+        },
+        "context_length_tokens": {
+          "8192": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "2": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "934ca547d8df3d603c851ea40b3dba7df53f1058a038c90f893dc8cbb9863c53",
+        "size": 33954610,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d4_128k/test-00000-of-00001.parquet",
+      "bytes": 539391268,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "786432": 500
+        },
+        "context_length_tokens": {
+          "131072": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "4": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "3f187c83a90d60fda8f78ec529ec92b0f3cbb9cdd6609d8be46f59af65bd8aee",
+        "size": 539391268,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d4_16k/test-00000-of-00001.parquet",
+      "bytes": 67449262,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "98304": 500
+        },
+        "context_length_tokens": {
+          "16384": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "4": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "6229d97134c61ddbe4b135ec22aaf00ba90a5f434873ca4818664d1b6ae84c7d",
+        "size": 67449262,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d4_32k/test-00000-of-00001.parquet",
+      "bytes": 135105382,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "196608": 500
+        },
+        "context_length_tokens": {
+          "32768": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "4": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "4fcc9e6916ed5bcb5f82f74159750f7d3a95ad9eab49b1e304c1ff530515215c",
+        "size": 135105382,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d4_4k/test-00000-of-00001.parquet",
+      "bytes": 17012405,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "24576": 500
+        },
+        "context_length_tokens": {
+          "4096": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "4": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "4eae58cde7984ea9dd9395de2dc762a2b2e26da2d8997bbd61cd649a247e6816",
+        "size": 17012405,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d4_64k/test-00000-of-00001.parquet",
+      "bytes": 269891351,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "393216": 500
+        },
+        "context_length_tokens": {
+          "65536": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "4": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "a08abadf74695ec5dbd895d0ecf6a10affd8b2c27dc2a9886245306d2b692389",
+        "size": 269891351,
+        "pointerSize": 134
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    },
+    {
+      "path": "data/niah_neardup_d4_8k/test-00000-of-00001.parquet",
+      "bytes": 33835668,
+      "rows": 500,
+      "columns": [
+        "uid",
+        "task",
+        "haystack_mode",
+        "source",
+        "context_length_tokens",
+        "context_length_bp",
+        "depth",
+        "condition",
+        "num_distractors",
+        "mutation_distance",
+        "key_len_bp",
+        "value_len_bp",
+        "key",
+        "value",
+        "negative_value",
+        "distractor_keys",
+        "distractor_values",
+        "prompt",
+        "positive_sequence",
+        "negative_sequence"
+      ],
+      "categories": {
+        "source": {
+          "animalia": 125,
+          "fungi": 125,
+          "plantae": 125,
+          "protista": 125
+        },
+        "depth": {
+          "10": 100,
+          "25": 100,
+          "50": 100,
+          "75": 100,
+          "90": 100
+        },
+        "context_length_bp": {
+          "49152": 500
+        },
+        "context_length_tokens": {
+          "8192": 500
+        },
+        "key_len_bp": {
+          "24": 500
+        },
+        "value_len_bp": {
+          "24": 500
+        },
+        "num_distractors": {
+          "8": 500
+        },
+        "mutation_distance": {
+          "4": 500
+        }
+      },
+      "source_lfs": {
+        "oid": "e352441afa4db6e5901a3e064ae0998daea767e79d2abc8c0fad810e9803d8be",
+        "size": 33835668,
+        "pointerSize": 133
+      },
+      "inspection": "Complete metadata-column scan and Parquet row counts; DNA payload validation separately covers all four 4k configurations."
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "caqtl_african_variant_causality_human": {
+    "n": 26042,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "6572d0f32117166ce25c322af75b5de8b96d59f470cd2b883359793ef7e6f4d4",
+    "bytes": 888354,
+    "target": {
+      "0": 23823,
+      "1": 2219
+    },
+    "chromosomes": {
+      "chr3": 5853,
+      "chr6": 6037,
+      "chr9": 3268,
+      "chr12": 3801,
+      "chr16": 2262,
+      "chr18": 1776,
+      "chr19": 2211,
+      "chr21": 834
+    },
+    "test_rows_with_target": 26042,
+    "test_distinct_variants": 26042
+  },
+  "paqtl_variant_causality_human": {
+    "n": 29512,
+    "columns": [
+      "variant_id",
+      "gene_id",
+      "PD",
+      "PI",
+      "target",
+      "prediction",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "a0e39b2ac086bdd50e56f8714db609b4484524fb1c179bd6d1ed70aa117a987f",
+    "bytes": 1151890,
+    "target": {
+      "1": 5880,
+      "0": 23632
+    },
+    "chromosomes": {
+      "chr1": 4312,
+      "chr10": 1800,
+      "chr12": 2304,
+      "chr13": 808,
+      "chr15": 1512,
+      "chr16": 1904,
+      "chr18": 664,
+      "chr19": 3152,
+      "chr3": 2400,
+      "chr4": 1768,
+      "chr6": 2744,
+      "chr7": 2208,
+      "chr8": 1880,
+      "chr9": 1656,
+      "chr21": 400
+    },
+    "test_rows_with_target": 15224,
+    "test_distinct_variants": 1903,
+    "scorers": [
+      "paqtl_max_ratio_coverage_fc;borzoi_scaling_gtex_before_agg;max_per_track;pas_width_nt=160;drop_single_pas",
+      "paqtl_max_ratio_coverage_fc;max_per_track;pas_width_nt=400",
+      "paqtl_max_ratio_coverage_fc;max_per_track;pas_width_nt=160;drop_single_pas",
+      "paqtl_max_ratio_coverage_fc;borzoi_scaling_gtex_before_agg;max_per_track;pas_width_nt=400",
+      "paqtl_max_ratio_coverage_fc;borzoi_scaling_gtex_before_agg;max_per_track;pas_width_nt=160",
+      "paqtl_max_ratio_coverage_fc;max_per_track;pas_width_nt=400;drop_single_pas",
+      "paqtl_max_ratio_coverage_fc;max_per_track;pas_width_nt=160",
+      "paqtl_max_ratio_coverage_fc;borzoi_scaling_gtex_before_agg;max_per_track;pas_width_nt=400;drop_single_pas"
+    ]
+  },
+  "caqtl_european_variant_causality_human": {
+    "n": 31621,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "a30296d7de371acaae4ce73737ebcb26bc5003f9fd7fb3ac1062c1ef9c15fada",
+    "bytes": 1071514,
+    "target": {
+      "0": 29003,
+      "1": 2618
+    },
+    "chromosomes": {
+      "chr12": 5426,
+      "chr16": 2985,
+      "chr18": 3178,
+      "chr19": 2724,
+      "chr21": 1214,
+      "chr3": 8959,
+      "chr6": 7135
+    },
+    "test_rows_with_target": 31621,
+    "test_distinct_variants": 31621
+  },
+  "caqtl_african_variant_coefficient_human": {
+    "n": 2219,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "3d4f7dd5be20a20f5fcfe2d9d08ca34ee623178147bfa6c89b0da08b936ecd07",
+    "bytes": 96410,
+    "target": {
+      "distinct": 1917
+    },
+    "chromosomes": {
+      "chr3": 569,
+      "chr6": 599,
+      "chr9": 303,
+      "chr12": 314,
+      "chr16": 145,
+      "chr18": 180,
+      "chr19": 57,
+      "chr21": 52
+    },
+    "test_rows_with_target": 2219,
+    "test_distinct_variants": 2219
+  },
+  "caqtl_smc_variant_coefficient_human": {
+    "n": 136,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "a1bdde43c1c7dd23aaa55c19bc48fb566e82f6c82b63b95180f02311109a8f00",
+    "bytes": 10578,
+    "target": {
+      "distinct": 136
+    },
+    "chromosomes": {
+      "chr12": 20,
+      "chr16": 14,
+      "chr18": 11,
+      "chr19": 5,
+      "chr21": 1,
+      "chr3": 40,
+      "chr6": 29,
+      "chr9": 16
+    },
+    "test_rows_with_target": 136,
+    "test_distinct_variants": 132
+  },
+  "dsqtl_yoruba_variant_coefficient_human": {
+    "n": 165,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "d567d753c329c48d74c344a462a7ce0cf21770af741360d02e6b3d25dc1a510a",
+    "bytes": 11706,
+    "target": {
+      "distinct": 162
+    },
+    "chromosomes": {
+      "chr12": 18,
+      "chr16": 17,
+      "chr18": 11,
+      "chr19": 34,
+      "chr21": 13,
+      "chr3": 26,
+      "chr6": 23,
+      "chr9": 23
+    },
+    "test_rows_with_target": 165,
+    "test_distinct_variants": 165
+  },
+  "caqtl_european_variant_coefficient_human": {
+    "n": 2618,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "26f7b524418217e7788079ffbec9404c3c4cbddef6efbe013b3738ff714b394e",
+    "bytes": 108378,
+    "target": {
+      "distinct": 1779
+    },
+    "chromosomes": {
+      "chr12": 439,
+      "chr16": 231,
+      "chr18": 248,
+      "chr19": 149,
+      "chr21": 93,
+      "chr3": 759,
+      "chr6": 699
+    },
+    "test_rows_with_target": 2618,
+    "test_distinct_variants": 2618
+  },
+  "sqtl_variant_causality_gene_human": {
+    "n": 1423950,
+    "columns": [
+      "variant_id",
+      "gene_id",
+      "tissue",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "123819c5bc28a3436cefd9dcb4bbb9d6a73a1805f469ea706a5b01960b6696c3",
+    "bytes": 62824202,
+    "target": {
+      "1.0": 26582,
+      "None": 1370360,
+      "0.0": 27008
+    },
+    "tissue": {
+      "Adipose_Subcutaneous": 25890,
+      "Adipose_Visceral_Omentum": 25890,
+      "Adrenal_Gland": 25890,
+      "Artery_Aorta": 25890,
+      "Artery_Coronary": 25890,
+      "Artery_Tibial": 25890,
+      "Bladder": 25890,
+      "Brain_Amygdala": 25890,
+      "Brain_Anterior_cingulate_cortex_BA24": 25890,
+      "Brain_Caudate_basal_ganglia": 25890,
+      "Brain_Cerebellar_Hemisphere": 25890,
+      "Brain_Cerebellum": 25890,
+      "Brain_Cortex": 25890,
+      "Brain_Frontal_Cortex_BA9": 25890,
+      "Brain_Hippocampus": 25890,
+      "Brain_Hypothalamus": 25890,
+      "Brain_Nucleus_accumbens_basal_ganglia": 25890,
+      "Brain_Putamen_basal_ganglia": 25890,
+      "Brain_Spinal_cord_cervical_c-1": 25890,
+      "Brain_Substantia_nigra": 25890,
+      "Breast_Mammary_Tissue": 25890,
+      "Cells_Cultured_fibroblasts": 25890,
+      "Cells_EBV-transformed_lymphocytes": 25890,
+      "Cells_Leukemia_cell_line_CML": 25890,
+      "Cervix_Ectocervix": 25890,
+      "Cervix_Endocervix": 25890,
+      "Colon_Sigmoid": 25890,
+      "Colon_Transverse": 25890,
+      "Esophagus_Gastroesophageal_Junction": 25890,
+      "Esophagus_Mucosa": 25890,
+      "Esophagus_Muscularis": 25890,
+      "Fallopian_Tube": 25890,
+      "Heart_Atrial_Appendage": 25890,
+      "Heart_Left_Ventricle": 25890,
+      "Kidney_Cortex": 25890,
+      "Kidney_Medulla": 25890,
+      "Liver": 25890,
+      "Lung": 25890,
+      "Minor_Salivary_Gland": 25890,
+      "Muscle_Skeletal": 25890,
+      "Nerve_Tibial": 25890,
+      "Ovary": 25890,
+      "Pancreas": 25890,
+      "Pituitary": 25890,
+      "Prostate": 25890,
+      "Skin_Not_Sun_Exposed_Suprapubic": 25890,
+      "Skin_Sun_Exposed_Lower_leg": 25890,
+      "Small_Intestine_Terminal_Ileum": 25890,
+      "Spleen": 25890,
+      "Stomach": 25890,
+      "Testis": 25890,
+      "Thyroid": 25890,
+      "Uterus": 25890,
+      "Vagina": 25890,
+      "Whole_Blood": 25890
+    },
+    "chromosomes": {
+      "chr1": 200310,
+      "chr10": 99550,
+      "chr12": 104720,
+      "chr13": 44000,
+      "chr15": 66550,
+      "chr16": 103400,
+      "chr18": 35200,
+      "chr19": 151250,
+      "chr21": 32560,
+      "chr3": 109120,
+      "chr4": 81400,
+      "chr6": 117810,
+      "chr7": 101860,
+      "chr8": 80410,
+      "chr9": 95810
+    },
+    "test_rows_with_target": 28916,
+    "test_distinct_variants": 6815,
+    "test_labels": {
+      "1.0": 14722,
+      "0.0": 14194
+    }
+  },
+  "caqtl_microglia_variant_coefficient_human": {
+    "n": 285,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "3b92dcbf616ed34f71e17f3a87eb12547f75112003d451b095d1f0a1ca063894",
+    "bytes": 17098,
+    "target": {
+      "distinct": 285
+    },
+    "chromosomes": {
+      "chr21": 14,
+      "chr3": 84,
+      "chr6": 59,
+      "chr9": 39,
+      "chr12": 41,
+      "chr16": 16,
+      "chr18": 31,
+      "chr19": 1
+    },
+    "test_rows_with_target": 285,
+    "test_distinct_variants": 285
+  },
+  "dsqtl_yoruba_variant_causality_human": {
+    "n": 8235,
+    "columns": [
+      "variant_id",
+      "prediction",
+      "target",
+      "variant_scorer",
+      "output_type",
+      "metric_calculator",
+      "metric_name"
+    ],
+    "sha256": "cc524bba00e55fca48d588b9411f249b0603df8f11f86799ff96bf39f70f03ba",
+    "bytes": 286122,
+    "target": {
+      "1": 165,
+      "0": 8070
+    },
+    "chromosomes": {
+      "chr12": 1074,
+      "chr16": 918,
+      "chr18": 551,
+      "chr19": 1643,
+      "chr21": 600,
+      "chr3": 1247,
+      "chr6": 1115,
+      "chr9": 1087
+    },
+    "test_rows_with_target": 8235,
+    "test_distinct_variants": 8235
+  },
+  "cerberus-human": {
+    "n": 8361,
+    "sha256": "5b6ca012517de02733b1a948fbe1a9f47e9961842ca62c1177b452cdff80fd1f",
+    "bytes": 779442,
+    "assays": {
+      "atac": 462,
+      "dnase": 674,
+      "cage": 1678,
+      "rna": 2028,
+      "rna3": 1739,
+      "chip": 1282,
+      "clip": 496,
+      "pas": 2
+    },
+    "sources": {
+      "catlas": 462,
+      "encode": 3766,
+      "fantom": 1678,
+      "czi": 1101,
+      "recount3": 301,
+      "biccn": 882,
+      "satija": 37,
+      "goodarzi": 132,
+      "polyadb": 2
+    }
+  },
+  "cerberus-mouse": {
+    "n": 3102,
+    "sha256": "ca9d70090fe7ecd0597bf8036f6c6d9edf32bbd50734190c982b05c9e418b478",
+    "bytes": 276992,
+    "assays": {
+      "atac": 562,
+      "dnase": 93,
+      "cage": 720,
+      "rna": 953,
+      "rna3": 212,
+      "chip": 560,
+      "pas": 2
+    },
+    "sources": {
+      "catlas": 435,
+      "encode": 1135,
+      "uw-atlas": 85,
+      "fantom": 720,
+      "czi": 605,
+      "recount3": 120,
+      "polyadb": 2
+    }
+  },
+  "_review": {
+    "reviewed": "2026-11-27",
+    "ag_api_revision": "67d9080d70283173f6060a1d9850942736350547",
+    "ag_research_revision": "3eecf48e58d7babbbc53525a8a0cf29a179e20a6",
+    "baskerville_revision": "4330a9281e8d3b060c03249a05047a4fb37d2576",
+    "scope": "Complete ten original AlphaGenome Feather tables, all Cerberus target TSV rows, report methods, immutable author code releases; no inference that track inventories are held-out examples."
+  }
+}

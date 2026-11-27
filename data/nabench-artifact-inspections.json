@@ -1,0 +1,1363 @@
+{
+  "revision": "99c8681ec1eab706e10ff90a5c329dcf184cc1d1",
+  "manifest_rows": 170,
+  "manifest_unique_ids": 170,
+  "data_files": 47,
+  "data_rows": 539101,
+  "manifest_ids_without_files": [
+    "Adriana_2020_aptamer_cycle1",
+    "Adriana_2020_aptamer_cycle10",
+    "Adriana_2020_aptamer_cycle11",
+    "Adriana_2020_aptamer_cycle6",
+    "Adriana_2020_aptamer_exp1",
+    "Adriana_2020_aptamer_exp2",
+    "Adriana_2020_aptamer_exp3",
+    "Ali_2021_aptamer_exp1",
+    "Ali_2021_aptamer_exp2",
+    "Ali_2021_aptamer_exp3",
+    "Ali_2021_aptamer_exp4",
+    "Ali_2021_aptamer_exp5",
+    "Ali_2021_aptamer_exp6",
+    "Ali_2021_aptamer_exp7",
+    "Ali_2021_aptamer_exp8",
+    "Baeza-Centurion_2020_exon-mutation_FAS_exon6_ancestor",
+    "Baeza-Centurion_2020_exon-mutation_PSMD14_exon11",
+    "Boston_2016_RBP_exp1",
+    "Boston_2016_RBP_exp2",
+    "Claudia_2020_aptamer_exp1",
+    "Claudia_2020_aptamer_exp2",
+    "Claudia_2020_aptamer_exp3",
+    "Claudia_2020_aptamer_exp4",
+    "Claudia_2020_aptamer_exp5",
+    "Claudia_2020_aptamer_exp6",
+    "Claudia_2020_aptamer_exp7",
+    "Dimitri_2022_aptamer_Cycle1",
+    "Dimitri_2022_aptamer_Cycle10",
+    "Dimitri_2022_aptamer_Cycle2",
+    "Dimitri_2022_aptamer_Cycle3",
+    "Dimitri_2022_aptamer_Cycle4",
+    "Dimitri_2022_aptamer_Cycle5",
+    "Dimitri_2022_aptamer_Cycle6",
+    "Dimitri_2022_aptamer_Cycle7",
+    "Dimitri_2022_aptamer_Cycle8",
+    "Dimitri_2022_aptamer_Cycle9",
+    "Hasan_2019_aptamer_exp1",
+    "Hasan_2019_aptamer_exp10",
+    "Hasan_2019_aptamer_exp11",
+    "Hasan_2019_aptamer_exp12",
+    "Hasan_2019_aptamer_exp13",
+    "Hasan_2019_aptamer_exp14",
+    "Hasan_2019_aptamer_exp15",
+    "Hasan_2019_aptamer_exp16",
+    "Hasan_2019_aptamer_exp17",
+    "Hasan_2019_aptamer_exp18",
+    "Hasan_2019_aptamer_exp19",
+    "Hasan_2019_aptamer_exp2",
+    "Hasan_2019_aptamer_exp20",
+    "Hasan_2019_aptamer_exp21",
+    "Hasan_2019_aptamer_exp22",
+    "Hasan_2019_aptamer_exp23",
+    "Hasan_2019_aptamer_exp24",
+    "Hasan_2019_aptamer_exp25",
+    "Hasan_2019_aptamer_exp26",
+    "Hasan_2019_aptamer_exp27",
+    "Hasan_2019_aptamer_exp3",
+    "Hasan_2019_aptamer_exp4",
+    "Hasan_2019_aptamer_exp5",
+    "Hasan_2019_aptamer_exp6",
+    "Hasan_2019_aptamer_exp7",
+    "Hasan_2019_aptamer_exp8",
+    "Hasan_2019_aptamer_exp9",
+    "Karlis_2019_aptamer_exp1",
+    "Karlis_2019_aptamer_exp10",
+    "Karlis_2019_aptamer_exp11",
+    "Karlis_2019_aptamer_exp12",
+    "Karlis_2019_aptamer_exp2",
+    "Karlis_2019_aptamer_exp3",
+    "Karlis_2019_aptamer_exp4",
+    "Karlis_2019_aptamer_exp5",
+    "Karlis_2019_aptamer_exp6",
+    "Karlis_2019_aptamer_exp7",
+    "Karlis_2019_aptamer_exp8",
+    "Karlis_2019_aptamer_exp9",
+    "Li_2018_fitness_Fit23",
+    "Li_2018_fitness_Fit30",
+    "Li_2018_fitness_Fit37",
+    "Li_2018_fitness_FitDMSO",
+    "Martin_2019_enhancer_f9",
+    "Martin_2019_enhancer_hbb",
+    "Martin_2019_fitness_HBG1promoter",
+    "Martin_2019_fitness_HNF4Apromoter",
+    "Nadezda_2017_aptamer_exp1",
+    "Nguyen_2018_aptamer_exp1",
+    "Nguyen_2018_aptamer_exp10",
+    "Nguyen_2018_aptamer_exp11",
+    "Nguyen_2018_aptamer_exp12",
+    "Nguyen_2018_aptamer_exp13",
+    "Nguyen_2018_aptamer_exp14",
+    "Nguyen_2018_aptamer_exp15",
+    "Nguyen_2018_aptamer_exp16",
+    "Nguyen_2018_aptamer_exp2",
+    "Nguyen_2018_aptamer_exp3",
+    "Nguyen_2018_aptamer_exp4",
+    "Nguyen_2018_aptamer_exp5",
+    "Nguyen_2018_aptamer_exp6",
+    "Nguyen_2018_aptamer_exp7",
+    "Nguyen_2018_aptamer_exp8",
+    "Nguyen_2018_aptamer_exp9",
+    "Patwardhan_2012_fitness_ECR11enhancer",
+    "Simona_2020_aptamer_exp1",
+    "Simona_2020_aptamer_exp10",
+    "Simona_2020_aptamer_exp2",
+    "Simona_2020_aptamer_exp3",
+    "Simona_2020_aptamer_exp4",
+    "Simona_2020_aptamer_exp5",
+    "Simona_2020_aptamer_exp6",
+    "Simona_2020_aptamer_exp7",
+    "Simona_2020_aptamer_exp8",
+    "Simona_2020_aptamer_exp9",
+    "Starita_2021_splicing_assay_SRSF1_binding_site",
+    "Starita_2021_splicing_assay_Wilms_tumor_gene_exon",
+    "Wiebke_2022_aptamer_exp1",
+    "Wiebke_2022_aptamer_exp2",
+    "Wiebke_2022_aptamer_exp3",
+    "Wiebke_2022_aptamer_exp4",
+    "Wiebke_2022_aptamer_exp5",
+    "Wiebke_2022_aptamer_exp6",
+    "Wiebke_2022_aptamer_exp7",
+    "Wiebke_2022_aptamer_exp8",
+    "Yu_2024_glmS_ribozyme",
+    "ribomic_2020_aptamer_exp1",
+    "ribomic_2020_aptamer_exp2",
+    "ribomic_2020_aptamer_exp3"
+  ],
+  "files_without_manifest_entries": [
+    "Rachapun_2022_f1u_R1_R2_ribozyme",
+    "Rachapun_2022_f1u_ribozyme"
+  ],
+  "files": [
+    {
+      "id": "Andreasson_2020_ribozyme",
+      "path": "data/Andreasson_2020_ribozyme.csv",
+      "rows": 7343,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 720825,
+      "sha256": "e32f10e186d54ec0055fc0c9498f5b99d2f52469e28d5cb0706243a8de1e8f23",
+      "unique_sequences": 7343,
+      "length_min": 74,
+      "length_max": 74,
+      "alphabet": {
+        "A": 183806,
+        "U": 117997,
+        "G": 147477,
+        "C": 94102
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 1e-06,
+      "score_max": 0.151589221,
+      "in_manifest": true
+    },
+    {
+      "id": "Beck_2022_ribozyme",
+      "path": "data/Beck_2022_ribozyme.csv",
+      "rows": 21321,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 1988637,
+      "sha256": "3ecdadd36efb6e412ab77fc8c5345e7e412a90b0725bb1984b26a9041a33db19",
+      "unique_sequences": 21321,
+      "length_min": 69,
+      "length_max": 69,
+      "alphabet": {
+        "G": 465167,
+        "C": 403664,
+        "A": 260157,
+        "U": 342161
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.004926108,
+      "score_max": 0.969530103,
+      "in_manifest": true
+    },
+    {
+      "id": "Domingo_2018_tRNA",
+      "path": "data/Domingo_2018_tRNA.csv",
+      "rows": 4176,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 475818,
+      "sha256": "f303a1f6173ea265e71bb002b5c6dc11d74213195a858fe5dad1d3b77bfce7c5",
+      "unique_sequences": 4176,
+      "length_min": 72,
+      "length_max": 72,
+      "alphabet": {
+        "G": 96380,
+        "U": 75143,
+        "C": 73452,
+        "A": 55697
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -0.862634597,
+      "score_max": 0.09085339,
+      "in_manifest": true
+    },
+    {
+      "id": "Eilon_2012_dna_R1_promoter",
+      "path": "data/Eilon_2012_dna_R1_promoter.csv",
+      "rows": 6022,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 3574887,
+      "sha256": "718fd7f377917d1447bfe8064fc99229bbdc035c590918d434e42310da4c5aab",
+      "unique_sequences": 6022,
+      "length_min": 150,
+      "length_max": 150,
+      "alphabet": {
+        "G": 265296,
+        "A": 217257,
+        "C": 234108,
+        "T": 186639
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.020792,
+      "score_max": 7.796844,
+      "in_manifest": true
+    },
+    {
+      "id": "Eilon_2012_dna_R2_promoter",
+      "path": "data/Eilon_2012_dna_R2_promoter.csv",
+      "rows": 6210,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 3690247,
+      "sha256": "37d54e2a16ef24f375da3ba4f84e5a572cd9db5860f4d79cc37e5006b248f89c",
+      "unique_sequences": 6210,
+      "length_min": 150,
+      "length_max": 150,
+      "alphabet": {
+        "G": 274006,
+        "A": 224797,
+        "C": 240849,
+        "T": 191848
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.120133,
+      "score_max": 19.92693,
+      "in_manifest": true
+    },
+    {
+      "id": "Gregory_2018_mRNA",
+      "path": "data/Gregory_2018_mRNA.csv",
+      "rows": 287,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 35791,
+      "sha256": "b1291d748958f57e2856e25f10511e90b95e66ec4f46eb7e3680704d8d7a1994",
+      "unique_sequences": 287,
+      "length_min": 100,
+      "length_max": 100,
+      "alphabet": {
+        "C": 9154,
+        "T": 7173,
+        "A": 6040,
+        "G": 6046,
+        "X": 287
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -4.67829371809057,
+      "score_max": 1.4335769898664998,
+      "in_manifest": true
+    },
+    {
+      "id": "Guy_2014_tRNA",
+      "path": "data/Guy_2014_tRNA.csv",
+      "rows": 25492,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 4063493,
+      "sha256": "94c26877ffe6188c7f8bb9295d144711857925e6736dc8730461944fdb99435a",
+      "unique_sequences": 25492,
+      "length_min": 132,
+      "length_max": 132,
+      "alphabet": {
+        "G": 708882,
+        "A": 972027,
+        "U": 945292,
+        "C": 738743
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.008372,
+      "score_max": 1.248,
+      "in_manifest": true
+    },
+    {
+      "id": "Janzen_2022_fam1a1_ribozyme",
+      "path": "data/Janzen_2022_fam1a1_ribozyme.csv",
+      "rows": 1954,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 224059,
+      "sha256": "65fa529376e82817a0318af5fecc19426c06e53a2b9399295c844ee815756174",
+      "unique_sequences": 1954,
+      "length_min": 90,
+      "length_max": 90,
+      "alphabet": {
+        "G": 33767,
+        "A": 54529,
+        "U": 44759,
+        "C": 42805
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 2.468344373,
+      "score_max": 628.9341065,
+      "in_manifest": true
+    },
+    {
+      "id": "Janzen_2022_fam1b1_ribozyme",
+      "path": "data/Janzen_2022_fam1b1_ribozyme.csv",
+      "rows": 1954,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 224051,
+      "sha256": "fcf578fba82e47f81839d04f630be62a92ac6bc2f70d3749044be1c1f6abbba2",
+      "unique_sequences": 1954,
+      "length_min": 90,
+      "length_max": 90,
+      "alphabet": {
+        "G": 33767,
+        "A": 54529,
+        "U": 41339,
+        "C": 46225
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 2.119293045,
+      "score_max": 245.2236336,
+      "in_manifest": true
+    },
+    {
+      "id": "Janzen_2022_fam21_ribozyme",
+      "path": "data/Janzen_2022_fam21_ribozyme.csv",
+      "rows": 1954,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 224078,
+      "sha256": "7859fe2c786391e5d8259c53082357dfee988568f80fb71526fd7d77a2343152",
+      "unique_sequences": 1954,
+      "length_min": 90,
+      "length_max": 90,
+      "alphabet": {
+        "G": 37187,
+        "A": 52819,
+        "U": 44759,
+        "C": 41095
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 3.240672966,
+      "score_max": 1220.756957,
+      "in_manifest": true
+    },
+    {
+      "id": "Janzen_2022_fam22_ribozyme",
+      "path": "data/Janzen_2022_fam22_ribozyme.csv",
+      "rows": 1954,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 224068,
+      "sha256": "d0c86a86a5d5fcf5881974e3782e81b92ebb0abc7561906cf3e1e64a940b4889",
+      "unique_sequences": 1954,
+      "length_min": 90,
+      "length_max": 90,
+      "alphabet": {
+        "G": 38897,
+        "A": 51109,
+        "U": 44759,
+        "C": 41095
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 2.65649757,
+      "score_max": 1309.993422,
+      "in_manifest": true
+    },
+    {
+      "id": "Janzen_2022_fam31_ribozyme",
+      "path": "data/Janzen_2022_fam31_ribozyme.csv",
+      "rows": 1954,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 224048,
+      "sha256": "d1878372c66ba33c34d4bb41e000cd8d2a306b307b958d858374b813c8d2f42c",
+      "unique_sequences": 1954,
+      "length_min": 90,
+      "length_max": 90,
+      "alphabet": {
+        "G": 37187,
+        "A": 56239,
+        "U": 44759,
+        "C": 37675
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 2.557078184,
+      "score_max": 68.93041376,
+      "in_manifest": true
+    },
+    {
+      "id": "Julien_2016_mRNA",
+      "path": "data/Julien_2016_mRNA.csv",
+      "rows": 16917,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 1492263,
+      "sha256": "68d5a203e1dfd6fb73829aa9f863986c38c39bdb7cbe410ea2b783e81b9bb71e",
+      "unique_sequences": 16917,
+      "length_min": 63,
+      "length_max": 63,
+      "alphabet": {
+        "A": 173467,
+        "U": 432407,
+        "C": 221773,
+        "G": 238124
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -12.03549535,
+      "score_max": 10.46328729,
+      "in_manifest": true
+    },
+    {
+      "id": "Ke_2017_mRNA",
+      "path": "data/Ke_2017_mRNA.csv",
+      "rows": 5560,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 759098,
+      "sha256": "3fa22278909614508e4309d9358b4420f9feb68586092a0a12f449242516f084",
+      "unique_sequences": 5534,
+      "length_min": 90,
+      "length_max": 90,
+      "alphabet": {
+        "C": 122502,
+        "A": 130358,
+        "U": 109302,
+        "G": 138238
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.000362639,
+      "score_max": 6.549092636397955,
+      "in_manifest": true
+    },
+    {
+      "id": "Kobori_2015_ribozyme_j12",
+      "path": "data/Kobori_2015_ribozyme_j12.csv",
+      "rows": 256,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 73088,
+      "sha256": "babca5f83e3952ed63c590f4d10d390da909465ce5789234bec37ac7e6a9683c",
+      "unique_sequences": 256,
+      "length_min": 247,
+      "length_max": 247,
+      "alphabet": {
+        "U": 15104,
+        "A": 15104,
+        "C": 15104,
+        "G": 17920
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.005481597,
+      "score_max": 0.3607147139944837,
+      "in_manifest": true
+    },
+    {
+      "id": "Kobori_2015_ribozyme_p4",
+      "path": "data/Kobori_2015_ribozyme_p4.csv",
+      "rows": 256,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 64032,
+      "sha256": "73f082032586cb7672569300dce024e032cf623bd4bb7871ff63487ddfd392d2",
+      "unique_sequences": 256,
+      "length_min": 207,
+      "length_max": 207,
+      "alphabet": {
+        "U": 11008,
+        "A": 13312,
+        "C": 13824,
+        "G": 14848
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.004514673,
+      "score_max": 0.7138613861386138,
+      "in_manifest": true
+    },
+    {
+      "id": "Kobori_2015_ribozyme_tw",
+      "path": "data/Kobori_2015_ribozyme_tw.csv",
+      "rows": 1024,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 135663,
+      "sha256": "2b5d2a76c69e49d3258342f47430d1624b867970c75314ce54af173f82fbc622",
+      "unique_sequences": 1024,
+      "length_min": 94,
+      "length_max": 94,
+      "alphabet": {
+        "U": 19712,
+        "A": 34048,
+        "C": 19712,
+        "G": 22784
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 0.9205397301349324,
+      "in_manifest": true
+    },
+    {
+      "id": "Kobori_2018_ribozyme",
+      "path": "data/Kobori_2018_ribozyme.csv",
+      "rows": 16384,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 3819427,
+      "sha256": "4e583436a728dede9b5db53e1fc05edcc98cf42209751e912286e37c1648abbc",
+      "unique_sequences": 16384,
+      "length_min": 177,
+      "length_max": 177,
+      "alphabet": {
+        "U": 536576,
+        "A": 749568,
+        "C": 765952,
+        "G": 847872
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.06268183,
+      "score_max": 0.9304347826086956,
+      "in_manifest": true
+    },
+    {
+      "id": "Li_2016_tRNA",
+      "path": "data/Li_2016_tRNA.csv",
+      "rows": 65537,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 6540420,
+      "sha256": "9eb350984542fdf4a47a0a6f411d42551d8d79b95f9570fe5ccb7568f3d6235f",
+      "unique_sequences": 65537,
+      "length_min": 72,
+      "length_max": 72,
+      "alphabet": {
+        "G": 1512247,
+        "U": 1067618,
+        "C": 1218520,
+        "A": 920279
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.5,
+      "score_max": 1.283526699,
+      "in_manifest": true
+    },
+    {
+      "id": "Martin_2018_myc_enhancer",
+      "path": "data/Martin_2018_myc_enhancer.csv",
+      "rows": 1950,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 1193053,
+      "sha256": "4c014fc2df3ed631c62d8b2f8bbb82622eb1b62899fa16220e1844fb6c1ada70",
+      "unique_sequences": 1793,
+      "length_min": 600,
+      "length_max": 600,
+      "alphabet": {
+        "C": 292500,
+        "T": 313908,
+        "G": 255524,
+        "A": 308068
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -2.26,
+      "score_max": 0.92,
+      "in_manifest": true
+    },
+    {
+      "id": "Peri_2022_ribozyme",
+      "path": "data/Peri_2022_ribozyme.csv",
+      "rows": 16384,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 4182139,
+      "sha256": "5d415beed5d0684a1bcfa648e53ec4d6e661ff0ff999274454c81dc4fba24681",
+      "unique_sequences": 16384,
+      "length_min": 197,
+      "length_max": 197,
+      "alphabet": {
+        "G": 1077248,
+        "U": 438272,
+        "C": 897024,
+        "A": 815104
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.000985379,
+      "score_max": 1.010995149757985,
+      "in_manifest": true
+    },
+    {
+      "id": "Pitt_2010_ribozyme",
+      "path": "data/Pitt_2010_ribozyme.csv",
+      "rows": 186,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 18760,
+      "sha256": "797438688ce17055440e43627e399b85bcd589c982b6b6a914fb6396628566d7",
+      "unique_sequences": 162,
+      "length_min": 87,
+      "length_max": 87,
+      "alphabet": {
+        "G": 6468,
+        "U": 3540,
+        "A": 3920,
+        "C": 2254
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.00072,
+      "score_max": 0.10681,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L1_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L1_R1_R2_ribozyme.csv",
+      "rows": 10000,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 681293,
+      "sha256": "73c8358b2b0d4c71c352832499e7b26f3c2655f1bbc6bbc2fa67d2b5d92a8c59",
+      "unique_sequences": 10000,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 114132,
+        "A": 91661,
+        "C": 53317,
+        "G": 90890
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.4408363065159937,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L2_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L2_R1_R2_ribozyme.csv",
+      "rows": 1985,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 162641,
+      "sha256": "0637365c6baddc8bb6ce2ec657f2aa33c8e757d524b979785394ef1d3c099e2c",
+      "unique_sequences": 1985,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 22046,
+        "A": 17634,
+        "C": 11329,
+        "G": 18466
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.170253037258275,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L3_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L3_R1_R2_ribozyme.csv",
+      "rows": 1985,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 170796,
+      "sha256": "44854e7ba06ba5ae47a00eb461aec200457076ecd45f04a3bc891c1d8d794727",
+      "unique_sequences": 1985,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 21519,
+        "A": 17445,
+        "C": 11121,
+        "G": 19390
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.1415290415114008,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L4B_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L4B_R1_R2_ribozyme.csv",
+      "rows": 1984,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 189546,
+      "sha256": "dc833bb09708d6f3fd824c200c0e43b764562d296f0d5960bbca8deecc57111d",
+      "unique_sequences": 1984,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "G": 19180,
+        "T": 21148,
+        "C": 11660,
+        "A": 17452
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.090454570033068,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L4_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L4_R1_R2_ribozyme.csv",
+      "rows": 1985,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 176693,
+      "sha256": "6603b9ec2491bdd912fba67b89d379b1d8220b84a895471bd63e1a07dd601f2e",
+      "unique_sequences": 1985,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 21043,
+        "A": 17802,
+        "C": 11044,
+        "G": 19586
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.2053009395697254,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L5_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L5_R1_R2_ribozyme.csv",
+      "rows": 5981,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 496182,
+      "sha256": "fde60bb0751844b39a4122919b065f54d9920f7cc9c460bcd934d285966e622f",
+      "unique_sequences": 5981,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 66840,
+        "A": 51071,
+        "C": 34597,
+        "G": 56827
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.4516496317791263,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L6_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L6_R1_R2_ribozyme.csv",
+      "rows": 5967,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 479198,
+      "sha256": "0d7dbf7e902ee3fb6721d3d1c38a85a0c1209153e04fceea1599b290a4f089cf",
+      "unique_sequences": 5967,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 66999,
+        "A": 51127,
+        "C": 31094,
+        "G": 59625
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 0.9935239970248068,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L7_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L7_R1_R2_ribozyme.csv",
+      "rows": 9977,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 817087,
+      "sha256": "e60511a963dca50e12d31615480754bc180a6d80dee415c3b0db3356443b8a7f",
+      "unique_sequences": 9977,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "G": 98634,
+        "T": 111852,
+        "C": 53429,
+        "A": 85280
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0240825956289169,
+      "score_max": 1.2101971180123785,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_L8_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_L8_R1_R2_ribozyme.csv",
+      "rows": 11960,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 1362074,
+      "sha256": "261758252a0d691d4030f58f9931a2c3565a15a75b8f8950fc78808ec0313574",
+      "unique_sequences": 11960,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "G": 138848,
+        "A": 113989,
+        "T": 116865,
+        "C": 48898
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0037243285,
+      "score_max": 1.7022438215000002,
+      "in_manifest": true
+    },
+    {
+      "id": "Rachapun_2022_f1u_R1_R2_ribozyme",
+      "path": "data/Rachapun_2022_f1u_R1_R2_ribozyme.csv",
+      "rows": 10000,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 681293,
+      "sha256": "73c8358b2b0d4c71c352832499e7b26f3c2655f1bbc6bbc2fa67d2b5d92a8c59",
+      "unique_sequences": 10000,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 114132,
+        "A": 91661,
+        "C": 53317,
+        "G": 90890
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.4408363065159937,
+      "in_manifest": false
+    },
+    {
+      "id": "Rachapun_2022_f1u_ribozyme",
+      "path": "data/Rachapun_2022_f1u_ribozyme.csv",
+      "rows": 65536,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 5887009,
+      "sha256": "61ba9a8fb800a350de2208eec8e3c30e2421a7543b187b296a2791ffe9859ee3",
+      "unique_sequences": 65536,
+      "length_min": 35,
+      "length_max": 35,
+      "alphabet": {
+        "T": 720896,
+        "A": 589824,
+        "C": 327680,
+        "G": 655360
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0026177985,
+      "score_max": 1.373063778,
+      "in_manifest": false
+    },
+    {
+      "id": "Roberts_2023_HDV_ribozyme",
+      "path": "data/Roberts_2023_HDV_ribozyme.csv",
+      "rows": 33931,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 3487801,
+      "sha256": "6e0a7e2ec163d9115f860020e8d697aa377e42726cb1fa1f5545aac069ddc987",
+      "unique_sequences": 33931,
+      "length_min": 87,
+      "length_max": 87,
+      "alphabet": {
+        "G": 1009383,
+        "C": 1042278,
+        "A": 450168,
+        "U": 450168
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 4.0,
+      "score_max": 438152.0,
+      "in_manifest": true
+    },
+    {
+      "id": "Roberts_2023_cepeb3_ribozyme",
+      "path": "data/Roberts_2023_cepeb3_ribozyme.csv",
+      "rows": 21322,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 1994866,
+      "sha256": "47a216ec5cb6be287308972202881d5985877052bb24f8b7f755da1b222854b1",
+      "unique_sequences": 21322,
+      "length_min": 69,
+      "length_max": 69,
+      "alphabet": {
+        "G": 465189,
+        "C": 403683,
+        "A": 260169,
+        "U": 342177
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.106220252,
+      "in_manifest": true
+    },
+    {
+      "id": "Roberts_2023_hh_ribozyme",
+      "path": "data/Roberts_2023_hh_ribozyme.csv",
+      "rows": 9046,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 627597,
+      "sha256": "584878111d2e5c64521fb3ccf3b467205577411fcf360cef0ee5850c02ce7979",
+      "unique_sequences": 9046,
+      "length_min": 45,
+      "length_max": 45,
+      "alphabet": {
+        "A": 91125,
+        "C": 91125,
+        "G": 133695,
+        "U": 91125
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.146994217,
+      "score_max": 2.169776247,
+      "in_manifest": true
+    },
+    {
+      "id": "Roberts_2023_hp_ribozyme",
+      "path": "data/Roberts_2023_hp_ribozyme.csv",
+      "rows": 22579,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 2157435,
+      "sha256": "7cf342334fd6cca2d1a7bfea6bfbfa669909cdaf75e2749534204771797c0789",
+      "unique_sequences": 22579,
+      "length_min": 71,
+      "length_max": 71,
+      "alphabet": {
+        "G": 427946,
+        "U": 384476,
+        "C": 319271,
+        "A": 471416
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.853688299,
+      "in_manifest": true
+    },
+    {
+      "id": "Roberts_2023_tw_ribozyme",
+      "path": "data/Roberts_2023_tw_ribozyme.csv",
+      "rows": 10297,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 745690,
+      "sha256": "8800d9295c4db203a6eb97d0959c3c181413e081d7f1c8720538777c0e4dfe42",
+      "unique_sequences": 10297,
+      "length_min": 48,
+      "length_max": 48,
+      "alphabet": {
+        "A": 133293,
+        "G": 172209,
+        "C": 133293,
+        "U": 55461
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.0,
+      "score_max": 1.608097253,
+      "in_manifest": true
+    },
+    {
+      "id": "Shai_2015_promoter",
+      "path": "data/Shai_2015_promoter.csv",
+      "rows": 5963,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 3303951,
+      "sha256": "d9b2c602467d18f85585c07177e98c961c36ec4668033a62d8db483d3e3c5a4c",
+      "unique_sequences": 5963,
+      "length_min": 118,
+      "length_max": 118,
+      "alphabet": {
+        "T": 226716,
+        "G": 98506,
+        "A": 250161,
+        "C": 128251
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.1399,
+      "score_max": 23.6111,
+      "in_manifest": true
+    },
+    {
+      "id": "Soo_2021_ribozyme",
+      "path": "data/Soo_2021_ribozyme.csv",
+      "rows": 63431,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 29721062,
+      "sha256": "d8e074b5d7c63b9511e8b0b4da65479490264e8a37c34ead3bf18c8e9c4b79be",
+      "unique_sequences": 63431,
+      "length_min": 425,
+      "length_max": 425,
+      "alphabet": {
+        "C": 5136664,
+        "U": 6914658,
+        "A": 7739533,
+        "G": 7167320
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -6.086246248,
+      "score_max": 2.295283886,
+      "in_manifest": true
+    },
+    {
+      "id": "Tome_2014_GFP_aptamer",
+      "path": "data/Tome_2014_GFP_aptamer.csv",
+      "rows": 417,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 43251,
+      "sha256": "c991518f452077d8745193098693bed6f22516d48b6351ae236bf8a173f57a29",
+      "unique_sequences": 417,
+      "length_min": 82,
+      "length_max": 82,
+      "alphabet": {
+        "G": 12163,
+        "C": 7469,
+        "U": 5495,
+        "A": 9067
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -5.37886378,
+      "score_max": 13.28914358,
+      "in_manifest": true
+    },
+    {
+      "id": "Tome_2014_NELFE_aptamer",
+      "path": "data/Tome_2014_NELFE_aptamer.csv",
+      "rows": 2652,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 251229,
+      "sha256": "c141e9b672d210a98344bee448b567b80329313b32d010321654c4a5ddb0db93",
+      "unique_sequences": 2652,
+      "length_min": 70,
+      "length_max": 70,
+      "alphabet": {
+        "U": 24405,
+        "C": 60096,
+        "A": 36488,
+        "G": 64651
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": -4.690112937,
+      "score_max": 0.841038935,
+      "in_manifest": true
+    },
+    {
+      "id": "Townshend_2015_4nt_aptamer",
+      "path": "data/Townshend_2015_4nt_aptamer.csv",
+      "rows": 207,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 62106,
+      "sha256": "62689d9580273084ec33433e7bbdbd7b568090e1ab81a348861aae802fb9fb5a",
+      "unique_sequences": 207,
+      "length_min": 75,
+      "length_max": 75,
+      "alphabet": {
+        "G": 4418,
+        "C": 4333,
+        "U": 3302,
+        "A": 3472
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 1.103113032,
+      "score_max": 6.33899393,
+      "in_manifest": true
+    },
+    {
+      "id": "Townshend_2015_5nt_aptamer",
+      "path": "data/Townshend_2015_5nt_aptamer.csv",
+      "rows": 713,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 196741,
+      "sha256": "db1de47187aa325a74bf247420b1eaf1b121d15eefb7e487b0d089e1e02e21a8",
+      "unique_sequences": 713,
+      "length_min": 76,
+      "length_max": 76,
+      "alphabet": {
+        "G": 15479,
+        "C": 15032,
+        "U": 11443,
+        "A": 12234
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.41025783,
+      "score_max": 36.22710817,
+      "in_manifest": true
+    },
+    {
+      "id": "Townshend_2015_6nt_aptamer",
+      "path": "data/Townshend_2015_6nt_aptamer.csv",
+      "rows": 2748,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 815866,
+      "sha256": "d818ff77e821827ba1260ee84933ad1fe589c470d0adde4ff69cb4d6a32b43f5",
+      "unique_sequences": 2748,
+      "length_min": 77,
+      "length_max": 77,
+      "alphabet": {
+        "G": 60113,
+        "C": 58568,
+        "U": 44683,
+        "A": 48232
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.192402305,
+      "score_max": 24.63857859,
+      "in_manifest": true
+    },
+    {
+      "id": "Townshend_2015_7nt_aptamer",
+      "path": "data/Townshend_2015_7nt_aptamer.csv",
+      "rows": 8858,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 2815877,
+      "sha256": "cf5c44497d112ecda5d5c408daabee5f1092ea1c1f70ddc3147bf5b9c34f88f0",
+      "unique_sequences": 8858,
+      "length_min": 78,
+      "length_max": 78,
+      "alphabet": {
+        "G": 196001,
+        "C": 190933,
+        "U": 146454,
+        "A": 157536
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.032982283,
+      "score_max": 32.56777141,
+      "in_manifest": true
+    },
+    {
+      "id": "Townshend_2015_8nt_aptamer",
+      "path": "data/Townshend_2015_8nt_aptamer.csv",
+      "rows": 24502,
+      "columns": [
+        "mutant",
+        "DMS_score",
+        "sequence"
+      ],
+      "bytes": 7323326,
+      "sha256": "c40473192c11fe7947b09020ec840e21646c56dc33027716c1eda12b9d8472d7",
+      "unique_sequences": 24502,
+      "length_min": 79,
+      "length_max": 79,
+      "alphabet": {
+        "G": 542568,
+        "C": 536689,
+        "U": 412543,
+        "A": 443858
+      },
+      "missing_score_rows": 0,
+      "nonfinite_score_rows": 0,
+      "score_min": 0.021385446,
+      "score_max": 100.3477184,
+      "in_manifest": true
+    }
+  ]
+}

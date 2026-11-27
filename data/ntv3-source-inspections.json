@@ -1,0 +1,610 @@
+{
+  "inspected": "2026-11-27",
+  "space": {
+    "id": "InstaDeepAI/ntv3",
+    "revision": "36d62b3ae97ad66f5e154da12dd628e9f6ddbbf6",
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "assets/ntv3_overview.png",
+      "assets/output_annotation.png",
+      "assets/output_tracks.png",
+      "assets/paper_summary.png",
+      "assets/saliency_example.png",
+      "assets/skill_report_hbe1_4kb_annotation.png",
+      "assets/skill_report_hbe1_cagesal_top_hs.png",
+      "assets/skill_report_hbe1_hs4_saliency_cage_r848.png",
+      "assets/skill_workflow_v6b.png",
+      "index.html",
+      "notebooks_tutorials/00_quickstart_inference.ipynb",
+      "notebooks_tutorials/01_tracks_prediction.ipynb",
+      "notebooks_tutorials/02_fine_tuning_bigwig_tracks.ipynb",
+      "notebooks_tutorials/03a_genome_annotation_training.ipynb",
+      "notebooks_tutorials/03b_genome_annotation_decoding.ipynb",
+      "notebooks_tutorials/03c_genome_annotation_evaluation.ipynb",
+      "notebooks_tutorials/04_model_interpretation.ipynb",
+      "notebooks_tutorials/05_diffusion_fine_tuning.ipynb",
+      "notebooks_tutorials/06_plant_promoter_generation.ipynb",
+      "src/.gitkeep",
+      "src/genome_annotation/__init__.py",
+      "src/genome_annotation/analysis.py",
+      "src/genome_annotation/benchmark.py",
+      "src/genome_annotation/data.py",
+      "src/genome_annotation/decoding.py",
+      "src/genome_annotation/evaluation.py",
+      "src/genome_annotation/inference.py",
+      "src/genome_annotation/metrics.py",
+      "src/genome_annotation/model.py",
+      "src/genome_annotation/plotting.py",
+      "src/genome_annotation/proteins.py",
+      "style.css",
+      "tabs/home.html",
+      "tabs/initial_release.html",
+      "tabs/skill.html"
+    ]
+  },
+  "benchmark": {
+    "id": "InstaDeepAI/NTv3_benchmark_dataset_revised",
+    "revision": "a2ecf1ecd03cc5029a6b5558bbdd3b7a92addcc4",
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "arabidopsis/functional_tracks/SRR13808079.bigwig",
+      "arabidopsis/functional_tracks/SRR13808080.bigwig",
+      "arabidopsis/functional_tracks/SRR13808081.bigwig",
+      "arabidopsis/functional_tracks/SRR13808084.bigwig",
+      "arabidopsis/genome.fasta",
+      "arabidopsis/splits.bed",
+      "benchmark_metadata.tsv",
+      "cattle/functional_tracks/ERR1464174.bigwig",
+      "cattle/functional_tracks/ERR1464175.bigwig",
+      "cattle/functional_tracks/ERR1464180.bigwig",
+      "cattle/functional_tracks/ERR1464183.bigwig",
+      "cattle/functional_tracks/ERR2664213.bigwig",
+      "cattle/functional_tracks/ERX2628478.bigwig",
+      "cattle/functional_tracks/ERX2628481.bigwig",
+      "cattle/functional_tracks/ERX3800751.bigwig",
+      "cattle/functional_tracks/ERX4794967.bigwig",
+      "cattle/functional_tracks/ERX4794981.bigwig",
+      "cattle/functional_tracks/ERX4794984.bigwig",
+      "cattle/functional_tracks/ERX4794986.bigwig",
+      "cattle/functional_tracks/ERX4795019.bigwig",
+      "cattle/functional_tracks/ERX4795023.bigwig",
+      "cattle/functional_tracks/ERX4795026.bigwig",
+      "cattle/functional_tracks/ERX4795038.bigwig",
+      "cattle/functional_tracks/ERX4795054.bigwig",
+      "cattle/functional_tracks/ERX4795059.bigwig",
+      "cattle/functional_tracks/ERX4795088.bigwig",
+      "cattle/functional_tracks/ERX5798616.bigwig",
+      "cattle/functional_tracks/ERX5798621.bigwig",
+      "cattle/functional_tracks/ERX5798633.bigwig",
+      "cattle/functional_tracks/ERX5798687.bigwig",
+      "cattle/functional_tracks/ERX5798711.bigwig",
+      "cattle/functional_tracks/ERX5798749.bigwig",
+      "cattle/functional_tracks/SRX5649072.bigwig",
+      "cattle/functional_tracks/SRX7703304.bigwig",
+      "cattle/functional_tracks/SRX9176795.bigwig",
+      "cattle/functional_tracks/SRX9176799.bigwig",
+      "cattle/functional_tracks/SRX9176803.bigwig",
+      "cattle/genome.fasta",
+      "cattle/splits.bed",
+      "fission_yeast/functional_tracks/ERR1162944.bigwig",
+      "fission_yeast/functional_tracks/ERR1162946.bigwig",
+      "fission_yeast/functional_tracks/SRX893731.bigwig",
+      "fission_yeast/functional_tracks/SRX893732.bigwig",
+      "fission_yeast/functional_tracks/SRX893733.bigwig",
+      "fission_yeast/functional_tracks/SRX893734.bigwig",
+      "fission_yeast/functional_tracks/SRX893735.bigwig",
+      "fission_yeast/genome.fasta",
+      "fission_yeast/splits.bed",
+      "human/functional_tracks/ENCSR046BCI_M.bigwig",
+      "human/functional_tracks/ENCSR046BCI_P.bigwig",
+      "human/functional_tracks/ENCSR100LIJ_M.bigwig",
+      "human/functional_tracks/ENCSR100LIJ_P.bigwig",
+      "human/functional_tracks/ENCSR114HGS_M.bigwig",
+      "human/functional_tracks/ENCSR114HGS_P.bigwig",
+      "human/functional_tracks/ENCSR154HRN_M.bigwig",
+      "human/functional_tracks/ENCSR154HRN_P.bigwig",
+      "human/functional_tracks/ENCSR249ROI_M.bigwig",
+      "human/functional_tracks/ENCSR249ROI_P.bigwig",
+      "human/functional_tracks/ENCSR321PWZ_M.bigwig",
+      "human/functional_tracks/ENCSR321PWZ_P.bigwig",
+      "human/functional_tracks/ENCSR325NFE.bigwig",
+      "human/functional_tracks/ENCSR410DWV.bigwig",
+      "human/functional_tracks/ENCSR484LTQ_M.bigwig",
+      "human/functional_tracks/ENCSR484LTQ_P.bigwig",
+      "human/functional_tracks/ENCSR487QSB.bigwig",
+      "human/functional_tracks/ENCSR527JGN_M.bigwig",
+      "human/functional_tracks/ENCSR527JGN_P.bigwig",
+      "human/functional_tracks/ENCSR619DQO_M.bigwig",
+      "human/functional_tracks/ENCSR619DQO_P.bigwig",
+      "human/functional_tracks/ENCSR628PLS.bigwig",
+      "human/functional_tracks/ENCSR682BFG.bigwig",
+      "human/functional_tracks/ENCSR701YIC.bigwig",
+      "human/functional_tracks/ENCSR754DRC.bigwig",
+      "human/functional_tracks/ENCSR799DGV_M.bigwig",
+      "human/functional_tracks/ENCSR799DGV_P.bigwig",
+      "human/functional_tracks/ENCSR814RGG.bigwig",
+      "human/functional_tracks/ENCSR862QCH_M.bigwig",
+      "human/functional_tracks/ENCSR862QCH_P.bigwig",
+      "human/functional_tracks/ENCSR863PSM.bigwig",
+      "human/functional_tracks/ENCSR935RNW_M.bigwig",
+      "human/functional_tracks/ENCSR935RNW_P.bigwig",
+      "human/functional_tracks/ENCSR962OTG.bigwig",
+      "human/genome.fasta",
+      "human/splits.bed",
+      "maize/functional_tracks/SRR13808051.bigwig",
+      "maize/functional_tracks/SRR13808052.bigwig",
+      "maize/functional_tracks/SRR13808056.bigwig",
+      "maize/functional_tracks/SRR13808058.bigwig",
+      "maize/functional_tracks/SRR13808059.bigwig",
+      "maize/functional_tracks/SRR13808061.bigwig",
+      "maize/functional_tracks/SRR13808062.bigwig",
+      "maize/functional_tracks/SRR13808063.bigwig",
+      "maize/genome.fasta",
+      "maize/splits.bed",
+      "malaria_parasite/functional_tracks/SRR16019126.bigwig",
+      "malaria_parasite/functional_tracks/SRR16019130.bigwig",
+      "malaria_parasite/functional_tracks/SRR16019133.bigwig",
+      "malaria_parasite/functional_tracks/SRX5494564.bigwig",
+      "malaria_parasite/functional_tracks/SRX5494565.bigwig",
+      "malaria_parasite/functional_tracks/SRX5494566.bigwig",
+      "malaria_parasite/functional_tracks/SRX5494567.bigwig",
+      "malaria_parasite/genome.fasta",
+      "malaria_parasite/splits.bed",
+      "rat/functional_tracks/SRR594428.bigwig",
+      "rat/functional_tracks/SRR594429.bigwig",
+      "rat/functional_tracks/SRR594430.bigwig",
+      "rat/functional_tracks/SRR594431.bigwig",
+      "rat/functional_tracks/SRR594432.bigwig",
+      "rat/functional_tracks/SRR594433.bigwig",
+      "rat/functional_tracks/SRR594434.bigwig",
+      "rat/functional_tracks/SRR594435.bigwig",
+      "rat/functional_tracks/SRR594436.bigwig",
+      "rat/functional_tracks/SRX9339411.bigwig",
+      "rat/functional_tracks/SRX9339415.bigwig",
+      "rat/functional_tracks/SRX9339416.bigwig",
+      "rat/genome.fasta",
+      "rat/splits.bed",
+      "rice/functional_tracks/SRR13808064.bigwig",
+      "rice/functional_tracks/SRR13808065.bigwig",
+      "rice/functional_tracks/SRR13808066.bigwig",
+      "rice/functional_tracks/SRR13808067.bigwig",
+      "rice/functional_tracks/SRR13808068.bigwig",
+      "rice/functional_tracks/SRR13808069.bigwig",
+      "rice/functional_tracks/SRR13808070.bigwig",
+      "rice/functional_tracks/SRR13808072.bigwig",
+      "rice/functional_tracks/SRR13808073.bigwig",
+      "rice/functional_tracks/SRR13808074.bigwig",
+      "rice/functional_tracks/SRR13808075.bigwig",
+      "rice/functional_tracks/SRR13808076.bigwig",
+      "rice/functional_tracks/SRR13808077.bigwig",
+      "rice/functional_tracks/SRR13808078.bigwig",
+      "rice/genome.fasta",
+      "rice/splits.bed",
+      "soil_amoeba/functional_tracks/SRR12055126.bigwig",
+      "soil_amoeba/functional_tracks/SRR12055127.bigwig",
+      "soil_amoeba/functional_tracks/SRR12055128.bigwig",
+      "soil_amoeba/functional_tracks/SRR12055129.bigwig",
+      "soil_amoeba/functional_tracks/SRR12055130.bigwig",
+      "soil_amoeba/functional_tracks/SRR12055131.bigwig",
+      "soil_amoeba/functional_tracks/SRR12055132.bigwig",
+      "soil_amoeba/genome.fasta",
+      "soil_amoeba/splits.bed",
+      "tomato/functional_tracks/SRX27799703.bigwig",
+      "tomato/functional_tracks/SRX27799718.bigwig",
+      "tomato/functional_tracks/SRX27799719.bigwig",
+      "tomato/functional_tracks/SRX27799722.bigwig",
+      "tomato/functional_tracks/SRX27799727.bigwig",
+      "tomato/functional_tracks/SRX27799731.bigwig",
+      "tomato/functional_tracks/SRX27799733.bigwig",
+      "tomato/functional_tracks/SRX29291430.bigwig",
+      "tomato/functional_tracks/SRX29291431.bigwig",
+      "tomato/functional_tracks/SRX29291438.bigwig",
+      "tomato/functional_tracks/SRX29291439.bigwig",
+      "tomato/functional_tracks/SRX29291440.bigwig",
+      "tomato/functional_tracks/SRX29291441.bigwig",
+      "tomato/functional_tracks/SRX29291442.bigwig",
+      "tomato/functional_tracks/SRX29291443.bigwig",
+      "tomato/functional_tracks/SRX29291444.bigwig",
+      "tomato/functional_tracks/SRX29291445.bigwig",
+      "tomato/functional_tracks/SRX29291446.bigwig",
+      "tomato/functional_tracks/SRX29291447.bigwig",
+      "tomato/functional_tracks/SRX29291448.bigwig",
+      "tomato/genome.fasta",
+      "tomato/splits.bed",
+      "yeast/functional_tracks/ERR3772428.bigwig",
+      "yeast/functional_tracks/ERR3772430.bigwig",
+      "yeast/functional_tracks/ERR3772434.bigwig",
+      "yeast/functional_tracks/ERR3772436.bigwig",
+      "yeast/functional_tracks/ERR3772438.bigwig",
+      "yeast/functional_tracks/ERR3772439.bigwig",
+      "yeast/functional_tracks/ERR3772440.bigwig",
+      "yeast/functional_tracks/SRX893737.bigwig",
+      "yeast/functional_tracks/SRX893741.bigwig",
+      "yeast/functional_tracks/SRX893743.bigwig",
+      "yeast/functional_tracks/SRX893745.bigwig",
+      "yeast/functional_tracks/SRX893747.bigwig",
+      "yeast/genome.fasta",
+      "yeast/splits.bed"
+    ]
+  },
+  "models": {
+    "NTv3_pretrained": {
+      "id": "InstaDeepAI/NTv3_pretrained",
+      "revision": "fd58207244d828957e633c591f9babd8bb2b970e",
+      "gated": "manual",
+      "files": [
+        ".gitattributes",
+        "MODEL-LICENSE.md",
+        "README.md",
+        "config.json",
+        "configuration_ntv3.py",
+        "jax_model/flax_model.msgpack",
+        "jax_model/hyperparameters.json",
+        "jax_model/roundtrip_fixture.npz",
+        "jax_model/tokenizer_config.json",
+        "model.safetensors",
+        "modeling_ntv3.py",
+        "tokenization_ntv3.py",
+        "tokenizer_config.json",
+        "vocab.json"
+      ]
+    },
+    "NTv3_tracks": {
+      "id": "InstaDeepAI/NTv3_tracks",
+      "revision": "9f30e2048827c8bc84a9a1d0db7eff484eb91813",
+      "gated": "manual",
+      "files": [
+        ".gitattributes",
+        "MODEL-LICENSE.md",
+        "README.md",
+        "assets/context_length.png",
+        "config.json",
+        "jax_model/conditions_tokenizers.json",
+        "jax_model/flax_model.msgpack",
+        "jax_model/hyperparameters.json",
+        "jax_model/roundtrip_fixture.npz",
+        "jax_model/tokenizer_config.json",
+        "model.safetensors",
+        "ntv3_tracks_pipeline.py",
+        "tokenizer_config.json",
+        "track_descriptions.csv",
+        "track_metadata.json",
+        "vocab.json"
+      ]
+    },
+    "NTv3_tracks_1mb": {
+      "id": "InstaDeepAI/NTv3_tracks_1mb",
+      "revision": "a5a644f20cfb335ccaf9d7d86f1ba8bfa790fc43",
+      "gated": "manual",
+      "files": [
+        ".gitattributes",
+        "MODEL-LICENSE.md",
+        "README.md",
+        "config.json",
+        "jax_model/conditions_tokenizers.json",
+        "jax_model/flax_model.msgpack",
+        "jax_model/hyperparameters.json",
+        "jax_model/roundtrip_fixture.npz",
+        "jax_model/tokenizer_config.json",
+        "model.safetensors",
+        "ntv3_tracks_pipeline.py",
+        "tokenizer_config.json",
+        "track_descriptions.csv",
+        "track_metadata.json",
+        "vocab.json"
+      ]
+    },
+    "NTv3_annot_mammals": {
+      "id": "InstaDeepAI/NTv3_annot_mammals",
+      "revision": "f8a4ff86ec1ea68cc30927aa0d38207c367d5f03",
+      "gated": "manual",
+      "files": [
+        ".gitattributes",
+        "MODEL-LICENSE.md",
+        "README.md",
+        "annot_results/README.md",
+        "annot_results/ntv3_bos_taurus_GCF_002263795.3.gff3.gz",
+        "annot_results/ntv3_delphinapterus_leucas_GCF_002288925.2.gff3.gz",
+        "config.json",
+        "jax_model/flax_model.msgpack",
+        "jax_model/hyperparameters.json",
+        "jax_model/roundtrip_fixture.npz",
+        "jax_model/tokenizer_config.json",
+        "model.safetensors",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "sample_result_response": {
+        "file": "annot_results/ntv3_bos_taurus_GCF_002263795.3.gff3.gz",
+        "status": 401,
+        "bytes": 138
+      }
+    },
+    "NTv3_annot_plants": {
+      "id": "InstaDeepAI/NTv3_annot_plants",
+      "revision": "8b7a1fc7ed00fd710d3c0225d1150dc6aaa6877f",
+      "gated": "manual",
+      "files": [
+        ".gitattributes",
+        "MODEL-LICENSE.md",
+        "README.md",
+        "annot_results/README.md",
+        "annot_results/ntv3_brachypodium_distachyon_GCF_000005505.3.gff3.gz",
+        "annot_results/ntv3_eschscholzia_californica_OrangeKingHAP1v1.1.gff3.gz",
+        "annot_results/ntv3_freycinetia_multiflora_ABG20040013HAP1v1.1.gff3.gz",
+        "annot_results/ntv3_medicago_truncatula_GCF_003473485.1.gff3.gz",
+        "annot_results/ntv3_mimulus_guttatus_IM62v3.1.gff3.gz",
+        "config.json",
+        "jax_model/flax_model.msgpack",
+        "jax_model/hyperparameters.json",
+        "jax_model/roundtrip_fixture.npz",
+        "jax_model/tokenizer_config.json",
+        "model.safetensors",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "sample_result_response": {
+        "file": "annot_results/ntv3_brachypodium_distachyon_GCF_000005505.3.gff3.gz",
+        "status": 401,
+        "bytes": 137
+      }
+    },
+    "NTv3_annot_insects": {
+      "id": "InstaDeepAI/NTv3_annot_insects",
+      "revision": "5881eced73191b3b9a81d29453f0c43238586d14",
+      "gated": "manual",
+      "files": [
+        ".gitattributes",
+        "MODEL-LICENSE.md",
+        "README.md",
+        "annot_results/README.md",
+        "annot_results/ntv3_bombyx_mori_GCF_030269925.1.gff3.gz",
+        "annot_results/ntv3_cataglyphis_hispanica_GCF_021464435.1.gff3.gz",
+        "annot_results/ntv3_colias_croceus_GCF_905220415.1.gff3.gz",
+        "annot_results/ntv3_danaus_plexippus_GCF_018135715.1.gff3.gz",
+        "annot_results/ntv3_leptidea_sinapis_GCF_905404315.1.gff3.gz",
+        "annot_results/ntv3_nymphalis_io_GCF_905147045.1.gff3.gz",
+        "annot_results/ntv3_osmia_bicornis_GCF_907164935.1.gff3.gz",
+        "annot_results/ntv3_tribolium_castaneum_GCF_031307605.1.gff3.gz",
+        "annot_results/ntv3_vanessa_cardui_GCF_905220365.1.gff3.gz",
+        "annot_results/ntv3_zerene_cesonia_GCF_012273895.1.gff3.gz",
+        "config.json",
+        "jax_model/flax_model.msgpack",
+        "jax_model/hyperparameters.json",
+        "jax_model/roundtrip_fixture.npz",
+        "jax_model/tokenizer_config.json",
+        "model.safetensors",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "sample_result_response": {
+        "file": "annot_results/ntv3_bombyx_mori_GCF_030269925.1.gff3.gz",
+        "status": 401,
+        "bytes": 138
+      }
+    }
+  },
+  "source_files": [
+    {
+      "file": "notebooks_tutorials/02_fine_tuning_bigwig_tracks.ipynb",
+      "bytes": 298371,
+      "sha256": "55210cf9a32b2e49231a0980c794d370807b63f2c4a3157cc440f4a7cd341387"
+    },
+    {
+      "file": "notebooks_tutorials/03c_genome_annotation_evaluation.ipynb",
+      "bytes": 697129,
+      "sha256": "dc74f18f4755b8eff0366129f3a9504eb89ab92c8554b5ac7789ec5f8eb7722b"
+    },
+    {
+      "file": "notebooks_tutorials/05_diffusion_fine_tuning.ipynb",
+      "bytes": 39679,
+      "sha256": "b8f07898fba79fb50c6ac817d40b6a37e0ace3a2514f363bd3c3637612972c68"
+    },
+    {
+      "file": "src/genome_annotation/__init__.py",
+      "bytes": 63,
+      "sha256": "0aa0e9810d36baa3ad2de9de4471cefa1b894a445d0e87250e62d13e171cc6fe"
+    },
+    {
+      "file": "src/genome_annotation/analysis.py",
+      "bytes": 21557,
+      "sha256": "7e1880ee54c08dfc477151d450e6dc9fa3902ad05331c7dece09f18ebb8dfd13"
+    },
+    {
+      "file": "src/genome_annotation/benchmark.py",
+      "bytes": 4871,
+      "sha256": "4e110355d38073134aa1c5d2128a8c2939fd5462587a09aae5789e5b66ff32ff"
+    },
+    {
+      "file": "src/genome_annotation/data.py",
+      "bytes": 6802,
+      "sha256": "72699b6e16a4d27eed4d40c937fbeee4191f69781cb43a9ec6a2fac1ba43b461"
+    },
+    {
+      "file": "src/genome_annotation/decoding.py",
+      "bytes": 12927,
+      "sha256": "9749c62875494d72fff196748f2e158973758e53081db447174d9d5e4317e693"
+    },
+    {
+      "file": "src/genome_annotation/evaluation.py",
+      "bytes": 24319,
+      "sha256": "5a08015a1e06f7c7ff7a987c6fccf61d70b80c05dd4c056e32564a26d7d81170"
+    },
+    {
+      "file": "src/genome_annotation/inference.py",
+      "bytes": 9315,
+      "sha256": "d803b14ff5926f2a03371565f82d11b34bdcef4b0c675ed47d8bffcc4e2bc297"
+    },
+    {
+      "file": "src/genome_annotation/metrics.py",
+      "bytes": 5599,
+      "sha256": "a0081ba140740e87c1616060b5717567796aebdbf464a70347de07d7e020ee76"
+    },
+    {
+      "file": "src/genome_annotation/model.py",
+      "bytes": 4723,
+      "sha256": "ecfb7218ab73d2e5912cb83eed2037b7763911f8c3f2d8c1bcab20b937c509ca"
+    },
+    {
+      "file": "src/genome_annotation/plotting.py",
+      "bytes": 25888,
+      "sha256": "6abb8057040c6f1bc71e97911af66b7226068340077691e0ef0d9dbd469079c5"
+    },
+    {
+      "file": "src/genome_annotation/proteins.py",
+      "bytes": 5533,
+      "sha256": "54b09bc75643d4ee6065c8040f3390de8fb7fb33f59ffd8b94de6b10e44b5afc"
+    }
+  ],
+  "supplement": {
+    "bytes": 3731737,
+    "sha256": "3f17c2c773fc20060734ac3fb37366e511c1727496d66f2d6a63e75863d15b09"
+  },
+  "benchmark_readme": {
+    "bytes": 14510,
+    "sha256": "0a893e6e8cbc87181cb1b9553f36ad217bc9e57e91767eb2f7ec868cc193d63f"
+  },
+  "taxonomy_additions": {
+    "Brassica napus": {
+      "reports": [
+        {
+          "taxonomy": {
+            "tax_id": 3708,
+            "rank": "SPECIES",
+            "current_scientific_name": {
+              "name": "Brassica napus",
+              "authority": "L., 1753"
+            },
+            "curator_common_name": "rape",
+            "group_name": "eudicots",
+            "classification": {
+              "kingdom": {
+                "name": "Viridiplantae",
+                "id": 33090
+              },
+              "phylum": {
+                "name": "Streptophyta",
+                "id": 35493
+              },
+              "class": {
+                "name": "Magnoliopsida",
+                "id": 3398
+              },
+              "order": {
+                "name": "Brassicales",
+                "id": 3699
+              },
+              "family": {
+                "name": "Brassicaceae",
+                "id": 3700
+              },
+              "genus": {
+                "name": "Brassica",
+                "id": 3705
+              },
+              "species": {
+                "name": "Brassica napus",
+                "id": 3708
+              },
+              "domain": {
+                "name": "Eukaryota",
+                "id": 2759
+              }
+            },
+            "parents": [
+              1,
+              131567,
+              2759,
+              33090,
+              35493,
+              131221,
+              3193,
+              58023,
+              78536,
+              58024,
+              3398,
+              1437183,
+              71240,
+              91827,
+              1437201,
+              71275,
+              91836,
+              3699,
+              3700,
+              981071,
+              3705
+            ],
+            "children": [
+              2070381,
+              138011,
+              3709
+            ],
+            "counts": [
+              {
+                "type": "COUNT_TYPE_ASSEMBLY",
+                "count": 113
+              },
+              {
+                "type": "COUNT_TYPE_GENE",
+                "count": 123318
+              },
+              {
+                "type": "COUNT_TYPE_tRNA",
+                "count": 2600
+              },
+              {
+                "type": "COUNT_TYPE_rRNA",
+                "count": 7275
+              },
+              {
+                "type": "COUNT_TYPE_snRNA",
+                "count": 344
+              },
+              {
+                "type": "COUNT_TYPE_snoRNA",
+                "count": 3581
+              },
+              {
+                "type": "COUNT_TYPE_PROTEIN_CODING",
+                "count": 90974
+              },
+              {
+                "type": "COUNT_TYPE_ncRNA",
+                "count": 9164
+              },
+              {
+                "type": "COUNT_TYPE_OTHER",
+                "count": 1
+              }
+            ],
+            "genomic_moltype": "dsDNA",
+            "current_scientific_name_is_formal": true,
+            "secondary_tax_ids": [
+              36503
+            ],
+            "genetic_code": {
+              "primary": {
+                "id": 1,
+                "name": "Standard"
+              },
+              "mitochondrial": {
+                "id": 1,
+                "name": "Standard"
+              },
+              "plastid": {
+                "id": 11,
+                "name": "Bacterial, Archaeal and Plant Plastid"
+              }
+            }
+          },
+          "query": [
+            "Brassica napus"
+          ]
+        }
+      ],
+      "total_count": 1
+    }
+  }
+}

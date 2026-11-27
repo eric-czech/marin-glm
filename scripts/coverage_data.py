@@ -30,36 +30,47 @@ def export_coverage(db):
     for c in db['task_categories']:cats[c['task_id']].add(c['category_id'])
     memberships=collections.defaultdict(set)
     for m in db['evaluation_tasks']:memberships[m['task_id']].add(m['evaluation_id'])
-    original={u['task_id'] for u in db['model_evaluations'] if u['model_id']=='evo2' and u['provenance']=='original-paper'}
+    original_models=collections.defaultdict(set)
+    for u in db['model_evaluations']:
+        if u['provenance'] in ('original-paper','original-release'):
+            original_models[u['task_id']].add(u['model_id'])
     tasks=[]
     outputs={r['task_id']:r for r in db['task_outputs']}
     cds_scopes={r['task_id']:r['scope'] for r in db['task_feature_scopes'] if r['feature_id']=='cds'}
     feature_families={
         'gene-elements':{'gene','cds','exon','intron'},
         'splice-elements':{'splice','splice-junction'},
-        'utrs':{'utr5','utr3'},'translation-boundaries':{'translation-start','translation-stop'},
+        'utrs':{'utr','utr5','utr3'},'translation-boundaries':{'translation-start','translation-stop'},
         'regulatory-elements':{'promoter','enhancer','tfbs','regulatory','polya','terminator'},
         'chromatin-organization':{'chromatin-boundary'},
         'rna-features':{'mrna','ncrna','lncrna','rrna','trna','ribozyme','aptamer'},
-        'clusters-operons':{'bgc','operon'},'repetitive':{'repeat'},
-        'intergenic-context':{'intergenic'},'broad-context':{'genome','unspecified'}}
+        'clusters-operons':{'bgc','operon'},'crispr-arrays':{'crispr-array'},'repetitive':{'repeat'},
+        'intergenic-context':{'intergenic'},'broad-context':{'genome','prophage','unspecified'}}
+    def group_features(features,output,task_id):
+        if output['category_id']=='output-linked-structure':
+            return ['transcript-structures' if output['structure_scope']=='splice-pattern' else 'gene-structures']
+        grouped=[key for key,values in feature_families.items() if values & set(features)]
+        if cds_scopes.get(task_id) in ('restricted-target','protein-reference'):
+            grouped=[g for g in grouped if g not in ('gene-elements','splice-elements','intergenic-context')]
+            grouped.insert(0,'coding-sequence')
+        return grouped
     for t in db['tasks']:
         maps=taskmaps[t['id']]
         if not maps:raise ValueError('Coverage mapping missing: '+t['id'])
         typ=t['task_type'].lower();cs=cats[t['id']];sids=memberships[t['id']]
         mode=3 if any(x in typ for x in ('diagnostic','analysis','case study','computational','ortholog completeness')) else 1 if 'generation' in cs else 2 if any(x in typ for x in ('retrieval','clustering','bigene','eds')) else 0
-        source=0 if t['id'] in original else 1 if sids&{'plantcad2-zero','plantcad2-ft','genecad'} else 2 if sids&{'nt-original','nt-revised','gue','gb','geneb'} else 3 if sids&{'rnagym','proteingym'} else 4 if sids&{'bacbench','dgeb','bgc','bgcs'} else 5
+        source=next(i for i,s in enumerate(settings['sources'])
+            if s.get('fallback') or original_models[t['id']] & set(s.get('originalModels',[]))
+            or sids & set(s.get('evaluations',[])))
         features=[f['id'] for f in settings['features'] if f['id'] in cs] or ['unspecified']
         output=outputs[t['id']]
-        if output['category_id']=='output-linked-structure':
-            grouped=['transcript-structures' if output['structure_scope']=='splice-pattern' else 'gene-structures']
-        else:
-            grouped=[key for key,values in feature_families.items() if values & set(features)]
-            if cds_scopes.get(t['id']) in ('restricted-target','protein-reference'):
-                # A coding component target is distinct from mixed gene-element
-                # labels. Retain genuinely separate non-gene feature contexts.
-                grouped=[g for g in grouped if g not in ('gene-elements','splice-elements','intergenic-context')]
-                grouped.insert(0,'coding-sequence')
+        grouped=group_features(features,output,t['id'])
+        for mapping in maps:
+            # Where a released manifest resolves species × target composition,
+            # do not project all collection-wide features onto every species.
+            mapping['features']=mapping.get('featureIds',features)
+            if not set(mapping['features'])<=set(features):raise ValueError('Unknown species-specific feature: '+t['id'])
+            mapping['groupedFeatures']=group_features(mapping['features'],output,t['id'])
         if not grouped:raise ValueError('Grouped feature assignment missing: '+t['id'])
         tasks.append(dict(id=t['id'],features=features,mode=mode,source=source,
                           groupedFeatures=grouped,output=output['category_id'],
@@ -75,7 +86,7 @@ def export_coverage(db):
             for rid in sorted(assigned):
                 if rid not in rowtasks:raise ValueError('Unknown coverage row: '+rid)
                 rowtasks[rid].append(i)
-                for feature in t['features']:cells[rid+'|'+feature].append(i)
+                for feature in {f for m in t['mappings'] if m[field]==rid for f in m['features']}:cells[rid+'|'+feature].append(i)
         if {i for ids in rowtasks.values() for i in ids}!=set(range(len(tasks))):raise ValueError('Coverage lost tasks')
         for r in rs:
             path=[];n=lookup[r['displayParent']];seen=set()

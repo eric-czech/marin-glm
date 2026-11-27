@@ -1,0 +1,2825 @@
+{
+  "files": [
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "test.parquet",
+      "bytes": 797911,
+      "sha256": "7dfa2ddeeb015c2521502f2c8aba966a0b5034ab838e337476c7e576ebed5dc5",
+      "rows": 50164,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "label",
+        "id",
+        "review_status",
+        "consequence"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "label": 0,
+        "id": 0,
+        "review_status": 0,
+        "consequence": 0
+      },
+      "label_counts": {
+        "Benign": 27910,
+        "Pathogenic": 22254
+      },
+      "chrom_counts": {
+        "1": 4548,
+        "2": 3927,
+        "3": 2784,
+        "4": 1486,
+        "5": 2132,
+        "6": 2129,
+        "7": 2456,
+        "8": 1501,
+        "9": 2016,
+        "10": 1628,
+        "11": 2606,
+        "12": 2922,
+        "13": 939,
+        "14": 1416,
+        "15": 1759,
+        "16": 2236,
+        "17": 3306,
+        "18": 870,
+        "19": 2529,
+        "20": 1170,
+        "21": 703,
+        "22": 944,
+        "X": 4142,
+        "Y": 15
+      },
+      "consequence_counts": {
+        "missense_variant": 38350,
+        "intron_variant,missense_variant": 2874,
+        "initiatior_codon_variant,missense_variant": 467,
+        "5_prime_UTR_variant,intron_variant,missense_variant": 187,
+        "missense_variant,synonymous_variant": 130,
+        "3_prime_UTR_variant,missense_variant": 457,
+        "5_prime_UTR_variant,missense_variant": 898,
+        "missense_variant,non-coding_transcript_variant": 4563,
+        "initiatior_codon_variant,missense_variant,non-coding_transcript_variant": 72,
+        "5_prime_UTR_variant,missense_variant,non-coding_transcript_variant": 443,
+        "initiatior_codon_variant,intron_variant,missense_variant": 46,
+        "intron_variant,missense_variant,non-coding_transcript_variant": 748,
+        "5_prime_UTR_variant,intron_variant,missense_variant,non-coding_transcript_variant": 131,
+        "3_prime_UTR_variant,missense_variant,non-coding_transcript_variant": 172,
+        "missense_variant,non-coding_transcript_variant,synonymous_variant": 59,
+        "5_prime_UTR_variant,initiatior_codon_variant,missense_variant,non-coding_transcript_variant": 42,
+        "5_prime_UTR_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 13,
+        "3_prime_UTR_variant,intron_variant,missense_variant": 65,
+        "3_prime_UTR_variant,missense_variant,splice_donor_variant": 2,
+        "3_prime_UTR_variant,missense_variant,non-coding_transcript_variant,stop_lost": 1,
+        "missense_variant,non-coding_transcript_variant,nonsense": 28,
+        "5_prime_UTR_variant,initiatior_codon_variant,missense_variant": 55,
+        "3_prime_UTR_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 4,
+        "5_prime_UTR_variant,missense_variant,nonsense": 11,
+        "missense_variant,nonsense": 41,
+        "5_prime_UTR_variant,missense_variant,synonymous_variant": 7,
+        "5_prime_UTR_variant,initiatior_codon_variant,intron_variant,missense_variant": 12,
+        "missense_variant,splice_donor_variant": 44,
+        "5_prime_UTR_variant,intron_variant,missense_variant,synonymous_variant": 6,
+        "3_prime_UTR_variant,intron_variant,missense_variant,non-coding_transcript_variant": 28,
+        "missense_variant,non-coding_transcript_variant,splice_donor_variant": 4,
+        "5_prime_UTR_variant,intron_variant,missense_variant,non-coding_transcript_variant,nonsense": 4,
+        "5_prime_UTR_variant,intron_variant,missense_variant,non-coding_transcript_variant,splice_donor_variant": 1,
+        "intron_variant,missense_variant,synonymous_variant": 14,
+        "intron_variant,missense_variant,nonsense": 8,
+        "missense_variant,nonsense,synonymous_variant": 1,
+        "missense_variant,splice_donor_variant,synonymous_variant": 1,
+        "missense_variant,no_sequence_alteration": 24,
+        "5_prime_UTR_variant,initiatior_codon_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 1,
+        "genic_downstream_transcript_variant,missense_variant": 4,
+        "5_prime_UTR_variant,initiatior_codon_variant,intron_variant,missense_variant,non-coding_transcript_variant": 8,
+        "intron_variant,missense_variant,non-coding_transcript_variant,nonsense": 3,
+        "5_prime_UTR_variant,intron_variant,missense_variant,splice_acceptor_variant": 3,
+        "3_prime_UTR_variant,initiatior_codon_variant,missense_variant,non-coding_transcript_variant": 2,
+        "5_prime_UTR_variant,missense_variant,non-coding_transcript_variant,nonsense": 5,
+        "initiatior_codon_variant,intron_variant,missense_variant,non-coding_transcript_variant": 15,
+        "5_prime_UTR_variant,missense_variant,no_sequence_alteration": 2,
+        "genic_upstream_transcript_variant,missense_variant": 3,
+        "genic_upstream_transcript_variant,missense_variant,no_sequence_alteration": 3,
+        "genic_upstream_transcript_variant,missense_variant,nonsense": 1,
+        "5_prime_UTR_variant,missense_variant,splice_acceptor_variant": 1,
+        "missense_variant,non-coding_transcript_variant,stop_lost": 3,
+        "3_prime_UTR_variant,5_prime_UTR_variant,missense_variant": 2,
+        "3_prime_UTR_variant,missense_variant,synonymous_variant": 11,
+        "initiatior_codon_variant,missense_variant,nonsense": 1,
+        "intron_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 14,
+        "intron_variant,missense_variant,no_sequence_alteration": 3,
+        "5_prime_UTR_variant,missense_variant,non-coding_transcript_variant,splice_acceptor_variant": 1,
+        "5_prime_UTR_variant,intron_variant,missense_variant,splice_donor_variant": 4,
+        "5_prime_UTR_variant,intron_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 18,
+        "intron_variant,missense_variant,splice_acceptor_variant": 2,
+        "missense_variant,splice_acceptor_variant": 10,
+        "3_prime_UTR_variant,genic_downstream_transcript_variant,missense_variant": 2,
+        "5_prime_UTR_variant,initiatior_codon_variant,missense_variant,synonymous_variant": 1,
+        "initiatior_codon_variant,missense_variant,synonymous_variant": 1,
+        "3_prime_UTR_variant,missense_variant,nonsense": 4,
+        "5_prime_UTR_variant,missense_variant,non-coding_transcript_variant,splice_donor_variant": 1,
+        "intron_variant,missense_variant,splice_donor_variant": 8,
+        "missense_variant,no_sequence_alteration,non-coding_transcript_variant": 3,
+        "3_prime_UTR_variant,missense_variant,non-coding_transcript_variant,nonsense": 3,
+        "3_prime_UTR_variant,5_prime_UTR_variant,intron_variant,missense_variant": 1,
+        "initiatior_codon_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 1,
+        "missense_variant,no_sequence_alteration,synonymous_variant": 1,
+        "3_prime_UTR_variant,5_prime_UTR_variant,missense_variant,non-coding_transcript_variant": 2,
+        "intron_variant,missense_variant,non-coding_transcript_variant,nonsense,synonymous_variant": 1,
+        "3_prime_UTR_variant,intron_variant,missense_variant,non-coding_transcript_variant,synonymous_variant": 1,
+        "missense_variant,non-coding_transcript_variant,splice_acceptor_variant": 1
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/Evo2_7B.parquet",
+      "bytes": 269625,
+      "sha256": "6f08bfbf499b1fca8743ec82c39281651b939318f20ad80d60ec3f732e6b4665",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/PhyloP-V100.parquet",
+      "bytes": 158525,
+      "sha256": "3a5640c0ceff0c92c857a5af283c23a0f2a9a213f3ea22ce0ff82bb7b56ba7b2",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/GPN-Star-M447.parquet",
+      "bytes": 302132,
+      "sha256": "d71b719c52749d9b451409daf1264c52a519289be4281b8fce6dd994aa5affdd",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/PhastCons-P43.parquet",
+      "bytes": 67916,
+      "sha256": "a041b22a948e41d94cb3aa9661c81c9eafc46955411328497ad8572c602b08c0",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 2
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/GPN-Star-P36.parquet",
+      "bytes": 302192,
+      "sha256": "0c75feb0b734ba3a32ac7ba7a53722bf386537ab32def012487ac2b9124f86fb",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/PhyloP-M447.parquet",
+      "bytes": 150968,
+      "sha256": "5da6d777a5d386bee6d763cd11521f4ecffdbd56c5e954460f4ad516125b09b5",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/PhyloP-P243.parquet",
+      "bytes": 107442,
+      "sha256": "d9fe2ff3727f7dc8c56479544c7d01fc7ae74c45df9147c28ab88c6de81a07c1",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 187
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/Evo2_40B.parquet",
+      "bytes": 278317,
+      "sha256": "7c9d928fc3b9756b75747756c0f175b124ad4d8b8c76d2d6e3ab4627f5bfd208",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/GPN-Star-V100.parquet",
+      "bytes": 302236,
+      "sha256": "1d40b530436146292b825fbd1444715208fdb490ab198e341469cb5f0b0de048",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/ESM-1b.parquet",
+      "bytes": 168363,
+      "sha256": "55ca59758dcc1ae9ec80fc4a9a592081fadbb67a331303f7252576db66474af4",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 1894
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/PhastCons-M470.parquet",
+      "bytes": 42856,
+      "sha256": "1359c2e5073ef1fcd6aacd4e4839c601d8470d759d0e1ba6dac08aba6b75646f",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 57
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/CADD.parquet",
+      "bytes": 301884,
+      "sha256": "2aee41363abc7e6ec48886f632a0a5d8b882ec39bc005a88fe897f8cc9aaf10f",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/PhastCons-V100.parquet",
+      "bytes": 48894,
+      "sha256": "2b042cae6b46cff7d5c4d39af5ae05b2403ef7f51e53b924f830d5ed6ab32a33",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/GPN-Star-V100_AF_adjusted.parquet",
+      "bytes": 193869,
+      "sha256": "b8a1411e3c39c79fe555ea111256136245698e2da9f84a2877e8f8b9f3411e81",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/GPN-Star-P243.parquet",
+      "bytes": 302220,
+      "sha256": "8df26bb11927219311415230a6cefe7016def6bbed35f19bd65a63a4ebea8d5a",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/NT_2.5B_MS.parquet",
+      "bytes": 289053,
+      "sha256": "df950047de9a8bec15f228c8c29dfe9a3dc7e9eb7623548dd975e11d2c1f65bd",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/GPN-MSA.parquet",
+      "bytes": 87044,
+      "sha256": "8f271684430bced6a8468a08d01b55b3425d70f6140a8fd5ccccf4c24478fbd2",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/AlphaMissense.parquet",
+      "bytes": 128856,
+      "sha256": "23f6e088f51eca5ce3d57c21b80a50bedf35b88536ce44ca657c5239cec8a954",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 2381
+      }
+    },
+    {
+      "repo": "clinvar_vs_benign",
+      "revision": "c64a938c4e10072245c0572fb5167d82adc78ccf",
+      "path": "predictions/Roulette.parquet",
+      "bytes": 42880,
+      "sha256": "2296dfb9c7b400c743206e990677cc3abfe2bd3b10c1217f40dbb6749f5e866a",
+      "rows": 50164,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 4214
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "test.parquet",
+      "bytes": 468335,
+      "sha256": "6cc7478e2b9d5d7b81309ff2a14e4db72492f77946cd981db4355995f190860a",
+      "rows": 18903,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "label",
+        "GPN-MSA",
+        "CADD",
+        "phyloP-100v",
+        "phyloP-241m",
+        "phastCons-100v",
+        "ESM-1b"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "label": 0,
+        "GPN-MSA": 0,
+        "CADD": 0,
+        "phyloP-100v": 3,
+        "phyloP-241m": 26,
+        "phastCons-100v": 3,
+        "ESM-1b": 3302
+      },
+      "label_counts": {
+        "False": 18720,
+        "True": 183
+      },
+      "chrom_counts": {
+        "1": 1946,
+        "2": 1171,
+        "3": 948,
+        "4": 665,
+        "5": 784,
+        "6": 1229,
+        "7": 943,
+        "8": 577,
+        "9": 765,
+        "10": 719,
+        "11": 1295,
+        "12": 930,
+        "13": 245,
+        "14": 674,
+        "15": 563,
+        "16": 764,
+        "17": 1135,
+        "18": 317,
+        "19": 1739,
+        "20": 432,
+        "21": 241,
+        "22": 465,
+        "X": 355,
+        "Y": 1
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/Evo2_7B.parquet",
+      "bytes": 104162,
+      "sha256": "ee75299eea62569c1e04ce8a95831246fac532afd10f2ed30a6f42a2f538c345",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/PhyloP-V100.parquet",
+      "bytes": 76998,
+      "sha256": "d7be960f982ae4151e29ee48fd0731a15a7db66134f890cc41598c9e04d9a78a",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 3
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/GPN-Star-M447.parquet",
+      "bytes": 112706,
+      "sha256": "58999678809162ecdb7a895d8be10b25806ef37e6e1df069e2bb112faa0874f2",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/PhastCons-P43.parquet",
+      "bytes": 31335,
+      "sha256": "ee821bd171976409350913eec72405c5d1ce89b9242bd9486a8b18a09dc46fc0",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 26
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/GPN-Star-P36.parquet",
+      "bytes": 112702,
+      "sha256": "118dc0081aab35cb2bbe607363aa06b2eef1907fbf3bb7bedcbd0e89b9e68c04",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/PhyloP-M447.parquet",
+      "bytes": 84076,
+      "sha256": "fddd2487d96a7847725010e009865645b0208d18ed047edc1bc234c1887a5c78",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 23
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/PhyloP-P243.parquet",
+      "bytes": 57894,
+      "sha256": "fd65c425b4cd324cccc1b8e8f27d25108c91d4e79da30c8a36c7acd59fb53ef9",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 328
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/Evo2_40B.parquet",
+      "bytes": 107126,
+      "sha256": "8448b90988815e967e2809f999248c197a0cdd12b695ac6e7ed2194bed88e5ca",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/GPN-Star-V100.parquet",
+      "bytes": 112702,
+      "sha256": "019812edf850f2ea58daa725131205364b88981a927ccd69d3119bf339ef4c25",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/ESM-1b.parquet",
+      "bytes": 67425,
+      "sha256": "86e450df297a8f34b460d6e93acacf1661e2416d9cd0f637065ae7845b0d5999",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 3302
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/PhastCons-M470.parquet",
+      "bytes": 24169,
+      "sha256": "8cf2e42c81dc0548348e8e43f3a6a97ae20e8c69ac6925b6c6c3473b07385b0a",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 76
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/CADD.parquet",
+      "bytes": 112650,
+      "sha256": "1fe74b459af8848b7f582b6a73223566c655068c6f0875ab76fcf0eee52dd7da",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/PhastCons-V100.parquet",
+      "bytes": 27252,
+      "sha256": "c177fa8447cef96afb6e688c1dbf34ba99352321088fca42ea455cc7c5e3fc53",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 3
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/GPN-Star-P243.parquet",
+      "bytes": 112682,
+      "sha256": "52c22b065e9b16472d06566d25ffd9b16f3a5b53bd5484379e9695456c6b59ef",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/NT_2.5B_MS.parquet",
+      "bytes": 110882,
+      "sha256": "65a47814f00dc0e13b5bd1e1fb7d06438b31227cd4dafeac62d6360f5bde3982",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/GPN-MSA.parquet",
+      "bytes": 63892,
+      "sha256": "5d62d409ebf30cc6cfb8bbc267549f0a8f975ff43e5f813274c9193ad9d1b913",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "cosmic",
+      "revision": "424a58fdba15fe4a5bf8db0b9e7c76d6c5f9fc28",
+      "path": "predictions/Roulette.parquet",
+      "bytes": 18736,
+      "sha256": "7f06989f3dbb1ab5aab5339c64a8ce7e3b4e072b3ced637e1366ee8c6a9d6ce9",
+      "rows": 18903,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 437
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "test.parquet",
+      "bytes": 100055,
+      "sha256": "9ab296eef83541f233be2f4ad3b324fca2bd8e7ee5721e34bddcdea357747276",
+      "rows": 2221,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "pip",
+        "trait",
+        "label",
+        "maf",
+        "ld_score",
+        "consequence",
+        "tss_dist",
+        "gene",
+        "maf_bin"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "pip": 0,
+        "trait": 0,
+        "label": 0,
+        "maf": 0,
+        "ld_score": 0,
+        "consequence": 0,
+        "tss_dist": 0,
+        "gene": 0,
+        "maf_bin": 0
+      },
+      "label_counts": {
+        "False": 1997,
+        "True": 224
+      },
+      "chrom_counts": {
+        "1": 253,
+        "10": 85,
+        "11": 134,
+        "12": 99,
+        "13": 31,
+        "14": 68,
+        "15": 57,
+        "16": 85,
+        "17": 117,
+        "18": 32,
+        "19": 211,
+        "2": 177,
+        "20": 47,
+        "21": 25,
+        "22": 43,
+        "3": 126,
+        "4": 82,
+        "5": 108,
+        "6": 152,
+        "7": 118,
+        "8": 73,
+        "9": 98
+      },
+      "consequence_counts": {
+        "missense_variant": 2221
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/Evo2_7B.parquet",
+      "bytes": 13777,
+      "sha256": "fc1214793aa9433325ab52d2db40cf413828a35640134a06038615683e2cee15",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/PhyloP-V100.parquet",
+      "bytes": 16324,
+      "sha256": "f11b8325b009ca84238054fe11bd2c7376015fefc90b22e4f88051cbca240e5b",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/GPN-Star-M447.parquet",
+      "bytes": 13869,
+      "sha256": "91674eb8ae2b6b2e27302adfc4e67eaa7453c595076f43e7f394c17446bd1132",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/PhastCons-P43.parquet",
+      "bytes": 8154,
+      "sha256": "09f0cb6fd2e5f8ff0d63bd6bd9582c9041af560f6438d9399756d7219ea8a951",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/GPN-Star-P36.parquet",
+      "bytes": 13877,
+      "sha256": "1080304113ebd10fff50c75570047e6a75b6f33a52b640a8d94a1bc976fa8d7c",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/PhyloP-M447.parquet",
+      "bytes": 16205,
+      "sha256": "a5c53698c51175f0749163952e3551c477959262263c9465f17b2e50d2e4936a",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/PhyloP-P243.parquet",
+      "bytes": 11366,
+      "sha256": "9e0222b94f515219657407bbfb296dccdb80951054e7a9f4ca00a96b7dbc8a42",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/Evo2_40B.parquet",
+      "bytes": 13769,
+      "sha256": "c51014c1b1299e13ac5d48bbb2f45cb26fb9fb8fa3e1441804b153a007c9f5bd",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/GPN-Star-V100.parquet",
+      "bytes": 13873,
+      "sha256": "f3a0fd675c904131802f24e0d2c540844bfcc1b0c2cbecaea34629312d433c76",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/ESM-1b.parquet",
+      "bytes": 14343,
+      "sha256": "345f521987b7b6ae94af49e7f98cabbeb44a7e22c7deacf17434f2d5976f4fca",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/PhastCons-M470.parquet",
+      "bytes": 5601,
+      "sha256": "292c93cc8bbe60db6be0c79a94ee2f955a8a4b6234e19a65f07960b6523c4647",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/CADD.parquet",
+      "bytes": 13877,
+      "sha256": "6b6ac2a15c83424ca1b8938613361fef45f81a655e505a522d52ee7d683e8b46",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/PhastCons-V100.parquet",
+      "bytes": 6614,
+      "sha256": "a7a5021b23dcc99cded0ca3e8cf3d8613ead9778f1f0b34883714a4a6ad5532f",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/GPN-Star-P243.parquet",
+      "bytes": 13877,
+      "sha256": "f568e4dcad6489fef7c3deb785b39381cdaa5fc3b493f8cbe32989558b357e14",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/NT_2.5B_MS.parquet",
+      "bytes": 13865,
+      "sha256": "a4c5bf2d3ece2d5c38bef53d92659f1051ed458c6a7d2cbb9d193d2b350fb4c0",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/GPN-MSA.parquet",
+      "bytes": 9127,
+      "sha256": "8957e7c74e6add97413b9d050fa640a2335ea7dc287608ccfc3cbd52a10205e6",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/AlphaMissense.parquet",
+      "bytes": 12933,
+      "sha256": "269c1b3a57ac06c6975ce2a2fc5c72723c3f613384dbf42427360b79a2a8e137",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 105
+      }
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "revision": "14799c5214aa05d457e90e417f302c7a3fa6853f",
+      "path": "predictions/Roulette.parquet",
+      "bytes": 4377,
+      "sha256": "6fa560ab1193070611388b3ccaeddb232e91280c7bdc70ea032a0e8fffbfb86b",
+      "rows": 2221,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 5
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "test.parquet",
+      "bytes": 66742954,
+      "sha256": "def925367fbb7b61c5a078295cccfea2fee09dfc05234013791417f8664f8497",
+      "rows": 11992284,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "label",
+        "consequence"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "label": 0,
+        "consequence": 0
+      },
+      "label_counts": {
+        "False": 5996138,
+        "True": 5996146
+      },
+      "chrom_counts": {
+        "1": 910551,
+        "2": 987067,
+        "3": 831243,
+        "4": 835983,
+        "5": 749422,
+        "6": 753403,
+        "7": 671388,
+        "8": 629324,
+        "9": 506873,
+        "10": 576754,
+        "11": 567012,
+        "12": 551077,
+        "13": 419885,
+        "14": 376138,
+        "15": 336299,
+        "16": 349893,
+        "17": 318050,
+        "18": 326102,
+        "19": 251559,
+        "20": 256037,
+        "21": 161388,
+        "22": 159998,
+        "X": 454187,
+        "Y": 12651
+      },
+      "consequence_counts": {
+        "non_coding_transcript_exon": 274540,
+        "intron": 6481608,
+        "intergenic": 4714558,
+        "upstream_gene": 124890,
+        "downstream_gene": 129544,
+        "missense": 37452,
+        "splice_region": 24170,
+        "mature_miRNA": 148,
+        "5_prime_UTR": 29794,
+        "synonymous": 37948,
+        "3_prime_UTR": 136750,
+        "start_or_stop": 802,
+        "non_coding_transcript": 8,
+        "stop_retained": 68,
+        "coding_sequence": 2,
+        "incomplete_terminal_codon": 2
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/PhyloP-V100.parquet",
+      "bytes": 21567471,
+      "sha256": "5dd8d2fadec9c8a5aa66bc567656315a205571fe905694a88b10dafe011f07be",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 174470
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/GPN-Star-M447.parquet",
+      "bytes": 55409469,
+      "sha256": "186ae0931e3bf16860447d55e5106f3031bd84b4ce8c1999c781ca29ccfb3b56",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/PhastCons-P43.parquet",
+      "bytes": 14772793,
+      "sha256": "f66da1ba363dea28a84ab5e2dcc81579cc7e81d1a7c1100f97dea34dc72a690e",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 87419
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/PhyloP-M447.parquet",
+      "bytes": 23074526,
+      "sha256": "9b18b8e76368d23a39677550acb3b1d1e1cc0cc4d0a59d7e9785441db02a9f77",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 41011
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/PhyloP-P243.parquet",
+      "bytes": 21471120,
+      "sha256": "c592c6f2b39d38fa85d11da6840b52b9caf348fc6dc1b661f855af3b688a54be",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 164366
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/GPN-Star-V100.parquet",
+      "bytes": 55411822,
+      "sha256": "b965db1c4086db8d1ac845c5ac8e347e53363e2fd7080e93106229ed9056bc37",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/PhastCons-M470.parquet",
+      "bytes": 10024593,
+      "sha256": "7f1ee0977a74beaba9914c70581ef712d780aac7bf84325bcca009f999c07ab4",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 218170
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/CADD.parquet",
+      "bytes": 54818899,
+      "sha256": "554976326a8850e96fad7bc790b4ff67b2422730d041f892184ad2d68690895e",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/PhastCons-V100.parquet",
+      "bytes": 12392580,
+      "sha256": "6ca4f695bc9da0f721f68428d0b3878d9e53c16bd5e7e25c91d62a5bbe437f25",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 174470
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/GPN-Star-P243.parquet",
+      "bytes": 55350023,
+      "sha256": "23393ee93edb2a514f62b87b325cf24d9d085a2c6a1904a43620c5de704548ad",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/GPN-MSA.parquet",
+      "bytes": 29334099,
+      "sha256": "f4c418074253650d9ae7ee29f533830a7faf3711ead50badc3a216b03b93d757",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 3
+      }
+    },
+    {
+      "repo": "gnomad_balanced",
+      "revision": "946b7faf6995c736a33d9b4ba2777952d2e4d0a0",
+      "path": "predictions/Roulette.parquet",
+      "bytes": 10132271,
+      "sha256": "71d222230621226f9468d82f260eb98679a890fa88d0d858603b349a37b68a01",
+      "rows": 11992284,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 477623
+      }
+    },
+    {
+      "repo": "wmgp_balanced",
+      "revision": "0834140e4ead0b831707b971a9ec7482da5109b6",
+      "path": "test.parquet",
+      "bytes": 297925819,
+      "sha256": "7a836a0c782556500c5865b54b68b10fc6cbc0f870c32e9f1624a5d450b5a115",
+      "rows": 50077933,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "AF",
+        "consequence",
+        "label"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "AF": 0,
+        "consequence": 0,
+        "label": 0
+      },
+      "label_counts": {
+        "False": 25038744,
+        "True": 25039189
+      },
+      "chrom_counts": {
+        "1": 3997338,
+        "2": 3438724,
+        "3": 3291076,
+        "4": 3040548,
+        "5": 2992780,
+        "6": 3016247,
+        "7": 2687237,
+        "8": 2550184,
+        "9": 2394340,
+        "10": 2699905,
+        "11": 2344706,
+        "12": 2274540,
+        "13": 2324031,
+        "14": 2346664,
+        "15": 2131316,
+        "16": 2025000,
+        "17": 1862354,
+        "18": 1836359,
+        "19": 1176927,
+        "X": 1632726,
+        "Y": 14931
+      },
+      "consequence_counts": {
+        "intergenic": 20785344,
+        "upstream_gene": 660267,
+        "non_coding_transcript_exon": 1488850,
+        "downstream_gene": 757002,
+        "intron": 25365048,
+        "splice_region": 124050,
+        "3_prime_UTR": 483204,
+        "synonymous": 206208,
+        "missense": 117489,
+        "5_prime_UTR": 88776,
+        "start_or_stop": 1429,
+        "stop_retained": 226,
+        "incomplete_terminal_codon": 24,
+        "non_coding_transcript": 2,
+        "mature_miRNA": 8,
+        "coding_sequence": 6
+      }
+    },
+    {
+      "repo": "wmgp_balanced",
+      "revision": "0834140e4ead0b831707b971a9ec7482da5109b6",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 47634876,
+      "sha256": "c720238aecf853a130ddb19a292a52c4f0cfcb299115060e5e32c5f4d6ce5bc9",
+      "rows": 50077933,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 9766651
+      }
+    },
+    {
+      "repo": "wmgp_balanced",
+      "revision": "0834140e4ead0b831707b971a9ec7482da5109b6",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 69095664,
+      "sha256": "e1278b1021ae333daa7afe512d4e2db1d44ab981cf45223c9bb94da4872e55a2",
+      "rows": 50077933,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 9766651
+      }
+    },
+    {
+      "repo": "wmgp_balanced",
+      "revision": "0834140e4ead0b831707b971a9ec7482da5109b6",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 230078854,
+      "sha256": "f9e8f1652c25e1a6405a8da385ae14240d544c308da08e67b5136cb73ab88fa4",
+      "rows": 50077933,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 11
+      }
+    },
+    {
+      "repo": "dest",
+      "revision": "00e62a63010b06c3b3b10a675719233d8d656873",
+      "path": "test.parquet",
+      "bytes": 12752775,
+      "sha256": "73b7808bd413f31a4ef3a1316c8912d1d3c676d2a607c71d8955b528b9202915",
+      "rows": 1093340,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "AF",
+        "consequence",
+        "label"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "AF": 0,
+        "consequence": 0,
+        "label": 0
+      },
+      "label_counts": {
+        "False": 716075,
+        "True": 377265
+      },
+      "chrom_counts": {
+        "2L": 245096,
+        "2R": 225206,
+        "3L": 245912,
+        "3R": 275256,
+        "4": 1164,
+        "X": 100444,
+        "Y": 262
+      },
+      "consequence_counts": {
+        "intergenic": 188007,
+        "upstream_gene": 75175,
+        "non_coding_transcript_exon": 20815,
+        "3_prime_UTR": 43437,
+        "missense": 87765,
+        "intron": 460519,
+        "synonymous": 129456,
+        "5_prime_UTR": 33446,
+        "splice_region": 16503,
+        "downstream_gene": 36980,
+        "start_or_stop": 1103,
+        "stop_retained": 132,
+        "coding_sequence": 1,
+        "start_retained": 1
+      }
+    },
+    {
+      "repo": "dest",
+      "revision": "00e62a63010b06c3b3b10a675719233d8d656873",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 1274730,
+      "sha256": "3d08cf52ac304c20a85bac09f6c245bbf7e7c73266e55c7ea5ae527f67dcd907",
+      "rows": 1093340,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 605
+      }
+    },
+    {
+      "repo": "dest",
+      "revision": "00e62a63010b06c3b3b10a675719233d8d656873",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 2113616,
+      "sha256": "12c945d8282f9993b96eb3da0ecb45c68e11fabb43a5effffecf7dd43796f219",
+      "rows": 1093340,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 605
+      }
+    },
+    {
+      "repo": "dest",
+      "revision": "00e62a63010b06c3b3b10a675719233d8d656873",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 7165223,
+      "sha256": "64e6ed8f67d956773cb74c4f2a80b51f650a1a69d8ec762de85ced5130a700b0",
+      "rows": 1093340,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "caendr",
+      "revision": "b9eb71f197cb0d15fba9650397b193a3feb64569",
+      "path": "test.parquet",
+      "bytes": 5465288,
+      "sha256": "ad17f67b99b618b9a0c8f374b06c701089031dabc2e2ef5c18465e3f84ff2dbc",
+      "rows": 650238,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "AF",
+        "AC",
+        "AN",
+        "consequence",
+        "label"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "AF": 0,
+        "AC": 0,
+        "AN": 0,
+        "consequence": 0,
+        "label": 0
+      },
+      "label_counts": {
+        "False": 207785,
+        "True": 442453
+      },
+      "chrom_counts": {
+        "I": 79931,
+        "II": 108517,
+        "III": 77603,
+        "IV": 102182,
+        "V": 143918,
+        "X": 138087
+      },
+      "consequence_counts": {
+        "intergenic": 63525,
+        "downstream_gene": 34916,
+        "upstream_gene": 111451,
+        "3_prime_UTR": 22766,
+        "synonymous": 71258,
+        "intron": 197910,
+        "start_or_stop": 1703,
+        "missense": 89956,
+        "5_prime_UTR": 10410,
+        "splice_region": 22672,
+        "non_coding_transcript_exon": 23514,
+        "stop_retained": 157
+      }
+    },
+    {
+      "repo": "caendr",
+      "revision": "b9eb71f197cb0d15fba9650397b193a3feb64569",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 807227,
+      "sha256": "ea583bd7644e2d4128d9d70d894a9a1425763385f9ba4b1f6e6598b87c836de5",
+      "rows": 650238,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 24003
+      }
+    },
+    {
+      "repo": "caendr",
+      "revision": "b9eb71f197cb0d15fba9650397b193a3feb64569",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 1205710,
+      "sha256": "ddaf586237851f5e03a97bf28b8df586f8b8676fcfdf27c866a70f4c406053e9",
+      "rows": 650238,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 24003
+      }
+    },
+    {
+      "repo": "caendr",
+      "revision": "b9eb71f197cb0d15fba9650397b193a3feb64569",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 4359948,
+      "sha256": "fbd2c78fe3788f112b21ace2cb54e7ede1d83d56cea950991a38c309cf906ac6",
+      "rows": 650238,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "galbase",
+      "revision": "e454ceae05b7fdd50ff1275cce654e0e40ae835e",
+      "path": "test.parquet",
+      "bytes": 57700711,
+      "sha256": "b3e8c91de58a494d53955e22af5ba6e285d41e4cde1fd013607394319203310b",
+      "rows": 9489601,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "AF",
+        "consequence",
+        "label"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "AF": 0,
+        "consequence": 0,
+        "label": 0
+      },
+      "label_counts": {
+        "True": 7037710,
+        "False": 2451891
+      },
+      "chrom_counts": {
+        "1": 2061340,
+        "2": 1555341,
+        "3": 1166662,
+        "4": 954161,
+        "5": 603671,
+        "6": 372920,
+        "7": 380954,
+        "8": 297686,
+        "9": 246006,
+        "10": 208247,
+        "11": 192250,
+        "12": 205876,
+        "13": 178022,
+        "14": 148452,
+        "15": 123054,
+        "16": 1558,
+        "17": 96426,
+        "18": 106365,
+        "19": 93626,
+        "20": 138164,
+        "21": 65450,
+        "22": 36320,
+        "23": 49867,
+        "24": 62348,
+        "25": 12363,
+        "26": 43525,
+        "27": 37038,
+        "28": 34978,
+        "30": 2035,
+        "31": 3025,
+        "32": 644,
+        "33": 11227
+      },
+      "consequence_counts": {
+        "intergenic": 2050242,
+        "non_coding_transcript_exon": 351708,
+        "intron": 6348879,
+        "missense": 94501,
+        "downstream_gene": 129649,
+        "3_prime_UTR": 184965,
+        "upstream_gene": 123574,
+        "synonymous": 114054,
+        "5_prime_UTR": 45335,
+        "splice_region": 44372,
+        "stop_retained": 79,
+        "mature_miRNA": 134,
+        "start_or_stop": 2109
+      }
+    },
+    {
+      "repo": "galbase",
+      "revision": "e454ceae05b7fdd50ff1275cce654e0e40ae835e",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 9148952,
+      "sha256": "c9097df9dd867a16b6d0c5579ab1413e7e90c964ed25d6b748edaa67533f5dc9",
+      "rows": 9489601,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 19165
+      }
+    },
+    {
+      "repo": "galbase",
+      "revision": "e454ceae05b7fdd50ff1275cce654e0e40ae835e",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 17433929,
+      "sha256": "7785688634fb717ece0ea1ad8824b002544d9f42b60caf8e62dcb7293bd27957",
+      "rows": 9489601,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 19165
+      }
+    },
+    {
+      "repo": "galbase",
+      "revision": "e454ceae05b7fdd50ff1275cce654e0e40ae835e",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 43659308,
+      "sha256": "51789f19872fe0967daeb1ab2f70052acec1e01aeda5e7b9f5739bd21c488723",
+      "rows": 9489601,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "1001gp",
+      "revision": "341391427e283fa877a15b0964cb0963f42ce8f1",
+      "path": "test.parquet",
+      "bytes": 29690354,
+      "sha256": "6f11d9ce78b6114b37b69c1544bc90063c386e6d7457c8587256b50b025ecf8a",
+      "rows": 4397119,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "AC",
+        "AF",
+        "consequence",
+        "label"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "AC": 0,
+        "AF": 0,
+        "consequence": 0,
+        "label": 0
+      },
+      "label_counts": {
+        "True": 3533596,
+        "False": 863523
+      },
+      "chrom_counts": {
+        "1": 1068049,
+        "2": 770595,
+        "3": 882655,
+        "4": 724175,
+        "5": 951645
+      },
+      "consequence_counts": {
+        "intergenic": 1400764,
+        "upstream_gene": 759411,
+        "5_prime_UTR": 187880,
+        "missense": 489356,
+        "synonymous": 311432,
+        "intron": 523563,
+        "splice_region": 92302,
+        "3_prime_UTR": 230151,
+        "downstream_gene": 335011,
+        "start_or_stop": 14223,
+        "non_coding_transcript_exon": 49797,
+        "mature_miRNA": 2364,
+        "stop_retained": 824,
+        "non_coding_transcript": 34,
+        "coding_sequence": 7
+      }
+    },
+    {
+      "repo": "1001gp",
+      "revision": "341391427e283fa877a15b0964cb0963f42ce8f1",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 31813505,
+      "sha256": "30331eadc9b7f5def0d0c94f185cade63b0f6254ddf549abca5fd9ba9cc79959",
+      "rows": 4397119,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 615114
+      }
+    },
+    {
+      "repo": "1001gp",
+      "revision": "341391427e283fa877a15b0964cb0963f42ce8f1",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 28099893,
+      "sha256": "79a93a772966fd04d42ea690bfc6b3da64ae73a092e2a005cbc8786b974a3134",
+      "rows": 4397119,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 615114
+      }
+    },
+    {
+      "repo": "1001gp",
+      "revision": "341391427e283fa877a15b0964cb0963f42ce8f1",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 28553025,
+      "sha256": "3999325f1ae57164137c2cdb52a925fbe47283e9ff78eb4562a05131788a0c7c",
+      "rows": 4397119,
+      "columns": [
+        "score"
+      ],
+      "nulls": {
+        "score": 0
+      }
+    },
+    {
+      "repo": "mmrdb",
+      "revision": "92f2ebaed567ccb0fdeaa5d9662f9ab98458b89c",
+      "path": "test.parquet",
+      "bytes": 5338293,
+      "sha256": "56bb7844a5b96e2c73a984c7b8802e6494c08808e31178932ede48f10847185e",
+      "rows": 504392,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "label",
+        "consequence",
+        "pcr_confirmed",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "label": 0,
+        "consequence": 0,
+        "pcr_confirmed": 0,
+        "__index_level_0__": 0
+      },
+      "label_counts": {
+        "True": 433,
+        "False": 503959
+      },
+      "chrom_counts": {
+        "16": 16799,
+        "8": 20413,
+        "7": 50530,
+        "11": 33811,
+        "15": 19030,
+        "9": 28735,
+        "13": 21244,
+        "19": 16442,
+        "18": 15324,
+        "3": 24844,
+        "2": 40777,
+        "10": 25342,
+        "6": 28606,
+        "1": 33865,
+        "5": 31216,
+        "17": 23996,
+        "X": 11554,
+        "12": 16754,
+        "4": 27597,
+        "14": 17469,
+        "Y": 44
+      },
+      "consequence_counts": {
+        "stop_gained": 473,
+        "splice_acceptor": 1906,
+        "missense": 58951,
+        "5_prime_UTR": 44411,
+        "splice_donor": 2786,
+        "synonymous": 102978,
+        "3_prime_UTR": 241653,
+        "splice_donor_region": 5,
+        "splice_polypyrimidine_tract": 21395,
+        "splice_region": 28044,
+        "splice_donor_5th_base": 1790
+      }
+    },
+    {
+      "repo": "mmrdb",
+      "revision": "92f2ebaed567ccb0fdeaa5d9662f9ab98458b89c",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 2894205,
+      "sha256": "42441d2d15477c765e10dab9178e1ee6ab693239fd158b6d155bbdb5c946cdb6",
+      "rows": 504392,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 21363,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "mmrdb",
+      "revision": "92f2ebaed567ccb0fdeaa5d9662f9ab98458b89c",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 3227777,
+      "sha256": "97b24549f8b0916ba2c8167c523ff59cddad8ae633df25aaf1e81c349a0b260c",
+      "rows": 504392,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 21363,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "mmrdb",
+      "revision": "92f2ebaed567ccb0fdeaa5d9662f9ab98458b89c",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 4956041,
+      "sha256": "cf946ecf732c99ae845f60ce9daf90409b2c0c56daa7f292f3d89c34a3835e18",
+      "rows": 504392,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 0,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "flybase_lethal",
+      "revision": "a5708d2c9a00422a8c65ea82b9518fbfde4ae77e",
+      "path": "test.parquet",
+      "bytes": 562602,
+      "sha256": "9354d02c8b56eb5d7d05d4da61d8d13fecb6570e306039c568c4c58ffa1c2f4d",
+      "rows": 42078,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "consequence",
+        "label",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "consequence": 0,
+        "label": 0,
+        "__index_level_0__": 0
+      },
+      "label_counts": {
+        "True": 2929,
+        "False": 39149
+      },
+      "chrom_counts": {
+        "3L": 8584,
+        "2L": 9417,
+        "2R": 9720,
+        "X": 4585,
+        "3R": 9695,
+        "4": 68,
+        "Y": 9
+      },
+      "consequence_counts": {
+        "missense": 29135,
+        "nonsense": 1376,
+        "splicing": 11567
+      }
+    },
+    {
+      "repo": "flybase_lethal",
+      "revision": "a5708d2c9a00422a8c65ea82b9518fbfde4ae77e",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 295472,
+      "sha256": "a6320f9098d2f2df3fcee9604ce3bc4bb3a35030f52baa43b9bcff99f1c8f74a",
+      "rows": 42078,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 2,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "flybase_lethal",
+      "revision": "a5708d2c9a00422a8c65ea82b9518fbfde4ae77e",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 372566,
+      "sha256": "957b132861141bb502c9b8163e9ba1db0c49e8f75b62dc88774f7880311ac9e5",
+      "rows": 42078,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 2,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "flybase_lethal",
+      "revision": "a5708d2c9a00422a8c65ea82b9518fbfde4ae77e",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 586406,
+      "sha256": "7671ba32692e33e7b02ccfbec71b2119a87c3fd70180f54f4c99ac504380ba6d",
+      "rows": 42078,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 0,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "celegans_lethal",
+      "revision": "0e074b97ae76b75c881f4bed647afd6d615318a1",
+      "path": "test.parquet",
+      "bytes": 294642,
+      "sha256": "b7324e112b9c097c44278527dd05275cca9527f2cabb289fe42e432c05aeb86b",
+      "rows": 22255,
+      "columns": [
+        "chrom",
+        "pos",
+        "ref",
+        "alt",
+        "consequence",
+        "label",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "pos": 0,
+        "ref": 0,
+        "alt": 0,
+        "consequence": 0,
+        "label": 0,
+        "__index_level_0__": 0
+      },
+      "label_counts": {
+        "True": 72,
+        "False": 22183
+      },
+      "chrom_counts": {
+        "III": 2300,
+        "V": 8452,
+        "I": 1444,
+        "II": 5846,
+        "IV": 2181,
+        "X": 2032
+      },
+      "consequence_counts": {
+        "nonsense": 192,
+        "missense": 21872,
+        "splice donor/acceptor": 191
+      }
+    },
+    {
+      "repo": "celegans_lethal",
+      "revision": "0e074b97ae76b75c881f4bed647afd6d615318a1",
+      "path": "predictions/PhastCons.parquet",
+      "bytes": 166221,
+      "sha256": "5cc1ca8cc87c79d9f4d6270b95e947cc1c03c5c9738bb93b0c324e2c5d1eae25",
+      "rows": 22255,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 1069,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "celegans_lethal",
+      "revision": "0e074b97ae76b75c881f4bed647afd6d615318a1",
+      "path": "predictions/PhyloP.parquet",
+      "bytes": 202240,
+      "sha256": "6674b87b51fd02a08ea421b94043f41a98999b2541c78a1842ddbc6dfb0b008f",
+      "rows": 22255,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 1069,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "celegans_lethal",
+      "revision": "0e074b97ae76b75c881f4bed647afd6d615318a1",
+      "path": "predictions/GPN-Star.parquet",
+      "bytes": 313583,
+      "sha256": "2e97a72f6885f975b4ebd9c2d89e5a02e30efde268fb3256fcaa704200c12761",
+      "rows": 22255,
+      "columns": [
+        "score",
+        "__index_level_0__"
+      ],
+      "nulls": {
+        "score": 0,
+        "__index_level_0__": 0
+      }
+    },
+    {
+      "repo": "gpn-star-umap-regions",
+      "revision": "c4410a865e52897f74cbbe5c26b98cba5dd36970",
+      "path": "test.parquet",
+      "bytes": 1844117,
+      "sha256": "4e70f824fcbaa3b2ff919d39f78f7d5809f97bb55b34965b80688fc33cb2abcf",
+      "rows": 111329,
+      "columns": [
+        "chrom",
+        "start",
+        "end",
+        "cons",
+        "label"
+      ],
+      "nulls": {
+        "chrom": 0,
+        "start": 0,
+        "end": 0,
+        "cons": 0,
+        "label": 0
+      },
+      "label_counts": {
+        "lnc_RNA": 11991,
+        "background": 20000,
+        "CDS": 20000,
+        "PLS": 11660,
+        "five_prime_UTR": 9222,
+        "dELS": 20000,
+        "three_prime_UTR": 18456
+      },
+      "chrom_counts": {
+        "1": 11189,
+        "10": 5267,
+        "11": 5993,
+        "12": 5542,
+        "13": 3269,
+        "14": 4011,
+        "15": 3888,
+        "16": 3414,
+        "17": 4334,
+        "18": 2821,
+        "19": 3267,
+        "2": 10044,
+        "20": 2550,
+        "21": 1418,
+        "22": 1681,
+        "3": 7095,
+        "4": 6017,
+        "5": 6692,
+        "6": 6629,
+        "7": 5988,
+        "8": 4972,
+        "9": 5248
+      }
+    }
+  ],
+  "score_intersections": [
+    {
+      "repo": "clinvar_vs_benign",
+      "rows": 50164,
+      "all_published_score_files_finite_intersection": 43100,
+      "finite_intersection_labels": {
+        "Benign": 24564,
+        "Pathogenic": 18536
+      },
+      "scores": [
+        {
+          "file": "AlphaMissense.parquet",
+          "rows": 50164,
+          "finite": 47783,
+          "nonfinite": 2381
+        },
+        {
+          "file": "CADD.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "ESM-1b.parquet",
+          "rows": 50164,
+          "finite": 48270,
+          "nonfinite": 1894
+        },
+        {
+          "file": "Evo2_40B.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "Evo2_7B.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-MSA.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-M447.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P243.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P36.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-V100.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-V100_AF_adjusted.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "NT_2.5B_MS.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons-M470.parquet",
+          "rows": 50164,
+          "finite": 50107,
+          "nonfinite": 57
+        },
+        {
+          "file": "PhastCons-P43.parquet",
+          "rows": 50164,
+          "finite": 50162,
+          "nonfinite": 2
+        },
+        {
+          "file": "PhastCons-V100.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhyloP-M447.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhyloP-P243.parquet",
+          "rows": 50164,
+          "finite": 49977,
+          "nonfinite": 187
+        },
+        {
+          "file": "PhyloP-V100.parquet",
+          "rows": 50164,
+          "finite": 50164,
+          "nonfinite": 0
+        },
+        {
+          "file": "Roulette.parquet",
+          "rows": 50164,
+          "finite": 45950,
+          "nonfinite": 4214
+        }
+      ]
+    },
+    {
+      "repo": "cosmic",
+      "rows": 18903,
+      "all_published_score_files_finite_intersection": 14888,
+      "finite_intersection_labels": {
+        "False": 14718,
+        "True": 170
+      },
+      "scores": [
+        {
+          "file": "CADD.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "ESM-1b.parquet",
+          "rows": 18903,
+          "finite": 15601,
+          "nonfinite": 3302
+        },
+        {
+          "file": "Evo2_40B.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "Evo2_7B.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-MSA.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-M447.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P243.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P36.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-V100.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "NT_2.5B_MS.parquet",
+          "rows": 18903,
+          "finite": 18903,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons-M470.parquet",
+          "rows": 18903,
+          "finite": 18827,
+          "nonfinite": 76
+        },
+        {
+          "file": "PhastCons-P43.parquet",
+          "rows": 18903,
+          "finite": 18877,
+          "nonfinite": 26
+        },
+        {
+          "file": "PhastCons-V100.parquet",
+          "rows": 18903,
+          "finite": 18900,
+          "nonfinite": 3
+        },
+        {
+          "file": "PhyloP-M447.parquet",
+          "rows": 18903,
+          "finite": 18880,
+          "nonfinite": 23
+        },
+        {
+          "file": "PhyloP-P243.parquet",
+          "rows": 18903,
+          "finite": 18575,
+          "nonfinite": 328
+        },
+        {
+          "file": "PhyloP-V100.parquet",
+          "rows": 18903,
+          "finite": 18900,
+          "nonfinite": 3
+        },
+        {
+          "file": "Roulette.parquet",
+          "rows": 18903,
+          "finite": 18466,
+          "nonfinite": 437
+        }
+      ]
+    },
+    {
+      "repo": "ukb_finemapped_coding",
+      "rows": 2221,
+      "all_published_score_files_finite_intersection": 2111,
+      "finite_intersection_labels": {
+        "False": 1889,
+        "True": 222
+      },
+      "scores": [
+        {
+          "file": "AlphaMissense.parquet",
+          "rows": 2221,
+          "finite": 2116,
+          "nonfinite": 105
+        },
+        {
+          "file": "CADD.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "ESM-1b.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "Evo2_40B.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "Evo2_7B.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-MSA.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-M447.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P243.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P36.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-V100.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "NT_2.5B_MS.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons-M470.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons-P43.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons-V100.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhyloP-M447.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhyloP-P243.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhyloP-V100.parquet",
+          "rows": 2221,
+          "finite": 2221,
+          "nonfinite": 0
+        },
+        {
+          "file": "Roulette.parquet",
+          "rows": 2221,
+          "finite": 2216,
+          "nonfinite": 5
+        }
+      ]
+    },
+    {
+      "repo": "gnomad_balanced",
+      "rows": 11992284,
+      "all_published_score_files_finite_intersection": 11094936,
+      "finite_intersection_labels": {
+        "False": 5550793,
+        "True": 5544143
+      },
+      "scores": [
+        {
+          "file": "CADD.parquet",
+          "rows": 11992284,
+          "finite": 11992284,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-MSA.parquet",
+          "rows": 11992284,
+          "finite": 11992281,
+          "nonfinite": 3
+        },
+        {
+          "file": "GPN-Star-M447.parquet",
+          "rows": 11992284,
+          "finite": 11992284,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-P243.parquet",
+          "rows": 11992284,
+          "finite": 11992284,
+          "nonfinite": 0
+        },
+        {
+          "file": "GPN-Star-V100.parquet",
+          "rows": 11992284,
+          "finite": 11992284,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons-M470.parquet",
+          "rows": 11992284,
+          "finite": 11774114,
+          "nonfinite": 218170
+        },
+        {
+          "file": "PhastCons-P43.parquet",
+          "rows": 11992284,
+          "finite": 11904865,
+          "nonfinite": 87419
+        },
+        {
+          "file": "PhastCons-V100.parquet",
+          "rows": 11992284,
+          "finite": 11817814,
+          "nonfinite": 174470
+        },
+        {
+          "file": "PhyloP-M447.parquet",
+          "rows": 11992284,
+          "finite": 11951273,
+          "nonfinite": 41011
+        },
+        {
+          "file": "PhyloP-P243.parquet",
+          "rows": 11992284,
+          "finite": 11827918,
+          "nonfinite": 164366
+        },
+        {
+          "file": "PhyloP-V100.parquet",
+          "rows": 11992284,
+          "finite": 11817814,
+          "nonfinite": 174470
+        },
+        {
+          "file": "Roulette.parquet",
+          "rows": 11992284,
+          "finite": 11514661,
+          "nonfinite": 477623
+        }
+      ]
+    },
+    {
+      "repo": "wmgp_balanced",
+      "rows": 50077933,
+      "all_published_score_files_finite_intersection": 40311275,
+      "finite_intersection_labels": {
+        "False": 19601629,
+        "True": 20709646
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 50077933,
+          "finite": 50077922,
+          "nonfinite": 11
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 50077933,
+          "finite": 40311282,
+          "nonfinite": 9766651
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 50077933,
+          "finite": 40311282,
+          "nonfinite": 9766651
+        }
+      ]
+    },
+    {
+      "repo": "dest",
+      "rows": 1093340,
+      "all_published_score_files_finite_intersection": 1092735,
+      "finite_intersection_labels": {
+        "False": 715683,
+        "True": 377052
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 1093340,
+          "finite": 1093340,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 1093340,
+          "finite": 1092735,
+          "nonfinite": 605
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 1093340,
+          "finite": 1092735,
+          "nonfinite": 605
+        }
+      ]
+    },
+    {
+      "repo": "caendr",
+      "rows": 650238,
+      "all_published_score_files_finite_intersection": 626235,
+      "finite_intersection_labels": {
+        "False": 196667,
+        "True": 429568
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 650238,
+          "finite": 650238,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 650238,
+          "finite": 626235,
+          "nonfinite": 24003
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 650238,
+          "finite": 626235,
+          "nonfinite": 24003
+        }
+      ]
+    },
+    {
+      "repo": "galbase",
+      "rows": 9489601,
+      "all_published_score_files_finite_intersection": 9470436,
+      "finite_intersection_labels": {
+        "True": 7022554,
+        "False": 2447882
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 9489601,
+          "finite": 9489601,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 9489601,
+          "finite": 9470436,
+          "nonfinite": 19165
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 9489601,
+          "finite": 9470436,
+          "nonfinite": 19165
+        }
+      ]
+    },
+    {
+      "repo": "1001gp",
+      "rows": 4397119,
+      "all_published_score_files_finite_intersection": 3782005,
+      "finite_intersection_labels": {
+        "True": 3013655,
+        "False": 768350
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 4397119,
+          "finite": 4397119,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 4397119,
+          "finite": 3782005,
+          "nonfinite": 615114
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 4397119,
+          "finite": 3782005,
+          "nonfinite": 615114
+        }
+      ]
+    },
+    {
+      "repo": "mmrdb",
+      "rows": 504392,
+      "all_published_score_files_finite_intersection": 483029,
+      "finite_intersection_labels": {
+        "True": 426,
+        "False": 482603
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 504392,
+          "finite": 504392,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 504392,
+          "finite": 483029,
+          "nonfinite": 21363
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 504392,
+          "finite": 483029,
+          "nonfinite": 21363
+        }
+      ]
+    },
+    {
+      "repo": "flybase_lethal",
+      "rows": 42078,
+      "all_published_score_files_finite_intersection": 42076,
+      "finite_intersection_labels": {
+        "True": 2929,
+        "False": 39147
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 42078,
+          "finite": 42078,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 42078,
+          "finite": 42076,
+          "nonfinite": 2
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 42078,
+          "finite": 42076,
+          "nonfinite": 2
+        }
+      ]
+    },
+    {
+      "repo": "celegans_lethal",
+      "rows": 22255,
+      "all_published_score_files_finite_intersection": 21186,
+      "finite_intersection_labels": {
+        "True": 72,
+        "False": 21114
+      },
+      "scores": [
+        {
+          "file": "GPN-Star.parquet",
+          "rows": 22255,
+          "finite": 22255,
+          "nonfinite": 0
+        },
+        {
+          "file": "PhastCons.parquet",
+          "rows": 22255,
+          "finite": 21186,
+          "nonfinite": 1069
+        },
+        {
+          "file": "PhyloP.parquet",
+          "rows": 22255,
+          "finite": 21186,
+          "nonfinite": 1069
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ window.createCoverageMatrix=function(element,db,taskLookup,populations,onSelect)
   const shape=(name,cls='')=>`<svg viewBox="0 0 12 12" aria-hidden="true" class="${cls}">${shapes[name]}</svg>`;
   let state={},matching=[],rowTasks={},cells={},rows=[],features=[],currentCell=null;
   const parentIncludes=(id,ancestor)=>coveragePopulationIds(id,populations,db.populationGroups).includes(ancestor);
-  element.innerHTML=`<div class="coverage-pane"><div class="coverage-tools"><div class="coverage-nav" aria-label="Jump to a biological division"></div><div class="coverage-controls"><label>Features<select class="coverage-feature-detail"><option value="grouped">Grouped</option><option value="individual">Individual</option></select></label><label>Taxon detail<select class="coverage-detail"><option value="species">Selected organisms</option><option value="allSpecies">Every named species</option><option value="clade">Clades only</option></select></label><button type="button" class="secondary coverage-expand" aria-pressed="false">Expand matrix</button></div></div><div class="coverage-legends"></div><p class="coverage-key">Structure columns require a jointly scored gene or transcript; element columns include partial targets. Use Scored output to separate isolated values, dense labels, signal profiles and complete structures. Hollow: protein-only reference. Faint: unresolved panel. Totals are not additive.</p><div class="coverage-scroll" role="region" aria-label="Scrollable organism by genomic feature matrix"><table class="coverage-matrix" aria-label="Task associations by biological division and genomic feature"></table></div><div class="coverage-selection" role="status" aria-live="polite"></div></div><div class="coverage-notes"></div><div class="coverage-tooltip" role="tooltip" hidden></div>`;
+  element.innerHTML=`<div class="coverage-pane"><div class="coverage-tools"><div class="coverage-nav" aria-label="Jump to a biological division"></div><div class="coverage-controls"><label>Features<select class="coverage-feature-detail"><option value="grouped">Grouped</option><option value="individual">Individual</option></select></label><label>Taxon detail<select class="coverage-detail"><option value="species">Selected organisms</option><option value="allSpecies">Every named species</option><option value="clade">Clades only</option></select></label><button type="button" class="secondary coverage-expand" aria-pressed="false">Expand matrix</button></div></div><div class="coverage-legends"></div><p class="coverage-key">Structure columns require a jointly scored gene or transcript; element columns include partial targets. Use Scored output to separate isolated values, dense labels, signal profiles and complete structures. Hollow: protein-only reference. Faint: source-limited definition. Totals are not additive.</p><div class="coverage-scroll" role="region" aria-label="Scrollable organism by genomic feature matrix"><table class="coverage-matrix" aria-label="Task associations by biological division and genomic feature"></table></div><div class="coverage-selection" role="status" aria-live="polite"></div></div><div class="coverage-notes"></div><div class="coverage-tooltip" role="tooltip" hidden></div>`;
   const $=selector=>element.querySelector(selector),wrap=$('.coverage-scroll'),table=$('.coverage-matrix');
   function resizeColumns(){
     if(!features.length)return;
@@ -41,7 +41,18 @@ window.createCoverageMatrix=function(element,db,taskLookup,populations,onSelect)
   });
   $('.coverage-selection').addEventListener('click',e=>{if(e.target.closest('[data-clear-cell]'))onSelect({cellRow:'',cellFeature:'',open:'',page:''});if(e.target.closest('[data-inspect-cell]')){expand(false);document.getElementById('results').scrollIntoView({block:'start'});}});
   const tooltip=$('.coverage-tooltip');
-  table.addEventListener('pointermove',e=>{const dot=e.target.closest('[data-coverage-task]');if(!dot){tooltip.hidden=true;return;}const t=taskLookup[dot.dataset.coverageTask],meta=db.tasks.find(t=>t.id===dot.dataset.coverageTask);tooltip.innerHTML=`<strong>${esc(t.name)}</strong><br>${esc(db.modes[meta.mode])} · ${esc(db.sources[meta.source].label)}<br>${esc(t._outputLabel)}<br>${esc(rows.find(r=>r.id===dot.dataset.row)?.label)} × ${esc(features.find(f=>f.id===dot.dataset.feature)?.label)}`;tooltip.hidden=false;const r=tooltip.getBoundingClientRect();tooltip.style.left=Math.max(8,Math.min(e.clientX+14,innerWidth-r.width-8))+'px';tooltip.style.top=Math.max(8,Math.min(e.clientY+16,innerHeight-r.height-8))+'px';});
+  function showTooltip(dot,x,y){
+    const t=taskLookup[dot.dataset.coverageTask],meta=db.tasks.find(t=>t.id===dot.dataset.coverageTask);
+    const concise=values=>esc(values.slice(0,2).join('; ')+(values.length>2?' +'+(values.length-2):''));
+    tooltip.innerHTML=`<strong>${esc(t.name)}</strong><br>${esc(db.modes[meta.mode])} · ${esc(t._outputLabel)}<dl><dt>Evaluation</dt><dd>${concise(t._collectionNames)}</dd><dt>Paper</dt><dd>${concise(t._paperNames)||'Source in task details'}</dd><dt>Models</dt><dd>${concise(t._modelNames)||'No association established'}</dd></dl><span>${esc(rows.find(r=>r.id===dot.dataset.row)?.label)} × ${esc(features.find(f=>f.id===dot.dataset.feature)?.label)}</span>`;
+    tooltip.hidden=false;const r=tooltip.getBoundingClientRect();
+    tooltip.style.left=Math.max(8,Math.min(x+14,innerWidth-r.width-8))+'px';tooltip.style.top=Math.max(8,Math.min(y+16,innerHeight-r.height-8))+'px';
+    dot.setAttribute('aria-describedby','coverage-task-tooltip');
+  }
+  tooltip.id='coverage-task-tooltip';
+  table.addEventListener('pointermove',e=>{const dot=e.target.closest('[data-coverage-task]');if(!dot){tooltip.hidden=true;return;}showTooltip(dot,e.clientX,e.clientY);});
+  table.addEventListener('focusin',e=>{const dot=e.target.closest('[data-coverage-task]');if(dot)requestAnimationFrame(()=>requestAnimationFrame(()=>{if(document.activeElement===dot){const r=dot.getBoundingClientRect();showTooltip(dot,r.right,r.bottom);}}));});
+  table.addEventListener('focusout',()=>tooltip.hidden=true);
   table.addEventListener('pointerleave',()=>tooltip.hidden=true);wrap.addEventListener('scroll',()=>tooltip.hidden=true);
 
   function render(next,matched,unfiltered){
@@ -54,20 +65,19 @@ window.createCoverageMatrix=function(element,db,taskLookup,populations,onSelect)
     const ids=new Set(matching.map(t=>t.id));rowTasks={};cells={};
     for(const [i,meta] of db.tasks.entries()){
       if(!ids.has(meta.id))continue;
-      const maps=meta.mappings.filter(m=>!state.population||state.population==='synthetic'||(m.population&&parentIncludes(m.population,state.population)));
+      const maps=meta.mappings.filter(m=>(!state.population||state.population==='synthetic'||(m.population&&parentIncludes(m.population,state.population)))&&(!state.region||m.features.includes(state.region)));
       const assigned=new Set(maps.map(m=>m[field]));
       if(assigned.has('synthetic')&&[...assigned].some(r=>!['synthetic','unknown'].includes(r)))assigned.delete('synthetic');
       for(const rid of assigned){
         (rowTasks[rid]??=[]).push(i);
-        for(const f of grouped?meta.groupedFeatures:meta.features)if(grouped||!state.region||state.region===f)(cells[rid+'|'+f]??=[]).push(i);
+        const mappedFeatures=new Set(maps.filter(m=>m[field]===rid).flatMap(m=>grouped?m.groupedFeatures:m.features));
+        for(const f of mappedFeatures)if(grouped||!state.region||state.region===f)(cells[rid+'|'+f]??=[]).push(i);
       }
     }
     rows=sourceView.rows.filter(r=>rowTasks[r.id]?.length);
     features=state.region?featureSpecs.filter(f=>grouped?Object.keys(cells).some(k=>k.endsWith('|'+f.id)):f.id===state.region):featureSpecs;
     const active=new Set(rows.flatMap(r=>r.displayPath));
-    const known=unfiltered?tree.known:[];
-    for(const k of known){let n=nodes[k.parent];while(n){active.add(n.id);n=nodes[n.parent];}}
-    const divisions=['vertebrates','mammalia','aves','insecta','nematoda','cnidaria','land','angiosperms','monocots','eudicots','poaceae','arecales','ascomycota','basidiomycota','pseudomonadota','bacillota','cyanobacteriota','chlorobiota','duplodnaviria','riboviria','floreoviria','alveolata','stramenopiles'];
+    const divisions=['vertebrates','mammalia','aves','insecta','nematoda','cnidaria','land','angiosperms','monocots','eudicots','poaceae','arecales','ascomycota','basidiomycota','pseudomonadota','bacillota','cyanobacteriota','chlorobiota','duplodnaviria','riboviria','floreoviria','alveolata','stramenopiles','lycophytes','amoebozoa','apicomplexa','schizosaccharomycetes','rhodophyta','thermodesulfobacteriota'];
     const retained=new Set([...divisions,...rows.filter(r=>r.placementStatus).map(r=>r.displayParent),...tree.nodes.filter(n=>n.jump||n.rank==='Domain').map(n=>n.id)]);
     for(const n of tree.nodes)if(rows.filter(r=>r.displayParent===n.id&&!r.placementStatus).length>1)retained.add(n.id);
     function detailsFor(node){
@@ -76,10 +86,10 @@ window.createCoverageMatrix=function(element,db,taskLookup,populations,onSelect)
       const items=[...lineage,...omitted(node.id)];
       return `<details class="coverage-taxonomy"><summary>Taxonomy details</summary><ul>${items.map(n=>`<li><strong>${esc(n.label)}</strong>${n.scientific?' ('+esc(n.scientific)+')':''}${n.parent?' · within '+esc(nodes[n.parent].label):''}${n.note?': '+esc(n.note):''} ${n.sources.map(u=>link(u,'source')).join(' · ')}</li>`).join('')}${tree.context.filter(x=>items.some(n=>n.id===x.parent)).map(x=>`<li><strong>${esc(nodes[x.parent].label+' — '+x.label)}:</strong> ${esc(x.why)} ${link(x.source,'source')}</li>`).join('')}</ul></details>`;
     }
-    function marks(indices,row,f){return indices.map(i=>{const m=db.tasks[i],t=taskLookup[m.id];return `<button type="button" class="coverage-dot mode-${m.mode}${m.protein?' protein':''}${t.status==='panel-pending'?' panel':''}${state.open===t.id?' selected':''}" data-coverage-task="${esc(t.id)}" data-row="${row}" data-feature="${f}" data-output="${esc(m.output)}" aria-label="${esc(t.name+'; '+db.modes[m.mode]+'; '+t._outputLabel+'; '+db.sources[m.source].label+'; '+rows.find(r=>r.id===row).label+'; '+features.find(x=>x.id===f).label)}">${shape(db.sources[m.source].shape)}</button>`;}).join('');}
+    function marks(indices,row,f){return indices.map(i=>{const m=db.tasks[i],t=taskLookup[m.id];return `<button type="button" class="coverage-dot mode-${m.mode}${m.protein?' protein':''}${t.status==='source-limited'?' panel':''}${state.open===t.id?' selected':''}" data-coverage-task="${esc(t.id)}" data-row="${row}" data-feature="${f}" data-output="${esc(m.output)}" aria-label="${esc(t.name+'; '+db.modes[m.mode]+'; '+t._outputLabel+'; '+db.sources[m.source].label+'; '+rows.find(r=>r.id===row).label+'; '+features.find(x=>x.id===f).label)}">${shape(db.sources[m.source].shape)}</button>`;}).join('');}
     function dataRow(r,depth,node,displayParent){
       const max=Math.max(0,...features.map(f=>(cells[r.id+'|'+f.id]||[]).length)),height=Math.max(44,Math.ceil(max/5)*9+14);
-      const label=r.placementStatus?r.displayLabel:node&&(!r.kind||r.kind==='clade')?'All mapped tasks':r.kind==='clade'?nodes[r.displayParent].label:r.label;
+      const label=r.placementStatus?r.displayLabel:node&&(!r.kind||r.kind==='clade')?(view==='clade'?'All mapped tasks':'Species not specified'):r.kind==='clade'?nodes[r.displayParent].label:r.label;
       const sub=[r.common,r.lineageHint,nodes[r.displayParent].label].filter((s,i,a)=>s&&s!==label&&a.indexOf(s)===i).join(' · ');
       return `<tr data-taxon="${r.id}" data-parent-node="${r.displayParent}" data-display-parent="${displayParent||''}" style="--depth:${depth}"><th class="coverage-taxon ${r.kind==='species'?'species':''}" scope="row"><button type="button" data-select-row="${r.id}" aria-label="${esc(r.displayLineage+'; '+label+'; '+rowTasks[r.id].length+' tasks')}"><span>${esc(label)}${sub?`<small>${esc(sub)}</small>`:''}</span><small>${rowTasks[r.id].length}</small></button></th>${features.map(f=>{const ii=cells[r.id+'|'+f.id]||[],shade=ii.length?Math.min(.17,.025+Math.log2(ii.length+1)*.022):0;return `<td class="coverage-cell" data-cell-row="${r.id}" data-cell-feature="${f.id}" style="height:${height}px;background:rgba(45,72,58,${shade.toFixed(3)})" aria-label="${esc(label+' × '+f.label+': '+ii.length+' task records')}"><div class="coverage-marks">${marks(ii,r.id,f.id)}</div></td>`;}).join('')}</tr>`;
     }
@@ -94,16 +104,14 @@ window.createCoverageMatrix=function(element,db,taskLookup,populations,onSelect)
         out+=branch(node.id,depth+1,section,node.id);
       }
       for(const r of rows.filter(r=>r.displayParent===parent&&r.placementStatus))out+=dataRow(r,depth,null,displayParent);
-      const k=known.filter(x=>x.parent===parent);
-      if(k.length)out+=`<tr class="coverage-paper"><th scope="row">Reported; task not yet mapped</th><td colspan="${features.length}">${k.map(x=>`<strong>${esc(x.label)}.</strong> ${esc(x.why)} ${link(x.source,'Evaluation evidence')}`).join('<br>')}</td></tr>`;
       return out;
     }
     const groups=grouped?[...new Set(featureSpecs.map(f=>f.group))].map(label=>({label,ids:featureSpecs.filter(f=>f.group===label).map(f=>f.id)})):db.featureGroups;
     const featureGroups=groups.map(g=>({...g,ids:g.ids.filter(id=>features.some(f=>f.id===id))})).filter(g=>g.ids.length);
     let html='<colgroup><col style="width:320px">'+features.map(()=>'<col style="width:49px">').join('')+'</colgroup><thead><tr><th class="coverage-corner" rowspan="2" scope="col">Biological division / species<br><small>Unique task records</small></th>'+featureGroups.map(g=>`<th class="coverage-feature-group" colspan="${g.ids.length}">${esc(g.label)}</th>`).join('')+'</tr><tr>'+features.map(f=>`<th class="coverage-feature" scope="col" title="${esc(f.definition)}"><span>${esc(f.label)}</span></th>`).join('')+'</tr></thead><tbody>';
-    for(const section of tree.sections){if(!rows.some(r=>nodes[r.displayParent].section===section.id)&&!known.some(k=>nodes[k.parent].section===section.id))continue;html+=`<tr class="coverage-section" ${section.root?`data-group="${nodes[section.root].jump}"`:''}><th scope="rowgroup" colspan="${features.length+1}">${esc(section.label)}</th></tr>`+branch(section.root,0,section.id);}
+    for(const section of tree.sections){if(!rows.some(r=>nodes[r.displayParent].section===section.id))continue;html+=`<tr class="coverage-section" ${section.root?`data-group="${nodes[section.root].jump}"`:''}><th scope="rowgroup" colspan="${features.length+1}">${esc(section.label)}</th></tr>`+branch(section.root,0,section.id);}
     table.innerHTML=html+'</tbody>';resizeColumns();
-    wrap.hidden=!rows.length&&!known.length;
+    wrap.hidden=!rows.length;
     for(const b of element.querySelectorAll('[data-jump]'))b.hidden=!table.querySelector(`[data-group="${b.dataset.jump}"]`);
     wrap.scrollTop=oldScroll.top;wrap.scrollLeft=oldScroll.left;
     const selected=rows.find(r=>r.id===state.cellRow);
