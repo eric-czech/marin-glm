@@ -182,6 +182,20 @@ with sync_playwright() as p:
     assert lookup['poaceae']['parent']=='monocots'
     assert lookup['animals']['parent']=='eukaryota'
     assert not {'obazoa','opisthokonta','bilateria','deuterostomia'}&set(lookup)
+    # Broad groups remain identifiable after their parent headings scroll away.
+    assert 'Cellular life' not in page.locator('.coverage-matrix tbody').inner_text()
+    assert page.locator('[data-node="eukaryota"].coverage-domain').count()==1
+    assert page.locator('[data-node="plants"].coverage-major').count()==1
+    assert page.locator('[data-node="plants"] .coverage-branch').count()==0
+    page.locator('[data-jump="plants"]').click()
+    page.wait_for_function('document.querySelector(".coverage-lineage").textContent==="Eukaryota › Green plants"')
+    page.locator('.coverage-scroll').evaluate('(e)=>e.scrollTop+=180')
+    page.wait_for_timeout(100)
+    assert page.locator('.coverage-lineage').inner_text()=='Eukaryota › Green plants'
+    assert page.locator('[data-node="plants"]').bounding_box()['y']<page.locator('.coverage-scroll').bounding_box()['y']
+    page.locator('[data-jump="bacteria"]').click()
+    page.wait_for_function('document.querySelector(".coverage-lineage").textContent.includes("Bacteria")')
+    assert 'Eukaryota' not in page.locator('.coverage-lineage').inner_text()
     # The matrix permits native scroll chaining to the page at either boundary.
     assert page.locator('.coverage-scroll').evaluate('(e)=>getComputedStyle(e).overscrollBehaviorY')=='auto'
     page.locator('.coverage-expand').click();assert page.locator('body').evaluate('(e)=>e.classList.contains("matrix-expanded")')
