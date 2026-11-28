@@ -5,7 +5,7 @@ import sqlite3
 from coverage_data import export_coverage
 
 ROOT=Path(__file__).resolve().parents[1]
-INSERT_ORDER=['metadata','sources','papers','evidence','models','model_properties','populations','categories','metrics',
+INSERT_ORDER=['metadata','sources','papers','evidence','models','model_properties','model_summaries','populations','categories','metrics',
               'evaluations','tasks','task_outputs','task_feature_scopes','variants','assay_tracks','task_tracks','evaluation_tasks','task_populations','task_categories',
               'protocols','protocol_field_reviews','protocol_metrics','counts','model_evaluations','model_collection_evaluations','findings',
               'source_reviews','source_limits','data_resources','task_resources','evaluation_resources','task_redirects',
@@ -13,7 +13,7 @@ INSERT_ORDER=['metadata','sources','papers','evidence','models','model_propertie
               'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings',
               'split_strategies','split_protocol_strategies','split_designs','split_design_evaluations',
               'split_design_protocols','split_design_strategies','split_design_evidence',
-              'split_synthesis_sections','split_synthesis_paragraphs','split_synthesis_evidence','split_audits','split_audit_tasks',
+              'split_synthesis_sections','split_synthesis_paragraphs','split_synthesis_evidence','split_synthesis_summary_evidence','split_audits','split_audit_tasks',
               'split_partitions','split_comparisons','split_audit_files','split_examples']
 
 def load_catalogue(data, db):
@@ -137,6 +137,17 @@ def load_catalogue(data, db):
       LEFT JOIN split_synthesis_paragraphs p ON p.section_id=s.id
       WHERE p.id IS NULL''').fetchall()
     if bad:raise ValueError('Empty split synthesis section: '+str([r[0] for r in bad]))
+    bad=db.execute('''SELECT s.id FROM split_synthesis_sections s
+      LEFT JOIN split_synthesis_summary_evidence e ON e.section_id=s.id
+      WHERE kind='strategy' AND
+      (coalesce(assignment_unit,'')='' OR coalesce(construction_rule,'')='' OR
+       coalesce(examples,'')='' OR coalesce(limitation,'')='' OR e.evidence_id IS NULL)''').fetchall()
+    if bad:raise ValueError('Incomplete split summary: '+str([r[0] for r in bad]))
+    for field in ['architecture','tokenization','training_data','context']:
+        bad=db.execute('''SELECT m.id FROM models m LEFT JOIN model_summaries s ON s.id=m.id
+          LEFT JOIN field_evidence e ON e.entity_table='model_summaries' AND e.entity_id=m.id AND e.field=?
+          WHERE s.id IS NULL OR e.evidence_id IS NULL''',(field,)).fetchall()
+        if bad:raise ValueError('Model summary field lacks evidence: '+field+' '+str([r[0] for r in bad]))
     for row in db.execute('SELECT * FROM field_evidence'):
         if row['entity_table'] not in INSERT_ORDER:raise ValueError('Unknown evidence table')
         if not db.execute(f'SELECT 1 FROM {row["entity_table"]} WHERE id=?',(row['entity_id'],)).fetchone():raise ValueError('Missing field evidence entity: '+row['entity_id'])

@@ -28,6 +28,11 @@ CREATE TABLE model_properties (
   value TEXT NOT NULL, status TEXT NOT NULL,
   evidence_id TEXT NOT NULL REFERENCES evidence(id), notes TEXT
 );
+CREATE TABLE model_summaries (
+  id TEXT PRIMARY KEY REFERENCES models(id),
+  architecture TEXT NOT NULL, tokenization TEXT NOT NULL,
+  training_data TEXT NOT NULL, context TEXT NOT NULL
+);
 CREATE TABLE evaluations (
   id TEXT PRIMARY KEY, name TEXT NOT NULL, description TEXT NOT NULL,
   paper_id TEXT REFERENCES papers(id), source_id TEXT REFERENCES sources(id),
@@ -353,6 +358,7 @@ CREATE TABLE split_design_evidence (
 CREATE TABLE split_synthesis_sections (
   id TEXT PRIMARY KEY, title TEXT NOT NULL,
   kind TEXT NOT NULL CHECK(kind IN ('overview','strategy','interpretation')),
+  assignment_unit TEXT, construction_rule TEXT, examples TEXT, limitation TEXT,
   sort_order INTEGER NOT NULL UNIQUE
 );
 CREATE TABLE split_synthesis_paragraphs (
@@ -365,6 +371,11 @@ CREATE TABLE split_synthesis_evidence (
   paragraph_id TEXT NOT NULL REFERENCES split_synthesis_paragraphs(id),
   evidence_id TEXT NOT NULL REFERENCES evidence(id),
   PRIMARY KEY(paragraph_id,evidence_id)
+);
+CREATE TABLE split_synthesis_summary_evidence (
+  section_id TEXT NOT NULL REFERENCES split_synthesis_sections(id),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(section_id,evidence_id)
 );
 CREATE TABLE split_audits (
   id TEXT PRIMARY KEY, title TEXT NOT NULL, release_name TEXT NOT NULL,

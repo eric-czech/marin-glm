@@ -2,7 +2,7 @@
   "metadata": [
     {
       "key": "updated",
-      "value": "2026-11-27"
+      "value": "2026-11-28"
     },
     {
       "key": "repository",
@@ -19141,6 +19141,54 @@
       "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/dummy_mouse_enhancers_ensembl/create_datasets.ipynb",
       "version": null,
       "retrieved": "2026-11-27",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "split-borzoi-paper",
+      "title": "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation",
+      "kind": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11985352/",
+      "version": "Nature Genetics (2025)",
+      "retrieved": "2026-11-28",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": "Full article XML inspected through the Europe PMC API; no sequence data downloaded."
+    },
+    {
+      "id": "split-borzoi-construction-code",
+      "title": "Borzoi paper data-construction recipe",
+      "kind": "code",
+      "url": "https://github.com/calico/borzoi-paper/blob/ace52175bba712872daaada4ed9e4f1cafb28049/data/training/Makefile#L20-L37",
+      "version": "ace52175bba712872daaada4ed9e4f1cafb28049",
+      "retrieved": "2026-11-28",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "split-ag1-fold-roles",
+      "title": "AlphaGenome genomic partition lookup",
+      "kind": "code",
+      "url": "https://github.com/google-deepmind/alphagenome/blob/67d9080d70283173f6060a1d9850942736350547/src/alphagenome/data/fold_intervals.py#L40-L58",
+      "version": "67d9080d70283173f6060a1d9850942736350547",
+      "retrieved": "2026-11-28",
+      "sha256": null,
+      "local_path": null,
+      "availability": "available",
+      "notes": null
+    },
+    {
+      "id": "summary-ag1-encoding",
+      "title": "AlphaGenome official nucleotide encoder",
+      "kind": "code",
+      "url": "https://github.com/google-deepmind/alphagenome_research/blob/3eecf48e58d7babbbc53525a8a0cf29a179e20a6/src/alphagenome_research/model/one_hot_encoder.py#L21-L54",
+      "version": "3eecf48e58d7babbbc53525a8a0cf29a179e20a6",
+      "retrieved": "2026-11-28",
       "sha256": null,
       "local_path": null,
       "availability": "available",
@@ -45808,6 +45856,96 @@
       "basis": "code",
       "statement": "The notebook installs ensembl_scraper without a revision and delegates partition construction to it. The notebook itself supplies no chromosome or gene-family exclusion rule; inspecting a later helper cannot prove the historical executable version.",
       "inspected": "2026-11-27"
+    },
+    {
+      "id": "split-borzoi-construction",
+      "source_id": "split-borzoi-paper",
+      "locator": "Methods: Data; Training",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11985352/",
+      "basis": "paper",
+      "statement": "Human hg38 and mouse mm10 chromosomes are fragmented; orthologous regions are paired into the same partition. Fragment groups are randomly assigned to eight approximately equal partitions. One supplies validation, another test, and six training. All assay targets for a held-out sequence are withheld. Four released replicates share the same partition assignment.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "split-borzoi-construction-code",
+      "source_id": "split-borzoi-construction-code",
+      "locator": "Makefile lines 20–37",
+      "url": "https://github.com/calico/borzoi-paper/blob/ace52175bba712872daaada4ed9e4f1cafb28049/data/training/Makefile#L20-L37",
+      "basis": "code",
+      "statement": "Construction passes the human–mouse syntenic alignment net and assembly gap files to hound_data_align.py, with --break 2097152, eight folds, 524288-bp inputs and 163840-bp crops. The break argument caps initial chromosome fragments; it is not a claim that each final partition is one contiguous 2-Mb block.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "split-ag2-region-construction",
+      "source_id": "alphagenome2-paper",
+      "locator": "Methods: Data processing, Genomic interval split",
+      "url": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/alphagenome-2.pdf",
+      "basis": "paper",
+      "statement": "Predefined 196608-bp genomic target intervals are assigned to eight regional groups. A training configuration uses six for training, one for validation and one for test. Expand targets to 1048576-bp input windows and remove validation/test windows overlapping training inputs. These are grouped genomic regions rather than an independently randomized split of every extracted example.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "summary-ceno-methods",
+      "source_id": "ceno-paper",
+      "locator": "Methods 4.1–4.2, pp.23–24; Supplementary Table S1",
+      "url": "https://cladeteam.github.io/ceno.github.io/assets/paper/CENO_Technical_Report_Version.pdf",
+      "basis": "paper",
+      "statement": "Hybrid causal Mamba-2/attention/MoE models at 300M,600M,1B total parameters (100M,200M,400M active); byte-level 512-entry DNA tokenizer. OpenGenome2 stage-specific mixtures. Context training at 8192,131072,1048576 tokens; 500B additional tokens for each long-context stage.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "summary-generator-methods",
+      "source_id": "generator-paper",
+      "locator": "Abstract; model architecture and pretraining methods; Figure 1",
+      "url": "https://arxiv.org/html/2502.07272v5",
+      "basis": "paper",
+      "statement": "Decoder-only Transformer in approximately 1B/3B model sizes; nonoverlapping DNA 6-mer tokens. Pretraining uses 386 billion eukaryotic RefSeq nucleotides in annotation-derived gene-centric functional regions. Supported DNA context is approximately 98k nucleotides.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "summary-generator2-methods",
+      "source_id": "generator2-paper",
+      "locator": "Sections 4.2–4.4; Table 1",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.01.27.702015v2.full",
+      "basis": "paper",
+      "statement": "Approximately 1B/3B eukaryotic and prokaryotic variants share the original Transformer decoder, nonoverlapping 6-mer tokenization and 98k-bp context. Eukaryotic data use RefSeq with genome compression pretraining; prokaryotic data combine RefSeq and GTDB. All use factorized nucleotide supervision.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "summary-deepd-methods",
+      "source_id": "deepd-paper",
+      "locator": "Abstract; Results: model design and training; Figure 1",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758170v1.full",
+      "basis": "paper",
+      "statement": "Phylogeny-conditioned sparse mixture-of-experts models operate at single-nucleotide resolution, using mixed sliding-window and full attention. Model sizes 1.8B and63B; large corpus approximately5.90T nucleotide sequence across eukaryotes,archaea,bacteria and viruses. Context curriculum 8K,32K,128K,512K,1M tokens.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "summary-gpnstar-methods",
+      "source_id": "gpn-paper",
+      "locator": "Model architecture; Supplementary Methods: Training data, Inference; Supplementary Table 10",
+      "url": "https://www.nature.com/articles/s41586-026-11005-5",
+      "basis": "paper",
+      "statement": "Encoder-only masked model with sequence self-attention and phylogeny-informed cross-attention over whole-genome alignments and species trees. Sizes25M,85M,200M. Nucleotides are represented at aligned positions. Human vertebrate and four nonhuman models use128-bp windows; human mammal/primate and Arabidopsis use256-bp windows. Training oversamples conserved alignment windows.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "split-ag1-fold-roles",
+      "source_id": "split-ag1-fold-roles",
+      "locator": "Validation/test lookup dictionaries; model-version mapping",
+      "url": "https://github.com/google-deepmind/alphagenome/blob/67d9080d70283173f6060a1d9850942736350547/src/alphagenome/data/fold_intervals.py#L40-L58",
+      "basis": "code",
+      "statement": "AlphaGenome model configuration FOLD_1 validates on Borzoi regional group fold3 and tests on group fold4; its other six regional groups supply training. The model-configuration index and the underlying Borzoi region-group index are different identifiers.",
+      "inspected": "2026-11-28"
+    },
+    {
+      "id": "summary-ag1-encoding",
+      "source_id": "summary-ag1-encoding",
+      "locator": "DNAOneHotEncoder; dna_model.py lines 668 and 810–814",
+      "url": "https://github.com/google-deepmind/alphagenome_research/blob/3eecf48e58d7babbbc53525a8a0cf29a179e20a6/src/alphagenome_research/model/one_hot_encoder.py#L21-L54",
+      "basis": "code",
+      "statement": "Official AlphaGenome inference converts each A/C/G/T nucleotide to four-channel one-hot input; other characters map to zeros. DNAOneHotEncoder is invoked before the model prediction call.",
+      "inspected": "2026-11-28"
     }
   ],
   "models": [
@@ -46905,6 +47043,148 @@
       "status": "reported",
       "evidence_id": "s2f-cerberus-model",
       "notes": ""
+    }
+  ],
+  "model_summaries": [
+    {
+      "id": "evo1",
+      "architecture": "7B StripedHyena: Hyena + attention",
+      "tokenization": "Single-base bytes",
+      "training_data": "OpenGenome: 300B nt; bacteria, archaea, phages and plasmids.",
+      "context": "Training: 8,192 → 131,072 bp."
+    },
+    {
+      "id": "evo2",
+      "architecture": "1B / 7B / 40B StripedHyena 2",
+      "tokenization": "Single-base bytes",
+      "training_data": "OpenGenome2: 8.84T nt across domains of life.",
+      "context": "7B/40B training extended to 1,048,576 bp."
+    },
+    {
+      "id": "ceno",
+      "architecture": "0.3–1B hybrid Mamba-2 / attention / MoE",
+      "tokenization": "Byte-level DNA",
+      "training_data": "OpenGenome2; mixtures change by training stage.",
+      "context": "Training: 8,192 → 131,072 → 1,048,576 tokens."
+    },
+    {
+      "id": "carbon",
+      "architecture": "3B / 8B causal Transformer",
+      "tokenization": "DNA 6-mers; text BPE vocabulary",
+      "training_data": "Eukaryotic DNA, mRNA/splice sequences and prokaryotes.",
+      "context": "Training: 196,608 bp. Inference: 393,216–786,432 bp; see variant limits."
+    },
+    {
+      "id": "carbonx",
+      "architecture": "14.8B Qwen3-derived causal Transformer",
+      "tokenization": "DNA 6-mers + text BPE",
+      "training_data": "Qwen3 initialization; DNA, biology/general text and instruction mid-training.",
+      "context": "Mid-training: 8,192 tokens. Advertised limit: 40,960 tokens."
+    },
+    {
+      "id": "generator",
+      "architecture": "~1B / 3B causal Transformer",
+      "tokenization": "Nonoverlapping DNA 6-mers",
+      "training_data": "386B nt of gene-centered eukaryotic RefSeq DNA.",
+      "context": "Supported context: ~98k bp."
+    },
+    {
+      "id": "generator2",
+      "architecture": "~1B / 3B causal Transformer",
+      "tokenization": "Nonoverlapping DNA 6-mers",
+      "training_data": "Eukaryotes: RefSeq with genome compression. Prokaryotes: RefSeq + GTDB.",
+      "context": "Supported context: ~98k bp."
+    },
+    {
+      "id": "botanic1",
+      "architecture": "0.318–3.2B bidirectional Mamba-2",
+      "tokenization": "Single-nucleotide tokens",
+      "training_data": "Annotated land plants; 320 species supply filtered training windows.",
+      "context": "Base: 8,192 tokens. Separate curriculum: 131,072. Extrapolation tested to 1M bp."
+    },
+    {
+      "id": "ntv3",
+      "architecture": "703M U-Net backbone + Transformer",
+      "tokenization": "Single bases; learned 128× pooling",
+      "training_data": "~8T nt OpenGenome2; functional post-training on 15 species.",
+      "context": "Training: up to 1,048,576 bp. Standard benchmark adaptation: 32,768 bp."
+    },
+    {
+      "id": "deepd",
+      "architecture": "1.8B / 63B phylogeny-conditioned MoE",
+      "tokenization": "Single-nucleotide resolution",
+      "training_data": "~5.90T nt of whole genomes across domains of life and viruses.",
+      "context": "Training: 8K → 32K → 128K → 512K → 1M tokens."
+    },
+    {
+      "id": "gpnstar",
+      "architecture": "25–200M phylogeny-aware Transformer encoder",
+      "tokenization": "Aligned nucleotide positions",
+      "training_data": "Conserved whole-genome alignment windows; species-tree conditioning.",
+      "context": "128 or 256 aligned positions, depending on species/alignment."
+    },
+    {
+      "id": "loam",
+      "architecture": "25–624M causal Transformer",
+      "tokenization": "Single-base A/C/G/T",
+      "training_data": "67.5 Gbp; 15,640 soil species-representative long-read MAGs.",
+      "context": "Training: 8,192 nt."
+    },
+    {
+      "id": "alphagenome",
+      "architecture": "Convolutional U-Net + attention",
+      "tokenization": "One-hot nucleotide input",
+      "training_data": "Supervised human/mouse functional-genomics measurements.",
+      "context": "Input: 1,048,576 bp."
+    },
+    {
+      "id": "alphagenome2",
+      "architecture": "Convolutional U-Net + attention; cell conditioning",
+      "tokenization": "One-hot nucleotide input",
+      "training_data": "Human/mouse functional assays; 107M single-cell profiles for encoder/post-training.",
+      "context": "Input: 1,048,576 bp. Interval scoring: central 196,608 bp."
+    },
+    {
+      "id": "genosm",
+      "architecture": "4.7B causal MoE; ~330M active",
+      "tokenization": "Single-character tokenizer; vocabulary differs across report/config",
+      "training_data": "~1.2T nt; reference/gut microbial genomes and phages.",
+      "context": "Training curriculum and reported inference: up to 1M bp."
+    },
+    {
+      "id": "cerberus",
+      "architecture": "138M convolution + bidirectional Mamba-2",
+      "tokenization": "One-hot nucleotide input",
+      "training_data": "Supervised human/mouse functional assays: 8,361 / 3,102 tracks.",
+      "context": "Input/output span: 786,432 bp; 32-bp output bins."
+    },
+    {
+      "id": "aido2",
+      "architecture": "235M / 470M / 1B bidirectional Transformer MoE",
+      "tokenization": "Segmentation/vocabulary not disclosed in official report",
+      "training_data": "OpenGenome2: 8.84T nt.",
+      "context": "Report: medium/large 64K, small 256K (units unspecified). Coverage adaptation: 524 kb."
+    },
+    {
+      "id": "plantcad2",
+      "architecture": "88–676M Caduceus / bidirectional Mamba-2",
+      "tokenization": "Single-nucleotide tokens",
+      "training_data": "65 angiosperm genomes; gene-centered windows.",
+      "context": "Pretraining: 8,192 bp."
+    },
+    {
+      "id": "spliceai",
+      "architecture": "Dilated residual CNN; five-model ensemble",
+      "tokenization": "One-hot nucleotide input",
+      "training_data": "Supervised human gene annotations; GTEx junctions for the variant model.",
+      "context": "10k-flank model: 15,000-bp input, central 5,000-bp output."
+    },
+    {
+      "id": "spliceai2",
+      "architecture": "~13M convolution/pooling + junction attention",
+      "tokenization": "One-hot bases + species channels",
+      "training_data": "Supervised RNA-seq: 314,745 short-read and 330 long-read samples.",
+      "context": "Input: 196,608 bp. Central site output: 65,536 bp."
     }
   ],
   "populations": [
@@ -152527,7 +152807,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -152542,7 +152822,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -152557,7 +152837,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -152572,7 +152852,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -152587,7 +152867,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -152602,7 +152882,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -152617,7 +152897,7 @@
       "model_interface": "New species-conditioned assay head; all backbone/head parameters updated; forward/RC prediction averaging.",
       "fitted_component": "All model parameters",
       "selection": null,
-      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test.",
+      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi genomic fold / window",
       "source_evidence_id": "ntv3-final-alphagenome",
       "notes": null
@@ -152632,7 +152912,7 @@
       "model_interface": "New species-conditioned assay head; all backbone/head parameters updated; forward/RC prediction averaging.",
       "fitted_component": "All model parameters",
       "selection": null,
-      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test.",
+      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi genomic fold / window",
       "source_evidence_id": "ntv3-final-alphagenome",
       "notes": null
@@ -152647,7 +152927,7 @@
       "model_interface": "New species-conditioned assay head; all backbone/head parameters updated; forward/RC prediction averaging.",
       "fitted_component": "All model parameters",
       "selection": null,
-      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test.",
+      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi genomic fold / window",
       "source_evidence_id": "ntv3-final-alphagenome",
       "notes": null
@@ -152662,7 +152942,7 @@
       "model_interface": "New species-conditioned assay head; all backbone/head parameters updated; forward/RC prediction averaging.",
       "fitted_component": "All model parameters",
       "selection": null,
-      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test.",
+      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi genomic fold / window",
       "source_evidence_id": "ntv3-final-alphagenome",
       "notes": null
@@ -152677,7 +152957,7 @@
       "model_interface": "New species-conditioned assay head; all backbone/head parameters updated; forward/RC prediction averaging.",
       "fitted_component": "All model parameters",
       "selection": null,
-      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test.",
+      "split_rule": "AlphaGenome held-out split = Borzoi fold 4, also NTv3 validation; no gradient exposure, but no third independent selection-free test. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi genomic fold / window",
       "source_evidence_id": "ntv3-final-alphagenome",
       "notes": null
@@ -153847,7 +154127,7 @@
       "model_interface": "Frozen DNA2 representations → source-described trained coverage adapter; exact family-specific head not reported",
       "fitted_component": "Coverage adapter; family-specific architecture not reported",
       "selection": "Validation fold 4; precise early stopping not specified",
-      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit.",
+      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi fold / genomic window",
       "source_evidence_id": "aido2-coverage",
       "notes": "Original Borzoi fold partition retained. Single-run and four-run medium/large ensembles reported. Report calls scores correlations; exact statistic and aggregation are not defined. The RNA paragraph’s 524 kb/512 channel/local-attention/optimizer details are not established for this head."
@@ -153862,7 +154142,7 @@
       "model_interface": "Frozen DNA2 representations → source-described trained coverage adapter; exact family-specific head not reported",
       "fitted_component": "Coverage adapter; family-specific architecture not reported",
       "selection": "Validation fold 4; precise early stopping not specified",
-      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit.",
+      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi fold / genomic window",
       "source_evidence_id": "aido2-coverage",
       "notes": "Original Borzoi fold partition retained. Single-run and four-run medium/large ensembles reported. Report calls scores correlations; exact statistic and aggregation are not defined. The RNA paragraph’s 524 kb/512 channel/local-attention/optimizer details are not established for this head."
@@ -153877,7 +154157,7 @@
       "model_interface": "Frozen DNA2 representations → source-described trained coverage adapter; exact family-specific head not reported",
       "fitted_component": "Coverage adapter; family-specific architecture not reported",
       "selection": "Validation fold 4; precise early stopping not specified",
-      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit.",
+      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi fold / genomic window",
       "source_evidence_id": "aido2-coverage",
       "notes": "Original Borzoi fold partition retained. Single-run and four-run medium/large ensembles reported. Report calls scores correlations; exact statistic and aggregation are not defined. The RNA paragraph’s 524 kb/512 channel/local-attention/optimizer details are not established for this head."
@@ -153892,7 +154172,7 @@
       "model_interface": "Frozen DNA2 representations → source-described trained coverage adapter; exact family-specific head not reported",
       "fitted_component": "Coverage adapter; family-specific architecture not reported",
       "selection": "Validation fold 4; precise early stopping not specified",
-      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit.",
+      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi fold / genomic window",
       "source_evidence_id": "aido2-coverage",
       "notes": "Original Borzoi fold partition retained. Single-run and four-run medium/large ensembles reported. Report calls scores correlations; exact statistic and aggregation are not defined. The RNA paragraph’s 524 kb/512 channel/local-attention/optimizer details are not established for this head."
@@ -153907,7 +154187,7 @@
       "model_interface": "Hidden representations → 512-channel linear projection → Flashzoi adapter",
       "fitted_component": "Projection and Flashzoi adapter; encoder frozen",
       "selection": "Validation fold 4; precise early stopping not specified",
-      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit.",
+      "split_rule": "Original 8-fold Borzoi partition: train 0–2, 5–7;validation 4;test 3. Coordinate and homology relationships require manifest audit. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Borzoi fold / genomic window",
       "source_evidence_id": "aido2-coverage",
       "notes": "Original Borzoi fold partition retained. Single-run and four-run medium/large ensembles reported. Report calls scores correlations; exact statistic and aggregation are not defined. RNA-specific recipe: BF16, local attention ±8192 tokens, 32 H100, global batch 32, LR warmup 2e-5, weight decay 1e-8, clip 0.15."
@@ -165052,7 +165332,7 @@
       "model_interface": "DNA → shared trunk → species-conditioned functional head; central 37.5% of each input.",
       "fitted_component": "All trunk and functional-head parameters",
       "selection": "Select post-training checkpoints on validation partitions.",
-      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides.",
+      "split_rule": "Human/mouse: Borzoi fold 3 test / fold 4 validation. Other species: gene-aware 1-Mb homology graph/MCL partitions; train and evaluated windows follow source-specific strides. Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions.",
       "split_unit": "Genomic interval / homology cluster",
       "source_evidence_id": "ntv3-final-native-protocol",
       "notes": "Track identities and result-table membership inspected; raw signal tensors and published correlations were not independently recomputed."
@@ -166657,7 +166937,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Model/scorer selection uses the source-designated validation axis; final test labels are not used for this selection.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 teacher scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 teacher scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "example",
       "source_evidence_id": "s2f-ag2-interval-targets",
       "notes": "Exact retained genes/peaks and comparison-group membership require the separate referenced Supplementary Table 8, which was not retrieved."
@@ -166672,7 +166952,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Seven source-defined conditioning configurations plus the matched unconditioned baseline; three seeds; held-out fold-1 intervals.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "example",
       "source_evidence_id": "s2f-ag2-conditioning-ablation",
       "notes": "Exact retained genes/peaks and comparison-group membership require the separate referenced Supplementary Table 8, which was not retrieved."
@@ -166687,7 +166967,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Model/scorer selection uses the source-designated validation axis; final test labels are not used for this selection.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 teacher scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 teacher scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "example",
       "source_evidence_id": "s2f-ag2-interval-targets",
       "notes": "Exact retained genes/peaks and comparison-group membership require the separate referenced Supplementary Table 8, which was not retrieved."
@@ -166702,7 +166982,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Model/scorer selection uses the source-designated validation axis; final test labels are not used for this selection.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 teacher scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 teacher scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "example",
       "source_evidence_id": "s2f-ag2-interval-targets",
       "notes": "Exact retained genes/peaks and comparison-group membership require the separate referenced Supplementary Table 8, which was not retrieved."
@@ -166717,7 +166997,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Seven source-defined conditioning configurations plus the matched unconditioned baseline; three seeds; held-out fold-1 intervals.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "consensus peak × condition",
       "source_evidence_id": "s2f-ag2-conditioning-ablation",
       "notes": "250 active regions per condition are selected without replacement across conditions, prioritizing peaks active in few conditions. Total retained peak count and species allocation of the EFO comparison conditions are not reported in the retrieved report."
@@ -166732,7 +167012,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Seven source-defined conditioning configurations plus the matched unconditioned baseline; three seeds; held-out fold-1 intervals.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "consensus peak × condition",
       "source_evidence_id": "s2f-ag2-conditioning-ablation",
       "notes": "250 active regions per condition are selected without replacement across conditions, prioritizing peaks active in few conditions. Total retained peak count and species allocation of the EFO comparison conditions are not reported in the retrieved report."
@@ -166747,7 +167027,7 @@
       "model_interface": "1Mb DNA plus conditioning → exonic RNA aggregation → tissue-centered gene expression",
       "fitted_component": "Stage-1 sequence-to-function model and heads, trained under each source-defined conditioning configuration; no eQTL-cohort readout fitting.",
       "selection": "Source-defined conditioning placement ablation; same target, separate training configuration.",
-      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23.",
+      "split_rule": "Eight-fold contiguous genomic-block partition inherited from AG1/Borzoi: six blocks training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs and exclude validation/test windows overlapping a training input. Fold-1 Stage-1 ablation model scores its held-out test targets, cropping 425,984 bp from each flank. Human GRCh38/GENCODE v46; mouse GRCm38/vM23. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "gene × tissue",
       "source_evidence_id": "s2f-ag2-conditioning-ablation",
       "notes": null
@@ -167182,7 +167462,7 @@
       "model_interface": "1,048,576-bp DNA plus biological condition → source-defined model readout",
       "fitted_component": "Modality-specific supervised prediction heads in the pretrained model",
       "selection": "Model/scorer selection uses the source-designated validation axis; final test labels are not used for this selection.",
-      "split_rule": "Temporal single-cell split at 1 October 2025 plus reference genomic fold-1. Encoder/post-training excludes 16 new datasets; both approaches are evaluated on fold-1 validation intervals according to the dedicated Evaluation paragraph. Fine-tuning baseline uses only fold-1 training intervals.",
+      "split_rule": "Temporal single-cell split at 1 October 2025 plus reference genomic fold-1. Encoder/post-training excludes 16 new datasets; both approaches are evaluated on fold-1 validation intervals according to the dedicated Evaluation paragraph. Fine-tuning baseline uses only fold-1 training intervals. Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.",
       "split_unit": "cell-type comparison group",
       "source_evidence_id": "s2f-ag2-cellxgene-expression",
       "notes": "The temporal holdout is 20 groups, not 167 held-out datasets. Per-gene predictions use known gene annotations; no full transcript recovery. Separate Table 13 group identities were not retrieved."
@@ -361858,6 +362138,930 @@
       "field": "split_rule",
       "evidence_id": "split-gb-ensembl-helper",
       "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-atac-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-atac-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-dnase-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-dnase-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-cage-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-cage-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-rna-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-rna-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-histone-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-histone-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-tf-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-tf-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-gro-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-tracks-gro-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-native-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-tf-chip-adapter",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-tf-chip-adapter",
+      "field": "split_rule",
+      "evidence_id": "aido2-coverage",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-histone-chip-adapter",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-histone-chip-adapter",
+      "field": "split_rule",
+      "evidence_id": "aido2-coverage",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-dnase-adapter",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-dnase-adapter",
+      "field": "split_rule",
+      "evidence_id": "aido2-coverage",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-cage-adapter",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-cage-adapter",
+      "field": "split_rule",
+      "evidence_id": "aido2-coverage",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-rna-adapter",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "aido2-coverage-rna-adapter",
+      "field": "split_rule",
+      "evidence_id": "aido2-coverage",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-atac-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-atac-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag1-fold-roles",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-atac-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-alphagenome",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-dnase-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-dnase-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag1-fold-roles",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-dnase-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-alphagenome",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-cage-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-cage-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag1-fold-roles",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-cage-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-alphagenome",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-procap-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-procap-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag1-fold-roles",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-procap-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-alphagenome",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-rna-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-borzoi-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-rna-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag1-fold-roles",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ntv3-ag-rna-protocol",
+      "field": "split_rule",
+      "evidence_id": "ntv3-final-alphagenome",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-gtex-lfc-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-scrna-lfc-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-scatac-lfc-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-encode-rna-lfc-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-tf-condition-peaks-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-histone-condition-peaks-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-gtex-lfc-stage1-ablation",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-cellxgene-expression-lfc-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "split-ag2-region-construction",
+      "note": null
+    },
+    {
+      "entity_table": "protocols",
+      "entity_id": "ag2-cellxgene-expression-lfc-alphagenome2-protocol",
+      "field": "split_rule",
+      "evidence_id": "s2f-ag2-cellxgene-expression",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo1",
+      "field": "architecture",
+      "evidence_id": "evo1-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo1",
+      "field": "tokenization",
+      "evidence_id": "evo1-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo1",
+      "field": "training_data",
+      "evidence_id": "evo1-training",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo1",
+      "field": "context",
+      "evidence_id": "evo1-training",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo1",
+      "field": "context",
+      "evidence_id": "evo1-essentiality",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo2",
+      "field": "architecture",
+      "evidence_id": "evo2-review-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo2",
+      "field": "tokenization",
+      "evidence_id": "evo2-review-tokenization",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo2",
+      "field": "training_data",
+      "evidence_id": "evo2-review-corpus",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "evo2",
+      "field": "context",
+      "evidence_id": "evo2-review-training",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ceno",
+      "field": "architecture",
+      "evidence_id": "summary-ceno-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ceno",
+      "field": "tokenization",
+      "evidence_id": "summary-ceno-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ceno",
+      "field": "training_data",
+      "evidence_id": "summary-ceno-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ceno",
+      "field": "context",
+      "evidence_id": "summary-ceno-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbon",
+      "field": "architecture",
+      "evidence_id": "carbon-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbon",
+      "field": "tokenization",
+      "evidence_id": "carbon-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbon",
+      "field": "training_data",
+      "evidence_id": "carbon-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbon",
+      "field": "context",
+      "evidence_id": "carbon-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbonx",
+      "field": "architecture",
+      "evidence_id": "carbonx-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbonx",
+      "field": "tokenization",
+      "evidence_id": "carbonx-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbonx",
+      "field": "training_data",
+      "evidence_id": "carbonx-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "carbonx",
+      "field": "context",
+      "evidence_id": "carbonx-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator",
+      "field": "architecture",
+      "evidence_id": "summary-generator-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator",
+      "field": "tokenization",
+      "evidence_id": "summary-generator-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator",
+      "field": "training_data",
+      "evidence_id": "summary-generator-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator",
+      "field": "context",
+      "evidence_id": "summary-generator-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator2",
+      "field": "architecture",
+      "evidence_id": "summary-generator2-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator2",
+      "field": "tokenization",
+      "evidence_id": "summary-generator2-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator2",
+      "field": "training_data",
+      "evidence_id": "summary-generator2-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "generator2",
+      "field": "context",
+      "evidence_id": "summary-generator2-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "botanic1",
+      "field": "architecture",
+      "evidence_id": "botanic-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "botanic1",
+      "field": "tokenization",
+      "evidence_id": "botanic-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "botanic1",
+      "field": "training_data",
+      "evidence_id": "botanic-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "botanic1",
+      "field": "context",
+      "evidence_id": "botanic-final-model-details",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ntv3",
+      "field": "architecture",
+      "evidence_id": "ntv3-final-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ntv3",
+      "field": "tokenization",
+      "evidence_id": "ntv3-final-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ntv3",
+      "field": "training_data",
+      "evidence_id": "ntv3-final-training",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "ntv3",
+      "field": "context",
+      "evidence_id": "ntv3-final-training",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "deepd",
+      "field": "architecture",
+      "evidence_id": "summary-deepd-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "deepd",
+      "field": "tokenization",
+      "evidence_id": "summary-deepd-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "deepd",
+      "field": "training_data",
+      "evidence_id": "summary-deepd-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "deepd",
+      "field": "context",
+      "evidence_id": "summary-deepd-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "gpnstar",
+      "field": "architecture",
+      "evidence_id": "summary-gpnstar-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "gpnstar",
+      "field": "tokenization",
+      "evidence_id": "summary-gpnstar-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "gpnstar",
+      "field": "training_data",
+      "evidence_id": "summary-gpnstar-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "gpnstar",
+      "field": "context",
+      "evidence_id": "summary-gpnstar-methods",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "loam",
+      "field": "architecture",
+      "evidence_id": "final-loam-model-card",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "loam",
+      "field": "tokenization",
+      "evidence_id": "final-loam-model-card",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "loam",
+      "field": "training_data",
+      "evidence_id": "final-loam-model-card",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "loam",
+      "field": "context",
+      "evidence_id": "final-loam-model-card",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome",
+      "field": "architecture",
+      "evidence_id": "alphagenome-final-journal",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome",
+      "field": "tokenization",
+      "evidence_id": "summary-ag1-encoding",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome",
+      "field": "training_data",
+      "evidence_id": "alphagenome-final-journal",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome",
+      "field": "context",
+      "evidence_id": "alphagenome-final-journal",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome2",
+      "field": "architecture",
+      "evidence_id": "s2f-ag2-model",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome2",
+      "field": "tokenization",
+      "evidence_id": "s2f-ag2-model",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome2",
+      "field": "training_data",
+      "evidence_id": "s2f-ag2-corpus",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "alphagenome2",
+      "field": "context",
+      "evidence_id": "s2f-ag2-context",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "genosm",
+      "field": "architecture",
+      "evidence_id": "genosm-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "genosm",
+      "field": "tokenization",
+      "evidence_id": "genosm-hf-tokenizer-evidence",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "genosm",
+      "field": "training_data",
+      "evidence_id": "genosm-corpus",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "genosm",
+      "field": "context",
+      "evidence_id": "genosm-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "genosm",
+      "field": "context",
+      "evidence_id": "genosm-inference",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "cerberus",
+      "field": "architecture",
+      "evidence_id": "s2f-cerberus-model",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "cerberus",
+      "field": "tokenization",
+      "evidence_id": "s2f-cerberus-model",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "cerberus",
+      "field": "training_data",
+      "evidence_id": "s2f-cerberus-model",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "cerberus",
+      "field": "context",
+      "evidence_id": "s2f-cerberus-model",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "aido2",
+      "field": "architecture",
+      "evidence_id": "aido2-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "aido2",
+      "field": "tokenization",
+      "evidence_id": "aido2-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "aido2",
+      "field": "training_data",
+      "evidence_id": "aido2-corpus",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "aido2",
+      "field": "context",
+      "evidence_id": "aido2-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "aido2",
+      "field": "context",
+      "evidence_id": "aido2-coverage",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "plantcad2",
+      "field": "architecture",
+      "evidence_id": "plantcad2-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "plantcad2",
+      "field": "architecture",
+      "evidence_id": "plantcad2-sizes",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "plantcad2",
+      "field": "tokenization",
+      "evidence_id": "plantcad2-model-config-ev",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "plantcad2",
+      "field": "training_data",
+      "evidence_id": "plantcad2-corpus",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "plantcad2",
+      "field": "context",
+      "evidence_id": "plantcad2-context",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai",
+      "field": "architecture",
+      "evidence_id": "spliceai-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai",
+      "field": "tokenization",
+      "evidence_id": "spliceai-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai",
+      "field": "training_data",
+      "evidence_id": "spliceai-partitions",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai",
+      "field": "context",
+      "evidence_id": "spliceai-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai2",
+      "field": "architecture",
+      "evidence_id": "spliceai2-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai2",
+      "field": "tokenization",
+      "evidence_id": "spliceai2-architecture",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai2",
+      "field": "training_data",
+      "evidence_id": "spliceai2-training-data",
+      "note": null
+    },
+    {
+      "entity_table": "model_summaries",
+      "entity_id": "spliceai2",
+      "field": "context",
+      "evidence_id": "spliceai2-architecture",
+      "note": null
     }
   ],
   "split_strategies": [
@@ -369597,7 +370801,7 @@
       "id": "design-ntv3-tracks",
       "name": "NTv3: native functional tracks",
       "layer": "supervised",
-      "partition_rule": "Human/mouse use Borzoi fold 3 test and fold 4 validation. Other species use gene-aware 1-Mb windows, a BioMart homology graph and MCL clusters assigned to partitions.",
+      "partition_rule": "Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions. NTv3 uses regional group 3 for test and 4 for validation. Other species use gene-complete 1-Mb windows grouped by a homology graph before assignment.",
       "selection_rule": "MCL inflation is chosen by graph modularity; prediction checkpoints and training-only target scaling use validation and training respectively.",
       "interpretation": "Not a species holdout: the same supervised species occur in all partitions. Pruning low-weight homology edges in three genomes means this is not a strict identity-threshold guarantee.",
       "sort_order": 4
@@ -370236,7 +371440,7 @@
       "id": "design-aido",
       "name": "AIDO.DNA2: Borzoi profile adaptation",
       "layer": "supervised",
-      "partition_rule": "Original eight-fold Borzoi partition: training folds 0–2 and 5–7, validation fold4, test fold3.",
+      "partition_rule": "Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions. AIDO.DNA2 trains on groups 0–2 and 5–7, validates on group 4 and tests on group 3.",
       "selection_rule": "Adapters fit the named output modalities on those source folds.",
       "interpretation": "These are genomic region folds, not whole-species holdouts. ClinVar zero-shot and embedding projections do not inherit a downstream fitting split.",
       "sort_order": 75
@@ -370245,7 +371449,7 @@
       "id": "design-ntv3-ag",
       "name": "NTv3: AlphaGenome comparison",
       "layer": "supervised",
-      "partition_rule": "Five assay-specific fine-tunes evaluated on AlphaGenome’s released fold4, which is NTv3’s native validation fold.",
+      "partition_rule": "Human/mouse chromosomes are fragmented; orthologous fragments are grouped and randomly assigned together to eight roughly equal regional partitions. Five assay-specific NTv3 fine-tunes score regional group 4, which is NTv3’s native validation group and AlphaGenome configuration 1’s test group.",
       "selection_rule": "No gradient training on that fold; its native selection role remains.",
       "interpretation": "A held-out training fold need not be an independent selection-free test.",
       "sort_order": 76
@@ -370299,7 +371503,7 @@
       "id": "design-ag2-sequence",
       "name": "AlphaGenome 2: sequence-to-function training",
       "layer": "supervised",
-      "partition_rule": "Eight genomic folds: six training, one validation, one test. Expand 196,608-bp targets to 1,048,576-bp inputs; remove validation/test windows overlapping a training input.",
+      "partition_rule": "Genomic intervals are assigned to eight regional groups: six training, one validation and one test. Validation/test 1-Mb inputs overlapping training inputs are removed. Targets are the central 196,608 bp of each 1,048,576-bp input.",
       "selection_rule": "Fold-specific teachers and ablation models score their held-out targets, cropping 425,984 bp from each flank.",
       "interpretation": "This full-context sequence exclusion is different from the final all-folds model’s variant-label reporting split.",
       "sort_order": 82
@@ -370326,7 +371530,7 @@
       "id": "design-ag2-time",
       "name": "AlphaGenome 2: newly released single-cell data",
       "layer": "supervised",
-      "partition_rule": "Temporal cutoff 1 October 2025: exclude 16 new datasets from encoder/post-training. Dedicated evaluation uses fold1 validation genomic intervals.",
+      "partition_rule": "Exclude 16 studies published after 1 October 2025 from cell-encoder and expression-conditioning training. Genomic regions are independently assigned to eight groups (six training, one validation, one test); this expression comparison scores the validation group, which is excluded from fine-tuning and model selection in the comparison.",
       "selection_rule": "Fine-tuning baseline uses fold1 training intervals; temporal and genomic exclusion apply to different layers.",
       "interpretation": "An unseen study is not necessarily an unseen locus or unseen participant. The genomic evaluation split is called validation in the source.",
       "sort_order": 85
@@ -378215,6 +379419,36 @@
       "design_id": "design-genosm-cohorts",
       "field": "interpretation",
       "evidence_id": "genosm-crc"
+    },
+    {
+      "design_id": "design-ntv3-tracks",
+      "field": "partition_rule",
+      "evidence_id": "split-borzoi-construction"
+    },
+    {
+      "design_id": "design-aido",
+      "field": "partition_rule",
+      "evidence_id": "split-borzoi-construction"
+    },
+    {
+      "design_id": "design-ntv3-ag",
+      "field": "partition_rule",
+      "evidence_id": "split-borzoi-construction"
+    },
+    {
+      "design_id": "design-ntv3-ag",
+      "field": "partition_rule",
+      "evidence_id": "split-ag1-fold-roles"
+    },
+    {
+      "design_id": "design-ag2-sequence",
+      "field": "partition_rule",
+      "evidence_id": "split-ag2-region-construction"
+    },
+    {
+      "design_id": "design-ag2-time",
+      "field": "partition_rule",
+      "evidence_id": "split-ag2-region-construction"
     }
   ],
   "split_synthesis_sections": [
@@ -378222,78 +379456,130 @@
       "id": "overview",
       "title": "",
       "kind": "overview",
+      "assignment_unit": null,
+      "construction_rule": null,
+      "examples": null,
+      "limitation": null,
       "sort_order": 0
     },
     {
       "id": "random",
-      "title": "Random rows, usually stratified by label",
+      "title": "Random examples",
       "kind": "strategy",
+      "assignment_unit": "Sequence row or gene–variant pair",
+      "construction_rule": "Random assignment within label classes: GB examples use 75/25; DNALongBench eQTL pairs use 80/10/10.",
+      "examples": "Genomic Benchmarks; DNALongBench eQTL",
+      "limitation": "Repeated genes, loci or similar sequences can cross sets.",
       "sort_order": 1
     },
     {
       "id": "chromosomes",
       "title": "Whole chromosomes",
       "kind": "strategy",
+      "assignment_unit": "Chromosome",
+      "construction_rule": "Reserve named chromosomes, or rotate the omitted chromosome.",
+      "examples": "Revised NT; DART trained readouts; TraitGym fitted models",
+      "limitation": "Separates loci; does not remove cross-chromosome homology.",
       "sort_order": 2
     },
     {
       "id": "regions",
-      "title": "Genomic blocks and full input windows",
+      "title": "Genomic regions and full input windows",
       "kind": "strategy",
+      "assignment_unit": "Contiguous region; optionally linked regions in different genomes",
+      "construction_rule": "Borzoi: randomly assign ortholog-linked chromosome fragments to eight balanced groups. AlphaGenome 2 also excludes overlapping full 1-Mb inputs.",
+      "examples": "Borzoi / NTv3; AlphaGenome 2",
+      "limitation": "A held-out target can still have input flanks in training unless full windows are excluded.",
       "sort_order": 3
     },
     {
       "id": "entities",
-      "title": "Genes, regulatory elements and parent clusters",
+      "title": "Genes, elements and parent clusters",
       "kind": "strategy",
+      "assignment_unit": "Gene, regulatory element or parent BGC",
+      "construction_rule": "Assign all variants or measurements of an entity together.",
+      "examples": "BEND 2.0 OpenSplice/context tasks; BGC-Bench A-domains",
+      "limitation": "Distinct entities may contain homologous or identical sequence.",
       "sort_order": 4
     },
     {
       "id": "similarity",
-      "title": "Homology groups and sequence-similarity thresholds",
+      "title": "Homology and sequence similarity",
       "kind": "strategy",
+      "assignment_unit": "Homology family or sequence cluster",
+      "construction_rule": "BEND: 80% global protein identity. LAMBDA phages: 95% average nucleotide identity. mRNABench: mapped families. RNAGym: similarity-reducing swaps.",
+      "examples": "BEND gene finding; mRNABench; LAMBDA; RNAGym",
+      "limitation": "Specify similarity object, threshold, algorithm and handling of unmapped rows.",
       "sort_order": 5
     },
     {
       "id": "taxa",
       "title": "Species, genera and larger clades",
       "kind": "strategy",
+      "assignment_unit": "Species, genus or larger clade",
+      "construction_rule": "Assign complete taxa together: species for Evo 2 probes; genera for BacBench and NTv3 annotation; pretraining-family exclusion for PlantCAD2 potato.",
+      "examples": "Evo 2 exon/intron; BacBench essentiality; NTv3 annotation; PlantCAD2 potato",
+      "limitation": "Taxonomic separation does not exclude conserved sequence or imply pretraining exclusion.",
       "sort_order": 6
     },
     {
       "id": "positions",
-      "title": "Mutation positions within a sequence",
+      "title": "Mutation positions",
       "kind": "strategy",
+      "assignment_unit": "Mutation position or contiguous position block",
+      "construction_rule": "Keep alleles at one position together; optionally hold out adjacent positions as a block.",
+      "examples": "Evo 2 BRCA1 readout; NABench",
+      "limitation": "Tests new positions within a represented sequence; multimutants need an explicit assignment rule.",
       "sort_order": 7
     },
     {
       "id": "individuals",
-      "title": "Individuals, optionally crossed with genes",
+      "title": "Individuals and gene regions",
       "kind": "strategy",
+      "assignment_unit": "Person; optionally person × gene region",
+      "construction_rule": "Group by person (DNA Foundation: 75/25); MAGE additionally reports gene-region exclusion.",
+      "examples": "DNA Foundation personal expression; MAGE",
+      "limitation": "The same genes can remain represented when only people are held out.",
       "sort_order": 8
     },
     {
       "id": "experiments",
-      "title": "Assays, conditions and study cohorts",
+      "title": "Assays, conditions and studies",
       "kind": "strategy",
+      "assignment_unit": "Assay track, condition or study",
+      "construction_rule": "Withhold designated labels/conditions, or train on complete source studies and test another.",
+      "examples": "AlphaGenome 2 track imputation; NABench assay transfer; Genos-m cohorts",
+      "limitation": "New labels or studies can reuse reference DNA and participants.",
       "sort_order": 9
     },
     {
       "id": "time",
-      "title": "Release dates and prospective datasets",
+      "title": "Publication dates",
       "kind": "strategy",
+      "assignment_unit": "Dataset publication date",
+      "construction_rule": "AlphaGenome 2 excludes 16 studies published after 1 October 2025 from cell-encoder and expression-conditioning training.",
+      "examples": "AlphaGenome 2 single-cell expression",
+      "limitation": "Combine with locus/participant exclusions when those are required; dates alone do not provide them.",
       "sort_order": 10
     },
     {
       "id": "chemistry",
-      "title": "Chemical scaffolds and biosynthetic families",
+      "title": "Product scaffolds and biosynthetic families",
       "kind": "strategy",
+      "assignment_unit": "Product scaffold, BGC family or biosynthetic class",
+      "construction_rule": "Reserve 20% of first-product scaffold groups or BGC families for test; retrieval also omits whole biosynthetic classes.",
+      "examples": "BGC-Bench",
+      "limitation": "Chemical scaffold separation is not DNA-identity separation; families can cross scaffold splits.",
       "sort_order": 11
     },
     {
       "id": "interpretation",
-      "title": "What follows from these comparisons",
+      "title": "Overlap and model selection",
       "kind": "interpretation",
+      "assignment_unit": null,
+      "construction_rule": null,
+      "examples": null,
+      "limitation": null,
       "sort_order": 12
     }
   ],
@@ -378301,153 +379587,123 @@
     {
       "id": "overview-1",
       "section_id": "overview",
-      "body": "The useful distinction is what is kept together before assigning partitions: individual rows, nearby loci, related sequences, biological entities or experimental contexts. The mechanisms below recur in the audited collections; they are not a ranking from weak to strong. A split can combine several mechanisms, and the same benchmark can use different ones for different tasks.",
+      "body": "Splits apply separately to pretraining, supervised training and model selection. Evo 2’s species-held-out exon/intron probe excludes those species from readout fitting. AlphaGenome’s chromosome-held-out QTL labels exclude those labels from scorer selection; its final sequence model is trained across all genomic partitions. Neither rule establishes exclusion of the corresponding reference DNA from pretraining.",
       "sort_order": 0
-    },
-    {
-      "id": "overview-2",
-      "section_id": "overview",
-      "body": "First identify the fitting step. Evo 2’s species-held-out exon/intron probe tests a readout on new species, not exclusion of those genomes from pretraining. AlphaGenome 1 / 2’s chromosome-held-out QTL labels concern variant-effect selection; the final all-folds sequence model has seen reference DNA at those loci. A statement such as “chromosome held out” is incomplete without this distinction.",
-      "sort_order": 1
     },
     {
       "id": "random-1",
       "section_id": "random",
-      "body": "Assign examples independently, optionally preserving label proportions. Genomic Benchmarks’ Cohn enhancer and non-TATA promoter notebooks use class-wise random approximately 75/25 train/test splits; its pinned OCR and regulatory helper uses 80/20. DNALongBench’s eQTL task uses label-stratified 80/10/10 gene–variant pairs. These estimate performance on more examples drawn from the represented mixture; they do not require new genes, species or sequence families.",
+      "body": "Shuffle examples, then allocate fixed proportions to each set. Stratification preserves label proportions. Genomic Benchmarks’ Cohn enhancer and non-TATA promoter notebooks split each class approximately 75/25; its open-chromatin and regulatory helper uses 80/20. DNALongBench splits eQTL gene–variant pairs 80/10/10, stratified by label. Genes can recur across sets. GB’s human-versus-worm task includes both species in both sets.",
       "sort_order": 0
-    },
-    {
-      "id": "random-2",
-      "section_id": "random",
-      "body": "The row definition matters more than the ratio. DNALongBench permits the same gene in multiple partitions. In GB’s human-versus-worm task, both species occur in training and test: species is the prediction label, not a held-out biological group.",
-      "sort_order": 1
     },
     {
       "id": "chromosomes-1",
       "section_id": "chromosomes",
-      "body": "Assign every eligible locus on a chromosome to one partition. The revised 18-task Nucleotide Transformer benchmark reserves human chr20/21 for test. DART-Eval’s trained regulatory readouts reserve chr6/21 for validation and chr5/10/14/18/20/22 for test. TraitGym’s fitted feature models instead cycle through leave-one-chromosome-out evaluation. These separate genomic locations within represented species; repeats and homologous genes can still cross the boundary.",
+      "body": "Assign all eligible loci on a chromosome together. The revised 18-task Nucleotide Transformer benchmark tests on human chr20/21. DART’s trained regulatory readouts validate on chr6/21 and test on chr5/10/14/18/20/22. TraitGym fits on all but one chromosome and predicts the omitted chromosome, repeating for each chromosome. Repeats and homologous genes on different chromosomes remain possible.",
       "sort_order": 0
     },
     {
       "id": "regions-1",
       "section_id": "regions",
-      "body": "Partition contiguous regions rather than entire chromosomes. NTv3’s human/mouse track tasks use Borzoi’s fold3 for test and fold4 for validation; other species use gene-aware 1-Mb windows and homology-based grouping. AlphaGenome 2 uses eight genomic folds, with six for training, one for validation and one for test. This permits regional holdouts while retaining training data from the same chromosomes.",
+      "body": "Borzoi fragments human and mouse chromosomes, groups orthologous fragments together, and randomly assigns those groups to eight roughly equal partitions. Each partition contains multiple regions from both genomes. Six partitions supply training, one validation and one test. The published construction recipe caps initial fragments at 2,097,152 bp before grouping. NTv3 reuses the human/mouse region assignments, merges neighboring intervals with the same membership, and extracts new input windows. The labels fold3 and fold4 identify its test and validation groups; they do not describe the construction rule.",
       "sort_order": 0
     },
     {
       "id": "regions-2",
       "section_id": "regions",
-      "body": "The excluded span must be specified. AlphaGenome 2 expands 196,608-bp targets to 1,048,576-bp inputs and removes validation/test inputs that overlap training inputs. NTv3’s DeepFARM comparison explicitly distinguishes a held-out 200-bp scoring bin from a stricter whole-1-Mb-context holdout. Nonoverlapping targets alone do not establish nonoverlapping model inputs; the distinction grows with context length.",
+      "body": "For other species, NTv3 starts with 1-Mb windows and extends boundaries to include complete genes. It links windows containing homologous genes, clusters the resulting graph, and assigns whole clusters to training, validation or test. Weak homology links are removed in Arabidopsis, worm and rice when needed to reach the target partition sizes.",
       "sort_order": 1
+    },
+    {
+      "id": "regions-3",
+      "section_id": "regions",
+      "body": "AlphaGenome 2 also uses eight groups of genomic regions, with six for training, one for validation and one for test. It expands each 196,608-bp target to a 1,048,576-bp input, then removes validation/test inputs that overlap training inputs. This checks the entire visible sequence. NTv3’s DeepFARM comparison separately reports exclusion of only the 200-bp scored bin and exclusion of the full 1-Mb input; those cohorts provide different guarantees.",
+      "sort_order": 2
     },
     {
       "id": "entities-1",
       "section_id": "entities",
-      "body": "Keep all observations of one biological entity together. BEND 2.0’s OpenSplice readout holds out whole genes in five folds; its context tasks keep an element and related backgrounds together. BGC-Bench’s A-domain evaluation groups domains by parent biosynthetic gene cluster (BGC). This tests new genes, elements or clusters rather than new measurements of an entity already represented in training. Distinct entities may still contain homologous or identical sequences.",
+      "body": "Assign every observation from the same gene, regulatory element or parent biosynthetic gene cluster (BGC) together. BEND 2.0 divides OpenSplice genes into five groups, fitting on four and evaluating the fifth in turn. Its context tasks keep an element and related backgrounds together. BGC-Bench similarly groups A-domains by their parent BGC. Homologous genes or domains in different groups may remain.",
       "sort_order": 0
     },
     {
       "id": "similarity-1",
       "section_id": "similarity",
-      "body": "Group related entities using a homology map or an explicit similarity procedure. Original BEND gene finding uses GraphPart at 80% global mature-protein identity, whereas mRNABench groups mapped HomoloGene families. LAMBDA groups phage genomes at 95% average nucleotide identity before sampling fragments. These operate on different objects: translated proteins, mapped gene families and whole genomes. None directly guarantees uniqueness of complete genomic input windows.",
+      "body": "Original BEND gene finding partitions examples using an 80% global identity threshold on translated mature proteins. mRNABench keeps genes with the same supplied HomoloGene family assignment together. LAMBDA groups phage genomes at 95% average nucleotide identity before sampling fragments. Protein identity, mapped gene families and whole-genome identity constrain different sequences.",
       "sort_order": 0
     },
     {
       "id": "similarity-2",
       "section_id": "similarity",
-      "body": "A threshold, a heuristic and a fallback are different guarantees. RNAGym’s min_similarity routine starts from a random 80/20 split and swaps examples for at most 10,000 iterations; it does not enforce a strict maximum similarity. The inspected Pitt split retains six shared validation strings. mRNABench assigns unmapped rows independently, so disjoint mapped families can coexist with shared genes and DNA. Construction code is essential here.",
+      "body": "RNAGym’s min_similarity procedure instead swaps examples from a random 80/20 split for at most 10,000 iterations to reduce high-similarity pairs. It does not enforce a strict threshold; six distinct Pitt validation strings still occur in training. mRNABench assigns unmapped rows independently, allowing repeated genes despite disjoint mapped families.",
       "sort_order": 1
     },
     {
       "id": "taxa-1",
       "section_id": "taxa",
-      "body": "Assign complete taxa, not their individual sequence rows. Evo 2’s exon/intron probe holds out species; native BacBench essentiality separates 55 genomes into 37/9/9 with disjoint genera. NTv3 gene annotation excludes test genera from supervised training and validation, although validation species may share genera with training. The rank and the validation rule change the transfer being measured; “multispecies evaluation” alone establishes neither.",
+      "body": "Assign all examples from each taxon together. Evo 2’s exon/intron probe holds out species. Native BacBench essentiality assigns 55 genomes to 37 training, 9 validation and 9 test genomes with disjoint genera. NTv3 annotation excludes test genera from supervised training and validation, although validation species may share genera with training. PlantCAD2’s potato experiment reports a different exclusion: the Solanaceae family is absent from pretraining.",
       "sort_order": 0
-    },
-    {
-      "id": "taxa-2",
-      "section_id": "taxa",
-      "body": "Pretraining exclusion is a separate claim. PlantCAD2’s potato conservation endpoint reports exclusion of the Solanaceae family from pretraining. That differs from holding species out only while fitting a task head, and it still does not imply absence of conserved sequences shared with other plant families.",
-      "sort_order": 1
     },
     {
       "id": "positions-1",
       "section_id": "positions",
-      "body": "Keep alternative alleles at a position together, or hold out contiguous blocks of mutation positions. Evo 2’s fitted BRCA1 readout uses 1,060 training and 266 test positions, with position-grouped cross-validation inside training. NABench describes five contiguous position blocks. These test mutations at new positions in a represented sequence background, not unseen genes or assays. NABench’s released assay CSVs do not resolve fold assignment for multimutants spanning blocks.",
+      "body": "Keep alternative alleles at a position together. Evo 2’s BRCA1 readout assigns 1,060 positions to training and 266 to test; tuning also groups by position within training. NABench divides the wild-type sequence into five contiguous position blocks and holds out one block at a time. Its released assay CSVs do not specify how multimutants spanning blocks are assigned. These evaluations retain the same gene or sequence background.",
       "sort_order": 0
     },
     {
       "id": "individuals-1",
       "section_id": "individuals",
-      "body": "Keep a person’s observations together. DNA Foundation Benchmark’s personal-expression task uses a 75/25 subject split while retaining the same genes across partitions. MAGE evaluates held-out people and a stricter setting that also holds out gene regions, grouping overlapping 8-kb windows. The first asks about new individuals at represented genes; the second additionally asks about new regions. Donor and locus separation are independent axes, not interchangeable safeguards.",
+      "body": "Assign all observations of a person together. DNA Foundation Benchmark’s personal-expression task uses a 75/25 subject split with shared genes. MAGE holds out people and also reports a stricter setting that excludes gene regions, grouping overlapping 8-kb windows. Person-level separation alone tests new people at represented genes; gene-region separation additionally tests new loci.",
       "sort_order": 0
     },
     {
       "id": "experiments-1",
       "section_id": "experiments",
-      "body": "Withhold an experimental context rather than necessarily withholding DNA. AlphaGenome 2 masks 184 test tracks across 30 human conditions and 26 validation tracks across 12 conditions; 32 conditions occur across those sets, so track exclusion is not complete condition exclusion in every case. NABench’s cross-assay setting fits source assays and evaluates another assay. These assess transfer of measured functions or conditions, with sequence-family exclusion requiring a separate rule.",
+      "body": "Remove selected assay labels or whole studies from fitting. AlphaGenome 2 withholds 184 test tracks across 30 human conditions and 26 validation tracks across 12 conditions; the sets share some conditions. NABench fits source assays and evaluates another assay. Genos-m separately reports within-study cross-validation and training on one of 14 colorectal-cancer cohorts while testing on another. Study separation does not establish participant disjointness when repeated-sample handling is unspecified.",
       "sort_order": 0
-    },
-    {
-      "id": "experiments-2",
-      "section_id": "experiments",
-      "body": "A study can also be the grouping unit. Genos-m distinguishes within-cohort tenfold cross-validation from train-one/test-another evaluation across 14 colorectal-cancer cohorts. This tests transfer across study distributions. The paper does not establish participant disjointness or repeated-sample handling across cohorts, so a study holdout should not be described as an audited donor holdout.",
-      "sort_order": 1
     },
     {
       "id": "time-1",
       "section_id": "time",
-      "body": "Choose a cutoff before evaluating newly released measurements. AlphaGenome 2 excludes 16 single-cell datasets released after 1 October 2025 from encoder/post-training; that evaluation separately uses fold1 validation genomic intervals. Temporal separation addresses access to future measurements, while genomic folds address locations. A new dataset can still measure previously represented genes, loci or participants.",
+      "body": "Separate datasets by publication date. AlphaGenome 2 excludes 16 single-cell datasets published after 1 October 2025 from cell-encoder training and subsequent expression-conditioning training. Its expression comparison also scores genomic regions excluded from sequence-model training: the validation group in the eight-part regional split described above. The paper states that these regions were not used for fine-tuning or model selection in this comparison. New measurements can still concern previously represented genes or participants.",
       "sort_order": 0
     },
     {
       "id": "chemistry-1",
       "section_id": "chemistry",
-      "body": "Group by the product or biosynthetic family when that is the intended unit of transfer. BGC-Bench provides first-product Bemis–Murcko scaffold and BiG-SCAPE gene-cluster-family (GCF; c=0.7) holdouts alongside random splits; its retrieval task also holds out biosynthetic classes. A new product scaffold, new GCF and new parent BGC are different claims. Chemical grouping does not establish DNA-similarity exclusion, and parent-BGC folds can share GCFs without violating their stated rule.",
+      "body": "BGC-Bench groups clusters by their first product’s ring-and-linker scaffold (Bemis–Murcko), or by supplied BiG-SCAPE gene-cluster-family assignments based on biosynthetic similarity. Each split reserves 20% of those groups for test; ring-free products form one scaffold group. Its retrieval task also holds out each biosynthetic class in turn. Parent-BGC, family and product-scaffold grouping constrain different relationships and can yield different cross-set intersections.",
       "sort_order": 0
     },
     {
       "id": "interpretation-1",
       "section_id": "interpretation",
-      "body": "Separate location, identity and provenance. PlantCAD2’s maize test chromosome is disjoint from training loci, yet 18 distinct test strings recur in training. Original BEND’s protein-identity grouping still leaves 109 of 597 test windows overlapping training spans. These are intersections on axes different from the construction rule; they are not, by themselves, measurements of score inflation. The contamination figures above quantify the inspected releases.",
+      "body": "PlantCAD2 has disjoint training/test chromosomes but 18 distinct shared DNA strings. BEND’s protein-based grouping leaves 109 of 597 test input windows overlapping training spans. Neither construction rule promises the other form of independence. These measured intersections do not quantify their effect on prediction scores.",
       "sort_order": 0
     },
     {
       "id": "interpretation-2",
       "section_id": "interpretation",
-      "body": "Model selection needs its own separation. TraitGym performs chromosome-grouped tuning inside each outer training set. By contrast, SpliceAI2’s 352-gene human-only transcript reconstruction uses chr21/22 for both validation and evaluation, rather than a third independent test. The revised NT benchmark’s ten runs reuse the same test cohort. Report the biological holdout, selection cohort and repeated-run uncertainty separately.",
+      "body": "Tuning must respect the evaluation boundary. TraitGym selects regularization using chromosome groups inside each outer training set. SpliceAI2’s human-only 352-gene reconstruction instead uses chr21/22 for both validation and evaluation. Revised NT repeats fitting ten times against the same test cohort; those runs do not create ten independent biological test sets.",
       "sort_order": 1
     },
     {
       "id": "interpretation-3",
       "section_id": "interpretation",
-      "body": "Do not count evaluation arrangements as additional split strategies. A fixed zero-shot assay, a withheld suffix in a generation prompt or chromosome-weighted reporting does not itself construct independent train/test groups. Nor does an HF partition name specify how membership was chosen. The most informative report names the assignment unit, exclusion criterion, full input span, fitting step and selection rule; the cited examples show why each changes the interpretation.",
+      "body": "Fixed zero-shot assays need not have a downstream training split. A withheld generation suffix, a chromosome-weighted metric or a dataset partition named train does not establish exclusion from model training.",
       "sort_order": 2
     }
   ],
   "split_synthesis_evidence": [
     {
       "paragraph_id": "overview-1",
-      "evidence_id": "final-bgc-release"
-    },
-    {
-      "paragraph_id": "overview-1",
-      "evidence_id": "final-mage-setting"
-    },
-    {
-      "paragraph_id": "overview-1",
-      "evidence_id": "final-dart-methods"
-    },
-    {
-      "paragraph_id": "overview-2",
       "evidence_id": "evo2-review-exon"
     },
     {
-      "paragraph_id": "overview-2",
+      "paragraph_id": "overview-1",
       "evidence_id": "s2f-ag1-shared-variant-methods"
     },
     {
-      "paragraph_id": "overview-2",
+      "paragraph_id": "overview-1",
       "evidence_id": "s2f-ag2-eqtl-methods"
     },
     {
@@ -378467,11 +379723,7 @@
       "evidence_id": "final-dnalongbench-loaders-evidence"
     },
     {
-      "paragraph_id": "random-2",
-      "evidence_id": "final-dnalongbench-loaders-evidence"
-    },
-    {
-      "paragraph_id": "random-2",
+      "paragraph_id": "random-1",
       "evidence_id": "split-gb-demo_human_or_worm"
     },
     {
@@ -378488,22 +379740,26 @@
     },
     {
       "paragraph_id": "regions-1",
-      "evidence_id": "ntv3-final-native-protocol"
+      "evidence_id": "split-borzoi-construction"
     },
     {
       "paragraph_id": "regions-1",
-      "evidence_id": "s2f-ag2-interval-targets"
+      "evidence_id": "split-borzoi-construction-code"
+    },
+    {
+      "paragraph_id": "regions-1",
+      "evidence_id": "ntv3-final-native-protocol"
     },
     {
       "paragraph_id": "regions-2",
-      "evidence_id": "s2f-ag2-conditioning-ablation"
+      "evidence_id": "ntv3-final-native-protocol"
     },
     {
-      "paragraph_id": "regions-2",
-      "evidence_id": "s2f-ag2-interval-targets"
+      "paragraph_id": "regions-3",
+      "evidence_id": "split-ag2-region-construction"
     },
     {
-      "paragraph_id": "regions-2",
+      "paragraph_id": "regions-3",
       "evidence_id": "ntv3-final-deepfarm"
     },
     {
@@ -378555,7 +379811,7 @@
       "evidence_id": "ntv3-final-annotation"
     },
     {
-      "paragraph_id": "taxa-2",
+      "paragraph_id": "taxa-1",
       "evidence_id": "plantcad2-potato"
     },
     {
@@ -378583,12 +379839,16 @@
       "evidence_id": "nabench-complete-methods"
     },
     {
-      "paragraph_id": "experiments-2",
+      "paragraph_id": "experiments-1",
       "evidence_id": "genosm-crc"
     },
     {
       "paragraph_id": "time-1",
       "evidence_id": "s2f-ag2-cellxgene-expression"
+    },
+    {
+      "paragraph_id": "time-1",
+      "evidence_id": "split-ag2-region-construction"
     },
     {
       "paragraph_id": "chemistry-1",
@@ -378629,10 +379889,116 @@
     {
       "paragraph_id": "interpretation-3",
       "evidence_id": "evo2-review-evo-gen-completion-generation"
+    }
+  ],
+  "split_synthesis_summary_evidence": [
+    {
+      "section_id": "random",
+      "evidence_id": "split-gb-human_enhancers_cohn"
     },
     {
-      "paragraph_id": "interpretation-3",
+      "section_id": "random",
+      "evidence_id": "final-dnalongbench-loaders-evidence"
+    },
+    {
+      "section_id": "chromosomes",
+      "evidence_id": "split-nt-revised-native"
+    },
+    {
+      "section_id": "chromosomes",
       "evidence_id": "final-dart-methods"
+    },
+    {
+      "section_id": "chromosomes",
+      "evidence_id": "split-traitgym-outer"
+    },
+    {
+      "section_id": "regions",
+      "evidence_id": "split-borzoi-construction"
+    },
+    {
+      "section_id": "regions",
+      "evidence_id": "ntv3-final-native-protocol"
+    },
+    {
+      "section_id": "regions",
+      "evidence_id": "split-ag2-region-construction"
+    },
+    {
+      "section_id": "entities",
+      "evidence_id": "final-bend2-fixed-ridge"
+    },
+    {
+      "section_id": "entities",
+      "evidence_id": "final-bgc-substrate-scorer"
+    },
+    {
+      "section_id": "similarity",
+      "evidence_id": "bend1-gene-method"
+    },
+    {
+      "section_id": "similarity",
+      "evidence_id": "split-mrna-unmapped-code"
+    },
+    {
+      "section_id": "similarity",
+      "evidence_id": "final-lambda-evo-interfaces-evidence"
+    },
+    {
+      "section_id": "similarity",
+      "evidence_id": "rnagym-split-audit"
+    },
+    {
+      "section_id": "taxa",
+      "evidence_id": "evo2-review-exon"
+    },
+    {
+      "section_id": "taxa",
+      "evidence_id": "final-bacbench-essential-scorer"
+    },
+    {
+      "section_id": "taxa",
+      "evidence_id": "ntv3-final-annotation"
+    },
+    {
+      "section_id": "taxa",
+      "evidence_id": "plantcad2-potato"
+    },
+    {
+      "section_id": "positions",
+      "evidence_id": "evo2-review-brca-probe"
+    },
+    {
+      "section_id": "positions",
+      "evidence_id": "nabench-complete-methods"
+    },
+    {
+      "section_id": "individuals",
+      "evidence_id": "dnafoundation-personal-expression-code"
+    },
+    {
+      "section_id": "individuals",
+      "evidence_id": "final-mage-setting"
+    },
+    {
+      "section_id": "experiments",
+      "evidence_id": "s2f-ag2-imputation"
+    },
+    {
+      "section_id": "experiments",
+      "evidence_id": "nabench-complete-methods"
+    },
+    {
+      "section_id": "experiments",
+      "evidence_id": "genosm-crc"
+    },
+    {
+      "section_id": "time",
+      "evidence_id": "s2f-ag2-cellxgene-expression"
+    },
+    {
+      "section_id": "chemistry",
+      "evidence_id": "final-bgc-release"
     }
   ],
   "split_audits": [

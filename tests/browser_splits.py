@@ -17,6 +17,9 @@ with sync_playwright() as p:
     assert page.locator('#split-strategies').bounding_box()['y']>page.locator('.split-methods').bounding_box()['y']
     assert page.locator('#design-filters,.split-design-table,.split-strategy-guide').count()==0
     assert page.locator('.split-synthesis-section.strategy').count()==11
+    assert page.locator('[data-strategy-summary]').count()==11
+    for el in page.locator('[data-strategy-summary]').all():
+        assert el.locator('a.citation[href^="https://"]').count()>0
     for el in page.locator('[data-synthesis-paragraph]').all():
         assert el.locator('a.citation[href^="https://"]').count()>0
     # Navigation uses shareable SPA-compatible anchors, including keyboard/reload.
@@ -25,7 +28,10 @@ with sync_playwright() as p:
     strategy_link.focus();page.keyboard.press('Enter')
     assert 'splitSection=strategies' in page.url
     assert 0<=page.locator('#split-strategies').bounding_box()['y']<40
-    assert 'rows' in page.locator('#split-strategy-overview').inner_text()
+    assert 'model selection' in page.locator('#split-strategy-overview').inner_text()
+    assert 'orthologous fragments' in page.locator('#split-strategy-regions').inner_text()
+    assert 'eight roughly equal partitions' in page.locator('#split-strategy-regions').inner_text()
+    assert 'fold1' not in page.locator('#split-strategy-time').inner_text()
     assert '1,048,576-bp' in page.locator('#split-strategy-regions').inner_text()
     assert 'pretraining' in page.locator('#split-strategy-overview').inner_text()
     assert 'min_similarity' in page.locator('#split-strategy-similarity').inner_text()
@@ -33,6 +39,9 @@ with sync_playwright() as p:
     assert 0<=page.locator('#split-strategies').bounding_box()['y']<40
     page.locator('.split-synthesis-end a[data-split-section]').click()
     assert 0<=page.locator('#split-overlap-heading').bounding_box()['y']<40
+    page.goto(url+'#view=splits&splitSection=strategies');page.wait_for_selector('.split-summary-table')
+    page.locator('[data-strategy-summary="regions"] a[data-split-section]').click()
+    assert 0<=page.locator('#split-strategy-regions').bounding_box()['y']<40
     # Old design links and task links still expose the exact cited source rules.
     page.goto(url+'#view=splits&splitDesign=design-ag-variants')
     page.wait_for_selector('#split-design-detail')

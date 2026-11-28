@@ -8,6 +8,8 @@ The primary models are Evo 1, Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERato
 
 All indexed task definitions and collections have completed source reviews. A review can establish that a publication omits a field or that a release is inaccessible; it cannot supply missing evidence. Those limitations remain explicit. [Resolved fields and source findings](docs/source-review.md) document protocol choices, target identification and dataset consolidation. The catalogue does not assign ID/OD categories or rank models, and record counts are not counts of independent biological assays.
 
+Models and Papers use compact tables with expandable, directly linkable source records. `model_summaries` stores the short comparison fields; `field_evidence` cites architecture, encoding, training data and context separately. Detailed model properties, source limits and task associations remain available in the expanded row.
+
 ## Build and verification
 
 ```bash
@@ -18,7 +20,7 @@ python -m http.server 8000
 
 Open `http://localhost:8000`, or open [index.html](index.html) directly. The generated page is self-contained and uses no external requests. Ordinary builds require Python 3.10+ and its standard library; research dependencies are not required.
 
-The optional browser check, `python tests/browser.py`, requires Playwright and Chromium. It exercises filters, table pagination, deep links, marker tooltips, downloads, taxonomy and mobile layout. GitHub Actions rebuilds the catalogue, checks its integrity and verifies the committed page/export.
+Optional browser checks (`tests/browser.py`, `tests/browser_splits.py`, `tests/browser_catalogue_tables.py`) require Playwright and Chromium. They exercise filters, tables, deep links, citations, marker tooltips, downloads, taxonomy and mobile layout. GitHub Actions rebuilds the catalogue, checks its integrity and verifies the committed page/export.
 
 GitHub Pages serves the repository root. Source, generated HTML and the downloadable database are committed together.
 
@@ -29,7 +31,7 @@ A task is **dataset × prediction target**. Species, cell types, assay tracks, c
 | Tables | Purpose |
 | --- | --- |
 | `papers`, `sources`, `evidence`, `field_evidence` | Publication/release identity, exact locators and field-level support. |
-| `models`, `model_properties`, `model_evaluations`, `model_collection_evaluations` | Model details, task-level execution and separately scoped collection participation. |
+| `models`, `model_summaries`, `model_properties`, `model_evaluations`, `model_collection_evaluations` | Model details, task-level execution and separately scoped collection participation. |
 | `evaluations`, `tasks`, `evaluation_tasks`, `variants` | Collections, dataset–target identities and source-specific variants. |
 | `protocols`, `protocol_field_reviews`, `protocol_metrics`, `counts` | Adaptation, interfaces, explicit interpretations of source-null fields, split/selection rules, metrics and qualified counts. |
 | `assay_tracks`, `task_tracks` | Individual released track identities and biological contexts without creating one task per track. |
@@ -37,7 +39,8 @@ A task is **dataset × prediction target**. Species, cell types, assay tracks, c
 | `source_reviews`, `source_limits` | Completed review scope and precise unreported, unreleased, inaccessible or conflicting fields. |
 | `data_resources`, `task_resources`, `evaluation_resources` | Explicit dataset, manifest, code and result links. |
 | `project_reviews`, `projects`, `project_adoptions` | Dedicated benchmark qualification and independent use. |
-| `split_strategies`, `split_protocol_strategies` | Cited split definitions and protocol examples. |
+| `split_strategies`, `split_protocol_strategies`, `split_designs` | Cited split definitions and source-specific protocols. |
+| `split_synthesis_*` | Strategy summary table, explanations and primary-source citations. |
 | `split_audits`, `split_audit_tasks`, `split_partitions`, `split_comparisons` | Release/cohort scope, denominators and measured separation axes. |
 | `split_audit_files`, `split_examples` | File hashes, revisions and illustrative overlapping pairs. |
 | `coverage_nodes`, `coverage_rows`, `coverage_mappings`, `coverage_settings` | Cited taxonomy assignments and simplified presentation. |

@@ -1,90 +1,184 @@
-"""Cited analysis of partition mechanisms, derived from the audited designs.
-
-The designs remain available in SQLite and through task-specific links. They
-are evidence for this synthesis, not the page's organizing interface.
-"""
+"""Cited partition-construction summaries and shorter supporting explanations."""
+from common import Catalogue
 
 
 def populate(d):
-    for table in ['split_synthesis_sections', 'split_synthesis_paragraphs', 'split_synthesis_evidence']:
+    c = Catalogue(d)
+    for table in ['split_synthesis_sections', 'split_synthesis_paragraphs',
+                  'split_synthesis_evidence', 'split_synthesis_summary_evidence']:
         d[table] = []
+    source_id = 'split-borzoi-paper'
+    c.source(source_id, 'Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation',
+             'https://pmc.ncbi.nlm.nih.gov/articles/PMC11985352/', version='Nature Genetics (2025)',
+             notes='Full article XML inspected through the Europe PMC API; no sequence data downloaded.')
+    c.get('sources', source_id)['retrieved'] = '2026-11-28'
+    c.evidence('split-borzoi-construction', source_id, 'Methods: Data; Training',
+        'Human hg38 and mouse mm10 chromosomes are fragmented; orthologous regions are paired into the same partition. Fragment groups are randomly assigned to eight approximately equal partitions. One supplies validation, another test, and six training. All assay targets for a held-out sequence are withheld. Four released replicates share the same partition assignment.')
+    c.get('evidence', 'split-borzoi-construction')['inspected'] = '2026-11-28'
+    source_id = 'split-borzoi-construction-code'
+    c.source(source_id, 'Borzoi paper data-construction recipe',
+        'https://github.com/calico/borzoi-paper/blob/ace52175bba712872daaada4ed9e4f1cafb28049/data/training/Makefile#L20-L37', 'code',
+        version='ace52175bba712872daaada4ed9e4f1cafb28049')
+    c.get('sources', source_id)['retrieved'] = '2026-11-28'
+    c.evidence('split-borzoi-construction-code', source_id, 'Makefile lines 20–37',
+        'Construction passes the human–mouse syntenic alignment net and assembly gap files to hound_data_align.py, with --break 2097152, eight folds, 524288-bp inputs and 163840-bp crops. The break argument caps initial chromosome fragments; it is not a claim that each final partition is one contiguous 2-Mb block.', 'code')
+    c.get('evidence', 'split-borzoi-construction-code')['inspected'] = '2026-11-28'
+    c.evidence('split-ag2-region-construction', 'alphagenome2-paper', 'Methods: Data processing, Genomic interval split',
+        'Predefined 196608-bp genomic target intervals are assigned to eight regional groups. A training configuration uses six for training, one for validation and one for test. Expand targets to 1048576-bp input windows and remove validation/test windows overlapping training inputs. These are grouped genomic regions rather than an independently randomized split of every extracted example.')
+    c.get('evidence', 'split-ag2-region-construction')['inspected'] = '2026-11-28'
+    c.source('split-ag1-fold-roles', 'AlphaGenome genomic partition lookup',
+        'https://github.com/google-deepmind/alphagenome/blob/67d9080d70283173f6060a1d9850942736350547/src/alphagenome/data/fold_intervals.py#L40-L58', 'code',
+        version='67d9080d70283173f6060a1d9850942736350547')
+    c.get('sources', 'split-ag1-fold-roles')['retrieved'] = '2026-11-28'
+    c.evidence('split-ag1-fold-roles', 'split-ag1-fold-roles', 'Validation/test lookup dictionaries; model-version mapping',
+        'AlphaGenome model configuration FOLD_1 validates on Borzoi regional group fold3 and tests on group fold4; its other six regional groups supply training. The model-configuration index and the underlying Borzoi region-group index are different identifiers.', 'code')
+    c.get('evidence', 'split-ag1-fold-roles')['inspected'] = '2026-11-28'
     evidence = {e['id'] for e in d['evidence']}
 
-    def section(key, title, paragraphs, kind='strategy'):
-        d['split_synthesis_sections'].append(dict(
-            id=key, title=title, kind=kind, sort_order=len(d['split_synthesis_sections'])))
+    def section(key, title, paragraphs, kind='strategy', summary=None):
+        row = dict(id=key, title=title, kind=kind, sort_order=len(d['split_synthesis_sections']))
+        if summary:
+            unit, rule, examples, limitation, sources = summary
+            row.update(assignment_unit=unit, construction_rule=rule, examples=examples, limitation=limitation)
+            for eid in sources.split():
+                assert eid in evidence, eid
+                d['split_synthesis_summary_evidence'].append(dict(section_id=key, evidence_id=eid))
+        d['split_synthesis_sections'].append(row)
         for i, (body, citations) in enumerate(paragraphs):
             pid = key + '-' + str(i + 1)
-            d['split_synthesis_paragraphs'].append(dict(
-                id=pid, section_id=key, body=body, sort_order=i))
+            d['split_synthesis_paragraphs'].append(dict(id=pid, section_id=key, body=body, sort_order=i))
             for eid in citations.split():
                 assert eid in evidence, eid
                 d['split_synthesis_evidence'].append(dict(paragraph_id=pid, evidence_id=eid))
 
     section('overview', '', [(
-        'The useful distinction is what is kept together before assigning partitions: individual rows, nearby loci, related sequences, biological entities or experimental contexts. The mechanisms below recur in the audited collections; they are not a ranking from weak to strong. A split can combine several mechanisms, and the same benchmark can use different ones for different tasks.',
-        'final-bgc-release final-mage-setting final-dart-methods'), (
-        'First identify the fitting step. Evo 2’s species-held-out exon/intron probe tests a readout on new species, not exclusion of those genomes from pretraining. AlphaGenome 1 / 2’s chromosome-held-out QTL labels concern variant-effect selection; the final all-folds sequence model has seen reference DNA at those loci. A statement such as “chromosome held out” is incomplete without this distinction.',
+        'Splits apply separately to pretraining, supervised training and model selection. Evo 2’s species-held-out exon/intron probe excludes those species from readout fitting. AlphaGenome’s chromosome-held-out QTL labels exclude those labels from scorer selection; its final sequence model is trained across all genomic partitions. Neither rule establishes exclusion of the corresponding reference DNA from pretraining.',
         'evo2-review-exon s2f-ag1-shared-variant-methods s2f-ag2-eqtl-methods')], 'overview')
 
-    section('random', 'Random rows, usually stratified by label', [(
-        'Assign examples independently, optionally preserving label proportions. Genomic Benchmarks’ Cohn enhancer and non-TATA promoter notebooks use class-wise random approximately 75/25 train/test splits; its pinned OCR and regulatory helper uses 80/20. DNALongBench’s eQTL task uses label-stratified 80/10/10 gene–variant pairs. These estimate performance on more examples drawn from the represented mixture; they do not require new genes, species or sequence families.',
-        'split-gb-human_enhancers_cohn split-gb-human_nontata_promoters split-gb-ensembl-helper final-dnalongbench-loaders-evidence'), (
-        'The row definition matters more than the ratio. DNALongBench permits the same gene in multiple partitions. In GB’s human-versus-worm task, both species occur in training and test: species is the prediction label, not a held-out biological group.',
-        'final-dnalongbench-loaders-evidence split-gb-demo_human_or_worm')])
+    section('random', 'Random examples', [(
+        'Shuffle examples, then allocate fixed proportions to each set. Stratification preserves label proportions. Genomic Benchmarks’ Cohn enhancer and non-TATA promoter notebooks split each class approximately 75/25; its open-chromatin and regulatory helper uses 80/20. DNALongBench splits eQTL gene–variant pairs 80/10/10, stratified by label. Genes can recur across sets. GB’s human-versus-worm task includes both species in both sets.',
+        'split-gb-human_enhancers_cohn split-gb-human_nontata_promoters split-gb-ensembl-helper final-dnalongbench-loaders-evidence split-gb-demo_human_or_worm')], summary=(
+        'Sequence row or gene–variant pair', 'Random assignment within label classes: GB examples use 75/25; DNALongBench eQTL pairs use 80/10/10.',
+        'Genomic Benchmarks; DNALongBench eQTL', 'Repeated genes, loci or similar sequences can cross sets.',
+        'split-gb-human_enhancers_cohn final-dnalongbench-loaders-evidence'))
 
     section('chromosomes', 'Whole chromosomes', [(
-        'Assign every eligible locus on a chromosome to one partition. The revised 18-task Nucleotide Transformer benchmark reserves human chr20/21 for test. DART-Eval’s trained regulatory readouts reserve chr6/21 for validation and chr5/10/14/18/20/22 for test. TraitGym’s fitted feature models instead cycle through leave-one-chromosome-out evaluation. These separate genomic locations within represented species; repeats and homologous genes can still cross the boundary.',
-        'split-nt-revised-native final-dart-methods split-traitgym-outer')])
+        'Assign all eligible loci on a chromosome together. The revised 18-task Nucleotide Transformer benchmark tests on human chr20/21. DART’s trained regulatory readouts validate on chr6/21 and test on chr5/10/14/18/20/22. TraitGym fits on all but one chromosome and predicts the omitted chromosome, repeating for each chromosome. Repeats and homologous genes on different chromosomes remain possible.',
+        'split-nt-revised-native final-dart-methods split-traitgym-outer')], summary=(
+        'Chromosome', 'Reserve named chromosomes, or rotate the omitted chromosome.',
+        'Revised NT; DART trained readouts; TraitGym fitted models', 'Separates loci; does not remove cross-chromosome homology.',
+        'split-nt-revised-native final-dart-methods split-traitgym-outer'))
 
-    section('regions', 'Genomic blocks and full input windows', [(
-        'Partition contiguous regions rather than entire chromosomes. NTv3’s human/mouse track tasks use Borzoi’s fold3 for test and fold4 for validation; other species use gene-aware 1-Mb windows and homology-based grouping. AlphaGenome 2 uses eight genomic folds, with six for training, one for validation and one for test. This permits regional holdouts while retaining training data from the same chromosomes.',
-        'ntv3-final-native-protocol s2f-ag2-interval-targets'), (
-        'The excluded span must be specified. AlphaGenome 2 expands 196,608-bp targets to 1,048,576-bp inputs and removes validation/test inputs that overlap training inputs. NTv3’s DeepFARM comparison explicitly distinguishes a held-out 200-bp scoring bin from a stricter whole-1-Mb-context holdout. Nonoverlapping targets alone do not establish nonoverlapping model inputs; the distinction grows with context length.',
-        's2f-ag2-conditioning-ablation s2f-ag2-interval-targets ntv3-final-deepfarm')])
+    section('regions', 'Genomic regions and full input windows', [(
+        'Borzoi fragments human and mouse chromosomes, groups orthologous fragments together, and randomly assigns those groups to eight roughly equal partitions. Each partition contains multiple regions from both genomes. Six partitions supply training, one validation and one test. The published construction recipe caps initial fragments at 2,097,152 bp before grouping. NTv3 reuses the human/mouse region assignments, merges neighboring intervals with the same membership, and extracts new input windows. The labels fold3 and fold4 identify its test and validation groups; they do not describe the construction rule.',
+        'split-borzoi-construction split-borzoi-construction-code ntv3-final-native-protocol'), (
+        'For other species, NTv3 starts with 1-Mb windows and extends boundaries to include complete genes. It links windows containing homologous genes, clusters the resulting graph, and assigns whole clusters to training, validation or test. Weak homology links are removed in Arabidopsis, worm and rice when needed to reach the target partition sizes.',
+        'ntv3-final-native-protocol'), (
+        'AlphaGenome 2 also uses eight groups of genomic regions, with six for training, one for validation and one for test. It expands each 196,608-bp target to a 1,048,576-bp input, then removes validation/test inputs that overlap training inputs. This checks the entire visible sequence. NTv3’s DeepFARM comparison separately reports exclusion of only the 200-bp scored bin and exclusion of the full 1-Mb input; those cohorts provide different guarantees.',
+        'split-ag2-region-construction ntv3-final-deepfarm')], summary=(
+        'Contiguous region; optionally linked regions in different genomes',
+        'Borzoi: randomly assign ortholog-linked chromosome fragments to eight balanced groups. AlphaGenome 2 also excludes overlapping full 1-Mb inputs.',
+        'Borzoi / NTv3; AlphaGenome 2', 'A held-out target can still have input flanks in training unless full windows are excluded.',
+        'split-borzoi-construction ntv3-final-native-protocol split-ag2-region-construction'))
 
-    section('entities', 'Genes, regulatory elements and parent clusters', [(
-        'Keep all observations of one biological entity together. BEND 2.0’s OpenSplice readout holds out whole genes in five folds; its context tasks keep an element and related backgrounds together. BGC-Bench’s A-domain evaluation groups domains by parent biosynthetic gene cluster (BGC). This tests new genes, elements or clusters rather than new measurements of an entity already represented in training. Distinct entities may still contain homologous or identical sequences.',
-        'final-bend2-fixed-ridge final-bgc-substrate-scorer')])
+    section('entities', 'Genes, elements and parent clusters', [(
+        'Assign every observation from the same gene, regulatory element or parent biosynthetic gene cluster (BGC) together. BEND 2.0 divides OpenSplice genes into five groups, fitting on four and evaluating the fifth in turn. Its context tasks keep an element and related backgrounds together. BGC-Bench similarly groups A-domains by their parent BGC. Homologous genes or domains in different groups may remain.',
+        'final-bend2-fixed-ridge final-bgc-substrate-scorer')], summary=(
+        'Gene, regulatory element or parent BGC', 'Assign all variants or measurements of an entity together.',
+        'BEND 2.0 OpenSplice/context tasks; BGC-Bench A-domains', 'Distinct entities may contain homologous or identical sequence.',
+        'final-bend2-fixed-ridge final-bgc-substrate-scorer'))
 
-    section('similarity', 'Homology groups and sequence-similarity thresholds', [(
-        'Group related entities using a homology map or an explicit similarity procedure. Original BEND gene finding uses GraphPart at 80% global mature-protein identity, whereas mRNABench groups mapped HomoloGene families. LAMBDA groups phage genomes at 95% average nucleotide identity before sampling fragments. These operate on different objects: translated proteins, mapped gene families and whole genomes. None directly guarantees uniqueness of complete genomic input windows.',
+    section('similarity', 'Homology and sequence similarity', [(
+        'Original BEND gene finding partitions examples using an 80% global identity threshold on translated mature proteins. mRNABench keeps genes with the same supplied HomoloGene family assignment together. LAMBDA groups phage genomes at 95% average nucleotide identity before sampling fragments. Protein identity, mapped gene families and whole-genome identity constrain different sequences.',
         'bend1-gene-method split-mrna-unmapped-code final-lambda-evo-interfaces-evidence'), (
-        'A threshold, a heuristic and a fallback are different guarantees. RNAGym’s min_similarity routine starts from a random 80/20 split and swaps examples for at most 10,000 iterations; it does not enforce a strict maximum similarity. The inspected Pitt split retains six shared validation strings. mRNABench assigns unmapped rows independently, so disjoint mapped families can coexist with shared genes and DNA. Construction code is essential here.',
-        'rnagym-split-audit split-evidence-da86f10ed88ccfc9 split-mrna-unmapped-code')])
+        'RNAGym’s min_similarity procedure instead swaps examples from a random 80/20 split for at most 10,000 iterations to reduce high-similarity pairs. It does not enforce a strict threshold; six distinct Pitt validation strings still occur in training. mRNABench assigns unmapped rows independently, allowing repeated genes despite disjoint mapped families.',
+        'rnagym-split-audit split-evidence-da86f10ed88ccfc9 split-mrna-unmapped-code')], summary=(
+        'Homology family or sequence cluster', 'BEND: 80% global protein identity. LAMBDA phages: 95% average nucleotide identity. mRNABench: mapped families. RNAGym: similarity-reducing swaps.',
+        'BEND gene finding; mRNABench; LAMBDA; RNAGym', 'Specify similarity object, threshold, algorithm and handling of unmapped rows.',
+        'bend1-gene-method split-mrna-unmapped-code final-lambda-evo-interfaces-evidence rnagym-split-audit'))
 
     section('taxa', 'Species, genera and larger clades', [(
-        'Assign complete taxa, not their individual sequence rows. Evo 2’s exon/intron probe holds out species; native BacBench essentiality separates 55 genomes into 37/9/9 with disjoint genera. NTv3 gene annotation excludes test genera from supervised training and validation, although validation species may share genera with training. The rank and the validation rule change the transfer being measured; “multispecies evaluation” alone establishes neither.',
-        'evo2-review-exon final-bacbench-essential-native-test final-bacbench-essential-scorer ntv3-final-annotation'), (
-        'Pretraining exclusion is a separate claim. PlantCAD2’s potato conservation endpoint reports exclusion of the Solanaceae family from pretraining. That differs from holding species out only while fitting a task head, and it still does not imply absence of conserved sequences shared with other plant families.',
-        'plantcad2-potato')])
+        'Assign all examples from each taxon together. Evo 2’s exon/intron probe holds out species. Native BacBench essentiality assigns 55 genomes to 37 training, 9 validation and 9 test genomes with disjoint genera. NTv3 annotation excludes test genera from supervised training and validation, although validation species may share genera with training. PlantCAD2’s potato experiment reports a different exclusion: the Solanaceae family is absent from pretraining.',
+        'evo2-review-exon final-bacbench-essential-native-test final-bacbench-essential-scorer ntv3-final-annotation plantcad2-potato')], summary=(
+        'Species, genus or larger clade', 'Assign complete taxa together: species for Evo 2 probes; genera for BacBench and NTv3 annotation; pretraining-family exclusion for PlantCAD2 potato.',
+        'Evo 2 exon/intron; BacBench essentiality; NTv3 annotation; PlantCAD2 potato', 'Taxonomic separation does not exclude conserved sequence or imply pretraining exclusion.',
+        'evo2-review-exon final-bacbench-essential-scorer ntv3-final-annotation plantcad2-potato'))
 
-    section('positions', 'Mutation positions within a sequence', [(
-        'Keep alternative alleles at a position together, or hold out contiguous blocks of mutation positions. Evo 2’s fitted BRCA1 readout uses 1,060 training and 266 test positions, with position-grouped cross-validation inside training. NABench describes five contiguous position blocks. These test mutations at new positions in a represented sequence background, not unseen genes or assays. NABench’s released assay CSVs do not resolve fold assignment for multimutants spanning blocks.',
-        'evo2-review-brca-probe nabench-complete-methods')])
+    section('positions', 'Mutation positions', [(
+        'Keep alternative alleles at a position together. Evo 2’s BRCA1 readout assigns 1,060 positions to training and 266 to test; tuning also groups by position within training. NABench divides the wild-type sequence into five contiguous position blocks and holds out one block at a time. Its released assay CSVs do not specify how multimutants spanning blocks are assigned. These evaluations retain the same gene or sequence background.',
+        'evo2-review-brca-probe nabench-complete-methods')], summary=(
+        'Mutation position or contiguous position block', 'Keep alleles at one position together; optionally hold out adjacent positions as a block.',
+        'Evo 2 BRCA1 readout; NABench', 'Tests new positions within a represented sequence; multimutants need an explicit assignment rule.',
+        'evo2-review-brca-probe nabench-complete-methods'))
 
-    section('individuals', 'Individuals, optionally crossed with genes', [(
-        'Keep a person’s observations together. DNA Foundation Benchmark’s personal-expression task uses a 75/25 subject split while retaining the same genes across partitions. MAGE evaluates held-out people and a stricter setting that also holds out gene regions, grouping overlapping 8-kb windows. The first asks about new individuals at represented genes; the second additionally asks about new regions. Donor and locus separation are independent axes, not interchangeable safeguards.',
-        'dnafoundation-personal-expression-code final-mage-setting')])
+    section('individuals', 'Individuals and gene regions', [(
+        'Assign all observations of a person together. DNA Foundation Benchmark’s personal-expression task uses a 75/25 subject split with shared genes. MAGE holds out people and also reports a stricter setting that excludes gene regions, grouping overlapping 8-kb windows. Person-level separation alone tests new people at represented genes; gene-region separation additionally tests new loci.',
+        'dnafoundation-personal-expression-code final-mage-setting')], summary=(
+        'Person; optionally person × gene region', 'Group by person (DNA Foundation: 75/25); MAGE additionally reports gene-region exclusion.',
+        'DNA Foundation personal expression; MAGE', 'The same genes can remain represented when only people are held out.',
+        'dnafoundation-personal-expression-code final-mage-setting'))
 
-    section('experiments', 'Assays, conditions and study cohorts', [(
-        'Withhold an experimental context rather than necessarily withholding DNA. AlphaGenome 2 masks 184 test tracks across 30 human conditions and 26 validation tracks across 12 conditions; 32 conditions occur across those sets, so track exclusion is not complete condition exclusion in every case. NABench’s cross-assay setting fits source assays and evaluates another assay. These assess transfer of measured functions or conditions, with sequence-family exclusion requiring a separate rule.',
-        's2f-ag2-imputation nabench-complete-methods'), (
-        'A study can also be the grouping unit. Genos-m distinguishes within-cohort tenfold cross-validation from train-one/test-another evaluation across 14 colorectal-cancer cohorts. This tests transfer across study distributions. The paper does not establish participant disjointness or repeated-sample handling across cohorts, so a study holdout should not be described as an audited donor holdout.',
-        'genosm-crc')])
+    section('experiments', 'Assays, conditions and studies', [(
+        'Remove selected assay labels or whole studies from fitting. AlphaGenome 2 withholds 184 test tracks across 30 human conditions and 26 validation tracks across 12 conditions; the sets share some conditions. NABench fits source assays and evaluates another assay. Genos-m separately reports within-study cross-validation and training on one of 14 colorectal-cancer cohorts while testing on another. Study separation does not establish participant disjointness when repeated-sample handling is unspecified.',
+        's2f-ag2-imputation nabench-complete-methods genosm-crc')], summary=(
+        'Assay track, condition or study', 'Withhold designated labels/conditions, or train on complete source studies and test another.',
+        'AlphaGenome 2 track imputation; NABench assay transfer; Genos-m cohorts', 'New labels or studies can reuse reference DNA and participants.',
+        's2f-ag2-imputation nabench-complete-methods genosm-crc'))
 
-    section('time', 'Release dates and prospective datasets', [(
-        'Choose a cutoff before evaluating newly released measurements. AlphaGenome 2 excludes 16 single-cell datasets released after 1 October 2025 from encoder/post-training; that evaluation separately uses fold1 validation genomic intervals. Temporal separation addresses access to future measurements, while genomic folds address locations. A new dataset can still measure previously represented genes, loci or participants.',
-        's2f-ag2-cellxgene-expression')])
+    section('time', 'Publication dates', [(
+        'Separate datasets by publication date. AlphaGenome 2 excludes 16 single-cell datasets published after 1 October 2025 from cell-encoder training and subsequent expression-conditioning training. Its expression comparison also scores genomic regions excluded from sequence-model training: the validation group in the eight-part regional split described above. The paper states that these regions were not used for fine-tuning or model selection in this comparison. New measurements can still concern previously represented genes or participants.',
+        's2f-ag2-cellxgene-expression split-ag2-region-construction')], summary=(
+        'Dataset publication date', 'AlphaGenome 2 excludes 16 studies published after 1 October 2025 from cell-encoder and expression-conditioning training.',
+        'AlphaGenome 2 single-cell expression', 'Combine with locus/participant exclusions when those are required; dates alone do not provide them.',
+        's2f-ag2-cellxgene-expression'))
 
-    section('chemistry', 'Chemical scaffolds and biosynthetic families', [(
-        'Group by the product or biosynthetic family when that is the intended unit of transfer. BGC-Bench provides first-product Bemis–Murcko scaffold and BiG-SCAPE gene-cluster-family (GCF; c=0.7) holdouts alongside random splits; its retrieval task also holds out biosynthetic classes. A new product scaffold, new GCF and new parent BGC are different claims. Chemical grouping does not establish DNA-similarity exclusion, and parent-BGC folds can share GCFs without violating their stated rule.',
-        'final-bgc-release final-bgc-substrate-scorer')])
+    section('chemistry', 'Product scaffolds and biosynthetic families', [(
+        'BGC-Bench groups clusters by their first product’s ring-and-linker scaffold (Bemis–Murcko), or by supplied BiG-SCAPE gene-cluster-family assignments based on biosynthetic similarity. Each split reserves 20% of those groups for test; ring-free products form one scaffold group. Its retrieval task also holds out each biosynthetic class in turn. Parent-BGC, family and product-scaffold grouping constrain different relationships and can yield different cross-set intersections.',
+        'final-bgc-release final-bgc-substrate-scorer')], summary=(
+        'Product scaffold, BGC family or biosynthetic class', 'Reserve 20% of first-product scaffold groups or BGC families for test; retrieval also omits whole biosynthetic classes.',
+        'BGC-Bench', 'Chemical scaffold separation is not DNA-identity separation; families can cross scaffold splits.',
+        'final-bgc-release'))
 
-    section('interpretation', 'What follows from these comparisons', [(
-        'Separate location, identity and provenance. PlantCAD2’s maize test chromosome is disjoint from training loci, yet 18 distinct test strings recur in training. Original BEND’s protein-identity grouping still leaves 109 of 597 test windows overlapping training spans. These are intersections on axes different from the construction rule; they are not, by themselves, measurements of score inflation. The contamination figures above quantify the inspected releases.',
+    section('interpretation', 'Overlap and model selection', [(
+        'PlantCAD2 has disjoint training/test chromosomes but 18 distinct shared DNA strings. BEND’s protein-based grouping leaves 109 of 597 test input windows overlapping training spans. Neither construction rule promises the other form of independence. These measured intersections do not quantify their effect on prediction scores.',
         'split-evidence-face9b470c556621 split-evidence-a295180f3dd84b7c'), (
-        'Model selection needs its own separation. TraitGym performs chromosome-grouped tuning inside each outer training set. By contrast, SpliceAI2’s 352-gene human-only transcript reconstruction uses chr21/22 for both validation and evaluation, rather than a third independent test. The revised NT benchmark’s ten runs reuse the same test cohort. Report the biological holdout, selection cohort and repeated-run uncertainty separately.',
+        'Tuning must respect the evaluation boundary. TraitGym selects regularization using chromosome groups inside each outer training set. SpliceAI2’s human-only 352-gene reconstruction instead uses chr21/22 for both validation and evaluation. Revised NT repeats fitting ten times against the same test cohort; those runs do not create ten independent biological test sets.',
         'split-traitgym-inner spliceai2-top-transcript-method split-nt-revised-native'), (
-        'Do not count evaluation arrangements as additional split strategies. A fixed zero-shot assay, a withheld suffix in a generation prompt or chromosome-weighted reporting does not itself construct independent train/test groups. Nor does an HF partition name specify how membership was chosen. The most informative report names the assignment unit, exclusion criterion, full input span, fitting step and selection rule; the cited examples show why each changes the interpretation.',
-        'traitgym-definition evo2-review-brca-probe evo2-review-evo-gen-completion-generation final-dart-methods')], 'interpretation')
+        'Fixed zero-shot assays need not have a downstream training split. A withheld generation suffix, a chromosome-weighted metric or a dataset partition named train does not establish exclusion from model training.',
+        'traitgym-definition evo2-review-brca-probe evo2-review-evo-gen-completion-generation')], 'interpretation')
+
+    # Keep the task-linked source details as explicit as the page synthesis.
+    borzoi = ('Human/mouse chromosomes are fragmented; orthologous fragments are grouped and '
+              'randomly assigned together to eight roughly equal regional partitions.')
+    regional = ('Genomic intervals are assigned to eight regional groups: six training, one validation '
+                'and one test. Validation/test 1-Mb inputs overlapping training inputs are removed.')
+    rules = {
+        'design-ntv3-tracks': (borzoi + ' NTv3 uses regional group 3 for test and 4 for validation. '
+            'Other species use gene-complete 1-Mb windows grouped by a homology graph before assignment.',
+            'split-borzoi-construction ntv3-final-native-protocol', borzoi),
+        'design-aido': (borzoi + ' AIDO.DNA2 trains on groups 0–2 and 5–7, validates on group 4 and tests on group 3.',
+            'split-borzoi-construction aido2-coverage', borzoi),
+        'design-ntv3-ag': (borzoi + ' Five assay-specific NTv3 fine-tunes score regional group 4, '
+            'which is NTv3’s native validation group and AlphaGenome configuration 1’s test group.',
+            'split-borzoi-construction split-ag1-fold-roles ntv3-final-alphagenome', borzoi),
+        'design-ag2-sequence': (regional + ' Targets are the central 196,608 bp of each 1,048,576-bp input.',
+            'split-ag2-region-construction', regional),
+        'design-ag2-time': ('Exclude 16 studies published after 1 October 2025 from cell-encoder and '
+            'expression-conditioning training. Genomic regions are independently assigned to eight groups '
+            '(six training, one validation, one test); this expression comparison scores the validation group, '
+            'which is excluded from fine-tuning and model selection in the comparison.',
+            'split-ag2-region-construction s2f-ag2-cellxgene-expression', regional),
+    }
+    for did, (rule, refs, explanation) in rules.items():
+        c.get('split_designs', did)['partition_rule'] = rule
+        for eid in refs.split():
+            c.put('split_design_evidence', dict(design_id=did, field='partition_rule', evidence_id=eid),
+                  ('design_id', 'field', 'evidence_id'))
+        for link in d['split_design_protocols']:
+            if link['design_id'] != did:continue
+            p = c.get('protocols', link['protocol_id'])
+            # Exact protocol text is retained; this adds the construction behind
+            # the release-specific labels. Guard against repeated authoring runs.
+            if explanation not in p['split_rule']:
+                p['split_rule'] += ' ' + explanation
+            for eid in refs.split():c.field('protocols', p['id'], 'split_rule', eid)
