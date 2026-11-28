@@ -348,6 +348,24 @@ CREATE TABLE split_design_evidence (
   evidence_id TEXT NOT NULL REFERENCES evidence(id),
   PRIMARY KEY(design_id,field,evidence_id)
 );
+-- Editorial synthesis of the source-specific designs, with paragraph-level
+-- primary evidence. This is analysis, not another design classification table.
+CREATE TABLE split_synthesis_sections (
+  id TEXT PRIMARY KEY, title TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK(kind IN ('overview','strategy','interpretation')),
+  sort_order INTEGER NOT NULL UNIQUE
+);
+CREATE TABLE split_synthesis_paragraphs (
+  id TEXT PRIMARY KEY,
+  section_id TEXT NOT NULL REFERENCES split_synthesis_sections(id),
+  body TEXT NOT NULL, sort_order INTEGER NOT NULL,
+  UNIQUE(section_id,sort_order)
+);
+CREATE TABLE split_synthesis_evidence (
+  paragraph_id TEXT NOT NULL REFERENCES split_synthesis_paragraphs(id),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(paragraph_id,evidence_id)
+);
 CREATE TABLE split_audits (
   id TEXT PRIMARY KEY, title TEXT NOT NULL, release_name TEXT NOT NULL,
   evaluation_id TEXT REFERENCES evaluations(id),

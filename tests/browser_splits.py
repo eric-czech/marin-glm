@@ -13,39 +13,35 @@ with sync_playwright() as p:
     url=(ROOT/'index.html').as_uri()
     page.goto(url+'#view=splits');page.wait_for_selector('.split-chart-row')
     assert page.locator('#page-title').inner_text()=='Splits'
-    assert page.locator('.splits h2').first.inner_text()=='Splitting strategies'
-    assert page.locator('#split-design-survey').bounding_box()['y']<page.locator('#split-overlap-heading').bounding_box()['y']
-    assert page.locator('[data-design-id]').count()==10
-    assert page.locator('#design-collection option').count()==len(D['evaluations'])+1
-    # Native chromosome CV and chromosome-weighted zero-shot metrics remain distinct.
-    page.locator('#design-collection').select_option('traitgym')
-    assert page.locator('[data-design-id]').count()==2
-    page.locator('#design-strategy').select_option('split-strategy-chromosome')
-    assert page.locator('[data-design-id]').count()==1
-    assert page.locator('[data-design-id]').get_attribute('data-design-id')=='design-traitgym-fitted'
-    page.locator('.design-toggle').focus();page.keyboard.press('Enter')
-    assert page.locator('.split-design-expanded').count()==1
-    page.locator('.design-protocols summary').click()
-    assert 'GroupKFold' in page.locator('.split-design-expanded').inner_text()
-    page.reload();page.wait_for_selector('.split-design-expanded')
-    assert page.locator('#design-strategy').input_value()=='split-strategy-chromosome'
-    page.locator('#design-filters button[type=reset]').click()
-    page.locator('#design-strategy').select_option('split-strategy-taxon')
-    with page.expect_download() as dl:page.locator('#design-export').click()
-    designs=list(csv.DictReader(io.StringIO(Path(dl.value.path()).read_text())))
-    expected={r['design_id'] for r in D['split_design_strategies'] if r['strategy_id']=='split-strategy-taxon'}
-    assert len(designs)==len(expected)
-    assert all(r['source_urls'] and r['partition_assignment'] and r['validation_model_selection'] for r in designs)
-    assert any('genus' in r['partition_assignment'] for r in designs)
-    page.locator('#design-filters button[type=reset]').click()
-    first=page.locator('[data-design-id]').first.get_attribute('data-design-id')
-    page.locator('#design-next').click()
-    assert page.locator('[data-design-id]').first.get_attribute('data-design-id')!=first
-    # A shared design link locates its own page and associated task protocols.
+    assert page.locator('.splits h2').first.inner_text()=='Overlap in selected splits'
+    assert page.locator('#split-strategies').bounding_box()['y']>page.locator('.split-methods').bounding_box()['y']
+    assert page.locator('#design-filters,.split-design-table,.split-strategy-guide').count()==0
+    assert page.locator('.split-synthesis-section.strategy').count()==11
+    for el in page.locator('[data-synthesis-paragraph]').all():
+        assert el.locator('a.citation[href^="https://"]').count()>0
+    # Navigation uses shareable SPA-compatible anchors, including keyboard/reload.
+    strategy_link=page.locator('.split-page-links a[data-split-section="strategies"]')
+    assert strategy_link.get_attribute('href')=='#view=splits&splitSection=strategies'
+    strategy_link.focus();page.keyboard.press('Enter')
+    assert 'splitSection=strategies' in page.url
+    assert 0<=page.locator('#split-strategies').bounding_box()['y']<40
+    assert 'rows' in page.locator('#split-strategy-overview').inner_text()
+    assert '1,048,576-bp' in page.locator('#split-strategy-regions').inner_text()
+    assert 'pretraining' in page.locator('#split-strategy-overview').inner_text()
+    assert 'min_similarity' in page.locator('#split-strategy-similarity').inner_text()
+    page.reload();page.wait_for_selector('#split-strategies')
+    assert 0<=page.locator('#split-strategies').bounding_box()['y']<40
+    page.locator('.split-synthesis-end a[data-split-section]').click()
+    assert 0<=page.locator('#split-overlap-heading').bounding_box()['y']<40
+    # Old design links and task links still expose the exact cited source rules.
     page.goto(url+'#view=splits&splitDesign=design-ag-variants')
-    page.wait_for_selector('.split-design-expanded')
-    assert page.locator('.design-toggle[aria-expanded=true]').inner_text().startswith('AlphaGenome 1 / 2')
-    assert 'all-folds' in page.locator('[data-design-id="design-ag-variants"]').inner_text()
+    page.wait_for_selector('#split-design-detail')
+    assert page.locator('#split-design-detail h3').inner_text().startswith('AlphaGenome 1 / 2')
+    assert 'all-folds' in page.locator('#split-design-detail').inner_text()
+    assert 0<=page.locator('#split-design-detail h3').bounding_box()['y']<page.viewport_size['height']
+    page.goto(url+'#view=splits&splitSection=taxa')
+    page.wait_for_selector('#split-strategy-taxa')
+    assert 0<=page.locator('#split-strategy-taxa').bounding_box()['y']<40
     page.goto(url+'#view=splits');page.wait_for_selector('.split-chart-row')
     assert page.locator('.split-chart-row').count()==16
     assert page.locator('#split-cross-release .split-chart-row').count()==4
@@ -94,6 +90,7 @@ with sync_playwright() as p:
     page.goto(url+'#view=evaluations&task=plantcad2-ft-cell_type_specific_acr')
     page.wait_for_selector('.task-split-designs');page.locator('.task-split-designs summary').click()
     assert page.locator('.task-split-designs a[href*="design-plantcad-cell"]').count()==1
+    assert page.locator('.task-split-designs summary').inner_text().startswith('Split protocols')
     page.wait_for_selector('.task-split-links');page.locator('.task-split-links summary').click()
     assert page.locator('.task-split-links a[href*="split-plantcad-cell"]').count()==1
     # Mobile uses local scroll containers, not a wider document.
@@ -104,4 +101,4 @@ with sync_playwright() as p:
     assert not errors,errors
     assert not network,network
     b.close()
-print('Splits browser checks passed: figures, units, examples, keyboard, filters, state, CSV and mobile.')
+print('Splits browser checks passed: cited synthesis, anchors, source protocols, figures, units, examples, filters, CSV and mobile.')

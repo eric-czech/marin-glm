@@ -12,7 +12,8 @@ INSERT_ORDER=['metadata','sources','papers','evidence','models','model_propertie
               'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
               'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings',
               'split_strategies','split_protocol_strategies','split_designs','split_design_evaluations',
-              'split_design_protocols','split_design_strategies','split_design_evidence','split_audits','split_audit_tasks',
+              'split_design_protocols','split_design_strategies','split_design_evidence',
+              'split_synthesis_sections','split_synthesis_paragraphs','split_synthesis_evidence','split_audits','split_audit_tasks',
               'split_partitions','split_comparisons','split_audit_files','split_examples']
 
 def load_catalogue(data, db):
@@ -128,6 +129,14 @@ def load_catalogue(data, db):
         ON t.evaluation_id=d.evaluation_id
         WHERE d.design_id=l.design_id AND t.task_id=p.task_id)''').fetchall()
     if bad:raise ValueError('Split design protocol outside its named collections: '+str([tuple(r) for r in bad]))
+    bad=db.execute('''SELECT p.id FROM split_synthesis_paragraphs p
+      LEFT JOIN split_synthesis_evidence e ON e.paragraph_id=p.id
+      WHERE e.paragraph_id IS NULL''').fetchall()
+    if bad:raise ValueError('Split synthesis paragraph lacks evidence: '+str([r[0] for r in bad]))
+    bad=db.execute('''SELECT s.id FROM split_synthesis_sections s
+      LEFT JOIN split_synthesis_paragraphs p ON p.section_id=s.id
+      WHERE p.id IS NULL''').fetchall()
+    if bad:raise ValueError('Empty split synthesis section: '+str([r[0] for r in bad]))
     for row in db.execute('SELECT * FROM field_evidence'):
         if row['entity_table'] not in INSERT_ORDER:raise ValueError('Unknown evidence table')
         if not db.execute(f'SELECT 1 FROM {row["entity_table"]} WHERE id=?',(row['entity_id'],)).fetchone():raise ValueError('Missing field evidence entity: '+row['entity_id'])
