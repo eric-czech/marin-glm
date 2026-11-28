@@ -445360,7 +445360,7 @@
       },
       {
         "id": "transcript-structures",
-        "label": "Spliced transcripts",
+        "label": "Splice isoforms",
         "group": "Splicing",
         "definition": "Joint spliced transcript paths; this does not imply all-isoform recall or TSS/TES accuracy."
       },

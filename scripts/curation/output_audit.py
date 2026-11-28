@@ -255,7 +255,7 @@ def populate(d):
     grouped=[
       ('gene-structures','Gene structures','Gene annotation','Joint coding/gene structures; terminal, phase and UTR rules differ by protocol.'),
       ('coding-sequence','Coding sequence','Gene annotation','CDS-specific sequence, coding-variant, coding-function or component-annotation targets. Excludes mixed region classifiers and broad genomic context. Hollow symbols are protein-only references.'),
-      ('transcript-structures','Spliced transcripts','Splicing','Joint spliced transcript paths; this does not imply all-isoform recall or TSS/TES accuracy.'),
+      ('transcript-structures','Splice isoforms','Splicing','Joint spliced transcript paths; this does not imply all-isoform recall or TSS/TES accuracy.'),
       ('gene-elements','Gene elements','Gene annotation','Supplied or detected gene/CDS/exon/intron components; output filter separates isolated labels from dense labels and interval detection.'),
       ('splice-elements','Splice sites / junctions','Splicing','Component splice-site or junction targets; full transcript paths are shown separately.'),
       ('utrs','UTRs','Gene annotation','5′/3′ untranslated-region tasks. These are distinct from translation start/stop detection.'),

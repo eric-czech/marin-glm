@@ -177,11 +177,29 @@
     return items.slice((page-1)*size,page*size);
   }
   const brief=(values,max=2)=>{const unique=[...new Set(values)];return unique.length?`<span title="${esc(unique.join('; '))}">${esc(unique.slice(0,max).join('; '))}${unique.length>max?' +'+(unique.length-max):''}</span>`:'';};
-  const resourceLabel=r=>(r.host==='huggingface'?'HF':r.host==='github'?'GH':r.host==='zenodo'?'Zenodo':'Source')+' '+({dataset:'data',manifest:'manifest','evaluation-code':'code',results:'results'}[r.kind]);
+  const referenceGenome=r=>/^https:\/\/www\.ncbi\.nlm\.nih\.gov\/datasets\/genome\//.test(r.url);
+  const resourceLabel=r=>(r.host==='huggingface'?'HF':r.host==='github'?'GH':r.host==='zenodo'?'Zenodo':referenceGenome(r)?'NCBI':'Source')+' '+({dataset:'data',manifest:'manifest','evaluation-code':'code',results:'results'}[r.kind]);
+  function resourceContext(r){
+    if(referenceGenome(r))return r.title.replace(/\s*\/\s*GC[AF]_\d+\.\d+$/,'');
+    // Put file names before long repository paths so split/shard differences
+    // remain visible in the compact column. Full titles stay in the tooltip.
+    const repository=r.url.match(/^https:\/\/(?:huggingface\.co\/(?:datasets\/)?|github\.com\/)([^/]+\/[^/]+)/)?.[1];
+    const name=repository&&r.title.startsWith(repository)?r.title.slice(repository.length).replace(/^[\s/:]+/,'')||repository:r.title;
+    const file=name.match(/^(.*)\/([^/]+\.(?:csv|tsv|parquet|json|npz|zip|gz|md|py|fa|fasta|bed|xlsx))$/i);
+    return file?file[2]+' · '+file[1]:name;
+  }
   function resourceLinks(links){
-    const rows=[...new Map(links.map(l=>[l.resource_id,resources[l.resource_id]])).values()].filter(Boolean);
+    // Multiple source associations can refer to the same destination. Preserve
+    // their provenance in details, but show each destination/kind once here.
+    const rows=[...new Map(links.map(l=>resources[l.resource_id]).filter(Boolean).map(r=>[r.kind+'\n'+r.url,r])).values()];
     const ordered=rows.sort((a,b)=>['dataset','manifest','evaluation-code','results'].indexOf(a.kind)-['dataset','manifest','evaluation-code','results'].indexOf(b.kind));
-    return ordered.length?'<span class="data-links">'+ordered.slice(0,3).map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noopener" title="${esc(r.title+'; '+r.availability+'; '+r.notes)}">${esc(resourceLabel(r))}</a>`).join(' ')+(ordered.length>3?`<small>+${ordered.length-3} in details</small>`:'')+'</span>':'<span class="muted">Source citations</span>';
+    const groups=new Map();
+    for(const r of ordered.slice(0,3)){
+      const label=referenceGenome(r)?'NCBI reference genomes':resourceLabel(r);
+      if(!groups.has(label))groups.set(label,[]);
+      groups.get(label).push(r);
+    }
+    return ordered.length?'<div class="data-links">'+[...groups].map(([label,items])=>`<div class="data-link-group"><span class="resource-kind">${esc(label)}</span>`+items.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="${esc(resourceLabel(r)+': '+r.title)}" title="${esc(r.title+'; '+r.availability+'; '+r.notes)}">${esc(resourceContext(r))}</a>`).join('')+'</div>').join('')+(ordered.length>3?`<small>+${ordered.length-3} in details</small>`:'')+'</div>':'<span class="muted">Source citations</span>';
   }
   function resourceDetails(links){
     if(!links.length)return '';
