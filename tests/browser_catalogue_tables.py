@@ -31,6 +31,9 @@ with sync_playwright() as p:
     assert page.locator('.catalogue-expanded').count() == 1
     page.locator('[data-model-open="genosm"]').click()
     assert page.locator('.catalogue-expanded').count() == 0
+    page.locator('[data-model-open="evo2"]').click()
+    repeated='Pinned configuration and data artifacts support specified fields; original training was not independently rerun.'
+    assert page.locator('#model-detail-evo2').inner_text().count(repeated) == 1
     # A model-to-paper link selects the matching paper without losing the table.
     page.locator('[data-model-id="aido2"] a[href^="#view=papers"]').click()
     page.wait_for_selector('.paper-table')
@@ -41,6 +44,8 @@ with sync_playwright() as p:
     assert 'retrieved' in page.locator('.paper-metadata').inner_text()
     page.goto(url+'#view=papers');page.wait_for_selector('.paper-table')
     assert page.locator('.paper-table .catalogue-expanded').count() == 0
+    for paper in ['cerberus', 'opensplice', 'gfmbench']:
+        assert 'Abstract / metadata' in page.locator(f'[data-paper-id="{paper}"]').inner_text()
     assert page.locator('.paper-table tbody tr>td:nth-child(2)>a[href^="https://"]').count() == len(DATA['papers'])
     page.locator('[data-paper-open="loam"]').focus();page.keyboard.press('Enter')
     assert 'Abstract / metadata' in page.locator('[data-paper-id="loam"]').inner_text()

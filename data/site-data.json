@@ -387,8 +387,8 @@
       "retrieved": "2026-11-25",
       "sha256": null,
       "local_path": null,
-      "availability": "available",
-      "notes": null
+      "availability": "not-retrieved",
+      "notes": "Complete primary abstract and author release inspected. Full publisher article, PDF and JATS could not be retrieved because the publisher returned HTTP 429."
     },
     {
       "id": "src-dart-definition",
@@ -4551,7 +4551,7 @@
       "retrieved": "2026-11-26",
       "sha256": null,
       "local_path": null,
-      "availability": "available",
+      "availability": "not-retrieved",
       "notes": "Paper abstract/metadata and pinned repository documentation inspected. Full-text PDF retrieval was rate-limited; no full-paper audit claimed. Distinct from the earlier GFMBench name used by the OmniGenBench authors."
     },
     {
@@ -9639,7 +9639,7 @@
       "retrieved": "2026-11-27",
       "sha256": null,
       "local_path": null,
-      "availability": "available",
+      "availability": "not-retrieved",
       "notes": "Paper identity and associated code verified. Full-text retrieval returned HTTP403 in this audit; no full-paper audit is claimed. Official repository provides assay processing and predictor scripts."
     },
     {
@@ -45464,10 +45464,10 @@
     {
       "id": "completion-findlay-target",
       "source_id": "completion-findlay-comparison",
-      "locator": "All287 released rows; unique scores, coordinate offset, reference/alternate alleles; source columnAI",
+      "locator": "All 287 released rows; unique scores, coordinate offset, reference/alternate alleles; source columnAI",
       "url": "https://github.com/eric-czech/marin-glm/blob/main/data/nabench-findlay-target-review.json",
       "basis": "data",
-      "statement": "All287 NABench scores match uniquely to d11/lib.loess.r1 in Findlay Supplementary Table1, maximum absolute error8.9e-16. Every row also matches transcript-strand alleles and one genomic coordinate offset. All are experimentX20. No other numeric column matches all287; neither mean.rna.score nor function.score.mean does. This data comparison identifies the released target; the NABench paper/filename did not name the column.",
+      "statement": "All 287 NABench scores match uniquely to d11/lib.loess.r1 in Findlay Supplementary Table1, maximum absolute error8.9e-16. Every row also matches transcript-strand alleles and one genomic coordinate offset. All are experimentX20. No other numeric column matches all 287; neither mean.rna.score nor function.score.mean does. This data comparison identifies the released target; the NABench paper/filename did not name the column.",
       "inspected": "2026-11-27"
     },
     {
@@ -47127,7 +47127,7 @@
       "id": "loam",
       "architecture": "25–624M causal Transformer",
       "tokenization": "Single-base A/C/G/T",
-      "training_data": "67.5 Gbp; 15,640 soil species-representative long-read MAGs.",
+      "training_data": "67.5 Gbp; 15,640 representative soil microbial genomes assembled from long reads.",
       "context": "Training: 8,192 nt."
     },
     {
@@ -58472,7 +58472,7 @@
       "name": "NABench BRCA1 exon20: day-11 selection score",
       "dataset_name": "NABench / Gregory_2018_mRNA",
       "target": "Findlay2018 d11/lib.loess.r1: replicate-1 LOESS-adjusted day-11/library genomic-DNA selection score",
-      "description": "Predict the source experimentX20 BRCA1 selection score from the released 100-character sequence. Target identity is established by matching all287 scores, alleles and genomic-coordinate offsets to the original source table.",
+      "description": "Predict the source experimentX20 BRCA1 selection score from the released 100-character sequence. Target identity is established by matching all 287 scores, alleles and genomic-coordinate offsets to the original source table.",
       "task_type": "regression / ranking",
       "label_basis": "Original BRCA1 saturation-genome-editing selection score, replicate1; matched to source table columnAI",
       "status": "artifact-audited",
@@ -248943,7 +248943,7 @@
       "task_id": "plantcad2-conservation_within_poaceae_tis",
       "evaluation_id": "plantcad2-zero",
       "severity": "discrepancy",
-      "description": "Methods state 36,668TIS sites(26,653/10,015), whereasTable 1/H Fcard state 36,662(26,650/10,012). Non-TIS methods 183,687 versus card 183,685 also differ. Preserve reported counts and inspected artifact counts separately.",
+      "description": "PlantCAD2 Methods report 36,668 translation-initiation sites (26,653/10,015), while Table 1 and the Hugging Face card report 36,662 (26,650/10,012). Non-initiation sites also differ: 183,687 in Methods versus 183,685 in the card. Reported counts and counts measured from released files are retained separately.",
       "evidence_id": "plantcad2-conservation"
     },
     {
@@ -248959,7 +248959,7 @@
       "task_id": "plantcad2-ft-cell_type_specific_acr",
       "evaluation_id": "plantcad2-ft",
       "severity": "discrepancy",
-      "description": "PaperTable 2 summarizes mean AUPRC across 92 cell types, while results prose and released scorer use micro-averaged precision-recall/average precision. These aggregations must remain distinct.",
+      "description": "Paper Table 2 summarizes mean AUPRC across 92 cell types, while results prose and released scorer use micro-averaged precision-recall/average precision. These aggregations must remain distinct.",
       "evidence_id": "plantcad2-ft-metrics"
     },
     {
@@ -249543,7 +249543,7 @@
       "task_id": "bacbench-operondb",
       "evaluation_id": "bacbench",
       "severity": "discrepancy",
-      "description": "OperonDBnegativecandidatesarecontiguoussame-contigwindowsandarenotexplicitlycheckedtoexcludeknownoperons.Thetaskassessescandidate-setdiscriminationratherthanindependentlyvalidatedpositive/negativegene-pairclassification.",
+      "description": "OperonDB negative candidates are contiguous gene windows from the same contig. The code does not explicitly exclude known operons from these candidates. The task therefore measures ranking within each candidate set, not classification of independently validated positive and negative gene pairs.",
       "evidence_id": "final-bacbench-operondb-scorer"
     },
     {
@@ -249807,7 +249807,7 @@
       "task_id": "nabench-findlay-readout",
       "evaluation_id": "nabench",
       "severity": "discrepancy",
-      "description": "The released Gregory_2018_mRNA filename does not identify the scored phenotype. Direct comparison maps all287 values to the original BRCA1 exon20-region replicate-1 day-11/library genomic-DNA selection column, with matching alleles and coordinates. It is not the original mean RNA or mean function score.",
+      "description": "The released Gregory_2018_mRNA filename does not identify the scored phenotype. Direct comparison maps all 287 values to the original BRCA1 exon20-region replicate-1 day-11/library genomic-DNA selection column, with matching alleles and coordinates. It is not the original mean RNA or mean function score.",
       "evidence_id": "completion-findlay-target"
     },
     {
@@ -462191,91 +462191,91 @@
         "id": "gene-structures",
         "label": "Gene structures",
         "group": "Gene annotation",
-        "definition": "Joint coding/gene structures; terminal, phase and UTR rules differ by protocol."
+        "definition": "Recover a gene’s connected exon–intron structure and score the structure as a whole. Requirements for coding boundaries, reading frame and untranslated regions vary by task."
       },
       {
         "id": "coding-sequence",
         "label": "Coding sequence",
         "group": "Gene annotation",
-        "definition": "CDS-specific sequence, coding-variant, coding-function or component-annotation targets. Excludes mixed region classifiers and broad genomic context. Hollow symbols are protein-only references."
+        "definition": "Tasks restricted to protein-coding DNA: coding-region classification, variant effects, coding function or sequence generation. Outlined symbols are protein-input reference tasks."
       },
       {
         "id": "gene-elements",
         "label": "Gene elements",
         "group": "Gene annotation",
-        "definition": "Supplied or detected gene/CDS/exon/intron components; output filter separates isolated labels from dense labels and interval detection."
+        "definition": "Identify or classify gene components, such as exons and introns. These tasks score individual regions, intervals or base labels rather than a connected gene structure."
       },
       {
         "id": "utrs",
         "label": "UTRs",
         "group": "Gene annotation",
-        "definition": "5′, 3′ or pooled untranslated-region targets. Translation start/stop detection is separate."
+        "definition": "Tasks on 5′ or 3′ untranslated regions (UTRs): the parts of a transcript before or after its protein-coding sequence."
       },
       {
         "id": "translation-boundaries",
         "label": "Translation start / stop",
         "group": "Gene annotation",
-        "definition": "Initiation/termination codons or boundary tasks, not transcript starts/ends."
+        "definition": "Locate or evaluate the start and stop codons of protein translation. These differ from the positions where a transcript starts and ends."
       },
       {
         "id": "transcript-structures",
         "label": "Splice isoforms",
         "group": "Splicing",
-        "definition": "Joint spliced transcript paths; this does not imply all-isoform recall or TSS/TES accuracy."
+        "definition": "Recover which splice junctions connect into a transcript. Tasks may score the splice pattern without testing transcript ends or recovery of every isoform."
       },
       {
         "id": "splice-elements",
         "label": "Splice sites / junctions",
         "group": "Splicing",
-        "definition": "Component splice-site or junction targets; full transcript paths are shown separately."
+        "definition": "Predict splice donor or acceptor sites, or individual junctions between exons. Connecting them into a transcript is evaluated under Splice isoforms."
       },
       {
         "id": "regulatory-elements",
         "label": "Regulatory elements",
         "group": "Regulation",
-        "definition": "Promoter/enhancer/TF-binding/regulatory targets; output form distinguishes isolated values from dense quantitative profiles."
+        "definition": "Tasks on promoters, enhancers, transcription-factor binding sites and other sequences that regulate gene expression. Outputs include activity scores, labels, measurements along a sequence and designed sequences."
       },
       {
         "id": "chromatin-organization",
         "label": "Chromatin boundaries",
         "group": "Regulation",
-        "definition": "TAD/insulation boundary classification or sequence design; no complete regulatory-network task is inferred."
+        "definition": "Classify or design sequences at boundaries between chromatin domains, including topologically associating domains (TADs)."
       },
       {
         "id": "rna-features",
         "label": "RNA features",
         "group": "RNA",
-        "definition": "Mature/reporter mRNA and ncRNA feature or sequence tasks; not reconstruction of genomic transcript structure."
+        "definition": "Tasks on mature or reporter mRNA, noncoding RNA and functional RNA sequences. Reconstructing transcripts from genomic DNA is shown under Splice isoforms."
       },
       {
         "id": "clusters-operons",
         "label": "Gene clusters / operons",
         "group": "Microbial regions",
-        "definition": "Biosynthetic cluster and operon targets; supplied-region or supplied-pair tasks remain distinguishable by scored output."
+        "definition": "Tasks on biosynthetic gene clusters or operons: groups of genes involved in a biosynthetic pathway or transcribed together. Some tasks use supplied regions or gene pairs."
       },
       {
         "id": "crispr-arrays",
         "label": "CRISPR arrays",
         "group": "Microbial regions",
-        "definition": "CRISPR repeat/spacer arrays or their components. The output distinguishes sequence generation, supplied components and local diagnostics."
+        "definition": "Tasks on CRISPR repeat–spacer arrays or their components, including sequence generation and analysis of model scores."
       },
       {
         "id": "repetitive",
         "label": "Repeats / TEs",
         "group": "Sequence context",
-        "definition": "Repeat/transposable element context or labels."
+        "definition": "Tasks on repetitive DNA or transposable elements (TEs), which can move or copy themselves within a genome."
       },
       {
         "id": "intergenic-context",
         "label": "Intergenic DNA",
         "group": "Sequence context",
-        "definition": "Intergenic sequence context or labels."
+        "definition": "Tasks on DNA between genes, including region classification and analysis of model scores."
       },
       {
         "id": "broad-context",
         "label": "Broad / unspecified",
         "group": "Sequence context",
-        "definition": "Broad sequence or no specific feature assignment; does not imply all functional elements are evaluated."
+        "definition": "Whole-genome, mixed-region or other tasks that do not isolate a specific genomic feature. Presence here does not establish coverage of each feature."
       }
     ],
     "modes": [

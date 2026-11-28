@@ -78,7 +78,7 @@ def populate(d):
         'Conserved whole-genome alignment windows; species-tree conditioning.',
         '128 or 256 aligned positions, depending on species/alignment.', 'summary-gpnstar-methods')
     row('loam', '25–624M causal Transformer', 'Single-base A/C/G/T',
-        '67.5 Gbp; 15,640 soil species-representative long-read MAGs.',
+        '67.5 Gbp; 15,640 representative soil microbial genomes assembled from long reads.',
         'Training: 8,192 nt.', 'final-loam-model-card')
     row('alphagenome', 'Convolutional U-Net + attention', 'One-hot nucleotide input',
         'Supervised human/mouse functional-genomics measurements.',

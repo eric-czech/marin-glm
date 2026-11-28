@@ -72,6 +72,19 @@ with sync_playwright() as p:
     structure=page.locator('.coverage-dot[data-coverage-task="spliceai2-top-transcript"]')
     assert structure.count()==1 and structure.get_attribute('data-feature')=='transcript-structures'
     assert page.locator('.coverage-dot[data-coverage-task="evo-exon-intron"][data-feature="gene-structures"]').count()==0
+    # Column definitions are available without a mouse; special marker styles
+    # describe the input or publication limitation rather than implying coverage.
+    heading=page.locator('[data-coverage-feature="gene-structures"]')
+    heading.focus();page.wait_for_function('!document.querySelector(".coverage-tooltip").hidden')
+    assert 'exon–intron' in page.locator('.coverage-tooltip').inner_text()
+    assert heading.get_attribute('aria-description')==next(f['definition'] for f in DATA['coverage']['groupedFeatures'] if f['id']=='gene-structures')
+    for selector, explanation in [('.coverage-dot.protein','protein inputs rather than DNA'),
+                                  ('.coverage-dot.panel','source omits target, cohort or protocol details')]:
+        page.locator(selector).first.focus()
+        page.wait_for_function('(text)=>!document.querySelector(".coverage-tooltip").hidden && document.querySelector(".coverage-tooltip").textContent.includes(text)',arg=explanation)
+    page.locator('.coverage-symbol-notes summary').click()
+    assert 'Outlined symbols use protein inputs rather than DNA' in page.locator('.coverage-symbol-notes').inner_text()
+    page.locator('.coverage-symbol-notes summary').click()
     page.screenshot(path='/tmp/marin-glm-coverage.png')
     # Pointer and keyboard tooltips identify the actual source, not just shape.
     dot=page.locator('[data-coverage-task="ntv3-annotation-gene"]').first
@@ -87,7 +100,7 @@ with sync_playwright() as p:
     page.locator('#more-filters>summary').click()
     page.select_option('#output','output-dense-labels')
     assert page.locator('#more-filter-count').inner_text()=='(1 active)'
-    assert 'Scored output:' in page.locator('#active-filters').inner_text()
+    assert 'Output type:' in page.locator('#active-filters').inner_text()
     page.locator('#more-filters>summary').click()
     assert not page.locator('#more-filters').evaluate('e=>e.open')
     click_mode('tasks')
