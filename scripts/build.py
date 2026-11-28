@@ -9,7 +9,7 @@ INSERT_ORDER=['metadata','sources','papers','evidence','models','model_propertie
               'evaluations','tasks','task_outputs','task_feature_scopes','variants','assay_tracks','task_tracks','evaluation_tasks','task_populations','task_categories',
               'protocols','protocol_field_reviews','protocol_metrics','counts','model_evaluations','model_collection_evaluations','findings',
               'source_reviews','source_limits','data_resources','task_resources','evaluation_resources','task_redirects',
-              'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
+              'project_reviews','projects','project_summaries','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
               'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings',
               'split_strategies','split_protocol_strategies','split_designs','split_design_evaluations',
               'split_design_protocols','split_design_strategies','split_design_evidence',
@@ -148,6 +148,13 @@ def load_catalogue(data, db):
           LEFT JOIN field_evidence e ON e.entity_table='model_summaries' AND e.entity_id=m.id AND e.field=?
           WHERE s.id IS NULL OR e.evidence_id IS NULL''',(field,)).fetchall()
         if bad:raise ValueError('Model summary field lacks evidence: '+field+' '+str([r[0] for r in bad]))
+    for field in ['coverage','procedures']:
+        bad=db.execute('''SELECT p.id FROM projects p LEFT JOIN project_summaries s ON s.id=p.id
+          LEFT JOIN field_evidence e ON e.entity_table='project_summaries' AND e.entity_id=p.id AND e.field=?
+          WHERE s.id IS NULL OR coalesce(s.coverage,'')='' OR coalesce(s.procedures,'')='' OR e.evidence_id IS NULL''',(field,)).fetchall()
+        if bad:raise ValueError('Project summary field lacks evidence: '+field+' '+str([r[0] for r in bad]))
+    if db.execute("SELECT 1 FROM project_adoptions WHERE trim(summary)=''").fetchone():
+        raise ValueError('Project adoption summary is empty')
     for row in db.execute('SELECT * FROM field_evidence'):
         if row['entity_table'] not in INSERT_ORDER:raise ValueError('Unknown evidence table')
         if not db.execute(f'SELECT 1 FROM {row["entity_table"]} WHERE id=?',(row['entity_id'],)).fetchone():raise ValueError('Missing field evidence entity: '+row['entity_id'])

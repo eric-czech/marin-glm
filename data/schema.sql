@@ -54,6 +54,10 @@ CREATE TABLE projects (
   description TEXT NOT NULL, scope_note TEXT NOT NULL,
   evidence_id TEXT NOT NULL REFERENCES evidence(id)
 );
+CREATE TABLE project_summaries (
+  id TEXT PRIMARY KEY REFERENCES projects(id),
+  coverage TEXT NOT NULL, procedures TEXT NOT NULL
+);
 CREATE TABLE project_review_papers (
   review_id TEXT NOT NULL REFERENCES project_reviews(id),
   paper_id TEXT NOT NULL REFERENCES papers(id),
@@ -73,7 +77,7 @@ CREATE TABLE project_adoptions (
   paper_id TEXT REFERENCES papers(id), adopter_group TEXT NOT NULL,
   kind TEXT NOT NULL CHECK(kind IN ('evaluation-use','software-use','dataset-reuse','citation-only')),
   independence TEXT NOT NULL CHECK(independence IN ('independent','shared-authorship','not-established')),
-  scope TEXT NOT NULL, independence_note TEXT NOT NULL,
+  scope TEXT NOT NULL, summary TEXT NOT NULL, independence_note TEXT NOT NULL,
   evidence_id TEXT NOT NULL REFERENCES evidence(id)
 );
 CREATE VIEW project_summary AS

@@ -8,7 +8,7 @@ The primary models are Evo 1, Evo 2, CENO, Carbon, Carbon-X, GENERator, GENERato
 
 All indexed task definitions and collections have completed source reviews. A review can establish that a publication omits a field or that a release is inaccessible; it cannot supply missing evidence. Those limitations remain explicit. [Resolved fields and source findings](docs/source-review.md) document protocol choices, target identification and dataset consolidation. The catalogue does not assign ID/OD categories or rank models, and record counts are not counts of independent biological assays.
 
-Models and Papers use compact tables with expandable, directly linkable source records. `model_summaries` stores the short comparison fields; `field_evidence` cites architecture, encoding, training data and context separately. Detailed model properties, source limits and task associations remain available in the expanded row.
+Projects, Models and Papers use compact tables with expandable, directly linkable source records. Project comparisons cover biological tasks, evaluation methods, releases and documented external use; adoption summaries identify the subset actually used. `model_summaries` stores the short comparison fields; `field_evidence` cites architecture, encoding, training data and context separately. Detailed model properties, source limits and task associations remain available in the expanded row.
 
 ## Build and verification
 
@@ -38,7 +38,7 @@ A task is **dataset × prediction target**. Species, cell types, assay tracks, c
 | `categories`, `task_categories`, `task_outputs`, `task_feature_scopes` | Application, capability, feature and evaluated-output decisions. |
 | `source_reviews`, `source_limits` | Completed review scope and precise unreported, unreleased, inaccessible or conflicting fields. |
 | `data_resources`, `task_resources`, `evaluation_resources` | Explicit dataset, manifest, code and result links. |
-| `project_reviews`, `projects`, `project_adoptions` | Dedicated benchmark qualification and independent use. |
+| `project_reviews`, `projects`, `project_summaries`, `project_adoptions` | Dedicated benchmark qualification, cited scope/method comparisons and independent use. |
 | `split_strategies`, `split_protocol_strategies`, `split_designs` | Cited split definitions and source-specific protocols. |
 | `split_synthesis_*` | Strategy summary table, explanations and primary-source citations. |
 | `split_audits`, `split_audit_tasks`, `split_partitions`, `split_comparisons` | Release/cohort scope, denominators and measured separation axes. |
@@ -69,7 +69,7 @@ Data links distinguish **HF/GH data**, **manifests**, **evaluation code** and **
 
 ## Evaluations interface
 
-Evaluations opens in **Coverage**, with **Tasks** and **Collections** as alternate views. Search, Collection, Organism and Genomic feature form the primary filter row. Application, Model capability, Scored output and Benchmark project are available under **More filters**. Active secondary filters remain visible as removable chips and a count on the disclosure; shared links reveal their controls automatically. Original-paper model use and subsequent benchmark participation remain in the source associations and exports. Cell selection narrows the same task table. Sorting, pagination, filters and expanded records are retained in URL fragments. CSV exports include every matching task, including off-page results.
+Evaluations opens in **Coverage**, with **Tasks** and **Collections** as alternate views. Search, Collection, Organism and Genomic feature form the primary filter row. Application, Model capability, Output type and Benchmark project are available under **More filters**. Active secondary filters remain visible as removable chips and a count on the disclosure; shared links reveal their controls automatically. Original-paper model use and subsequent benchmark participation remain in the source associations and exports. Cell selection narrows the same task table. Sorting, pagination, filters and expanded records are retained in URL fragments. CSV exports include every matching task, including off-page results.
 
 Coverage uses four colors for prediction, generation, retrieval/comparison and analysis/diagnostics. Source shapes are ordered as follows:
 

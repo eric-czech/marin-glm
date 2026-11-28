@@ -275802,6 +275802,265 @@
       "field": "context",
       "evidence_id": "spliceai2-architecture",
       "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "gb",
+      "field": "coverage",
+      "evidence_id": "gb-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "gb",
+      "field": "coverage",
+      "evidence_id": "gb-human_enhancers_cohn",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "gb",
+      "field": "coverage",
+      "evidence_id": "gb-drosophila_enhancers_stark",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "gb",
+      "field": "procedures",
+      "evidence_id": "gb-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dart",
+      "field": "coverage",
+      "evidence_id": "dart-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dart",
+      "field": "procedures",
+      "evidence_id": "final-dart-methods",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "traitgym",
+      "field": "coverage",
+      "evidence_id": "traitgym-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "traitgym",
+      "field": "coverage",
+      "evidence_id": "traitgym-mendelian-data",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "traitgym",
+      "field": "coverage",
+      "evidence_id": "traitgym-complex-data",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "traitgym",
+      "field": "procedures",
+      "evidence_id": "traitgym-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "traitgym",
+      "field": "procedures",
+      "evidence_id": "traitgym-mendelian-model",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "traitgym",
+      "field": "procedures",
+      "evidence_id": "traitgym-complex-model",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "coverage",
+      "evidence_id": "project-bend-intent",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "coverage",
+      "evidence_id": "bend1-gene-method",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "procedures",
+      "evidence_id": "bend1-gene-method",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "procedures",
+      "evidence_id": "bend1-variant-readout",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "procedures",
+      "evidence_id": "final-bend2-fixed-ridge",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "lrb",
+      "field": "coverage",
+      "evidence_id": "project-lrb-intent",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "lrb",
+      "field": "coverage",
+      "evidence_id": "final-lrb-loader-evidence",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "lrb",
+      "field": "procedures",
+      "evidence_id": "final-lrb-workshop-protocol",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dnalongbench",
+      "field": "coverage",
+      "evidence_id": "final-dnalongbench-tasks",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dnalongbench",
+      "field": "coverage",
+      "evidence_id": "final-dnalongbench-loaders-evidence",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dnalongbench",
+      "field": "procedures",
+      "evidence_id": "final-dnalongbench-tasks",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "rna",
+      "field": "coverage",
+      "evidence_id": "rnagym-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "rna",
+      "field": "procedures",
+      "evidence_id": "rnagym-scorer-audit",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "rna",
+      "field": "procedures",
+      "evidence_id": "rnagym-split-audit",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "mrna",
+      "field": "coverage",
+      "evidence_id": "mrna-catalog",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "mrna",
+      "field": "procedures",
+      "evidence_id": "final-mrna-probe-semantics",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dgeb",
+      "field": "coverage",
+      "evidence_id": "dgeb-definition",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dgeb",
+      "field": "procedures",
+      "evidence_id": "final-dgeb-scorers",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bacbench",
+      "field": "coverage",
+      "evidence_id": "project-bacbench-intent",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bacbench",
+      "field": "procedures",
+      "evidence_id": "final-bacbench-essential-scorer",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bacbench",
+      "field": "procedures",
+      "evidence_id": "final-bacbench-phenotype-scorer",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bacbench",
+      "field": "procedures",
+      "evidence_id": "final-bacbench-essential-native-train",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "coverage",
+      "evidence_id": "final-bend2-prior-scoring",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "bend",
+      "field": "coverage",
+      "evidence_id": "final-bend2-fixed-ridge",
+      "note": null
+    },
+    {
+      "entity_table": "project_summaries",
+      "entity_id": "dnalongbench",
+      "field": "procedures",
+      "evidence_id": "project-chunker-dnalong",
+      "note": null
     }
   ],
   "project_reviews": [
@@ -277306,7 +277565,8 @@
       "independence": "independent",
       "scope": "Genomic Benchmarks sequence-classification evaluation.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-chunker-gb"
+      "evidence_id": "project-chunker-gb",
+      "summary": "DNAChunker: sequence classification."
     },
     {
       "id": "adoption-gb-generator",
@@ -277317,7 +277577,8 @@
       "independence": "independent",
       "scope": "Original GENERator evaluation on the Genomic Benchmarks dataset collection.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "generator-eval-methods"
+      "evidence_id": "generator-eval-methods",
+      "summary": "GENERator: sequence classification."
     },
     {
       "id": "adoption-dart-patch",
@@ -277328,7 +277589,8 @@
       "independence": "independent",
       "scope": "DART tasks 1–5 with protocol-specific zero-shot and frozen-probe settings.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-patch-dart"
+      "evidence_id": "project-patch-dart",
+      "summary": "PatchDNA: tasks 1–5, with zero-shot and frozen-embedding protocols."
     },
     {
       "id": "adoption-dart-evo",
@@ -277339,7 +277601,8 @@
       "independence": "independent",
       "scope": "Original Evo 2 DART tasks 1,2,5 only; caQTL/dsQTL endpoints, not full-suite use.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "evo-a3"
+      "evidence_id": "evo-a3",
+      "summary": "Evo 2: tasks 1, 2 and 5; task 5 uses accessibility-variant endpoints."
     },
     {
       "id": "adoption-trait-carbon",
@@ -277350,7 +277613,8 @@
       "independence": "independent",
       "scope": "TraitGym Mendelian variant evaluation; protocol and cohort documented separately.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-carbon-traitgym"
+      "evidence_id": "project-carbon-traitgym",
+      "summary": "Carbon: Mendelian regulatory variants."
     },
     {
       "id": "adoption-trait-ceno",
@@ -277361,7 +277625,8 @@
       "independence": "independent",
       "scope": "TraitGym Mendelian and complex-trait evaluation with context/protocol variants.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-ceno-traitgym"
+      "evidence_id": "project-ceno-traitgym",
+      "summary": "CENO: Mendelian and complex-trait variants."
     },
     {
       "id": "adoption-trait-gpn",
@@ -277372,7 +277637,8 @@
       "independence": "shared-authorship",
       "scope": "TraitGym cohorts used in GPN-Star; retained as related-author follow-up, not independent adoption.",
       "independence_note": "TraitGym and GPN-Star are Song lab/Benegas-lineage work; this follow-up does not contribute to the external-group threshold.",
-      "evidence_id": "gpn-benchmarks"
+      "evidence_id": "gpn-benchmarks",
+      "summary": "GPN-Star: related-author follow-up; excluded from the independent-group count."
     },
     {
       "id": "adoption-bend-chunker",
@@ -277383,7 +277649,8 @@
       "independence": "independent",
       "scope": "Original BEND, seven downstream tasks. No BEND 2.0 use asserted.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-chunker-bend"
+      "evidence_id": "project-chunker-bend",
+      "summary": "DNAChunker: original BEND’s seven tasks."
     },
     {
       "id": "adoption-bend-patch",
@@ -277394,7 +277661,8 @@
       "independence": "independent",
       "scope": "Original BEND gene finding, chromatin annotation and additional long-range/VEP endpoints; not BEND 2.0.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-patch-bend"
+      "evidence_id": "project-patch-bend",
+      "summary": "PatchDNA: original BEND annotation, chromatin and variant tasks. No BEND 2.0 adoption asserted."
     },
     {
       "id": "adoption-lrb-patch",
@@ -277405,7 +277673,8 @@
       "independence": "independent",
       "scope": "LRB CAGE subset; context/readout differs from short classification tasks.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-patch-lrb"
+      "evidence_id": "project-patch-lrb",
+      "summary": "PatchDNA: transcription-initiation (CAGE) subset."
     },
     {
       "id": "adoption-lrb-factory",
@@ -277416,7 +277685,8 @@
       "independence": "independent",
       "scope": "LRB aggregate reported in Table 8. The aggregate alone does not identify each retained task-level cohort/metric; it is adoption evidence, not a reconstructed per-task score table.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-factory-lrb"
+      "evidence_id": "project-factory-lrb",
+      "summary": "Genome-Factory: aggregate benchmark result; individual task cohorts are not identified."
     },
     {
       "id": "adoption-dnalong-chunker",
@@ -277427,7 +277697,8 @@
       "independence": "independent",
       "scope": "Five DNALongBench task families under linear probing, not a reproduction of every full-fine-tuning baseline.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-chunker-dnalong"
+      "evidence_id": "project-chunker-dnalong",
+      "summary": "DNAChunker: five task families using linear probes."
     },
     {
       "id": "adoption-dnalong-genezip",
@@ -277438,7 +277709,8 @@
       "independence": "independent",
       "scope": "Four task families; regulatory sequence activity is not included in this adoption record.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-genezip-dnalong"
+      "evidence_id": "project-genezip-dnalong",
+      "summary": "GeneZip: four task families; excludes regulatory activity."
     },
     {
       "id": "adoption-rna-ribospan",
@@ -277449,7 +277721,8 @@
       "independence": "independent",
       "scope": "RNAfitness evaluation; does not establish adoption of every RNAGym structure task.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-ribospan-rna"
+      "evidence_id": "project-ribospan-rna",
+      "summary": "RiboSpan: RNA fitness, without documented use of the structure tasks."
     },
     {
       "id": "adoption-rna-genosm",
@@ -277460,7 +277733,8 @@
       "independence": "independent",
       "scope": "Thirteen prokaryote-related RNAGym assays; subset and scoring differ from the entire suite.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "genosm-doc-rna"
+      "evidence_id": "genosm-doc-rna",
+      "summary": "Genos-m: 13 prokaryote-related fitness assays."
     },
     {
       "id": "adoption-mrna-ribospan",
@@ -277471,7 +277745,8 @@
       "independence": "independent",
       "scope": "Six mature-transcript task families; not every released mRNABench configuration.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-ribospan-mrna"
+      "evidence_id": "project-ribospan-mrna",
+      "summary": "RiboSpan: six mature-transcript task families."
     },
     {
       "id": "adoption-mrna-mimic",
@@ -277482,7 +277757,8 @@
       "independence": "independent",
       "scope": "MIMIC probe experiments count as external use; inherited comparator rows do not. Some inputs include protein/codon modalities.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-mimic-mrna"
+      "evidence_id": "project-mimic-mrna",
+      "summary": "MIMIC: probe experiments; some inputs also use protein/codon information."
     },
     {
       "id": "adoption-dgeb-loam",
@@ -277493,7 +277769,8 @@
       "independence": "independent",
       "scope": "DGEB DNA enzyme-classification subset; one task, not the entire DNA/protein suite.",
       "independence_note": "Soilytix/LOAM is an external adopter to TattaBio/DGEB; this is a distinct release/author group, not the DGEB authors’ own gLM2 evaluation.",
-      "evidence_id": "project-loam-use"
+      "evidence_id": "project-loam-use",
+      "summary": "LOAM: DNA enzyme classification only."
     },
     {
       "id": "adoption-dgeb-protberta",
@@ -277504,7 +277781,8 @@
       "independence": "independent",
       "scope": "Protein-only DGEB evaluation. No protein-task equivalence or nucleotide-model evaluation is inferred.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-protberta-dgeb"
+      "evidence_id": "project-protberta-dgeb",
+      "summary": "ProtBERTa: protein-only evaluation."
     },
     {
       "id": "adoption-bacbench-loam",
@@ -277515,7 +277793,8 @@
       "independence": "independent",
       "scope": "BacBench essentiality reimplementation with frozen probes; parent-suite coverage is partial.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-loam-use"
+      "evidence_id": "project-loam-use",
+      "summary": "LOAM: essentiality with frozen probes."
     },
     {
       "id": "adoption-bacbench-genosm",
@@ -277526,7 +277805,8 @@
       "independence": "independent",
       "scope": "BacBench essentiality plus phenotype cohorts; source cohorts and splits differ from LOAM.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "genosm-doc-essential"
+      "evidence_id": "genosm-doc-essential",
+      "summary": "Genos-m: essentiality and phenotypes; cohorts differ from LOAM."
     },
     {
       "id": "adoption-guanine-factory",
@@ -277537,7 +277817,8 @@
       "independence": "independent",
       "scope": "GUANinE v1.0 only; Table 8 aggregate MCC requires reconciliation with original regression targets.",
       "independence_note": "External adopter group identified from the cited publication/release, distinct from the benchmark maintainer group. Independence is a curatorial assessment, not institutional or funding independence.",
-      "evidence_id": "project-factory-lrb"
+      "evidence_id": "project-factory-lrb",
+      "summary": "Genome-Factory: GUANinE v1.0 aggregate; metric reconciliation remains a source discrepancy."
     }
   ],
   "coverage_nodes": [
@@ -993207,6 +993488,58 @@
       "tokenization": "One-hot bases + species channels",
       "training_data": "Supervised RNA-seq: 314,745 short-read and 330 long-read samples.",
       "context": "Input: 196,608 bp. Central site output: 65,536 bp."
+    }
+  ],
+  "project_summaries": [
+    {
+      "id": "gb",
+      "coverage": "Regulatory-sequence classification in human, mouse and fruit fly; transcript versus intergenic DNA; human versus worm sequence origin. Includes demonstration datasets.",
+      "procedures": "Binary and multiclass classification. Model papers supply their own probes or fine-tuning; dataset construction and negative examples differ."
+    },
+    {
+      "id": "dart",
+      "coverage": "Human regulatory elements, transcription-factor motifs, cell-type specificity, accessibility and regulatory variant effects.",
+      "procedures": "Likelihood and embedding comparisons, trained heads on frozen embeddings, and LoRA fine-tuning. Trained evaluations hold out chromosomes."
+    },
+    {
+      "id": "traitgym",
+      "coverage": "Human noncoding variants: Mendelian regulatory disease and fine-mapped complex traits, evaluated against matched controls.",
+      "procedures": "Zero-shot scores and fitted combinations of model scores/features. Chromosome-grouped fitting; weighted precision–recall metrics."
+    },
+    {
+      "id": "bend",
+      "coverage": "Original BEND: seven human gene-annotation, chromatin, methylation and variant tasks. BEND 2.0 adds sequence recovery, mutation effects and candidate selection.",
+      "procedures": "Original: frozen embeddings with trained heads, or embedding distances for variants. BEND 2.0: zero-shot scores and fixed ridge readouts; group-based validation."
+    },
+    {
+      "id": "lrb",
+      "coverage": "Human expression, transcription-initiation profiles, chromatin labels, regulatory regions and variant effects. Nine released targets; three benchmarked in the workshop paper.",
+      "procedures": "Configurable input length. Workshop experiments train multilayer perceptrons on frozen embeddings; model-selection and test regions differ by task."
+    },
+    {
+      "id": "dnalongbench",
+      "coverage": "Enhancer–gene and variant–gene links, chromatin contact maps, regulatory measurements along DNA, and transcription-initiation profiles; human and mouse targets.",
+      "procedures": "Long-input supervised prediction with task-specific heads. Published baselines fine-tune model weights; independent uses also fit linear probes."
+    },
+    {
+      "id": "rna",
+      "coverage": "RNA and coding-sequence variant fitness. The paper also introduces RNA structure benchmarks; this catalogue indexes the 70-assay fitness release.",
+      "procedures": "Model scores ranked against measured fitness. Supervised releases provide random and similarity-reducing splits; the latter does not guarantee disjoint sequences."
+    },
+    {
+      "id": "mrna",
+      "coverage": "Mature/reporter mRNA and untranslated regions: binding, function, localization, stability, translation and variant effects.",
+      "procedures": "Frozen embeddings with ridge or logistic-regression probes. Dataset-specific targets and split configurations are retained separately."
+    },
+    {
+      "id": "dgeb",
+      "coverage": "DNA/protein embeddings: enzyme and gene-cluster function, clustering, gene relationships, phylogenetic distances and retrieval across multiple taxa.",
+      "procedures": "Frozen embeddings with logistic/nearest-neighbor classifiers, clustering, distance correlations and retrieval. DNA and protein tasks are separate."
+    },
+    {
+      "id": "bacbench",
+      "coverage": "Bacterial gene essentiality, operons, protein interactions, antibiotic resistance and organism phenotypes. Input modality varies by task.",
+      "procedures": "Embedding-based probes/classifiers and zero-shot comparisons. Essentiality and phenotype protocols group genomes by genus; other tasks use different splits."
     }
   ]
 }
