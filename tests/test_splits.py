@@ -103,5 +103,49 @@ class SplitTests(unittest.TestCase):
     def test_no_new_bulk_downloads(self):
         self.assertEqual(self.report['new_dataset_file_download_bytes'],0)
         self.assertEqual(self.report['large_release_metadata']['generator-recovery']['total_parquet_bytes'],5754874772)
+    def test_designs_cover_collections_with_field_evidence(self):
+        self.assertEqual(self.db.execute('''SELECT e.id FROM evaluations e LEFT JOIN split_design_evaluations d
+          ON d.evaluation_id=e.id WHERE d.design_id IS NULL''').fetchall(),[])
+        self.assertGreaterEqual(self.db.execute('SELECT COUNT(*) FROM split_designs').fetchone()[0],90)
+        for field in ['partition_rule','selection_rule','interpretation']:
+            self.assertEqual(self.db.execute('''SELECT d.id FROM split_designs d LEFT JOIN split_design_evidence e
+              ON e.design_id=d.id AND e.field=? WHERE e.evidence_id IS NULL''',(field,)).fetchall(),[])
+    def strategies(self,pid):
+        return {r[0].removeprefix('split-strategy-') for r in self.db.execute(
+            'SELECT strategy_id FROM split_protocol_strategies WHERE protocol_id=?',(pid,))}
+    def test_summary_axes_are_not_inherited_by_other_protocols(self):
+        self.assertEqual(self.strategies('traitgym-complex-ag2-protocol'),{'fixed'})
+        self.assertEqual(self.strategies('traitgym-complex-probe'),{'chromosome'})
+        self.assertEqual(self.strategies('bacbench-amr-binary-protocol'),{'random'})
+        self.assertEqual(self.strategies('bacbench-essential-protocol'),{'taxon'})
+        self.assertEqual(self.strategies('guanine-cons30-protocol'),{'random'})
+        self.assertEqual(self.strategies('guanine-clinvar_snv-protocol'),{'time','fixed'})
+        self.assertEqual(self.strategies('ceno-mouse-accessibility-protocol'),{'chromosome'})
+        self.assertEqual(self.strategies('ceno-tad-protocol'),{'blocks','condition'})
+        self.assertEqual(self.strategies('gpn-rvat-protocol'),{'assay'})
+        self.assertEqual(self.strategies('gpn-annotation-probe'),{'chromosome'})
+    def test_identity_objects_and_group_fallbacks_remain_explicit(self):
+        values={r['id']:r for r in self.db.execute('SELECT * FROM split_designs')}
+        self.assertIn('mature-protein identity',values['design-bend-gene']['partition_rule'])
+        self.assertIn('Unmapped rows',values['design-mrna-groups']['interpretation'])
+        self.assertIn('fall back',values['design-bacbench-amr']['selection_rule'])
+        self.assertIn('not a strict',values['design-rnagym-similarity']['interpretation'].lower())
+        self.assertIn('also serve validation',values['design-spliceai2-transcript']['selection_rule'])
+        self.assertIn('reference DNA',values['design-ag-variants']['interpretation'])
+    def test_native_gb_construction_is_distinct_from_reuse(self):
+        p=self.db.execute("SELECT split_rule FROM protocols WHERE id='gb-demo_human_or_worm-protocol'").fetchone()[0]
+        self.assertIn('75/25',p);self.assertIn('random_state=42',p)
+        self.assertIn('No third validation',p)
+        self.assertEqual(self.strategies('gb-demo_human_or_worm-protocol'),{'random'})
+        self.assertEqual(self.strategies('gb-human_ocr_ensembl-protocol'),{'random'})
+        self.assertEqual(self.strategies('gb-human_enhancers_ensembl-protocol'),{'released'})
+        review=json.loads((ROOT/'data/split-construction-review.json').read_text())
+        self.assertEqual(len(review['notebooks']),9)
+        self.assertEqual(sum(bool(r['first_split_line']) for r in review['notebooks']),5)
+    def test_design_protocols_belong_to_named_collections(self):
+        self.assertEqual(self.db.execute('''SELECT l.design_id,l.protocol_id FROM split_design_protocols l
+          JOIN protocols p ON p.id=l.protocol_id WHERE NOT EXISTS (
+            SELECT 1 FROM split_design_evaluations d JOIN evaluation_tasks t
+            ON t.evaluation_id=d.evaluation_id WHERE d.design_id=l.design_id AND t.task_id=p.task_id)''').fetchall(),[])
 
 if __name__=='__main__':unittest.main()

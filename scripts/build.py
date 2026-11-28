@@ -11,7 +11,8 @@ INSERT_ORDER=['metadata','sources','papers','evidence','models','model_propertie
               'source_reviews','source_limits','data_resources','task_resources','evaluation_resources','task_redirects',
               'project_reviews','projects','project_review_papers','project_review_evaluations','project_adoptions','field_evidence',
               'coverage_nodes','coverage_rows','coverage_mappings','coverage_notes','coverage_settings',
-              'split_strategies','split_protocol_strategies','split_audits','split_audit_tasks',
+              'split_strategies','split_protocol_strategies','split_designs','split_design_evaluations',
+              'split_design_protocols','split_design_strategies','split_design_evidence','split_audits','split_audit_tasks',
               'split_partitions','split_comparisons','split_audit_files','split_examples']
 
 def load_catalogue(data, db):
@@ -113,6 +114,20 @@ def load_catalogue(data, db):
     for column,target in [('protocol_id','protocols'),('variant_id','variants')]:
         bad=db.execute(f'SELECT a.id FROM split_audit_tasks a JOIN {target} p ON a.{column}=p.id WHERE a.task_id!=p.task_id').fetchall()
         if bad:raise ValueError('Split audit task ownership mismatch: '+column)
+    for table in ['split_design_evaluations','split_design_strategies']:
+        bad=db.execute(f'''SELECT d.id FROM split_designs d LEFT JOIN {table} l ON l.design_id=d.id
+          WHERE l.design_id IS NULL''').fetchall()
+        if bad:raise ValueError('Split design lacks scope: '+table)
+    for field in ['partition_rule','selection_rule','interpretation']:
+        bad=db.execute('''SELECT d.id FROM split_designs d LEFT JOIN split_design_evidence e
+          ON e.design_id=d.id AND e.field=? WHERE e.design_id IS NULL''',(field,)).fetchall()
+        if bad:raise ValueError('Split design field lacks evidence: '+field)
+    bad=db.execute('''SELECT l.design_id,l.protocol_id FROM split_design_protocols l
+      JOIN protocols p ON p.id=l.protocol_id WHERE NOT EXISTS (
+        SELECT 1 FROM split_design_evaluations d JOIN evaluation_tasks t
+        ON t.evaluation_id=d.evaluation_id
+        WHERE d.design_id=l.design_id AND t.task_id=p.task_id)''').fetchall()
+    if bad:raise ValueError('Split design protocol outside its named collections: '+str([tuple(r) for r in bad]))
     for row in db.execute('SELECT * FROM field_evidence'):
         if row['entity_table'] not in INSERT_ORDER:raise ValueError('Unknown evidence table')
         if not db.execute(f'SELECT 1 FROM {row["entity_table"]} WHERE id=?',(row['entity_id'],)).fetchone():raise ValueError('Missing field evidence entity: '+row['entity_id'])

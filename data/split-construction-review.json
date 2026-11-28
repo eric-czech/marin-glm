@@ -1,0 +1,241 @@
+{
+  "reviewed": "2026-11-27",
+  "scope": "Source notebook and helper inspection; no benchmark sequence files downloaded. Notebook outputs describe the recorded construction run, not an independent reconstruction of current HF mirrors.",
+  "repository_revision": "605d8539830e16c85abe7826990958303ffc5e1c",
+  "notebooks": [
+    {
+      "dataset": "human_enhancers_cohn",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_enhancers_cohn/create_datasets.ipynb",
+      "first_split_line": 695,
+      "cells": [
+        {
+          "cell": 18,
+          "code": "train_positives, test_positives = train_test_split(positives_df, shuffle=True, random_state=42)\ntrain_positives.shape, test_positives.shape",
+          "output": "((10421, 4), (3474, 4))"
+        },
+        {
+          "cell": 19,
+          "code": "train_negatives, test_negatives = train_test_split(negatives_df, shuffle=True, random_state=42)\ntrain_negatives.shape, test_negatives.shape",
+          "output": "((10422, 4), (3474, 4))"
+        }
+      ]
+    },
+    {
+      "dataset": "human_enhancers_ensembl",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_enhancers_ensembl/create_datasets.ipynb",
+      "first_split_line": 0,
+      "cells": [
+        {
+          "cell": 2,
+          "code": "!pip install git+https://github.com/katarinagresova/ensembl_scraper.git",
+          "output": "Collecting git+https://github.com/katarinagresova/ensembl_scraper.git\n  Cloning https://github.com/katarinagresova/ensembl_scraper.git to /private/var/folders/q7/pcbd1fnn22l233m3cmvvx1nm0000gn/T/pip-req-build-p2yyoi4a\n  Running command git clone --filter=blob:none -q https://github.com/katarinagresova/ensembl_scraper.git /private/var/folders/q7/pcbd1fnn22l233m3cmvvx1nm0000gn/T/pip-req-build-p2yyoi4a\n  Resolved https://github.com/katarinagresova/ensembl_scraper.git to commit 8239db77fd3f0374300cd4d1efac319fb28f3535\n  Preparing metadata (setup.py) ... \u001b[?25ldone\n\u001b[?25hRequirement already satisfied: bio in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.2.0)\nRequirement already satisfied: biopython in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.79)\nRequirement already satisfied: certifi in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2021.5.30)\nRequirement already satisfied: charset-normalizer in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.0.4)\nRequirement already satisfied: idna in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (3.2)\nRequirement already satisfied: joblib in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.0.1)\nRequirement already satisfied: numpy in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.21.2)\nRequirement already satisfied: pandas in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.3.2)\nRequirement already satisfied: plac in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.3.3)\nRequirement already satisfied: pyfiglet in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (0.8.post1)\nRequirement already satisfied: python-dateutil in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.8.2)\nRequirement already satisfied: pytz in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2021.1)\nRequirement already satisfied: PyYAML>=5.4.1 in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (5.4.1)\nRequirement already satisfied: requests in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.26.0)\nRequirement already satisfied: scikit-learn in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (0.24.2)\nRequirement already satisfied: scipy in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.7.1)\nRequirement already satisfied: six in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.16.0)\nRequirement already satisfied: threadpoolctl in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.2.0)\nRequirement already satisfied: tqdm in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (4.62.2)\nRequirement already satisfied: twobitreader in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (3.1.7)\nRequirement already satisfied: urllib3 in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.26.6)\nRequirement already satisfied: mygene in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from bio->scraper==0.0.1) (3.2.2)\nRequirement already satisfied: biothings-client>=0.2.6 in /Users/katarina/Documents/repositories/GitHub/genomic_benchmarks/venv/lib/python3.8/site-packages (from mygene->bio->scraper==0.0.1) (0.2.6)\nUsing legacy 'setup.py install' for scraper, since package 'wheel' is not installed.\nInstalling collected packages: scraper\n  Attempting uninstall: scraper\n    Found existing installation: scraper 0.0.1\n    Uninstalling scraper-0.0.1:\n      Successfully uninstalled scraper-0.0.1\n    Running setup.py install for scraper ... \u001b[?25ldone\n\u001b[?25hSuccessfully installed scraper-0.0.1\n"
+        }
+      ]
+    },
+    {
+      "dataset": "human_nontata_promoters",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_nontata_promoters/create_datasets.ipynb",
+      "first_split_line": 1442,
+      "cells": [
+        {
+          "cell": 24,
+          "code": "train_promoters, test_promoters = train_test_split(promoters_df, shuffle=True, random_state=42)\ntrain_promoters.shape, test_promoters.shape",
+          "output": "((14742, 5), (4915, 5))"
+        },
+        {
+          "cell": 25,
+          "code": "train_nonpromoters, test_nonpromoters = train_test_split(nonpromoters_df, shuffle=True, random_state=42)\ntrain_nonpromoters.shape, test_nonpromoters.shape",
+          "output": "((12355, 5), (4119, 5))"
+        }
+      ]
+    },
+    {
+      "dataset": "human_ocr_ensembl",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_ocr_ensembl/create_datasets.ipynb",
+      "first_split_line": 0,
+      "cells": [
+        {
+          "cell": 2,
+          "code": "!pip install git+https://github.com/katarinagresova/ensembl_scraper.git@6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd",
+          "output": "Collecting git+https://github.com/katarinagresova/ensembl_scraper.git@6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd\n  Cloning https://github.com/katarinagresova/ensembl_scraper.git (to revision 6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd) to /tmp/pip-req-build-balwl2li\n  Running command git clone --filter=blob:none -q https://github.com/katarinagresova/ensembl_scraper.git /tmp/pip-req-build-balwl2li\n  Running command git rev-parse -q --verify 'sha^6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd'\n  Running command git fetch -q https://github.com/katarinagresova/ensembl_scraper.git 6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd\n  Resolved https://github.com/katarinagresova/ensembl_scraper.git to commit 6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd\n  Preparing metadata (setup.py) ... \u001b[?25ldone\n\u001b[?25hCollecting bio\n  Downloading bio-1.3.3-py3-none-any.whl (271 kB)\n     |████████████████████████████████| 271 kB 1.0 MB/s            \n\u001b[?25hRequirement already satisfied: biopython in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.79)\nRequirement already satisfied: certifi in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2021.10.8)\nRequirement already satisfied: charset-normalizer in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.0.11)\nRequirement already satisfied: idna in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (3.3)\nCollecting joblib\n  Using cached joblib-1.1.0-py2.py3-none-any.whl (306 kB)\nRequirement already satisfied: numpy in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.22.2)\nRequirement already satisfied: pandas in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.4.0)\nCollecting plac\n  Downloading plac-1.3.4-py2.py3-none-any.whl (22 kB)\nCollecting pyfiglet\n  Downloading pyfiglet-0.8.post1-py2.py3-none-any.whl (865 kB)\n     |████████████████████████████████| 865 kB 827 kB/s            \n\u001b[?25hRequirement already satisfied: python-dateutil in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.8.2)\nRequirement already satisfied: pytz in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2021.3)\nRequirement already satisfied: PyYAML>=5.4.1 in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (6.0)\nRequirement already satisfied: requests in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.27.1)\nCollecting scikit-learn\n  Using cached scikit_learn-1.0.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.7 MB)\nCollecting scipy\n  Using cached scipy-1.8.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.6 MB)\nRequirement already satisfied: six in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.16.0)\nCollecting threadpoolctl\n  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)\nRequirement already satisfied: tqdm in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (4.62.3)\nCollecting twobitreader\n  Downloading twobitreader-3.1.7.tar.gz (9.2 kB)\n  Preparing metadata (setup.py) ... \u001b[?25ldone\n\u001b[?25hRequirement already satisfied: urllib3 in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.26.8)\nCollecting mygene\n  Downloading mygene-3.2.2-py2.py3-none-any.whl (5.4 kB)\nCollecting biothings-client>=0.2.6\n  Downloading biothings_client-0.2.6-py2.py3-none-any.whl (37 kB)\nBuilding wheels for collected packages: scraper, twobitreader\n  Building wheel for scraper (setup.py) ... \u001b[?25ldone\n\u001b[?25h  Created wheel for scraper: filename=scraper-0.0.1-py3-none-any.whl size=23338 sha256=50bb2f6a4f9b0702711b6540cf3f65a1b4ebfc2b63d8e2e2047429197fbf689d\n  Stored in directory: /home/katarina/.cache/pip/wheels/3c/52/75/1904ae3a9f4b4a10bacad98bea8e26dbb1a2811b79dd469e45\n  Building wheel for twobitreader (setup.py) ... \u001b[?25ldone\n\u001b[?25h  Created wheel for twobitreader: filename=twobitreader-3.1.7-py3-none-any.whl size=9602 sha256=d0444fe508bf85408da541bf0b61e4bb2f7e8230e49966161a9667573e45f44a\n  Stored in directory: /home/katarina/.cache/pip/wheels/56/1b/18/8121ce5fbc96e925f225156c5ee2f2495090ff931984c11bd4\nSuccessfully built scraper twobitreader\nInstalling collected packages: biothings-client, threadpoolctl, scipy, mygene, joblib, twobitreader, scikit-learn, pyfiglet, plac, bio, scraper\nSuccessfully installed bio-1.3.3 biothings-client-0.2.6 joblib-1.1.0 mygene-3.2.2 plac-1.3.4 pyfiglet-0.8.post1 scikit-learn-1.0.2 scipy-1.8.0 scraper-0.0.1 threadpoolctl-3.1.0 twobitreader-3.1.7\n\u001b[33mWARNING: You are using pip version 21.3.1; however, version 22.0.3 is available.\nYou should consider upgrading via the '/home/katarina/git/genomic_benchmarks/venv/bin/python -m pip install --upgrade pip' command.\u001b[0m\n"
+        }
+      ]
+    },
+    {
+      "dataset": "human_ensembl_regulatory",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_ensembl_regulatory/create_datasets.ipynb",
+      "first_split_line": 0,
+      "cells": [
+        {
+          "cell": 2,
+          "code": "!pip install git+https://github.com/katarinagresova/ensembl_scraper.git@6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd",
+          "output": "Collecting git+https://github.com/katarinagresova/ensembl_scraper.git@6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd\n  Cloning https://github.com/katarinagresova/ensembl_scraper.git (to revision 6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd) to /tmp/pip-req-build-fz97hoif\n  Running command git clone --filter=blob:none -q https://github.com/katarinagresova/ensembl_scraper.git /tmp/pip-req-build-fz97hoif\n  Running command git rev-parse -q --verify 'sha^6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd'\n  Running command git fetch -q https://github.com/katarinagresova/ensembl_scraper.git 6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd\n  Resolved https://github.com/katarinagresova/ensembl_scraper.git to commit 6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd\n  Preparing metadata (setup.py) ... \u001b[?25ldone\n\u001b[?25hRequirement already satisfied: bio in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.3.3)\nRequirement already satisfied: biopython in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.79)\nRequirement already satisfied: certifi in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2021.10.8)\nRequirement already satisfied: charset-normalizer in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.0.11)\nRequirement already satisfied: idna in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (3.3)\nRequirement already satisfied: joblib in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.1.0)\nRequirement already satisfied: numpy in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.22.2)\nRequirement already satisfied: pandas in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.4.0)\nRequirement already satisfied: plac in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.3.4)\nRequirement already satisfied: pyfiglet in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (0.8.post1)\nRequirement already satisfied: python-dateutil in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.8.2)\nRequirement already satisfied: pytz in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2021.3)\nRequirement already satisfied: PyYAML>=5.4.1 in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (6.0)\nRequirement already satisfied: requests in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (2.27.1)\nRequirement already satisfied: scikit-learn in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.0.2)\nRequirement already satisfied: scipy in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.8.0)\nRequirement already satisfied: six in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.16.0)\nRequirement already satisfied: threadpoolctl in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (3.1.0)\nRequirement already satisfied: tqdm in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (4.62.3)\nRequirement already satisfied: twobitreader in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (3.1.7)\nRequirement already satisfied: urllib3 in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from scraper==0.0.1) (1.26.8)\nRequirement already satisfied: mygene in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from bio->scraper==0.0.1) (3.2.2)\nRequirement already satisfied: biothings-client>=0.2.6 in /home/katarina/git/genomic_benchmarks/venv/lib/python3.8/site-packages (from mygene->bio->scraper==0.0.1) (0.2.6)\n\u001b[33mWARNING: You are using pip version 21.3.1; however, version 22.0.3 is available.\nYou should consider upgrading via the '/home/katarina/git/genomic_benchmarks/venv/bin/python -m pip install --upgrade pip' command.\u001b[0m\n"
+        }
+      ]
+    },
+    {
+      "dataset": "drosophila_enhancers_stark",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/drosophila_enhancers_stark/create_datasets.ipynb",
+      "first_split_line": 1304,
+      "cells": [
+        {
+          "cell": 29,
+          "code": "df.index.name = \"id\"\ntrain_pos_seqs, test_pos_seqs = train_test_split(df, shuffle=True, random_state=42)\ntrain_pos_seqs.shape, test_pos_seqs.shape",
+          "output": "((2592, 4), (865, 4))"
+        },
+        {
+          "cell": 38,
+          "code": "df.index.name = \"id\"\ntrain_neg_seqs, test_neg_seqs = train_test_split(df, shuffle=True, random_state=42)\ntrain_neg_seqs.shape, test_neg_seqs.shape",
+          "output": "((2592, 4), (865, 4))"
+        }
+      ]
+    },
+    {
+      "dataset": "dummy_mouse_enhancers_ensembl",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/dummy_mouse_enhancers_ensembl/create_datasets.ipynb",
+      "first_split_line": 0,
+      "cells": [
+        {
+          "cell": 2,
+          "code": "!pip install git+https://github.com/katarinagresova/ensembl_scraper.git",
+          "output": "Collecting git+https://github.com/katarinagresova/ensembl_scraper.git\n  Cloning https://github.com/katarinagresova/ensembl_scraper.git to /tmp/pip-req-build-8ibftq7o\nRequirement already satisfied: bio in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.2.0)\nRequirement already satisfied: biopython in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.79)\nRequirement already satisfied: certifi in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (2021.10.8)\nRequirement already satisfied: charset-normalizer in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (2.0.6)\nRequirement already satisfied: idna in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (3.2)\nRequirement already satisfied: joblib in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.1.0)\nRequirement already satisfied: numpy in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.21.2)\nRequirement already satisfied: pandas in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.3.3)\nCollecting plac\n  Downloading plac-1.3.3-py2.py3-none-any.whl (22 kB)\nCollecting pyfiglet\n  Downloading pyfiglet-0.8.post1-py2.py3-none-any.whl (865 kB)\n\u001b[K     |████████████████████████████████| 865 kB 4.2 MB/s eta 0:00:01\n\u001b[?25hRequirement already satisfied: python-dateutil in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (2.8.2)\nRequirement already satisfied: pytz in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (2021.3)\nRequirement already satisfied: PyYAML in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (5.4.1)\nRequirement already satisfied: requests in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (2.26.0)\nRequirement already satisfied: scikit-learn in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.0)\nRequirement already satisfied: scipy in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.7.1)\nRequirement already satisfied: six in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.16.0)\nRequirement already satisfied: threadpoolctl in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (3.0.0)\nRequirement already satisfied: tqdm in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (4.62.3)\nCollecting twobitreader\n  Using cached twobitreader-3.1.7.tar.gz (9.2 kB)\nRequirement already satisfied: urllib3 in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from scraper==0.0.1) (1.26.7)\nRequirement already satisfied: mygene in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from bio->scraper==0.0.1) (3.2.2)\nRequirement already satisfied: biothings-client>=0.2.6 in /home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/lib/python3.8/site-packages (from mygene->bio->scraper==0.0.1) (0.2.6)\nUsing legacy 'setup.py install' for scraper, since package 'wheel' is not installed.\nUsing legacy 'setup.py install' for twobitreader, since package 'wheel' is not installed.\nInstalling collected packages: plac, pyfiglet, twobitreader, scraper\n    Running setup.py install for twobitreader ... \u001b[?25ldone\n\u001b[?25h    Running setup.py install for scraper ... \u001b[?25ldone\n\u001b[?25hSuccessfully installed plac-1.3.3 pyfiglet-0.8.post1 scraper-0.0.1 twobitreader-3.1.7\n\u001b[33mWARNING: You are using pip version 20.2.3; however, version 21.2.4 is available.\nYou should consider upgrading via the '/home/petr/.pyenv/versions/3.8.9/envs/genomic_benchmarks/bin/python3.8 -m pip install --upgrade pip' command.\u001b[0m\n"
+        }
+      ]
+    },
+    {
+      "dataset": "demo_human_or_worm",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/demo_human_or_worm/create_datasets.ipynb",
+      "first_split_line": 456,
+      "cells": [
+        {
+          "cell": 14,
+          "code": "train_human, test_human = train_test_split(human_df, shuffle=True, random_state=42)\ntrain_human.shape, test_human.shape",
+          "output": "((37500, 4), (12500, 4))"
+        },
+        {
+          "cell": 15,
+          "code": "train_worm, test_worm = train_test_split(worm_df, shuffle=True, random_state=42)\ntrain_worm.shape, test_worm.shape",
+          "output": "((37500, 4), (12500, 4))"
+        }
+      ]
+    },
+    {
+      "dataset": "demo_coding_vs_intergenomic_seqs",
+      "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/demo_coding_vs_intergenomic_seqs/create_datasets.ipynb",
+      "first_split_line": 582,
+      "cells": [
+        {
+          "cell": 9,
+          "code": "train_coding_seqs, test_coding_seqs = train_test_split(coding_seqs, shuffle=True, random_state=42)\ntrain_coding_seqs.shape, test_coding_seqs.shape",
+          "output": "((37500, 5), (12500, 5))"
+        },
+        {
+          "cell": 10,
+          "code": "train_intergenomic_seqs, test_intergenomic_seqs = train_test_split(intergenomic_seqs, shuffle=True, random_state=42)\ntrain_intergenomic_seqs.shape, test_intergenomic_seqs.shape",
+          "output": "((37500, 5), (12500, 5))"
+        }
+      ]
+    }
+  ],
+  "ensembl_helper_revision": "6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd",
+  "helper": [
+    {
+      "name": "config.py",
+      "url": "https://github.com/katarinagresova/ensembl_scraper/blob/6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd/scraper/config.py",
+      "lines": []
+    },
+    {
+      "name": "ensembl_scraper.py",
+      "url": "https://github.com/katarinagresova/ensembl_scraper/blob/6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd/scraper/ensembl_scraper.py",
+      "lines": [
+        {
+          "line": 7,
+          "text": "from .preprocessing import remove_low_quality, split_to_csv"
+        },
+        {
+          "line": 93,
+          "text": "    3) Remaining sequences are split into train and test parts."
+        },
+        {
+          "line": 97,
+          "text": "    5) Sequences in negative dataset are also split into train and test parts."
+        },
+        {
+          "line": 99,
+          "text": "        --- train --- positive.csv"
+        },
+        {
+          "line": 102,
+          "text": "        --- test  --- positive.csv"
+        },
+        {
+          "line": 118,
+          "text": "    split_to_csv(out_dir, \"positive\", preprocessed_positive_seqs)"
+        },
+        {
+          "line": 123,
+          "text": "    split_to_csv(out_dir, \"negative\", negative_seqs)"
+        }
+      ]
+    },
+    {
+      "name": "preprocessing.py",
+      "url": "https://github.com/katarinagresova/ensembl_scraper/blob/6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd/scraper/preprocessing.py",
+      "lines": [
+        {
+          "line": 1,
+          "text": "from sklearn.model_selection import train_test_split"
+        },
+        {
+          "line": 11,
+          "text": "def split_train_val_test(data, train_ratio = 0.7, validation_ratio = 0.2, test_ratio = 0.1):"
+        },
+        {
+          "line": 13,
+          "text": "    if abs((train_ratio + validation_ratio + test_ratio) - 1.0) > 0.00000001:"
+        },
+        {
+          "line": 16,
+          "text": "    # Produces test split."
+        },
+        {
+          "line": 17,
+          "text": "    x_remaining, x_test = train_test_split(data, test_size=test_ratio, random_state=42)"
+        },
+        {
+          "line": 20,
+          "text": "    ratio_remaining = 1 - test_ratio"
+        },
+        {
+          "line": 23,
+          "text": "    # Produces train and val splits."
+        },
+        {
+          "line": 24,
+          "text": "    x_train, x_val = train_test_split(x_remaining, test_size=ratio_val_adjusted, random_state=42)"
+        },
+        {
+          "line": 26,
+          "text": "    return x_train, x_val, x_test"
+        },
+        {
+          "line": 29,
+          "text": "def split_to_csv(current_dir, prefix, seqs):"
+        },
+        {
+          "line": 31,
+          "text": "    x_train, x_test = x_remaining, x_test = train_test_split(seqs, test_size=0.2, random_state=42)"
+        },
+        {
+          "line": 32,
+          "text": "    save_to_csv(Path(current_dir, 'train', prefix + '.csv'), x_train)"
+        },
+        {
+          "line": 33,
+          "text": "    save_to_csv(Path(current_dir, 'test', prefix + '.csv'), x_test)"
+        }
+      ]
+    }
+  ],
+  "limits": "Human OCR/regulatory notebooks pin the helper revision; human/mouse enhancer notebooks install an unpinned dependency, so that helper cannot establish the exact historical enhancer construction."
+}

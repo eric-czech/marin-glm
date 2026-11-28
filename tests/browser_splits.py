@@ -13,6 +13,40 @@ with sync_playwright() as p:
     url=(ROOT/'index.html').as_uri()
     page.goto(url+'#view=splits');page.wait_for_selector('.split-chart-row')
     assert page.locator('#page-title').inner_text()=='Splits'
+    assert page.locator('.splits h2').first.inner_text()=='Splitting strategies'
+    assert page.locator('#split-design-survey').bounding_box()['y']<page.locator('#split-overlap-heading').bounding_box()['y']
+    assert page.locator('[data-design-id]').count()==10
+    assert page.locator('#design-collection option').count()==len(D['evaluations'])+1
+    # Native chromosome CV and chromosome-weighted zero-shot metrics remain distinct.
+    page.locator('#design-collection').select_option('traitgym')
+    assert page.locator('[data-design-id]').count()==2
+    page.locator('#design-strategy').select_option('split-strategy-chromosome')
+    assert page.locator('[data-design-id]').count()==1
+    assert page.locator('[data-design-id]').get_attribute('data-design-id')=='design-traitgym-fitted'
+    page.locator('.design-toggle').focus();page.keyboard.press('Enter')
+    assert page.locator('.split-design-expanded').count()==1
+    page.locator('.design-protocols summary').click()
+    assert 'GroupKFold' in page.locator('.split-design-expanded').inner_text()
+    page.reload();page.wait_for_selector('.split-design-expanded')
+    assert page.locator('#design-strategy').input_value()=='split-strategy-chromosome'
+    page.locator('#design-filters button[type=reset]').click()
+    page.locator('#design-strategy').select_option('split-strategy-taxon')
+    with page.expect_download() as dl:page.locator('#design-export').click()
+    designs=list(csv.DictReader(io.StringIO(Path(dl.value.path()).read_text())))
+    expected={r['design_id'] for r in D['split_design_strategies'] if r['strategy_id']=='split-strategy-taxon'}
+    assert len(designs)==len(expected)
+    assert all(r['source_urls'] and r['partition_assignment'] and r['validation_model_selection'] for r in designs)
+    assert any('genus' in r['partition_assignment'] for r in designs)
+    page.locator('#design-filters button[type=reset]').click()
+    first=page.locator('[data-design-id]').first.get_attribute('data-design-id')
+    page.locator('#design-next').click()
+    assert page.locator('[data-design-id]').first.get_attribute('data-design-id')!=first
+    # A shared design link locates its own page and associated task protocols.
+    page.goto(url+'#view=splits&splitDesign=design-ag-variants')
+    page.wait_for_selector('.split-design-expanded')
+    assert page.locator('.design-toggle[aria-expanded=true]').inner_text().startswith('AlphaGenome 1 / 2')
+    assert 'all-folds' in page.locator('[data-design-id="design-ag-variants"]').inner_text()
+    page.goto(url+'#view=splits');page.wait_for_selector('.split-chart-row')
     assert page.locator('.split-chart-row').count()==16
     assert page.locator('#split-cross-release .split-chart-row').count()==4
     for el in page.locator('.split-chart-row').all():
@@ -58,6 +92,8 @@ with sync_playwright() as p:
     assert 'No measured comparison' in page.locator('.split-audit-table').inner_text()
     # Task details expose associated checks without introducing model attribution.
     page.goto(url+'#view=evaluations&task=plantcad2-ft-cell_type_specific_acr')
+    page.wait_for_selector('.task-split-designs');page.locator('.task-split-designs summary').click()
+    assert page.locator('.task-split-designs a[href*="design-plantcad-cell"]').count()==1
     page.wait_for_selector('.task-split-links');page.locator('.task-split-links summary').click()
     assert page.locator('.task-split-links a[href*="split-plantcad-cell"]').count()==1
     # Mobile uses local scroll containers, not a wider document.

@@ -6,6 +6,31 @@ Splitting rules define a separation axis. Measurements test particular propertie
 
 The catalogue records the task, release, fitting protocol where resolved, inspected files, units, source evidence and limitations separately. A native benchmark, a processed mirror and a reconstructed source-library split are different cohorts even when they share a target. Fixed zero-shot assays have no downstream fitting split; probes and fine-tunes on the same targets may have one.
 
+## Partition construction
+
+The page starts with a searchable comparison of source-specific designs across all 56 collections. Each entry separates **partition assignment**, **validation/model selection**, and **scope/interpretation**, with field-level citations. Collection, separation strategy and fitting-layer filters compose; CSV exports preserve the selected designs, source URLs and associated protocol IDs. Expanded rows link exact task protocols and related overlap inspections, whose cohorts can differ from the design being described.
+
+The strategy classifications describe the named fitting layer. They are not ID/OD labels and are not inherited by every model using the same dataset. In particular:
+
+| Separation | Representative source-defined use | What does not follow |
+| --- | --- | --- |
+| Random rows | GB creation notebooks; default BacBench AMR; some mRNABench tasks | Separation of repeated genes, species, donors or similar sequences |
+| Chromosomes | DART trained readouts; revised NT chr20/21; SpliceAI; task-specific original BEND partitions | Exclusion of repeats/paralogs or those chromosomes from backbone pretraining |
+| Genomic regions | NTv3/Borzoi folds; DNALongBench virtual contigs and Enformer regions | Whole-chromosome exclusion, or full-context separation when only a scored core is held out |
+| Genes/elements | BEND 2.0 intervention folds; strict OpenSplice-to-COMPASS transfer | Sequence-family or protein-identity exclusion |
+| Homology / similarity | Original BEND mature-protein GraphPart at 80%; PGB gene-family grouping; RNAGym similarity heuristic | The same guarantee across algorithms, DNA versus protein similarity, or unmapped genes |
+| Taxa | Evo 2 exon/intron probe species; BacBench essentiality genera; NTv3 annotation genera; PlantCAD2 adaptation species | Exclusion from pretraining or absence of conserved DNA across taxa |
+| Mutation positions | Evo 2 BRCA1 position-grouped outer split and inner CV; NABench contiguous blocks | An unseen gene or independently evolving sequence background |
+| Donors | DNA Foundation personal expression; MAGE people and stricter gene-region setting | New-gene transfer when genes remain represented in training |
+| Assays, tracks or time | Cross-assay NABench/COMPASS; AG2 masked assay tracks; new single-cell datasets after 1 October 2025 | Unseen reference DNA or unseen participants |
+| Clusters / chemistry | BGC-Bench parent BGC, GCF, product scaffold and class holdouts | Equivalent sequence exclusion from different grouping objects |
+
+These are concise pointers; the website and SQLite records carry the primary citations and task-specific exceptions. Bootstrap resampling groups and chromosome-weighted metrics are not partition-construction rules. An HF partition called `train` may be a retrieval corpus or fixed zero-shot evaluation collection.
+
+Additional source inspection checked all nine GB creation notebooks, followed their pinned Ensembl dependency where available, and rechecked TraitGym's outer prediction loop and inner training-only GroupKFold pipeline. Five GB notebooks record class-wise random approximately 75/25 partitions; OCR/regulatory construction pins an 80/20 random helper. Human/mouse Ensembl enhancer notebooks leave the dependency unpinned, so their exact historical construction is not asserted. Only small code/document responses were retrieved; no sequence dataset was downloaded for this extension. [Notebook inspection summary](../data/split-construction-review.json), [primary construction notebook](https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks/blob/605d8539830e16c85abe7826990958303ffc5e1c/docs/human_nontata_promoters/create_datasets.ipynb#L1442), [pinned helper](https://github.com/katarinagresova/ensembl_scraper/blob/6d3bba8e6be7f5ead58a3bbaed6a4e8cd35e62fd/scraper/preprocessing.py#L29-L33), [TraitGym inner CV](https://github.com/songlab-cal/TraitGym/blob/4d80fe889415ffc02d45c7cb5446a326288819bd/workflow/rules/common.smk#L515-L550).
+
+`split_designs` stores the comparison text. Its evaluation, protocol, strategy and field-evidence associations are normalized in `split_design_evaluations`, `split_design_protocols`, `split_design_strategies` and `split_design_evidence`. `split_protocol_strategies` preserves task-level differences within summaries: for example, AG2's fixed TraitGym evaluation does not inherit its QTL chromosome selection split, and BacBench AMR does not inherit essentiality's genus split. Build validation checks evidence for every design field and verifies that associated protocols belong to the named collections.
+
 ## Measurements
 
 Selected complete cached files were checked for exact full-string identity. Selected DNA checks also used uppercase reverse-complement equivalence; **additional RC-only** classes exclude every class already represented by an exact intersection. An RC class count is not directly interchangeable with an exact-string count. No alignment-based or approximate-homology search was performed.

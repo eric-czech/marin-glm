@@ -319,6 +319,35 @@ CREATE TABLE split_protocol_strategies (
   note TEXT NOT NULL, evidence_id TEXT NOT NULL REFERENCES evidence(id),
   PRIMARY KEY(protocol_id,strategy_id)
 );
+-- A design describes one source-defined cohort and fitting/selection layer.
+-- It is not inherited by every model that happens to use the same task.
+CREATE TABLE split_designs (
+  id TEXT PRIMARY KEY, name TEXT NOT NULL,
+  layer TEXT NOT NULL CHECK(layer IN ('dataset','supervised','probe','variant-selection','zero-shot','generation','diagnostic','mixed')),
+  partition_rule TEXT NOT NULL, selection_rule TEXT NOT NULL,
+  interpretation TEXT NOT NULL, sort_order INTEGER NOT NULL
+);
+CREATE TABLE split_design_evaluations (
+  design_id TEXT NOT NULL REFERENCES split_designs(id),
+  evaluation_id TEXT NOT NULL REFERENCES evaluations(id),
+  PRIMARY KEY(design_id,evaluation_id)
+);
+CREATE TABLE split_design_protocols (
+  design_id TEXT NOT NULL REFERENCES split_designs(id),
+  protocol_id TEXT NOT NULL REFERENCES protocols(id),
+  PRIMARY KEY(design_id,protocol_id)
+);
+CREATE TABLE split_design_strategies (
+  design_id TEXT NOT NULL REFERENCES split_designs(id),
+  strategy_id TEXT NOT NULL REFERENCES split_strategies(id),
+  PRIMARY KEY(design_id,strategy_id)
+);
+CREATE TABLE split_design_evidence (
+  design_id TEXT NOT NULL REFERENCES split_designs(id),
+  field TEXT NOT NULL CHECK(field IN ('partition_rule','selection_rule','interpretation')),
+  evidence_id TEXT NOT NULL REFERENCES evidence(id),
+  PRIMARY KEY(design_id,field,evidence_id)
+);
 CREATE TABLE split_audits (
   id TEXT PRIMARY KEY, title TEXT NOT NULL, release_name TEXT NOT NULL,
   evaluation_id TEXT REFERENCES evaluations(id),
